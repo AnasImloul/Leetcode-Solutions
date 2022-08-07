@@ -3,12 +3,6 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
 # How did I do it ? #
   - For detailed description of the problem check out my other repository [Leetcode-scraper](https://github.com/AnasImloul/Leetcode-solutions/) where I published the source code and documentation for the project.
 # Solutions
- + ## [.git](https://github.com/AnasImloul/Leetcode-solutions/tree/main/.git) ##
-| problem  |  languages   | difficulty | Leetcode |
-|:---------|:------------:|:----------:|:--------:|
- + ## [.idea](https://github.com/AnasImloul/Leetcode-solutions/tree/main/.idea) ##
-| problem  |  languages   | difficulty | Leetcode |
-|:---------|:------------:|:----------:|:--------:|
  + ## [Algorithms](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms) ##
 | problem  |  languages   | difficulty | Leetcode |
 |:---------|:------------:|:----------:|:--------:|
