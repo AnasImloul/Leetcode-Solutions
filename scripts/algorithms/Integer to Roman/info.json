@@ -1,0 +1,13 @@
+{
+    "name": "Integer to Roman",
+    "url": "https://leetcode.com/problems/integer-to-roman",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

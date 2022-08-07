@@ -1,0 +1,13 @@
+{
+    "name": "K-th Smallest in Lexicographical Order",
+    "url": "https://leetcode.com/problems/k-th-smallest-in-lexicographical-order",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

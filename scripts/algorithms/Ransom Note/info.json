@@ -1,0 +1,13 @@
+{
+    "name": "Ransom Note",
+    "url": "https://leetcode.com/problems/ransom-note",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Diameter of Binary Tree",
+    "url": "https://leetcode.com/problems/diameter-of-binary-tree",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

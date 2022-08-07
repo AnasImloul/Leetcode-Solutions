@@ -1,0 +1,13 @@
+{
+    "name": "Binary Tree Postorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-postorder-traversal",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

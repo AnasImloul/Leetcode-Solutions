@@ -1,0 +1,13 @@
+{
+    "name": "Matchsticks to Square",
+    "url": "https://leetcode.com/problems/matchsticks-to-square",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}
