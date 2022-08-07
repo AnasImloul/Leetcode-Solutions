@@ -10,7 +10,7 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
 # Solutions
  + ## [Algorithms](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms) ##
 | problem  |  languages   | difficulty | Leetcode |
-|:--------:|:------------:|:----------:|:--------:|
+|:---------|:------------:|:----------:|:--------:|
 |[Add Binary](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Binary/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Binary/Add%20Binary.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Binary/Add%20Binary.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Binary/Add%20Binary.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Binary/Add%20Binary.py)|Easy|[link](https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png)|
 |[Add Digits](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Digits/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Digits/Add%20Digits.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Digits/Add%20Digits.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Digits/Add%20Digits.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Digits/Add%20Digits.py)|Easy|[link](https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png)|
 |[Add Strings](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Strings/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Strings/Add%20Strings.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Strings/Add%20Strings.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Strings/Add%20Strings.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Add%20Strings/Add%20Strings.py)|Easy|[link](https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png)|
@@ -451,10 +451,10 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
 |[Zuma Game](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Zuma%20Game/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Zuma%20Game/Zuma%20Game.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Zuma%20Game/Zuma%20Game.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Zuma%20Game/Zuma%20Game.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms/Zuma%20Game/Zuma%20Game.py)|Hard|[link](https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png)|
  + ## [Concurrency](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/concurrency) ##
 | problem  |  languages   | difficulty | Leetcode |
-|:--------:|:------------:|:----------:|:--------:|
+|:---------|:------------:|:----------:|:--------:|
  + ## [Database](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/database) ##
 | problem  |  languages   | difficulty | Leetcode |
-|:--------:|:------------:|:----------:|:--------:|
+|:---------|:------------:|:----------:|:--------:|
  + ## [Shell](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/shell) ##
 | problem  |  languages   | difficulty | Leetcode |
-|:--------:|:------------:|:----------:|:--------:|
+|:---------|:------------:|:----------:|:--------:|

@@ -15,13 +15,14 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
 
 # Solutions"""
 
-__README_TABLES_COLUMNS__ = """| problem  |  languages   | Leetcode |
-|:--------:|:------------:|:-----:|"""
+__README_TABLES_COLUMNS__ = """| problem  |  languages   | difficulty | Leetcode |
+|:---------|:------------:|:----------:|:--------:|"""
 
 
 def format_problem_to_table_row(info):
     problem_name = info.get("name", "")
     problem_url = info.get("url", "")
+    difficulty = info.get("difficulty","")
     languages = sorted(info.get("solution", dict()).keys())
     topic = info.get("topic", "")
     if problem_name == "":
@@ -37,7 +38,7 @@ def format_problem_to_table_row(info):
         map(lambda lang: f"[{lang.capitalize()}]({problem_github_link + urlencode(problem_name) + extension(lang)})",
             languages))
 
-    return f"|[{problem_name}]({problem_github_link})|{languages_md}|[link](https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png)|"
+    return f"|[{problem_name}]({problem_github_link})|{languages_md}|{difficulty.capitalize()}|[link](https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png)|"
 
 
 def generate_readme_file(readme_path, scripts_path):
@@ -67,5 +68,11 @@ def generate_readme_file(readme_path, scripts_path):
 
     return readme
 
-print(generate_readme_file(readme_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions\README.md",
-                                         scripts_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions\scripts"))
+
+def update_readme_file(readme_path, scripts_path):
+    with open(readme_path ,mode="w") as readme:
+        readme.write(generate_readme_file(readme_path, scripts_path))
+
+
+update_readme_file(readme_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions\README.md",
+                                         scripts_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions\scripts")
