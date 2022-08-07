@@ -1,0 +1,13 @@
+{
+    "name": "Construct String from Binary Tree",
+    "url": "https://leetcode.com/problems/construct-string-from-binary-tree",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

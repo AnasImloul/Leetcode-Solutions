@@ -1,0 +1,13 @@
+{
+    "name": "N-ary Tree Preorder Traversal",
+    "url": "https://leetcode.com/problems/n-ary-tree-preorder-traversal",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="751666ff-4db3-4672-8f4c-24a9bc3aca1a" name="Changes" comment="updated the structure of the project" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2D1esqoUjo1xOfRpoOLnJiVPK1H" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/hp/Desktop/Projects/Leetcode-scraper"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Desktop\Projects\Leetcode-solutions" />
+      <recent name="C:\Users\hp\Desktop\Projects\Leetcode-solutions\scripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.readme_utils">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Leetcode-solutions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="readme_utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Leetcode-solutions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\hp\Desktop\Projects\Leetcode-solutions\readme_utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.readme_utils" />
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="751666ff-4db3-4672-8f4c-24a9bc3aca1a" name="Changes" comment="" />
+      <created>1659871230440</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659871230440</updated>
+    </task>
+    <task id="LOCAL-00001" summary="init project">
+      <created>1659871368153</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659871368153</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added problemset scraper">
+      <created>1659871449533</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659871449533</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added solutions scraper">
+      <created>1659871487220</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659871487220</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added web_utils.py as a mini web library">
+      <created>1659871562799</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659871562799</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added file_utils.py as the module that manages files-related stuff">
+      <created>1659871689619</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659871689619</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added code_utils.py a mini python library for code_related computations.">
+      <created>1659871787846</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659871787846</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added solutions to 387 new problems">
+      <created>1659873601938</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659873601938</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added solutions to 387 new problems">
+      <created>1659873628829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659873628829</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added solutions to new problems">
+      <created>1659874602975</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659874602975</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added solutions to new problems">
+      <created>1659874665185</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659874665185</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added new solutions to scripts">
+      <created>1659881710545</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1659881710545</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added section to scripts (algorithms, database, shell, concurrency)">
+      <created>1659883557204</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659883557204</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added section to the scripts folder (algorithms, database, shell, concurrency)">
+      <created>1659883901513</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1659883901514</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added problem table in README.md">
+      <created>1659892542680</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1659892542680</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated README.md">
+      <created>1659892724464</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1659892724464</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added new column in README.md (difficulty)">
+      <created>1659892926681</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1659892926681</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated README.md">
+      <created>1659893155315</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1659893155315</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updated README.md">
+      <created>1659894986624</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1659894986624</updated>
+    </task>
+    <task id="LOCAL-00019" summary="updated the structure of the project">
+      <created>1659901244461</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1659901244461</updated>
+    </task>
+    <task id="LOCAL-00020" summary="removed main.py as it does not serve any purposes">
+      <created>1659901318154</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1659901318154</updated>
+    </task>
+    <task id="LOCAL-00021" summary="reformated README.md">
+      <created>1659901402343</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1659901402344</updated>
+    </task>
+    <task id="LOCAL-00022" summary="reformated README.md">
+      <created>1659901433778</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1659901433778</updated>
+    </task>
+    <task id="LOCAL-00023" summary="removed 'tree/main/scraper' as it will be moved to another GitHub repo">
+      <created>1659901563237</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1659901563237</updated>
+    </task>
+    <task id="LOCAL-00024" summary="updated README.md">
+      <created>1659901591455</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1659901591455</updated>
+    </task>
+    <task id="LOCAL-00025" summary="updated the structure of the project">
+      <created>1659903362792</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1659903362792</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init project" />
+    <MESSAGE value="added problemset scraper" />
+    <MESSAGE value="added solutions scraper" />
+    <MESSAGE value="added web_utils.py as a mini web library" />
+    <MESSAGE value="added file_utils.py as the module that manages files-related stuff" />
+    <MESSAGE value="added code_utils.py a mini python library for code_related computations." />
+    <MESSAGE value="added solutions to 387 new problems" />
+    <MESSAGE value="added solutions to new problems" />
+    <MESSAGE value="added new solutions to scripts" />
+    <MESSAGE value="added section to scripts (algorithms, database, shell, concurrency)" />
+    <MESSAGE value="added section to the scripts folder (algorithms, database, shell, concurrency)" />
+    <MESSAGE value="added problem table in README.md" />
+    <MESSAGE value="Added new column in README.md (difficulty)" />
+    <MESSAGE value="Updated README.md" />
+    <MESSAGE value="removed main.py as it does not serve any purposes" />
+    <MESSAGE value="reformated README.md" />
+    <MESSAGE value="removed 'tree/main/scraper' as it will be moved to another GitHub repo" />
+    <MESSAGE value="updated README.md" />
+    <MESSAGE value="updated the structure of the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the structure of the project" />
+  </component>
+</project>

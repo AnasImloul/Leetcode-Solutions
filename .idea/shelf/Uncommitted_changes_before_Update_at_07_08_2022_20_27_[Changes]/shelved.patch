@@ -1,0 +1,81 @@
+Index: scraper/web_utils.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from time import sleep, perf_counter\r\nimport selenium.common.exceptions\r\nfrom selenium.webdriver.support.ui import WebDriverWait\r\nfrom selenium.webdriver.support import expected_conditions as EC\r\nfrom selenium.webdriver.common.by import By\r\nfrom selenium.common.exceptions import TimeoutException\r\nfrom selenium.webdriver import ActionChains\r\nfrom selenium.webdriver.common.keys import Keys\r\nimport win32clipboard\r\n\r\n\r\n__clipboard_data__ = \"\"\r\n\r\n\r\ndef wait_until_any_element_load_by_xpath(driver, elements_xpath, timeout=10):\r\n    start = perf_counter()\r\n    first_load = None\r\n    while perf_counter() - start < timeout:\r\n        for xpath in elements_xpath:\r\n            try:\r\n                first_load = get_element_by_xpath(driver, xpath)\r\n                return xpath\r\n            except:\r\n                continue\r\n        sleep(0.5)\r\n    return first_load\r\n\r\n\r\ndef wait_until_element_attribute(element, attribute, value, timeout=10):\r\n    start = perf_counter()\r\n    while perf_counter() - start < timeout:\r\n        if get_attribute(element, attribute) == value:\r\n            return True\r\n    return False\r\n\r\n\r\ndef wait_until_element_load_by_xpath(driver, xpath, timeout=10):\r\n    try:\r\n        element = WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.XPATH, xpath)))\r\n        return element\r\n    except TimeoutException:\r\n        print(\"Loading took too much time!\")\r\n        return None\r\n\r\n\r\ndef wait_until_element_load_by_class_name(driver, class_name, timeout=10):\r\n    try:\r\n        element = WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.CLASS_NAME, class_name)))\r\n        return element\r\n    except TimeoutException:\r\n        print(\"Loading took too much time!\")\r\n\r\n\r\ndef wait_until_element_visible_by_xpath(driver, xpath, timeout=10):\r\n    try:\r\n        element = WebDriverWait(driver, timeout).until(EC.visibility_of_element_located((By.XPATH, xpath)))\r\n        return element\r\n    except TimeoutException:\r\n        print(\"Loading took too much time!\")\r\n        return None\r\n\r\n\r\ndef wait_until_element_visible_by_class_name(driver, class_name, timeout=10):\r\n    try:\r\n        element = WebDriverWait(driver, timeout).until(EC.visibility_of_element_located((By.CLASS_NAME, class_name)))\r\n        return element\r\n    except TimeoutException:\r\n        print(\"Loading took too much time!\")\r\n        return None\r\n\r\n\r\ndef get_element_by_xpath(driver, xpath):\r\n    element = driver.find_element_by_xpath(xpath)\r\n    return element\r\n\r\n\r\ndef get_element_by_class_name(driver, classname):\r\n    return driver.find_element_by_class_name(classname)\r\n\r\n\r\ndef check_element_exist_by_xpath(driver, xpath):\r\n    try:\r\n        get_element_by_xpath(driver, xpath)\r\n        return True\r\n\r\n    except:\r\n        return False\r\n\r\n\r\ndef check_element_exist_by_class_name(driver, xpath):\r\n    try:\r\n        get_element_by_class_name(driver, xpath)\r\n        return True\r\n\r\n    except:\r\n        return False\r\n\r\n\r\ndef get_specific_child_by_xpath(element, relative_xpath):\r\n    if relative_xpath[0] == \"/\":\r\n        relative_xpath = relative_xpath[1:]\r\n    return element.find_element_by_xpath(\"./\" + relative_xpath)\r\n\r\n\r\ndef get_specific_child_by_class_name(element, class_name):\r\n    return element.find_element_by_class_name(class_name)\r\n\r\n\r\ndef check_child_exist_by_xpath(element, relative_xpath):\r\n    try:\r\n        get_specific_child_by_xpath(element, relative_xpath)\r\n        return True\r\n\r\n    except:\r\n        return False\r\n\r\n\r\ndef check_child_exist_by_class_name(element, class_name):\r\n    try:\r\n        get_specific_child_by_class_name(element, class_name)\r\n        return True\r\n\r\n    except:\r\n        return False\r\n\r\n\r\ndef get_children(element):\r\n    return element.find_elements_by_xpath(\"./*\")\r\n\r\n\r\ndef children_count(element):\r\n    return len(get_children(element))\r\n\r\n\r\ndef get_href(element):\r\n    return element.get_attribute('href')\r\n\r\n\r\ndef get_innerHTML(element):\r\n    return element.get_attribute('innerHTML')\r\n\r\n\r\ndef get_outerHTML(element):\r\n    return element.get_attribute('outerHTML')\r\n\r\n\r\ndef get_attribute(element, attribute):\r\n    return element.get_attribute(attribute)\r\n\r\n\r\ndef click_button(driver, button):\r\n    ActionChains(driver).click(button).perform()\r\n\r\n\r\ndef fill_text_input(element, text):\r\n    element.send_keys(text)\r\n    element.send_keys(Keys.RETURN)\r\n\r\n\r\ndef access_url_page(driver, url, title=\"\", timeout=30):\r\n    refresh = True\r\n    done = False\r\n    start = perf_counter()\r\n    while not done:\r\n        while perf_counter() - start < timeout:\r\n            try:\r\n                if refresh:\r\n                    driver.get(url)\r\n                    refresh = False\r\n                assert title in driver.title\r\n            except selenium.common.exceptions.WebDriverException:\r\n                sleep(1)\r\n                refresh = True\r\n            except AssertionError:\r\n                sleep(1)\r\n            finally:\r\n                done = True\r\n                break\r\n\r\n\r\ndef return_to_previous_page(driver):\r\n    for iteration in range(3):\r\n        try:\r\n            driver.execute_script(\"window.history.go(-1)\")\r\n            break\r\n        except selenium.common.exceptions.WebDriverException:\r\n            sleep(1)\r\n\r\n\r\ndef refresh_page(driver):\r\n    driver.refresh()\r\n\r\n\r\ndef copy_to_clipboard(text):\r\n    win32clipboard.OpenClipboard()\r\n    __clipboard_data__ = get_from_clipboard()\r\n    win32clipboard.EmptyClipboard()\r\n    win32clipboard.SetClipboardText(text)\r\n    win32clipboard.CloseClipboard()\r\n\r\n\r\ndef get_from_clipboard():\r\n    win32clipboard.OpenClipboard()\r\n    data = win32clipboard.GetClipboardData()\r\n    win32clipboard.EmptyClipboard()\r\n    win32clipboard.SetClipboardText(__clipboard_data__)\r\n    win32clipboard.CloseClipboard()\r\n    return data
+===================================================================
+diff --git a/scraper/web_utils.py b/scraper/web_utils.py
+--- a/scraper/web_utils.py	
++++ b/scraper/web_utils.py	
+@@ -7,11 +7,12 @@
+ from selenium.webdriver import ActionChains
+ from selenium.webdriver.common.keys import Keys
+ import win32clipboard
++import urllib.parse
++
+ 
+ 
+ __clipboard_data__ = ""
+ 
+-
+ def wait_until_any_element_load_by_xpath(driver, elements_xpath, timeout=10):
+     start = perf_counter()
+     first_load = None
+@@ -191,6 +192,11 @@
+     driver.refresh()
+ 
+ 
++def urlencode(string):
++    return urllib.parse.quote(string)
++
++
++
+ def copy_to_clipboard(text):
+     win32clipboard.OpenClipboard()
+     __clipboard_data__ = get_from_clipboard()
+Index: scraper/file_utils.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import json\r\nfrom json import JSONDecodeError\r\nfrom os.path import exists\r\nfrom os import listdir, mkdir\r\n\r\n\r\ndef save_json(file, data):\r\n    with open(file, \"w\") as f:\r\n        f.write(json.dumps(data, indent=4))\r\n\r\n\r\ndef load_json(file):\r\n    if not exists(file):\r\n        with open(file, mode=\"w\") as f:\r\n            pass\r\n\r\n    with open(file, mode=\"r\") as f:\r\n        try:\r\n            data = json.loads(f.read())\r\n        except JSONDecodeError:\r\n            data = dict()\r\n    return data\r\n\r\n\r\ndef file_exist(path, file):\r\n    if path[-1] == \"\\\\\":\r\n        path = path[-1]\r\n    return exists(path + \"\\\\\" + file)\r\n\r\n\r\ndef path_exist(path):\r\n    return exists(path)\r\n\r\n\r\n\r\ndef extract_scripts(text):\r\n    scripts = []\r\n    idx = 0\r\n    while idx < len(text):\r\n        try:\r\n            start = text.index(\"<code>\", idx)\r\n            finish = text.index(\"</code>\", start)\r\n            scripts.append(text[start + 6:finish])\r\n            idx = finish\r\n        except:\r\n            break\r\n    return scripts\r\n\r\n\r\ndef clean_html_code(code, html=True):\r\n    result = \"\"\r\n    open = 0\r\n\r\n    if html:\r\n        for c in code:\r\n\r\n            if c == \"<\":\r\n                open += 1\r\n\r\n            if open == 0:\r\n                result += c\r\n\r\n            if c == \">\":\r\n                open -= 1\r\n    else:\r\n        result = code\r\n\r\n    result = result.replace(\"&lt;\", \"<\")\r\n    result = result.replace(\"&gt;\", \">\")\r\n    result = result.replace(\"&amp;\", \"&\")\r\n\r\n    return result\r\n\r\n\r\ndef clean_file_name(file):\r\n    file = file.replace('\"', '').\\\r\n                replace('*', '').\\\r\n                replace(':', '').\\\r\n                replace('?', '').\\\r\n                replace('\\\\', '').\\\r\n                replace('/', '').\\\r\n                replace('|', '').\\\r\n                replace('>', '').\\\r\n                replace('<', '')\r\n    return file\r\n\r\n\r\ndef remove_last_strings(code):\r\n    lines = code.splitlines()\r\n    if \"```\" in lines[-1]:\r\n        return \"\\n\".join(lines[:-1])\r\n    return \"\\n\".join(lines)\r\n\r\n\r\ndef file_content(file):\r\n    with open(file, mode=\"r\", encoding=\"utf-8\") as f:\r\n        return f.read()\r\n\r\n\r\n\r\ndef get_all_files_by_extension(path, extension=\"*\"):\r\n    files = listdir(path)\r\n\r\n    result = dict()\r\n\r\n    for file in files:\r\n        if extension == \"*\" or file.endswith(extension):\r\n            result[file[:-len(extension)]] = file_content(path + \"\\\\\" + file)\r\n\r\n    return result\r\n\r\n\r\ndef create_directory(path):\r\n    if exists(path):\r\n        return False\r\n    mkdir(path)\r\n    return True
+===================================================================
+diff --git a/scraper/file_utils.py b/scraper/file_utils.py
+--- a/scraper/file_utils.py	
++++ b/scraper/file_utils.py	
+@@ -1,6 +1,6 @@
+ import json
+ from json import JSONDecodeError
+-from os.path import exists
++from os.path import exists, isdir
+ from os import listdir, mkdir
+ 
+ 
+@@ -98,6 +98,10 @@
+ 
+ 
+ 
++def get_all_subdirectories(path):
++    return list(filter(lambda sub_path: isdir(path + "\\" + sub_path), listdir(path)))
++
++
+ def get_all_files_by_extension(path, extension="*"):
+     files = listdir(path)
+ 
+Index: scraper/code_utils.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import re\r\nimport pyparsing\r\n\r\n\r\ndef extract_scripts(text):\r\n    scripts = []\r\n    idx = 0\r\n    while idx < len(text):\r\n        try:\r\n            start = text.index(\"<code>\", idx)\r\n            finish = text.index(\"</code>\", start)\r\n            scripts.append(text[start + 6:finish])\r\n            idx = finish\r\n        except:\r\n            break\r\n    return scripts\r\n\r\n\r\ndef extract_clean_code(code, html=True):\r\n    result = \"\"\r\n    open = 0\r\n\r\n    if html:\r\n        for c in code:\r\n\r\n            if c == \"<\":\r\n                open += 1\r\n\r\n            if open == 0:\r\n                result += c\r\n\r\n            if c == \">\":\r\n                open -= 1\r\n    else:\r\n        result = code\r\n\r\n    result = result.replace(\"&lt;\", \"<\")\r\n    result = result.replace(\"&gt;\", \">\")\r\n    result = result.replace(\"&amp;\", \"&\")\r\n\r\n    return result\r\n\r\n\r\ndef clean_file_name(file):\r\n    file = file.\\\r\n        replace('\"', '').\\\r\n        replace('*', '').\\\r\n        replace(':', '').\\\r\n        replace('?', '').\\\r\n        replace('\\\\', '').\\\r\n        replace('/', '').\\\r\n        replace('|', '').\\\r\n        replace('>', '').\\\r\n        replace('<', '')\r\n    return file\r\n\r\n\r\ndef get_functions_name(script, function_declaration=\"def\"):\r\n    return list(map(lambda word:word.split()[-1],re.findall(function_declaration + \"\\s*\\w*\", script)))\r\n\r\n\r\ndef get_classes_name(script, class_declaration=\"class\"):\r\n    return list(map(lambda word:word.split()[-1],re.findall(class_declaration + \"\\s*\\w*\", script)))\r\n\r\n\r\ndef cpp_style_comment_remover(text):\r\n    def replacer(match):\r\n        s = match.group(0)\r\n        if s.startswith('/'):\r\n            return \" \" # note: a space and not an empty string\r\n        else:\r\n            return s\r\n    pattern = re.compile(\r\n        r'//.*?$|/\\*.*?\\*/|\\'(?:\\\\.|[^\\\\\\'])*\\'|\"(?:\\\\.|[^\\\\\"])*\"',\r\n        re.DOTALL | re.MULTILINE\r\n    )\r\n    return re.sub(pattern, replacer, text)\r\n\r\n\r\ndef remove_comments(source: str, language):\r\n    if language == \"python\":\r\n        parser = pyparsing.pythonStyleComment\r\n        return parser.suppress().transformString(source)\r\n    else:\r\n        return cpp_style_comment_remover(source)\r\n\r\n\r\ndef get_non_empty_lines(string : str):\r\n    result = []\r\n    lines = string.splitlines()\r\n    for line in lines:\r\n        l = \" \".join(line.split())\r\n        if l == \"\":\r\n            continue\r\n        result.append(l)\r\n    return result
+===================================================================
+diff --git a/scraper/code_utils.py b/scraper/code_utils.py
+--- a/scraper/code_utils.py	
++++ b/scraper/code_utils.py	
+@@ -2,6 +2,11 @@
+ import pyparsing
+ 
+ 
++__extensions__ = {"c++": ".cpp", "python": ".py", "python3": ".py", "java": ".java", "javascript": ".js"}
++
++def extension(lang):
++    return __extensions__.get(lang, ".txt")
++
+ def extract_scripts(text):
+     scripts = []
+     idx = 0
