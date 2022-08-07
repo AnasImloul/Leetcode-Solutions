@@ -475,9 +475,6 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
  + ## [Database](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/database) ##
 | problem  |  languages   | difficulty | Leetcode |
 |:---------|:------------:|:----------:|:--------:|
- + ## [Scraper](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/scraper) ##
-| problem  |  languages   | difficulty | Leetcode |
-|:---------|:------------:|:----------:|:--------:|
  + ## [Shell](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/shell) ##
 | problem  |  languages   | difficulty | Leetcode |
 |:---------|:------------:|:----------:|:--------:|
