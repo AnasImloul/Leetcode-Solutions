@@ -1,0 +1,13 @@
+{
+    "name": "Merge k Sorted Lists",
+    "url": "https://leetcode.com/problems/merge-k-sorted-lists",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": true
+    }
+}
