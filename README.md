@@ -1,11 +1,7 @@
 # Leetcode-solutions
 Solutions to over than 1800 Leetcode problems in four programming languages (C++, Python, Java, and Javascript).
 ## Scraping the solutions ##
-+ ### extracting the problemset ###
-  - Check out this Python script [./scraper/problemset/scrap.py](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scraper/problemset/scrap.py) to see how we extracted the problemset from the Leetcode website.
-  
-+ ### extracting the scripts ###
-  - Check out this Python script [./scraper/solutions/scrap.py](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scraper/solutions/scrap.py) to see how we extracted the solutions from the Leetcode discuss section.
+  - Check out my other repository [Leetcode-scraper](https://github.com/AnasImloul/Leetcode-solutions/) where I published the source code and documentation of the project.
 
 # Solutions
  + ## [Algorithms](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/algorithms) ##
