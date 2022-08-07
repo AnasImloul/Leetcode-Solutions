@@ -184,9 +184,10 @@ def fetch(browser, save_path, problems, languages):
 
     for name, problem in problems.items():
         valid_name = file.clean_file_name(name)
-        problem_folder = save_path + "\\" + valid_name
+        problem_folder = save_path + "\\" + problem['topic'] + "\\" + valid_name
 
-        print(file.create_directory(problem_folder))
+
+        file.create_directory(problem_folder)
 
         info = file.load_json(problem_folder + "\\" + "info.json")
 
@@ -195,7 +196,6 @@ def fetch(browser, save_path, problems, languages):
 
 
         _languages = list(filter(lambda lang : not info.get("solution", dict()).get(lang, False), languages))
-        #print(_languages, info.get("solution", None))
         if not _languages:
             continue
 
