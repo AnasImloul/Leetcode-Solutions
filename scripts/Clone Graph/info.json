@@ -1,0 +1,13 @@
+{
+    "name": "Clone Graph",
+    "url": "https://leetcode.com/problems/clone-graph",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": false,
+        "c++": true,
+        "java": true,
+        "javascript": true
+    }
+}

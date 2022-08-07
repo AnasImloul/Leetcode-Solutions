@@ -10,7 +10,7 @@ WEBDRIVER_PATH = r"C:\Users\hp\Desktop\Projects\leetcoder\leetcoder\chromedriver
 
 with Chrome(WEBDRIVER_PATH) as chrome1:
 
-    problems = problemset_scrap.fetch(browser=chrome1, save_path=PATH+r"\scraper\problemset\problemset.json", premium=False)
+    #problems = problemset_scrap.fetch(browser=chrome1, save_path=PATH+r"\scraper\problemset\problemset.json", premium=False)
 
     problems = load_json(PATH+r"\scraper\problemset\problemset.json")
 

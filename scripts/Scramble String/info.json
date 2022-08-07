@@ -1,0 +1,13 @@
+{
+    "name": "Scramble String",
+    "url": "https://leetcode.com/problems/scramble-string",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

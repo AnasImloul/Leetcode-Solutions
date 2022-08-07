@@ -186,9 +186,10 @@ def fetch(browser, save_path, problems, languages):
         valid_name = file.clean_file_name(name)
         problem_folder = save_path + "\\" + valid_name
 
-        file.create_directory(problem_folder)
+        print(file.create_directory(problem_folder))
 
         info = file.load_json(problem_folder + "\\" + "info.json")
+
         if info == dict():
             info = {**problem, **{"solution": {language: False for language in languages}}}
 
@@ -197,7 +198,6 @@ def fetch(browser, save_path, problems, languages):
         #print(_languages, info.get("solution", None))
         if not _languages:
             continue
-
 
         solution = fetch_valid_solution(browser, problem, _languages)
         solutions[problem['name']] = solution

@@ -1,0 +1,13 @@
+{
+    "name": "Maximum Product Subarray",
+    "url": "https://leetcode.com/problems/maximum-product-subarray",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}
