@@ -100,4 +100,4 @@ def update_readme_file(readme_path, scripts_path):
 
 
 update_readme_file(readme_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions\README.md",
-                                         scripts_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions\scripts")
+                                         scripts_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions")
