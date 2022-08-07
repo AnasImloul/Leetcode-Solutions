@@ -1,18 +1,43 @@
-from scraper.file_utils import load_json, get_all_subdirectories
-from scraper.web_utils import urlencode
-from scraper.code_utils import extension
+import urllib.parse
+import json
+from json import JSONDecodeError
+from os import listdir
+from os.path import isdir, exists
 
+
+def load_json(file):
+    if not exists(file):
+        with open(file, mode="w") as f:
+            pass
+
+    with open(file, mode="r") as f:
+        try:
+            data = json.loads(f.read())
+        except JSONDecodeError:
+            data = dict()
+    return data
+
+
+def get_all_subdirectories(path):
+    return list(filter(lambda sub_path: isdir(path + "\\" + sub_path), listdir(path)))
+
+
+def urlencode(string):
+    return urllib.parse.quote(string)
+
+
+extensions = {
+    "c++":".cpp",
+    "python":".py",
+    "java":".java",
+    "javascript":".js"
+}
 
 
 __README_HEADER__ = """# Leetcode-solutions
 Solutions to over than 1800 Leetcode problems in four programming languages (C++, Python, Java, and Javascript).
-## Scraping the solutions ##
-+ ### extracting the problemset ###
-  - Check out this Python script [./scraper/problemset/scrap.py](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scraper/problemset/scrap.py) to see how we extracted the problemset from the Leetcode website.
-  
-+ ### extracting the scripts ###
-  - Check out this Python script [./scraper/solutions/scrap.py](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scraper/solutions/scrap.py) to see how we extracted the solutions from the Leetcode discuss section.
-
+# How did I do it ? #
+  - For detailed description of the problem check out my other repository [Leetcode-scraper](https://github.com/AnasImloul/Leetcode-solutions/) where I published the source code and documentation for the project.
 # Solutions"""
 
 __README_TABLES_COLUMNS__ = """| problem  |  languages   | difficulty | Leetcode |
@@ -35,10 +60,10 @@ def format_problem_to_table_row(info):
     # https://github.com/AnasImloul/Leetcode-solutions/blob/main/scripts/algorithms/All%20O%60one%20Data%20Structure/All%20O%60one%20Data%20Structure.java
 
     languages_md = ", ".join(
-        map(lambda lang: f"[{lang.capitalize()}]({problem_github_link + urlencode(problem_name) + extension(lang)})",
+        map(lambda lang: f"[{lang.capitalize()}]({problem_github_link + urlencode(problem_name) + extensions[lang.lower()]})",
             languages))
 
-    return f"|[{problem_name}]({problem_github_link})|{languages_md}|{difficulty.capitalize()}|[link](https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png)|"
+    return f"|[{problem_name}]({problem_github_link})|{languages_md}|{difficulty.capitalize()}|[link]({problem_url})|"
 
 
 def generate_readme_file(readme_path, scripts_path):

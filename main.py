@@ -1,8 +1,11 @@
 from selenium.webdriver import Chrome
 from scraper.solutions import scrap as solution_scrap
 from scraper.problemset import scrap as problemset_scrap
-from scraper.file_utils import load_json
+
 from os import getcwd
+
+
+
 
 PATH = getcwd()
 
@@ -19,3 +22,4 @@ with Chrome(WEBDRIVER_PATH) as chrome1:
                          problems=problems,
                          languages=("c++","python","java","javascript")
                          )
+

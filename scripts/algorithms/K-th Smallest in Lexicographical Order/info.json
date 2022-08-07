@@ -7,7 +7,7 @@
     "solution": {
         "c++": true,
         "python": true,
-        "java": false,
-        "javascript": false
+        "java": true,
+        "javascript": true
     }
 }
