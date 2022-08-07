@@ -53,7 +53,7 @@ def format_problem_to_table_row(info):
     if problem_name == "":
         return ""
 
-    scripts_link = "https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/"
+    scripts_link = "https://github.com/AnasImloul/Leetcode-solutions/tree/main/"
 
     problem_github_link = scripts_link + topic + "/" + urlencode(problem_name) + "/"
 
@@ -72,7 +72,7 @@ def generate_readme_file(readme_path, scripts_path):
     for topic in get_all_subdirectories(scripts_path):
 
 
-        scripts_link = "https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/"
+        scripts_link = "https://github.com/AnasImloul/Leetcode-solutions/tree/main/"
         topic_github_link = scripts_link + topic
 
         readme += "\n" + f" + ## [{topic.capitalize()}]({topic_github_link}) ##"
