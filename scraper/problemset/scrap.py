@@ -60,7 +60,7 @@ def wait_until_container_load(container):
                                             timeout=60)
 
 
-def get_all_problems_from_page(browser, *, easy=True, medium=True, hard=True, premium=False, topic="algorithms"):
+def get_all_problems_from_page(browser, *, easy=True, medium=True, hard=True, premium=True, topic="algorithms"):
     difficulties = {"easy": easy, "medium": medium, "hard": hard}
 
     container = web.wait_until_element_load_by_xpath(browser, __PROBLEM_SET_CONTAINER_XPATH__)
