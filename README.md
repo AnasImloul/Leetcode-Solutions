@@ -3,12 +3,6 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
 # How did I do it ? #
   - For detailed description of the problem check out my other repository [Leetcode-scraper](https://github.com/AnasImloul/Leetcode-solutions/) where I published the source code and documentation for the project.
 # Solutions
- + ## [.git](https://github.com/AnasImloul/Leetcode-solutions/tree/main/.git) ##
-| problem  |  languages   | difficulty | Leetcode |
-|:---------|:------------:|:----------:|:--------:|
- + ## [.idea](https://github.com/AnasImloul/Leetcode-solutions/tree/main/.idea) ##
-| problem  |  languages   | difficulty | Leetcode |
-|:---------|:------------:|:----------:|:--------:|
  + ## [Algorithms](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms) ##
 | problem  |  languages   | difficulty | Leetcode |
 |:---------|:------------:|:----------:|:--------:|
@@ -1165,12 +1159,12 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
 |[XOR Queries of a Subarray](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/XOR%20Queries%20of%20a%20Subarray/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/XOR%20Queries%20of%20a%20Subarray/XOR%20Queries%20of%20a%20Subarray.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/XOR%20Queries%20of%20a%20Subarray/XOR%20Queries%20of%20a%20Subarray.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/XOR%20Queries%20of%20a%20Subarray/XOR%20Queries%20of%20a%20Subarray.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/XOR%20Queries%20of%20a%20Subarray/XOR%20Queries%20of%20a%20Subarray.py)|Medium|[link](https://leetcode.com/problems/xor-queries-of-a-subarray)|
 |[Zigzag Conversion](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zigzag%20Conversion/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zigzag%20Conversion/Zigzag%20Conversion.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zigzag%20Conversion/Zigzag%20Conversion.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zigzag%20Conversion/Zigzag%20Conversion.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zigzag%20Conversion/Zigzag%20Conversion.py)|Medium|[link](https://leetcode.com/problems/zigzag-conversion)|
 |[Zuma Game](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zuma%20Game/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zuma%20Game/Zuma%20Game.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zuma%20Game/Zuma%20Game.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zuma%20Game/Zuma%20Game.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Zuma%20Game/Zuma%20Game.py)|Hard|[link](https://leetcode.com/problems/zuma-game)|
- + ## [Concurrency](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency) ##
-| problem  |  languages   | difficulty | Leetcode |
-|:---------|:------------:|:----------:|:--------:|
  + ## [Database](https://github.com/AnasImloul/Leetcode-solutions/tree/main/database) ##
 | problem  |  languages   | difficulty | Leetcode |
 |:---------|:------------:|:----------:|:--------:|
  + ## [Shell](https://github.com/AnasImloul/Leetcode-solutions/tree/main/shell) ##
+| problem  |  languages   | difficulty | Leetcode |
+|:---------|:------------:|:----------:|:--------:|
+ + ## [Concurrency](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency) ##
 | problem  |  languages   | difficulty | Leetcode |
 |:---------|:------------:|:----------:|:--------:|

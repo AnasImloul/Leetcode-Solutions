@@ -43,6 +43,8 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
 __README_TABLES_COLUMNS__ = """| problem  |  languages   | difficulty | Leetcode |
 |:---------|:------------:|:----------:|:--------:|"""
 
+TOPICS = ("algorithms", "database", "shell", "concurrency")
+
 
 def format_problem_to_table_row(info):
     problem_name = info.get("name", "")
@@ -66,11 +68,13 @@ def format_problem_to_table_row(info):
     return f"|[{problem_name}]({problem_github_link})|{languages_md}|{difficulty.capitalize()}|[link]({problem_url})|"
 
 
-def generate_readme_file(readme_path, scripts_path):
+def generate_readme_file(scripts_path):
     readme = __README_HEADER__
 
-    for topic in get_all_subdirectories(scripts_path):
+    for topic in TOPICS:
 
+        if not exists(scripts_path + "\\" + topic):
+            continue
 
         scripts_link = "https://github.com/AnasImloul/Leetcode-solutions/tree/main/"
         topic_github_link = scripts_link + topic
@@ -96,7 +100,7 @@ def generate_readme_file(readme_path, scripts_path):
 
 def update_readme_file(readme_path, scripts_path):
     with open(readme_path ,mode="w") as readme:
-        readme.write(generate_readme_file(readme_path, scripts_path))
+        readme.write(generate_readme_file(scripts_path))
 
 
 update_readme_file(readme_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions\README.md",
