@@ -5,9 +5,9 @@
     "premium": false,
     "topic": "algorithms",
     "solution": {
-        "c++": false,
+        "c++": true,
         "python": true,
         "java": true,
-        "javascript": false
+        "javascript": true
     }
 }
