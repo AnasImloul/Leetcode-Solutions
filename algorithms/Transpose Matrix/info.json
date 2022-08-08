@@ -1,0 +1,13 @@
+{
+    "name": "Transpose Matrix",
+    "url": "https://leetcode.com/problems/transpose-matrix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

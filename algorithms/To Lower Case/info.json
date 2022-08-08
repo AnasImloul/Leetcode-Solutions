@@ -1,0 +1,13 @@
+{
+    "name": "To Lower Case",
+    "url": "https://leetcode.com/problems/to-lower-case",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

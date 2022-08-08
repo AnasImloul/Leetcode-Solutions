@@ -1,0 +1,13 @@
+{
+    "name": "Random Pick with Blacklist",
+    "url": "https://leetcode.com/problems/random-pick-with-blacklist",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

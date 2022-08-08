@@ -1,0 +1,13 @@
+{
+    "name": "Display Table of Food Orders in a Restaurant",
+    "url": "https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

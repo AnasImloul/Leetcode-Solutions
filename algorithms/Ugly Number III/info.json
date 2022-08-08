@@ -1,0 +1,13 @@
+{
+    "name": "Ugly Number III",
+    "url": "https://leetcode.com/problems/ugly-number-iii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

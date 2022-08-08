@@ -1,0 +1,13 @@
+{
+    "name": "Maximum Profit in Job Scheduling",
+    "url": "https://leetcode.com/problems/maximum-profit-in-job-scheduling",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

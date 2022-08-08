@@ -1,0 +1,13 @@
+{
+    "name": "Cells with Odd Values in a Matrix",
+    "url": "https://leetcode.com/problems/cells-with-odd-values-in-a-matrix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

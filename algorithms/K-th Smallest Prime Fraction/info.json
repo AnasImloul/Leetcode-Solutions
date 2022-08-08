@@ -1,0 +1,13 @@
+{
+    "name": "K-th Smallest Prime Fraction",
+    "url": "https://leetcode.com/problems/k-th-smallest-prime-fraction",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

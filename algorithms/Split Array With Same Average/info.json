@@ -1,0 +1,13 @@
+{
+    "name": "Split Array With Same Average",
+    "url": "https://leetcode.com/problems/split-array-with-same-average",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

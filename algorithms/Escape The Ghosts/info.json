@@ -1,0 +1,13 @@
+{
+    "name": "Escape The Ghosts",
+    "url": "https://leetcode.com/problems/escape-the-ghosts",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Check If All 's Are at Least Length K Places Away",
+    "url": "https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Minimum Cost to Hire K Workers",
+    "url": "https://leetcode.com/problems/minimum-cost-to-hire-k-workers",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

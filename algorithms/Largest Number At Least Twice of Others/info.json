@@ -1,0 +1,13 @@
+{
+    "name": "Largest Number At Least Twice of Others",
+    "url": "https://leetcode.com/problems/largest-number-at-least-twice-of-others",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": false,
+        "java": true,
+        "javascript": false
+    }
+}

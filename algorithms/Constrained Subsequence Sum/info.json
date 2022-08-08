@@ -1,0 +1,13 @@
+{
+    "name": "Constrained Subsequence Sum",
+    "url": "https://leetcode.com/problems/constrained-subsequence-sum",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Exclusive Time of Functions",
+    "url": "https://leetcode.com/problems/exclusive-time-of-functions",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

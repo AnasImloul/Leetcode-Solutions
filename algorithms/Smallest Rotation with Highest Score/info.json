@@ -1,0 +1,13 @@
+{
+    "name": "Smallest Rotation with Highest Score",
+    "url": "https://leetcode.com/problems/smallest-rotation-with-highest-score",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Merge Two Binary Trees",
+    "url": "https://leetcode.com/problems/merge-two-binary-trees",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

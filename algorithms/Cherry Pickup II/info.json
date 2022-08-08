@@ -1,0 +1,13 @@
+{
+    "name": "Cherry Pickup II",
+    "url": "https://leetcode.com/problems/cherry-pickup-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

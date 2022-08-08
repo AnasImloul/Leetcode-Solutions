@@ -1,0 +1,13 @@
+{
+    "name": "Airplane Seat Assignment Probability",
+    "url": "https://leetcode.com/problems/airplane-seat-assignment-probability",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

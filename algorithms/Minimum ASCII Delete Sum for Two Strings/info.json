@@ -1,0 +1,13 @@
+{
+    "name": "Minimum ASCII Delete Sum for Two Strings",
+    "url": "https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

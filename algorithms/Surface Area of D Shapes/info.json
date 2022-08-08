@@ -1,0 +1,13 @@
+{
+    "name": "Surface Area of D Shapes",
+    "url": "https://leetcode.com/problems/surface-area-of-3d-shapes",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}
