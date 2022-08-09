@@ -1,5 +1,5 @@
 # Algorithms-solutions
-This folder contains Solutions to 12 Algorithms Leetcode problems that starts with 'O' written in the following programming languages ( Java ,Javascript ,C++ ,Python ).<br><br>
+This folder contains Solutions to 12 Algorithms Leetcode problems that starts with 'O' written in the following programming languages ( Javascript ,Java ,Python ,C++ ).<br><br>
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|

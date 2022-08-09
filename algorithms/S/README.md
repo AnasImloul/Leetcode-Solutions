@@ -1,5 +1,5 @@
 # Algorithms-solutions
-This folder contains Solutions to 202 Algorithms Leetcode problems that starts with 'S' written in the following programming languages ( Java ,Javascript ,C++ ,Python ).<br><br>
+This folder contains Solutions to 202 Algorithms Leetcode problems that starts with 'S' written in the following programming languages ( Javascript ,Java ,Python ,C++ ).<br><br>
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|
