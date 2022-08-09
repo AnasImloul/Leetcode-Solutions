@@ -144,30 +144,17 @@ def generate_topic_readme_file(topic_path):
 
     readme += "\n" + table_columns_header(
         [(f"[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#leetcode-solutions)" if len(get_all_subdirectories(topic_path + "\\" + _class))>0 else f"<span style='color:grey'>  {_class} </span>")
-         for _class in CLASSES[:len(CLASSES) // 2]],
-        ["center"] * (len(CLASSES) // 2))
+         for _class in CLASSES[:len(CLASSES) // 2 + 2]],
+        ["center"] * (len(CLASSES) // 2 + 2))
 
     # <span style='color:blue'>some *blue* text</span>
     readme += "\n" + table_columns_header(
         [(f"**[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#leetcode-solutions)**" if len(get_all_subdirectories(topic_path + "\\" + _class))>0 else f"**<span style='color:grey'>  {_class}  </span>**")
          for _class in CLASSES[len(CLASSES) // 2:]],
-        ["center"] * (len(CLASSES) // 2)).split("\n")[0]
+        ["center"] * (1 + len(CLASSES) // 2)).split("\n")[0]
 
     return readme
 
-
-def remove_info_json(topic_path):
-    for sub in get_all_subdirectories(topic_path):
-        if "info.json" in listdir(topic_path + "\\" + sub):
-            remove(topic_path + "\\" + sub + "\\" + "info.json")
-
-def remove_info_json_from_all_topics(scripts_path):
-    for topic in TOPICS:
-        topic_path = scripts_path + "\\" + topic
-        remove_info_json(topic_path)
-
-
-remove_info_json_from_all_topics(PATH)
 
 def generate_main_readme_file(scripts_path):
     readme = __MAIN_README_HEADER__
@@ -178,7 +165,6 @@ def generate_main_readme_file(scripts_path):
         if topic in all_dirs:
             readme += "\n" + f"- ### [{topic.capitalize()}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}#{topic}-solutions) ###"
     return readme
-
 
 
 
