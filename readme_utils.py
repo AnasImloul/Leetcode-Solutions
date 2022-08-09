@@ -4,7 +4,7 @@ import json
 from json import JSONDecodeError
 from os import listdir, getcwd, remove
 from os.path import isdir, exists
-from random import random
+
 
 PATH = getcwd()
 
