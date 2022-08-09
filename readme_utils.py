@@ -2,10 +2,12 @@ import encodings
 import urllib.parse
 import json
 from json import JSONDecodeError
-from os import listdir
+from os import listdir, getcwd
 from os.path import isdir, exists
 from random import random
 
+
+PATH = getcwd()
 
 def load_json(file):
     if not exists(file):
@@ -58,11 +60,18 @@ extensions = {
 }
 
 
-__README_HEADER__ = """# Leetcode-solutions
+__MAIN_README_HEADER__ = """# Leetcode-solutions
 Solutions to over than 1800 Leetcode problems in four programming languages (C++, Python, Java, and Javascript).
 # How did I do it ? #
   - For detailed description of the problem check out my other repository [Leetcode-scraper](https://github.com/AnasImloul/Leetcode-solutions/) where I published the source code and documentation for the project.
 # Solutions"""
+
+__TOPIC_README_HEADER__ = """# ?-solutions
+This folder contains Solutions to % ? Leetcode problems written in the following programming languages (§).<br><br>
+Access solutions by alphabetical order:
+"""
+
+
 
 SOLUTIONS_TABLE_COLUMNS = ["problem", "languages", "difficulty", "Leetcode"]
 SOLUTIONS_TABLE_ALIGNS = ["left", "center", "center", "center"]
@@ -79,6 +88,21 @@ ALPHABETICAL_ORDER_CLASSES_COLUMNS = ["  " + _class + "  " for _class in CLASSES
 
 ALPHABETICAL_ORDER_CLASSES_ALIGNS = ["center"]*len(ALPHABETICAL_ORDER_CLASSES_COLUMNS)
 
+
+
+def get_all_file_extensions_from_path(path, recursion_limit=10):
+    sub_dirs = get_all_subdirectories(path)
+
+    extension_set = set()
+    if recursion_limit == 0 or sub_dirs == []:
+        for file in listdir(path):
+            if not isdir(path + "\\" + file):
+                extension_set.add("." + file.split(".")[-1] if "." in file else "")
+
+    else:
+        for sub_dir in sub_dirs:
+            extension_set = {*extension_set, *get_all_file_extensions_from_path(path + "\\" + sub_dir)}
+    return extension_set
 
 
 
@@ -107,60 +131,58 @@ def format_problem_to_table_row(info):
 
 #def alphabetical_order_classes(topic):
 
+def generate_topic_readme_file(topic_path):
+    topic = topic_path.split("\\")[-1]
+    all_languages = set({ext: lang for lang, ext in extensions.items()}.get(extension, "").capitalize() for extension in get_all_file_extensions_from_path(topic_path))
+    all_languages.remove('')
+
+    readme = __TOPIC_README_HEADER__.replace("?", topic.capitalize())\
+                                    .replace("%", str(sum(len(get_all_subdirectories(topic_path + "\\" + _class)) for _class in get_all_subdirectories(topic_path) )))\
+                                    .replace("§", " " + ", ".join(all_languages) + " ")
 
 
-def generate_readme_file(scripts_path):
-    readme = __README_HEADER__
-
-    readme += "\n" + table_columns_header([f"[{topic.capitalize()}](#{topic.capitalize()})" for topic in TOPICS],
-                                          ["center"] * 4)
-
-    for topic in TOPICS:
+    readme += "\n" + table_columns_header(
+        [f"[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#leetcode-solutions)"
+         for _class in CLASSES[:len(CLASSES) // 2]],
+        ["center"] * (len(CLASSES) // 2))
 
 
-        topic_path = scripts_path + "\\" + topic
-
-        if not exists(topic_path):
-            continue
-
-        scripts_link = "https://github.com/AnasImloul/Leetcode-solutions/tree/main/"
-        topic_github_link = scripts_link + topic
-
-
-
-        readme += "\n" + f"## [{topic.capitalize()}]({topic_github_link}) ##"
-
-        for _class in CLASSES:
-            class_path = topic_path + "\\" + _class
-            if not exists(class_path) or len(get_all_subdirectories(class_path)) == 0:
-                continue
-
-            readme += "\n" + f"### {_class} ###"
-            readme += "\n" + table_columns_header(SOLUTIONS_TABLE_COLUMNS, SOLUTIONS_TABLE_ALIGNS)
-
-
-            for problem_folder in get_all_subdirectories(class_path):
-
-                try:
-                    info = load_json(class_path + "\\" + problem_folder + "\\info.json")
-                except:
-                    continue
-
-                problem_row = format_problem_to_table_row(info)
-
-                if problem_row == "":
-                    continue
-
-                readme += "\n" + problem_row
+    readme += "\n" + table_columns_header(
+        [f"[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#leetcode-solutions)"
+         for _class in CLASSES[len(CLASSES) // 2:]],
+        ["center"] * (len(CLASSES) // 2)).split("\n")[0]
 
     return readme
 
 
+def generate_main_readme_file(scripts_path):
+    readme = __MAIN_README_HEADER__
 
-def update_readme_file(readme_path, scripts_path):
+    all_dirs = get_all_subdirectories(scripts_path)
+
+    for topic in TOPICS:
+        if topic in all_dirs:
+            readme += "\n" + f"- ### [{topic.capitalize()}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}#{topic}-solutions) ###"
+    return readme
+
+
+
+
+def update_main_readme_file():
+    readme_path = PATH + "\\README.md"
+    scripts_path = PATH
     with open(readme_path , encoding="utf-8", mode="w") as readme:
-        readme.write(generate_readme_file(scripts_path))
+        readme.write(generate_main_readme_file(scripts_path))
 
 
-update_readme_file(readme_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions\README.md",
-                                         scripts_path=r"C:\Users\hp\Desktop\Projects\Leetcode-solutions")
+def update_topic_readme_file(topic):
+    readme_path = PATH + "\\" + topic + "\\README.md"
+    topic_path = PATH + "\\" + topic
+    with open(readme_path , encoding="utf-8", mode="w") as readme:
+        readme.write(generate_topic_readme_file(topic_path))
+
+update_main_readme_file()
+
+for topic in TOPICS:
+    update_topic_readme_file(topic)
+
