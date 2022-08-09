@@ -135,30 +135,66 @@ def format_problem_to_table_row(info, _class):
     return f"|[{problem_name}]({problem_github_link})|{languages_md}|{difficulty.capitalize()}|[link]({problem_url})|"
 
 
+def generate_alphabetical_order_link_table(topic):
 
-def generate_topic_readme_file(topic_path):
-    topic = topic_path.split("\\")[-1]
-    all_languages = set({ext: lang for lang, ext in extensions.items()}.get(extension, "").capitalize() for extension in get_all_file_extensions_from_path(topic_path))
-    all_languages.remove('')
+    topic_path = "\\".join((PATH, topic))
 
-    readme = __TOPIC_README_HEADER__.replace("?", topic.capitalize())\
-                                    .replace("%", str(sum(len(get_all_subdirectories(topic_path + "\\" + _class)) for _class in get_all_subdirectories(topic_path) )))\
-                                    .replace("§", " " + ", ".join(all_languages) + " ")
-
-
-    readme += "\n" + table_columns_header(
-        [(f"[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#{topic}-solutions)" if len(get_all_subdirectories(topic_path + "\\" + _class))>0 else f"<span style='color:grey'>  {_class} </span>")
+    table = "\n" + table_columns_header(
+        [(
+             f"[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#{topic}-solutions)" if len(
+                 get_all_subdirectories(
+                     topic_path + "\\" + _class)) > 0 else f"<span style='color:grey'>  {_class} </span>")
          for _class in CLASSES[:len(CLASSES) // 2 + 2]],
         ["center"] * (len(CLASSES) // 2 + 2))
 
-    # <span style='color:blue'>some *blue* text</span>
-    readme += "\n" + table_columns_header(
-        [(f"**[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#{topic}-solutions)**" if len(get_all_subdirectories(topic_path + "\\" + _class))>0 else f"**<span style='color:grey'>  {_class}  </span>**")
+
+    table += "\n" + table_columns_header(
+        [(
+             f"**[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#{topic}-solutions)**" if len(
+                 get_all_subdirectories(
+                     topic_path + "\\" + _class)) > 0 else f"**<span style='color:grey'>  {_class}  </span>**")
          for _class in CLASSES[len(CLASSES) // 2:]],
         ["center"] * (1 + len(CLASSES) // 2)).split("\n")[0]
 
+    return table
+
+def get_total_problem_folders(topic):
+    topic_path = "\\".join((PATH, topic))
+    return sum(len(get_all_subdirectories(topic_path + "\\" + _class)) for _class in get_all_subdirectories(topic_path))
+
+
+def get_all_script_languages(topic):
+    topic_path = "\\".join((PATH, topic))
+    all_languages = set({ext: lang for lang, ext in extensions.items()}.get(extension, "").capitalize() for extension in
+                        get_all_file_extensions_from_path(topic_path))
+    all_languages.remove('')
+    return all_languages
+
+def generate_topic_readme_file(topic_path):
+    topic = topic_path.split("\\")[-1]
+
+
+    readme = __TOPIC_README_HEADER__.replace("?", topic.capitalize())\
+                                    .replace("%", str(get_total_problem_folders(topic)))\
+                                    .replace("§", " " + ", ".join(get_all_script_languages(topic)) + " ")
+
+
+    readme += generate_alphabetical_order_link_table(topic)
+
     return readme
 
+
+def generate_problems_table(topic, _class):
+    table = "\n" + table_columns_header(["problems", "langages", "difficulty", "Leetcode"],
+                                          ["left", "center", "center", "center"])
+
+    class_path = "\\".join((PATH, topic, _class))
+
+    for problem in get_all_subdirectories(class_path):
+        info = load_json(class_path + "\\" + problem + "\\" + "info.json")
+        table = "\n" + format_problem_to_table_row(info, _class)
+
+    return table
 
 def generate_alphabetical_readme_file(class_path):
     all_languages = set({ext: lang for lang, ext in extensions.items()}.get(extension, "").capitalize() for extension in
@@ -173,12 +209,7 @@ def generate_alphabetical_readme_file(class_path):
                                            .replace("$", _class)\
                                            .replace("§", " " + " ,".join(all_languages) + " ")
 
-    readme += "\n" + table_columns_header(["problems", "langages", "difficulty", "Leetcode"],
-                                          ["left", "center", "center", "center"])
-
-    for problem in get_all_subdirectories(class_path):
-        info = load_json(class_path + "\\" + problem + "\\" + "info.json")
-        readme += "\n" + format_problem_to_table_row(info, _class)
+    readme += generate_problems_table(topic, _class)
 
     return readme
 
@@ -190,9 +221,10 @@ def generate_main_readme_file(scripts_path):
 
     for topic in TOPICS:
         if topic in all_dirs:
-            readme += "\n" + f"- ### [{topic.capitalize()}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/#{topic}-solutions) ###"
+            readme += "\n" + f"### [{topic.capitalize()}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/#{topic}-solutions) ###"
+            readme += "\n" + f"Check out solutions to {get_total_problem_folders(topic)} problems from the {topic.capitalize()} category written in ( {', '.join(get_all_script_languages(topic))}) ."
+            readme += "\n" + generate_alphabetical_order_link_table(topic)
     return readme
-
 
 
 def update_main_readme_file():

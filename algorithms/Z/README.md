@@ -1,7 +1,4 @@
 # Algorithms-solutions
-This folder contains Solutions to 2 Algorithms Leetcode problems that starts with 'Z' written in the following programming languages ( C++ ,Python ,Javascript ,Java ).<br><br>
+This folder contains Solutions to 2 Algorithms Leetcode problems that starts with 'Z' written in the following programming languages ( Python ,Java ,Javascript ,C++ ).<br><br>
 ### Problems ###
-|problems|langages|difficulty|Leetcode|
-|:-------|:------:|:--------:|:------:|
-|[Zigzag Conversion](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zigzag%20Conversion/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zigzag%20Conversion/Zigzag%20Conversion.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zigzag%20Conversion/Zigzag%20Conversion.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zigzag%20Conversion/Zigzag%20Conversion.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zigzag%20Conversion/Zigzag%20Conversion.py)|Medium|[link](https://leetcode.com/problems/zigzag-conversion)|
 |[Zuma Game](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zuma%20Game/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zuma%20Game/Zuma%20Game.cpp), [Java](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zuma%20Game/Zuma%20Game.java), [Javascript](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zuma%20Game/Zuma%20Game.js), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/algorithms/Z/Zuma%20Game/Zuma%20Game.py)|Hard|[link](https://leetcode.com/problems/zuma-game)|
