@@ -71,6 +71,11 @@ This folder contains Solutions to % ? Leetcode problems written in the following
 Access solutions by alphabetical order:
 """
 
+__ALPHABETICAL_README_HEADER__ = """# ?-solutions
+This folder contains Solutions to % ? Leetcode problems that starts with '$' written in the following programming languages (§).<br><br>
+### Problems ###"""
+
+
 
 
 SOLUTIONS_TABLE_COLUMNS = ["problem", "languages", "difficulty", "Leetcode"]
@@ -106,18 +111,20 @@ def get_all_file_extensions_from_path(path, recursion_limit=10):
 
 
 
-def format_problem_to_table_row(info):
+def format_problem_to_table_row(info, _class):
     problem_name = info.get("name", "")
     problem_url = info.get("url", "")
     difficulty = info.get("difficulty","")
     languages = sorted(info.get("solution", dict()).keys())
     topic = info.get("topic", "")
+
+
     if problem_name == "":
         return ""
 
     scripts_link = "https://github.com/AnasImloul/Leetcode-solutions/tree/main/"
 
-    problem_github_link = scripts_link + topic + "/" + urlencode(problem_name) + "/"
+    problem_github_link = scripts_link + topic + "/" + _class + "/" + urlencode(problem_name) + "/"
 
     # https://github.com/AnasImloul/Leetcode-solutions/blob/main/scripts/algorithms/All%20O%60one%20Data%20Structure/All%20O%60one%20Data%20Structure.java
 
@@ -128,8 +135,6 @@ def format_problem_to_table_row(info):
     return f"|[{problem_name}]({problem_github_link})|{languages_md}|{difficulty.capitalize()}|[link]({problem_url})|"
 
 
-
-#def alphabetical_order_classes(topic):
 
 def generate_topic_readme_file(topic_path):
     topic = topic_path.split("\\")[-1]
@@ -152,6 +157,29 @@ def generate_topic_readme_file(topic_path):
         [(f"**[{_class}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/{_class}/#leetcode-solutions)**" if len(get_all_subdirectories(topic_path + "\\" + _class))>0 else f"**<span style='color:grey'>  {_class}  </span>**")
          for _class in CLASSES[len(CLASSES) // 2:]],
         ["center"] * (1 + len(CLASSES) // 2)).split("\n")[0]
+
+    return readme
+
+
+def generate_alphabetical_readme_file(class_path):
+    all_languages = set({ext: lang for lang, ext in extensions.items()}.get(extension, "").capitalize() for extension in
+                        get_all_file_extensions_from_path(class_path))
+    all_languages.remove('')
+
+
+    topic, _class = class_path.split("\\")[-2:]
+
+    readme = __ALPHABETICAL_README_HEADER__.replace("?", topic.capitalize())\
+                                           .replace("%", str(len(get_all_subdirectories(class_path))))\
+                                           .replace("$", _class)\
+                                           .replace("§", " " + " ,".join(all_languages) + " ")
+
+    readme += "\n" + table_columns_header(["problems", "langages", "difficulty", "Leetcode"],
+                                          ["left", "center", "center", "center"])
+
+    for problem in get_all_subdirectories(class_path):
+        info = load_json(class_path + "\\" + problem + "\\" + "info.json")
+        readme += "\n" + format_problem_to_table_row(info, _class)
 
     return readme
 
@@ -181,8 +209,23 @@ def update_topic_readme_file(topic):
     with open(readme_path , encoding="utf-8", mode="w") as readme:
         readme.write(generate_topic_readme_file(topic_path))
 
+
+def update_alphabetical_readme_file(topic, _class):
+    readme_path = "\\".join((PATH, topic, _class, "README.md"))
+    class_path = "\\".join((PATH, topic, _class))
+
+    print(topic, _class)
+    if len(get_all_subdirectories(class_path)) == 0:
+        return
+
+    with open(readme_path , encoding="utf-8", mode="w") as readme:
+        readme.write(generate_alphabetical_readme_file(class_path))
+
 update_main_readme_file()
 
 for topic in TOPICS:
     update_topic_readme_file(topic)
+
+    for _class in get_all_subdirectories("\\".join((PATH, topic))):
+        update_alphabetical_readme_file(topic, _class)
 
