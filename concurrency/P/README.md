@@ -1,4 +1,8 @@
 # Concurrency-solutions
 This folder contains Solutions to 3 Concurrency Leetcode problems that starts with 'P' written in the following programming languages ( C++ ,Python ).<br><br>
 ### Problems ###
+|problems|langages|difficulty|Leetcode|
+|:-------|:------:|:--------:|:------:|
+|[Print FooBar Alternately](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20FooBar%20Alternately/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.cpp), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.py)|Medium|[link](https://leetcode.com/problems/print-foobar-alternately)|
+|[Print in Order](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20in%20Order/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20in%20Order/Print%20in%20Order.cpp), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20in%20Order/Print%20in%20Order.py)|Easy|[link](https://leetcode.com/problems/print-in-order)|
 |[Print Zero Even Odd](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20Zero%20Even%20Odd/)|[C++](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.cpp), [Python](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/P/Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.py)|Medium|[link](https://leetcode.com/problems/print-zero-even-odd)|

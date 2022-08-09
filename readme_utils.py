@@ -174,11 +174,12 @@ def generate_problems_table(topic, _class):
     table = "\n" + table_columns_header(["problems", "langages", "difficulty", "Leetcode"],
                                         ["left", "center", "center", "center"])
 
+
     class_path = "\\".join((PATH, topic, _class))
 
     for problem in get_all_subdirectories(class_path):
         info = load_json(class_path + "\\" + problem + "\\" + "info.json")
-        table = "\n" + format_problem_to_table_row(info, _class)
+        table += "\n" + format_problem_to_table_row(info, _class)
 
     return table
 
