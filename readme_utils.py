@@ -190,7 +190,7 @@ def generate_main_readme_file(scripts_path):
 
     for topic in TOPICS:
         if topic in all_dirs:
-            readme += "\n" + f"- ### [{topic.capitalize()}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}#{topic}-solutions) ###"
+            readme += "\n" + f"- ### [{topic.capitalize()}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/#{topic}-solutions) ###"
     return readme
 
 

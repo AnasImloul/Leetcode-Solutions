@@ -1,5 +1,5 @@
 # Algorithms-solutions
-This folder contains Solutions to 3 Algorithms Leetcode problems that starts with 'X' written in the following programming languages ( Javascript ,Java ,Python ,C++ ).<br><br>
+This folder contains Solutions to 3 Algorithms Leetcode problems that starts with 'X' written in the following programming languages ( C++ ,Python ,Javascript ,Java ).<br><br>
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|

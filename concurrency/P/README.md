@@ -1,5 +1,5 @@
 # Concurrency-solutions
-This folder contains Solutions to 3 Concurrency Leetcode problems that starts with 'P' written in the following programming languages ( Python ,C++ ).<br><br>
+This folder contains Solutions to 3 Concurrency Leetcode problems that starts with 'P' written in the following programming languages ( C++ ,Python ).<br><br>
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|

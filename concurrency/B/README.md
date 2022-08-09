@@ -1,5 +1,5 @@
 # Concurrency-solutions
-This folder contains Solutions to 1 Concurrency Leetcode problems that starts with 'B' written in the following programming languages ( Python ,C++ ).<br><br>
+This folder contains Solutions to 1 Concurrency Leetcode problems that starts with 'B' written in the following programming languages ( C++ ,Python ).<br><br>
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|

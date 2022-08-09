@@ -1,5 +1,5 @@
 # Algorithms-solutions
-This folder contains Solutions to 10 Algorithms Leetcode problems that starts with '0-9' written in the following programming languages ( Javascript ,Java ,Python ,C++ ).<br><br>
+This folder contains Solutions to 10 Algorithms Leetcode problems that starts with '0-9' written in the following programming languages ( C++ ,Python ,Javascript ,Java ).<br><br>
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|

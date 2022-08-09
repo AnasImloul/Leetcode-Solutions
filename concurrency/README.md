@@ -1,5 +1,5 @@
 # Concurrency-solutions
-This folder contains Solutions to 6 Concurrency Leetcode problems written in the following programming languages ( Python, C++ ).<br><br>
+This folder contains Solutions to 6 Concurrency Leetcode problems written in the following programming languages ( C++, Python ).<br><br>
 Access solutions by alphabetical order:
 
 |<span style='color:grey'>  0-9 </span>|<span style='color:grey'>  A </span>|[B](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/B/#concurrency-solutions)|<span style='color:grey'>  C </span>|<span style='color:grey'>  D </span>|<span style='color:grey'>  E </span>|[F](https://github.com/AnasImloul/Leetcode-solutions/tree/main/concurrency/F/#concurrency-solutions)|<span style='color:grey'>  G </span>|<span style='color:grey'>  H </span>|<span style='color:grey'>  I </span>|<span style='color:grey'>  J </span>|<span style='color:grey'>  K </span>|<span style='color:grey'>  L </span>|<span style='color:grey'>  M </span>|<span style='color:grey'>  N </span>|
