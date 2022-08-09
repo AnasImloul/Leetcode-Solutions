@@ -1,0 +1,14 @@
+{
+    "id": "1906",
+    "name": "Minimum Absolute Difference Queries",
+    "url": "https://leetcode.com/problems/minimum-absolute-difference-queries",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

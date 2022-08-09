@@ -1,0 +1,14 @@
+{
+    "id": "470",
+    "name": "Implement Rand10() Using Rand7()",
+    "url": "https://leetcode.com/problems/implement-rand10-using-rand7",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

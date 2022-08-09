@@ -1,0 +1,14 @@
+{
+    "id": "151",
+    "name": "Reverse Words in a String",
+    "url": "https://leetcode.com/problems/reverse-words-in-a-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

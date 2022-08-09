@@ -1,0 +1,14 @@
+{
+    "id": "2089",
+    "name": "Find Target Indices After Sorting Array",
+    "url": "https://leetcode.com/problems/find-target-indices-after-sorting-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

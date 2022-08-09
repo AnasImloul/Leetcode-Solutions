@@ -1,0 +1,14 @@
+{
+    "id": "232",
+    "name": "Implement Queue using Stacks",
+    "url": "https://leetcode.com/problems/implement-queue-using-stacks",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

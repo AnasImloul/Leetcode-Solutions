@@ -1,0 +1,14 @@
+{
+    "id": "1857",
+    "name": "Largest Color Value in a Directed Graph",
+    "url": "https://leetcode.com/problems/largest-color-value-in-a-directed-graph",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

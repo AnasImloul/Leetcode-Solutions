@@ -1,0 +1,14 @@
+{
+    "id": "2278",
+    "name": "Percentage of Letter in String",
+    "url": "https://leetcode.com/problems/percentage-of-letter-in-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1944",
+    "name": "Number of Visible People in a Queue",
+    "url": "https://leetcode.com/problems/number-of-visible-people-in-a-queue",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

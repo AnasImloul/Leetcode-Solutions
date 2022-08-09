@@ -1,0 +1,14 @@
+{
+    "id": "816",
+    "name": "Ambiguous Coordinates",
+    "url": "https://leetcode.com/problems/ambiguous-coordinates",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

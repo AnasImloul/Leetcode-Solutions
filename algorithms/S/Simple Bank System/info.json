@@ -1,0 +1,14 @@
+{
+    "id": "2043",
+    "name": "Simple Bank System",
+    "url": "https://leetcode.com/problems/simple-bank-system",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

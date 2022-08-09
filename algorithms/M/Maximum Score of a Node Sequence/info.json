@@ -1,0 +1,14 @@
+{
+    "id": "2242",
+    "name": "Maximum Score of a Node Sequence",
+    "url": "https://leetcode.com/problems/maximum-score-of-a-node-sequence",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

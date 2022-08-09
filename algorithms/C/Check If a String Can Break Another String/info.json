@@ -1,0 +1,14 @@
+{
+    "id": "1433",
+    "name": "Check If a String Can Break Another String",
+    "url": "https://leetcode.com/problems/check-if-a-string-can-break-another-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

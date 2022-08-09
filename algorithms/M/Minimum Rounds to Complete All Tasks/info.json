@@ -1,0 +1,14 @@
+{
+    "id": "2244",
+    "name": "Minimum Rounds to Complete All Tasks",
+    "url": "https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

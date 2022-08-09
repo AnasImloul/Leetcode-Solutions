@@ -1,0 +1,14 @@
+{
+    "id": "1346",
+    "name": "Check If N and Its Double Exist",
+    "url": "https://leetcode.com/problems/check-if-n-and-its-double-exist",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1932",
+    "name": "Merge BSTs to Create Single BST",
+    "url": "https://leetcode.com/problems/merge-bsts-to-create-single-bst",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

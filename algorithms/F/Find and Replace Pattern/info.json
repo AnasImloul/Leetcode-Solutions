@@ -1,0 +1,14 @@
+{
+    "id": "890",
+    "name": "Find and Replace Pattern",
+    "url": "https://leetcode.com/problems/find-and-replace-pattern",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

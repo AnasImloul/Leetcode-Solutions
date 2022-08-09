@@ -1,0 +1,14 @@
+{
+    "id": "878",
+    "name": "Nth Magical Number",
+    "url": "https://leetcode.com/problems/nth-magical-number",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

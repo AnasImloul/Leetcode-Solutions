@@ -1,0 +1,14 @@
+{
+    "id": "1684",
+    "name": "Count the Number of Consistent Strings",
+    "url": "https://leetcode.com/problems/count-the-number-of-consistent-strings",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

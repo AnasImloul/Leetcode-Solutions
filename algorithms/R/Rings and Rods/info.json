@@ -1,0 +1,14 @@
+{
+    "id": "2103",
+    "name": "Rings and Rods",
+    "url": "https://leetcode.com/problems/rings-and-rods",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

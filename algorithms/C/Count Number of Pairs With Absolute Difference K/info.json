@@ -1,0 +1,14 @@
+{
+    "id": "2006",
+    "name": "Count Number of Pairs With Absolute Difference K",
+    "url": "https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

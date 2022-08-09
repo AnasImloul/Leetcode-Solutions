@@ -1,0 +1,14 @@
+{
+    "id": "1072",
+    "name": "Flip Columns For Maximum Number of Equal Rows",
+    "url": "https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

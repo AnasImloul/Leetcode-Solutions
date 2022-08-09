@@ -1,0 +1,14 @@
+{
+    "id": "345",
+    "name": "Reverse Vowels of a String",
+    "url": "https://leetcode.com/problems/reverse-vowels-of-a-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

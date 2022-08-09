@@ -1,0 +1,14 @@
+{
+    "id": "537",
+    "name": "Complex Number Multiplication",
+    "url": "https://leetcode.com/problems/complex-number-multiplication",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

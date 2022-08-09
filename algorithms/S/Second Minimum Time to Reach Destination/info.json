@@ -1,0 +1,14 @@
+{
+    "id": "2045",
+    "name": "Second Minimum Time to Reach Destination",
+    "url": "https://leetcode.com/problems/second-minimum-time-to-reach-destination",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

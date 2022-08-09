@@ -1,0 +1,11 @@
+{
+    "id": "1795",
+    "name": "Rearrange Products Table",
+    "url": "https://leetcode.com/problems/rearrange-products-table",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "8",
+    "name": "String to Integer (atoi)",
+    "url": "https://leetcode.com/problems/string-to-integer-atoi",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

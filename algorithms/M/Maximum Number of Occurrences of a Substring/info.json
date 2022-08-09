@@ -1,0 +1,14 @@
+{
+    "id": "1297",
+    "name": "Maximum Number of Occurrences of a Substring",
+    "url": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

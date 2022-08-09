@@ -1,0 +1,14 @@
+{
+    "id": "1465",
+    "name": "Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
+    "url": "https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

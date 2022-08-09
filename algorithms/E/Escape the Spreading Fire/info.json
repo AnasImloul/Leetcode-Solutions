@@ -1,0 +1,14 @@
+{
+    "id": "2258",
+    "name": "Escape the Spreading Fire",
+    "url": "https://leetcode.com/problems/escape-the-spreading-fire",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2293",
+    "name": "Min Max Game",
+    "url": "https://leetcode.com/problems/min-max-game",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

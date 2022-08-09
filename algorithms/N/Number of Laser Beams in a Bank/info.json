@@ -1,0 +1,14 @@
+{
+    "id": "2125",
+    "name": "Number of Laser Beams in a Bank",
+    "url": "https://leetcode.com/problems/number-of-laser-beams-in-a-bank",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

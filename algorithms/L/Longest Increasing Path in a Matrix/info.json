@@ -1,0 +1,14 @@
+{
+    "id": "329",
+    "name": "Longest Increasing Path in a Matrix",
+    "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

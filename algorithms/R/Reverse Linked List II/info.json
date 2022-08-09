@@ -1,0 +1,14 @@
+{
+    "id": "92",
+    "name": "Reverse Linked List II",
+    "url": "https://leetcode.com/problems/reverse-linked-list-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

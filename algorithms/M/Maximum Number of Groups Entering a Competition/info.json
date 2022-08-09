@@ -1,0 +1,14 @@
+{
+    "id": "2358",
+    "name": "Maximum Number of Groups Entering a Competition",
+    "url": "https://leetcode.com/problems/maximum-number-of-groups-entering-a-competition",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": false,
+        "java": false,
+        "javascript": true
+    }
+}

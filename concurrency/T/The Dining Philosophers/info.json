@@ -1,0 +1,12 @@
+{
+    "id": "1226",
+    "name": "The Dining Philosophers",
+    "url": "https://leetcode.com/problems/the-dining-philosophers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "concurrency",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

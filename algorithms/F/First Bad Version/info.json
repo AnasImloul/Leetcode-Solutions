@@ -1,0 +1,14 @@
+{
+    "id": "278",
+    "name": "First Bad Version",
+    "url": "https://leetcode.com/problems/first-bad-version",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

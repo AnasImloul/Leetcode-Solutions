@@ -1,0 +1,14 @@
+{
+    "id": "1353",
+    "name": "Maximum Number of Events That Can Be Attended",
+    "url": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

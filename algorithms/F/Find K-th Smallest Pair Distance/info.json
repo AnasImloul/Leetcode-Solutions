@@ -1,0 +1,14 @@
+{
+    "id": "719",
+    "name": "Find K-th Smallest Pair Distance",
+    "url": "https://leetcode.com/problems/find-k-th-smallest-pair-distance",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2288",
+    "name": "Apply Discount to Prices",
+    "url": "https://leetcode.com/problems/apply-discount-to-prices",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

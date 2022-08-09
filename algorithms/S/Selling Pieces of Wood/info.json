@@ -1,0 +1,14 @@
+{
+    "id": "2312",
+    "name": "Selling Pieces of Wood",
+    "url": "https://leetcode.com/problems/selling-pieces-of-wood",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

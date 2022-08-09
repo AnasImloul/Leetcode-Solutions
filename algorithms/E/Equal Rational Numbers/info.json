@@ -1,0 +1,14 @@
+{
+    "id": "972",
+    "name": "Equal Rational Numbers",
+    "url": "https://leetcode.com/problems/equal-rational-numbers",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

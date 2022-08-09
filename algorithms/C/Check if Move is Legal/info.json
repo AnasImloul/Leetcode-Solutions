@@ -1,0 +1,14 @@
+{
+    "id": "1958",
+    "name": "Check if Move is Legal",
+    "url": "https://leetcode.com/problems/check-if-move-is-legal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

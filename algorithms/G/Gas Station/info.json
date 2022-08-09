@@ -1,0 +1,14 @@
+{
+    "id": "134",
+    "name": "Gas Station",
+    "url": "https://leetcode.com/problems/gas-station",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1382",
+    "name": "Balance a Binary Search Tree",
+    "url": "https://leetcode.com/problems/balance-a-binary-search-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

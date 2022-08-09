@@ -1,0 +1,14 @@
+{
+    "id": "968",
+    "name": "Binary Tree Cameras",
+    "url": "https://leetcode.com/problems/binary-tree-cameras",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

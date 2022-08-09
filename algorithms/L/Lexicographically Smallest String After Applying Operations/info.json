@@ -1,0 +1,14 @@
+{
+    "id": "1625",
+    "name": "Lexicographically Smallest String After Applying Operations",
+    "url": "https://leetcode.com/problems/lexicographically-smallest-string-after-applying-operations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

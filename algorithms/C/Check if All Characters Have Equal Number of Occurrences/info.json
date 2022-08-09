@@ -1,0 +1,14 @@
+{
+    "id": "1941",
+    "name": "Check if All Characters Have Equal Number of Occurrences",
+    "url": "https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

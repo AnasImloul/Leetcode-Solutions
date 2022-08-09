@@ -1,0 +1,14 @@
+{
+    "id": "200",
+    "name": "Number of Islands",
+    "url": "https://leetcode.com/problems/number-of-islands",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1835",
+    "name": "Find XOR Sum of All Pairs Bitwise AND",
+    "url": "https://leetcode.com/problems/find-xor-sum-of-all-pairs-bitwise-and",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

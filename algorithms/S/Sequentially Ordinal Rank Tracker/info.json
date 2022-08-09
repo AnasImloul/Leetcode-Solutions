@@ -1,0 +1,14 @@
+{
+    "id": "2102",
+    "name": "Sequentially Ordinal Rank Tracker",
+    "url": "https://leetcode.com/problems/sequentially-ordinal-rank-tracker",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

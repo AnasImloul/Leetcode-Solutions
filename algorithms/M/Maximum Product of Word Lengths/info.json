@@ -1,0 +1,14 @@
+{
+    "id": "318",
+    "name": "Maximum Product of Word Lengths",
+    "url": "https://leetcode.com/problems/maximum-product-of-word-lengths",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "985",
+    "name": "Sum of Even Numbers After Queries",
+    "url": "https://leetcode.com/problems/sum-of-even-numbers-after-queries",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

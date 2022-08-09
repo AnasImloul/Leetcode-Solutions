@@ -1,0 +1,14 @@
+{
+    "id": "1968",
+    "name": "Array With Elements Not Equal to Average of Neighbors",
+    "url": "https://leetcode.com/problems/array-with-elements-not-equal-to-average-of-neighbors",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

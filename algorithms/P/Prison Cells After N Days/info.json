@@ -1,0 +1,14 @@
+{
+    "id": "957",
+    "name": "Prison Cells After N Days",
+    "url": "https://leetcode.com/problems/prison-cells-after-n-days",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1470",
+    "name": "Shuffle the Array",
+    "url": "https://leetcode.com/problems/shuffle-the-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

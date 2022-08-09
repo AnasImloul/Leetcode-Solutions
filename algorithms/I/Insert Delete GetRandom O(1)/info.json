@@ -1,0 +1,14 @@
+{
+    "id": "380",
+    "name": "Insert Delete GetRandom O(1)",
+    "url": "https://leetcode.com/problems/insert-delete-getrandom-o1",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

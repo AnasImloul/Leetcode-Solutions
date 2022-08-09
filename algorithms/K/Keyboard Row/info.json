@@ -1,0 +1,14 @@
+{
+    "id": "500",
+    "name": "Keyboard Row",
+    "url": "https://leetcode.com/problems/keyboard-row",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

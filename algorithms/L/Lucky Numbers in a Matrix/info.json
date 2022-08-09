@@ -1,0 +1,14 @@
+{
+    "id": "1380",
+    "name": "Lucky Numbers in a Matrix",
+    "url": "https://leetcode.com/problems/lucky-numbers-in-a-matrix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

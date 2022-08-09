@@ -1,0 +1,11 @@
+{
+    "id": "184",
+    "name": "Department Highest Salary",
+    "url": "https://leetcode.com/problems/department-highest-salary",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

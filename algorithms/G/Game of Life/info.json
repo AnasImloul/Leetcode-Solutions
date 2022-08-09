@@ -1,0 +1,14 @@
+{
+    "id": "289",
+    "name": "Game of Life",
+    "url": "https://leetcode.com/problems/game-of-life",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

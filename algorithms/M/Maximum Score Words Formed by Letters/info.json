@@ -1,0 +1,14 @@
+{
+    "id": "1255",
+    "name": "Maximum Score Words Formed by Letters",
+    "url": "https://leetcode.com/problems/maximum-score-words-formed-by-letters",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

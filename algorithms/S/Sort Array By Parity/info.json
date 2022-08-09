@@ -1,0 +1,14 @@
+{
+    "id": "905",
+    "name": "Sort Array By Parity",
+    "url": "https://leetcode.com/problems/sort-array-by-parity",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

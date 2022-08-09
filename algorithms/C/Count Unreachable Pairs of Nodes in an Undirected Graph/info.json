@@ -1,0 +1,14 @@
+{
+    "id": "2316",
+    "name": "Count Unreachable Pairs of Nodes in an Undirected Graph",
+    "url": "https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "907",
+    "name": "Sum of Subarray Minimums",
+    "url": "https://leetcode.com/problems/sum-of-subarray-minimums",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

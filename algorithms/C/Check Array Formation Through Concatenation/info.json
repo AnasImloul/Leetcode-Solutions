@@ -1,0 +1,14 @@
+{
+    "id": "1640",
+    "name": "Check Array Formation Through Concatenation",
+    "url": "https://leetcode.com/problems/check-array-formation-through-concatenation",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

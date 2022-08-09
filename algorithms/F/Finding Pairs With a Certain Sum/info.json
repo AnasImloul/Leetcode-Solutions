@@ -1,0 +1,14 @@
+{
+    "id": "1865",
+    "name": "Finding Pairs With a Certain Sum",
+    "url": "https://leetcode.com/problems/finding-pairs-with-a-certain-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

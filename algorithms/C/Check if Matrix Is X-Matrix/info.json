@@ -1,0 +1,14 @@
+{
+    "id": "2319",
+    "name": "Check if Matrix Is X-Matrix",
+    "url": "https://leetcode.com/problems/check-if-matrix-is-x-matrix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

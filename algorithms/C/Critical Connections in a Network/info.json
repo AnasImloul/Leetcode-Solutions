@@ -1,0 +1,14 @@
+{
+    "id": "1192",
+    "name": "Critical Connections in a Network",
+    "url": "https://leetcode.com/problems/critical-connections-in-a-network",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

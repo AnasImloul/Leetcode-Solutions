@@ -1,0 +1,14 @@
+{
+    "id": "458",
+    "name": "Poor Pigs",
+    "url": "https://leetcode.com/problems/poor-pigs",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

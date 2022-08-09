@@ -1,0 +1,14 @@
+{
+    "id": "989",
+    "name": "Add to Array-Form of Integer",
+    "url": "https://leetcode.com/problems/add-to-array-form-of-integer",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

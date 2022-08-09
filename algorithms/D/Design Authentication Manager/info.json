@@ -1,0 +1,14 @@
+{
+    "id": "1797",
+    "name": "Design Authentication Manager",
+    "url": "https://leetcode.com/problems/design-authentication-manager",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

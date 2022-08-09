@@ -1,0 +1,14 @@
+{
+    "id": "852",
+    "name": "Peak Index in a Mountain Array",
+    "url": "https://leetcode.com/problems/peak-index-in-a-mountain-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

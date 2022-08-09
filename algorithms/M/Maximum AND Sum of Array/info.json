@@ -1,0 +1,14 @@
+{
+    "id": "2172",
+    "name": "Maximum AND Sum of Array",
+    "url": "https://leetcode.com/problems/maximum-and-sum-of-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

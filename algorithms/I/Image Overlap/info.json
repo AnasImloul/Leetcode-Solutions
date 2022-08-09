@@ -1,0 +1,14 @@
+{
+    "id": "835",
+    "name": "Image Overlap",
+    "url": "https://leetcode.com/problems/image-overlap",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

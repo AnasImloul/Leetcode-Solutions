@@ -1,0 +1,14 @@
+{
+    "id": "1395",
+    "name": "Count Number of Teams",
+    "url": "https://leetcode.com/problems/count-number-of-teams",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

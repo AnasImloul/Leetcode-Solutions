@@ -1,0 +1,14 @@
+{
+    "id": "19",
+    "name": "Remove Nth Node From End of List",
+    "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

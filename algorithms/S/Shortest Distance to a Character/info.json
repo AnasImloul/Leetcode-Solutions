@@ -1,0 +1,14 @@
+{
+    "id": "821",
+    "name": "Shortest Distance to a Character",
+    "url": "https://leetcode.com/problems/shortest-distance-to-a-character",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

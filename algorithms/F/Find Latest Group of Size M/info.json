@@ -1,0 +1,14 @@
+{
+    "id": "1562",
+    "name": "Find Latest Group of Size M",
+    "url": "https://leetcode.com/problems/find-latest-group-of-size-m",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

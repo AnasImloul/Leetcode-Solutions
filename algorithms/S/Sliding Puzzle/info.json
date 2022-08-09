@@ -1,0 +1,14 @@
+{
+    "id": "773",
+    "name": "Sliding Puzzle",
+    "url": "https://leetcode.com/problems/sliding-puzzle",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

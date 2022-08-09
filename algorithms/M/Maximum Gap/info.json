@@ -1,0 +1,14 @@
+{
+    "id": "164",
+    "name": "Maximum Gap",
+    "url": "https://leetcode.com/problems/maximum-gap",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

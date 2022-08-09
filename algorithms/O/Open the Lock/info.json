@@ -1,0 +1,14 @@
+{
+    "id": "752",
+    "name": "Open the Lock",
+    "url": "https://leetcode.com/problems/open-the-lock",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1748",
+    "name": "Sum of Unique Elements",
+    "url": "https://leetcode.com/problems/sum-of-unique-elements",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

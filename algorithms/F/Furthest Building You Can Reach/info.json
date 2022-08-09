@@ -1,0 +1,14 @@
+{
+    "id": "1642",
+    "name": "Furthest Building You Can Reach",
+    "url": "https://leetcode.com/problems/furthest-building-you-can-reach",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

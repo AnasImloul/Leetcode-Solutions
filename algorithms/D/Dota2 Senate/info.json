@@ -1,0 +1,14 @@
+{
+    "id": "649",
+    "name": "Dota2 Senate",
+    "url": "https://leetcode.com/problems/dota2-senate",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

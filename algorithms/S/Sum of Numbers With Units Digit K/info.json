@@ -1,0 +1,14 @@
+{
+    "id": "2310",
+    "name": "Sum of Numbers With Units Digit K",
+    "url": "https://leetcode.com/problems/sum-of-numbers-with-units-digit-k",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1222",
+    "name": "Queens That Can Attack the King",
+    "url": "https://leetcode.com/problems/queens-that-can-attack-the-king",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

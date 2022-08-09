@@ -1,0 +1,14 @@
+{
+    "id": "1963",
+    "name": "Minimum Number of Swaps to Make the String Balanced",
+    "url": "https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

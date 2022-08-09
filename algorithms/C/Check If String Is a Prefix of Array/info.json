@@ -1,0 +1,14 @@
+{
+    "id": "1961",
+    "name": "Check If String Is a Prefix of Array",
+    "url": "https://leetcode.com/problems/check-if-string-is-a-prefix-of-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

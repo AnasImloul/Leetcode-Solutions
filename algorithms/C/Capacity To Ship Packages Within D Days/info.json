@@ -1,0 +1,14 @@
+{
+    "id": "1011",
+    "name": "Capacity To Ship Packages Within D Days",
+    "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

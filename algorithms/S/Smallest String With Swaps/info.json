@@ -1,0 +1,14 @@
+{
+    "id": "1202",
+    "name": "Smallest String With Swaps",
+    "url": "https://leetcode.com/problems/smallest-string-with-swaps",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

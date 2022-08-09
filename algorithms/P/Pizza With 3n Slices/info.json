@@ -1,0 +1,14 @@
+{
+    "id": "1388",
+    "name": "Pizza With 3n Slices",
+    "url": "https://leetcode.com/problems/pizza-with-3n-slices",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

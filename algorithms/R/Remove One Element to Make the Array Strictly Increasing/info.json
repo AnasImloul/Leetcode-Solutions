@@ -1,0 +1,14 @@
+{
+    "id": "1909",
+    "name": "Remove One Element to Make the Array Strictly Increasing",
+    "url": "https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

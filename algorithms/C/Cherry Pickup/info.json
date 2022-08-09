@@ -1,0 +1,14 @@
+{
+    "id": "741",
+    "name": "Cherry Pickup",
+    "url": "https://leetcode.com/problems/cherry-pickup",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

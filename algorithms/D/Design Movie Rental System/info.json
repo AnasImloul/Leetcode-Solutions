@@ -1,0 +1,14 @@
+{
+    "id": "1912",
+    "name": "Design Movie Rental System",
+    "url": "https://leetcode.com/problems/design-movie-rental-system",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

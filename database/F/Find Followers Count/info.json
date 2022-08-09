@@ -1,0 +1,11 @@
+{
+    "id": "1729",
+    "name": "Find Followers Count",
+    "url": "https://leetcode.com/problems/find-followers-count",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

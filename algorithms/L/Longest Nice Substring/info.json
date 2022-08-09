@@ -1,0 +1,14 @@
+{
+    "id": "1763",
+    "name": "Longest Nice Substring",
+    "url": "https://leetcode.com/problems/longest-nice-substring",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

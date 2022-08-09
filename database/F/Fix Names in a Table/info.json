@@ -1,0 +1,11 @@
+{
+    "id": "1667",
+    "name": "Fix Names in a Table",
+    "url": "https://leetcode.com/problems/fix-names-in-a-table",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

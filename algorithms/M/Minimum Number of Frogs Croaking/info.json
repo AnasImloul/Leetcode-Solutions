@@ -1,0 +1,14 @@
+{
+    "id": "1419",
+    "name": "Minimum Number of Frogs Croaking",
+    "url": "https://leetcode.com/problems/minimum-number-of-frogs-croaking",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

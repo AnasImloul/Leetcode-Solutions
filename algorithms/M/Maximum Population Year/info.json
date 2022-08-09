@@ -1,0 +1,14 @@
+{
+    "id": "1854",
+    "name": "Maximum Population Year",
+    "url": "https://leetcode.com/problems/maximum-population-year",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

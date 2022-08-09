@@ -1,0 +1,14 @@
+{
+    "id": "2187",
+    "name": "Minimum Time to Complete Trips",
+    "url": "https://leetcode.com/problems/minimum-time-to-complete-trips",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

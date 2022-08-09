@@ -1,0 +1,14 @@
+{
+    "id": "299",
+    "name": "Bulls and Cows",
+    "url": "https://leetcode.com/problems/bulls-and-cows",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

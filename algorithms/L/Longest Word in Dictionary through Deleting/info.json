@@ -1,0 +1,14 @@
+{
+    "id": "524",
+    "name": "Longest Word in Dictionary through Deleting",
+    "url": "https://leetcode.com/problems/longest-word-in-dictionary-through-deleting",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

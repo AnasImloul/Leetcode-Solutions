@@ -1,0 +1,14 @@
+{
+    "id": "1584",
+    "name": "Min Cost to Connect All Points",
+    "url": "https://leetcode.com/problems/min-cost-to-connect-all-points",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

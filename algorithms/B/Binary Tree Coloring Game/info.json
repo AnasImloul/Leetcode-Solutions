@@ -1,0 +1,14 @@
+{
+    "id": "1145",
+    "name": "Binary Tree Coloring Game",
+    "url": "https://leetcode.com/problems/binary-tree-coloring-game",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

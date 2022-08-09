@@ -1,0 +1,14 @@
+{
+    "id": "1869",
+    "name": "Longer Contiguous Segments of Ones than Zeros",
+    "url": "https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

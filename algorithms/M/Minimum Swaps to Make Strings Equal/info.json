@@ -1,0 +1,14 @@
+{
+    "id": "1247",
+    "name": "Minimum Swaps to Make Strings Equal",
+    "url": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

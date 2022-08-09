@@ -1,0 +1,14 @@
+{
+    "id": "2213",
+    "name": "Longest Substring of One Repeating Character",
+    "url": "https://leetcode.com/problems/longest-substring-of-one-repeating-character",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

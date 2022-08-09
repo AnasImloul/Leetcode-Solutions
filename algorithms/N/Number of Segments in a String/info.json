@@ -1,0 +1,14 @@
+{
+    "id": "434",
+    "name": "Number of Segments in a String",
+    "url": "https://leetcode.com/problems/number-of-segments-in-a-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

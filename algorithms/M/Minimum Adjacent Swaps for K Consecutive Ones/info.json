@@ -1,0 +1,14 @@
+{
+    "id": "1703",
+    "name": "Minimum Adjacent Swaps for K Consecutive Ones",
+    "url": "https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

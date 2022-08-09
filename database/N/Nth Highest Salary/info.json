@@ -1,0 +1,11 @@
+{
+    "id": "177",
+    "name": "Nth Highest Salary",
+    "url": "https://leetcode.com/problems/nth-highest-salary",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "58",
+    "name": "Length of Last Word",
+    "url": "https://leetcode.com/problems/length-of-last-word",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

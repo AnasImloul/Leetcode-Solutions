@@ -1,0 +1,14 @@
+{
+    "id": "1992",
+    "name": "Find All Groups of Farmland",
+    "url": "https://leetcode.com/problems/find-all-groups-of-farmland",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

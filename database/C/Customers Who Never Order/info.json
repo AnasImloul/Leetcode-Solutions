@@ -1,0 +1,11 @@
+{
+    "id": "183",
+    "name": "Customers Who Never Order",
+    "url": "https://leetcode.com/problems/customers-who-never-order",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

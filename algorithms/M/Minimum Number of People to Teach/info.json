@@ -1,0 +1,14 @@
+{
+    "id": "1733",
+    "name": "Minimum Number of People to Teach",
+    "url": "https://leetcode.com/problems/minimum-number-of-people-to-teach",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

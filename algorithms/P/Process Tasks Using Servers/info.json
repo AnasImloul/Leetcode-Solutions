@@ -1,0 +1,14 @@
+{
+    "id": "1882",
+    "name": "Process Tasks Using Servers",
+    "url": "https://leetcode.com/problems/process-tasks-using-servers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

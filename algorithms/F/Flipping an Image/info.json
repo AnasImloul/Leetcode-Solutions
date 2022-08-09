@@ -1,0 +1,14 @@
+{
+    "id": "832",
+    "name": "Flipping an Image",
+    "url": "https://leetcode.com/problems/flipping-an-image",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

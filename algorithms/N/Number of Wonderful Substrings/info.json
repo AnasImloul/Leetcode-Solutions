@@ -1,0 +1,14 @@
+{
+    "id": "1915",
+    "name": "Number of Wonderful Substrings",
+    "url": "https://leetcode.com/problems/number-of-wonderful-substrings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

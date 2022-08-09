@@ -1,0 +1,14 @@
+{
+    "id": "1957",
+    "name": "Delete Characters to Make Fancy String",
+    "url": "https://leetcode.com/problems/delete-characters-to-make-fancy-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

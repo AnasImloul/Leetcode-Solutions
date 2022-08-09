@@ -1,0 +1,14 @@
+{
+    "id": "2259",
+    "name": "Remove Digit From Number to Maximize Result",
+    "url": "https://leetcode.com/problems/remove-digit-from-number-to-maximize-result",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

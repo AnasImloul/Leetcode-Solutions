@@ -1,0 +1,14 @@
+{
+    "id": "1481",
+    "name": "Least Number of Unique Integers after K Removals",
+    "url": "https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

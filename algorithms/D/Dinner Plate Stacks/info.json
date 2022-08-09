@@ -1,0 +1,14 @@
+{
+    "id": "1172",
+    "name": "Dinner Plate Stacks",
+    "url": "https://leetcode.com/problems/dinner-plate-stacks",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

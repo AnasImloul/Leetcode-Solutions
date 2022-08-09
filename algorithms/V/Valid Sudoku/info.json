@@ -1,0 +1,14 @@
+{
+    "id": "36",
+    "name": "Valid Sudoku",
+    "url": "https://leetcode.com/problems/valid-sudoku",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

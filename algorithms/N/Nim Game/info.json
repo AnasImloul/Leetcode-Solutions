@@ -1,0 +1,14 @@
+{
+    "id": "292",
+    "name": "Nim Game",
+    "url": "https://leetcode.com/problems/nim-game",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

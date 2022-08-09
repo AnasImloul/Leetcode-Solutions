@@ -1,0 +1,14 @@
+{
+    "id": "1791",
+    "name": "Find Center of Star Graph",
+    "url": "https://leetcode.com/problems/find-center-of-star-graph",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

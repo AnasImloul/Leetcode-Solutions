@@ -1,0 +1,14 @@
+{
+    "id": "1716",
+    "name": "Calculate Money in Leetcode Bank",
+    "url": "https://leetcode.com/problems/calculate-money-in-leetcode-bank",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

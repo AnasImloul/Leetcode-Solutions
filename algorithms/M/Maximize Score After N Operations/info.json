@@ -1,0 +1,14 @@
+{
+    "id": "1799",
+    "name": "Maximize Score After N Operations",
+    "url": "https://leetcode.com/problems/maximize-score-after-n-operations",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

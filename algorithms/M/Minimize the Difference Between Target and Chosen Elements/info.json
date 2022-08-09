@@ -1,0 +1,14 @@
+{
+    "id": "1981",
+    "name": "Minimize the Difference Between Target and Chosen Elements",
+    "url": "https://leetcode.com/problems/minimize-the-difference-between-target-and-chosen-elements",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

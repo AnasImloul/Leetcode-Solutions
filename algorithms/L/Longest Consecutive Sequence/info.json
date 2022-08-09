@@ -1,0 +1,14 @@
+{
+    "id": "128",
+    "name": "Longest Consecutive Sequence",
+    "url": "https://leetcode.com/problems/longest-consecutive-sequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

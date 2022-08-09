@@ -1,0 +1,14 @@
+{
+    "id": "2120",
+    "name": "Execution of All Suffix Instructions Staying in a Grid",
+    "url": "https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

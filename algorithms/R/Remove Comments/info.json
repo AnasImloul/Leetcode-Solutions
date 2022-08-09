@@ -1,0 +1,14 @@
+{
+    "id": "722",
+    "name": "Remove Comments",
+    "url": "https://leetcode.com/problems/remove-comments",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

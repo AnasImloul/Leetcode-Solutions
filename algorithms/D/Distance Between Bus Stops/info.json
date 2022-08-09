@@ -1,0 +1,14 @@
+{
+    "id": "1184",
+    "name": "Distance Between Bus Stops",
+    "url": "https://leetcode.com/problems/distance-between-bus-stops",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

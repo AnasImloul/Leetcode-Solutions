@@ -1,0 +1,14 @@
+{
+    "id": "1467",
+    "name": "Probability of a Two Boxes Having The Same Number of Distinct Balls",
+    "url": "https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "493",
+    "name": "Reverse Pairs",
+    "url": "https://leetcode.com/problems/reverse-pairs",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

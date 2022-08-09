@@ -1,0 +1,14 @@
+{
+    "id": "1646",
+    "name": "Get Maximum in Generated Array",
+    "url": "https://leetcode.com/problems/get-maximum-in-generated-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

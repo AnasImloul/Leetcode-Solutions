@@ -1,0 +1,14 @@
+{
+    "id": "999",
+    "name": "Available Captures for Rook",
+    "url": "https://leetcode.com/problems/available-captures-for-rook",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

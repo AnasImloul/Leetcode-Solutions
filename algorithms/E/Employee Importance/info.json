@@ -1,0 +1,14 @@
+{
+    "id": "690",
+    "name": "Employee Importance",
+    "url": "https://leetcode.com/problems/employee-importance",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

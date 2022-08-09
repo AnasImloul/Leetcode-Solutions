@@ -1,0 +1,14 @@
+{
+    "id": "460",
+    "name": "LFU Cache",
+    "url": "https://leetcode.com/problems/lfu-cache",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

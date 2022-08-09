@@ -1,0 +1,14 @@
+{
+    "id": "599",
+    "name": "Minimum Index Sum of Two Lists",
+    "url": "https://leetcode.com/problems/minimum-index-sum-of-two-lists",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

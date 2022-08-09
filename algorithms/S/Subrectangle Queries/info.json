@@ -1,0 +1,14 @@
+{
+    "id": "1476",
+    "name": "Subrectangle Queries",
+    "url": "https://leetcode.com/problems/subrectangle-queries",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

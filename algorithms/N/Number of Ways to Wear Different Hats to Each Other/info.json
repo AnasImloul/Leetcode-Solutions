@@ -1,0 +1,14 @@
+{
+    "id": "1434",
+    "name": "Number of Ways to Wear Different Hats to Each Other",
+    "url": "https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

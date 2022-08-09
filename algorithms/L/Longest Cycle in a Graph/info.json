@@ -1,0 +1,14 @@
+{
+    "id": "2360",
+    "name": "Longest Cycle in a Graph",
+    "url": "https://leetcode.com/problems/longest-cycle-in-a-graph",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

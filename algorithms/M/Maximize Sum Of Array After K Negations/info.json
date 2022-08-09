@@ -1,0 +1,14 @@
+{
+    "id": "1005",
+    "name": "Maximize Sum Of Array After K Negations",
+    "url": "https://leetcode.com/problems/maximize-sum-of-array-after-k-negations",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

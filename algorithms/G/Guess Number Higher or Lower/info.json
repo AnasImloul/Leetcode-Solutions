@@ -1,0 +1,14 @@
+{
+    "id": "374",
+    "name": "Guess Number Higher or Lower",
+    "url": "https://leetcode.com/problems/guess-number-higher-or-lower",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

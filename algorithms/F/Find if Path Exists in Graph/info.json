@@ -1,0 +1,14 @@
+{
+    "id": "1971",
+    "name": "Find if Path Exists in Graph",
+    "url": "https://leetcode.com/problems/find-if-path-exists-in-graph",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

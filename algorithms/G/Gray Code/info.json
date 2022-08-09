@@ -1,0 +1,14 @@
+{
+    "id": "89",
+    "name": "Gray Code",
+    "url": "https://leetcode.com/problems/gray-code",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2124",
+    "name": "Check if All A's Appears Before All B's",
+    "url": "https://leetcode.com/problems/check-if-all-as-appears-before-all-bs",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

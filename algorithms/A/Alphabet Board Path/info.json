@@ -1,0 +1,14 @@
+{
+    "id": "1138",
+    "name": "Alphabet Board Path",
+    "url": "https://leetcode.com/problems/alphabet-board-path",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

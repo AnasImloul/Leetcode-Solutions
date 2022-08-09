@@ -1,0 +1,14 @@
+{
+    "id": "1614",
+    "name": "Maximum Nesting Depth of the Parentheses",
+    "url": "https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

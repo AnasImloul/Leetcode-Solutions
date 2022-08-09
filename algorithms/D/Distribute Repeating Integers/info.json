@@ -1,0 +1,14 @@
+{
+    "id": "1655",
+    "name": "Distribute Repeating Integers",
+    "url": "https://leetcode.com/problems/distribute-repeating-integers",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2088",
+    "name": "Count Fertile Pyramids in a Land",
+    "url": "https://leetcode.com/problems/count-fertile-pyramids-in-a-land",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

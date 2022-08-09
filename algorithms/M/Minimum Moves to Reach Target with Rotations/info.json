@@ -1,0 +1,14 @@
+{
+    "id": "1210",
+    "name": "Minimum Moves to Reach Target with Rotations",
+    "url": "https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

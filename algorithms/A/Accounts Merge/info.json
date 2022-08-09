@@ -1,0 +1,14 @@
+{
+    "id": "721",
+    "name": "Accounts Merge",
+    "url": "https://leetcode.com/problems/accounts-merge",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

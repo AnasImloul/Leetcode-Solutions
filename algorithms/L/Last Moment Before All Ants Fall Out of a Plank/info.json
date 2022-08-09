@@ -1,0 +1,14 @@
+{
+    "id": "1503",
+    "name": "Last Moment Before All Ants Fall Out of a Plank",
+    "url": "https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

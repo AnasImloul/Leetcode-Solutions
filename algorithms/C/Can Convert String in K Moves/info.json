@@ -1,0 +1,14 @@
+{
+    "id": "1540",
+    "name": "Can Convert String in K Moves",
+    "url": "https://leetcode.com/problems/can-convert-string-in-k-moves",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

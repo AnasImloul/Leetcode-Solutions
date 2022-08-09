@@ -1,0 +1,14 @@
+{
+    "id": "845",
+    "name": "Longest Mountain in Array",
+    "url": "https://leetcode.com/problems/longest-mountain-in-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "150",
+    "name": "Evaluate Reverse Polish Notation",
+    "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

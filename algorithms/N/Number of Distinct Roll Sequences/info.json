@@ -1,0 +1,14 @@
+{
+    "id": "2318",
+    "name": "Number of Distinct Roll Sequences",
+    "url": "https://leetcode.com/problems/number-of-distinct-roll-sequences",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "746",
+    "name": "Min Cost Climbing Stairs",
+    "url": "https://leetcode.com/problems/min-cost-climbing-stairs",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

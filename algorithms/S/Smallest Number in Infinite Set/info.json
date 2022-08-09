@@ -1,0 +1,14 @@
+{
+    "id": "2336",
+    "name": "Smallest Number in Infinite Set",
+    "url": "https://leetcode.com/problems/smallest-number-in-infinite-set",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

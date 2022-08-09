@@ -1,0 +1,14 @@
+{
+    "id": "749",
+    "name": "Contain Virus",
+    "url": "https://leetcode.com/problems/contain-virus",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

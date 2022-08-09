@@ -1,0 +1,14 @@
+{
+    "id": "930",
+    "name": "Binary Subarrays With Sum",
+    "url": "https://leetcode.com/problems/binary-subarrays-with-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

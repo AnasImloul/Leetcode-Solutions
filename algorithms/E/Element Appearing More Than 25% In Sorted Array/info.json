@@ -1,0 +1,14 @@
+{
+    "id": "1287",
+    "name": "Element Appearing More Than 25% In Sorted Array",
+    "url": "https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

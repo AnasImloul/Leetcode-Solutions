@@ -1,0 +1,14 @@
+{
+    "id": "1203",
+    "name": "Sort Items by Groups Respecting Dependencies",
+    "url": "https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

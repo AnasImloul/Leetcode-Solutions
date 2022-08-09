@@ -1,0 +1,11 @@
+{
+    "id": "1587",
+    "name": "Bank Account Summary II",
+    "url": "https://leetcode.com/problems/bank-account-summary-ii",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

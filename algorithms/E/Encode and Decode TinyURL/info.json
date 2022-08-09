@@ -1,0 +1,14 @@
+{
+    "id": "535",
+    "name": "Encode and Decode TinyURL",
+    "url": "https://leetcode.com/problems/encode-and-decode-tinyurl",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

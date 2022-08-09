@@ -1,0 +1,14 @@
+{
+    "id": "2203",
+    "name": "Minimum Weighted Subgraph With the Required Paths",
+    "url": "https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

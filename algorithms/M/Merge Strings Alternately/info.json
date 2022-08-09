@@ -1,0 +1,14 @@
+{
+    "id": "1768",
+    "name": "Merge Strings Alternately",
+    "url": "https://leetcode.com/problems/merge-strings-alternately",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

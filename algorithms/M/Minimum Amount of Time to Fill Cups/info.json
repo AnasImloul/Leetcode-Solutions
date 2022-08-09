@@ -1,0 +1,14 @@
+{
+    "id": "2335",
+    "name": "Minimum Amount of Time to Fill Cups",
+    "url": "https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

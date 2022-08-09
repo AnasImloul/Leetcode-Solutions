@@ -1,0 +1,14 @@
+{
+    "id": "415",
+    "name": "Add Strings",
+    "url": "https://leetcode.com/problems/add-strings",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "372",
+    "name": "Super Pow",
+    "url": "https://leetcode.com/problems/super-pow",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

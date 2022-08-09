@@ -1,0 +1,14 @@
+{
+    "id": "810",
+    "name": "Chalkboard XOR Game",
+    "url": "https://leetcode.com/problems/chalkboard-xor-game",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

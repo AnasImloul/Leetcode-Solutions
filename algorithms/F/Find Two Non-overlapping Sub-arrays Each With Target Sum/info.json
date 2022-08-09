@@ -1,0 +1,14 @@
+{
+    "id": "1477",
+    "name": "Find Two Non-overlapping Sub-arrays Each With Target Sum",
+    "url": "https://leetcode.com/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

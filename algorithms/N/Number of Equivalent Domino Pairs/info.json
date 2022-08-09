@@ -1,0 +1,14 @@
+{
+    "id": "1128",
+    "name": "Number of Equivalent Domino Pairs",
+    "url": "https://leetcode.com/problems/number-of-equivalent-domino-pairs",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

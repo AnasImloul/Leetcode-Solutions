@@ -1,0 +1,11 @@
+{
+    "id": "1407",
+    "name": "Top Travellers",
+    "url": "https://leetcode.com/problems/top-travellers",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

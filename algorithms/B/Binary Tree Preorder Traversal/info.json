@@ -1,0 +1,14 @@
+{
+    "id": "144",
+    "name": "Binary Tree Preorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-preorder-traversal",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

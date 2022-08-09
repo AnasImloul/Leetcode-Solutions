@@ -1,0 +1,14 @@
+{
+    "id": "1523",
+    "name": "Count Odd Numbers in an Interval Range",
+    "url": "https://leetcode.com/problems/count-odd-numbers-in-an-interval-range",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

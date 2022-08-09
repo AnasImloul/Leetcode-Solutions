@@ -1,0 +1,14 @@
+{
+    "id": "882",
+    "name": "Reachable Nodes In Subdivided Graph",
+    "url": "https://leetcode.com/problems/reachable-nodes-in-subdivided-graph",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

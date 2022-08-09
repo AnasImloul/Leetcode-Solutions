@@ -1,0 +1,14 @@
+{
+    "id": "1071",
+    "name": "Greatest Common Divisor of Strings",
+    "url": "https://leetcode.com/problems/greatest-common-divisor-of-strings",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

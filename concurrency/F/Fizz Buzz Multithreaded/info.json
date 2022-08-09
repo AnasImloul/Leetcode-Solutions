@@ -1,0 +1,12 @@
+{
+    "id": "1195",
+    "name": "Fizz Buzz Multithreaded",
+    "url": "https://leetcode.com/problems/fizz-buzz-multithreaded",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "concurrency",
+    "solution": {
+        "c++": false,
+        "python": true
+    }
+}

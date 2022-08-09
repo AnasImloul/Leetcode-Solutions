@@ -1,0 +1,14 @@
+{
+    "id": "941",
+    "name": "Valid Mountain Array",
+    "url": "https://leetcode.com/problems/valid-mountain-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

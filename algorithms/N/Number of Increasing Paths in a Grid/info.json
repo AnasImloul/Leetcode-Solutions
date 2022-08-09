@@ -1,0 +1,14 @@
+{
+    "id": "2328",
+    "name": "Number of Increasing Paths in a Grid",
+    "url": "https://leetcode.com/problems/number-of-increasing-paths-in-a-grid",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

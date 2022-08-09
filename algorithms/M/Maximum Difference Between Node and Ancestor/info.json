@@ -1,0 +1,14 @@
+{
+    "id": "1026",
+    "name": "Maximum Difference Between Node and Ancestor",
+    "url": "https://leetcode.com/problems/maximum-difference-between-node-and-ancestor",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

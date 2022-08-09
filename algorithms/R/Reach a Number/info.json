@@ -1,0 +1,14 @@
+{
+    "id": "754",
+    "name": "Reach a Number",
+    "url": "https://leetcode.com/problems/reach-a-number",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

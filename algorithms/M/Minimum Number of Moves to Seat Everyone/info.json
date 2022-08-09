@@ -1,0 +1,14 @@
+{
+    "id": "2037",
+    "name": "Minimum Number of Moves to Seat Everyone",
+    "url": "https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

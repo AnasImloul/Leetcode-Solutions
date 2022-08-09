@@ -1,0 +1,14 @@
+{
+    "id": "2206",
+    "name": "Divide Array Into Equal Pairs",
+    "url": "https://leetcode.com/problems/divide-array-into-equal-pairs",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

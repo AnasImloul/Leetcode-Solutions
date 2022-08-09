@@ -1,0 +1,14 @@
+{
+    "id": "1417",
+    "name": "Reformat The String",
+    "url": "https://leetcode.com/problems/reformat-the-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "221",
+    "name": "Maximal Square",
+    "url": "https://leetcode.com/problems/maximal-square",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

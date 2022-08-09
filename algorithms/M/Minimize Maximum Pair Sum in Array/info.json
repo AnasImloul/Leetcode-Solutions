@@ -1,0 +1,14 @@
+{
+    "id": "1877",
+    "name": "Minimize Maximum Pair Sum in Array",
+    "url": "https://leetcode.com/problems/minimize-maximum-pair-sum-in-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

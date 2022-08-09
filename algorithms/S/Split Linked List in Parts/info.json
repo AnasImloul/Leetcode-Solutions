@@ -1,0 +1,14 @@
+{
+    "id": "725",
+    "name": "Split Linked List in Parts",
+    "url": "https://leetcode.com/problems/split-linked-list-in-parts",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

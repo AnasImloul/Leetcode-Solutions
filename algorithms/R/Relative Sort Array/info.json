@@ -1,0 +1,14 @@
+{
+    "id": "1122",
+    "name": "Relative Sort Array",
+    "url": "https://leetcode.com/problems/relative-sort-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

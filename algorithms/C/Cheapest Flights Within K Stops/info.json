@@ -1,0 +1,14 @@
+{
+    "id": "787",
+    "name": "Cheapest Flights Within K Stops",
+    "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

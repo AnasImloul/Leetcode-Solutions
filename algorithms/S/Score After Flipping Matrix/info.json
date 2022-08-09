@@ -1,0 +1,14 @@
+{
+    "id": "861",
+    "name": "Score After Flipping Matrix",
+    "url": "https://leetcode.com/problems/score-after-flipping-matrix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

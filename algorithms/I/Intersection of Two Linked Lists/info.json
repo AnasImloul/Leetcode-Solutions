@@ -1,0 +1,14 @@
+{
+    "id": "160",
+    "name": "Intersection of Two Linked Lists",
+    "url": "https://leetcode.com/problems/intersection-of-two-linked-lists",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

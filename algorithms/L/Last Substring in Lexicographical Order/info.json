@@ -1,0 +1,14 @@
+{
+    "id": "1163",
+    "name": "Last Substring in Lexicographical Order",
+    "url": "https://leetcode.com/problems/last-substring-in-lexicographical-order",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

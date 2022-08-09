@@ -1,0 +1,14 @@
+{
+    "id": "1375",
+    "name": "Number of Times Binary String Is Prefix-Aligned",
+    "url": "https://leetcode.com/problems/number-of-times-binary-string-is-prefix-aligned",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

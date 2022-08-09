@@ -1,0 +1,14 @@
+{
+    "id": "1866",
+    "name": "Number of Ways to Rearrange Sticks With K Sticks Visible",
+    "url": "https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1499",
+    "name": "Max Value of Equation",
+    "url": "https://leetcode.com/problems/max-value-of-equation",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

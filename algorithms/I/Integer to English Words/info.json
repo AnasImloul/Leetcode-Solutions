@@ -1,0 +1,14 @@
+{
+    "id": "273",
+    "name": "Integer to English Words",
+    "url": "https://leetcode.com/problems/integer-to-english-words",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

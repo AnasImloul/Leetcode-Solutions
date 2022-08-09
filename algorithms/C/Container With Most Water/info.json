@@ -1,0 +1,14 @@
+{
+    "id": "11",
+    "name": "Container With Most Water",
+    "url": "https://leetcode.com/problems/container-with-most-water",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

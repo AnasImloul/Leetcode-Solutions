@@ -1,0 +1,14 @@
+{
+    "id": "761",
+    "name": "Special Binary String",
+    "url": "https://leetcode.com/problems/special-binary-string",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

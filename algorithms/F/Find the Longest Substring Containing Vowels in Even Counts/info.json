@@ -1,0 +1,14 @@
+{
+    "id": "1371",
+    "name": "Find the Longest Substring Containing Vowels in Even Counts",
+    "url": "https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

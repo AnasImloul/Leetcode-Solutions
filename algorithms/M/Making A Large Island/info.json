@@ -1,0 +1,14 @@
+{
+    "id": "827",
+    "name": "Making A Large Island",
+    "url": "https://leetcode.com/problems/making-a-large-island",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1443",
+    "name": "Minimum Time to Collect All Apples in a Tree",
+    "url": "https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

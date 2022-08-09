@@ -1,0 +1,14 @@
+{
+    "id": "1232",
+    "name": "Check If It Is a Straight Line",
+    "url": "https://leetcode.com/problems/check-if-it-is-a-straight-line",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

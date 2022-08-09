@@ -1,0 +1,14 @@
+{
+    "id": "1931",
+    "name": "Painting a Grid With Three Different Colors",
+    "url": "https://leetcode.com/problems/painting-a-grid-with-three-different-colors",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

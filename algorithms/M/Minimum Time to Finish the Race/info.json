@@ -1,0 +1,14 @@
+{
+    "id": "2188",
+    "name": "Minimum Time to Finish the Race",
+    "url": "https://leetcode.com/problems/minimum-time-to-finish-the-race",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1332",
+    "name": "Remove Palindromic Subsequences",
+    "url": "https://leetcode.com/problems/remove-palindromic-subsequences",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

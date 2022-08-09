@@ -1,0 +1,14 @@
+{
+    "id": "1815",
+    "name": "Maximum Number of Groups Getting Fresh Donuts",
+    "url": "https://leetcode.com/problems/maximum-number-of-groups-getting-fresh-donuts",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

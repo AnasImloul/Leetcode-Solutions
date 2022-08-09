@@ -1,0 +1,14 @@
+{
+    "id": "1916",
+    "name": "Count Ways to Build Rooms in an Ant Colony",
+    "url": "https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

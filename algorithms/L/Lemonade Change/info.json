@@ -1,0 +1,14 @@
+{
+    "id": "860",
+    "name": "Lemonade Change",
+    "url": "https://leetcode.com/problems/lemonade-change",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

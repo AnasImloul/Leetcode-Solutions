@@ -1,0 +1,14 @@
+{
+    "id": "2106",
+    "name": "Maximum Fruits Harvested After at Most K Steps",
+    "url": "https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

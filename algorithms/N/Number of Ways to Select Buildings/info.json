@@ -1,0 +1,14 @@
+{
+    "id": "2222",
+    "name": "Number of Ways to Select Buildings",
+    "url": "https://leetcode.com/problems/number-of-ways-to-select-buildings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1019",
+    "name": "Next Greater Node In Linked List",
+    "url": "https://leetcode.com/problems/next-greater-node-in-linked-list",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1546",
+    "name": "Maximum Number of Non-Overlapping Subarrays With Sum Equals Target",
+    "url": "https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "441",
+    "name": "Arranging Coins",
+    "url": "https://leetcode.com/problems/arranging-coins",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

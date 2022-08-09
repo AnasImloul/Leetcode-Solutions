@@ -1,0 +1,14 @@
+{
+    "id": "707",
+    "name": "Design Linked List",
+    "url": "https://leetcode.com/problems/design-linked-list",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

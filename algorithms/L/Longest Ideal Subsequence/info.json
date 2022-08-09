@@ -1,0 +1,14 @@
+{
+    "id": "2370",
+    "name": "Longest Ideal Subsequence",
+    "url": "https://leetcode.com/problems/longest-ideal-subsequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

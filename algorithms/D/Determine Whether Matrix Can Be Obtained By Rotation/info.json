@@ -1,0 +1,14 @@
+{
+    "id": "1886",
+    "name": "Determine Whether Matrix Can Be Obtained By Rotation",
+    "url": "https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

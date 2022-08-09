@@ -1,0 +1,14 @@
+{
+    "id": "1483",
+    "name": "Kth Ancestor of a Tree Node",
+    "url": "https://leetcode.com/problems/kth-ancestor-of-a-tree-node",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "165",
+    "name": "Compare Version Numbers",
+    "url": "https://leetcode.com/problems/compare-version-numbers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

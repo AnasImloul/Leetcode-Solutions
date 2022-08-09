@@ -1,0 +1,14 @@
+{
+    "id": "138",
+    "name": "Copy List with Random Pointer",
+    "url": "https://leetcode.com/problems/copy-list-with-random-pointer",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true,
+        "python": true,
+        "java": true
+    }
+}

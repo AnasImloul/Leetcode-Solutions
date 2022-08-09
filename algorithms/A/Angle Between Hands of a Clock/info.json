@@ -1,0 +1,14 @@
+{
+    "id": "1344",
+    "name": "Angle Between Hands of a Clock",
+    "url": "https://leetcode.com/problems/angle-between-hands-of-a-clock",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1986",
+    "name": "Minimum Number of Work Sessions to Finish the Tasks",
+    "url": "https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

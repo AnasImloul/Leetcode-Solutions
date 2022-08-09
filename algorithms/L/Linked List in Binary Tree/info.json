@@ -1,0 +1,14 @@
+{
+    "id": "1367",
+    "name": "Linked List in Binary Tree",
+    "url": "https://leetcode.com/problems/linked-list-in-binary-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

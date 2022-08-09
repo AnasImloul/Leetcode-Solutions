@@ -1,0 +1,14 @@
+{
+    "id": "2270",
+    "name": "Number of Ways to Split Array",
+    "url": "https://leetcode.com/problems/number-of-ways-to-split-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

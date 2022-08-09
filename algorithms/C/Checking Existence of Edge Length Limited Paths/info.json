@@ -1,0 +1,14 @@
+{
+    "id": "1697",
+    "name": "Checking Existence of Edge Length Limited Paths",
+    "url": "https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": false
+    }
+}

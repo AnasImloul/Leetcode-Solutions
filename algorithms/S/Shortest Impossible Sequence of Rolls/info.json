@@ -1,0 +1,14 @@
+{
+    "id": "2350",
+    "name": "Shortest Impossible Sequence of Rolls",
+    "url": "https://leetcode.com/problems/shortest-impossible-sequence-of-rolls",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

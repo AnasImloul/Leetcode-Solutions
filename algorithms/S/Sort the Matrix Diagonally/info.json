@@ -1,0 +1,14 @@
+{
+    "id": "1329",
+    "name": "Sort the Matrix Diagonally",
+    "url": "https://leetcode.com/problems/sort-the-matrix-diagonally",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

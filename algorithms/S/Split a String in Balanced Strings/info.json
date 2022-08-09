@@ -1,0 +1,14 @@
+{
+    "id": "1221",
+    "name": "Split a String in Balanced Strings",
+    "url": "https://leetcode.com/problems/split-a-string-in-balanced-strings",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

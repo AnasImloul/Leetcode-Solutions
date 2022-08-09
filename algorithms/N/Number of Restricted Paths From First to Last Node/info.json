@@ -1,0 +1,14 @@
+{
+    "id": "1786",
+    "name": "Number of Restricted Paths From First to Last Node",
+    "url": "https://leetcode.com/problems/number-of-restricted-paths-from-first-to-last-node",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

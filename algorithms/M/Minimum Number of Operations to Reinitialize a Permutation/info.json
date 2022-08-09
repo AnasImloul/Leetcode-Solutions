@@ -1,0 +1,14 @@
+{
+    "id": "1806",
+    "name": "Minimum Number of Operations to Reinitialize a Permutation",
+    "url": "https://leetcode.com/problems/minimum-number-of-operations-to-reinitialize-a-permutation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

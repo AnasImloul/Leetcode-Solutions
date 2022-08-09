@@ -1,0 +1,14 @@
+{
+    "id": "1574",
+    "name": "Shortest Subarray to be Removed to Make Array Sorted",
+    "url": "https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

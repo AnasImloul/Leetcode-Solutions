@@ -1,0 +1,14 @@
+{
+    "id": "1803",
+    "name": "Count Pairs With XOR in a Range",
+    "url": "https://leetcode.com/problems/count-pairs-with-xor-in-a-range",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

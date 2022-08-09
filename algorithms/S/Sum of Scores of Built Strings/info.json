@@ -1,0 +1,14 @@
+{
+    "id": "2223",
+    "name": "Sum of Scores of Built Strings",
+    "url": "https://leetcode.com/problems/sum-of-scores-of-built-strings",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

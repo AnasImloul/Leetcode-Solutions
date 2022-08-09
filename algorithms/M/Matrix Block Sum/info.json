@@ -1,0 +1,14 @@
+{
+    "id": "1314",
+    "name": "Matrix Block Sum",
+    "url": "https://leetcode.com/problems/matrix-block-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "829",
+    "name": "Consecutive Numbers Sum",
+    "url": "https://leetcode.com/problems/consecutive-numbers-sum",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "368",
+    "name": "Largest Divisible Subset",
+    "url": "https://leetcode.com/problems/largest-divisible-subset",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

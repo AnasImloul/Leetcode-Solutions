@@ -1,0 +1,14 @@
+{
+    "id": "1029",
+    "name": "Two City Scheduling",
+    "url": "https://leetcode.com/problems/two-city-scheduling",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

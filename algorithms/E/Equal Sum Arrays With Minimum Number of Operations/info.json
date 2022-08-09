@@ -1,0 +1,14 @@
+{
+    "id": "1775",
+    "name": "Equal Sum Arrays With Minimum Number of Operations",
+    "url": "https://leetcode.com/problems/equal-sum-arrays-with-minimum-number-of-operations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

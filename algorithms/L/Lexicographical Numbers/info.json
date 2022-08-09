@@ -1,0 +1,14 @@
+{
+    "id": "386",
+    "name": "Lexicographical Numbers",
+    "url": "https://leetcode.com/problems/lexicographical-numbers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

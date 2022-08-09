@@ -1,0 +1,12 @@
+{
+    "id": "1115",
+    "name": "Print FooBar Alternately",
+    "url": "https://leetcode.com/problems/print-foobar-alternately",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "concurrency",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

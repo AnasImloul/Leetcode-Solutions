@@ -1,0 +1,14 @@
+{
+    "id": "2162",
+    "name": "Minimum Cost to Set Cooking Time",
+    "url": "https://leetcode.com/problems/minimum-cost-to-set-cooking-time",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

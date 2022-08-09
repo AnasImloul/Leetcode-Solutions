@@ -1,0 +1,14 @@
+{
+    "id": "1510",
+    "name": "Stone Game IV",
+    "url": "https://leetcode.com/problems/stone-game-iv",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

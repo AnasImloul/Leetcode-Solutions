@@ -1,0 +1,14 @@
+{
+    "id": "1494",
+    "name": "Parallel Courses II",
+    "url": "https://leetcode.com/problems/parallel-courses-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

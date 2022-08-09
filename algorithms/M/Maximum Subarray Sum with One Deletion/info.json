@@ -1,0 +1,14 @@
+{
+    "id": "1186",
+    "name": "Maximum Subarray Sum with One Deletion",
+    "url": "https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

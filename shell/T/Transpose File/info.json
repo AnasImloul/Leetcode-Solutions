@@ -1,0 +1,11 @@
+{
+    "id": "194",
+    "name": "Transpose File",
+    "url": "https://leetcode.com/problems/transpose-file",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "shell",
+    "solution": {
+        "bash": true
+    }
+}

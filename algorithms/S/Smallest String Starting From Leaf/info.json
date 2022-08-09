@@ -1,0 +1,14 @@
+{
+    "id": "988",
+    "name": "Smallest String Starting From Leaf",
+    "url": "https://leetcode.com/problems/smallest-string-starting-from-leaf",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

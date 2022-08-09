@@ -1,0 +1,14 @@
+{
+    "id": "2183",
+    "name": "Count Array Pairs Divisible by K",
+    "url": "https://leetcode.com/problems/count-array-pairs-divisible-by-k",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

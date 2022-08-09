@@ -1,0 +1,14 @@
+{
+    "id": "1406",
+    "name": "Stone Game III",
+    "url": "https://leetcode.com/problems/stone-game-iii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

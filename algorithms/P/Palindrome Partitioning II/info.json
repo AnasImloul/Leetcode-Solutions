@@ -1,0 +1,14 @@
+{
+    "id": "132",
+    "name": "Palindrome Partitioning II",
+    "url": "https://leetcode.com/problems/palindrome-partitioning-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

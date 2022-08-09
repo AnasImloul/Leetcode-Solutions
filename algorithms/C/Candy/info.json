@@ -1,0 +1,14 @@
+{
+    "id": "135",
+    "name": "Candy",
+    "url": "https://leetcode.com/problems/candy",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

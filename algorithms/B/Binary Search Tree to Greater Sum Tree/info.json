@@ -1,0 +1,14 @@
+{
+    "id": "1038",
+    "name": "Binary Search Tree to Greater Sum Tree",
+    "url": "https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1914",
+    "name": "Cyclically Rotating a Grid",
+    "url": "https://leetcode.com/problems/cyclically-rotating-a-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

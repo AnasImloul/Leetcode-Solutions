@@ -1,0 +1,14 @@
+{
+    "id": "898",
+    "name": "Bitwise ORs of Subarrays",
+    "url": "https://leetcode.com/problems/bitwise-ors-of-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

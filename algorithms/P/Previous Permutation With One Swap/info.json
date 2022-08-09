@@ -1,0 +1,14 @@
+{
+    "id": "1053",
+    "name": "Previous Permutation With One Swap",
+    "url": "https://leetcode.com/problems/previous-permutation-with-one-swap",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

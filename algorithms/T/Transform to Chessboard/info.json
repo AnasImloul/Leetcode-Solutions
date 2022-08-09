@@ -1,0 +1,14 @@
+{
+    "id": "782",
+    "name": "Transform to Chessboard",
+    "url": "https://leetcode.com/problems/transform-to-chessboard",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "969",
+    "name": "Pancake Sorting",
+    "url": "https://leetcode.com/problems/pancake-sorting",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

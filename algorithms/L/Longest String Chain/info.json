@@ -1,0 +1,14 @@
+{
+    "id": "1048",
+    "name": "Longest String Chain",
+    "url": "https://leetcode.com/problems/longest-string-chain",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

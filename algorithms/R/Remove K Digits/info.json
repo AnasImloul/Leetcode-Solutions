@@ -1,0 +1,14 @@
+{
+    "id": "402",
+    "name": "Remove K Digits",
+    "url": "https://leetcode.com/problems/remove-k-digits",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

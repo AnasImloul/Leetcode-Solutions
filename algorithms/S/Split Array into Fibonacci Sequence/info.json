@@ -1,0 +1,14 @@
+{
+    "id": "842",
+    "name": "Split Array into Fibonacci Sequence",
+    "url": "https://leetcode.com/problems/split-array-into-fibonacci-sequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

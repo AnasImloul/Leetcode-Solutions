@@ -1,0 +1,14 @@
+{
+    "id": "1461",
+    "name": "Check If a String Contains All Binary Codes of Size K",
+    "url": "https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

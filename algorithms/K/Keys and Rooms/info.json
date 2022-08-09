@@ -1,0 +1,14 @@
+{
+    "id": "841",
+    "name": "Keys and Rooms",
+    "url": "https://leetcode.com/problems/keys-and-rooms",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

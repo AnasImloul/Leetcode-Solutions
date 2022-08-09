@@ -1,0 +1,14 @@
+{
+    "id": "1619",
+    "name": "Mean of Array After Removing Some Elements",
+    "url": "https://leetcode.com/problems/mean-of-array-after-removing-some-elements",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

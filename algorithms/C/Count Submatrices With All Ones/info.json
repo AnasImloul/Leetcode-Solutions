@@ -1,0 +1,14 @@
+{
+    "id": "1504",
+    "name": "Count Submatrices With All Ones",
+    "url": "https://leetcode.com/problems/count-submatrices-with-all-ones",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

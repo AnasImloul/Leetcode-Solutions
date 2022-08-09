@@ -1,0 +1,14 @@
+{
+    "id": "1563",
+    "name": "Stone Game V",
+    "url": "https://leetcode.com/problems/stone-game-v",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

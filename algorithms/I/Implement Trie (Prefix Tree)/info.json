@@ -1,0 +1,14 @@
+{
+    "id": "208",
+    "name": "Implement Trie (Prefix Tree)",
+    "url": "https://leetcode.com/problems/implement-trie-prefix-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

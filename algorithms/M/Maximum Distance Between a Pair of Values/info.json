@@ -1,0 +1,14 @@
+{
+    "id": "1855",
+    "name": "Maximum Distance Between a Pair of Values",
+    "url": "https://leetcode.com/problems/maximum-distance-between-a-pair-of-values",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

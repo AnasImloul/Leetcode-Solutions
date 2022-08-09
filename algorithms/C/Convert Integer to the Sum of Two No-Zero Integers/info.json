@@ -1,0 +1,14 @@
+{
+    "id": "1317",
+    "name": "Convert Integer to the Sum of Two No-Zero Integers",
+    "url": "https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

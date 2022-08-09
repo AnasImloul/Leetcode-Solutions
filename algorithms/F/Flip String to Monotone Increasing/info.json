@@ -1,0 +1,14 @@
+{
+    "id": "926",
+    "name": "Flip String to Monotone Increasing",
+    "url": "https://leetcode.com/problems/flip-string-to-monotone-increasing",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

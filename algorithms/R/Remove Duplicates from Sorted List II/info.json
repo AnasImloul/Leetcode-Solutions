@@ -1,0 +1,14 @@
+{
+    "id": "82",
+    "name": "Remove Duplicates from Sorted List II",
+    "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "410",
+    "name": "Split Array Largest Sum",
+    "url": "https://leetcode.com/problems/split-array-largest-sum",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

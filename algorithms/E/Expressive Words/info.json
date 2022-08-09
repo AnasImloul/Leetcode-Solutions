@@ -1,0 +1,14 @@
+{
+    "id": "809",
+    "name": "Expressive Words",
+    "url": "https://leetcode.com/problems/expressive-words",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

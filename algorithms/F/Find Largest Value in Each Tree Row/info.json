@@ -1,0 +1,14 @@
+{
+    "id": "515",
+    "name": "Find Largest Value in Each Tree Row",
+    "url": "https://leetcode.com/problems/find-largest-value-in-each-tree-row",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1111",
+    "name": "Maximum Nesting Depth of Two Valid Parentheses Strings",
+    "url": "https://leetcode.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

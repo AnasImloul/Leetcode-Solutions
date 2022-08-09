@@ -1,0 +1,14 @@
+{
+    "id": "2218",
+    "name": "Maximum Value of K Coins From Piles",
+    "url": "https://leetcode.com/problems/maximum-value-of-k-coins-from-piles",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

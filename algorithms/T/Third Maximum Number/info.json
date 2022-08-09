@@ -1,0 +1,14 @@
+{
+    "id": "414",
+    "name": "Third Maximum Number",
+    "url": "https://leetcode.com/problems/third-maximum-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

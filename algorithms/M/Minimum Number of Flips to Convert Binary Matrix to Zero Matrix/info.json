@@ -1,0 +1,14 @@
+{
+    "id": "1284",
+    "name": "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
+    "url": "https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

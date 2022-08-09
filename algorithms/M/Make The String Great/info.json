@@ -1,0 +1,14 @@
+{
+    "id": "1544",
+    "name": "Make The String Great",
+    "url": "https://leetcode.com/problems/make-the-string-great",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

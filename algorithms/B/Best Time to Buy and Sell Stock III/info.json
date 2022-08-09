@@ -1,0 +1,14 @@
+{
+    "id": "123",
+    "name": "Best Time to Buy and Sell Stock III",
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true,
+        "python": true,
+        "java": true
+    }
+}

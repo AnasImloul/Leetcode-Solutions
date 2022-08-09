@@ -1,0 +1,14 @@
+{
+    "id": "2321",
+    "name": "Maximum Score Of Spliced Array",
+    "url": "https://leetcode.com/problems/maximum-score-of-spliced-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

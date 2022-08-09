@@ -1,0 +1,14 @@
+{
+    "id": "2232",
+    "name": "Minimize Result by Adding Parentheses to Expression",
+    "url": "https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

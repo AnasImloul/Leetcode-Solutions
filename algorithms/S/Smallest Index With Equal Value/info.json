@@ -1,0 +1,14 @@
+{
+    "id": "2057",
+    "name": "Smallest Index With Equal Value",
+    "url": "https://leetcode.com/problems/smallest-index-with-equal-value",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

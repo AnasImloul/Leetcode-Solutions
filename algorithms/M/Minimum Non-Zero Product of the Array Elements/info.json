@@ -1,0 +1,14 @@
+{
+    "id": "1969",
+    "name": "Minimum Non-Zero Product of the Array Elements",
+    "url": "https://leetcode.com/problems/minimum-non-zero-product-of-the-array-elements",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

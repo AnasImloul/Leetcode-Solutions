@@ -1,0 +1,14 @@
+{
+    "id": "233",
+    "name": "Number of Digit One",
+    "url": "https://leetcode.com/problems/number-of-digit-one",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

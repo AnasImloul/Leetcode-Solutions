@@ -1,0 +1,14 @@
+{
+    "id": "1220",
+    "name": "Count Vowels Permutation",
+    "url": "https://leetcode.com/problems/count-vowels-permutation",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

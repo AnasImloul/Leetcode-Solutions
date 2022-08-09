@@ -1,0 +1,14 @@
+{
+    "id": "2309",
+    "name": "Greatest English Letter in Upper and Lower Case",
+    "url": "https://leetcode.com/problems/greatest-english-letter-in-upper-and-lower-case",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

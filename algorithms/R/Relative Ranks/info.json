@@ -1,0 +1,14 @@
+{
+    "id": "506",
+    "name": "Relative Ranks",
+    "url": "https://leetcode.com/problems/relative-ranks",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "497",
+    "name": "Random Point in Non-overlapping Rectangles",
+    "url": "https://leetcode.com/problems/random-point-in-non-overlapping-rectangles",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

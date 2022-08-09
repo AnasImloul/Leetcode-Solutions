@@ -1,0 +1,14 @@
+{
+    "id": "179",
+    "name": "Largest Number",
+    "url": "https://leetcode.com/problems/largest-number",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

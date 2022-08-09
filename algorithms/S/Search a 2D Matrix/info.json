@@ -1,0 +1,14 @@
+{
+    "id": "74",
+    "name": "Search a 2D Matrix",
+    "url": "https://leetcode.com/problems/search-a-2d-matrix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

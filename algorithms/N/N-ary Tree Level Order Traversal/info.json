@@ -1,0 +1,14 @@
+{
+    "id": "429",
+    "name": "N-ary Tree Level Order Traversal",
+    "url": "https://leetcode.com/problems/n-ary-tree-level-order-traversal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1672",
+    "name": "Richest Customer Wealth",
+    "url": "https://leetcode.com/problems/richest-customer-wealth",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

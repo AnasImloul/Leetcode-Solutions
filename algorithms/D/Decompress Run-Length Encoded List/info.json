@@ -1,0 +1,14 @@
+{
+    "id": "1313",
+    "name": "Decompress Run-Length Encoded List",
+    "url": "https://leetcode.com/problems/decompress-run-length-encoded-list",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

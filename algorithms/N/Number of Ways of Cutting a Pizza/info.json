@@ -1,0 +1,14 @@
+{
+    "id": "1444",
+    "name": "Number of Ways of Cutting a Pizza",
+    "url": "https://leetcode.com/problems/number-of-ways-of-cutting-a-pizza",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

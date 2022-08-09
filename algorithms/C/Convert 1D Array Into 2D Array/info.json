@@ -1,0 +1,14 @@
+{
+    "id": "2022",
+    "name": "Convert 1D Array Into 2D Array",
+    "url": "https://leetcode.com/problems/convert-1d-array-into-2d-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

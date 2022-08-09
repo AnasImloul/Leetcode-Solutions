@@ -1,0 +1,14 @@
+{
+    "id": "173",
+    "name": "Binary Search Tree Iterator",
+    "url": "https://leetcode.com/problems/binary-search-tree-iterator",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

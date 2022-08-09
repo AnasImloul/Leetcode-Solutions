@@ -1,0 +1,14 @@
+{
+    "id": "775",
+    "name": "Global and Local Inversions",
+    "url": "https://leetcode.com/problems/global-and-local-inversions",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

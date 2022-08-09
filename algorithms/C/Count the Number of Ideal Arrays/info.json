@@ -1,0 +1,14 @@
+{
+    "id": "2338",
+    "name": "Count the Number of Ideal Arrays",
+    "url": "https://leetcode.com/problems/count-the-number-of-ideal-arrays",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

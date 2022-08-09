@@ -1,0 +1,14 @@
+{
+    "id": "2074",
+    "name": "Reverse Nodes in Even Length Groups",
+    "url": "https://leetcode.com/problems/reverse-nodes-in-even-length-groups",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1818",
+    "name": "Minimum Absolute Sum Difference",
+    "url": "https://leetcode.com/problems/minimum-absolute-sum-difference",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

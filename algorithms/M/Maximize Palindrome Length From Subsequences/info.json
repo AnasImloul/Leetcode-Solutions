@@ -1,0 +1,14 @@
+{
+    "id": "1771",
+    "name": "Maximize Palindrome Length From Subsequences",
+    "url": "https://leetcode.com/problems/maximize-palindrome-length-from-subsequences",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

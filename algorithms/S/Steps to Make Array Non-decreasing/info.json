@@ -1,0 +1,14 @@
+{
+    "id": "2289",
+    "name": "Steps to Make Array Non-decreasing",
+    "url": "https://leetcode.com/problems/steps-to-make-array-non-decreasing",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

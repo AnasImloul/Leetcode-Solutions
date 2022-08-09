@@ -1,0 +1,14 @@
+{
+    "id": "1722",
+    "name": "Minimize Hamming Distance After Swap Operations",
+    "url": "https://leetcode.com/problems/minimize-hamming-distance-after-swap-operations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

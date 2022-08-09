@@ -1,0 +1,14 @@
+{
+    "id": "1929",
+    "name": "Concatenation of Array",
+    "url": "https://leetcode.com/problems/concatenation-of-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

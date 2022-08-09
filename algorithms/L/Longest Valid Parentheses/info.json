@@ -1,0 +1,14 @@
+{
+    "id": "32",
+    "name": "Longest Valid Parentheses",
+    "url": "https://leetcode.com/problems/longest-valid-parentheses",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

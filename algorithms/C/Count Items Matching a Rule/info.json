@@ -1,0 +1,14 @@
+{
+    "id": "1773",
+    "name": "Count Items Matching a Rule",
+    "url": "https://leetcode.com/problems/count-items-matching-a-rule",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

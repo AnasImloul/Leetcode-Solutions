@@ -1,0 +1,14 @@
+{
+    "id": "231",
+    "name": "Power of Two",
+    "url": "https://leetcode.com/problems/power-of-two",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

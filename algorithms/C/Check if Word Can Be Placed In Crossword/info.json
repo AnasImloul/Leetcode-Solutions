@@ -1,0 +1,14 @@
+{
+    "id": "2018",
+    "name": "Check if Word Can Be Placed In Crossword",
+    "url": "https://leetcode.com/problems/check-if-word-can-be-placed-in-crossword",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

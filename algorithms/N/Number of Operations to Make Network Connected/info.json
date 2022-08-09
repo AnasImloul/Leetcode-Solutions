@@ -1,0 +1,14 @@
+{
+    "id": "1319",
+    "name": "Number of Operations to Make Network Connected",
+    "url": "https://leetcode.com/problems/number-of-operations-to-make-network-connected",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

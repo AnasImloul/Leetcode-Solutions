@@ -1,0 +1,14 @@
+{
+    "id": "315",
+    "name": "Count of Smaller Numbers After Self",
+    "url": "https://leetcode.com/problems/count-of-smaller-numbers-after-self",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

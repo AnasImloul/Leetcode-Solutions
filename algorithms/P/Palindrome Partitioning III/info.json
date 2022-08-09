@@ -1,0 +1,14 @@
+{
+    "id": "1278",
+    "name": "Palindrome Partitioning III",
+    "url": "https://leetcode.com/problems/palindrome-partitioning-iii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

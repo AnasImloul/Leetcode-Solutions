@@ -1,0 +1,14 @@
+{
+    "id": "2157",
+    "name": "Groups of Strings",
+    "url": "https://leetcode.com/problems/groups-of-strings",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

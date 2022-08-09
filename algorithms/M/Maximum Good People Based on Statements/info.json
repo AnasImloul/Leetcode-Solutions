@@ -1,0 +1,14 @@
+{
+    "id": "2151",
+    "name": "Maximum Good People Based on Statements",
+    "url": "https://leetcode.com/problems/maximum-good-people-based-on-statements",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

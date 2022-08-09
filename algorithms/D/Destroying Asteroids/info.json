@@ -1,0 +1,14 @@
+{
+    "id": "2126",
+    "name": "Destroying Asteroids",
+    "url": "https://leetcode.com/problems/destroying-asteroids",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

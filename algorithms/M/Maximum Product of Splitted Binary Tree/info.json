@@ -1,0 +1,14 @@
+{
+    "id": "1339",
+    "name": "Maximum Product of Splitted Binary Tree",
+    "url": "https://leetcode.com/problems/maximum-product-of-splitted-binary-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1673",
+    "name": "Find the Most Competitive Subsequence",
+    "url": "https://leetcode.com/problems/find-the-most-competitive-subsequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

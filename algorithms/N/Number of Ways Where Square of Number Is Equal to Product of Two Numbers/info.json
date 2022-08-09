@@ -1,0 +1,14 @@
+{
+    "id": "1577",
+    "name": "Number of Ways Where Square of Number Is Equal to Product of Two Numbers",
+    "url": "https://leetcode.com/problems/number-of-ways-where-square-of-number-is-equal-to-product-of-two-numbers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

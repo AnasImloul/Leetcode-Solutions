@@ -1,0 +1,14 @@
+{
+    "id": "1851",
+    "name": "Minimum Interval to Include Each Query",
+    "url": "https://leetcode.com/problems/minimum-interval-to-include-each-query",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

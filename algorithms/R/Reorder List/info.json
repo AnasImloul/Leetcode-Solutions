@@ -1,0 +1,14 @@
+{
+    "id": "143",
+    "name": "Reorder List",
+    "url": "https://leetcode.com/problems/reorder-list",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

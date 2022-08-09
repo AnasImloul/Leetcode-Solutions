@@ -1,0 +1,14 @@
+{
+    "id": "1887",
+    "name": "Reduction Operations to Make the Array Elements Equal",
+    "url": "https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

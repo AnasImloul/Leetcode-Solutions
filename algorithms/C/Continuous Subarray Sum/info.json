@@ -1,0 +1,14 @@
+{
+    "id": "523",
+    "name": "Continuous Subarray Sum",
+    "url": "https://leetcode.com/problems/continuous-subarray-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "945",
+    "name": "Minimum Increment to Make Array Unique",
+    "url": "https://leetcode.com/problems/minimum-increment-to-make-array-unique",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

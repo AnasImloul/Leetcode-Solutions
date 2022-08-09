@@ -1,0 +1,14 @@
+{
+    "id": "2117",
+    "name": "Abbreviating the Product of a Range",
+    "url": "https://leetcode.com/problems/abbreviating-the-product-of-a-range",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

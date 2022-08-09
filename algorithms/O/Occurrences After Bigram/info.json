@@ -1,0 +1,14 @@
+{
+    "id": "1078",
+    "name": "Occurrences After Bigram",
+    "url": "https://leetcode.com/problems/occurrences-after-bigram",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

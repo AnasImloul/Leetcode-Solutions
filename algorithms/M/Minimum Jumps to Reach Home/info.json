@@ -1,0 +1,14 @@
+{
+    "id": "1654",
+    "name": "Minimum Jumps to Reach Home",
+    "url": "https://leetcode.com/problems/minimum-jumps-to-reach-home",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

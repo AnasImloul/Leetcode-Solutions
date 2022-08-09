@@ -1,0 +1,14 @@
+{
+    "id": "951",
+    "name": "Flip Equivalent Binary Trees",
+    "url": "https://leetcode.com/problems/flip-equivalent-binary-trees",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

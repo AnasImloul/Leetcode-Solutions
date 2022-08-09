@@ -1,0 +1,14 @@
+{
+    "id": "717",
+    "name": "1-bit and 2-bit Characters",
+    "url": "https://leetcode.com/problems/1-bit-and-2-bit-characters",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

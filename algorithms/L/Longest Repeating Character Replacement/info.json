@@ -1,0 +1,14 @@
+{
+    "id": "424",
+    "name": "Longest Repeating Character Replacement",
+    "url": "https://leetcode.com/problems/longest-repeating-character-replacement",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

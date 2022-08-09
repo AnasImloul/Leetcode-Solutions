@@ -1,0 +1,14 @@
+{
+    "id": "1266",
+    "name": "Minimum Time Visiting All Points",
+    "url": "https://leetcode.com/problems/minimum-time-visiting-all-points",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

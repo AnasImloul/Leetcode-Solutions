@@ -1,0 +1,14 @@
+{
+    "id": "1578",
+    "name": "Minimum Time to Make Rope Colorful",
+    "url": "https://leetcode.com/problems/minimum-time-to-make-rope-colorful",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

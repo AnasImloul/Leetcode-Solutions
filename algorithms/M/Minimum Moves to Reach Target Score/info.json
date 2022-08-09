@@ -1,0 +1,14 @@
+{
+    "id": "2139",
+    "name": "Minimum Moves to Reach Target Score",
+    "url": "https://leetcode.com/problems/minimum-moves-to-reach-target-score",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

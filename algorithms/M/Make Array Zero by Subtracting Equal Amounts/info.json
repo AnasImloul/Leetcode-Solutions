@@ -1,0 +1,14 @@
+{
+    "id": "2357",
+    "name": "Make Array Zero by Subtracting Equal Amounts",
+    "url": "https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "701",
+    "name": "Insert into a Binary Search Tree",
+    "url": "https://leetcode.com/problems/insert-into-a-binary-search-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

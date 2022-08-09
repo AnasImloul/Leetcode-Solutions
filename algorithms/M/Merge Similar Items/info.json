@@ -1,0 +1,14 @@
+{
+    "id": "2363",
+    "name": "Merge Similar Items",
+    "url": "https://leetcode.com/problems/merge-similar-items",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

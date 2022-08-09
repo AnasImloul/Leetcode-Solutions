@@ -1,0 +1,14 @@
+{
+    "id": "513",
+    "name": "Find Bottom Left Tree Value",
+    "url": "https://leetcode.com/problems/find-bottom-left-tree-value",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

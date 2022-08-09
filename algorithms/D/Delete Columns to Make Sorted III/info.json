@@ -1,0 +1,14 @@
+{
+    "id": "960",
+    "name": "Delete Columns to Make Sorted III",
+    "url": "https://leetcode.com/problems/delete-columns-to-make-sorted-iii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

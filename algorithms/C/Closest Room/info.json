@@ -1,0 +1,14 @@
+{
+    "id": "1847",
+    "name": "Closest Room",
+    "url": "https://leetcode.com/problems/closest-room",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

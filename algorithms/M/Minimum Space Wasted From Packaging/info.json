@@ -1,0 +1,14 @@
+{
+    "id": "1889",
+    "name": "Minimum Space Wasted From Packaging",
+    "url": "https://leetcode.com/problems/minimum-space-wasted-from-packaging",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

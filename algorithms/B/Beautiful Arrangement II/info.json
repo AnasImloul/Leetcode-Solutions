@@ -1,0 +1,14 @@
+{
+    "id": "667",
+    "name": "Beautiful Arrangement II",
+    "url": "https://leetcode.com/problems/beautiful-arrangement-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

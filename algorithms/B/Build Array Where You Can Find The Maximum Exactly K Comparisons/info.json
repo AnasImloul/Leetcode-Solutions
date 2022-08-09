@@ -1,0 +1,14 @@
+{
+    "id": "1420",
+    "name": "Build Array Where You Can Find The Maximum Exactly K Comparisons",
+    "url": "https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

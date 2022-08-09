@@ -1,0 +1,14 @@
+{
+    "id": "2167",
+    "name": "Minimum Time to Remove All Cars Containing Illegal Goods",
+    "url": "https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

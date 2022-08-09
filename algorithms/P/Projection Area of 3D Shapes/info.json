@@ -1,0 +1,14 @@
+{
+    "id": "883",
+    "name": "Projection Area of 3D Shapes",
+    "url": "https://leetcode.com/problems/projection-area-of-3d-shapes",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

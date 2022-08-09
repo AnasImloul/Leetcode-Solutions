@@ -1,0 +1,14 @@
+{
+    "id": "2331",
+    "name": "Evaluate Boolean Binary Tree",
+    "url": "https://leetcode.com/problems/evaluate-boolean-binary-tree",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

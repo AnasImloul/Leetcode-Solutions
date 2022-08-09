@@ -1,0 +1,14 @@
+{
+    "id": "1124",
+    "name": "Longest Well-Performing Interval",
+    "url": "https://leetcode.com/problems/longest-well-performing-interval",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

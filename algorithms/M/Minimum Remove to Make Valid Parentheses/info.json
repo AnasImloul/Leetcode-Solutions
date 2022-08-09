@@ -1,0 +1,14 @@
+{
+    "id": "1249",
+    "name": "Minimum Remove to Make Valid Parentheses",
+    "url": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

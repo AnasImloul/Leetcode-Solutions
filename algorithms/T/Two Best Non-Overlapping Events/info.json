@@ -1,0 +1,14 @@
+{
+    "id": "2054",
+    "name": "Two Best Non-Overlapping Events",
+    "url": "https://leetcode.com/problems/two-best-non-overlapping-events",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

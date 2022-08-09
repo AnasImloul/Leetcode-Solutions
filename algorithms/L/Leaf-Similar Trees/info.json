@@ -1,0 +1,14 @@
+{
+    "id": "872",
+    "name": "Leaf-Similar Trees",
+    "url": "https://leetcode.com/problems/leaf-similar-trees",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

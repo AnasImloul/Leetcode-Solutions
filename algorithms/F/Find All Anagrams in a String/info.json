@@ -1,0 +1,14 @@
+{
+    "id": "438",
+    "name": "Find All Anagrams in a String",
+    "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

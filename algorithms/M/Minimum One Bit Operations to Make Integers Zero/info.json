@@ -1,0 +1,14 @@
+{
+    "id": "1611",
+    "name": "Minimum One Bit Operations to Make Integers Zero",
+    "url": "https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

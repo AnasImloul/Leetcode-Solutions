@@ -1,0 +1,14 @@
+{
+    "id": "1701",
+    "name": "Average Waiting Time",
+    "url": "https://leetcode.com/problems/average-waiting-time",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

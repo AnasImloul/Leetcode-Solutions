@@ -1,0 +1,14 @@
+{
+    "id": "1615",
+    "name": "Maximal Network Rank",
+    "url": "https://leetcode.com/problems/maximal-network-rank",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

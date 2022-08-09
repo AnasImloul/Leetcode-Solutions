@@ -1,0 +1,14 @@
+{
+    "id": "2085",
+    "name": "Count Common Words With One Occurrence",
+    "url": "https://leetcode.com/problems/count-common-words-with-one-occurrence",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

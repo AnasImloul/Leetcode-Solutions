@@ -1,0 +1,14 @@
+{
+    "id": "844",
+    "name": "Backspace String Compare",
+    "url": "https://leetcode.com/problems/backspace-string-compare",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

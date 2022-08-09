@@ -1,0 +1,14 @@
+{
+    "id": "1760",
+    "name": "Minimum Limit of Balls in a Bag",
+    "url": "https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "480",
+    "name": "Sliding Window Median",
+    "url": "https://leetcode.com/problems/sliding-window-median",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

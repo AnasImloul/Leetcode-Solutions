@@ -1,0 +1,14 @@
+{
+    "id": "1880",
+    "name": "Check if Word Equals Summation of Two Words",
+    "url": "https://leetcode.com/problems/check-if-word-equals-summation-of-two-words",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

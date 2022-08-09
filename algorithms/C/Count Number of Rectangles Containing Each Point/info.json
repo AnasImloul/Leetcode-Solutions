@@ -1,0 +1,14 @@
+{
+    "id": "2250",
+    "name": "Count Number of Rectangles Containing Each Point",
+    "url": "https://leetcode.com/problems/count-number-of-rectangles-containing-each-point",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

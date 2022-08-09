@@ -1,0 +1,14 @@
+{
+    "id": "373",
+    "name": "Find K Pairs with Smallest Sums",
+    "url": "https://leetcode.com/problems/find-k-pairs-with-smallest-sums",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1206",
+    "name": "Design Skiplist",
+    "url": "https://leetcode.com/problems/design-skiplist",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

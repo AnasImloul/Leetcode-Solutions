@@ -1,0 +1,14 @@
+{
+    "id": "394",
+    "name": "Decode String",
+    "url": "https://leetcode.com/problems/decode-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2233",
+    "name": "Maximum Product After K Increments",
+    "url": "https://leetcode.com/problems/maximum-product-after-k-increments",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

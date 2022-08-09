@@ -1,0 +1,14 @@
+{
+    "id": "1737",
+    "name": "Change Minimum Characters to Satisfy One of Three Conditions",
+    "url": "https://leetcode.com/problems/change-minimum-characters-to-satisfy-one-of-three-conditions",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

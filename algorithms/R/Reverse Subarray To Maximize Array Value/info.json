@@ -1,0 +1,14 @@
+{
+    "id": "1330",
+    "name": "Reverse Subarray To Maximize Array Value",
+    "url": "https://leetcode.com/problems/reverse-subarray-to-maximize-array-value",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

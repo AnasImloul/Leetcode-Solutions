@@ -1,0 +1,14 @@
+{
+    "id": "1383",
+    "name": "Maximum Performance of a Team",
+    "url": "https://leetcode.com/problems/maximum-performance-of-a-team",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

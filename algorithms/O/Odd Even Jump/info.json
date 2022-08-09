@@ -1,0 +1,14 @@
+{
+    "id": "975",
+    "name": "Odd Even Jump",
+    "url": "https://leetcode.com/problems/odd-even-jump",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

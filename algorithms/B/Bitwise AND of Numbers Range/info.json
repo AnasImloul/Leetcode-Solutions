@@ -1,0 +1,14 @@
+{
+    "id": "201",
+    "name": "Bitwise AND of Numbers Range",
+    "url": "https://leetcode.com/problems/bitwise-and-of-numbers-range",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

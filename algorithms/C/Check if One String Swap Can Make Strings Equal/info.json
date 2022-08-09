@@ -1,0 +1,14 @@
+{
+    "id": "1790",
+    "name": "Check if One String Swap Can Make Strings Equal",
+    "url": "https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

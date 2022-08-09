@@ -1,0 +1,14 @@
+{
+    "id": "837",
+    "name": "New 21 Game",
+    "url": "https://leetcode.com/problems/new-21-game",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

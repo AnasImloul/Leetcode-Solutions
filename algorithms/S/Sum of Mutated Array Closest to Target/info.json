@@ -1,0 +1,14 @@
+{
+    "id": "1300",
+    "name": "Sum of Mutated Array Closest to Target",
+    "url": "https://leetcode.com/problems/sum-of-mutated-array-closest-to-target",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

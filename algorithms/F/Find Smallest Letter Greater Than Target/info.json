@@ -1,0 +1,14 @@
+{
+    "id": "744",
+    "name": "Find Smallest Letter Greater Than Target",
+    "url": "https://leetcode.com/problems/find-smallest-letter-greater-than-target",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "192",
+    "name": "Word Frequency",
+    "url": "https://leetcode.com/problems/word-frequency",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "shell",
+    "solution": {
+        "bash": true
+    }
+}

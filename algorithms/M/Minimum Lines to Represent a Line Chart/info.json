@@ -1,0 +1,14 @@
+{
+    "id": "2280",
+    "name": "Minimum Lines to Represent a Line Chart",
+    "url": "https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

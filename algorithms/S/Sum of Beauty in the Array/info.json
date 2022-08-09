@@ -1,0 +1,14 @@
+{
+    "id": "2012",
+    "name": "Sum of Beauty in the Array",
+    "url": "https://leetcode.com/problems/sum-of-beauty-in-the-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

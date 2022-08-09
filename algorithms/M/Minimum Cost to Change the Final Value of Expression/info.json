@@ -1,0 +1,14 @@
+{
+    "id": "1896",
+    "name": "Minimum Cost to Change the Final Value of Expression",
+    "url": "https://leetcode.com/problems/minimum-cost-to-change-the-final-value-of-expression",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

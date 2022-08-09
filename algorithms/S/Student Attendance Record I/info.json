@@ -1,0 +1,14 @@
+{
+    "id": "551",
+    "name": "Student Attendance Record I",
+    "url": "https://leetcode.com/problems/student-attendance-record-i",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

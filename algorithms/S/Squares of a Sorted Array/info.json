@@ -1,0 +1,14 @@
+{
+    "id": "977",
+    "name": "Squares of a Sorted Array",
+    "url": "https://leetcode.com/problems/squares-of-a-sorted-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

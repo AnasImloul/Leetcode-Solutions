@@ -1,0 +1,14 @@
+{
+    "id": "817",
+    "name": "Linked List Components",
+    "url": "https://leetcode.com/problems/linked-list-components",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

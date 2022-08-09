@@ -1,0 +1,14 @@
+{
+    "id": "865",
+    "name": "Smallest Subtree with all the Deepest Nodes",
+    "url": "https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

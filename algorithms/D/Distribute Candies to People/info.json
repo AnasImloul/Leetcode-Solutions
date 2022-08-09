@@ -1,0 +1,14 @@
+{
+    "id": "1103",
+    "name": "Distribute Candies to People",
+    "url": "https://leetcode.com/problems/distribute-candies-to-people",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

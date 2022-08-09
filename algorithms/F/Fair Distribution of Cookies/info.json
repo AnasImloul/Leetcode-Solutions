@@ -1,0 +1,14 @@
+{
+    "id": "2305",
+    "name": "Fair Distribution of Cookies",
+    "url": "https://leetcode.com/problems/fair-distribution-of-cookies",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

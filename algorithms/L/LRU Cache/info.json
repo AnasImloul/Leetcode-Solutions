@@ -1,0 +1,14 @@
+{
+    "id": "146",
+    "name": "LRU Cache",
+    "url": "https://leetcode.com/problems/lru-cache",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

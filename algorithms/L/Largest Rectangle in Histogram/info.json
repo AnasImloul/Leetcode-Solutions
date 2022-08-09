@@ -1,0 +1,14 @@
+{
+    "id": "84",
+    "name": "Largest Rectangle in Histogram",
+    "url": "https://leetcode.com/problems/largest-rectangle-in-histogram",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

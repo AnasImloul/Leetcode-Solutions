@@ -1,0 +1,14 @@
+{
+    "id": "1137",
+    "name": "N-th Tribonacci Number",
+    "url": "https://leetcode.com/problems/n-th-tribonacci-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

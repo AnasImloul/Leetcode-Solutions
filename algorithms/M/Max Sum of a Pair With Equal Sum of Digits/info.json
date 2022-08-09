@@ -1,0 +1,14 @@
+{
+    "id": "2342",
+    "name": "Max Sum of a Pair With Equal Sum of Digits",
+    "url": "https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1936",
+    "name": "Add Minimum Number of Rungs",
+    "url": "https://leetcode.com/problems/add-minimum-number-of-rungs",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

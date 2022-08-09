@@ -1,0 +1,14 @@
+{
+    "id": "1052",
+    "name": "Grumpy Bookstore Owner",
+    "url": "https://leetcode.com/problems/grumpy-bookstore-owner",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2369",
+    "name": "Check if There is a Valid Partition For The Array",
+    "url": "https://leetcode.com/problems/check-if-there-is-a-valid-partition-for-the-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

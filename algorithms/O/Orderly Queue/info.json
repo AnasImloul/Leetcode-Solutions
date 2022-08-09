@@ -1,0 +1,14 @@
+{
+    "id": "899",
+    "name": "Orderly Queue",
+    "url": "https://leetcode.com/problems/orderly-queue",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1413",
+    "name": "Minimum Value to Get Positive Step by Step Sum",
+    "url": "https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

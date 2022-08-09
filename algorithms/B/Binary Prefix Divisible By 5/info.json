@@ -1,0 +1,14 @@
+{
+    "id": "1018",
+    "name": "Binary Prefix Divisible By 5",
+    "url": "https://leetcode.com/problems/binary-prefix-divisible-by-5",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

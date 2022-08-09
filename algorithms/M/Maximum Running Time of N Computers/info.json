@@ -1,0 +1,14 @@
+{
+    "id": "2141",
+    "name": "Maximum Running Time of N Computers",
+    "url": "https://leetcode.com/problems/maximum-running-time-of-n-computers",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "950",
+    "name": "Reveal Cards In Increasing Order",
+    "url": "https://leetcode.com/problems/reveal-cards-in-increasing-order",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

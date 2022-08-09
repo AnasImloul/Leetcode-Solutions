@@ -1,0 +1,14 @@
+{
+    "id": "1325",
+    "name": "Delete Leaves With a Given Value",
+    "url": "https://leetcode.com/problems/delete-leaves-with-a-given-value",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

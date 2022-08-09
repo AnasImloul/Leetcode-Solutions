@@ -1,0 +1,14 @@
+{
+    "id": "1687",
+    "name": "Delivering Boxes from Storage to Ports",
+    "url": "https://leetcode.com/problems/delivering-boxes-from-storage-to-ports",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

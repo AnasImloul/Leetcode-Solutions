@@ -1,0 +1,14 @@
+{
+    "id": "1589",
+    "name": "Maximum Sum Obtained of Any Permutation",
+    "url": "https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

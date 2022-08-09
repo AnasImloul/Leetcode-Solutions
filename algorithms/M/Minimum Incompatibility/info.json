@@ -1,0 +1,14 @@
+{
+    "id": "1681",
+    "name": "Minimum Incompatibility",
+    "url": "https://leetcode.com/problems/minimum-incompatibility",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

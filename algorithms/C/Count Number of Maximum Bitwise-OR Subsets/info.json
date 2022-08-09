@@ -1,0 +1,14 @@
+{
+    "id": "2044",
+    "name": "Count Number of Maximum Bitwise-OR Subsets",
+    "url": "https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

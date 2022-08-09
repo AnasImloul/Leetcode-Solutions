@@ -1,0 +1,14 @@
+{
+    "id": "2140",
+    "name": "Solving Questions With Brainpower",
+    "url": "https://leetcode.com/problems/solving-questions-with-brainpower",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

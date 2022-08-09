@@ -1,0 +1,14 @@
+{
+    "id": "1871",
+    "name": "Jump Game VII",
+    "url": "https://leetcode.com/problems/jump-game-vii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

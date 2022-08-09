@@ -1,0 +1,14 @@
+{
+    "id": "1399",
+    "name": "Count Largest Group",
+    "url": "https://leetcode.com/problems/count-largest-group",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

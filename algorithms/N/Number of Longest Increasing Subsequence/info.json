@@ -1,0 +1,14 @@
+{
+    "id": "673",
+    "name": "Number of Longest Increasing Subsequence",
+    "url": "https://leetcode.com/problems/number-of-longest-increasing-subsequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

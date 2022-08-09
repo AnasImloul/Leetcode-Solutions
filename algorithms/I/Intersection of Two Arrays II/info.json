@@ -1,0 +1,14 @@
+{
+    "id": "350",
+    "name": "Intersection of Two Arrays II",
+    "url": "https://leetcode.com/problems/intersection-of-two-arrays-ii",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

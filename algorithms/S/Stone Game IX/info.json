@@ -1,0 +1,14 @@
+{
+    "id": "2029",
+    "name": "Stone Game IX",
+    "url": "https://leetcode.com/problems/stone-game-ix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

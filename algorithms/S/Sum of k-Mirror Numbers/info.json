@@ -1,0 +1,14 @@
+{
+    "id": "2081",
+    "name": "Sum of k-Mirror Numbers",
+    "url": "https://leetcode.com/problems/sum-of-k-mirror-numbers",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

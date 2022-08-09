@@ -1,0 +1,14 @@
+{
+    "id": "1431",
+    "name": "Kids With the Greatest Number of Candies",
+    "url": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

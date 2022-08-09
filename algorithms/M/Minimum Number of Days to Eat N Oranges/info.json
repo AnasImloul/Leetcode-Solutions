@@ -1,0 +1,14 @@
+{
+    "id": "1553",
+    "name": "Minimum Number of Days to Eat N Oranges",
+    "url": "https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

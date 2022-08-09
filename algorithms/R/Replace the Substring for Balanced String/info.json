@@ -1,0 +1,14 @@
+{
+    "id": "1234",
+    "name": "Replace the Substring for Balanced String",
+    "url": "https://leetcode.com/problems/replace-the-substring-for-balanced-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2101",
+    "name": "Detonate the Maximum Bombs",
+    "url": "https://leetcode.com/problems/detonate-the-maximum-bombs",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

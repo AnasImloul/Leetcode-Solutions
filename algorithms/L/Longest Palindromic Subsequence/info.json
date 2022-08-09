@@ -1,0 +1,14 @@
+{
+    "id": "516",
+    "name": "Longest Palindromic Subsequence",
+    "url": "https://leetcode.com/problems/longest-palindromic-subsequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

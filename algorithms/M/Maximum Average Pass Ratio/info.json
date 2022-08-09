@@ -1,0 +1,14 @@
+{
+    "id": "1792",
+    "name": "Maximum Average Pass Ratio",
+    "url": "https://leetcode.com/problems/maximum-average-pass-ratio",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

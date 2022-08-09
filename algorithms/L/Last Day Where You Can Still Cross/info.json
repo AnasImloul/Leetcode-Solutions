@@ -1,0 +1,14 @@
+{
+    "id": "1970",
+    "name": "Last Day Where You Can Still Cross",
+    "url": "https://leetcode.com/problems/last-day-where-you-can-still-cross",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "168",
+    "name": "Excel Sheet Column Title",
+    "url": "https://leetcode.com/problems/excel-sheet-column-title",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

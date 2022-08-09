@@ -1,0 +1,14 @@
+{
+    "id": "1702",
+    "name": "Maximum Binary String After Change",
+    "url": "https://leetcode.com/problems/maximum-binary-string-after-change",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

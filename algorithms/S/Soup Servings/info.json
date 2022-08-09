@@ -1,0 +1,14 @@
+{
+    "id": "808",
+    "name": "Soup Servings",
+    "url": "https://leetcode.com/problems/soup-servings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

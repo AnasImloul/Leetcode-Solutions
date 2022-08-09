@@ -1,0 +1,14 @@
+{
+    "id": "403",
+    "name": "Frog Jump",
+    "url": "https://leetcode.com/problems/frog-jump",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2251",
+    "name": "Number of Flowers in Full Bloom",
+    "url": "https://leetcode.com/problems/number-of-flowers-in-full-bloom",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

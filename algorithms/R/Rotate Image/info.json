@@ -1,0 +1,14 @@
+{
+    "id": "48",
+    "name": "Rotate Image",
+    "url": "https://leetcode.com/problems/rotate-image",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

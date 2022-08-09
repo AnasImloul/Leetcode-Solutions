@@ -1,0 +1,14 @@
+{
+    "id": "412",
+    "name": "Fizz Buzz",
+    "url": "https://leetcode.com/problems/fizz-buzz",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

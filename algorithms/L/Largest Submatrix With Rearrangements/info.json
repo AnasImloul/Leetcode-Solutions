@@ -1,0 +1,14 @@
+{
+    "id": "1727",
+    "name": "Largest Submatrix With Rearrangements",
+    "url": "https://leetcode.com/problems/largest-submatrix-with-rearrangements",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

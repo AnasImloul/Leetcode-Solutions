@@ -1,0 +1,14 @@
+{
+    "id": "739",
+    "name": "Daily Temperatures",
+    "url": "https://leetcode.com/problems/daily-temperatures",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

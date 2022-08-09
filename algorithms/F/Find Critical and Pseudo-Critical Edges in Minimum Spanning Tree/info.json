@@ -1,0 +1,14 @@
+{
+    "id": "1489",
+    "name": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+    "url": "https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "764",
+    "name": "Largest Plus Sign",
+    "url": "https://leetcode.com/problems/largest-plus-sign",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2341",
+    "name": "Maximum Number of Pairs in Array",
+    "url": "https://leetcode.com/problems/maximum-number-of-pairs-in-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

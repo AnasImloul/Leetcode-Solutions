@@ -1,0 +1,14 @@
+{
+    "id": "833",
+    "name": "Find And Replace in String",
+    "url": "https://leetcode.com/problems/find-and-replace-in-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

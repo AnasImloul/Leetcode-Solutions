@@ -1,0 +1,14 @@
+{
+    "id": "1840",
+    "name": "Maximum Building Height",
+    "url": "https://leetcode.com/problems/maximum-building-height",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

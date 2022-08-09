@@ -1,0 +1,14 @@
+{
+    "id": "209",
+    "name": "Minimum Size Subarray Sum",
+    "url": "https://leetcode.com/problems/minimum-size-subarray-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

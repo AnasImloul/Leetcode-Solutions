@@ -1,0 +1,11 @@
+{
+    "id": "178",
+    "name": "Rank Scores",
+    "url": "https://leetcode.com/problems/rank-scores",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

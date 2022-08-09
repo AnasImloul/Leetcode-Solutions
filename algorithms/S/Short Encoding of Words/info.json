@@ -1,0 +1,14 @@
+{
+    "id": "820",
+    "name": "Short Encoding of Words",
+    "url": "https://leetcode.com/problems/short-encoding-of-words",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

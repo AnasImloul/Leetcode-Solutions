@@ -1,0 +1,14 @@
+{
+    "id": "1976",
+    "name": "Number of Ways to Arrive at Destination",
+    "url": "https://leetcode.com/problems/number-of-ways-to-arrive-at-destination",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

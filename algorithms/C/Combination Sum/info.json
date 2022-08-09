@@ -1,0 +1,14 @@
+{
+    "id": "39",
+    "name": "Combination Sum",
+    "url": "https://leetcode.com/problems/combination-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

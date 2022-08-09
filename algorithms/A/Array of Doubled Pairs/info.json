@@ -1,0 +1,14 @@
+{
+    "id": "954",
+    "name": "Array of Doubled Pairs",
+    "url": "https://leetcode.com/problems/array-of-doubled-pairs",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

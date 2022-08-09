@@ -1,0 +1,14 @@
+{
+    "id": "730",
+    "name": "Count Different Palindromic Subsequences",
+    "url": "https://leetcode.com/problems/count-different-palindromic-subsequences",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

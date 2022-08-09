@@ -1,0 +1,14 @@
+{
+    "id": "1838",
+    "name": "Frequency of the Most Frequent Element",
+    "url": "https://leetcode.com/problems/frequency-of-the-most-frequent-element",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

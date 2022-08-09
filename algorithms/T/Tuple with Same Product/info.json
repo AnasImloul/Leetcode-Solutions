@@ -1,0 +1,14 @@
+{
+    "id": "1726",
+    "name": "Tuple with Same Product",
+    "url": "https://leetcode.com/problems/tuple-with-same-product",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

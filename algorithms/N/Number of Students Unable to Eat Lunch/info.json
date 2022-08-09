@@ -1,0 +1,14 @@
+{
+    "id": "1700",
+    "name": "Number of Students Unable to Eat Lunch",
+    "url": "https://leetcode.com/problems/number-of-students-unable-to-eat-lunch",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

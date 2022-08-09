@@ -1,0 +1,14 @@
+{
+    "id": "818",
+    "name": "Race Car",
+    "url": "https://leetcode.com/problems/race-car",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

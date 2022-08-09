@@ -1,0 +1,14 @@
+{
+    "id": "797",
+    "name": "All Paths From Source to Target",
+    "url": "https://leetcode.com/problems/all-paths-from-source-to-target",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1363",
+    "name": "Largest Multiple of Three",
+    "url": "https://leetcode.com/problems/largest-multiple-of-three",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "826",
+    "name": "Most Profit Assigning Work",
+    "url": "https://leetcode.com/problems/most-profit-assigning-work",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

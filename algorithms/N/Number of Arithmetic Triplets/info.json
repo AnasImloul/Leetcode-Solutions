@@ -1,0 +1,14 @@
+{
+    "id": "2367",
+    "name": "Number of Arithmetic Triplets",
+    "url": "https://leetcode.com/problems/number-of-arithmetic-triplets",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

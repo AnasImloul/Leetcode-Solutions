@@ -1,0 +1,14 @@
+{
+    "id": "986",
+    "name": "Interval List Intersections",
+    "url": "https://leetcode.com/problems/interval-list-intersections",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

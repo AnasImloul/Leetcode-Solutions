@@ -1,0 +1,14 @@
+{
+    "id": "1599",
+    "name": "Maximum Profit of Operating a Centennial Wheel",
+    "url": "https://leetcode.com/problems/maximum-profit-of-operating-a-centennial-wheel",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

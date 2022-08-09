@@ -1,0 +1,14 @@
+{
+    "id": "1301",
+    "name": "Number of Paths with Max Score",
+    "url": "https://leetcode.com/problems/number-of-paths-with-max-score",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

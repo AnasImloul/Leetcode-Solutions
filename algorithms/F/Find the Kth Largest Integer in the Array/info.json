@@ -1,0 +1,14 @@
+{
+    "id": "1985",
+    "name": "Find the Kth Largest Integer in the Array",
+    "url": "https://leetcode.com/problems/find-the-kth-largest-integer-in-the-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1770",
+    "name": "Maximum Score from Performing Multiplication Operations",
+    "url": "https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1569",
+    "name": "Number of Ways to Reorder Array to Get Same BST",
+    "url": "https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "566",
+    "name": "Reshape the Matrix",
+    "url": "https://leetcode.com/problems/reshape-the-matrix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

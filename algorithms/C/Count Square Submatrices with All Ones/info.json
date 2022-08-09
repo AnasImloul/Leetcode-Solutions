@@ -1,0 +1,14 @@
+{
+    "id": "1277",
+    "name": "Count Square Submatrices with All Ones",
+    "url": "https://leetcode.com/problems/count-square-submatrices-with-all-ones",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

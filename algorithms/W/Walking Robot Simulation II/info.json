@@ -1,0 +1,14 @@
+{
+    "id": "2069",
+    "name": "Walking Robot Simulation II",
+    "url": "https://leetcode.com/problems/walking-robot-simulation-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

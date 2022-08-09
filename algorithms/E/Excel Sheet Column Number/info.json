@@ -1,0 +1,14 @@
+{
+    "id": "171",
+    "name": "Excel Sheet Column Number",
+    "url": "https://leetcode.com/problems/excel-sheet-column-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

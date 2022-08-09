@@ -1,0 +1,14 @@
+{
+    "id": "406",
+    "name": "Queue Reconstruction by Height",
+    "url": "https://leetcode.com/problems/queue-reconstruction-by-height",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

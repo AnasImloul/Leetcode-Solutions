@@ -1,0 +1,14 @@
+{
+    "id": "1801",
+    "name": "Number of Orders in the Backlog",
+    "url": "https://leetcode.com/problems/number-of-orders-in-the-backlog",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

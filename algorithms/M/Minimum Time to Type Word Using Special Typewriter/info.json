@@ -1,0 +1,14 @@
+{
+    "id": "1974",
+    "name": "Minimum Time to Type Word Using Special Typewriter",
+    "url": "https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

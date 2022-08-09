@@ -1,0 +1,14 @@
+{
+    "id": "1705",
+    "name": "Maximum Number of Eaten Apples",
+    "url": "https://leetcode.com/problems/maximum-number-of-eaten-apples",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

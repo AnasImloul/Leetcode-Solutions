@@ -1,0 +1,14 @@
+{
+    "id": "14",
+    "name": "Longest Common Prefix",
+    "url": "https://leetcode.com/problems/longest-common-prefix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

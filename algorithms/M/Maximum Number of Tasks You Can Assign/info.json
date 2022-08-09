@@ -1,0 +1,14 @@
+{
+    "id": "2071",
+    "name": "Maximum Number of Tasks You Can Assign",
+    "url": "https://leetcode.com/problems/maximum-number-of-tasks-you-can-assign",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

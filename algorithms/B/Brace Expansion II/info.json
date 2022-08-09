@@ -1,0 +1,14 @@
+{
+    "id": "1096",
+    "name": "Brace Expansion II",
+    "url": "https://leetcode.com/problems/brace-expansion-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

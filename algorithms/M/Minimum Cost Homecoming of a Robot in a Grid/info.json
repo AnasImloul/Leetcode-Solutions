@@ -1,0 +1,14 @@
+{
+    "id": "2087",
+    "name": "Minimum Cost Homecoming of a Robot in a Grid",
+    "url": "https://leetcode.com/problems/minimum-cost-homecoming-of-a-robot-in-a-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

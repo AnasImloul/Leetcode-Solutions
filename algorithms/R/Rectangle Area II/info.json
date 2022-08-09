@@ -1,0 +1,14 @@
+{
+    "id": "850",
+    "name": "Rectangle Area II",
+    "url": "https://leetcode.com/problems/rectangle-area-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

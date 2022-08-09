@@ -1,0 +1,14 @@
+{
+    "id": "995",
+    "name": "Minimum Number of K Consecutive Bit Flips",
+    "url": "https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

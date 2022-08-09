@@ -1,0 +1,14 @@
+{
+    "id": "1833",
+    "name": "Maximum Ice Cream Bars",
+    "url": "https://leetcode.com/problems/maximum-ice-cream-bars",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": true
+    }
+}

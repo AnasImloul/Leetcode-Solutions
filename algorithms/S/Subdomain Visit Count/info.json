@@ -1,0 +1,14 @@
+{
+    "id": "811",
+    "name": "Subdomain Visit Count",
+    "url": "https://leetcode.com/problems/subdomain-visit-count",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

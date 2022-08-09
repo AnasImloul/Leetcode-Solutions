@@ -1,0 +1,14 @@
+{
+    "id": "2266",
+    "name": "Count Number of Texts",
+    "url": "https://leetcode.com/problems/count-number-of-texts",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

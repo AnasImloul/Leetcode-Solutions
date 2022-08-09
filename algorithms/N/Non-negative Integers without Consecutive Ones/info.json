@@ -1,0 +1,14 @@
+{
+    "id": "600",
+    "name": "Non-negative Integers without Consecutive Ones",
+    "url": "https://leetcode.com/problems/non-negative-integers-without-consecutive-ones",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2065",
+    "name": "Maximum Path Quality of a Graph",
+    "url": "https://leetcode.com/problems/maximum-path-quality-of-a-graph",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

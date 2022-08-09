@@ -1,0 +1,14 @@
+{
+    "id": "807",
+    "name": "Max Increase to Keep City Skyline",
+    "url": "https://leetcode.com/problems/max-increase-to-keep-city-skyline",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

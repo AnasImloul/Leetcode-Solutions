@@ -1,0 +1,14 @@
+{
+    "id": "96",
+    "name": "Unique Binary Search Trees",
+    "url": "https://leetcode.com/problems/unique-binary-search-trees",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

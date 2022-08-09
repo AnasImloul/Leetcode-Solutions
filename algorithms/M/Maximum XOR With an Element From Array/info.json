@@ -1,0 +1,14 @@
+{
+    "id": "1707",
+    "name": "Maximum XOR With an Element From Array",
+    "url": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

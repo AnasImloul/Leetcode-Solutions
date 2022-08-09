@@ -1,0 +1,14 @@
+{
+    "id": "1217",
+    "name": "Minimum Cost to Move Chips to The Same Position",
+    "url": "https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

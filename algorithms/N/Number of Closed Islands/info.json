@@ -1,0 +1,14 @@
+{
+    "id": "1254",
+    "name": "Number of Closed Islands",
+    "url": "https://leetcode.com/problems/number-of-closed-islands",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

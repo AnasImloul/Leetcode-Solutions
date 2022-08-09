@@ -1,0 +1,14 @@
+{
+    "id": "1943",
+    "name": "Describe the Painting",
+    "url": "https://leetcode.com/problems/describe-the-painting",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "641",
+    "name": "Design Circular Deque",
+    "url": "https://leetcode.com/problems/design-circular-deque",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

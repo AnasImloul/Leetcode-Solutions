@@ -1,0 +1,14 @@
+{
+    "id": "2034",
+    "name": "Stock Price Fluctuation",
+    "url": "https://leetcode.com/problems/stock-price-fluctuation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

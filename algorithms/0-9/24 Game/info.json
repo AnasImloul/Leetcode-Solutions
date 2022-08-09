@@ -1,0 +1,14 @@
+{
+    "id": "679",
+    "name": "24 Game",
+    "url": "https://leetcode.com/problems/24-game",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

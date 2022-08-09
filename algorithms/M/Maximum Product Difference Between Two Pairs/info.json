@@ -1,0 +1,14 @@
+{
+    "id": "1913",
+    "name": "Maximum Product Difference Between Two Pairs",
+    "url": "https://leetcode.com/problems/maximum-product-difference-between-two-pairs",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

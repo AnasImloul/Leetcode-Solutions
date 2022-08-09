@@ -1,0 +1,14 @@
+{
+    "id": "1338",
+    "name": "Reduce Array Size to The Half",
+    "url": "https://leetcode.com/problems/reduce-array-size-to-the-half",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

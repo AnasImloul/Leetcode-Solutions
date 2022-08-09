@@ -1,0 +1,14 @@
+{
+    "id": "1032",
+    "name": "Stream of Characters",
+    "url": "https://leetcode.com/problems/stream-of-characters",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

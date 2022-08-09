@@ -1,0 +1,14 @@
+{
+    "id": "2216",
+    "name": "Minimum Deletions to Make Array Beautiful",
+    "url": "https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2286",
+    "name": "Booking Concert Tickets in Groups",
+    "url": "https://leetcode.com/problems/booking-concert-tickets-in-groups",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

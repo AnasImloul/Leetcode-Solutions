@@ -1,0 +1,14 @@
+{
+    "id": "519",
+    "name": "Random Flip Matrix",
+    "url": "https://leetcode.com/problems/random-flip-matrix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

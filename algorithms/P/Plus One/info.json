@@ -1,0 +1,14 @@
+{
+    "id": "66",
+    "name": "Plus One",
+    "url": "https://leetcode.com/problems/plus-one",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

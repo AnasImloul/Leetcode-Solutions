@@ -1,0 +1,14 @@
+{
+    "id": "2068",
+    "name": "Check Whether Two Strings are Almost Equivalent",
+    "url": "https://leetcode.com/problems/check-whether-two-strings-are-almost-equivalent",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "1757",
+    "name": "Recyclable and Low Fat Products",
+    "url": "https://leetcode.com/problems/recyclable-and-low-fat-products",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

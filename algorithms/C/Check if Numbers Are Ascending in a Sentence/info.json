@@ -1,0 +1,14 @@
+{
+    "id": "2042",
+    "name": "Check if Numbers Are Ascending in a Sentence",
+    "url": "https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

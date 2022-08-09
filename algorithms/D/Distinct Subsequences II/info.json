@@ -1,0 +1,14 @@
+{
+    "id": "940",
+    "name": "Distinct Subsequences II",
+    "url": "https://leetcode.com/problems/distinct-subsequences-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

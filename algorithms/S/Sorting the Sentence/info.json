@@ -1,0 +1,14 @@
+{
+    "id": "1859",
+    "name": "Sorting the Sentence",
+    "url": "https://leetcode.com/problems/sorting-the-sentence",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

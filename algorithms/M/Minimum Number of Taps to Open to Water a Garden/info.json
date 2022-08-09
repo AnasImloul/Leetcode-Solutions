@@ -1,0 +1,14 @@
+{
+    "id": "1326",
+    "name": "Minimum Number of Taps to Open to Water a Garden",
+    "url": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

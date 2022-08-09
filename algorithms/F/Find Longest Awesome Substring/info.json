@@ -1,0 +1,14 @@
+{
+    "id": "1542",
+    "name": "Find Longest Awesome Substring",
+    "url": "https://leetcode.com/problems/find-longest-awesome-substring",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

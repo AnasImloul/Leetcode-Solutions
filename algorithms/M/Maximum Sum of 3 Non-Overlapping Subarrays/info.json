@@ -1,0 +1,14 @@
+{
+    "id": "689",
+    "name": "Maximum Sum of 3 Non-Overlapping Subarrays",
+    "url": "https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

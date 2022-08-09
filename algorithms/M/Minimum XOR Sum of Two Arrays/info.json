@@ -1,0 +1,14 @@
+{
+    "id": "1879",
+    "name": "Minimum XOR Sum of Two Arrays",
+    "url": "https://leetcode.com/problems/minimum-xor-sum-of-two-arrays",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

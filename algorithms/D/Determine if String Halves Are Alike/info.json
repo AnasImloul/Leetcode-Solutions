@@ -1,0 +1,14 @@
+{
+    "id": "1704",
+    "name": "Determine if String Halves Are Alike",
+    "url": "https://leetcode.com/problems/determine-if-string-halves-are-alike",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

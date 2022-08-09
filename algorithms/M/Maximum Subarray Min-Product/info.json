@@ -1,0 +1,14 @@
+{
+    "id": "1856",
+    "name": "Maximum Subarray Min-Product",
+    "url": "https://leetcode.com/problems/maximum-subarray-min-product",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": false,
+        "java": true,
+        "javascript": true
+    }
+}

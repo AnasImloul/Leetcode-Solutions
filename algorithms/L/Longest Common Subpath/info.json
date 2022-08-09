@@ -1,0 +1,14 @@
+{
+    "id": "1923",
+    "name": "Longest Common Subpath",
+    "url": "https://leetcode.com/problems/longest-common-subpath",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

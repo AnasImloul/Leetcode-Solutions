@@ -1,0 +1,14 @@
+{
+    "id": "623",
+    "name": "Add One Row to Tree",
+    "url": "https://leetcode.com/problems/add-one-row-to-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

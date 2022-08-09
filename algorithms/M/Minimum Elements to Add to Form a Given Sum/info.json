@@ -1,0 +1,14 @@
+{
+    "id": "1785",
+    "name": "Minimum Elements to Add to Form a Given Sum",
+    "url": "https://leetcode.com/problems/minimum-elements-to-add-to-form-a-given-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

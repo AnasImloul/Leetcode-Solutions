@@ -1,0 +1,14 @@
+{
+    "id": "871",
+    "name": "Minimum Number of Refueling Stops",
+    "url": "https://leetcode.com/problems/minimum-number-of-refueling-stops",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

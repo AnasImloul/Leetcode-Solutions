@@ -1,0 +1,14 @@
+{
+    "id": "887",
+    "name": "Super Egg Drop",
+    "url": "https://leetcode.com/problems/super-egg-drop",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

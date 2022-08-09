@@ -1,0 +1,14 @@
+{
+    "id": "698",
+    "name": "Partition to K Equal Sum Subsets",
+    "url": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

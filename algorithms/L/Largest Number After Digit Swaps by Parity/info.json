@@ -1,0 +1,14 @@
+{
+    "id": "2231",
+    "name": "Largest Number After Digit Swaps by Parity",
+    "url": "https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

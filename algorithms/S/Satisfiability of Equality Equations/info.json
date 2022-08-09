@@ -1,0 +1,14 @@
+{
+    "id": "990",
+    "name": "Satisfiability of Equality Equations",
+    "url": "https://leetcode.com/problems/satisfiability-of-equality-equations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

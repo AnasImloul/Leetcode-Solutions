@@ -1,0 +1,14 @@
+{
+    "id": "2119",
+    "name": "A Number After a Double Reversal",
+    "url": "https://leetcode.com/problems/a-number-after-a-double-reversal",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

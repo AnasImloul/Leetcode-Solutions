@@ -1,0 +1,14 @@
+{
+    "id": "554",
+    "name": "Brick Wall",
+    "url": "https://leetcode.com/problems/brick-wall",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

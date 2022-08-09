@@ -1,0 +1,14 @@
+{
+    "id": "685",
+    "name": "Redundant Connection II",
+    "url": "https://leetcode.com/problems/redundant-connection-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

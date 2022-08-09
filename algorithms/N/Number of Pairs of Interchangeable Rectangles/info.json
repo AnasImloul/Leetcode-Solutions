@@ -1,0 +1,14 @@
+{
+    "id": "2001",
+    "name": "Number of Pairs of Interchangeable Rectangles",
+    "url": "https://leetcode.com/problems/number-of-pairs-of-interchangeable-rectangles",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

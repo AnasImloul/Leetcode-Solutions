@@ -1,0 +1,14 @@
+{
+    "id": "1953",
+    "name": "Maximum Number of Weeks for Which You Can Work",
+    "url": "https://leetcode.com/problems/maximum-number-of-weeks-for-which-you-can-work",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

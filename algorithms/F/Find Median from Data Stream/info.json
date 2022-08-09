@@ -1,0 +1,14 @@
+{
+    "id": "295",
+    "name": "Find Median from Data Stream",
+    "url": "https://leetcode.com/problems/find-median-from-data-stream",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

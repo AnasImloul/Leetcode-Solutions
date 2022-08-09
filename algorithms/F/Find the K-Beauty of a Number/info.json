@@ -1,0 +1,14 @@
+{
+    "id": "2269",
+    "name": "Find the K-Beauty of a Number",
+    "url": "https://leetcode.com/problems/find-the-k-beauty-of-a-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

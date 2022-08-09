@@ -1,0 +1,14 @@
+{
+    "id": "793",
+    "name": "Preimage Size of Factorial Zeroes Function",
+    "url": "https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

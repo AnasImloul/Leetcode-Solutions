@@ -1,0 +1,14 @@
+{
+    "id": "976",
+    "name": "Largest Perimeter Triangle",
+    "url": "https://leetcode.com/problems/largest-perimeter-triangle",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1178",
+    "name": "Number of Valid Words for Each Puzzle",
+    "url": "https://leetcode.com/problems/number-of-valid-words-for-each-puzzle",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2303",
+    "name": "Calculate Amount Paid in Taxes",
+    "url": "https://leetcode.com/problems/calculate-amount-paid-in-taxes",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

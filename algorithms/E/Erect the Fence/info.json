@@ -1,0 +1,14 @@
+{
+    "id": "587",
+    "name": "Erect the Fence",
+    "url": "https://leetcode.com/problems/erect-the-fence",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1238",
+    "name": "Circular Permutation in Binary Representation",
+    "url": "https://leetcode.com/problems/circular-permutation-in-binary-representation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

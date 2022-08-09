@@ -1,0 +1,14 @@
+{
+    "id": "802",
+    "name": "Find Eventual Safe States",
+    "url": "https://leetcode.com/problems/find-eventual-safe-states",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

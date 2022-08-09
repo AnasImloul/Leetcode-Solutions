@@ -1,0 +1,14 @@
+{
+    "id": "2115",
+    "name": "Find All Possible Recipes from Given Supplies",
+    "url": "https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

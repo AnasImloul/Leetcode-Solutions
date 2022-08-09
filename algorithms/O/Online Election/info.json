@@ -1,0 +1,14 @@
+{
+    "id": "911",
+    "name": "Online Election",
+    "url": "https://leetcode.com/problems/online-election",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

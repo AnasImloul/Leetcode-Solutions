@@ -1,0 +1,14 @@
+{
+    "id": "41",
+    "name": "First Missing Positive",
+    "url": "https://leetcode.com/problems/first-missing-positive",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

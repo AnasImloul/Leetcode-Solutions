@@ -1,0 +1,14 @@
+{
+    "id": "1671",
+    "name": "Minimum Number of Removals to Make Mountain Array",
+    "url": "https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

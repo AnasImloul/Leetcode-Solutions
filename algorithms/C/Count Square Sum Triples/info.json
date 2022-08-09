@@ -1,0 +1,14 @@
+{
+    "id": "1925",
+    "name": "Count Square Sum Triples",
+    "url": "https://leetcode.com/problems/count-square-sum-triples",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

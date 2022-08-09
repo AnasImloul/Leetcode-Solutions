@@ -1,0 +1,14 @@
+{
+    "id": "1899",
+    "name": "Merge Triplets to Form Target Triplet",
+    "url": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

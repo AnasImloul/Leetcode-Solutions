@@ -1,0 +1,14 @@
+{
+    "id": "854",
+    "name": "K-Similar Strings",
+    "url": "https://leetcode.com/problems/k-similar-strings",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

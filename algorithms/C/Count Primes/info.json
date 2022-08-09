@@ -1,0 +1,14 @@
+{
+    "id": "204",
+    "name": "Count Primes",
+    "url": "https://leetcode.com/problems/count-primes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

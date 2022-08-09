@@ -1,0 +1,14 @@
+{
+    "id": "492",
+    "name": "Construct the Rectangle",
+    "url": "https://leetcode.com/problems/construct-the-rectangle",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}
