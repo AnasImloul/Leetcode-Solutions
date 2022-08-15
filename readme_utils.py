@@ -1,10 +1,8 @@
-import encodings
 import urllib.parse
 import json
 from json import JSONDecodeError
-from os import listdir, getcwd, remove
+from os import listdir, getcwd
 from os.path import isdir, exists
-
 
 PATH = getcwd()
 
@@ -174,7 +172,6 @@ def generate_problems_table(topic, _class):
     table = "\n" + table_columns_header(["problems", "langages", "difficulty", "Leetcode"],
                                         ["left", "center", "center", "center"])
 
-
     class_path = "\\".join((PATH, topic, _class))
 
     for problem in get_all_subdirectories(class_path):
@@ -209,7 +206,9 @@ def generate_main_readme_file(scripts_path):
     for topic in TOPICS:
         if topic in all_dirs:
             readme += "\n" + f"### [{topic.capitalize()}](https://github.com/AnasImloul/Leetcode-solutions/tree/main/{topic}/#{topic}-solutions) ###"
-            readme += "\n" + f"Check out solutions to {get_total_problem_folders(topic)} problems from the {topic.capitalize()} category written in ( {', '.join(get_all_script_languages(topic))}) ."
+            readme += "\n" + f"Check out solutions to {get_total_problem_folders(topic)}" \
+                             f"problems from the {topic.capitalize()} category written in " \
+                             f"( {', '.join(get_all_script_languages(topic))}) . "
             readme += "\n" + generate_alphabetical_order_link_table(topic)
     return readme
 
@@ -232,7 +231,6 @@ def update_alphabetical_readme_file(topic, _class):
     readme_path = "\\".join((PATH, topic, _class, "README.md"))
     class_path = "\\".join((PATH, topic, _class))
 
-    print(topic, _class)
     if len(get_all_subdirectories(class_path)) == 0:
         return
 
@@ -240,10 +238,12 @@ def update_alphabetical_readme_file(topic, _class):
         readme.write(generate_alphabetical_readme_file(class_path))
 
 
-update_main_readme_file()
+if __name__ == "__main__":
 
-for topic in TOPICS:
-    update_topic_readme_file(topic)
+    update_main_readme_file()
 
-    for _class in get_all_subdirectories("\\".join((PATH, topic))):
-        update_alphabetical_readme_file(topic, _class)
+    for topic in TOPICS:
+        update_topic_readme_file(topic)
+
+        for _class in get_all_subdirectories("\\".join((PATH, topic))):
+            update_alphabetical_readme_file(topic, _class)
