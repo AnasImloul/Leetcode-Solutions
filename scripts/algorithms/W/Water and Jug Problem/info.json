@@ -1,0 +1,14 @@
+{
+    "id": "365",
+    "name": "Water and Jug Problem",
+    "url": "https://leetcode.com/problems/water-and-jug-problem",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

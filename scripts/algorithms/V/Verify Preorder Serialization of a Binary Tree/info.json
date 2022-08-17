@@ -1,0 +1,14 @@
+{
+    "id": "331",
+    "name": "Verify Preorder Serialization of a Binary Tree",
+    "url": "https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

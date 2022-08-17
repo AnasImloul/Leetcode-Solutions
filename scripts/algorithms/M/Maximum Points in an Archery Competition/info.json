@@ -1,0 +1,14 @@
+{
+    "id": "2212",
+    "name": "Maximum Points in an Archery Competition",
+    "url": "https://leetcode.com/problems/maximum-points-in-an-archery-competition",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

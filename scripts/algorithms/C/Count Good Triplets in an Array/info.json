@@ -1,0 +1,14 @@
+{
+    "id": "2179",
+    "name": "Count Good Triplets in an Array",
+    "url": "https://leetcode.com/problems/count-good-triplets-in-an-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

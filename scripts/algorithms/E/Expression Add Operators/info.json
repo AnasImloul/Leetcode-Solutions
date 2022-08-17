@@ -1,0 +1,14 @@
+{
+    "id": "282",
+    "name": "Expression Add Operators",
+    "url": "https://leetcode.com/problems/expression-add-operators",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

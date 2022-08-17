@@ -1,0 +1,14 @@
+{
+    "id": "1208",
+    "name": "Get Equal Substrings Within Budget",
+    "url": "https://leetcode.com/problems/get-equal-substrings-within-budget",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

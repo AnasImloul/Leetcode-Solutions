@@ -1,0 +1,14 @@
+{
+    "id": "1643",
+    "name": "Kth Smallest Instructions",
+    "url": "https://leetcode.com/problems/kth-smallest-instructions",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

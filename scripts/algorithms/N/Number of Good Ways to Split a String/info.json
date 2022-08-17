@@ -1,0 +1,14 @@
+{
+    "id": "1525",
+    "name": "Number of Good Ways to Split a String",
+    "url": "https://leetcode.com/problems/number-of-good-ways-to-split-a-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

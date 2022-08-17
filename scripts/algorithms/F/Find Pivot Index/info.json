@@ -1,0 +1,14 @@
+{
+    "id": "724",
+    "name": "Find Pivot Index",
+    "url": "https://leetcode.com/problems/find-pivot-index",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

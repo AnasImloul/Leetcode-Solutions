@@ -1,0 +1,14 @@
+{
+    "id": "35",
+    "name": "Search Insert Position",
+    "url": "https://leetcode.com/problems/search-insert-position",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

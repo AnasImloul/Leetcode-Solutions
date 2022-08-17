@@ -1,0 +1,14 @@
+{
+    "id": "1641",
+    "name": "Count Sorted Vowel Strings",
+    "url": "https://leetcode.com/problems/count-sorted-vowel-strings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

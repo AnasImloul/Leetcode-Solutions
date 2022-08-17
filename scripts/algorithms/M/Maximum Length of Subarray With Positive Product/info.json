@@ -1,0 +1,14 @@
+{
+    "id": "1567",
+    "name": "Maximum Length of Subarray With Positive Product",
+    "url": "https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

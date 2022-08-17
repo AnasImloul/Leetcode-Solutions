@@ -1,0 +1,14 @@
+{
+    "id": "1593",
+    "name": "Split a String Into the Max Number of Unique Substrings",
+    "url": "https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2304",
+    "name": "Minimum Path Cost in a Grid",
+    "url": "https://leetcode.com/problems/minimum-path-cost-in-a-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

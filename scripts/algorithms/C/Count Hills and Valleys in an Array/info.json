@@ -1,0 +1,14 @@
+{
+    "id": "2210",
+    "name": "Count Hills and Valleys in an Array",
+    "url": "https://leetcode.com/problems/count-hills-and-valleys-in-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

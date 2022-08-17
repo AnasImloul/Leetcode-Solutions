@@ -1,0 +1,14 @@
+{
+    "id": "481",
+    "name": "Magical String",
+    "url": "https://leetcode.com/problems/magical-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1557",
+    "name": "Minimum Number of Vertices to Reach All Nodes",
+    "url": "https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

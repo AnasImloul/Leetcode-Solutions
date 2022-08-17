@@ -1,0 +1,14 @@
+{
+    "id": "1360",
+    "name": "Number of Days Between Two Dates",
+    "url": "https://leetcode.com/problems/number-of-days-between-two-dates",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

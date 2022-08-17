@@ -1,0 +1,14 @@
+{
+    "id": "1884",
+    "name": "Egg Drop With 2 Eggs and N Floors",
+    "url": "https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

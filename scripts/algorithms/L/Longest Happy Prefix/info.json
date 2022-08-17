@@ -1,0 +1,14 @@
+{
+    "id": "1392",
+    "name": "Longest Happy Prefix",
+    "url": "https://leetcode.com/problems/longest-happy-prefix",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

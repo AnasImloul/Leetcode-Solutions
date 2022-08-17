@@ -1,0 +1,14 @@
+{
+    "id": "433",
+    "name": "Minimum Genetic Mutation",
+    "url": "https://leetcode.com/problems/minimum-genetic-mutation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

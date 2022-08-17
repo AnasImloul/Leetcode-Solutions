@@ -1,0 +1,14 @@
+{
+    "id": "1390",
+    "name": "Four Divisors",
+    "url": "https://leetcode.com/problems/four-divisors",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "654",
+    "name": "Maximum Binary Tree",
+    "url": "https://leetcode.com/problems/maximum-binary-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1800",
+    "name": "Maximum Ascending Subarray Sum",
+    "url": "https://leetcode.com/problems/maximum-ascending-subarray-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

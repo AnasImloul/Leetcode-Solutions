@@ -1,0 +1,14 @@
+{
+    "id": "2351",
+    "name": "First Letter to Appear Twice",
+    "url": "https://leetcode.com/problems/first-letter-to-appear-twice",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

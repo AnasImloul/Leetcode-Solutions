@@ -1,0 +1,14 @@
+{
+    "id": "1397",
+    "name": "Find All Good Strings",
+    "url": "https://leetcode.com/problems/find-all-good-strings",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

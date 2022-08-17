@@ -1,0 +1,14 @@
+{
+    "id": "622",
+    "name": "Design Circular Queue",
+    "url": "https://leetcode.com/problems/design-circular-queue",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

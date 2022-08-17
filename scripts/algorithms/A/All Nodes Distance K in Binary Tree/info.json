@@ -1,0 +1,14 @@
+{
+    "id": "863",
+    "name": "All Nodes Distance K in Binary Tree",
+    "url": "https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

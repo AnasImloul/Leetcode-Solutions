@@ -1,0 +1,14 @@
+{
+    "id": "239",
+    "name": "Sliding Window Maximum",
+    "url": "https://leetcode.com/problems/sliding-window-maximum",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

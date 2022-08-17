@@ -1,0 +1,14 @@
+{
+    "id": "1013",
+    "name": "Partition Array Into Three Parts With Equal Sum",
+    "url": "https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

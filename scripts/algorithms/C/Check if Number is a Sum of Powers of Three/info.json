@@ -1,0 +1,14 @@
+{
+    "id": "1780",
+    "name": "Check if Number is a Sum of Powers of Three",
+    "url": "https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

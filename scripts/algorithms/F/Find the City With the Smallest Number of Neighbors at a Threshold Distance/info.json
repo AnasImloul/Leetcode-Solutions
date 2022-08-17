@@ -1,0 +1,14 @@
+{
+    "id": "1334",
+    "name": "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+    "url": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

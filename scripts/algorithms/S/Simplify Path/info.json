@@ -1,0 +1,14 @@
+{
+    "id": "71",
+    "name": "Simplify Path",
+    "url": "https://leetcode.com/problems/simplify-path",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true,
+        "python": true,
+        "javascript": true
+    }
+}

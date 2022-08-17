@@ -1,0 +1,14 @@
+{
+    "id": "1296",
+    "name": "Divide Array in Sets of K Consecutive Numbers",
+    "url": "https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

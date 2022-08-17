@@ -1,0 +1,14 @@
+{
+    "id": "668",
+    "name": "Kth Smallest Number in Multiplication Table",
+    "url": "https://leetcode.com/problems/kth-smallest-number-in-multiplication-table",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

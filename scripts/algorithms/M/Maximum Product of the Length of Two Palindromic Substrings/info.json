@@ -1,0 +1,14 @@
+{
+    "id": "1960",
+    "name": "Maximum Product of the Length of Two Palindromic Substrings",
+    "url": "https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-substrings",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "53",
+    "name": "Maximum Subarray",
+    "url": "https://leetcode.com/problems/maximum-subarray",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2261",
+    "name": "K Divisible Elements Subarrays",
+    "url": "https://leetcode.com/problems/k-divisible-elements-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

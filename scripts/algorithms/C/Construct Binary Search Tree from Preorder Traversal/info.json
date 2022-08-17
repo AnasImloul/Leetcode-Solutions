@@ -1,0 +1,14 @@
+{
+    "id": "1008",
+    "name": "Construct Binary Search Tree from Preorder Traversal",
+    "url": "https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

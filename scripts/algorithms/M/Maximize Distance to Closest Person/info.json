@@ -1,0 +1,14 @@
+{
+    "id": "849",
+    "name": "Maximize Distance to Closest Person",
+    "url": "https://leetcode.com/problems/maximize-distance-to-closest-person",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

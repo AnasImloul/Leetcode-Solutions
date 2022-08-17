@@ -1,0 +1,14 @@
+{
+    "id": "1872",
+    "name": "Stone Game VIII",
+    "url": "https://leetcode.com/problems/stone-game-viii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

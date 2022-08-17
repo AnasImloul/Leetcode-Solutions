@@ -1,0 +1,14 @@
+{
+    "id": "2049",
+    "name": "Count Nodes With the Highest Score",
+    "url": "https://leetcode.com/problems/count-nodes-with-the-highest-score",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

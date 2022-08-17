@@ -1,0 +1,14 @@
+{
+    "id": "222",
+    "name": "Count Complete Tree Nodes",
+    "url": "https://leetcode.com/problems/count-complete-tree-nodes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

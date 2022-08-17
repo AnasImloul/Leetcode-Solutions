@@ -1,0 +1,14 @@
+{
+    "id": "1678",
+    "name": "Goal Parser Interpretation",
+    "url": "https://leetcode.com/problems/goal-parser-interpretation",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

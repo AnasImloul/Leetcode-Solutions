@@ -1,0 +1,14 @@
+{
+    "id": "538",
+    "name": "Convert BST to Greater Tree",
+    "url": "https://leetcode.com/problems/convert-bst-to-greater-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

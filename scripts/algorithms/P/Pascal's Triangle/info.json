@@ -1,0 +1,14 @@
+{
+    "id": "118",
+    "name": "Pascal's Triangle",
+    "url": "https://leetcode.com/problems/pascals-triangle",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

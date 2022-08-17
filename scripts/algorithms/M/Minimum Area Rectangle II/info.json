@@ -1,0 +1,14 @@
+{
+    "id": "963",
+    "name": "Minimum Area Rectangle II",
+    "url": "https://leetcode.com/problems/minimum-area-rectangle-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

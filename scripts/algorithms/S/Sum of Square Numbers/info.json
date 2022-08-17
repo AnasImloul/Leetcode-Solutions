@@ -1,0 +1,14 @@
+{
+    "id": "633",
+    "name": "Sum of Square Numbers",
+    "url": "https://leetcode.com/problems/sum-of-square-numbers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

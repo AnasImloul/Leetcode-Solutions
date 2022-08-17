@@ -1,0 +1,14 @@
+{
+    "id": "174",
+    "name": "Dungeon Game",
+    "url": "https://leetcode.com/problems/dungeon-game",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

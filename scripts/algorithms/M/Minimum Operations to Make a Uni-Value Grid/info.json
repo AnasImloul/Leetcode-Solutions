@@ -1,0 +1,14 @@
+{
+    "id": "2033",
+    "name": "Minimum Operations to Make a Uni-Value Grid",
+    "url": "https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

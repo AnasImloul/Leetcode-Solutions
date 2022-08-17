@@ -1,0 +1,14 @@
+{
+    "id": "2145",
+    "name": "Count the Hidden Sequences",
+    "url": "https://leetcode.com/problems/count-the-hidden-sequences",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "736",
+    "name": "Parse Lisp Expression",
+    "url": "https://leetcode.com/problems/parse-lisp-expression",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

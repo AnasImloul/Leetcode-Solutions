@@ -1,0 +1,11 @@
+{
+    "id": "1484",
+    "name": "Group Sold Products By The Date",
+    "url": "https://leetcode.com/problems/group-sold-products-by-the-date",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

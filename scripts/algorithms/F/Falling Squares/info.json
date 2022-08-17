@@ -1,0 +1,14 @@
+{
+    "id": "699",
+    "name": "Falling Squares",
+    "url": "https://leetcode.com/problems/falling-squares",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

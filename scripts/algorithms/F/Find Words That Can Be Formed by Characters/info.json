@@ -1,0 +1,14 @@
+{
+    "id": "1160",
+    "name": "Find Words That Can Be Formed by Characters",
+    "url": "https://leetcode.com/problems/find-words-that-can-be-formed-by-characters",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

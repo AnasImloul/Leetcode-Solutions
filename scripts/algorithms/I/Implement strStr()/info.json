@@ -1,0 +1,14 @@
+{
+    "id": "28",
+    "name": "Implement strStr()",
+    "url": "https://leetcode.com/problems/implement-strstr",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "823",
+    "name": "Binary Trees With Factors",
+    "url": "https://leetcode.com/problems/binary-trees-with-factors",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

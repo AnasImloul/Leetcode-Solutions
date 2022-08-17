@@ -1,0 +1,14 @@
+{
+    "id": "391",
+    "name": "Perfect Rectangle",
+    "url": "https://leetcode.com/problems/perfect-rectangle",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

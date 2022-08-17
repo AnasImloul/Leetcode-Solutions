@@ -1,0 +1,14 @@
+{
+    "id": "2284",
+    "name": "Sender With Largest Word Count",
+    "url": "https://leetcode.com/problems/sender-with-largest-word-count",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

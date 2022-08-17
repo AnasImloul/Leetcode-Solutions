@@ -1,0 +1,14 @@
+{
+    "id": "522",
+    "name": "Longest Uncommon Subsequence II",
+    "url": "https://leetcode.com/problems/longest-uncommon-subsequence-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

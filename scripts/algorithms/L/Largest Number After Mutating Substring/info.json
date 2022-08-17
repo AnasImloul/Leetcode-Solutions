@@ -1,0 +1,14 @@
+{
+    "id": "1946",
+    "name": "Largest Number After Mutating Substring",
+    "url": "https://leetcode.com/problems/largest-number-after-mutating-substring",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

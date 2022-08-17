@@ -1,0 +1,14 @@
+{
+    "id": "801",
+    "name": "Minimum Swaps To Make Sequences Increasing",
+    "url": "https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1665",
+    "name": "Minimum Initial Energy to Finish Tasks",
+    "url": "https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

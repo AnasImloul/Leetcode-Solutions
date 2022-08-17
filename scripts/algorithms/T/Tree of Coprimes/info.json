@@ -1,0 +1,14 @@
+{
+    "id": "1766",
+    "name": "Tree of Coprimes",
+    "url": "https://leetcode.com/problems/tree-of-coprimes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

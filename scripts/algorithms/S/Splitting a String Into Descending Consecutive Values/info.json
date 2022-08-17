@@ -1,0 +1,14 @@
+{
+    "id": "1849",
+    "name": "Splitting a String Into Descending Consecutive Values",
+    "url": "https://leetcode.com/problems/splitting-a-string-into-descending-consecutive-values",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

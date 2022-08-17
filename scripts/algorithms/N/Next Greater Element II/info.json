@@ -1,0 +1,14 @@
+{
+    "id": "503",
+    "name": "Next Greater Element II",
+    "url": "https://leetcode.com/problems/next-greater-element-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

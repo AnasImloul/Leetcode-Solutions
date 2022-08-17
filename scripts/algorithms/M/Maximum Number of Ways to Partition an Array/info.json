@@ -1,0 +1,14 @@
+{
+    "id": "2025",
+    "name": "Maximum Number of Ways to Partition an Array",
+    "url": "https://leetcode.com/problems/maximum-number-of-ways-to-partition-an-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

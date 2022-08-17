@@ -1,0 +1,14 @@
+{
+    "id": "1519",
+    "name": "Number of Nodes in the Sub-Tree With the Same Label",
+    "url": "https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

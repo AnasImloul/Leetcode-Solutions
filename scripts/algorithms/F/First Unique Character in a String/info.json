@@ -1,0 +1,14 @@
+{
+    "id": "387",
+    "name": "First Unique Character in a String",
+    "url": "https://leetcode.com/problems/first-unique-character-in-a-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

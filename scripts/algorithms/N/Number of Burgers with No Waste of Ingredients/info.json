@@ -1,0 +1,14 @@
+{
+    "id": "1276",
+    "name": "Number of Burgers with No Waste of Ingredients",
+    "url": "https://leetcode.com/problems/number-of-burgers-with-no-waste-of-ingredients",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

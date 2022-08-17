@@ -1,0 +1,14 @@
+{
+    "id": "395",
+    "name": "Longest Substring with At Least K Repeating Characters",
+    "url": "https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

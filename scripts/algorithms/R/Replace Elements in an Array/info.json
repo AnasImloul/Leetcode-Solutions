@@ -1,0 +1,14 @@
+{
+    "id": "2295",
+    "name": "Replace Elements in an Array",
+    "url": "https://leetcode.com/problems/replace-elements-in-an-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

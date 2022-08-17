@@ -1,0 +1,14 @@
+{
+    "id": "1712",
+    "name": "Ways to Split Array Into Three Subarrays",
+    "url": "https://leetcode.com/problems/ways-to-split-array-into-three-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1638",
+    "name": "Count Substrings That Differ by One Character",
+    "url": "https://leetcode.com/problems/count-substrings-that-differ-by-one-character",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

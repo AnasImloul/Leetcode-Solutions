@@ -1,0 +1,14 @@
+{
+    "id": "1750",
+    "name": "Minimum Length of String After Deleting Similar Ends",
+    "url": "https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

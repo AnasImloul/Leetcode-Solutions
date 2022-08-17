@@ -1,0 +1,14 @@
+{
+    "id": "1081",
+    "name": "Smallest Subsequence of Distinct Characters",
+    "url": "https://leetcode.com/problems/smallest-subsequence-of-distinct-characters",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1219",
+    "name": "Path with Maximum Gold",
+    "url": "https://leetcode.com/problems/path-with-maximum-gold",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1774",
+    "name": "Closest Dessert Cost",
+    "url": "https://leetcode.com/problems/closest-dessert-cost",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

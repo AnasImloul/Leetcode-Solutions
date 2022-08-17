@@ -1,0 +1,14 @@
+{
+    "id": "1629",
+    "name": "Slowest Key",
+    "url": "https://leetcode.com/problems/slowest-key",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

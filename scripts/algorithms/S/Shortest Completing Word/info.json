@@ -1,0 +1,14 @@
+{
+    "id": "748",
+    "name": "Shortest Completing Word",
+    "url": "https://leetcode.com/problems/shortest-completing-word",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

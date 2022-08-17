@@ -1,0 +1,14 @@
+{
+    "id": "1738",
+    "name": "Find Kth Largest XOR Coordinate Value",
+    "url": "https://leetcode.com/problems/find-kth-largest-xor-coordinate-value",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "790",
+    "name": "Domino and Tromino Tiling",
+    "url": "https://leetcode.com/problems/domino-and-tromino-tiling",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

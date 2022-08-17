@@ -1,0 +1,14 @@
+{
+    "id": "1323",
+    "name": "Maximum 69 Number",
+    "url": "https://leetcode.com/problems/maximum-69-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

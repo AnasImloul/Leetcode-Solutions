@@ -1,0 +1,14 @@
+{
+    "id": "831",
+    "name": "Masking Personal Information",
+    "url": "https://leetcode.com/problems/masking-personal-information",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

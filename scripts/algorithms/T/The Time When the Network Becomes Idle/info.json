@@ -1,0 +1,14 @@
+{
+    "id": "2039",
+    "name": "The Time When the Network Becomes Idle",
+    "url": "https://leetcode.com/problems/the-time-when-the-network-becomes-idle",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

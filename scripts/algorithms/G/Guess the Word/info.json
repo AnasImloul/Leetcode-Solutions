@@ -1,0 +1,14 @@
+{
+    "id": "843",
+    "name": "Guess the Word",
+    "url": "https://leetcode.com/problems/guess-the-word",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

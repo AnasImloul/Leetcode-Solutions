@@ -1,0 +1,14 @@
+{
+    "id": "873",
+    "name": "Length of Longest Fibonacci Subsequence",
+    "url": "https://leetcode.com/problems/length-of-longest-fibonacci-subsequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

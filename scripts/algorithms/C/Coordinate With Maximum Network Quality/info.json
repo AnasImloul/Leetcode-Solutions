@@ -1,0 +1,14 @@
+{
+    "id": "1620",
+    "name": "Coordinate With Maximum Network Quality",
+    "url": "https://leetcode.com/problems/coordinate-with-maximum-network-quality",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

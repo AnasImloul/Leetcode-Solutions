@@ -1,0 +1,14 @@
+{
+    "id": "1143",
+    "name": "Longest Common Subsequence",
+    "url": "https://leetcode.com/problems/longest-common-subsequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

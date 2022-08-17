@@ -1,0 +1,14 @@
+{
+    "id": "1962",
+    "name": "Remove Stones to Minimize the Total",
+    "url": "https://leetcode.com/problems/remove-stones-to-minimize-the-total",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

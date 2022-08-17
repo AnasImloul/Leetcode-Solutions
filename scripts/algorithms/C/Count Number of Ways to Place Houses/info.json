@@ -1,0 +1,14 @@
+{
+    "id": "2320",
+    "name": "Count Number of Ways to Place Houses",
+    "url": "https://leetcode.com/problems/count-number-of-ways-to-place-houses",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

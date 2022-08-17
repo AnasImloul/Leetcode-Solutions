@@ -1,0 +1,14 @@
+{
+    "id": "598",
+    "name": "Range Addition II",
+    "url": "https://leetcode.com/problems/range-addition-ii",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

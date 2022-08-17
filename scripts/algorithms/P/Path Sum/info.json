@@ -1,0 +1,14 @@
+{
+    "id": "112",
+    "name": "Path Sum",
+    "url": "https://leetcode.com/problems/path-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

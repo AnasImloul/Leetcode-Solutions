@@ -1,0 +1,14 @@
+{
+    "id": "2111",
+    "name": "Minimum Operations to Make the Array K-Increasing",
+    "url": "https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1744",
+    "name": "Can You Eat Your Favorite Candy on Your Favorite Day?",
+    "url": "https://leetcode.com/problems/can-you-eat-your-favorite-candy-on-your-favorite-day",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

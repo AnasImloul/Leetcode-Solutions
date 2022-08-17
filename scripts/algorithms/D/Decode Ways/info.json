@@ -1,0 +1,14 @@
+{
+    "id": "91",
+    "name": "Decode Ways",
+    "url": "https://leetcode.com/problems/decode-ways",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

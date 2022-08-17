@@ -1,0 +1,14 @@
+{
+    "id": "1662",
+    "name": "Check If Two String Arrays are Equivalent",
+    "url": "https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

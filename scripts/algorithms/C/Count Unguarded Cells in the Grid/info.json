@@ -1,0 +1,14 @@
+{
+    "id": "2257",
+    "name": "Count Unguarded Cells in the Grid",
+    "url": "https://leetcode.com/problems/count-unguarded-cells-in-the-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

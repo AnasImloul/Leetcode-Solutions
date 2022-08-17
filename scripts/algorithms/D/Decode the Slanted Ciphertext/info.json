@@ -1,0 +1,14 @@
+{
+    "id": "2075",
+    "name": "Decode the Slanted Ciphertext",
+    "url": "https://leetcode.com/problems/decode-the-slanted-ciphertext",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

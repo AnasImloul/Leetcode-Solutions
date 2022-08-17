@@ -1,0 +1,14 @@
+{
+    "id": "1043",
+    "name": "Partition Array for Maximum Sum",
+    "url": "https://leetcode.com/problems/partition-array-for-maximum-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

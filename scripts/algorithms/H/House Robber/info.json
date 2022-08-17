@@ -1,0 +1,14 @@
+{
+    "id": "198",
+    "name": "House Robber",
+    "url": "https://leetcode.com/problems/house-robber",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

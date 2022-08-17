@@ -1,0 +1,14 @@
+{
+    "id": "1514",
+    "name": "Path with Maximum Probability",
+    "url": "https://leetcode.com/problems/path-with-maximum-probability",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

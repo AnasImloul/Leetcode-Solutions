@@ -1,0 +1,14 @@
+{
+    "id": "1509",
+    "name": "Minimum Difference Between Largest and Smallest Value in Three Moves",
+    "url": "https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

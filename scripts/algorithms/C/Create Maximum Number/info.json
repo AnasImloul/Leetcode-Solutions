@@ -1,0 +1,14 @@
+{
+    "id": "321",
+    "name": "Create Maximum Number",
+    "url": "https://leetcode.com/problems/create-maximum-number",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

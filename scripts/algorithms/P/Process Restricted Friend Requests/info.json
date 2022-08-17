@@ -1,0 +1,14 @@
+{
+    "id": "2076",
+    "name": "Process Restricted Friend Requests",
+    "url": "https://leetcode.com/problems/process-restricted-friend-requests",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

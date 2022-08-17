@@ -1,0 +1,14 @@
+{
+    "id": "1010",
+    "name": "Pairs of Songs With Total Durations Divisible by 60",
+    "url": "https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

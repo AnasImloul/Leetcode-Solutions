@@ -1,0 +1,14 @@
+{
+    "id": "1648",
+    "name": "Sell Diminishing-Valued Colored Balls",
+    "url": "https://leetcode.com/problems/sell-diminishing-valued-colored-balls",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

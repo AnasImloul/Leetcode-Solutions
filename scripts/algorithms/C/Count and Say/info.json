@@ -1,0 +1,14 @@
+{
+    "id": "38",
+    "name": "Count and Say",
+    "url": "https://leetcode.com/problems/count-and-say",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

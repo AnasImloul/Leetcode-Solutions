@@ -1,0 +1,11 @@
+{
+    "id": "595",
+    "name": "Big Countries",
+    "url": "https://leetcode.com/problems/big-countries",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

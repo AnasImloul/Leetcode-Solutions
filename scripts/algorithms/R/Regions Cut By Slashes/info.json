@@ -1,0 +1,14 @@
+{
+    "id": "959",
+    "name": "Regions Cut By Slashes",
+    "url": "https://leetcode.com/problems/regions-cut-by-slashes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

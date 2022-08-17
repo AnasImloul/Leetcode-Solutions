@@ -1,0 +1,14 @@
+{
+    "id": "1315",
+    "name": "Sum of Nodes with Even-Valued Grandparent",
+    "url": "https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

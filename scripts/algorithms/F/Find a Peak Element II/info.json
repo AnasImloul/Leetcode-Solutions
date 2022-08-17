@@ -1,0 +1,14 @@
+{
+    "id": "1901",
+    "name": "Find a Peak Element II",
+    "url": "https://leetcode.com/problems/find-a-peak-element-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

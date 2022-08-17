@@ -1,0 +1,14 @@
+{
+    "id": "781",
+    "name": "Rabbits in Forest",
+    "url": "https://leetcode.com/problems/rabbits-in-forest",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

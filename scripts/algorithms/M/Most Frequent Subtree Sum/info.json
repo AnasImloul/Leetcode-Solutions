@@ -1,0 +1,14 @@
+{
+    "id": "508",
+    "name": "Most Frequent Subtree Sum",
+    "url": "https://leetcode.com/problems/most-frequent-subtree-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

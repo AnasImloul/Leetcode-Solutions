@@ -1,0 +1,14 @@
+{
+    "id": "2255",
+    "name": "Count Prefixes of a Given String",
+    "url": "https://leetcode.com/problems/count-prefixes-of-a-given-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

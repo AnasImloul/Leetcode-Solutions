@@ -1,0 +1,14 @@
+{
+    "id": "1441",
+    "name": "Build an Array With Stack Operations",
+    "url": "https://leetcode.com/problems/build-an-array-with-stack-operations",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "919",
+    "name": "Complete Binary Tree Inserter",
+    "url": "https://leetcode.com/problems/complete-binary-tree-inserter",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

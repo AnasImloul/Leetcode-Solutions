@@ -1,0 +1,14 @@
+{
+    "id": "1000",
+    "name": "Minimum Cost to Merge Stones",
+    "url": "https://leetcode.com/problems/minimum-cost-to-merge-stones",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": false
+    }
+}

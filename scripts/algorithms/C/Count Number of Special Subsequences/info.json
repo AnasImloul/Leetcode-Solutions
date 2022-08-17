@@ -1,0 +1,14 @@
+{
+    "id": "1955",
+    "name": "Count Number of Special Subsequences",
+    "url": "https://leetcode.com/problems/count-number-of-special-subsequences",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

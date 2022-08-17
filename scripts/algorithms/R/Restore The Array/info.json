@@ -1,0 +1,14 @@
+{
+    "id": "1416",
+    "name": "Restore The Array",
+    "url": "https://leetcode.com/problems/restore-the-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

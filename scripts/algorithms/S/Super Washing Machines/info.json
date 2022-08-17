@@ -1,0 +1,14 @@
+{
+    "id": "517",
+    "name": "Super Washing Machines",
+    "url": "https://leetcode.com/problems/super-washing-machines",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

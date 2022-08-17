@@ -1,0 +1,14 @@
+{
+    "id": "2196",
+    "name": "Create Binary Tree From Descriptions",
+    "url": "https://leetcode.com/problems/create-binary-tree-from-descriptions",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

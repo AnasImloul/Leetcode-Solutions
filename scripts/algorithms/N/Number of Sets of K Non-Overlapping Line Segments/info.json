@@ -1,0 +1,14 @@
+{
+    "id": "1621",
+    "name": "Number of Sets of K Non-Overlapping Line Segments",
+    "url": "https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

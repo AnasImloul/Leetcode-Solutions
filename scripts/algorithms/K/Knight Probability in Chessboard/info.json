@@ -1,0 +1,14 @@
+{
+    "id": "688",
+    "name": "Knight Probability in Chessboard",
+    "url": "https://leetcode.com/problems/knight-probability-in-chessboard",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

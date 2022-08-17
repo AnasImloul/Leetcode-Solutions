@@ -1,0 +1,11 @@
+{
+    "id": "185",
+    "name": "Department Top Three Salaries",
+    "url": "https://leetcode.com/problems/department-top-three-salaries",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

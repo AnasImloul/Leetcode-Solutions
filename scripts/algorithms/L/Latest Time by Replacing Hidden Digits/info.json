@@ -1,0 +1,14 @@
+{
+    "id": "1736",
+    "name": "Latest Time by Replacing Hidden Digits",
+    "url": "https://leetcode.com/problems/latest-time-by-replacing-hidden-digits",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

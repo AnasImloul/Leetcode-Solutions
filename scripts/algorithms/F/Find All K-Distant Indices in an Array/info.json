@@ -1,0 +1,14 @@
+{
+    "id": "2200",
+    "name": "Find All K-Distant Indices in an Array",
+    "url": "https://leetcode.com/problems/find-all-k-distant-indices-in-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "780",
+    "name": "Reaching Points",
+    "url": "https://leetcode.com/problems/reaching-points",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

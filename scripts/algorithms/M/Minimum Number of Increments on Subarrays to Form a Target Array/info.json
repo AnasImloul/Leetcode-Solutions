@@ -1,0 +1,14 @@
+{
+    "id": "1526",
+    "name": "Minimum Number of Increments on Subarrays to Form a Target Array",
+    "url": "https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

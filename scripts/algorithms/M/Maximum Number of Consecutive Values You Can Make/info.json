@@ -1,0 +1,14 @@
+{
+    "id": "1798",
+    "name": "Maximum Number of Consecutive Values You Can Make",
+    "url": "https://leetcode.com/problems/maximum-number-of-consecutive-values-you-can-make",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

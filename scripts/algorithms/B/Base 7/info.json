@@ -1,0 +1,14 @@
+{
+    "id": "504",
+    "name": "Base 7",
+    "url": "https://leetcode.com/problems/base-7",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

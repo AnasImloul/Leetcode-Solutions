@@ -1,0 +1,14 @@
+{
+    "id": "453",
+    "name": "Minimum Moves to Equal Array Elements",
+    "url": "https://leetcode.com/problems/minimum-moves-to-equal-array-elements",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

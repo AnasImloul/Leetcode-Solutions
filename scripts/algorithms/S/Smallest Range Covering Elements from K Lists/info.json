@@ -1,0 +1,14 @@
+{
+    "id": "632",
+    "name": "Smallest Range Covering Elements from K Lists",
+    "url": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

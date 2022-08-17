@@ -1,0 +1,14 @@
+{
+    "id": "2097",
+    "name": "Valid Arrangement of Pairs",
+    "url": "https://leetcode.com/problems/valid-arrangement-of-pairs",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

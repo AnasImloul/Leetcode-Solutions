@@ -1,0 +1,14 @@
+{
+    "id": "476",
+    "name": "Number Complement",
+    "url": "https://leetcode.com/problems/number-complement",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

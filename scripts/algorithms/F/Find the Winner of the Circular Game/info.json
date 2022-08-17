@@ -1,0 +1,14 @@
+{
+    "id": "1823",
+    "name": "Find the Winner of the Circular Game",
+    "url": "https://leetcode.com/problems/find-the-winner-of-the-circular-game",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

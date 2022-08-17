@@ -1,0 +1,14 @@
+{
+    "id": "2202",
+    "name": "Maximize the Topmost Element After K Moves",
+    "url": "https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

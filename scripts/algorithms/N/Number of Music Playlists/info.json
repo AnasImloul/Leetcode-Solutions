@@ -1,0 +1,14 @@
+{
+    "id": "920",
+    "name": "Number of Music Playlists",
+    "url": "https://leetcode.com/problems/number-of-music-playlists",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

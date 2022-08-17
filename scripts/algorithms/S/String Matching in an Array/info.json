@@ -1,0 +1,14 @@
+{
+    "id": "1408",
+    "name": "String Matching in an Array",
+    "url": "https://leetcode.com/problems/string-matching-in-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

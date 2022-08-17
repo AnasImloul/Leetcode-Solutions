@@ -1,0 +1,14 @@
+{
+    "id": "946",
+    "name": "Validate Stack Sequences",
+    "url": "https://leetcode.com/problems/validate-stack-sequences",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1034",
+    "name": "Coloring A Border",
+    "url": "https://leetcode.com/problems/coloring-a-border",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

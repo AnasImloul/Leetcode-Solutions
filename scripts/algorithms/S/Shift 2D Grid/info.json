@@ -1,0 +1,14 @@
+{
+    "id": "1260",
+    "name": "Shift 2D Grid",
+    "url": "https://leetcode.com/problems/shift-2d-grid",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "935",
+    "name": "Knight Dialer",
+    "url": "https://leetcode.com/problems/knight-dialer",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

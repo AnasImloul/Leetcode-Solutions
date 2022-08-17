@@ -1,0 +1,14 @@
+{
+    "id": "686",
+    "name": "Repeated String Match",
+    "url": "https://leetcode.com/problems/repeated-string-match",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

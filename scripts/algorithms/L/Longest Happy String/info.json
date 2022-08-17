@@ -1,0 +1,14 @@
+{
+    "id": "1405",
+    "name": "Longest Happy String",
+    "url": "https://leetcode.com/problems/longest-happy-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

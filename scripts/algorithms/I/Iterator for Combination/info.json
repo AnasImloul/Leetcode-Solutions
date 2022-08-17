@@ -1,0 +1,14 @@
+{
+    "id": "1286",
+    "name": "Iterator for Combination",
+    "url": "https://leetcode.com/problems/iterator-for-combination",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

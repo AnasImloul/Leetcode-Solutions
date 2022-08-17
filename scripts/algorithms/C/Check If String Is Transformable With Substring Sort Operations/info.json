@@ -1,0 +1,14 @@
+{
+    "id": "1585",
+    "name": "Check If String Is Transformable With Substring Sort Operations",
+    "url": "https://leetcode.com/problems/check-if-string-is-transformable-with-substring-sort-operations",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

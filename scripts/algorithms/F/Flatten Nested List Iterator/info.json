@@ -1,0 +1,14 @@
+{
+    "id": "341",
+    "name": "Flatten Nested List Iterator",
+    "url": "https://leetcode.com/problems/flatten-nested-list-iterator",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "608",
+    "name": "Tree Node",
+    "url": "https://leetcode.com/problems/tree-node",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

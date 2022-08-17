@@ -1,0 +1,14 @@
+{
+    "id": "1947",
+    "name": "Maximum Compatibility Score Sum",
+    "url": "https://leetcode.com/problems/maximum-compatibility-score-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

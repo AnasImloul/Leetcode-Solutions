@@ -1,0 +1,14 @@
+{
+    "id": "1824",
+    "name": "Minimum Sideway Jumps",
+    "url": "https://leetcode.com/problems/minimum-sideway-jumps",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

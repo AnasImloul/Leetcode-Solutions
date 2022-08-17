@@ -1,0 +1,14 @@
+{
+    "id": "1710",
+    "name": "Maximum Units on a Truck",
+    "url": "https://leetcode.com/problems/maximum-units-on-a-truck",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

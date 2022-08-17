@@ -1,0 +1,14 @@
+{
+    "id": "466",
+    "name": "Count The Repetitions",
+    "url": "https://leetcode.com/problems/count-the-repetitions",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

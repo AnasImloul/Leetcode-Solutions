@@ -1,0 +1,14 @@
+{
+    "id": "1758",
+    "name": "Minimum Changes To Make Alternating Binary String",
+    "url": "https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

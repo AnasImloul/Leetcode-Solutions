@@ -1,0 +1,14 @@
+{
+    "id": "1292",
+    "name": "Maximum Side Length of a Square with Sum Less than or Equal to Threshold",
+    "url": "https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

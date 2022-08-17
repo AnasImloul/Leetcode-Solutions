@@ -1,0 +1,14 @@
+{
+    "id": "376",
+    "name": "Wiggle Subsequence",
+    "url": "https://leetcode.com/problems/wiggle-subsequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

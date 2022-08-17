@@ -1,0 +1,14 @@
+{
+    "id": "44",
+    "name": "Wildcard Matching",
+    "url": "https://leetcode.com/problems/wildcard-matching",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

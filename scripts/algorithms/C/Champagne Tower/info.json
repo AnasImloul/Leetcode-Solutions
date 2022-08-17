@@ -1,0 +1,14 @@
+{
+    "id": "799",
+    "name": "Champagne Tower",
+    "url": "https://leetcode.com/problems/champagne-tower",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

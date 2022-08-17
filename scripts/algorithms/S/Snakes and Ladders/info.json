@@ -1,0 +1,14 @@
+{
+    "id": "909",
+    "name": "Snakes and Ladders",
+    "url": "https://leetcode.com/problems/snakes-and-ladders",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

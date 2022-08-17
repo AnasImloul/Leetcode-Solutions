@@ -1,0 +1,14 @@
+{
+    "id": "886",
+    "name": "Possible Bipartition",
+    "url": "https://leetcode.com/problems/possible-bipartition",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

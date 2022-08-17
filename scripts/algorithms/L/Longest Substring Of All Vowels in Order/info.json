@@ -1,0 +1,14 @@
+{
+    "id": "1839",
+    "name": "Longest Substring Of All Vowels in Order",
+    "url": "https://leetcode.com/problems/longest-substring-of-all-vowels-in-order",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

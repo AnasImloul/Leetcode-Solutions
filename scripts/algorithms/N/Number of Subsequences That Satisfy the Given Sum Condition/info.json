@@ -1,0 +1,14 @@
+{
+    "id": "1498",
+    "name": "Number of Subsequences That Satisfy the Given Sum Condition",
+    "url": "https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

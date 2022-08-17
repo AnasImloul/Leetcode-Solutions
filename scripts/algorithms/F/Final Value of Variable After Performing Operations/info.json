@@ -1,0 +1,14 @@
+{
+    "id": "2011",
+    "name": "Final Value of Variable After Performing Operations",
+    "url": "https://leetcode.com/problems/final-value-of-variable-after-performing-operations",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

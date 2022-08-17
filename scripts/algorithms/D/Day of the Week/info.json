@@ -1,0 +1,14 @@
+{
+    "id": "1185",
+    "name": "Day of the Week",
+    "url": "https://leetcode.com/problems/day-of-the-week",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

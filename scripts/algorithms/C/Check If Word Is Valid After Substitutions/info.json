@@ -1,0 +1,14 @@
+{
+    "id": "1003",
+    "name": "Check If Word Is Valid After Substitutions",
+    "url": "https://leetcode.com/problems/check-if-word-is-valid-after-substitutions",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

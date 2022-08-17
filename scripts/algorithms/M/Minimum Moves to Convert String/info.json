@@ -1,0 +1,14 @@
+{
+    "id": "2027",
+    "name": "Minimum Moves to Convert String",
+    "url": "https://leetcode.com/problems/minimum-moves-to-convert-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

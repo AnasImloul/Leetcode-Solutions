@@ -1,0 +1,14 @@
+{
+    "id": "553",
+    "name": "Optimal Division",
+    "url": "https://leetcode.com/problems/optimal-division",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

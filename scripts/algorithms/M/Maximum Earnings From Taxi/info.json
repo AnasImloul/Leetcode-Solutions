@@ -1,0 +1,14 @@
+{
+    "id": "2008",
+    "name": "Maximum Earnings From Taxi",
+    "url": "https://leetcode.com/problems/maximum-earnings-from-taxi",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

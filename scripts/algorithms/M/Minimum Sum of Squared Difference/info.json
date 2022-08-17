@@ -1,0 +1,14 @@
+{
+    "id": "2333",
+    "name": "Minimum Sum of Squared Difference",
+    "url": "https://leetcode.com/problems/minimum-sum-of-squared-difference",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

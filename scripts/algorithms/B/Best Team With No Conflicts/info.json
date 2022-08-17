@@ -1,0 +1,14 @@
+{
+    "id": "1626",
+    "name": "Best Team With No Conflicts",
+    "url": "https://leetcode.com/problems/best-team-with-no-conflicts",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

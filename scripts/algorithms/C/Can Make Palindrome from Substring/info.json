@@ -1,0 +1,14 @@
+{
+    "id": "1177",
+    "name": "Can Make Palindrome from Substring",
+    "url": "https://leetcode.com/problems/can-make-palindrome-from-substring",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

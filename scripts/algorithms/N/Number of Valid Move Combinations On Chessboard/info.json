@@ -1,0 +1,14 @@
+{
+    "id": "2056",
+    "name": "Number of Valid Move Combinations On Chessboard",
+    "url": "https://leetcode.com/problems/number-of-valid-move-combinations-on-chessboard",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

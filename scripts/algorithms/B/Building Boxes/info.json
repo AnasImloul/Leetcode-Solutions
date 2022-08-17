@@ -1,0 +1,14 @@
+{
+    "id": "1739",
+    "name": "Building Boxes",
+    "url": "https://leetcode.com/problems/building-boxes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

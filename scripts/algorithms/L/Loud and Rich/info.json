@@ -1,0 +1,14 @@
+{
+    "id": "851",
+    "name": "Loud and Rich",
+    "url": "https://leetcode.com/problems/loud-and-rich",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

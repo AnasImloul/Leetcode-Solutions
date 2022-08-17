@@ -1,0 +1,14 @@
+{
+    "id": "895",
+    "name": "Maximum Frequency Stack",
+    "url": "https://leetcode.com/problems/maximum-frequency-stack",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

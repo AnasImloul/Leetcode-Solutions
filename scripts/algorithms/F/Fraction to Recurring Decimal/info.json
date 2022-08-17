@@ -1,0 +1,14 @@
+{
+    "id": "166",
+    "name": "Fraction to Recurring Decimal",
+    "url": "https://leetcode.com/problems/fraction-to-recurring-decimal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

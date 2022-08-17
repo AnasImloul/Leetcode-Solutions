@@ -1,0 +1,14 @@
+{
+    "id": "1518",
+    "name": "Water Bottles",
+    "url": "https://leetcode.com/problems/water-bottles",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

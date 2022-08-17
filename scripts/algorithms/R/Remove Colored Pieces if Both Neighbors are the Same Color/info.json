@@ -1,0 +1,14 @@
+{
+    "id": "2038",
+    "name": "Remove Colored Pieces if Both Neighbors are the Same Color",
+    "url": "https://leetcode.com/problems/remove-colored-pieces-if-both-neighbors-are-the-same-color",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

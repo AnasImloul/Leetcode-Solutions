@@ -1,0 +1,14 @@
+{
+    "id": "1475",
+    "name": "Final Prices With a Special Discount in a Shop",
+    "url": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2349",
+    "name": "Design a Number Container System",
+    "url": "https://leetcode.com/problems/design-a-number-container-system",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

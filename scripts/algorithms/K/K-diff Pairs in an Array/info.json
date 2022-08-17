@@ -1,0 +1,14 @@
+{
+    "id": "532",
+    "name": "K-diff Pairs in an Array",
+    "url": "https://leetcode.com/problems/k-diff-pairs-in-an-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

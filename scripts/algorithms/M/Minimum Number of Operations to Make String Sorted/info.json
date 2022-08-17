@@ -1,0 +1,14 @@
+{
+    "id": "1830",
+    "name": "Minimum Number of Operations to Make String Sorted",
+    "url": "https://leetcode.com/problems/minimum-number-of-operations-to-make-string-sorted",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

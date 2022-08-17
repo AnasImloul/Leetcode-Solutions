@@ -1,0 +1,14 @@
+{
+    "id": "1283",
+    "name": "Find the Smallest Divisor Given a Threshold",
+    "url": "https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

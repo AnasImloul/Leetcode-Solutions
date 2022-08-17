@@ -1,0 +1,14 @@
+{
+    "id": "2185",
+    "name": "Counting Words With a Given Prefix",
+    "url": "https://leetcode.com/problems/counting-words-with-a-given-prefix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1630",
+    "name": "Arithmetic Subarrays",
+    "url": "https://leetcode.com/problems/arithmetic-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

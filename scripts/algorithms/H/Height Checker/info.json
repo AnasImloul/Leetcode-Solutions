@@ -1,0 +1,14 @@
+{
+    "id": "1051",
+    "name": "Height Checker",
+    "url": "https://leetcode.com/problems/height-checker",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

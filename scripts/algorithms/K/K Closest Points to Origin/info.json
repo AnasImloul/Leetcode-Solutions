@@ -1,0 +1,14 @@
+{
+    "id": "973",
+    "name": "K Closest Points to Origin",
+    "url": "https://leetcode.com/problems/k-closest-points-to-origin",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

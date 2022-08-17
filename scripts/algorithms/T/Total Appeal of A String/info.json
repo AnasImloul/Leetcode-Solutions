@@ -1,0 +1,14 @@
+{
+    "id": "2262",
+    "name": "Total Appeal of A String",
+    "url": "https://leetcode.com/problems/total-appeal-of-a-string",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

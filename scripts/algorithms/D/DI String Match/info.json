@@ -1,0 +1,14 @@
+{
+    "id": "942",
+    "name": "DI String Match",
+    "url": "https://leetcode.com/problems/di-string-match",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

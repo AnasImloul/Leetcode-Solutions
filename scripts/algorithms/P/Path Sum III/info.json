@@ -1,0 +1,14 @@
+{
+    "id": "437",
+    "name": "Path Sum III",
+    "url": "https://leetcode.com/problems/path-sum-iii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "720",
+    "name": "Longest Word in Dictionary",
+    "url": "https://leetcode.com/problems/longest-word-in-dictionary",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

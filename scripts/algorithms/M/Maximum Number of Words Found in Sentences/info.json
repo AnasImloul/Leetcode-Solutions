@@ -1,0 +1,14 @@
+{
+    "id": "2114",
+    "name": "Maximum Number of Words Found in Sentences",
+    "url": "https://leetcode.com/problems/maximum-number-of-words-found-in-sentences",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

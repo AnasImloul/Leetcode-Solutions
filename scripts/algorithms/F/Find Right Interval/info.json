@@ -1,0 +1,14 @@
+{
+    "id": "436",
+    "name": "Find Right Interval",
+    "url": "https://leetcode.com/problems/find-right-interval",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

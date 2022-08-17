@@ -1,0 +1,14 @@
+{
+    "id": "478",
+    "name": "Generate Random Point in a Circle",
+    "url": "https://leetcode.com/problems/generate-random-point-in-a-circle",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

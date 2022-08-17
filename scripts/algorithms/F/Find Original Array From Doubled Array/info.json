@@ -1,0 +1,14 @@
+{
+    "id": "2007",
+    "name": "Find Original Array From Doubled Array",
+    "url": "https://leetcode.com/problems/find-original-array-from-doubled-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

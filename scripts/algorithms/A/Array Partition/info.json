@@ -1,0 +1,14 @@
+{
+    "id": "561",
+    "name": "Array Partition",
+    "url": "https://leetcode.com/problems/array-partition",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

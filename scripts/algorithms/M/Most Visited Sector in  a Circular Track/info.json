@@ -1,0 +1,14 @@
+{
+    "id": "1560",
+    "name": "Most Visited Sector in  a Circular Track",
+    "url": "https://leetcode.com/problems/most-visited-sector-in-a-circular-track",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

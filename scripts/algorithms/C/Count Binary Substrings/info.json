@@ -1,0 +1,14 @@
+{
+    "id": "696",
+    "name": "Count Binary Substrings",
+    "url": "https://leetcode.com/problems/count-binary-substrings",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

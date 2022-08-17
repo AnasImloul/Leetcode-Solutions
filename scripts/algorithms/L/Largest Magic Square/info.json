@@ -1,0 +1,14 @@
+{
+    "id": "1895",
+    "name": "Largest Magic Square",
+    "url": "https://leetcode.com/problems/largest-magic-square",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

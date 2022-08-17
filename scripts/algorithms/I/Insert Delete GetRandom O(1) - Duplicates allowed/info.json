@@ -1,0 +1,14 @@
+{
+    "id": "381",
+    "name": "Insert Delete GetRandom O(1) - Duplicates allowed",
+    "url": "https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

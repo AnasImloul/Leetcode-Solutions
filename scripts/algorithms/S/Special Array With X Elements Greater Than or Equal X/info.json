@@ -1,0 +1,14 @@
+{
+    "id": "1608",
+    "name": "Special Array With X Elements Greater Than or Equal X",
+    "url": "https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

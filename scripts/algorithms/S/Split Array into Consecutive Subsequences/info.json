@@ -1,0 +1,14 @@
+{
+    "id": "659",
+    "name": "Split Array into Consecutive Subsequences",
+    "url": "https://leetcode.com/problems/split-array-into-consecutive-subsequences",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

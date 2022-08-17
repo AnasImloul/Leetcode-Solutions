@@ -1,0 +1,14 @@
+{
+    "id": "1719",
+    "name": "Number Of Ways To Reconstruct A Tree",
+    "url": "https://leetcode.com/problems/number-of-ways-to-reconstruct-a-tree",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

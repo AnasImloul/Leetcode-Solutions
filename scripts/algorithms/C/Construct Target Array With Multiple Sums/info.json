@@ -1,0 +1,14 @@
+{
+    "id": "1354",
+    "name": "Construct Target Array With Multiple Sums",
+    "url": "https://leetcode.com/problems/construct-target-array-with-multiple-sums",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

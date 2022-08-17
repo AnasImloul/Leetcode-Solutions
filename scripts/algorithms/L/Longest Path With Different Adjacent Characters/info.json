@@ -1,0 +1,14 @@
+{
+    "id": "2246",
+    "name": "Longest Path With Different Adjacent Characters",
+    "url": "https://leetcode.com/problems/longest-path-with-different-adjacent-characters",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1674",
+    "name": "Minimum Moves to Make Array Complementary",
+    "url": "https://leetcode.com/problems/minimum-moves-to-make-array-complementary",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

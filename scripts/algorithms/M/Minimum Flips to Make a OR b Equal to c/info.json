@@ -1,0 +1,14 @@
+{
+    "id": "1318",
+    "name": "Minimum Flips to Make a OR b Equal to c",
+    "url": "https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

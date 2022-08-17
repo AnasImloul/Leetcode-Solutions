@@ -1,0 +1,14 @@
+{
+    "id": "1237",
+    "name": "Find Positive Integer Solution for a Given Equation",
+    "url": "https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": true
+    }
+}

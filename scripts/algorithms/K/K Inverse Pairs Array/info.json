@@ -1,0 +1,14 @@
+{
+    "id": "629",
+    "name": "K Inverse Pairs Array",
+    "url": "https://leetcode.com/problems/k-inverse-pairs-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2060",
+    "name": "Check if an Original String Exists Given Two Encoded Strings",
+    "url": "https://leetcode.com/problems/check-if-an-original-string-exists-given-two-encoded-strings",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

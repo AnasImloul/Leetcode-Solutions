@@ -1,0 +1,14 @@
+{
+    "id": "1805",
+    "name": "Number of Different Integers in a String",
+    "url": "https://leetcode.com/problems/number-of-different-integers-in-a-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

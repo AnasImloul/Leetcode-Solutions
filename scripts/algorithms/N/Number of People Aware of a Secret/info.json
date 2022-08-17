@@ -1,0 +1,14 @@
+{
+    "id": "2327",
+    "name": "Number of People Aware of a Secret",
+    "url": "https://leetcode.com/problems/number-of-people-aware-of-a-secret",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1478",
+    "name": "Allocate Mailboxes",
+    "url": "https://leetcode.com/problems/allocate-mailboxes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

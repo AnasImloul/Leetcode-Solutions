@@ -1,0 +1,14 @@
+{
+    "id": "1921",
+    "name": "Eliminate Maximum Number of Monsters",
+    "url": "https://leetcode.com/problems/eliminate-maximum-number-of-monsters",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

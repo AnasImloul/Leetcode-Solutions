@@ -1,0 +1,14 @@
+{
+    "id": "352",
+    "name": "Data Stream as Disjoint Intervals",
+    "url": "https://leetcode.com/problems/data-stream-as-disjoint-intervals",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

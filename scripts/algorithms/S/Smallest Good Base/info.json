@@ -1,0 +1,14 @@
+{
+    "id": "483",
+    "name": "Smallest Good Base",
+    "url": "https://leetcode.com/problems/smallest-good-base",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

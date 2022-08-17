@@ -1,0 +1,14 @@
+{
+    "id": "1521",
+    "name": "Find a Value of a Mysterious Function Closest to Target",
+    "url": "https://leetcode.com/problems/find-a-value-of-a-mysterious-function-closest-to-target",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

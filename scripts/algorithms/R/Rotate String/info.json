@@ -1,0 +1,14 @@
+{
+    "id": "796",
+    "name": "Rotate String",
+    "url": "https://leetcode.com/problems/rotate-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

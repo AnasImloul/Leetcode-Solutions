@@ -1,0 +1,14 @@
+{
+    "id": "640",
+    "name": "Solve the Equation",
+    "url": "https://leetcode.com/problems/solve-the-equation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

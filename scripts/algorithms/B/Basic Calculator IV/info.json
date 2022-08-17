@@ -1,0 +1,14 @@
+{
+    "id": "770",
+    "name": "Basic Calculator IV",
+    "url": "https://leetcode.com/problems/basic-calculator-iv",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

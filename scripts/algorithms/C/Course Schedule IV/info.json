@@ -1,0 +1,14 @@
+{
+    "id": "1462",
+    "name": "Course Schedule IV",
+    "url": "https://leetcode.com/problems/course-schedule-iv",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

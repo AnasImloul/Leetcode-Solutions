@@ -1,0 +1,14 @@
+{
+    "id": "1984",
+    "name": "Minimum Difference Between Highest and Lowest of K Scores",
+    "url": "https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

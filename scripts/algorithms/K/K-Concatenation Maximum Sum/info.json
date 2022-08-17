@@ -1,0 +1,14 @@
+{
+    "id": "1191",
+    "name": "K-Concatenation Maximum Sum",
+    "url": "https://leetcode.com/problems/k-concatenation-maximum-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

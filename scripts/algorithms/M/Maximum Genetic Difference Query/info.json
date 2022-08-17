@@ -1,0 +1,14 @@
+{
+    "id": "1938",
+    "name": "Maximum Genetic Difference Query",
+    "url": "https://leetcode.com/problems/maximum-genetic-difference-query",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "283",
+    "name": "Move Zeroes",
+    "url": "https://leetcode.com/problems/move-zeroes",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

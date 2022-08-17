@@ -1,0 +1,14 @@
+{
+    "id": "650",
+    "name": "2 Keys Keyboard",
+    "url": "https://leetcode.com/problems/2-keys-keyboard",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

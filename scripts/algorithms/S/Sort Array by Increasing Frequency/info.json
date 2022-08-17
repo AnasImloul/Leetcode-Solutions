@@ -1,0 +1,14 @@
+{
+    "id": "1636",
+    "name": "Sort Array by Increasing Frequency",
+    "url": "https://leetcode.com/problems/sort-array-by-increasing-frequency",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1496",
+    "name": "Path Crossing",
+    "url": "https://leetcode.com/problems/path-crossing",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1432",
+    "name": "Max Difference You Can Get From Changing an Integer",
+    "url": "https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2215",
+    "name": "Find the Difference of Two Arrays",
+    "url": "https://leetcode.com/problems/find-the-difference-of-two-arrays",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

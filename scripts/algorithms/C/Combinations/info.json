@@ -1,0 +1,14 @@
+{
+    "id": "77",
+    "name": "Combinations",
+    "url": "https://leetcode.com/problems/combinations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true,
+        "python": true,
+        "java": true
+    }
+}

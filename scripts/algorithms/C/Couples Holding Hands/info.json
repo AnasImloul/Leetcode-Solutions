@@ -1,0 +1,14 @@
+{
+    "id": "765",
+    "name": "Couples Holding Hands",
+    "url": "https://leetcode.com/problems/couples-holding-hands",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

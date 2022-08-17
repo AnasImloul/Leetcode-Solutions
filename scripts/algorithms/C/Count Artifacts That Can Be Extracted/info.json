@@ -1,0 +1,14 @@
+{
+    "id": "2201",
+    "name": "Count Artifacts That Can Be Extracted",
+    "url": "https://leetcode.com/problems/count-artifacts-that-can-be-extracted",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": true
+    }
+}

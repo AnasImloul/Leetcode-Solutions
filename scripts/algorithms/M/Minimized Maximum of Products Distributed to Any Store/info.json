@@ -1,0 +1,14 @@
+{
+    "id": "2064",
+    "name": "Minimized Maximum of Products Distributed to Any Store",
+    "url": "https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

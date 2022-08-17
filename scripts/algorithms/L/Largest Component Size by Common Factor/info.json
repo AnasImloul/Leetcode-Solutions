@@ -1,0 +1,14 @@
+{
+    "id": "952",
+    "name": "Largest Component Size by Common Factor",
+    "url": "https://leetcode.com/problems/largest-component-size-by-common-factor",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

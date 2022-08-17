@@ -1,0 +1,14 @@
+{
+    "id": "915",
+    "name": "Partition Array into Disjoint Intervals",
+    "url": "https://leetcode.com/problems/partition-array-into-disjoint-intervals",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

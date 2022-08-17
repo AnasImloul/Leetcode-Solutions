@@ -1,0 +1,14 @@
+{
+    "id": "1761",
+    "name": "Minimum Degree of a Connected Trio in a Graph",
+    "url": "https://leetcode.com/problems/minimum-degree-of-a-connected-trio-in-a-graph",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

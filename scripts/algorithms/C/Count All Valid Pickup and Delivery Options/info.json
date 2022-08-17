@@ -1,0 +1,14 @@
+{
+    "id": "1359",
+    "name": "Count All Valid Pickup and Delivery Options",
+    "url": "https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

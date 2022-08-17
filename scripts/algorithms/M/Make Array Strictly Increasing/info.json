@@ -1,0 +1,14 @@
+{
+    "id": "1187",
+    "name": "Make Array Strictly Increasing",
+    "url": "https://leetcode.com/problems/make-array-strictly-increasing",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

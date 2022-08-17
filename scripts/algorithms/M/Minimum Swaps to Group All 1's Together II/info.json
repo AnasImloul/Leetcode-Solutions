@@ -1,0 +1,14 @@
+{
+    "id": "2134",
+    "name": "Minimum Swaps to Group All 1's Together II",
+    "url": "https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "971",
+    "name": "Flip Binary Tree To Match Preorder Traversal",
+    "url": "https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

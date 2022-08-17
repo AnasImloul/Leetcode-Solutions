@@ -1,0 +1,14 @@
+{
+    "id": "1663",
+    "name": "Smallest String With A Given Numeric Value",
+    "url": "https://leetcode.com/problems/smallest-string-with-a-given-numeric-value",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

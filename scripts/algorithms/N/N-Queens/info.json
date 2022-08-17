@@ -1,0 +1,14 @@
+{
+    "id": "51",
+    "name": "N-Queens",
+    "url": "https://leetcode.com/problems/n-queens",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

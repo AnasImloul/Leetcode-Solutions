@@ -1,0 +1,14 @@
+{
+    "id": "2226",
+    "name": "Maximum Candies Allocated to K Children",
+    "url": "https://leetcode.com/problems/maximum-candies-allocated-to-k-children",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

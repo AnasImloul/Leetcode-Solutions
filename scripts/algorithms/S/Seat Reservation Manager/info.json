@@ -1,0 +1,14 @@
+{
+    "id": "1845",
+    "name": "Seat Reservation Manager",
+    "url": "https://leetcode.com/problems/seat-reservation-manager",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

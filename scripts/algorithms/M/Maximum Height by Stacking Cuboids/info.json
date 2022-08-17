@@ -1,0 +1,14 @@
+{
+    "id": "1691",
+    "name": "Maximum Height by Stacking Cuboids",
+    "url": "https://leetcode.com/problems/maximum-height-by-stacking-cuboids",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

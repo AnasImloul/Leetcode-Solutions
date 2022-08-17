@@ -1,0 +1,14 @@
+{
+    "id": "459",
+    "name": "Repeated Substring Pattern",
+    "url": "https://leetcode.com/problems/repeated-substring-pattern",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

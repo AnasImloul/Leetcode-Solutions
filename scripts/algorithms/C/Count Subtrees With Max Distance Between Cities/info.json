@@ -1,0 +1,14 @@
+{
+    "id": "1617",
+    "name": "Count Subtrees With Max Distance Between Cities",
+    "url": "https://leetcode.com/problems/count-subtrees-with-max-distance-between-cities",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

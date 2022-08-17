@@ -1,0 +1,14 @@
+{
+    "id": "1787",
+    "name": "Make the XOR of All Segments Equal to Zero",
+    "url": "https://leetcode.com/problems/make-the-xor-of-all-segments-equal-to-zero",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": false,
+        "javascript": false
+    }
+}

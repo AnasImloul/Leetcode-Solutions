@@ -1,0 +1,14 @@
+{
+    "id": "1502",
+    "name": "Can Make Arithmetic Progression From Sequence",
+    "url": "https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

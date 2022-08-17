@@ -1,0 +1,14 @@
+{
+    "id": "1575",
+    "name": "Count All Possible Routes",
+    "url": "https://leetcode.com/problems/count-all-possible-routes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

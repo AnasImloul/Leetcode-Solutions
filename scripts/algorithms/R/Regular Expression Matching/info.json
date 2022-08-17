@@ -1,0 +1,14 @@
+{
+    "id": "10",
+    "name": "Regular Expression Matching",
+    "url": "https://leetcode.com/problems/regular-expression-matching",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2040",
+    "name": "Kth Smallest Product of Two Sorted Arrays",
+    "url": "https://leetcode.com/problems/kth-smallest-product-of-two-sorted-arrays",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

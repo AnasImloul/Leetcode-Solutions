@@ -1,0 +1,14 @@
+{
+    "id": "1036",
+    "name": "Escape a Large Maze",
+    "url": "https://leetcode.com/problems/escape-a-large-maze",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

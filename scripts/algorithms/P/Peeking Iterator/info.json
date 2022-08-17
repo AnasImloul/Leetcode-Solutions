@@ -1,0 +1,14 @@
+{
+    "id": "284",
+    "name": "Peeking Iterator",
+    "url": "https://leetcode.com/problems/peeking-iterator",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

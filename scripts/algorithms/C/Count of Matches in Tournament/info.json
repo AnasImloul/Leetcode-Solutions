@@ -1,0 +1,14 @@
+{
+    "id": "1688",
+    "name": "Count of Matches in Tournament",
+    "url": "https://leetcode.com/problems/count-of-matches-in-tournament",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1997",
+    "name": "First Day Where You Have Been in All the Rooms",
+    "url": "https://leetcode.com/problems/first-day-where-you-have-been-in-all-the-rooms",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

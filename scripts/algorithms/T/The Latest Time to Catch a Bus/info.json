@@ -1,0 +1,14 @@
+{
+    "id": "2332",
+    "name": "The Latest Time to Catch a Bus",
+    "url": "https://leetcode.com/problems/the-latest-time-to-catch-a-bus",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

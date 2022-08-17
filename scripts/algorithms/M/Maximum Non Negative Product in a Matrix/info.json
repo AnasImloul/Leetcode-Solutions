@@ -1,0 +1,14 @@
+{
+    "id": "1594",
+    "name": "Maximum Non Negative Product in a Matrix",
+    "url": "https://leetcode.com/problems/maximum-non-negative-product-in-a-matrix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

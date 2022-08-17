@@ -1,0 +1,14 @@
+{
+    "id": "1028",
+    "name": "Recover a Tree From Preorder Traversal",
+    "url": "https://leetcode.com/problems/recover-a-tree-from-preorder-traversal",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

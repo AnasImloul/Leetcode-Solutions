@@ -1,0 +1,14 @@
+{
+    "id": "1807",
+    "name": "Evaluate the Bracket Pairs of a String",
+    "url": "https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

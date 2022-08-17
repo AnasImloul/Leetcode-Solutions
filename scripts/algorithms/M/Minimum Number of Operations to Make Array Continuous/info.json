@@ -1,0 +1,14 @@
+{
+    "id": "2009",
+    "name": "Minimum Number of Operations to Make Array Continuous",
+    "url": "https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

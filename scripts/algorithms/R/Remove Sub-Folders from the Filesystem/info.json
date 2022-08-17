@@ -1,0 +1,14 @@
+{
+    "id": "1233",
+    "name": "Remove Sub-Folders from the Filesystem",
+    "url": "https://leetcode.com/problems/remove-sub-folders-from-the-filesystem",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

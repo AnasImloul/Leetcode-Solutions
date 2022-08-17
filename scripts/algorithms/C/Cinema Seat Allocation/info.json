@@ -1,0 +1,14 @@
+{
+    "id": "1386",
+    "name": "Cinema Seat Allocation",
+    "url": "https://leetcode.com/problems/cinema-seat-allocation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "1179",
+    "name": "Reformat Department Table",
+    "url": "https://leetcode.com/problems/reformat-department-table",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

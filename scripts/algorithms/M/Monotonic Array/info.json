@@ -1,0 +1,14 @@
+{
+    "id": "896",
+    "name": "Monotonic Array",
+    "url": "https://leetcode.com/problems/monotonic-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

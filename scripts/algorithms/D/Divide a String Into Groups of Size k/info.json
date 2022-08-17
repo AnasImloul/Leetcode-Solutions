@@ -1,0 +1,14 @@
+{
+    "id": "2138",
+    "name": "Divide a String Into Groups of Size k",
+    "url": "https://leetcode.com/problems/divide-a-string-into-groups-of-size-k",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1012",
+    "name": "Numbers With Repeated Digits",
+    "url": "https://leetcode.com/problems/numbers-with-repeated-digits",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

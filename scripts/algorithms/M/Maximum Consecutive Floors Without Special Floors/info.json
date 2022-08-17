@@ -1,0 +1,14 @@
+{
+    "id": "2274",
+    "name": "Maximum Consecutive Floors Without Special Floors",
+    "url": "https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

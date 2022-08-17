@@ -1,0 +1,14 @@
+{
+    "id": "328",
+    "name": "Odd Even Linked List",
+    "url": "https://leetcode.com/problems/odd-even-linked-list",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

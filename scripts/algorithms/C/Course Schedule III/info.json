@@ -1,0 +1,14 @@
+{
+    "id": "630",
+    "name": "Course Schedule III",
+    "url": "https://leetcode.com/problems/course-schedule-iii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

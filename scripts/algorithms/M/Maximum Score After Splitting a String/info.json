@@ -1,0 +1,14 @@
+{
+    "id": "1422",
+    "name": "Maximum Score After Splitting a String",
+    "url": "https://leetcode.com/problems/maximum-score-after-splitting-a-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

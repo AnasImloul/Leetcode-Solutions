@@ -1,0 +1,14 @@
+{
+    "id": "1089",
+    "name": "Duplicate Zeros",
+    "url": "https://leetcode.com/problems/duplicate-zeros",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

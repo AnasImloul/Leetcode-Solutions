@@ -1,0 +1,14 @@
+{
+    "id": "889",
+    "name": "Construct Binary Tree from Preorder and Postorder Traversal",
+    "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

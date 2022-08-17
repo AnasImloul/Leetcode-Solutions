@@ -1,0 +1,14 @@
+{
+    "id": "2148",
+    "name": "Count Elements With Strictly Smaller and Greater Elements",
+    "url": "https://leetcode.com/problems/count-elements-with-strictly-smaller-and-greater-elements",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

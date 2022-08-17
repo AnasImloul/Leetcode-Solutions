@@ -1,0 +1,14 @@
+{
+    "id": "1157",
+    "name": "Online Majority Element In Subarray",
+    "url": "https://leetcode.com/problems/online-majority-element-in-subarray",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

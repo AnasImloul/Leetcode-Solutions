@@ -1,0 +1,12 @@
+{
+    "id": "1114",
+    "name": "Print in Order",
+    "url": "https://leetcode.com/problems/print-in-order",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "concurrency",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

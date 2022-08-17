@@ -1,0 +1,14 @@
+{
+    "id": "2127",
+    "name": "Maximum Employees to Be Invited to a Meeting",
+    "url": "https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

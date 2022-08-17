@@ -1,0 +1,14 @@
+{
+    "id": "1105",
+    "name": "Filling Bookcase Shelves",
+    "url": "https://leetcode.com/problems/filling-bookcase-shelves",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

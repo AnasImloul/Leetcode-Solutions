@@ -1,0 +1,14 @@
+{
+    "id": "1473",
+    "name": "Paint House III",
+    "url": "https://leetcode.com/problems/paint-house-iii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

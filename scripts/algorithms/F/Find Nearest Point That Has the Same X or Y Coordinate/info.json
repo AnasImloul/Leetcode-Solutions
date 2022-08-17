@@ -1,0 +1,14 @@
+{
+    "id": "1779",
+    "name": "Find Nearest Point That Has the Same X or Y Coordinate",
+    "url": "https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

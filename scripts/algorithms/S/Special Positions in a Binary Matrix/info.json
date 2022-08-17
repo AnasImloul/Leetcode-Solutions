@@ -1,0 +1,14 @@
+{
+    "id": "1582",
+    "name": "Special Positions in a Binary Matrix",
+    "url": "https://leetcode.com/problems/special-positions-in-a-binary-matrix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

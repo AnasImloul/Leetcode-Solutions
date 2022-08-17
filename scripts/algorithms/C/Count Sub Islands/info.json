@@ -1,0 +1,14 @@
+{
+    "id": "1905",
+    "name": "Count Sub Islands",
+    "url": "https://leetcode.com/problems/count-sub-islands",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

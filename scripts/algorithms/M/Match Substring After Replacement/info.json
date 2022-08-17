@@ -1,0 +1,14 @@
+{
+    "id": "2301",
+    "name": "Match Substring After Replacement",
+    "url": "https://leetcode.com/problems/match-substring-after-replacement",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

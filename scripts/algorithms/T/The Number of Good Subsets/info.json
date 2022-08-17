@@ -1,0 +1,14 @@
+{
+    "id": "1994",
+    "name": "The Number of Good Subsets",
+    "url": "https://leetcode.com/problems/the-number-of-good-subsets",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

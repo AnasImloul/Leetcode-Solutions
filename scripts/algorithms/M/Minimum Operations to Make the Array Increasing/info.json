@@ -1,0 +1,14 @@
+{
+    "id": "1827",
+    "name": "Minimum Operations to Make the Array Increasing",
+    "url": "https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

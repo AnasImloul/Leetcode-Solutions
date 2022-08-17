@@ -1,0 +1,14 @@
+{
+    "id": "1223",
+    "name": "Dice Roll Simulation",
+    "url": "https://leetcode.com/problems/dice-roll-simulation",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

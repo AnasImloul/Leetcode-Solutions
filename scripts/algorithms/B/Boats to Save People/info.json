@@ -1,0 +1,14 @@
+{
+    "id": "881",
+    "name": "Boats to Save People",
+    "url": "https://leetcode.com/problems/boats-to-save-people",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

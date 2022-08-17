@@ -1,0 +1,14 @@
+{
+    "id": "1288",
+    "name": "Remove Covered Intervals",
+    "url": "https://leetcode.com/problems/remove-covered-intervals",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

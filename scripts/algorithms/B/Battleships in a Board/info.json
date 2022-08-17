@@ -1,0 +1,14 @@
+{
+    "id": "419",
+    "name": "Battleships in a Board",
+    "url": "https://leetcode.com/problems/battleships-in-a-board",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

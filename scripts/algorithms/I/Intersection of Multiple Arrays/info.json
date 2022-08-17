@@ -1,0 +1,14 @@
+{
+    "id": "2248",
+    "name": "Intersection of Multiple Arrays",
+    "url": "https://leetcode.com/problems/intersection-of-multiple-arrays",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

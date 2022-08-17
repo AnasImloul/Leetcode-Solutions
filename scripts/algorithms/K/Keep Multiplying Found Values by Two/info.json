@@ -1,0 +1,14 @@
+{
+    "id": "2154",
+    "name": "Keep Multiplying Found Values by Two",
+    "url": "https://leetcode.com/problems/keep-multiplying-found-values-by-two",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

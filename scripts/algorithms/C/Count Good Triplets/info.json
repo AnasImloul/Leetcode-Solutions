@@ -1,0 +1,14 @@
+{
+    "id": "1534",
+    "name": "Count Good Triplets",
+    "url": "https://leetcode.com/problems/count-good-triplets",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

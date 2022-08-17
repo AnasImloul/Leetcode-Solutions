@@ -1,0 +1,14 @@
+{
+    "id": "923",
+    "name": "3Sum With Multiplicity",
+    "url": "https://leetcode.com/problems/3sum-with-multiplicity",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

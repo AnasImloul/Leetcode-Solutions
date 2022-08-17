@@ -1,0 +1,14 @@
+{
+    "id": "2133",
+    "name": "Check if Every Row and Column Contains All Numbers",
+    "url": "https://leetcode.com/problems/check-if-every-row-and-column-contains-all-numbers",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

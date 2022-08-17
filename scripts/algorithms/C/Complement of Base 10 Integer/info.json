@@ -1,0 +1,14 @@
+{
+    "id": "1009",
+    "name": "Complement of Base 10 Integer",
+    "url": "https://leetcode.com/problems/complement-of-base-10-integer",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

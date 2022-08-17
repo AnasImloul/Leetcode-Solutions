@@ -1,0 +1,14 @@
+{
+    "id": "880",
+    "name": "Decoded String at Index",
+    "url": "https://leetcode.com/problems/decoded-string-at-index",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

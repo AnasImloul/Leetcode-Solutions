@@ -1,0 +1,14 @@
+{
+    "id": "1512",
+    "name": "Number of Good Pairs",
+    "url": "https://leetcode.com/problems/number-of-good-pairs",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

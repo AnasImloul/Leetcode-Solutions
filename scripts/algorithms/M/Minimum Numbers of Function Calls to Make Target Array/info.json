@@ -1,0 +1,14 @@
+{
+    "id": "1558",
+    "name": "Minimum Numbers of Function Calls to Make Target Array",
+    "url": "https://leetcode.com/problems/minimum-numbers-of-function-calls-to-make-target-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

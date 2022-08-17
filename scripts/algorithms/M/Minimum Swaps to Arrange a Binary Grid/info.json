@@ -1,0 +1,14 @@
+{
+    "id": "1536",
+    "name": "Minimum Swaps to Arrange a Binary Grid",
+    "url": "https://leetcode.com/problems/minimum-swaps-to-arrange-a-binary-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

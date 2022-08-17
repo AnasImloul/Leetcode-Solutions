@@ -1,0 +1,14 @@
+{
+    "id": "1860",
+    "name": "Incremental Memory Leak",
+    "url": "https://leetcode.com/problems/incremental-memory-leak",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

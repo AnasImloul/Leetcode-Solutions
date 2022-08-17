@@ -1,0 +1,14 @@
+{
+    "id": "2224",
+    "name": "Minimum Number of Operations to Convert Time",
+    "url": "https://leetcode.com/problems/minimum-number-of-operations-to-convert-time",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

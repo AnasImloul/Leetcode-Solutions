@@ -1,0 +1,14 @@
+{
+    "id": "1450",
+    "name": "Number of Students Doing Homework at a Given Time",
+    "url": "https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

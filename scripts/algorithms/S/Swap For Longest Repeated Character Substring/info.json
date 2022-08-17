@@ -1,0 +1,14 @@
+{
+    "id": "1156",
+    "name": "Swap For Longest Repeated Character Substring",
+    "url": "https://leetcode.com/problems/swap-for-longest-repeated-character-substring",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

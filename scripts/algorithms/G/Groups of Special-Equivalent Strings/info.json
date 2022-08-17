@@ -1,0 +1,14 @@
+{
+    "id": "893",
+    "name": "Groups of Special-Equivalent Strings",
+    "url": "https://leetcode.com/problems/groups-of-special-equivalent-strings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

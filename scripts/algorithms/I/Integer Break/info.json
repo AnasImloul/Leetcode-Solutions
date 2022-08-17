@@ -1,0 +1,14 @@
+{
+    "id": "343",
+    "name": "Integer Break",
+    "url": "https://leetcode.com/problems/integer-break",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

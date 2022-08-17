@@ -1,0 +1,14 @@
+{
+    "id": "2100",
+    "name": "Find Good Days to Rob the Bank",
+    "url": "https://leetcode.com/problems/find-good-days-to-rob-the-bank",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

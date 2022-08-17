@@ -1,0 +1,14 @@
+{
+    "id": "464",
+    "name": "Can I Win",
+    "url": "https://leetcode.com/problems/can-i-win",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

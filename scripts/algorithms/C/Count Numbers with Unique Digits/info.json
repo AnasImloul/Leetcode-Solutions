@@ -1,0 +1,14 @@
+{
+    "id": "357",
+    "name": "Count Numbers with Unique Digits",
+    "url": "https://leetcode.com/problems/count-numbers-with-unique-digits",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

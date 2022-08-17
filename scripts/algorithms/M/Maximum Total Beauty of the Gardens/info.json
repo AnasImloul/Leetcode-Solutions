@@ -1,0 +1,14 @@
+{
+    "id": "2234",
+    "name": "Maximum Total Beauty of the Gardens",
+    "url": "https://leetcode.com/problems/maximum-total-beauty-of-the-gardens",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

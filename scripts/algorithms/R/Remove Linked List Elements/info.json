@@ -1,0 +1,14 @@
+{
+    "id": "203",
+    "name": "Remove Linked List Elements",
+    "url": "https://leetcode.com/problems/remove-linked-list-elements",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

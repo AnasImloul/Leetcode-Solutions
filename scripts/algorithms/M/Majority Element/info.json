@@ -1,0 +1,14 @@
+{
+    "id": "169",
+    "name": "Majority Element",
+    "url": "https://leetcode.com/problems/majority-element",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1403",
+    "name": "Minimum Subsequence in Non-Increasing Order",
+    "url": "https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

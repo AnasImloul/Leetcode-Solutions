@@ -1,0 +1,14 @@
+{
+    "id": "903",
+    "name": "Valid Permutations for DI Sequence",
+    "url": "https://leetcode.com/problems/valid-permutations-for-di-sequence",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

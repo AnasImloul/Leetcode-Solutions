@@ -1,0 +1,14 @@
+{
+    "id": "766",
+    "name": "Toeplitz Matrix",
+    "url": "https://leetcode.com/problems/toeplitz-matrix",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

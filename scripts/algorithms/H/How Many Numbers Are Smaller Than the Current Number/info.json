@@ -1,0 +1,14 @@
+{
+    "id": "1365",
+    "name": "How Many Numbers Are Smaller Than the Current Number",
+    "url": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

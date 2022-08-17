@@ -1,0 +1,14 @@
+{
+    "id": "846",
+    "name": "Hand of Straights",
+    "url": "https://leetcode.com/problems/hand-of-straights",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

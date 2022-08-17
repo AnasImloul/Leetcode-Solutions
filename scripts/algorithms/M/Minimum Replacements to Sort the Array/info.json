@@ -1,0 +1,14 @@
+{
+    "id": "2366",
+    "name": "Minimum Replacements to Sort the Array",
+    "url": "https://leetcode.com/problems/minimum-replacements-to-sort-the-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

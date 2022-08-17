@@ -1,0 +1,14 @@
+{
+    "id": "1711",
+    "name": "Count Good Meals",
+    "url": "https://leetcode.com/problems/count-good-meals",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

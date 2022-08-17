@@ -1,0 +1,14 @@
+{
+    "id": "540",
+    "name": "Single Element in a Sorted Array",
+    "url": "https://leetcode.com/problems/single-element-in-a-sorted-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

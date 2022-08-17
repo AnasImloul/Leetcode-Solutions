@@ -1,0 +1,14 @@
+{
+    "id": "1040",
+    "name": "Moving Stones Until Consecutive II",
+    "url": "https://leetcode.com/problems/moving-stones-until-consecutive-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

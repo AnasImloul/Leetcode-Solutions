@@ -1,0 +1,14 @@
+{
+    "id": "806",
+    "name": "Number of Lines To Write String",
+    "url": "https://leetcode.com/problems/number-of-lines-to-write-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

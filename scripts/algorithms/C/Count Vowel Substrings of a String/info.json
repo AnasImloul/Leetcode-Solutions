@@ -1,0 +1,14 @@
+{
+    "id": "2062",
+    "name": "Count Vowel Substrings of a String",
+    "url": "https://leetcode.com/problems/count-vowel-substrings-of-a-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

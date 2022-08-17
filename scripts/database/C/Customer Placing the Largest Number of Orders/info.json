@@ -1,0 +1,11 @@
+{
+    "id": "586",
+    "name": "Customer Placing the Largest Number of Orders",
+    "url": "https://leetcode.com/problems/customer-placing-the-largest-number-of-orders",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

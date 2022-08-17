@@ -1,0 +1,14 @@
+{
+    "id": "1601",
+    "name": "Maximum Number of Achievable Transfer Requests",
+    "url": "https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

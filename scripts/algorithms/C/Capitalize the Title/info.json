@@ -1,0 +1,14 @@
+{
+    "id": "2129",
+    "name": "Capitalize the Title",
+    "url": "https://leetcode.com/problems/capitalize-the-title",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

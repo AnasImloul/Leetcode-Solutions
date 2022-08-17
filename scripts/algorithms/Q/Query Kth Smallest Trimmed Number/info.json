@@ -1,0 +1,14 @@
+{
+    "id": "2343",
+    "name": "Query Kth Smallest Trimmed Number",
+    "url": "https://leetcode.com/problems/query-kth-smallest-trimmed-number",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

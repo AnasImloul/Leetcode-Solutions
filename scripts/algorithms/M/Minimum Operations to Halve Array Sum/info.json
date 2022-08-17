@@ -1,0 +1,14 @@
+{
+    "id": "2208",
+    "name": "Minimum Operations to Halve Array Sum",
+    "url": "https://leetcode.com/problems/minimum-operations-to-halve-array-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

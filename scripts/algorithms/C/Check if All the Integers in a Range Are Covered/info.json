@@ -1,0 +1,14 @@
+{
+    "id": "1893",
+    "name": "Check if All the Integers in a Range Are Covered",
+    "url": "https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2135",
+    "name": "Count Words Obtained After Adding a Letter",
+    "url": "https://leetcode.com/problems/count-words-obtained-after-adding-a-letter",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

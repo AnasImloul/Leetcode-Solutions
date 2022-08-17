@@ -1,0 +1,14 @@
+{
+    "id": "1694",
+    "name": "Reformat Phone Number",
+    "url": "https://leetcode.com/problems/reformat-phone-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

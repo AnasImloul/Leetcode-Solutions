@@ -1,0 +1,14 @@
+{
+    "id": "423",
+    "name": "Reconstruct Original Digits from English",
+    "url": "https://leetcode.com/problems/reconstruct-original-digits-from-english",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

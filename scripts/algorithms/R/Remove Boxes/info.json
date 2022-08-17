@@ -1,0 +1,14 @@
+{
+    "id": "546",
+    "name": "Remove Boxes",
+    "url": "https://leetcode.com/problems/remove-boxes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

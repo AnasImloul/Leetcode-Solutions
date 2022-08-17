@@ -1,0 +1,14 @@
+{
+    "id": "456",
+    "name": "132 Pattern",
+    "url": "https://leetcode.com/problems/132-pattern",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

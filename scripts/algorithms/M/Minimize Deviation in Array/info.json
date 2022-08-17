@@ -1,0 +1,14 @@
+{
+    "id": "1675",
+    "name": "Minimize Deviation in Array",
+    "url": "https://leetcode.com/problems/minimize-deviation-in-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

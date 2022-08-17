@@ -1,0 +1,14 @@
+{
+    "id": "949",
+    "name": "Largest Time for Given Digits",
+    "url": "https://leetcode.com/problems/largest-time-for-given-digits",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

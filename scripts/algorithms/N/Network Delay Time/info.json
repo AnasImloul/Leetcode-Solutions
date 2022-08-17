@@ -1,0 +1,14 @@
+{
+    "id": "743",
+    "name": "Network Delay Time",
+    "url": "https://leetcode.com/problems/network-delay-time",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

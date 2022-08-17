@@ -1,0 +1,14 @@
+{
+    "id": "2059",
+    "name": "Minimum Operations to Convert Number",
+    "url": "https://leetcode.com/problems/minimum-operations-to-convert-number",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

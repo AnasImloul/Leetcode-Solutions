@@ -1,0 +1,11 @@
+{
+    "id": "262",
+    "name": "Trips and Users",
+    "url": "https://leetcode.com/problems/trips-and-users",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2279",
+    "name": "Maximum Bags With Full Capacity of Rocks",
+    "url": "https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

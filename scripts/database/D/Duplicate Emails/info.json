@@ -1,0 +1,11 @@
+{
+    "id": "182",
+    "name": "Duplicate Emails",
+    "url": "https://leetcode.com/problems/duplicate-emails",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

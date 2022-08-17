@@ -1,0 +1,14 @@
+{
+    "id": "241",
+    "name": "Different Ways to Add Parentheses",
+    "url": "https://leetcode.com/problems/different-ways-to-add-parentheses",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

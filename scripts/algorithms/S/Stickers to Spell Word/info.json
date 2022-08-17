@@ -1,0 +1,14 @@
+{
+    "id": "691",
+    "name": "Stickers to Spell Word",
+    "url": "https://leetcode.com/problems/stickers-to-spell-word",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

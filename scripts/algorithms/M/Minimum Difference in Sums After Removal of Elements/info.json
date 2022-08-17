@@ -1,0 +1,14 @@
+{
+    "id": "2163",
+    "name": "Minimum Difference in Sums After Removal of Elements",
+    "url": "https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

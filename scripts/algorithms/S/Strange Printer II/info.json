@@ -1,0 +1,14 @@
+{
+    "id": "1591",
+    "name": "Strange Printer II",
+    "url": "https://leetcode.com/problems/strange-printer-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

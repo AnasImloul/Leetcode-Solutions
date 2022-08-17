@@ -1,0 +1,14 @@
+{
+    "id": "2311",
+    "name": "Longest Binary Subsequence Less Than or Equal to K",
+    "url": "https://leetcode.com/problems/longest-binary-subsequence-less-than-or-equal-to-k",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

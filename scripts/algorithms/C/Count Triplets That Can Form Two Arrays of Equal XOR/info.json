@@ -1,0 +1,14 @@
+{
+    "id": "1442",
+    "name": "Count Triplets That Can Form Two Arrays of Equal XOR",
+    "url": "https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "2260",
+    "name": "Minimum Consecutive Cards to Pick Up",
+    "url": "https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1817",
+    "name": "Finding the Users Active Minutes",
+    "url": "https://leetcode.com/problems/finding-the-users-active-minutes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

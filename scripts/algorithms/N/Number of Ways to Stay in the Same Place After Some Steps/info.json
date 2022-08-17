@@ -1,0 +1,14 @@
+{
+    "id": "1269",
+    "name": "Number of Ways to Stay in the Same Place After Some Steps",
+    "url": "https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

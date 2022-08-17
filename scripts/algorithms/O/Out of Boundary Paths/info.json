@@ -1,0 +1,14 @@
+{
+    "id": "576",
+    "name": "Out of Boundary Paths",
+    "url": "https://leetcode.com/problems/out-of-boundary-paths",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

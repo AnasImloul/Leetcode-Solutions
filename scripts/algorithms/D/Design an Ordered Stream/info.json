@@ -1,0 +1,14 @@
+{
+    "id": "1656",
+    "name": "Design an Ordered Stream",
+    "url": "https://leetcode.com/problems/design-an-ordered-stream",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

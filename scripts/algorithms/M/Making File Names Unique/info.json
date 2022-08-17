@@ -1,0 +1,14 @@
+{
+    "id": "1487",
+    "name": "Making File Names Unique",
+    "url": "https://leetcode.com/problems/making-file-names-unique",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

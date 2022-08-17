@@ -1,0 +1,11 @@
+{
+    "id": "1050",
+    "name": "Actors and Directors Who Cooperated At Least Three Times",
+    "url": "https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

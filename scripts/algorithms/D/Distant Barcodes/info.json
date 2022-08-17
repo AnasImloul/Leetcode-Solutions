@@ -1,0 +1,14 @@
+{
+    "id": "1054",
+    "name": "Distant Barcodes",
+    "url": "https://leetcode.com/problems/distant-barcodes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

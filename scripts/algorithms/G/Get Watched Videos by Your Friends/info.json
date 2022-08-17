@@ -1,0 +1,14 @@
+{
+    "id": "1311",
+    "name": "Get Watched Videos by Your Friends",
+    "url": "https://leetcode.com/problems/get-watched-videos-by-your-friends",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

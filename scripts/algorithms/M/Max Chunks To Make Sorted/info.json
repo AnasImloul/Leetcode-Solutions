@@ -1,0 +1,14 @@
+{
+    "id": "769",
+    "name": "Max Chunks To Make Sorted",
+    "url": "https://leetcode.com/problems/max-chunks-to-make-sorted",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

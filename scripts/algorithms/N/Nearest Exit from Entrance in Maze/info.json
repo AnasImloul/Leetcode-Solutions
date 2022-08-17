@@ -1,0 +1,14 @@
+{
+    "id": "1926",
+    "name": "Nearest Exit from Entrance in Maze",
+    "url": "https://leetcode.com/problems/nearest-exit-from-entrance-in-maze",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

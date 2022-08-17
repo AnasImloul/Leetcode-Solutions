@@ -1,0 +1,14 @@
+{
+    "id": "202",
+    "name": "Happy Number",
+    "url": "https://leetcode.com/problems/happy-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

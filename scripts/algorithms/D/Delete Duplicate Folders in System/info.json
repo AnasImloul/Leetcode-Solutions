@@ -1,0 +1,14 @@
+{
+    "id": "1948",
+    "name": "Delete Duplicate Folders in System",
+    "url": "https://leetcode.com/problems/delete-duplicate-folders-in-system",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "449",
+    "name": "Serialize and Deserialize BST",
+    "url": "https://leetcode.com/problems/serialize-and-deserialize-bst",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

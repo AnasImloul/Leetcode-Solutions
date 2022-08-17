@@ -1,0 +1,14 @@
+{
+    "id": "1604",
+    "name": "Alert Using Same Key-Card Three or More Times in a One Hour Period",
+    "url": "https://leetcode.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

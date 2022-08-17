@@ -1,0 +1,14 @@
+{
+    "id": "1508",
+    "name": "Range Sum of Sorted Subarray Sums",
+    "url": "https://leetcode.com/problems/range-sum-of-sorted-subarray-sums",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

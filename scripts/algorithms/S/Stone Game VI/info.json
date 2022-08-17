@@ -1,0 +1,14 @@
+{
+    "id": "1686",
+    "name": "Stone Game VI",
+    "url": "https://leetcode.com/problems/stone-game-vi",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

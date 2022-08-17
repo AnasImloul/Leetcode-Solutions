@@ -1,0 +1,14 @@
+{
+    "id": "1155",
+    "name": "Number of Dice Rolls With Target Sum",
+    "url": "https://leetcode.com/problems/number-of-dice-rolls-with-target-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "813",
+    "name": "Largest Sum of Averages",
+    "url": "https://leetcode.com/problems/largest-sum-of-averages",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

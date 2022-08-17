@@ -1,0 +1,14 @@
+{
+    "id": "2155",
+    "name": "All Divisions With the Highest Score of a Binary Array",
+    "url": "https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

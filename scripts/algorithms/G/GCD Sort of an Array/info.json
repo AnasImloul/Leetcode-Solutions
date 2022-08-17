@@ -1,0 +1,14 @@
+{
+    "id": "1998",
+    "name": "GCD Sort of an Array",
+    "url": "https://leetcode.com/problems/gcd-sort-of-an-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "420",
+    "name": "Strong Password Checker",
+    "url": "https://leetcode.com/problems/strong-password-checker",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

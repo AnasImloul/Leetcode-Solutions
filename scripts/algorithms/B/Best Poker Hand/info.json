@@ -1,0 +1,14 @@
+{
+    "id": "2347",
+    "name": "Best Poker Hand",
+    "url": "https://leetcode.com/problems/best-poker-hand",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

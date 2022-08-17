@@ -1,0 +1,14 @@
+{
+    "id": "1030",
+    "name": "Matrix Cells in Distance Order",
+    "url": "https://leetcode.com/problems/matrix-cells-in-distance-order",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

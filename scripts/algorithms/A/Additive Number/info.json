@@ -1,0 +1,14 @@
+{
+    "id": "306",
+    "name": "Additive Number",
+    "url": "https://leetcode.com/problems/additive-number",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "31",
+    "name": "Next Permutation",
+    "url": "https://leetcode.com/problems/next-permutation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

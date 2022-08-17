@@ -1,0 +1,14 @@
+{
+    "id": "658",
+    "name": "Find K Closest Elements",
+    "url": "https://leetcode.com/problems/find-k-closest-elements",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

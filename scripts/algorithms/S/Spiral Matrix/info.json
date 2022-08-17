@@ -1,0 +1,14 @@
+{
+    "id": "54",
+    "name": "Spiral Matrix",
+    "url": "https://leetcode.com/problems/spiral-matrix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

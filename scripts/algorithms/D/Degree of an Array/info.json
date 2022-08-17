@@ -1,0 +1,14 @@
+{
+    "id": "697",
+    "name": "Degree of an Array",
+    "url": "https://leetcode.com/problems/degree-of-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1515",
+    "name": "Best Position for a Service Centre",
+    "url": "https://leetcode.com/problems/best-position-for-a-service-centre",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

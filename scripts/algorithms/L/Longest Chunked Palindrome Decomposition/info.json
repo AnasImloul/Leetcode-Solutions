@@ -1,0 +1,14 @@
+{
+    "id": "1147",
+    "name": "Longest Chunked Palindrome Decomposition",
+    "url": "https://leetcode.com/problems/longest-chunked-palindrome-decomposition",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

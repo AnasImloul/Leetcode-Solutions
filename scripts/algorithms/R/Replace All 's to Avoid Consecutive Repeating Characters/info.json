@@ -1,0 +1,14 @@
+{
+    "id": "1576",
+    "name": "Replace All ?'s to Avoid Consecutive Repeating Characters",
+    "url": "https://leetcode.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

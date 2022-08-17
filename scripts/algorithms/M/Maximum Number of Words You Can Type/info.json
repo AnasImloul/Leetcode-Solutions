@@ -1,0 +1,14 @@
+{
+    "id": "1935",
+    "name": "Maximum Number of Words You Can Type",
+    "url": "https://leetcode.com/problems/maximum-number-of-words-you-can-type",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "27",
+    "name": "Remove Element",
+    "url": "https://leetcode.com/problems/remove-element",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

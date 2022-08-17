@@ -1,0 +1,14 @@
+{
+    "id": "1524",
+    "name": "Number of Sub-arrays With Odd Sum",
+    "url": "https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

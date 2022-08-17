@@ -1,0 +1,14 @@
+{
+    "id": "2147",
+    "name": "Number of Ways to Divide a Long Corridor",
+    "url": "https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

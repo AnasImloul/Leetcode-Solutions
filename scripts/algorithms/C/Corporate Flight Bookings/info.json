@@ -1,0 +1,14 @@
+{
+    "id": "1109",
+    "name": "Corporate Flight Bookings",
+    "url": "https://leetcode.com/problems/corporate-flight-bookings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

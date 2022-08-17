@@ -1,0 +1,14 @@
+{
+    "id": "55",
+    "name": "Jump Game",
+    "url": "https://leetcode.com/problems/jump-game",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

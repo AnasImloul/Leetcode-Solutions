@@ -1,0 +1,14 @@
+{
+    "id": "1162",
+    "name": "As Far from Land as Possible",
+    "url": "https://leetcode.com/problems/as-far-from-land-as-possible",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

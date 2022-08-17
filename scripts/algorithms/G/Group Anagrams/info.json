@@ -1,0 +1,14 @@
+{
+    "id": "49",
+    "name": "Group Anagrams",
+    "url": "https://leetcode.com/problems/group-anagrams",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

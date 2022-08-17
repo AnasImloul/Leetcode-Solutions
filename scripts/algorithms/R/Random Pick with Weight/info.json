@@ -1,0 +1,14 @@
+{
+    "id": "528",
+    "name": "Random Pick with Weight",
+    "url": "https://leetcode.com/problems/random-pick-with-weight",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

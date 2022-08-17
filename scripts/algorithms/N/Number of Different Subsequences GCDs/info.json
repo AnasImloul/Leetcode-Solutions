@@ -1,0 +1,14 @@
+{
+    "id": "1819",
+    "name": "Number of Different Subsequences GCDs",
+    "url": "https://leetcode.com/problems/number-of-different-subsequences-gcds",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

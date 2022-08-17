@@ -1,0 +1,14 @@
+{
+    "id": "778",
+    "name": "Swim in Rising Water",
+    "url": "https://leetcode.com/problems/swim-in-rising-water",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

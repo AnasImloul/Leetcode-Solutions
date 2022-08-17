@@ -1,0 +1,14 @@
+{
+    "id": "85",
+    "name": "Maximal Rectangle",
+    "url": "https://leetcode.com/problems/maximal-rectangle",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1505",
+    "name": "Minimum Possible Integer After at Most K Adjacent Swaps On Digits",
+    "url": "https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

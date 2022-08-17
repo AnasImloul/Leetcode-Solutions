@@ -1,0 +1,14 @@
+{
+    "id": "2186",
+    "name": "Minimum Number of Steps to Make Two Strings Anagram II",
+    "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

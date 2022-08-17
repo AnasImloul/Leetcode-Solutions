@@ -1,0 +1,14 @@
+{
+    "id": "1808",
+    "name": "Maximize Number of Nice Divisors",
+    "url": "https://leetcode.com/problems/maximize-number-of-nice-divisors",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

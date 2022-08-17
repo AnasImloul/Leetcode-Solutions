@@ -1,0 +1,14 @@
+{
+    "id": "2368",
+    "name": "Reachable Nodes With Restrictions",
+    "url": "https://leetcode.com/problems/reachable-nodes-with-restrictions",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

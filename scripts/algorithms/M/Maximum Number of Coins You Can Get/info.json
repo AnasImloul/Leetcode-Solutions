@@ -1,0 +1,14 @@
+{
+    "id": "1561",
+    "name": "Maximum Number of Coins You Can Get",
+    "url": "https://leetcode.com/problems/maximum-number-of-coins-you-can-get",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

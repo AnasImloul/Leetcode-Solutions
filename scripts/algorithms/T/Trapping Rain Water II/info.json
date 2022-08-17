@@ -1,0 +1,14 @@
+{
+    "id": "407",
+    "name": "Trapping Rain Water II",
+    "url": "https://leetcode.com/problems/trapping-rain-water-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

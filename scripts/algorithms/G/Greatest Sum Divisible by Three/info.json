@@ -1,0 +1,14 @@
+{
+    "id": "1262",
+    "name": "Greatest Sum Divisible by Three",
+    "url": "https://leetcode.com/problems/greatest-sum-divisible-by-three",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

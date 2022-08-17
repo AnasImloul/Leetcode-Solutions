@@ -1,0 +1,14 @@
+{
+    "id": "938",
+    "name": "Range Sum of BST",
+    "url": "https://leetcode.com/problems/range-sum-of-bst",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

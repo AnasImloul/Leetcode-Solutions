@@ -1,0 +1,14 @@
+{
+    "id": "2227",
+    "name": "Encrypt and Decrypt Strings",
+    "url": "https://leetcode.com/problems/encrypt-and-decrypt-strings",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

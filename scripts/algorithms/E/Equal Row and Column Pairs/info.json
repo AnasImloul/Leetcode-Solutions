@@ -1,0 +1,14 @@
+{
+    "id": "2352",
+    "name": "Equal Row and Column Pairs",
+    "url": "https://leetcode.com/problems/equal-row-and-column-pairs",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

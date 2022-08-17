@@ -1,0 +1,14 @@
+{
+    "id": "943",
+    "name": "Find the Shortest Superstring",
+    "url": "https://leetcode.com/problems/find-the-shortest-superstring",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

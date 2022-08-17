@@ -1,0 +1,14 @@
+{
+    "id": "904",
+    "name": "Fruit Into Baskets",
+    "url": "https://leetcode.com/problems/fruit-into-baskets",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

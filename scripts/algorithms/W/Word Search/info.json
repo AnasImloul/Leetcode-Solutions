@@ -1,0 +1,14 @@
+{
+    "id": "79",
+    "name": "Word Search",
+    "url": "https://leetcode.com/problems/word-search",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

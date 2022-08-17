@@ -1,0 +1,14 @@
+{
+    "id": "1358",
+    "name": "Number of Substrings Containing All Three Characters",
+    "url": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

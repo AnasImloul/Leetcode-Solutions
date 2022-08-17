@@ -1,0 +1,14 @@
+{
+    "id": "542",
+    "name": "01 Matrix",
+    "url": "https://leetcode.com/problems/01-matrix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1664",
+    "name": "Ways to Make a Fair Array",
+    "url": "https://leetcode.com/problems/ways-to-make-a-fair-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

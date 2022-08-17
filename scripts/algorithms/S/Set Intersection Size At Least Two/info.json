@@ -1,0 +1,14 @@
+{
+    "id": "757",
+    "name": "Set Intersection Size At Least Two",
+    "url": "https://leetcode.com/problems/set-intersection-size-at-least-two",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

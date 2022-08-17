@@ -1,0 +1,14 @@
+{
+    "id": "1825",
+    "name": "Finding MK Average",
+    "url": "https://leetcode.com/problems/finding-mk-average",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

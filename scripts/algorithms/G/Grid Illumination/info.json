@@ -1,0 +1,14 @@
+{
+    "id": "1001",
+    "name": "Grid Illumination",
+    "url": "https://leetcode.com/problems/grid-illumination",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

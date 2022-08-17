@@ -1,0 +1,14 @@
+{
+    "id": "864",
+    "name": "Shortest Path to Get All Keys",
+    "url": "https://leetcode.com/problems/shortest-path-to-get-all-keys",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

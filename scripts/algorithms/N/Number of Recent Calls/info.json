@@ -1,0 +1,14 @@
+{
+    "id": "933",
+    "name": "Number of Recent Calls",
+    "url": "https://leetcode.com/problems/number-of-recent-calls",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

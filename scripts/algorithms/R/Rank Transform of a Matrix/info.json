@@ -1,0 +1,14 @@
+{
+    "id": "1632",
+    "name": "Rank Transform of a Matrix",
+    "url": "https://leetcode.com/problems/rank-transform-of-a-matrix",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

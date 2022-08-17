@@ -1,0 +1,14 @@
+{
+    "id": "2080",
+    "name": "Range Frequency Queries",
+    "url": "https://leetcode.com/problems/range-frequency-queries",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

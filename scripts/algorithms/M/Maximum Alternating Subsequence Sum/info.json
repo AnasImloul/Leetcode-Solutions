@@ -1,0 +1,14 @@
+{
+    "id": "1911",
+    "name": "Maximum Alternating Subsequence Sum",
+    "url": "https://leetcode.com/problems/maximum-alternating-subsequence-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

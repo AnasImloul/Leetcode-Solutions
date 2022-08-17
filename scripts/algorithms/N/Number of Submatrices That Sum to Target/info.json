@@ -1,0 +1,14 @@
+{
+    "id": "1074",
+    "name": "Number of Submatrices That Sum to Target",
+    "url": "https://leetcode.com/problems/number-of-submatrices-that-sum-to-target",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

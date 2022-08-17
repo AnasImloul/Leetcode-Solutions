@@ -1,0 +1,14 @@
+{
+    "id": "732",
+    "name": "My Calendar III",
+    "url": "https://leetcode.com/problems/my-calendar-iii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

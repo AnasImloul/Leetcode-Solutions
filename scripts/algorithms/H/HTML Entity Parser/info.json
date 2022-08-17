@@ -1,0 +1,14 @@
+{
+    "id": "1410",
+    "name": "HTML Entity Parser",
+    "url": "https://leetcode.com/problems/html-entity-parser",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1357",
+    "name": "Apply Discount Every n Orders",
+    "url": "https://leetcode.com/problems/apply-discount-every-n-orders",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

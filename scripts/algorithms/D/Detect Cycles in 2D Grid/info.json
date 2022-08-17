@@ -1,0 +1,14 @@
+{
+    "id": "1559",
+    "name": "Detect Cycles in 2D Grid",
+    "url": "https://leetcode.com/problems/detect-cycles-in-2d-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

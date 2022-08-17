@@ -1,0 +1,14 @@
+{
+    "id": "2047",
+    "name": "Number of Valid Words in a Sentence",
+    "url": "https://leetcode.com/problems/number-of-valid-words-in-a-sentence",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

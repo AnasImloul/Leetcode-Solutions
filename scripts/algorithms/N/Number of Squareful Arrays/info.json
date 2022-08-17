@@ -1,0 +1,14 @@
+{
+    "id": "996",
+    "name": "Number of Squareful Arrays",
+    "url": "https://leetcode.com/problems/number-of-squareful-arrays",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

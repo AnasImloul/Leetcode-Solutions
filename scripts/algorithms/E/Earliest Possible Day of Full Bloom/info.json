@@ -1,0 +1,14 @@
+{
+    "id": "2136",
+    "name": "Earliest Possible Day of Full Bloom",
+    "url": "https://leetcode.com/problems/earliest-possible-day-of-full-bloom",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

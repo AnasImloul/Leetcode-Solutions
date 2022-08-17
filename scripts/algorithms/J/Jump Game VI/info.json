@@ -1,0 +1,14 @@
+{
+    "id": "1696",
+    "name": "Jump Game VI",
+    "url": "https://leetcode.com/problems/jump-game-vi",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

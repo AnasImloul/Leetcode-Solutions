@@ -1,0 +1,14 @@
+{
+    "id": "430",
+    "name": "Flatten a Multilevel Doubly Linked List",
+    "url": "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1492",
+    "name": "The kth Factor of n",
+    "url": "https://leetcode.com/problems/the-kth-factor-of-n",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1995",
+    "name": "Count Special Quadruplets",
+    "url": "https://leetcode.com/problems/count-special-quadruplets",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "795",
+    "name": "Number of Subarrays with Bounded Maximum",
+    "url": "https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

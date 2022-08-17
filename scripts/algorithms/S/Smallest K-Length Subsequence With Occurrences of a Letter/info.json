@@ -1,0 +1,14 @@
+{
+    "id": "2030",
+    "name": "Smallest K-Length Subsequence With Occurrences of a Letter",
+    "url": "https://leetcode.com/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

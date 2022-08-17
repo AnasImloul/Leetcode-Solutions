@@ -1,0 +1,14 @@
+{
+    "id": "2178",
+    "name": "Maximum Split of Positive Even Integers",
+    "url": "https://leetcode.com/problems/maximum-split-of-positive-even-integers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

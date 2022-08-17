@@ -1,0 +1,14 @@
+{
+    "id": "779",
+    "name": "K-th Symbol in Grammar",
+    "url": "https://leetcode.com/problems/k-th-symbol-in-grammar",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

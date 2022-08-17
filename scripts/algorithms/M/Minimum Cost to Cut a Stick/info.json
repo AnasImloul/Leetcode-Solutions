@@ -1,0 +1,14 @@
+{
+    "id": "1547",
+    "name": "Minimum Cost to Cut a Stick",
+    "url": "https://leetcode.com/problems/minimum-cost-to-cut-a-stick",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

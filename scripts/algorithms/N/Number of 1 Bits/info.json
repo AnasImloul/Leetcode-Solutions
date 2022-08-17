@@ -1,0 +1,14 @@
+{
+    "id": "191",
+    "name": "Number of 1 Bits",
+    "url": "https://leetcode.com/problems/number-of-1-bits",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

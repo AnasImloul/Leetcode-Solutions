@@ -1,0 +1,14 @@
+{
+    "id": "838",
+    "name": "Push Dominoes",
+    "url": "https://leetcode.com/problems/push-dominoes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

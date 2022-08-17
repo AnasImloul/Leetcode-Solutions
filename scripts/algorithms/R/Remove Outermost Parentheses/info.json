@@ -1,0 +1,14 @@
+{
+    "id": "1021",
+    "name": "Remove Outermost Parentheses",
+    "url": "https://leetcode.com/problems/remove-outermost-parentheses",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

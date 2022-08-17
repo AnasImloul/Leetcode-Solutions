@@ -1,0 +1,14 @@
+{
+    "id": "1140",
+    "name": "Stone Game II",
+    "url": "https://leetcode.com/problems/stone-game-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

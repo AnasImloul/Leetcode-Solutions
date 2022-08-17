@@ -1,0 +1,14 @@
+{
+    "id": "2150",
+    "name": "Find All Lonely Numbers in the Array",
+    "url": "https://leetcode.com/problems/find-all-lonely-numbers-in-the-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

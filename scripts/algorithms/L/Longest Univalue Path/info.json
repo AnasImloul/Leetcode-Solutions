@@ -1,0 +1,14 @@
+{
+    "id": "687",
+    "name": "Longest Univalue Path",
+    "url": "https://leetcode.com/problems/longest-univalue-path",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

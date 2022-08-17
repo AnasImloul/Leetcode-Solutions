@@ -1,0 +1,14 @@
+{
+    "id": "109",
+    "name": "Convert Sorted List to Binary Search Tree",
+    "url": "https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

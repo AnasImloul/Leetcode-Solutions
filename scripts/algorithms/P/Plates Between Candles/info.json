@@ -1,0 +1,14 @@
+{
+    "id": "2055",
+    "name": "Plates Between Candles",
+    "url": "https://leetcode.com/problems/plates-between-candles",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "409",
+    "name": "Longest Palindrome",
+    "url": "https://leetcode.com/problems/longest-palindrome",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

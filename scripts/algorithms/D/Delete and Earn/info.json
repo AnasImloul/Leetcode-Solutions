@@ -1,0 +1,14 @@
+{
+    "id": "740",
+    "name": "Delete and Earn",
+    "url": "https://leetcode.com/problems/delete-and-earn",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

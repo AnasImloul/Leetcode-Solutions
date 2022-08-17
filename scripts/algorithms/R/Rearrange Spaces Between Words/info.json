@@ -1,0 +1,14 @@
+{
+    "id": "1592",
+    "name": "Rearrange Spaces Between Words",
+    "url": "https://leetcode.com/problems/rearrange-spaces-between-words",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

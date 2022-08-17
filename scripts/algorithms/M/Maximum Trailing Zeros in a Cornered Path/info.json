@@ -1,0 +1,14 @@
+{
+    "id": "2245",
+    "name": "Maximum Trailing Zeros in a Cornered Path",
+    "url": "https://leetcode.com/problems/maximum-trailing-zeros-in-a-cornered-path",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

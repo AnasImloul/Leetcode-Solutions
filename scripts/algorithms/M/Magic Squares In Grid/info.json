@@ -1,0 +1,14 @@
+{
+    "id": "840",
+    "name": "Magic Squares In Grid",
+    "url": "https://leetcode.com/problems/magic-squares-in-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "486",
+    "name": "Predict the Winner",
+    "url": "https://leetcode.com/problems/predict-the-winner",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

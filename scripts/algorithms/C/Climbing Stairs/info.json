@@ -1,0 +1,14 @@
+{
+    "id": "70",
+    "name": "Climbing Stairs",
+    "url": "https://leetcode.com/problems/climbing-stairs",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

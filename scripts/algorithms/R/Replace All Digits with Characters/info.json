@@ -1,0 +1,14 @@
+{
+    "id": "1844",
+    "name": "Replace All Digits with Characters",
+    "url": "https://leetcode.com/problems/replace-all-digits-with-characters",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

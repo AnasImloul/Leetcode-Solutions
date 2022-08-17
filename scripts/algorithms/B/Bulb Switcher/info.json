@@ -1,0 +1,14 @@
+{
+    "id": "319",
+    "name": "Bulb Switcher",
+    "url": "https://leetcode.com/problems/bulb-switcher",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

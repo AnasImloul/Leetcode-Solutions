@@ -1,0 +1,14 @@
+{
+    "id": "73",
+    "name": "Set Matrix Zeroes",
+    "url": "https://leetcode.com/problems/set-matrix-zeroes",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "javascript": true,
+        "java": true
+    }
+}

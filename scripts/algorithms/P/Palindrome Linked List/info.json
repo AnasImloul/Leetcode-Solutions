@@ -1,0 +1,14 @@
+{
+    "id": "234",
+    "name": "Palindrome Linked List",
+    "url": "https://leetcode.com/problems/palindrome-linked-list",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

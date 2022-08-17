@@ -1,0 +1,14 @@
+{
+    "id": "1993",
+    "name": "Operations on Tree",
+    "url": "https://leetcode.com/problems/operations-on-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

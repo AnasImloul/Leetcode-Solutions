@@ -1,0 +1,14 @@
+{
+    "id": "529",
+    "name": "Minesweeper",
+    "url": "https://leetcode.com/problems/minesweeper",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

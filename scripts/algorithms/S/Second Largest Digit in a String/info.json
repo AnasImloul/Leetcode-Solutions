@@ -1,0 +1,14 @@
+{
+    "id": "1796",
+    "name": "Second Largest Digit in a String",
+    "url": "https://leetcode.com/problems/second-largest-digit-in-a-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

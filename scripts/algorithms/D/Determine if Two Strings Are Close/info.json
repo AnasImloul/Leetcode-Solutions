@@ -1,0 +1,14 @@
+{
+    "id": "1657",
+    "name": "Determine if Two Strings Are Close",
+    "url": "https://leetcode.com/problems/determine-if-two-strings-are-close",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

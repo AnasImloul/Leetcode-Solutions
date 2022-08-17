@@ -1,0 +1,14 @@
+{
+    "id": "2181",
+    "name": "Merge Nodes in Between Zeros",
+    "url": "https://leetcode.com/problems/merge-nodes-in-between-zeros",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

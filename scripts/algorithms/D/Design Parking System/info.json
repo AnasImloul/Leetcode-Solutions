@@ -1,0 +1,14 @@
+{
+    "id": "1603",
+    "name": "Design Parking System",
+    "url": "https://leetcode.com/problems/design-parking-system",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

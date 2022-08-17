@@ -1,0 +1,14 @@
+{
+    "id": "9",
+    "name": "Palindrome Number",
+    "url": "https://leetcode.com/problems/palindrome-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

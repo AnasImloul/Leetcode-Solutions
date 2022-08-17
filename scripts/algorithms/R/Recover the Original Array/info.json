@@ -1,0 +1,14 @@
+{
+    "id": "2122",
+    "name": "Recover the Original Array",
+    "url": "https://leetcode.com/problems/recover-the-original-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

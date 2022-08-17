@@ -1,0 +1,14 @@
+{
+    "id": "1017",
+    "name": "Convert to Base -2",
+    "url": "https://leetcode.com/problems/convert-to-base-2",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

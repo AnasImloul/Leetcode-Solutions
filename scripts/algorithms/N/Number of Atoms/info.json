@@ -1,0 +1,14 @@
+{
+    "id": "726",
+    "name": "Number of Atoms",
+    "url": "https://leetcode.com/problems/number-of-atoms",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

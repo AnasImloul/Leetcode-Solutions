@@ -1,0 +1,14 @@
+{
+    "id": "2048",
+    "name": "Next Greater Numerically Balanced Number",
+    "url": "https://leetcode.com/problems/next-greater-numerically-balanced-number",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

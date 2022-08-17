@@ -1,0 +1,14 @@
+{
+    "id": "1928",
+    "name": "Minimum Cost to Reach Destination in Time",
+    "url": "https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

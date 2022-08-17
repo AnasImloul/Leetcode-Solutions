@@ -1,0 +1,14 @@
+{
+    "id": "1690",
+    "name": "Stone Game VII",
+    "url": "https://leetcode.com/problems/stone-game-vii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": false
+    }
+}

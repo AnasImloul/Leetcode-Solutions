@@ -1,0 +1,14 @@
+{
+    "id": "1659",
+    "name": "Maximize Grid Happiness",
+    "url": "https://leetcode.com/problems/maximize-grid-happiness",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "140",
+    "name": "Word Break II",
+    "url": "https://leetcode.com/problems/word-break-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "1850",
+    "name": "Minimum Adjacent Swaps to Reach the Kth Smallest Number",
+    "url": "https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

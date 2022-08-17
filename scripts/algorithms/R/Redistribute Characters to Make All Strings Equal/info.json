@@ -1,0 +1,14 @@
+{
+    "id": "1897",
+    "name": "Redistribute Characters to Make All Strings Equal",
+    "url": "https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

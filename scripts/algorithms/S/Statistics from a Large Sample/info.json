@@ -1,0 +1,14 @@
+{
+    "id": "1093",
+    "name": "Statistics from a Large Sample",
+    "url": "https://leetcode.com/problems/statistics-from-a-large-sample",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

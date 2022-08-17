@@ -1,0 +1,14 @@
+{
+    "id": "2195",
+    "name": "Append K Integers With Minimal Sum",
+    "url": "https://leetcode.com/problems/append-k-integers-with-minimal-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": false,
+        "java": false,
+        "javascript": true
+    }
+}

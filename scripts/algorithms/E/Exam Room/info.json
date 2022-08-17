@@ -1,0 +1,14 @@
+{
+    "id": "855",
+    "name": "Exam Room",
+    "url": "https://leetcode.com/problems/exam-room",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

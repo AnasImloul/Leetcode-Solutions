@@ -1,0 +1,14 @@
+{
+    "id": "583",
+    "name": "Delete Operation for Two Strings",
+    "url": "https://leetcode.com/problems/delete-operation-for-two-strings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

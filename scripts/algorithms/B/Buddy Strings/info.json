@@ -1,0 +1,14 @@
+{
+    "id": "859",
+    "name": "Buddy Strings",
+    "url": "https://leetcode.com/problems/buddy-strings",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

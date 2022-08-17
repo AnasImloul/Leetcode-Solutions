@@ -1,0 +1,14 @@
+{
+    "id": "2193",
+    "name": "Minimum Number of Moves to Make Palindrome",
+    "url": "https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

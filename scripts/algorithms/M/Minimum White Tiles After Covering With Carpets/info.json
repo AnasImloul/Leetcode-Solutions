@@ -1,0 +1,14 @@
+{
+    "id": "2209",
+    "name": "Minimum White Tiles After Covering With Carpets",
+    "url": "https://leetcode.com/problems/minimum-white-tiles-after-covering-with-carpets",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": false,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

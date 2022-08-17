@@ -1,0 +1,14 @@
+{
+    "id": "1146",
+    "name": "Snapshot Array",
+    "url": "https://leetcode.com/problems/snapshot-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

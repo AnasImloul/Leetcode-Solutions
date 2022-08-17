@@ -1,0 +1,14 @@
+{
+    "id": "677",
+    "name": "Map Sum Pairs",
+    "url": "https://leetcode.com/problems/map-sum-pairs",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

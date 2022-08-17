@@ -1,0 +1,14 @@
+{
+    "id": "1749",
+    "name": "Maximum Absolute Sum of Any Subarray",
+    "url": "https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

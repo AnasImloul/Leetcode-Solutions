@@ -1,0 +1,14 @@
+{
+    "id": "1343",
+    "name": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+    "url": "https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

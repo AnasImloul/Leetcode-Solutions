@@ -1,0 +1,11 @@
+{
+    "id": "176",
+    "name": "Second Highest Salary",
+    "url": "https://leetcode.com/problems/second-highest-salary",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

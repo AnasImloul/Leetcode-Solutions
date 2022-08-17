@@ -1,0 +1,11 @@
+{
+    "id": "175",
+    "name": "Combine Two Tables",
+    "url": "https://leetcode.com/problems/combine-two-tables",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "database",
+    "solution": {
+        "mysql": true
+    }
+}

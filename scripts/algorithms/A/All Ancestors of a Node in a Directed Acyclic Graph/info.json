@@ -1,0 +1,14 @@
+{
+    "id": "2192",
+    "name": "All Ancestors of a Node in a Directed Acyclic Graph",
+    "url": "https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": false,
+        "javascript": true
+    }
+}

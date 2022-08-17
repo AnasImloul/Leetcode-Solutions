@@ -1,0 +1,14 @@
+{
+    "id": "1402",
+    "name": "Reducing Dishes",
+    "url": "https://leetcode.com/problems/reducing-dishes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

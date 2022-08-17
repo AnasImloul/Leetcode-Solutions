@@ -1,0 +1,14 @@
+{
+    "id": "2070",
+    "name": "Most Beautiful Item for Each Query",
+    "url": "https://leetcode.com/problems/most-beautiful-item-for-each-query",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}

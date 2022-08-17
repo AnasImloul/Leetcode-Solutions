@@ -1,0 +1,14 @@
+{
+    "id": "1073",
+    "name": "Adding Two Negabinary Numbers",
+    "url": "https://leetcode.com/problems/adding-two-negabinary-numbers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": false
+    }
+}

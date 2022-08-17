@@ -1,0 +1,14 @@
+{
+    "id": "2110",
+    "name": "Number of Smooth Descent Periods of a Stock",
+    "url": "https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true,
+        "java": true,
+        "javascript": true
+    }
+}
