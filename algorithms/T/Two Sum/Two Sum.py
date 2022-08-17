@@ -1,14 +1,14 @@
 class Solution:
-    def twoSum(self, nums, target):
-		
-        result_list = []
-		#Two for loops for selecting two numbers and check sum equal to target or not
-        for i in range(len(nums)-1):
-            for j in range(i+1, len(nums)):
-			#  j from i + 1; no need to check back elements it covers in i
-			# Check sum == target or not
-                if nums[i] + nums[j] == target:
-                    result_list.append(i)
-                    result_list.append(j)
-
-        return result_list
+	
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+	
+        arr = dict()
+        # store the index of each number in the array
+        for i,num in enumerate(nums):
+            arr[num] = i
+	
+	# iterate one more time over the array to check if there is any element which complement is in the array
+        for j, num in enumerate(nums):
+            rest = target - num
+            if arr.get(rest, j) != j:
+                return [j, arr[rest]]
