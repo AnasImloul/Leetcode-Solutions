@@ -1,14 +1,9 @@
 {
     "id": "983",
     "name": "Minimum Cost For Tickets",
-    "url": "https://leetcode.com/problems/minimum-cost-for-tickets",
-    "difficulty": "medium",
+    "url": "https://www.leetcode.com/problems/minimum-cost-for-tickets",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 64.3,
+    "difficulty": "medium",
+    "topic": "algorithms"
 }
