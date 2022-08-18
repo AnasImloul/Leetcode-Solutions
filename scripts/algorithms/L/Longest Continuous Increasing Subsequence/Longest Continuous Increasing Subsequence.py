@@ -1,3 +1,5 @@
+# Runtime: 416 ms (Top 5.00%) | Memory: 15.4 MB (Top 49.36%)
+
 class Solution:
     def findLengthOfLCIS(self, nums: List[int]) -> int:
         count=0
