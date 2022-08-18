@@ -1,3 +1,5 @@
+// Runtime: 784 ms (Top 5.04%) | Memory: 78.8 MB (Top 6.67%)
+
 /**
  * @param {number[][]} grid
  * @return {number}
@@ -62,4 +64,3 @@ var shortestPathBinaryMatrix = function(grid) {
     return distance[n-1][n-1] >= 999 ?
         -1 : distance[n-1][n-1]
 };
-
