@@ -1,3 +1,5 @@
+# Runtime: 2175 ms (Top 21.39%) | Memory: 30.5 MB (Top 29.48%)
+
 class Solution:
     def gridGame(self, g: List[List[int]]) -> int:
         top, bottom, res = sum(g[0]), 0, math.inf
