@@ -1,14 +1,9 @@
 {
     "id": "64",
     "name": "Minimum Path Sum",
-    "url": "https://leetcode.com/problems/minimum-path-sum",
-    "difficulty": "medium",
+    "url": "https://www.leetcode.com/problems/minimum-path-sum",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 60.2,
+    "difficulty": "medium",
+    "topic": "algorithms"
 }
