@@ -1,14 +1,9 @@
 {
     "id": "1529",
     "name": "Minimum Suffix Flips",
-    "url": "https://leetcode.com/problems/minimum-suffix-flips",
-    "difficulty": "medium",
+    "url": "https://www.leetcode.com/problems/minimum-suffix-flips",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 72.4,
+    "difficulty": "medium",
+    "topic": "algorithms"
 }
