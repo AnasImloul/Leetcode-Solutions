@@ -1,14 +1,9 @@
 {
     "id": "1091",
     "name": "Shortest Path in Binary Matrix",
-    "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix",
-    "difficulty": "medium",
+    "url": "https://www.leetcode.com/problems/shortest-path-in-binary-matrix",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 44.5,
+    "difficulty": "medium",
+    "topic": "algorithms"
 }
