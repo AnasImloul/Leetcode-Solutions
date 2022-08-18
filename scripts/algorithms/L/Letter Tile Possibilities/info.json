@@ -1,14 +1,9 @@
 {
     "id": "1079",
     "name": "Letter Tile Possibilities",
-    "url": "https://leetcode.com/problems/letter-tile-possibilities",
-    "difficulty": "medium",
+    "url": "https://www.leetcode.com/problems/letter-tile-possibilities",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 76.1,
+    "difficulty": "medium",
+    "topic": "algorithms"
 }
