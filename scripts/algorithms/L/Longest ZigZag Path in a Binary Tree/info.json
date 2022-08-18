@@ -1,14 +1,9 @@
 {
     "id": "1372",
     "name": "Longest ZigZag Path in a Binary Tree",
-    "url": "https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree",
-    "difficulty": "medium",
+    "url": "https://www.leetcode.com/problems/longest-zigzag-path-in-a-binary-tree",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 59.4,
+    "difficulty": "medium",
+    "topic": "algorithms"
 }
