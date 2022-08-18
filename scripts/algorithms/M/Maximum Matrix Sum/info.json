@@ -1,14 +1,9 @@
 {
     "id": "1975",
     "name": "Maximum Matrix Sum",
-    "url": "https://leetcode.com/problems/maximum-matrix-sum",
-    "difficulty": "medium",
+    "url": "https://www.leetcode.com/problems/maximum-matrix-sum",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 45.5,
+    "difficulty": "medium",
+    "topic": "algorithms"
 }
