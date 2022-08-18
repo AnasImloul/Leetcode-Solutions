@@ -3,6 +3,6 @@ This folder contains Solutions to 3 Concurrency Leetcode problems that starts wi
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|
-|[Print FooBar Alternately](./scripts/concurrency/P/Print%20FooBar%20Alternately/)|[C++](./scripts/concurrency/P/Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.cpp), [Python](./scripts/concurrency/P/Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.py)|Medium|[link](https://leetcode.com/problems/print-foobar-alternately)|
-|[Print in Order](./scripts/concurrency/P/Print%20in%20Order/)|[C++](./scripts/concurrency/P/Print%20in%20Order/Print%20in%20Order.cpp), [Python](./scripts/concurrency/P/Print%20in%20Order/Print%20in%20Order.py)|Easy|[link](https://leetcode.com/problems/print-in-order)|
-|[Print Zero Even Odd](./scripts/concurrency/P/Print%20Zero%20Even%20Odd/)|[C++](./scripts/concurrency/P/Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.cpp), [Python](./scripts/concurrency/P/Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.py)|Medium|[link](https://leetcode.com/problems/print-zero-even-odd)|
+|[Print FooBar Alternately](./Print%20FooBar%20Alternately)|[C++](./scripts/concurrency/P/Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.cpp), [Python](./scripts/concurrency/P/Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.py)|Medium|[link](https://leetcode.com/problems/print-foobar-alternately)|
+|[Print in Order](./Print%20in%20Order)|[C++](./scripts/concurrency/P/Print%20in%20Order/Print%20in%20Order.cpp), [Python](./scripts/concurrency/P/Print%20in%20Order/Print%20in%20Order.py)|Easy|[link](https://leetcode.com/problems/print-in-order)|
+|[Print Zero Even Odd](./Print%20Zero%20Even%20Odd)|[C++](./scripts/concurrency/P/Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.cpp), [Python](./scripts/concurrency/P/Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.py)|Medium|[link](https://leetcode.com/problems/print-zero-even-odd)|

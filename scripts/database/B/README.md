@@ -3,5 +3,5 @@ This folder contains Solutions to 2 Database Leetcode problems that starts with 
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|
-|[Bank Account Summary II](./scripts/database/B/Bank%20Account%20Summary%20II/)|[Mysql](./scripts/database/B/Bank%20Account%20Summary%20II/Bank%20Account%20Summary%20II.sql)|Easy|[link](https://leetcode.com/problems/bank-account-summary-ii)|
-|[Big Countries](./scripts/database/B/Big%20Countries/)|[Mysql](./scripts/database/B/Big%20Countries/Big%20Countries.sql)|Easy|[link](https://leetcode.com/problems/big-countries)|
+|[Bank Account Summary II](./Bank%20Account%20Summary%20II)|[Mysql](./scripts/database/B/Bank%20Account%20Summary%20II/Bank%20Account%20Summary%20II.sql)|Easy|[link](https://leetcode.com/problems/bank-account-summary-ii)|
+|[Big Countries](./Big%20Countries)|[Mysql](./scripts/database/B/Big%20Countries/Big%20Countries.sql)|Easy|[link](https://leetcode.com/problems/big-countries)|
