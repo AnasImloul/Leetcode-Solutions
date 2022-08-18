@@ -1,3 +1,5 @@
+// Runtime: 58 ms (Top 97.37%) | Memory: 42.2 MB (Top 43.42%)
+
 var findNthDigit = function(n) {
     var len = 1;
     var range = 9;
