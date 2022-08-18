@@ -1,9 +1,10 @@
-class Solution:
-    def countAsterisks(self, s: str) -> int:
-        lst=[] 
-        for i in s: 
-            if '|' not in lst: 
-                lst.append(i) 
-            elif '|' in lst and i=='|': 
-                lst.pop() 
-        return lst.count('*')
+# Added on 2022-08-18 15:51:55.040392
+
+var countAsterisks = function(s) {
+    let green=true, count=0;
+    for(let i=0; i<s.length; i++){
+        if(green && s[i]=="*"){count++};
+        if(s[i]=="|"){green=!green};
+    }
+    return count;
+};
