@@ -1,14 +1,9 @@
 {
     "id": "2354",
     "name": "Number of Excellent Pairs",
-    "url": "https://leetcode.com/problems/number-of-excellent-pairs",
-    "difficulty": "hard",
+    "url": "https://www.leetcode.com/problems/number-of-excellent-pairs",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 46.0,
+    "difficulty": "hard",
+    "topic": "algorithms"
 }
