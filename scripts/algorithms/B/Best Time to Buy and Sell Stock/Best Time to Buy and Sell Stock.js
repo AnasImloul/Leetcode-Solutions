@@ -1,3 +1,4 @@
+// Runtime: 79 ms (Top 98.79%) | Memory: 51.8 MB (Top 55.26%)
 
 var maxProfit = function(prices) {
     let L = 0;
@@ -8,7 +9,7 @@ var maxProfit = function(prices) {
             L = R;
         }else {
                 result = Math.max(result, prices[R] - prices[L]);
-            
+
         }
     }
     return result;
