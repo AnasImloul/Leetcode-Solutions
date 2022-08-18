@@ -3,4 +3,4 @@ This folder contains Solutions to 1 Database Leetcode problems that starts with 
 ### Problems ###
 |problems|langages|difficulty|Leetcode|
 |:-------|:------:|:--------:|:------:|
-|[Market Analysis I](https://github.com/AnasImloul/Leetcode-solutions/tree/main/database/M/Market%20Analysis%20I/)|[Mysql](https://github.com/AnasImloul/Leetcode-solutions/tree/main/database/M/Market%20Analysis%20I/Market%20Analysis%20I.sql)|Medium|[link](https://leetcode.com/problems/market-analysis-i)|
+|[Market Analysis I](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/database/M/Market%20Analysis%20I/)|[Mysql](https://github.com/AnasImloul/Leetcode-solutions/tree/main/scripts/database/M/Market%20Analysis%20I/Market%20Analysis%20I.sql)|Medium|[link](https://leetcode.com/problems/market-analysis-i)|
