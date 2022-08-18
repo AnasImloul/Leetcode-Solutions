@@ -1,3 +1,5 @@
+// Runtime: 95 ms (Top 53.17%) | Memory: 41.8 MB (Top 94.44%)
+
 var isLongPressedName = function(name, typed) {
     let i = 0;
     let j = 0;
