@@ -1,14 +1,9 @@
 {
     "id": "674",
     "name": "Longest Continuous Increasing Subsequence",
-    "url": "https://leetcode.com/problems/longest-continuous-increasing-subsequence",
-    "difficulty": "easy",
+    "url": "https://www.leetcode.com/problems/longest-continuous-increasing-subsequence",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 48.8,
+    "difficulty": "easy",
+    "topic": "algorithms"
 }
