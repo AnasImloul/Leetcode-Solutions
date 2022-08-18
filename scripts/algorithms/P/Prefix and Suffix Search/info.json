@@ -1,14 +1,9 @@
 {
     "id": "745",
     "name": "Prefix and Suffix Search",
-    "url": "https://leetcode.com/problems/prefix-and-suffix-search",
-    "difficulty": "hard",
+    "url": "https://www.leetcode.com/problems/prefix-and-suffix-search",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": false,
-        "javascript": false
-    }
+    "acceptance": 41.4,
+    "difficulty": "hard",
+    "topic": "algorithms"
 }
