@@ -1,7 +1,9 @@
+// Runtime: 146 ms (Top 15.25%) | Memory: 43.1 MB (Top 76.61%)
+
 var minPathSum = function(grid) {
     let row = grid.length;
     let col = grid[0].length;
-    
+
     for(let i = 1; i < row; i++) {
         grid[i][0] += grid[i-1][0];
     }
@@ -13,6 +15,5 @@ var minPathSum = function(grid) {
             grid[i][j] += Math.min(grid[i-1][j], grid[i][j-1]);
         }
     }
-    return grid[row-1][col-1];   
+    return grid[row-1][col-1];
 };
-
