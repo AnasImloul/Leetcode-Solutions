@@ -1,8 +1,10 @@
+# Runtime: 59 ms (Top 77.27%) | Memory: 14.3 MB (Top 57.10%)
+
 # Definition for singly-linked list.
 # class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+# def __init__(self, val=0, next=None):
+# self.val = val
+# self.next = next
 class Solution:
     def removeZeroSumSublists(self, head: Optional[ListNode]) -> Optional[ListNode]:
         root = ListNode(0,head)
@@ -22,5 +24,5 @@ class Solution:
             else:
                 d[summ] = node
             node = node.next
-        
+
         return root.next
