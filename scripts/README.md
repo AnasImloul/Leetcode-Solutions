@@ -4,7 +4,7 @@ Solutions to over than 1800 Leetcode problems in four programming languages (C++
   - For detailed description of the problem check out my other repository [Leetcode-scraper](https://github.com/AnasImloul/Leetcode-solutions/) where I published the source code and documentation for the project.
 # Solutions
 ### [Algorithms](./algorithms/#algorithms-solutions) ###
-Check out solutions to 1818problems from the Algorithms category written in ( C++, Javascript, Python, Java) . 
+Check out solutions to 1818problems from the Algorithms category written in ( Java, Python, C++, Javascript) . 
 
 |[0-9](./0-9/#algorithms-solutions)|[A](./A/#algorithms-solutions)|[B](./B/#algorithms-solutions)|[C](./C/#algorithms-solutions)|[D](./D/#algorithms-solutions)|[E](./E/#algorithms-solutions)|[F](./F/#algorithms-solutions)|[G](./G/#algorithms-solutions)|[H](./H/#algorithms-solutions)|[I](./I/#algorithms-solutions)|[J](./J/#algorithms-solutions)|[K](./K/#algorithms-solutions)|[L](./L/#algorithms-solutions)|[M](./M/#algorithms-solutions)|[N](./N/#algorithms-solutions)|
 |:--------------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|

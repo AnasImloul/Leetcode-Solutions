@@ -1,5 +1,5 @@
 # Algorithms-solutions
-This folder contains Solutions to 1818 Algorithms Leetcode problems written in the following programming languages ( C++, Javascript, Python, Java ).<br><br>
+This folder contains Solutions to 1818 Algorithms Leetcode problems written in the following programming languages ( Java, Python, C++, Javascript ).<br><br>
 Access solutions by alphabetical order:
 
 |[0-9](./0-9/#algorithms-solutions)|[A](./A/#algorithms-solutions)|[B](./B/#algorithms-solutions)|[C](./C/#algorithms-solutions)|[D](./D/#algorithms-solutions)|[E](./E/#algorithms-solutions)|[F](./F/#algorithms-solutions)|[G](./G/#algorithms-solutions)|[H](./H/#algorithms-solutions)|[I](./I/#algorithms-solutions)|[J](./J/#algorithms-solutions)|[K](./K/#algorithms-solutions)|[L](./L/#algorithms-solutions)|[M](./M/#algorithms-solutions)|[N](./N/#algorithms-solutions)|
