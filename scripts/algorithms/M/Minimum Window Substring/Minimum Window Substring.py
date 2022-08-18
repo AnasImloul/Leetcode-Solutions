@@ -1,29 +1,43 @@
-class Solution:
-    def minWindow(self, s: str, t: str) -> str:
-        tcounter = defaultdict(int)
-        for c in t:
-            tcounter[c] += 1
-        
-        start = 0
-        scounter = defaultdict(int)
-        ml = ''
-        win = False
-        for i, c in enumerate(s):
-            scounter[c] += 1
-            
-            if not win:
-                win = True
-                for k, v in tcounter.items():
-                    if scounter[k] < v:
-                        win = False
-                        break
-            
-            if win:
-                while scounter[s[start]] - 1 >= tcounter[s[start]]:
-                    scounter[s[start]] -= 1
-                    start += 1
-                
-                if not ml or i - start + 1 < len(ml):
-                    ml = s[start:i+1]
-                    
-        return ml
+# Added on 2022-08-18 15:51:55.963915
+
+var minWindow = function(s, t) {
+    const tf = {}, sf = {};
+    for(let c of t) {
+        tf[c] = (tf[c] || 0) + 1;
+    }
+    let l = 0, r = 0, rs = t.length;
+    let ml = -1, mr = -1;
+    for(; r < s.length; r++) {
+        const c = s[r];
+
+        if(!tf[c]) continue;
+
+        const sc = sf[c] || 0;
+        sf[c] = sc + 1;
+        if(sf[c] <= tf[c]) {
+            rs--;
+        }
+
+        if(rs == 0) {
+            while(true) {
+                if(mr == -1 || mr - ml > r - l) {
+                    [mr, ml] = [r, l];
+                }
+
+                const c = s[l];
+                if(!tf[c]) {
+                    l++;
+                }
+                else if(sf[c] - 1 < tf[c]) {
+                    sf[c]--, l++, rs++;
+                    break;
+                } else {
+                    sf[c]--;
+                    l++;
+                }
+            }
+        }
+    }
+    if(mr == -1) return '';
+    return s.slice(ml, mr + 1);
+};
