@@ -1,14 +1,9 @@
 {
     "id": "2017",
     "name": "Grid Game",
-    "url": "https://leetcode.com/problems/grid-game",
-    "difficulty": "medium",
+    "url": "https://www.leetcode.com/problems/grid-game",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": false
-    }
+    "acceptance": 42.3,
+    "difficulty": "medium",
+    "topic": "algorithms"
 }
