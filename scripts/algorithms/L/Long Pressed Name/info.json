@@ -1,14 +1,9 @@
 {
     "id": "925",
     "name": "Long Pressed Name",
-    "url": "https://leetcode.com/problems/long-pressed-name",
-    "difficulty": "easy",
+    "url": "https://www.leetcode.com/problems/long-pressed-name",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 34.1,
+    "difficulty": "easy",
+    "topic": "algorithms"
 }
