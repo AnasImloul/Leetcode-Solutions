@@ -1,3 +1,5 @@
+// Runtime: 121 ms (Top 54.38%) | Memory: 96.6 MB (Top 65.63%)
+
 class Solution {
     public long[] kthPalindrome(int[] queries, int intLength) {
         long[] res= new long[queries.length];
