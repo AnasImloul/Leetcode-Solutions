@@ -1,3 +1,5 @@
+# Runtime: 1341 ms (Top 80.70%) | Memory: 40.9 MB (Top 9.94%)
+
 from heapq import *
 
 class MinHeapItem:
@@ -31,11 +33,10 @@ class SORTracker:
             heappush(self.max_heap, MaxHeapItem(temp.name, temp.score))
         else:
             heappush(self.max_heap, MaxHeapItem(name, score))
-        
 
     def get(self) -> str:
         ans = self.min_heap[0].name
-        self.i += 1        
+        self.i += 1
         if self.max_heap:
             temp = heappop(self.max_heap)
             heappush(self.min_heap, MinHeapItem(temp.name, temp.score))
