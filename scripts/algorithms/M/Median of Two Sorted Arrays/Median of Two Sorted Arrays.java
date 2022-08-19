@@ -1,3 +1,5 @@
+// Runtime: 5 ms (Top 46.02%) | Memory: 50.6 MB (Top 18.35%)
+
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         if(nums1.length==1 && nums2.length==1) return (double)(nums1[0]+nums2[0])/2.0;
@@ -34,14 +36,14 @@ class Solution {
                 k++;
             }
         }
-        
+
         if(nums2.length==0){
             for(int d : nums1){
                 nums[k] = d;
                 k++;
             }
         }
-        
+
         int mid = (nums.length / 2);
 
         if (nums.length % 2 == 0) {
