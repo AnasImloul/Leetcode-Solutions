@@ -1,3 +1,5 @@
+// Runtime: 120 ms (Top 15.79%) | Memory: 44.1 MB (Top 31.58%)
+
 class Math1 {
 
     // https://en.wikipedia.org/wiki/Modular_exponentiation
