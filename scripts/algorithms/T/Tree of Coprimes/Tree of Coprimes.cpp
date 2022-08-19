@@ -1,3 +1,5 @@
+// Runtime: 1567 ms (Top 22.85%) | Memory: 170.8 MB (Top 88.79%)
+
 class Solution {
 public:
     vector<int> adj[100009];
@@ -48,4 +50,3 @@ public:
         return ans;
     }
 };
-
