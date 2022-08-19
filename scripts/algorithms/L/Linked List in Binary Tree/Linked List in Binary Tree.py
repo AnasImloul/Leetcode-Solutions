@@ -1,6 +1,8 @@
+# Runtime: 139 ms (Top 73.10%) | Memory: 16.3 MB (Top 54.16%)
+
 class Solution(object):
     def isSubPath(self, head, root):
-        if not root:    
+        if not root:
             return False
         if self.issame(head, root):
             return True
