@@ -1,3 +1,5 @@
+// Runtime: 307 ms (Top 78.95%) | Memory: 57.2 MB (Top 34.87%)
+
 var RecentCounter = function() {
     this.arr = [];
 };
@@ -9,4 +11,3 @@ RecentCounter.prototype.ping = function(t) {
     }
     return this.arr.length;
 };
-
