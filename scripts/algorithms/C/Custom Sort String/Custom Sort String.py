@@ -1,3 +1,5 @@
+# Runtime: 241 ms (Top 5.69%) | Memory: 14 MB (Top 18.61%)
+
 class Solution:
     def customSortString(self, order: str, s: str) -> str:
         charValue = [0] * 26
