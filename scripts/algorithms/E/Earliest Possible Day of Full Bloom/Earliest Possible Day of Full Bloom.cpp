@@ -1,3 +1,5 @@
+// Runtime: 544 ms (Top 44.20%) | Memory: 158.5 MB (Top 92.40%)
+
 class Solution {
 public:
     int earliestFullBloom(vector<int>& plantTime, vector<int>& growTime) {
