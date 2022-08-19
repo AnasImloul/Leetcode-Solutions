@@ -1,3 +1,5 @@
+// Runtime: 194 ms (Top 12.86%) | Memory: 49.9 MB (Top 18.17%)
+
 var multiply = function(num1, num2) {
     const m = num1.length;
     const n = num2.length;
