@@ -1,3 +1,5 @@
+# Runtime: 199 ms (Top 36.11%) | Memory: 13.8 MB (Top 87.22%)
+
 class Solution:
     def maxHeight(self, cuboids: List[List[int]]) -> int:
         dp=[0]*len(cuboids)
