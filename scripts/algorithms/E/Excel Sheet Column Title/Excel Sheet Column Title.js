@@ -1,3 +1,5 @@
+// Runtime: 122 ms (Top 5.79%) | Memory: 41.7 MB (Top 68.81%)
+
 /**
  * @param {number} columnNumber
  * @return {string}
@@ -10,7 +12,7 @@ var convertToTitle = function(columnNumber) {
 
         // console.log(String.fromCharCode(65+n),)
         ans+=String.fromCharCode(65 + n);
-        
+
     }
     ans = ans.split("").reverse().join("")
     return ans
