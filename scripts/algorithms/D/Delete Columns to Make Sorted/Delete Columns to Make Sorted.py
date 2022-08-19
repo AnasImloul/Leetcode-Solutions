@@ -1,6 +1,8 @@
+# Runtime: 330 ms (Top 23.27%) | Memory: 14.6 MB (Top 66.82%)
+
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
-        
+
         cols={}
         l=len(strs)
         l_s = len(strs[0])
