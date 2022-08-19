@@ -1,10 +1,11 @@
- 
+// Runtime: 963 ms (Top 55.56%) | Memory: 101.7 MB (Top 5.32%)
+
 var MedianFinder = function() {
     this.left = new MaxPriorityQueue();
   this.right = new MinPriorityQueue();
 };
 
-/** 
+/**
  * @param {number} num
  * @return {void}
  */
@@ -15,7 +16,7 @@ let { right, left } = this
   } else {
     left.enqueue(num)
   }
-  
+
   if (Math.abs(left.size() - right.size()) == 2) {
     if (left.size() > right.size()) {
       right.enqueue(left.dequeue().element)
@@ -40,7 +41,7 @@ MedianFinder.prototype.findMedian = function() {
   }
 };
 
-/** 
+/**
  * Your MedianFinder object will be instantiated and called as such:
  * var obj = new MedianFinder()
  * obj.addNum(num)
