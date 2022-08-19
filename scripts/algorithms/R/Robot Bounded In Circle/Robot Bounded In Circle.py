@@ -1,3 +1,5 @@
+# Runtime: 34 ms (Top 89.04%) | Memory: 14 MB (Top 22.71%)
+
 class Solution:
     def isRobotBounded(self, instructions: str) -> bool:
         pos, d = [0,0], "N"
@@ -20,5 +22,5 @@ class Solution:
                     else: d = "S"
             return (d, pos)
         for i in range(4):
-            d, pos = (move(d, pos, instructions))       
+            d, pos = (move(d, pos, instructions))
         return True if pos == [0,0] else False
