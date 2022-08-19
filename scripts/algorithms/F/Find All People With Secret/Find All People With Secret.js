@@ -1,13 +1,15 @@
+// Runtime: 1195 ms (Top 33.33%) | Memory: 146.2 MB (Top 33.33%)
+
 var findAllPeople = function(n, meetings, firstPerson) {
     const timeToMeeting = mapSortedTimeToMeetings(meetings);
-    
+
     const peopleThatCurrentlyHaveSecret = new Set([0, firstPerson]);
     for (const peopleInMeetings of timeToMeeting.values()) {
-        const personToMeetingsWithPeople = 
+        const personToMeetingsWithPeople =
             mapPeopleToPeopleTheyAreHavingMeetingsWith(peopleInMeetings);
-        let peopleInMeetingsWithSecret = 
+        let peopleInMeetingsWithSecret =
             findPeopleThatHaveTheSecret(peopleInMeetings, peopleThatCurrentlyHaveSecret);
-        
+
         // BFS algorithm
         while (peopleInMeetingsWithSecret.size > 0) {
             const nextPeopleInMeetingsWithSecret = new Set();
