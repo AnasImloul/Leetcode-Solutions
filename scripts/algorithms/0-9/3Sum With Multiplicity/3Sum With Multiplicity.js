@@ -1,3 +1,5 @@
+// Runtime: 141 ms (Top 80.77%) | Memory: 43.6 MB (Top 86.54%)
+
 /**
  * @param {number[]} arr
  * @param {number} target
@@ -27,14 +29,14 @@ var threeSumMulti = function(arr, target) {
                     }
                     count+=((j1-j)*(k-k1))
                     j=j1
-                    k=k1 
+                    k=k1
                 }
                 else{
                     for(let n=1;n<=k-j;n++){
                         count+=n
                     }
                     break
-                }              
+                }
             }
         }
     }
