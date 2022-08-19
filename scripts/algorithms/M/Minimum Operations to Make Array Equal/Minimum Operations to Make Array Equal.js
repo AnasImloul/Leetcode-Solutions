@@ -1,3 +1,5 @@
+// Runtime: 120 ms (Top 27.08%) | Memory: 41.9 MB (Top 89.58%)
+
 var minOperations = function(n) {
     let reqNum;
     if(n%2!=0){
