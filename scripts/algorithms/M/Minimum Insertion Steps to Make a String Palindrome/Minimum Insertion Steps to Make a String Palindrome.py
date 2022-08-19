@@ -1,3 +1,5 @@
+# Runtime: 1431 ms (Top 63.05%) | Memory: 169.5 MB (Top 11.22%)
+
 class Solution:
     def minInsertions(self, s: str) -> int:
         @cache
