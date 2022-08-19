@@ -1,3 +1,5 @@
+// Runtime: 65 ms (Top 95.45%) | Memory: 43.6 MB (Top 89.35%)
+
 /**
  * @param {string[]} sentences
  * @return {number}
@@ -11,6 +13,6 @@ var mostWordsFound = function(sentences) {
             max = temp;
         }
     }
-    
+
     return max;
 };
