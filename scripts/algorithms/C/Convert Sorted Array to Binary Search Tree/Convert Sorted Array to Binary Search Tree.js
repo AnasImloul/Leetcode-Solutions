@@ -1,3 +1,5 @@
+// Runtime: 99 ms (Top 68.02%) | Memory: 44.9 MB (Top 22.45%)
+
 var sortedArrayToBST = function(nums) {
     if (nums.length === 0) return null;
     // array length - 1 divided by 2
