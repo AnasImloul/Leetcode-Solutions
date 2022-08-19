@@ -1,3 +1,5 @@
+// Runtime: 48 ms (Top 77.18%) | Memory: 19 MB (Top 66.50%)
+
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
