@@ -1,3 +1,5 @@
+// Runtime: 131 ms (Top 69.64%) | Memory: 68.8 MB (Top 64.29%)
+
 class Solution {
     public int countPairs(int[] nums, int low, int high) {
         Trie trie=new Trie();
@@ -43,10 +45,10 @@ class Trie{
             }else{
                 cur=cur.get(bit);
             }
-            
+
         }
         return low_cnt;
-        
+
     }
 }
 class Node{
@@ -61,7 +63,7 @@ class Node{
     }
     public Node get(int bit){
         return links[bit];
-    } 
+    }
     public boolean contains(int bit){
         return links[bit]!=null;
     }
