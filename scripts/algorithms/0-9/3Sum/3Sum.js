@@ -1,12 +1,14 @@
+// Runtime: 250 ms (Top 39.42%) | Memory: 52.7 MB (Top 62.36%)
+
 /**
  * @param {number[]} nums
  * @return {number[][]}
  */
 var threeSum = function(nums) {
     nums.sort((a, b) => a - b);
-    
+
     const ans = [];
-    
+
     for (let i = 0; i < nums.length - 2; i++) {
         if (i === 0 || nums[i - 1] !== nums[i]) {
             let j = i + 1;
@@ -26,6 +28,6 @@ var threeSum = function(nums) {
             }
         }
     }
-    
+
     return ans;
 };
