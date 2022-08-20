@@ -1,3 +1,5 @@
+# Runtime: 3180 ms (Top 18.96%) | Memory: 24.7 MB (Top 69.46%)
+
 class NumMatrix:
 
     def __init__(self, matrix: List[List[int]]):
