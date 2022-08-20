@@ -1,19 +1,21 @@
+// Runtime: 405 ms (Top 41.21%) | Memory: 218.6 MB (Top 5.49%)
+
 class Solution {
     public long minimumDifference(int[] nums) {
-        int n=nums.length;  //length of nums
-        int len3=n/3;       // 1/3 length
+        int n=nums.length; //length of nums
+        int len3=n/3; // 1/3 length
         long res=Long.MAX_VALUE; // final result;
         //Try to make first part as min as possible;
-        //first[m] store the value, the min value of the size=len3, from[0,1,..., m];  
-        long[] first=new long[n]; 
+        //first[m] store the value, the min value of the size=len3, from[0,1,..., m];
+        long[] first=new long[n];
         //Try to make second part as max as possible;
-        //second[m] store the value, the max value of the size=len3, from[m,...,n-1];  
+        //second[m] store the value, the max value of the size=len3, from[m,...,n-1];
         long[] second=new long[n];
-        
+
 //--------------------for first part compute -------------------------------------
         //Build max heap for first part;
         PriorityQueue<Integer> max=new PriorityQueue<Integer>(Comparator.reverseOrder());
-        
+
         long sum=0;
 
         // Initialize with the first 1/3 n part.
@@ -26,10 +28,10 @@ class Solution {
         //And we keep tracking the exchange by long[] first;
         //
         for(int i=len3;i<=2*len3;i++){
-            first[i]=sum;     //add sum from  1/3
+            first[i]=sum; //add sum from 1/3
             max.add(nums[i]); //put new one in queue;
-            sum+=nums[i];     //sum + new one;
-            sum-=max.poll();  //sum - max one;
+            sum+=nums[i]; //sum + new one;
+            sum-=max.poll(); //sum - max one;
         }
 //--------------------for second part compute -----------------------
         sum=0;
@@ -56,8 +58,7 @@ class Solution {
         for(int i=len3;i<=2*len3;i++){
             res=Math.min(res,first[i]-second[i]);
         }
-        
+
         return res;
     }
 }
-
