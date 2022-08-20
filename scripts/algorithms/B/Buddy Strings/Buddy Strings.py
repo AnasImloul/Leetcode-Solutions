@@ -1,3 +1,5 @@
+# Runtime: 54 ms (Top 48.33%) | Memory: 14.1 MB (Top 96.59%)
+
 from collections import Counter
 
 class Solution:
@@ -23,6 +25,5 @@ class Solution:
             for k,v in counts.items():
                 if v > 1:
                     return True
-		# if different characters count is not 2 or 0, then it's not possible for the strings to be buddy strings
+        # if different characters count is not 2 or 0, then it's not possible for the strings to be buddy strings
         return False
-                
