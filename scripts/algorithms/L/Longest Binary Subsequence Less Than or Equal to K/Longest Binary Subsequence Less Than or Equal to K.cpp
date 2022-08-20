@@ -1,3 +1,5 @@
+// Runtime: 1368 ms (Top 5.00%) | Memory: 264.8 MB (Top 5.88%)
+
 class Solution {
 public:
     int ans = 0;
@@ -16,10 +18,10 @@ public:
         return dp[i][size]=max(no,yes);
     }
     int longestSubsequence(string s, int k) {
-        
+
         int n = s.size();
         vector<vector<int>>dp(n,vector<int>(n,-1));
         return f(n-1,0,k,s,dp);
-        
+
     }
 };
