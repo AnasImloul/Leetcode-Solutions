@@ -1,3 +1,5 @@
+// Runtime: 192 ms (Top 16.37%) | Memory: 30 MB (Top 73.15%)
+
 class Solution {
    bool isValid(vector<vector<int>>& grid,int r,int c,int nr,int nc,int m,int n){
         if(nr>=0 && nc>=0 && nr<m && nc<n && grid[nr][nc]==-1){
@@ -11,7 +13,7 @@ class Solution {
     }
 public:
     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
-        queue<pair<int,int>>  q;
+        queue<pair<int,int>> q;
         int m = mat.size();
         int n = mat[0].size();
         for(int i=0;i<m;i++){
@@ -40,7 +42,7 @@ public:
             if(isValid(mat,r,c,r,c+1,m,n)){
                 q.push({r,c+1});
             }
-                    
+
         }
         return mat;
     }
