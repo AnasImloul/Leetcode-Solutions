@@ -1,3 +1,5 @@
+// Runtime: 428 ms (Top 30.81%) | Memory: 12.5 MB (Top 26.58%)
+
 class Solution {
 public:
     int largestOverlap(vector<vector<int>>& img1, vector<vector<int>>& img2) {
