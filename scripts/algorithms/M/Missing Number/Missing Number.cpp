@@ -1,3 +1,5 @@
+// Runtime: 47 ms (Top 14.86%) | Memory: 18 MB (Top 20.20%)
+
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
@@ -7,7 +9,7 @@ public:
         for(int i=0;i<n;i++)
         {
             temp+=nums[i];
-            
+
         }
         return sum-temp;
     }
