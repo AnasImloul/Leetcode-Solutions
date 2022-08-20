@@ -1,3 +1,5 @@
+# Runtime: 415 ms (Top 31.43%) | Memory: 14.8 MB (Top 57.14%)
+
 class Solution:
     def outerTrees(self, trees: List[List[int]]) -> List[List[int]]:
         trees = sorted(trees, key = lambda e:(e[0],e[1]))
