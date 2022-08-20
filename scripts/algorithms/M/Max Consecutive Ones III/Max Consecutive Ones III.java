@@ -1,3 +1,5 @@
+// Runtime: 2 ms (Top 100.00%) | Memory: 43.4 MB (Top 96.24%)
+
 class Solution {
     public int longestOnes(int[] nums, int k) {
         int ans = 0;
@@ -16,6 +18,6 @@ class Solution {
             int len = i - j;
             if (len > ans) ans = len;
         }
-        return ans; 
+        return ans;
     }
 }
