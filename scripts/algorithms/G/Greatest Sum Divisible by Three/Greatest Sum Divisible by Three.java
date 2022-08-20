@@ -1,3 +1,5 @@
+// Runtime: 11 ms (Top 68.46%) | Memory: 54.3 MB (Top 56.38%)
+
 class Solution {
 
     public int maxSumDivThree(int[] nums) {
@@ -26,7 +28,7 @@ class Solution {
             } else if (b % 3 == 2) {
                 nr2 = Math.max(nr2, b);
             }
-            
+
             if (c % 3 == 0) {
                 nr0 = Math.max(nr0, c);
             } else if (c % 3 == 1) {
@@ -38,7 +40,7 @@ class Solution {
             r1=nr1;
             r2=nr2;
         }
-        
+
         return r0;
     }
 }
