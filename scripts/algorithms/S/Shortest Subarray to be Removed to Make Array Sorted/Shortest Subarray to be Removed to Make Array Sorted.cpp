@@ -1,3 +1,5 @@
+// Runtime: 286 ms (Top 6.53%) | Memory: 72.3 MB (Top 5.60%)
+
 // itne me hi thakk gaye?
 class Solution {
 public:
@@ -35,5 +37,5 @@ public:
         }
         if (ok(low, pref, suff, arr, n)) return low;
         return high;
-    } 
+    }
 };
