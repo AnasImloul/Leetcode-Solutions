@@ -1,3 +1,5 @@
+# Runtime: 2509 ms (Top 5.01%) | Memory: 25 MB (Top 86.17%)
+
 class Solution:
     def maxProfit(self,prices):
         left = 0 #Buy
