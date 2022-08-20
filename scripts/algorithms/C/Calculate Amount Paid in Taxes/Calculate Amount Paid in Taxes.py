@@ -1,3 +1,5 @@
+# Runtime: 75 ms (Top 95.72%) | Memory: 13.9 MB (Top 34.37%)
+
 class Solution:
     def calculateTax(self, brackets: List[List[int]], income: int) -> float:
         taxtot=0
