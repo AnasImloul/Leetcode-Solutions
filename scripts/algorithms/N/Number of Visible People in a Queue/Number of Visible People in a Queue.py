@@ -1,3 +1,5 @@
+# Runtime: 2162 ms (Top 20.79%) | Memory: 30.1 MB (Top 6.96%)
+
 class Solution:
     def canSeePersonsCount(self, heights: List[int]) -> List[int]:
         ans=[]
