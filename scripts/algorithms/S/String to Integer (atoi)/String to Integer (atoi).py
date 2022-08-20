@@ -1,5 +1,7 @@
+# Runtime: 69 ms (Top 20.00%) | Memory: 13.9 MB (Top 79.88%)
+
 class Solution:
-  
+
     def assign_sign(self, sign):
       # verify that we haven't already got a sign
       #&nbsp;"+42-" -> we don't want to return -42; hence check
@@ -10,13 +12,13 @@ class Solution:
         elif sign=="-":
           self.is_neg = True
       return
-    
+
     def add_to_int(self, num):
       if not self.num:
         self.num = num
       else:
         self.num = (self.num*10) + num
-          
+
     def myAtoi(self, s: str) -> int:
         #&nbsp;remove the leading and trailing spaces
         self.is_neg = False
@@ -38,7 +40,7 @@ class Solution:
           except ValueError:
             # it's neither a sign, nor a number; terminate
             break
-        
+
         # outside the loop; compile the result
         if not self.num:
           return 0
@@ -51,4 +53,3 @@ class Solution:
             self.num = upper_limit+1
           self.num = -1 * self.num
         return self.num
-            
