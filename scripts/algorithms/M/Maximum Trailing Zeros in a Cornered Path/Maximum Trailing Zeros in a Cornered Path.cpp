@@ -1,3 +1,5 @@
+// Runtime: 737 ms (Top 44.40%) | Memory: 107.9 MB (Top 75.00%)
+
 array<int, 2> operator+(const array<int, 2> &l, const array<int, 2> &r) { return { l[0] + r[0], l[1] + r[1] }; }
 array<int, 2> operator-(const array<int, 2> &l, const array<int, 2> &r) { return { l[0] - r[0], l[1] - r[1] }; }
 int pairs(const array<int, 2> &p) { return min(p[0], p[1]); }
