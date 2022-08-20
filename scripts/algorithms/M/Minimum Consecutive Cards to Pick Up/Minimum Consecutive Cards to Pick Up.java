@@ -1,3 +1,5 @@
+// Runtime: 51 ms (Top 92.02%) | Memory: 61 MB (Top 90.10%)
+
 class Solution
 {
     public int minimumCardPickup(int[] cards)
