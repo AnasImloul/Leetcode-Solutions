@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 5.9 MB (Top 74.03%)
+
 class Solution {
 public:
     int calc(int num) {
