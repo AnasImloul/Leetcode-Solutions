@@ -1,3 +1,5 @@
+// Runtime: 254 ms (Top 44.04%) | Memory: 53.4 MB (Top 97.11%)
+
 var minimumAbsDifference = function(arr) {
     arr.sort((a, b) => a - b)
     let minDif = Infinity
