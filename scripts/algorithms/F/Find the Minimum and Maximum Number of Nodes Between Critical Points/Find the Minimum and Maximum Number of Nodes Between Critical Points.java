@@ -1,3 +1,5 @@
+// Runtime: 9 ms (Top 51.50%) | Memory: 100.7 MB (Top 69.00%)
+
 class Solution {
     public int[] nodesBetweenCriticalPoints(ListNode head) {
         int res[]=new int[]{-1,-1};
