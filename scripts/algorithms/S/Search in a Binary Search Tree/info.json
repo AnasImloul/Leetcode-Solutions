@@ -1,14 +1,9 @@
 {
     "id": "700",
     "name": "Search in a Binary Search Tree",
-    "url": "https://leetcode.com/problems/search-in-a-binary-search-tree",
-    "difficulty": "easy",
+    "url": "https://www.leetcode.com/problems/search-in-a-binary-search-tree",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 76.9,
+    "difficulty": "easy",
+    "topic": "algorithms"
 }

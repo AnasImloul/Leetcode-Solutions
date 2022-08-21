@@ -1,14 +1,9 @@
 {
     "id": "338",
     "name": "Counting Bits",
-    "url": "https://leetcode.com/problems/counting-bits",
-    "difficulty": "easy",
+    "url": "https://www.leetcode.com/problems/counting-bits",
     "premium": false,
-    "topic": "algorithms",
-    "solution": {
-        "c++": true,
-        "python": true,
-        "java": true,
-        "javascript": true
-    }
+    "acceptance": 74.9,
+    "difficulty": "easy",
+    "topic": "algorithms"
 }
