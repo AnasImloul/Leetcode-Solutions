@@ -1,3 +1,5 @@
+# Runtime: 65 ms (Top 11.66%) | Memory: 13.9 MB (Top 19.37%)
+
 class Solution:
     def strongPasswordCheckerII(self, pwd: str) -> bool:
         return (
