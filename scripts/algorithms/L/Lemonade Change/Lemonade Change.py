@@ -1,6 +1,8 @@
+# Runtime: 1581 ms (Top 17.51%) | Memory: 18.1 MB (Top 19.63%)
+
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
-        
+
         change = {5:0,10:0}
         for i in bills:
             if i==5:
