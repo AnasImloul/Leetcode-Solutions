@@ -1,9 +1,11 @@
+# Runtime: 38 ms (Top 76.97%) | Memory: 13.8 MB (Top 98.42%)
+
 class Solution(object):
     def summaryRanges(self, nums):
-        
+
         if len(nums) == 0:
             return []
-        
+
         l, r = 0, 0
         res = []
 
