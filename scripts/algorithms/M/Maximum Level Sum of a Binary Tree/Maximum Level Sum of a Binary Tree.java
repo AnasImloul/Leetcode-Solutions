@@ -1,6 +1,8 @@
+// Runtime: 19 ms (Top 20.53%) | Memory: 72.3 MB (Top 15.91%)
+
 class Solution {
     Map<Integer, Integer> map = new HashMap<>();
-    
+
     public void go(TreeNode root, int level) {
         if(root == null) return;
         if(map.containsKey(level)) {
@@ -9,7 +11,7 @@ class Solution {
         else {
             map.put(level, root.val);
         }
-        
+
         go(root.left, level+1);
         go(root.right, level+1);
     }
