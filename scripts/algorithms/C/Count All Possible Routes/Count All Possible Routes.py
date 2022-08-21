@@ -1,3 +1,5 @@
+# Runtime: 3516 ms (Top 53.70%) | Memory: 22.1 MB (Top 43.52%)
+
 from bisect import bisect_left
 from functools import lru_cache
 class Solution:
