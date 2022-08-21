@@ -1,3 +1,5 @@
+// Runtime: 2 ms (Top 98.20%) | Memory: 44.5 MB (Top 79.13%)
+
 class Solution {
     public int[] sortEvenOdd(int[] nums) {
         int[] even = new int[101];
