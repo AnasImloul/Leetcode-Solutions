@@ -1,3 +1,5 @@
+// Runtime: 135 ms (Top 100.00%) | Memory: 65.6 MB (Top 100.00%)
+
 var stoneGameVI = function(aliceValues, bobValues) {
     let aliceVal = 0
     let bobVal = 0
