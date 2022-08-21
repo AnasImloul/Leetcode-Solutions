@@ -1,3 +1,5 @@
+// Runtime: 298 ms (Top 5.08%) | Memory: 13.4 MB (Top 39.48%)
+
 class Solution {
 public:
     bool winnerOfGame(string colors) {
