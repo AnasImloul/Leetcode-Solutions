@@ -1,12 +1,14 @@
+// Runtime: 37 ms (Top 87.11%) | Memory: 57.7 MB (Top 98.52%)
+
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * int val;
+ * TreeNode *left;
+ * TreeNode *right;
+ * TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ * TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ * TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
 class Solution {
@@ -15,18 +17,18 @@ public:
         if(root == NULL){
             return ;
         }
-//         inorder traversal
+// inorder traversal
         fixBST(root->left ,prev,first,second);
-       
+
         if(prev != NULL and prev->val > root->val){
-//             this is violtaing 
+// this is violtaing
             if(first == NULL){
                 first = prev;
             }
             second = root;
         }
         prev = root;
-        
+
         fixBST(root->right,prev,first,second);
     }
     void recoverTree(TreeNode* root) {
