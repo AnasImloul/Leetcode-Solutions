@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 94.73%) | Memory: 42.2 MB (Top 59.43%)
+
 class Solution {
     public boolean backspaceCompare(String s, String t) {
         int i = s.length() - 1, j = t.length() - 1;
