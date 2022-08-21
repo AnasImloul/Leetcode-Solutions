@@ -1,3 +1,5 @@
+// Runtime: 104 ms (Top 32.99%) | Memory: 42.2 MB (Top 52.58%)
+
 var countHillValley = function(nums) {
     let previous;
     let count = 0;
