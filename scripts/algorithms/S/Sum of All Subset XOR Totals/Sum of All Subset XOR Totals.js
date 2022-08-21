@@ -1,3 +1,5 @@
+// Runtime: 113 ms (Top 35.38%) | Memory: 48 MB (Top 35.38%)
+
 var subsetXORSum = function(nums) {
     let output=[];
     backtrack();
