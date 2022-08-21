@@ -1,3 +1,5 @@
+# Runtime: 5273 ms (Top 38.81%) | Memory: 47.1 MB (Top 89.55%)
+
 class Solution:
     def longestCommonSubpath(self, n, paths) -> int:
         def get_common_subpath_hashes(k):
@@ -10,10 +12,10 @@ class Solution:
                     else:
                         yield hash
                         if i < len(path):
-                            hash = ((hash-coeff*path[i-k])*n + path[i]) % mod   
+                            hash = ((hash-coeff*path[i-k])*n + path[i]) % mod
             return reduce(set.intersection, (set(get_subpath_hashes(p)) for p in paths))
-        
-	    # can be replaced with a pre-computed large prime
+
+        # can be replaced with a pre-computed large prime
         mod = self._generate_large_prime(int(1e18), int(9e18))
         low, high = 1, min(len(p) for p in paths)+1
         while low < high:
@@ -23,7 +25,7 @@ class Solution:
             else:
                 high = mid
         return high - 1
-    
+
     def _generate_large_prime(self, lower, upper):
         """Generate a prime between [lower, upper)"""
         def is_prime(n, trials=50):
