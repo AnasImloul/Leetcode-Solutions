@@ -1,3 +1,5 @@
+# Runtime: 93 ms (Top 39.62%) | Memory: 14.1 MB (Top 16.60%)
+
 class Solution:
     def slidingPuzzle(self, board: List[List[int]]) -> int:
         def findNei(board):
@@ -13,7 +15,7 @@ class Solution:
                                 tmp[r][c], tmp[i][j] = tmp[i][j], tmp[r][c]
                                 boards.append(tmp)
             return boards
-        
+
         visited = set()
         target = [[1, 2, 3], [4, 5, 0]]
         if board == target:
@@ -21,7 +23,7 @@ class Solution:
         rows, cols = len(board), len(board[0])
         q = collections.deque()
         step = 1
-        
+
         for row in range(rows):
             for col in range(cols):
                 if board[row][col] == 0:
@@ -32,7 +34,7 @@ class Solution:
                         visited.add(tuple([tuple(row) for row in b]))
                         q.append(b)
                     break
-        
+
         while q:
             step += 1
             for _ in range(len(q)):
@@ -45,5 +47,5 @@ class Solution:
                     if t not in visited:
                         visited.add(t)
                         q.append(b)
-        
+
         return -1
