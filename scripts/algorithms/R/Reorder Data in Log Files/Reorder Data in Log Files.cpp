@@ -1,3 +1,5 @@
+// Runtime: 30 ms (Top 15.78%) | Memory: 13.4 MB (Top 27.79%)
+
 class Solution {
 public:
     static bool comp(pair<string, string> a, pair<string, string> b) {
@@ -12,7 +14,7 @@ public:
             string identifier = "";
             for(int j = 0; j < logs[i].length(); j++) {
                 if(logs[i][j] == ' ') {
-                    if(logs[i][j+1] >= 'a' && logs[i][j+1] <= 'z') 
+                    if(logs[i][j+1] >= 'a' && logs[i][j+1] <= 'z')
                         letter_logs.push_back({identifier, logs[i].substr(j+1, logs[i].size() - j + 1)});
                     else
                         digit_logs.push_back(logs[i]);
