@@ -1,3 +1,5 @@
+// Runtime: 41 ms (Top 92.71%) | Memory: 36.9 MB (Top 41.87%)
+
 class Solution {
 public:
     int countNodes(TreeNode *root) {
@@ -6,7 +8,7 @@ public:
         }
         return countNodes(root->left) + countNodes(root->right) + 1;
     }
-    
+
     bool findTarget(TreeNode* root, int k) {
         int totalCount = countNodes(root);
         int count = 0;
@@ -32,8 +34,8 @@ public:
                 return true;
             }
             else if(inordertop->val + revinordertop->val > k){ //If they are greater than k, we have to found a value
-			//which is just smaller than revinordertop, which means we have to find predecessor of revinordertop, as
-			//we have to reduce the sum to make it equal to k
+            //which is just smaller than revinordertop, which means we have to find predecessor of revinordertop, as
+            //we have to reduce the sum to make it equal to k
                 TreeNode* currtop = revinordertop;
                 count++;
                 revInorder.pop();
@@ -46,8 +48,8 @@ public:
                 }
             }
             else{
-			//If they are smaller than k, we have to found a value which is just larger than inordertop, which means
-			//we have to find successor of revinordertop, as we have to increase the sum to make it equal to k
+            //If they are smaller than k, we have to found a value which is just larger than inordertop, which means
+            //we have to find successor of revinordertop, as we have to increase the sum to make it equal to k
                 TreeNode* currtop = inordertop;
                 count++;
                 inorder.pop();
