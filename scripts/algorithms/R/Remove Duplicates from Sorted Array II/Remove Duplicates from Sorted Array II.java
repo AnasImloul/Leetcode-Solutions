@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 87.02%) | Memory: 45 MB (Top 24.14%)
+
 class Solution {
     public int removeDuplicates(int[] nums) {
        int count = 2,len =nums.length ;
@@ -6,7 +8,7 @@ class Solution {
                nums[count]=nums[i];
                count++;
            }
-       } 
+       }
        return count;
     }
 }
