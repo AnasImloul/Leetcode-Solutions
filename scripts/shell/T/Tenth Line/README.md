@@ -1,5 +1,5 @@
 <h3 align="left"> 195. Tenth Line</h3>
-<div><p>Given a text file&nbsp;<code>file.txt</code>, print&nbsp;just the 10th line of the&nbsp;file.</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>Given a text file&nbsp;<code>file.txt</code>, print&nbsp;just the 10th line of the&nbsp;file.</p>
 
 <p><strong>Example:</strong></p>
 
@@ -25,4 +25,4 @@ Line 10
 <div class="spoilers"><b>Note:</b><br>
 1. If the file contains less than 10 lines, what should you output?<br>
 2. There's at least three different solutions. Try to explore all possibilities.</div>
-</div>
+</div></div>

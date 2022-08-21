@@ -1,5 +1,5 @@
 <h3 align="left"> 194. Transpose File</h3>
-<div><p>Given a text file <code>file.txt</code>, transpose its content.</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>Given a text file <code>file.txt</code>, transpose its content.</p>
 
 <p>You may assume that each row has the same number of columns, and each field is separated by the <code>' '</code> character.</p>
 
@@ -17,4 +17,4 @@ ryan 30
 <pre>name alice ryan
 age 21 30
 </pre>
-</div>
+</div></div>

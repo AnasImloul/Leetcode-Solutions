@@ -1,5 +1,5 @@
 <h3 align="left"> 1114. Print in Order</h3>
-<div><p>Suppose we have a class:</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>Suppose we have a class:</p>
 
 <pre>public class Foo {
   public void first() { print("first"); }
@@ -35,4 +35,4 @@
 <ul>
 	<li><code>nums</code> is a permutation of <code>[1, 2, 3]</code>.</li>
 </ul>
-</div>
+</div></div>

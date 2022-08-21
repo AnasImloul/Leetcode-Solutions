@@ -1,5 +1,5 @@
 <h3 align="left"> 193. Valid Phone Numbers</h3>
-<div><p>Given a text file <code>file.txt</code> that contains a list of phone numbers (one per line), write a one-liner bash script to print all valid phone numbers.</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>Given a text file <code>file.txt</code> that contains a list of phone numbers (one per line), write a one-liner bash script to print all valid phone numbers.</p>
 
 <p>You may assume that a valid phone number must appear in one of the following two formats: (xxx) xxx-xxxx or xxx-xxx-xxxx. (x means a digit)</p>
 
@@ -19,4 +19,4 @@
 <pre>987-123-4567
 (123) 456-7890
 </pre>
-</div>
+</div></div>

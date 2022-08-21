@@ -1,5 +1,5 @@
 <h3 align="left"> 1195. Fizz Buzz Multithreaded</h3>
-<div><p>You have the four functions:</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>You have the four functions:</p>
 
 <ul>
 	<li><code>printFizz</code> that prints the word <code>"fizz"</code> to the console,</li>
@@ -50,4 +50,4 @@
 <ul>
 	<li><code>1 &lt;= n &lt;= 50</code></li>
 </ul>
-</div>
+</div></div>

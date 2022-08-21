@@ -1,5 +1,5 @@
 <h3 align="left"> 1117. Building H2O</h3>
-<div><p>There are two kinds of threads: <code>oxygen</code> and <code>hydrogen</code>. Your goal is to group these threads to form water molecules.</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>There are two kinds of threads: <code>oxygen</code> and <code>hydrogen</code>. Your goal is to group these threads to form water molecules.</p>
 
 <p>There is a barrier where each thread has to wait until a complete molecule can be formed. Hydrogen and oxygen threads will be given <code>releaseHydrogen</code> and <code>releaseOxygen</code> methods respectively, which will allow them to pass the barrier. These threads should pass the barrier in groups of three, and they must immediately bond with each other to form a water molecule. You must guarantee that all the threads from one molecule bond before any other threads from the next molecule do.</p>
 
@@ -39,4 +39,4 @@
 	<li>There will be exactly <code>2 * n</code> <code>'H'</code> in <code>water</code>.</li>
 	<li>There will be exactly <code>n</code> <code>'O'</code> in <code>water</code>.</li>
 </ul>
-</div>
+</div></div>

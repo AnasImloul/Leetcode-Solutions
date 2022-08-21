@@ -1,5 +1,5 @@
 <h3 align="left"> 1115. Print FooBar Alternately</h3>
-<div><p>Suppose you are given the following code:</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>Suppose you are given the following code:</p>
 
 <pre>class FooBar {
   public void foo() {
@@ -47,4 +47,4 @@
 <ul>
 	<li><code>1 &lt;= n &lt;= 1000</code></li>
 </ul>
-</div>
+</div></div>

@@ -1,5 +1,5 @@
 <h3 align="left"> 192. Word Frequency</h3>
-<div><p>Write a bash script to calculate the frequency of each word in a text file <code>words.txt</code>.</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>Write a bash script to calculate the frequency of each word in a text file <code>words.txt</code>.</p>
 
 <p>For simplicity sake, you may assume:</p>
 
@@ -31,4 +31,4 @@ day 1
 	<li>Don't worry about handling ties, it is guaranteed that each word's frequency count is unique.</li>
 	<li>Could you write it in one-line using <a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-4.html">Unix pipes</a>?</li>
 </ul>
-</div>
+</div></div>

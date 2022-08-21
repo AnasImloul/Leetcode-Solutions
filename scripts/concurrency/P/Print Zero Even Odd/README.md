@@ -1,5 +1,5 @@
 <h3 align="left"> 1116. Print Zero Even Odd</h3>
-<div><p>You have a function <code>printNumber</code> that can be called with an integer parameter and prints it to the console.</p>
+<div class="content__u3I1 question-content__JfgR"><div><p>You have a function <code>printNumber</code> that can be called with an integer parameter and prints it to the console.</p>
 
 <ul>
 	<li>For example, calling <code>printNumber(7)</code> prints <code>7</code> to the console.</li>
@@ -46,4 +46,4 @@ One of them calls zero(), the other calls even(), and the last one calls odd().
 <ul>
 	<li><code>1 &lt;= n &lt;= 1000</code></li>
 </ul>
-</div>
+</div></div>
