@@ -1,3 +1,5 @@
+// Runtime: 557 ms (Top 57.30%) | Memory: 24.5 MB (Top 81.25%)
+
 class Solution {
 public:
     vector<int> findSubstring(string s, vector<string>& words) {
@@ -9,7 +11,7 @@ public:
         string t;
         unordered_map<string, int> mp;
         for(auto i = 0; i < words.size(); ++i) ++mp[words[i]];
-        
+
         for(int i = 0; i<= len; ++i){
             t = s.substr(i, n);
             if(mp.find(t) != mp.end()){
@@ -27,7 +29,7 @@ public:
                 if(flag && smp == mp) ans.push_back(i);
             }
         }
-       
+
         return ans;
     }
 };
