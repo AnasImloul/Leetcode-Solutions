@@ -1,3 +1,5 @@
+# Runtime: 63 ms (Top 80.35%) | Memory: 13.8 MB (Top 69.47%)
+
 class Solution(object):
     def sortEvenOdd(self, nums):
         """
