@@ -1,3 +1,5 @@
+// Runtime: 127 ms (Top 64.29%) | Memory: 49.7 MB (Top 100.00%)
+
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
@@ -22,7 +24,7 @@ var maxSum = function(nums1, nums2) {
             ptr2 += 1;
             continue;
         }
-        
+
         if(ptr1 == n1 || (ptr2 != n2 && nums1[ptr1] > nums2[ptr2])){
             section_sum2 += nums2[ptr2];
             ptr2 += 1;
