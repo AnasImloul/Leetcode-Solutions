@@ -1,3 +1,5 @@
+// Runtime: 1491 ms (Top 12.85%) | Memory: 85.2 MB (Top 46.18%)
+
 class Solution {
 public:
     long long maximumBeauty(vector<int>& flowers, long long newFlowers, int target, int full, int partial) {
@@ -21,7 +23,7 @@ public:
                 flowers.pop_back();
             }
             long long beautyForFullCase = (long long)(n - i) * full; // All the elements from i to n -1 are incremented till target, so they have a beauty of (n - 1) * full
-            
+
             // Here, we do binary search on x, which is the the maximum number we can increment all the numbers from 0 to i - 1 to. The maximum we can increment to is target-1 because after that, "partial" will not be applicable. Binary search is done to find out the maximum possible answer for the partial case.
             int l = 0, r = target - 1;
             long long beautyForPartialCase = 0;
