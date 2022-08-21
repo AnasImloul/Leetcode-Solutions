@@ -1,3 +1,5 @@
+# Runtime: 1587 ms (Top 72.81%) | Memory: 61.7 MB (Top 65.15%)
+
 from bisect import bisect_left
 class Solution:
     def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
