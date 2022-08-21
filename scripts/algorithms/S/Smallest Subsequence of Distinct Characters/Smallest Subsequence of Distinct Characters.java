@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 87.48%) | Memory: 42.2 MB (Top 54.57%)
+
 class Solution {
     public String smallestSubsequence(String s) {
         boolean[] inStack = new boolean [26];
