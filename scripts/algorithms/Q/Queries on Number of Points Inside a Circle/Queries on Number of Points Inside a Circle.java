@@ -1,8 +1,10 @@
+// Runtime: 16 ms (Top 100.00%) | Memory: 42.8 MB (Top 96.08%)
+
 class Solution {
     public int[] countPoints(int[][] points, int[][] queries) {
         int len = queries.length;
         int[] ans = new int[len];
-         
+
         for(int i=0;i<len;i++){
             int count = 0;
             int radius2 = queries[i][2] * queries[i][2];
@@ -14,10 +16,10 @@ class Solution {
             }
             ans[i] = count;
         }
-        
+
         return ans;
     }
-    
+
     private int radius2(int[] point, int[] center){
         int x = point[0] - center[0];
         int y = point[1] - center[1];
