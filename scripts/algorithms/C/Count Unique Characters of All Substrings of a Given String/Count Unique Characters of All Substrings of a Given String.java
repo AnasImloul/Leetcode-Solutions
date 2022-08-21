@@ -1,3 +1,5 @@
+// Runtime: 452 ms (Top 5.01%) | Memory: 50.5 MB (Top 67.85%)
+
 class Solution {
     public int uniqueLetterString(String s) {
         // int[] letter = new int[s.length()];
