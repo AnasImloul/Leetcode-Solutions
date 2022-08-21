@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 90.88%) | Memory: 40.7 MB (Top 84.12%)
+
 class Solution
 {
     public int minimumNumbers(int num, int k)
@@ -12,7 +14,7 @@ class Solution
         for(int i = 1; i <= num/k; i++) // Start with set size 1 and look for set having unit's digit equal to that of num
             if(num % 10 == ((i*k)%10)) // Look for equal unit's digit
                 return i;
-        
+
         return -1;
     }
 }
