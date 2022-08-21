@@ -1,6 +1,7 @@
+// Runtime: 1 ms (Top 99.97%) | Memory: 46.2 MB (Top 98.87%)
+
 class Solution {
-    
-    
+
     public void count(int n, int[] a, int k)
     {
         int i;
