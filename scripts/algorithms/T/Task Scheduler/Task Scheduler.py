@@ -1,3 +1,5 @@
+# Runtime: 1043 ms (Top 25.15%) | Memory: 14.3 MB (Top 64.15%)
+
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         max_heap = []
