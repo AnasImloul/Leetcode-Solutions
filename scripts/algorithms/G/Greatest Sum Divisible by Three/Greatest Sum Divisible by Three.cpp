@@ -1,3 +1,5 @@
+// Runtime: 44 ms (Top 95.18%) | Memory: 25.1 MB (Top 80.72%)
+
 class Solution {
 public:
     int maxSumDivThree(vector<int>& nums) {
