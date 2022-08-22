@@ -1,6 +1,5 @@
-// Runtime: 621 ms (Top 33.11%) | Memory: 22.2 MB (Top 34.20%)
-
-// Standard DSU Class
+// Runtime: 361 ms (Top 82.03%) | Memory: 22.1 MB (Top 38.96%)
+/ Standard DSU Class
 class DSU {
     vector<int> parent, size;
 public:
