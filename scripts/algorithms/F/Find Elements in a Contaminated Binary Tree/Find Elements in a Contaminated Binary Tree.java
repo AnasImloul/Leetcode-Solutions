@@ -1,3 +1,4 @@
+// Runtime: 29 ms (Top 75.56%) | Memory: 52.2 MB (Top 77.99%)
 class FindElements {
     TreeNode tree,nodept;
     public FindElements(TreeNode root) {
@@ -5,7 +6,7 @@ class FindElements {
         tree.val=0;
         go(tree);
     }
-    
+
     void go(TreeNode node){
         if(node.left!=null){
             node.left.val=node.val*2+1;
@@ -16,11 +17,11 @@ class FindElements {
             go(node.right);
         }
     }
-    
+
     public boolean find(int target) {
         return doit(target);
     }
-    
+
     boolean doit(int target){
         if(target==0){
             nodept=tree;
