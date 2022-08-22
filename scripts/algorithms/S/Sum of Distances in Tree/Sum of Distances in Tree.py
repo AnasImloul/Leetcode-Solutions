@@ -1,7 +1,7 @@
+# Runtime: 1783 ms (Top 30.42%) | Memory: 59.4 MB (Top 95.18%)
 from typing import List
 
 ROOT_PARENT = -1
-
 
 class Solution:
     def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:
@@ -11,15 +11,15 @@ class Solution:
         :param edges:
         :return:
         """
-        g = self.create_undirected_graph(edges, n)  # as mentioned in the problem, this graph can be converted into tree
+        g = self.create_undirected_graph(edges, n) # as mentioned in the problem, this graph can be converted into tree
 
-        root = 0  # can be taken to any node between 0 and n - 1 (both exclusive)
+        root = 0 # can be taken to any node between 0 and n - 1 (both exclusive)
 
         # considering "root" as starting node, we create a tree.
         # Now defining,
-        #   tree_nodes[i] = number of nodes in the tree rooted at node i
-        #   distances[i] = sum of distances of all nodes from ith node to all the
-        #                  other nodes of the tree
+        # tree_nodes[i] = number of nodes in the tree rooted at node i
+        # distances[i] = sum of distances of all nodes from ith node to all the
+        # other nodes of the tree
         tree_nodes, distances = [0] * n, [0] * n
 
         def postorder(rt: int, parent: int):
@@ -60,9 +60,9 @@ class Solution:
             for c in g[rt]:
                 if c != parent:
                     distances[c] = (
-                            (n - tree_nodes[c])  # rt -> c increase this much distance
+                            (n - tree_nodes[c]) # rt -> c increase this much distance
                             +
-                            (distances[rt] - tree_nodes[c])  # rt -> c decrease this much distance
+                            (distances[rt] - tree_nodes[c]) # rt -> c decrease this much distance
                     )
                     preorder(c, rt)
 
