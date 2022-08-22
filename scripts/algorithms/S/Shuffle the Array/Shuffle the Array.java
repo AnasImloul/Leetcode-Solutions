@@ -1,5 +1,6 @@
+// Runtime: 1 ms (Top 65.71%) | Memory: 45.8 MB (Top 46.61%)
 class Solution {
-    public int[] shuffle(int[] nums, int n) 
+    public int[] shuffle(int[] nums, int n)
     {
         int[] arr = new int[2*n];
         int j = 0;
