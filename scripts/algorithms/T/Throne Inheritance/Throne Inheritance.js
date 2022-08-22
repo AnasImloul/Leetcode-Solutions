@@ -1,3 +1,4 @@
+// Runtime: 1005 ms (Top 57.89%) | Memory: 120.3 MB (Top 22.81%)
 var bloodList = function(name, parent = null) {
     return {
         name,
@@ -12,8 +13,8 @@ var ThroneInheritance = function(kingName) {
     this.deadList = new Set();
 };
 
-/** 
- * @param {string} parentName 
+/**
+ * @param {string} parentName
  * @param {string} childName
  * @return {void}
  */
@@ -24,7 +25,7 @@ ThroneInheritance.prototype.birth = function(parentName, childName) {
     parent.children.push(childId);
 };
 
-/** 
+/**
  * @param {string} name
  * @return {void}
  */
@@ -38,7 +39,7 @@ ThroneInheritance.prototype.death = function(name) {
 function updateList(list, nameId, deadList) {
     if (!deadList.has(nameId.name))
         list.push(nameId.name);
-    
+
     for (let child of nameId.children) {
         updateList(list, child, deadList);
     }
