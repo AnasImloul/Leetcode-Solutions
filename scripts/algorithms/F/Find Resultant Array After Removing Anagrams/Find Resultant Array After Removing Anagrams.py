@@ -1,3 +1,4 @@
+# Runtime: 111 ms (Top 32.35%) | Memory: 13.9 MB (Top 33.68%)
 class Solution:
     def removeAnagrams(self, words: List[str]) -> List[str]:
         i = 0
