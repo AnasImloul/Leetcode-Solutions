@@ -1,5 +1,5 @@
 // Runtime: 890 ms (Top 66.93%) | Memory: 18 MB (Top 68.52%)
-class Solution {
+lass Solution {
 public:
     bool matchReplacement(string s, string sub, vector<vector<char>>& mappings) {
 
