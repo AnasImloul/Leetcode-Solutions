@@ -1,3 +1,4 @@
+// Runtime: 348 ms (Top 90.22%) | Memory: 108.9 MB (Top 40.22%)
 class MajorityChecker {
 public:
     MajorityChecker(vector<int>& arr) {
@@ -25,7 +26,7 @@ public:
                 pre[val_idx[arr[i]]][i]++;
         }
     }
-    
+
     int query(int left, int right, int threshold) {
         int width = right - left + 1;
         if (width < 500) {
@@ -37,12 +38,12 @@ public:
                     most_frequent = cnt[arr[left - 1]];
                     most_frequent_val = arr[left - 1];
                 }
-				// early end condition, there are not enough elements left
+                // early end condition, there are not enough elements left
                 if (right + most_frequent + 1 < threshold + left) return -1;
             }
             return most_frequent >= threshold ? most_frequent_val : -1;
         }
-        
+
         for (int i = 0; i < n; ++i) {
             if (pre[i][right] - (left - 1 >= 0 ? pre[i][left - 1] : 0) >= threshold) {
                 return elems[i];
@@ -50,7 +51,7 @@ public:
         }
         return -1;
     }
-   
+
 private:
     vector<int> arr;
     vector<int> elems;
