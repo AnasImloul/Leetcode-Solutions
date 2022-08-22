@@ -1,5 +1,6 @@
+# Runtime: 98 ms (Top 35.75%) | Memory: 14.7 MB (Top 20.30%)
 class Solution:
-    def evaluateTree(self, root: Optional[TreeNode]) -> bool: 
+    def evaluateTree(self, root: Optional[TreeNode]) -> bool:
         def recur(node):
             if not node.left and not node.right: #leaf node
                 return True if node.val == 1 else False
