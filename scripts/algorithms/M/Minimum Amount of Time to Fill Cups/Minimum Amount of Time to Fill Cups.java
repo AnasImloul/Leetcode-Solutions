@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 59.66%) | Memory: 41.5 MB (Top 48.39%)
 class Solution {
     public int fillCups(int[] amount) {
          Arrays.sort(amount);
