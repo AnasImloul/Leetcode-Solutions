@@ -1,10 +1,11 @@
+# Runtime: 1218 ms (Top 16.46%) | Memory: 23.7 MB (Top 8.86%)
 class Solution:
     def reachableNodes(self, edges: List[List[int]], maxMoves: int, n: int) -> int:
         m = defaultdict(list)
         for a, b, p in edges:
             m[a].append((p, b))
             m[b].append((p, a))
-            
+
         vis = set()
         queue = []
         heappush(queue, (0, 0))
@@ -20,7 +21,7 @@ class Solution:
                     if (cur, nxt) not in edgevis and (nxt, cur) not in edgevis:
                         ans += p
                         # if nxt in vis:
-                        #     ans -= 1
+                        # ans -= 1
                         edgevis.add((cur, nxt))
                         edgevis.add((nxt, cur))
                         if nxt not in vis:
