@@ -1,6 +1,7 @@
+// Runtime: 130 ms (Top 14.57%) | Memory: 28.8 MB (Top 33.71%)
 class Solution {
 public:
-    vector<int> findErrorNums(vector<int>& nums) 
+    vector<int> findErrorNums(vector<int>& nums)
     {
         unordered_map<int,int> m;
         int p,q;
@@ -16,7 +17,7 @@ public:
         int n=nums.size();
         q=(n*(n+1))/2-accumulate(nums.begin(),nums.end(),0)+p;
         return {p,q};
-        
+
     }
 };
 // if you like the solution plz upvote.
