@@ -1,12 +1,13 @@
+// Runtime: 198 ms (Top 8.55%) | Memory: 49.6 MB (Top 72.65%)
 var Solution = function(head) {
-        this.res = []; 
-        let curr = head;  
-        
+        this.res = [];
+        let curr = head;
+
         while(curr !== null) {
             this.res.push(curr)
             curr = curr.next;
         }
-        this.length = this.res.length; 
+        this.length = this.res.length;
 };
 
 Solution.prototype.getRandom = function() {
