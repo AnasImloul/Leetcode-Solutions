@@ -1,3 +1,4 @@
+// Runtime: 32 ms (Top 61.57%) | Memory: 49.1 MB (Top 67.72%)
 class Solution {
     public int maxLength(List<String> arr) {
         String[] words = arr.stream().filter(o -> o.chars().distinct().count() == o.length()).toArray(String[]::new);
