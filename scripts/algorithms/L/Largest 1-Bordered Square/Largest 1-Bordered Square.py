@@ -1,3 +1,4 @@
+# Runtime: 1382 ms (Top 13.45%) | Memory: 15.1 MB (Top 9.94%)
 class Solution:
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
         m = len(grid)
