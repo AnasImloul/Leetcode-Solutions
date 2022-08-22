@@ -1,3 +1,4 @@
+// Runtime: 908 ms (Top 24.08%) | Memory: 63.8 MB (Top 18.52%)
 var sellingWood = function(m, n, prices) {
   let price = Array(n + 1).fill(0).map(() => Array(m + 1).fill(0));
   for (let [height, width, woodPrice] of prices) {
