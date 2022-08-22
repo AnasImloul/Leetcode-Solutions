@@ -1,3 +1,4 @@
+// Runtime: 99 ms (Top 61.59%) | Memory: 17.8 MB (Top 75.26%)
 class Solution {
 public:
     int countCharacters(vector<string>& words, string chars) {
