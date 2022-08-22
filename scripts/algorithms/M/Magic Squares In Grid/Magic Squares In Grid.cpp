@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 8.4 MB (Top 48.63%)
 class Solution {
 public:
     int numMagicSquaresInside(vector<vector<int>>& grid) {
@@ -24,7 +25,7 @@ public:
             if(
                 (col1 == col2) &&
                 (col1 == col3) &&
-                (col1 == row1) && 
+                (col1 == row1) &&
                 (col1 == row2) &&
                 (col1 == row3) &&
                 (col1 == diag1) &&
