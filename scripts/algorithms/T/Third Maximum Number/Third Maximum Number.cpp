@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 97.89%) | Memory: 9 MB (Top 96.12%)
 class Solution {
 public:
     int thirdMax(vector<int>& nums) {
