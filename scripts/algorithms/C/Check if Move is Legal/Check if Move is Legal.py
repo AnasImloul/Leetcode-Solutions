@@ -1,3 +1,4 @@
+# Runtime: 82 ms (Top 35.62%) | Memory: 14 MB (Top 54.79%)
 class Solution:
     def checkMove(self, board: List[List[str]], rMove: int, cMove: int, color: str) -> bool:
         directions = [False] * 8
