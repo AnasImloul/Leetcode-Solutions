@@ -1,4 +1,4 @@
-# Solution 1
+# Runtime: 38ms (Top 81.29%) | Memory: 3.7 MB (Top 33.84%)
 cnt=0
 while read line && [ $cnt -le 10 ]; do
   let 'cnt = cnt + 1'
@@ -7,14 +7,3 @@ while read line && [ $cnt -le 10 ]; do
     exit 0
   fi
 done < file.txt
-
-# Solution 2
-awk 'FNR == 10 {print }'  file.txt
-# OR
-awk 'NR == 10' file.txt
-
-# Solution 3
-sed -n 10p file.txt
-
-# Solution 4
-tail -n+10 file.txt|head -1
