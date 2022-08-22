@@ -1,3 +1,4 @@
+# Runtime: 460 ms (Top 26.24%) | Memory: 15.4 MB (Top 86.61%)
 class Solution:
     def canBeValid(self, s: str, locked: str) -> bool:
         def validate(s: str, locked: str, op: str) -> bool:
