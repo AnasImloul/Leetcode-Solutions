@@ -1,3 +1,4 @@
+# Runtime: 55 ms (Top 32.81%) | Memory: 14.1 MB (Top 28.49%)
 class Solution:
     def isPathCrossing(self, path: str) -> bool:
         c = set()
