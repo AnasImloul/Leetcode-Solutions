@@ -1,3 +1,4 @@
+// Runtime: 101 ms (Top 27.55%) | Memory: 42.2 MB (Top 67.35%)
 /**
  * @param {number[]} bits
  * @return {boolean}
