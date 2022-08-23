@@ -1,3 +1,4 @@
+// Runtime: 9 ms (Top 61.84%) | Memory: 42.7 MB (Top 63.49%)
 class Solution {
         public int distinctSubseqII(String s) {
             int mod = (int)1e9+7;
