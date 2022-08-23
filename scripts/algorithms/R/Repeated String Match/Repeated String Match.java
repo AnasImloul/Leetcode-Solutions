@@ -1,3 +1,4 @@
+// Runtime: 305 ms (Top 62.11%) | Memory: 113.5 MB (Top 30.98%)
 class Solution {
     public int repeatedStringMatch(String a, String b) {
         String copyA = a;
@@ -13,6 +14,6 @@ class Solution {
             }
         }
         return -1;
-        
+
     }
 }
