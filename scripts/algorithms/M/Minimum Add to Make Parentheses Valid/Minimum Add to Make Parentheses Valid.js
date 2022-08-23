@@ -1,3 +1,4 @@
+// Runtime: 81 ms (Top 66.54%) | Memory: 42.2 MB (Top 75.00%)
 var minAddToMakeValid = function(s) {
     let stack = []
     let count = 0
@@ -10,8 +11,8 @@ var minAddToMakeValid = function(s) {
             if(top != '(') count++
         }
     }
-    
+
     count += stack.length
-    
+
     return count
 };
