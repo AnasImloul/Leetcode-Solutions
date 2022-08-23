@@ -1,3 +1,4 @@
+// Runtime: 13 ms (Top 59.60%) | Memory: 10.2 MB (Top 67.84%)
 class Solution {
 public:
     int minTimeToVisitAllPoints(vector<vector<int>>& points) {
