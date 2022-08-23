@@ -1,15 +1,9 @@
-SELECT sub.employee_id
-FROM (
-	SELECT e.employee_id, name, salary
-	FROM employees AS e
-	LEFT JOIN salaries AS s
-	ON e.employee_id = s.employee_id
-	
-	UNION
-	
-	SELECT s.employee_id, name, salary
-	FROM employees AS e
-	RIGHT JOIN salaries AS s
-	ON e.employee_id = s.employee_id) AS sub
-WHERE sub.name IS NULL OR sub.salary IS NULL
-ORDER BY sub.employee_id
+-- Runtime: 720 ms (Top 44.04%) | Memory: 999999999 MB (Top 100.00%)
+SELECT T.employee_id
+FROM
+  (SELECT * FROM Employees LEFT JOIN Salaries USING(employee_id)
+   UNION
+   SELECT * FROM Employees RIGHT JOIN Salaries USING(employee_id))
+AS T
+WHERE T.salary IS NULL OR T.name IS NULL
+ORDER BY employee_id;
