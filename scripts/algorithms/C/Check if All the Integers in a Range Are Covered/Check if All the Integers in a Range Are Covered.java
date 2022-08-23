@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 85.31%) | Memory: 41.7 MB (Top 83.50%)
 class Solution {
     public boolean isCovered(int[][] ranges, int left, int right) {
         boolean flag = false;
@@ -11,7 +12,7 @@ class Solution {
             if (!flag) return false;
             flag = false;
         }
-        
+
         return true;
     }
 }
