@@ -1,11 +1,12 @@
+// Runtime: 4 ms (Top 79.58%) | Memory: 10.8 MB (Top 38.33%)
 [[nodiscard]] double step(
     int const A, int const B, std::unordered_map<int, std::unordered_map<int, double>> & Memo )
 {
     if( A <= 0 ) return B <= 0 ? 0.5 : 1.0;
     if( B <= 0 ) return 0.0;
-    
+
     auto const AIt{ Memo.find(A) };
-    
+
     if( Memo.cend() != AIt )
     {
         auto const BIt{ AIt->second.find(B) };
@@ -19,14 +20,13 @@
     return Memo[A][B] = 0.25 * M;
 }
 
-
 class Solution
 {
 public:
     double soupServings(int n)
     {
         if( n > 4750 ) return 1;
-        
+
         std::unordered_map<int, std::unordered_map<int, double>> Memo{};
         return step( n, n, Memo );
     }
