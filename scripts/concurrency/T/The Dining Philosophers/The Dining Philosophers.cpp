@@ -1,10 +1,11 @@
+// Runtime: 412 ms (Top 24.12%) | Memory: 10.5 MB (Top 97.09%)
 static constexpr uint8_t FORKS_NUM = 5;
 class DiningPhilosophers {
 public:
     DiningPhilosophers() {
         for(int i = 0; i < FORKS_NUM; ++i){
             pthread_mutex_init(&forks[i], NULL);
-        }    
+        }
     }
 
     void wantsToEat(int philosopher,
