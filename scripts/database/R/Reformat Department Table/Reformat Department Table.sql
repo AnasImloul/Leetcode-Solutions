@@ -1,5 +1,6 @@
-SELECT 
-    id, 
+-- Runtime: 483 ms (Top 81.75%) | Memory: 999999999 MB (Top 100.00%)
+SELECT
+    id,
     sum( if( month = 'Jan', revenue, null ) ) AS Jan_Revenue,
     sum( if( month = 'Feb', revenue, null ) ) AS Feb_Revenue,
     sum( if( month = 'Mar', revenue, null ) ) AS Mar_Revenue,
@@ -12,7 +13,7 @@ SELECT
     sum( if( month = 'Oct', revenue, null ) ) AS Oct_Revenue,
     sum( if( month = 'Nov', revenue, null ) ) AS Nov_Revenue,
     sum( if( month = 'Dec', revenue, null ) ) AS Dec_Revenue
-FROM 
+FROM
     Department
-GROUP BY 
+GROUP BY
     id;
