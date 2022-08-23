@@ -1,9 +1,10 @@
+# Runtime: 69 ms (Top 15.25%) | Memory: 14.3 MB (Top 28.85%)
 # Definition for a binary tree node.
 # class TreeNode(object):
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+# def __init__(self, val=0, left=None, right=None):
+# self.val = val
+# self.left = left
+# self.right = right
 class Solution(object):
     def verticalTraversal(self, root):
         """
@@ -29,4 +30,3 @@ class Solution(object):
             else:
                 ans[-1].append(l[i][-1])
         return ans
-        
