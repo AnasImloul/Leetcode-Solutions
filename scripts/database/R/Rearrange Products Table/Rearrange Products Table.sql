@@ -1,10 +1,11 @@
+-- Runtime: 668 ms (Top 47.04%) | Memory: 999999999 MB (Top 100.00%)
 SELECT
     product_id,
     'store1' AS store,
     store1 AS price
 FROM Products
 WHERE store1 IS NOT NULL
-    
+
 UNION ALL
 
 SELECT
