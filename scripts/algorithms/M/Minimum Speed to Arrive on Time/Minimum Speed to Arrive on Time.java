@@ -1,3 +1,4 @@
+// Runtime: 343 ms (Top 5.57%) | Memory: 108.2 MB (Top 25.06%)
 class Solution {
     public int minSpeedOnTime(int[] dist, double hour) {
         int left = 1;
