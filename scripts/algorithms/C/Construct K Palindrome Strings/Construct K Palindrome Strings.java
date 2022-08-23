@@ -1,3 +1,4 @@
+// Runtime: 44 ms (Top 25.64%) | Memory: 42.9 MB (Top 94.32%)
 class Solution {
     public boolean canConstruct(String s, int k) {
         if(k==s.length())
