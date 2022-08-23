@@ -1,13 +1,8 @@
-SELECT 
-        p.product_id, p.product_name
-FROM 
-        product p
-JOIN 
-        Sales s
-ON 
-        p.product_id = s.product_id 
-
+-- Runtime: 1666 ms (Top 33.38%) | Memory: 999999999 MB (Top 100.00%)
+SELECT s.product_id, product_name
+FROM Sales s
+LEFT JOIN Product p
+ON s.product_id = p.product_id
 GROUP BY s.product_id
-        
-      HAVING  max(s.sale_date)<= '2019-03-31'
-      AND MIN(s.sale_date)>='2019-01-01';
+HAVING MIN(sale_date) >= CAST('2019-01-01' AS DATE) AND
+       MAX(sale_date) <= CAST('2019-03-31' AS DATE)
