@@ -1,3 +1,4 @@
+// Runtime: 54 ms (Top 78.11%) | Memory: 8.6 MB (Top 91.16%)
 #include <semaphore.h>
 class H2O {
 public:
@@ -8,12 +9,12 @@ public:
 
     void hydrogen(function<void()> releaseHydrogen) {
         sem_wait(&h_sem);
-		
+
         // Lock this - '++' is a critical code
         pthread_mutex_lock(&mtx);
         h++;
         pthread_mutex_unlock(&mtx);
-		
+
         // releaseHydrogen() outputs "H". Do not change or remove this line.
         releaseHydrogen();
         if (h % 2 == 0)
