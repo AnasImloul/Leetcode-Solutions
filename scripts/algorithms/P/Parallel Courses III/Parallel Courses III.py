@@ -1,3 +1,4 @@
+# Runtime: 1787 ms (Top 90.42%) | Memory: 42.7 MB (Top 96.74%)
 class Solution:
     def minimumTime(self, n: int, relations: List[List[int]], time: List[int]) -> int:
         in_degree=defaultdict(int)
@@ -21,6 +22,3 @@ class Solution:
                 if in_degree[nei]==0:
                     q.append(nei)
         return max(latest)
-                    
-            
-            
