@@ -1,3 +1,4 @@
+# Runtime: 53 ms (Top 84.17%) | Memory: 14.7 MB (Top 5.79%)
 import threading
 
 class H2O:
