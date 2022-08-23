@@ -1,13 +1,4 @@
-/*
-So so as we know that we want to find out the number of unique leads 
-and the number of unique partners on a given date made by a given 
-maker therefore we will group the table on the basis of date_id and
-make_name and then we will count the number of distinct lead_id 
-and partner_id
-*/
-
-SELECT date_id, make_name, COUNT(DISTINCT(lead_id)) AS unique_leads, 
-COUNT(DISTINCT(partner_id)) AS unique_partners FROM DailySales
-GROUP BY date_id,make_name
-
-
+-- Runtime: 696 ms (Top 46.47%) | Memory: 999999999 MB (Top 100.00%)
+select date_id, make_name, count(distinct lead_id) as unique_leads, count(distinct partner_id) as unique_partners
+from dailysales
+group by date_id, make_name;
