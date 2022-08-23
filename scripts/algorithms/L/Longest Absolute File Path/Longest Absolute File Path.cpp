@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.5 MB (Top 50.23%)
 // Using Map O(300 + N)
 
 class Solution {
@@ -10,7 +11,7 @@ class Solution {
         bool is_file = false;
         int curr_word_len = 0;
         int total_len = 0;
-        
+
         for(char c : input)
         {
             if(c == '\t')
@@ -27,7 +28,7 @@ class Solution {
                 {
                     levels[curr_tabs] = levels[curr_tabs-1] + curr_word_len;
                 }
-                
+
                 if(is_file)
                 {
                     ans = max(ans, levels[curr_tabs] + curr_tabs);
@@ -50,4 +51,3 @@ class Solution {
         return ans;
     }
 };
-
