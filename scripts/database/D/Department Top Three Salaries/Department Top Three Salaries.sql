@@ -1,16 +1,10 @@
-select d.Name as Department, e.Name as Employee, computed.Salary as Salary
-from Employee e, 
-	(
-		select Salary, DepartmentId, @row := IF(DepartmentId=@did, @row + 1,1) as Rank , @did:=DepartmentId
-		from (
-			select distinct Salary, DepartmentId
-			from Employee
-			order by DepartmentId, Salary desc
-			) ordered, (select @row:=0, @did:=0) variables
-	) computed,
-	Department d
-where e.Salary=computed.Salary 
-and e.DepartmentId=computed.DepartmentId 
-and computed.DepartmentId=d.Id
-and computed.Rank<=3
-order by computed.DepartmentId, Salary desc
+-- Runtime: 1738 ms (Top 18.14%) | Memory: 999999999 MB (Top 100.00%)
+select d.Name Department, e1.Name Employee, e1.Salary
+from Employee e1
+join Department d
+on e1.DepartmentId = d.Id
+where 3 > (select count(distinct(e2.Salary))
+                  from Employee e2
+                  where e2.Salary > e1.Salary
+                  and e1.DepartmentId = e2.DepartmentId
+                  );
