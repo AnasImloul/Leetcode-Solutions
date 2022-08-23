@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 87.02%) | Memory: 54.8 MB (Top 82.69%)
 class Solution {
     public int[] sortedSquares(int[] nums) {
         int s=0;
