@@ -1,3 +1,4 @@
+// Runtime: 55 ms (Top 27.16%) | Memory: 6.9 MB (Top 77.16%)
 class ZeroEvenOdd {
 private:
     int n;
@@ -25,7 +26,7 @@ public:
     void odd(function<void(int)> printNumber) {
          do_work(printNumber, [&]{return num_to_print % 2 != 0;});
     }
-    
+
 protected:
    void do_work(function<void(int)> print, function<bool()> eval)
     {
