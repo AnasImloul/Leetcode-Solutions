@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 82.59%) | Memory: 46.9 MB (Top 82.02%)
 
 class Solution {
     public int min(int[][] matrix, int[][]dp, int i, int j)
@@ -21,7 +22,7 @@ class Solution {
         }
         return dp[i][j];
     }
-    
+
     public int minFallingPathSum(int[][] matrix) {
         int dp[][] = new int[matrix.length][matrix.length];
         if(matrix.length == 1)
