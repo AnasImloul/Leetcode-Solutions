@@ -1,3 +1,4 @@
+// Runtime: 35 ms (Top 53.02%) | Memory: 13.1 MB (Top 84.47%)
 class Solution {
 public:
     vector<int> exclusiveTime(int n, vector<string>& logs) {
@@ -13,7 +14,7 @@ public:
                 auto diff = time - st.top().second + 1;
                 ret[st.top().first] += diff;
                 st.pop();
-                if (!st.empty()) 
+                if (!st.empty())
                     ret[st.top().first] -= diff;
             }
         }
