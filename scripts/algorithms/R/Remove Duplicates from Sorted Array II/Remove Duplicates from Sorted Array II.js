@@ -1,3 +1,4 @@
+// Runtime: 85 ms (Top 81.32%) | Memory: 43.9 MB (Top 72.24%)
 var removeDuplicates = function(nums) {
     let i = 0;
     let count = 0;
