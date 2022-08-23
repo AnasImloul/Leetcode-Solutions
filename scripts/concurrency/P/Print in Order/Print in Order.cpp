@@ -1,3 +1,4 @@
+// Runtime: 50 ms (Top 80.81%) | Memory: 7.3 MB (Top 18.72%)
 class Foo {
 public:
     int count = 0;
@@ -9,11 +10,11 @@ public:
     }
 
     void first(function<void()> printFirst) {
-        
+
         unique_lock<mutex> lck(mtx);
-		// No point of this wait as on start count will be 1, we need to make the other threads wait.
+        // No point of this wait as on start count will be 1, we need to make the other threads wait.
         // while(count != 1){
-        //     cv.wait(lck);
+        // cv.wait(lck);
         // }
         // printFirst() outputs "first". Do not change or remove this line.
 
