@@ -1,3 +1,4 @@
+// Runtime: 1644 ms (Top 5.15%) | Memory: 43.1 MB (Top 65.80%)
 class Solution {
     public int longestValidParentheses(String s) {
         int i=0;
@@ -12,7 +13,7 @@ class Solution {
                 if(ch==')') closed++;
                 if(closed>open) break;
                 if(open==closed) len=Math.max(len,j-i+1);
-                
+
                 j++;
             }
             i++;
