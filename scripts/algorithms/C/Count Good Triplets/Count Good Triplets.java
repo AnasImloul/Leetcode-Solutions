@@ -1,3 +1,4 @@
+// Runtime: 26 ms (Top 25.39%) | Memory: 41.4 MB (Top 78.10%)
 class Solution {
     public int countGoodTriplets(int[] arr, int a, int b, int c) {
         int total = 0;
