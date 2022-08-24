@@ -1,3 +1,4 @@
+// Runtime: 161 ms (Top 67.20%) | Memory: 49.7 MB (Top 36.80%)
 var removeInvalidParentheses = function(s) {
     const isValid = (s) => {
         const stack = [];
@@ -11,7 +12,7 @@ var removeInvalidParentheses = function(s) {
         }
         return stack.length == 0;
     }
-    
+
     const Q = [s], vis = new Set([s]), ans = [];
     let found = false;
     while(Q.length) {
@@ -23,7 +24,7 @@ var removeInvalidParentheses = function(s) {
         if(found) continue;
         for(let i = 0; i < top.length; i++) {
             if(!'()'.includes(top[i])) continue;
-            
+
             const str = top.slice(0, i) + top.slice(i + 1);
             if(!vis.has(str)) {
                 Q.push(str);
