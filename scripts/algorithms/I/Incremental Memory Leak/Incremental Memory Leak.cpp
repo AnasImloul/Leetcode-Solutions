@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 53.78%) | Memory: 6 MB (Top 85.78%)
 class Solution {
 public:
     vector<int> memLeak(int memory1, int memory2) {
