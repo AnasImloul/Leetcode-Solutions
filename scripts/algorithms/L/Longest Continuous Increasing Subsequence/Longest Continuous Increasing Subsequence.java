@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 100.00%) | Memory: 45.4 MB (Top 76.62%)
 class Solution {
     public int findLengthOfLCIS(int[] nums) {
         int count = 1;
