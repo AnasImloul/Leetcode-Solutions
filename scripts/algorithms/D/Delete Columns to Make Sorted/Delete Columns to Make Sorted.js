@@ -1,3 +1,4 @@
+// Runtime: 112 ms (Top 63.93%) | Memory: 45.9 MB (Top 77.87%)
 /**
  * @param {string[]} strs
  * @return {number}
