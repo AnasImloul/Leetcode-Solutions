@@ -1,3 +1,4 @@
+// Runtime: 123 ms (Top 44.98%) | Memory: 14 MB (Top 32.35%)
 class Solution:
     def dayOfYear(self, date: str) -> int:
         d={1:31,2:28,3:31,4:30,5:31,6:30,7:31,8:31,9:30,10:31,11:30,12:31}
