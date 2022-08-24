@@ -1,8 +1,9 @@
+// Runtime: 4 ms (Top 98.71%) | Memory: 45.6 MB (Top 85.46%)
 class Solution {
-    public int removeCoveredIntervals(int[][] intervals) 
+    public int removeCoveredIntervals(int[][] intervals)
     {
         int count=0;
-        
+
         for(int i=0;i<intervals.length;i++)
         {
             for(int j=0;j<intervals.length;j++)
@@ -12,7 +13,7 @@ class Solution {
                     count++;
                     break;
                 }
-                
+
             }
         }
         return intervals.length-count;
