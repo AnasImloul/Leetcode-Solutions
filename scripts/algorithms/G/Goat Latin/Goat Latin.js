@@ -1,6 +1,5 @@
-// Runtime: 123 ms (Top 5.75%) | Memory: 42 MB (Top 87.36%)
-
-var toGoatLatin = function(sentence) {
+// Runtime: 94 ms (Top 44.83%) | Memory: 42.2 MB (Top 73.56%)
+ar toGoatLatin = function(sentence) {
     let arr = sentence.split(' ')
     let vowels = ['a', 'e', 'i', 'o', 'u']
     for (let i=0; i< arr.length; i++) {
