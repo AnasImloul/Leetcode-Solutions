@@ -1,10 +1,11 @@
+// Runtime: 3042 ms (Top 5.00%) | Memory: 37.6 MB (Top 80.63%)
 from collections import Counter
 
 class Solution:
     def largestSubmatrix(self, matrix: List[List[int]]) -> int:
         M = len(matrix)
         N = len(matrix[0])
-        
+
         colcons = [] # preprocess columns
         for c in range(N):
             cons = []
@@ -17,7 +18,7 @@ class Solution:
                 cons.append(s)
             colcons.append(cons)
         # colcons[c][r] is how much 1's we'll get if we start from column c at row r and go up
-        
+
         best = 0
         for r in range(M):
             # try r as the lowest row
