@@ -1,3 +1,4 @@
+// Runtime: 13 ms (Top 6.52%) | Memory: 9.2 MB (Top 47.28%)
 class Solution {
 public:
     int ans=0;
@@ -12,7 +13,7 @@ public:
         if(root->left) dfs(root->left,s);
         if(root->right) dfs(root->right,s);
         s=o;
-        
+
     }
     int sumNumbers(TreeNode* root) {
         if(!root) return ans;
