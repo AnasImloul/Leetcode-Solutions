@@ -1,3 +1,4 @@
+// Runtime: 182 ms (Top 71.60%) | Memory: 77.1 MB (Top 63.19%)
 class Solution {
 public:
     int minSumOfLengths(vector<int>& arr, int target) {
@@ -18,7 +19,7 @@ public:
                 prefix[end]=prefix[end-1>=0 ? end-1 : 0];
             }
         }
-        
+
         sum=0;
         start=n-1;
         for(int end=n-1;end>=0;end--){
@@ -41,6 +42,6 @@ public:
             res=min(res,prefix[i]+suffix[i+1]);
         }
         return res==INT_MAX ? -1 : res;
-        
+
     }
 };
