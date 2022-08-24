@@ -1,3 +1,4 @@
+// Runtime: 189 ms (Top 91.53%) | Memory: 63.4 MB (Top 28.21%)
 class Solution {
 public:
       bool check(int mid,vector<int> &v, int m, int k)
@@ -20,7 +21,7 @@ public:
           if(cnt>=m)
               return true;
           return false;
-          
+
       }
     int minDays(vector<int>& bloomDay, int m, int k) {
         int s=*min_element(bloomDay.begin(),bloomDay.end());
