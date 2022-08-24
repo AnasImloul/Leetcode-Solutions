@@ -1,9 +1,10 @@
+// Runtime: 17 ms (Top 76.81%) | Memory: 10.3 MB (Top 8.23%)
 class Solution {
 public:
     int count(vector<int> &temp,int mid){
         int i=0,j=0,n=temp.size();
         int len=0;
-        
+
         while(i<n){
             while(j<n && (temp[j]-temp[i])<=mid) j++;
             len+=j-i-1;
@@ -18,7 +19,7 @@ public:
         sort(temp.begin(),temp.end());
         while(s<=e){
             int mid=s+(e-s)/2;
-            
+
             if(count(temp,mid)>=k){
                 ans=mid;
                 e=mid-1;
