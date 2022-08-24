@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 46.85%) | Memory: 45.5 MB (Top 9.24%)
 class Solution {
     public List<List<Integer>> largeGroupPositions(String s) {
         List<List<Integer>> ans = new ArrayList<>();
