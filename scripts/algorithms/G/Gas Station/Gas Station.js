@@ -1,3 +1,4 @@
+// Runtime: 2034 ms (Top 8.12%) | Memory: 50.3 MB (Top 81.93%)
 var canCompleteCircuit = function(gas, cost) {
     const len = gas.length;
     // scan forward from the current index
@@ -26,6 +27,6 @@ var canCompleteCircuit = function(gas, cost) {
         let index = scan(i);
         if (~index) return index; // if it's not -1, return it
     }
-    
+
     return -1;
 };
