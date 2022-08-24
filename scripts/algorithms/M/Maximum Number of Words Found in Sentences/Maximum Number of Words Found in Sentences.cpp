@@ -1,3 +1,4 @@
+// Runtime: 18 ms (Top 59.02%) | Memory: 9.7 MB (Top 71.88%)
 class Solution {
 public:
     int mostWordsFound(vector<string>& sentences) {
