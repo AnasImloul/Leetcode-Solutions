@@ -1,3 +1,4 @@
+// Runtime: 324 ms (Top 7.14%) | Memory: 58.2 MB (Top 21.43%)
 var Cashier = function(n, discount, products, prices) {
     this.n = n;
     this.cc = 0;
@@ -8,7 +9,6 @@ var Cashier = function(n, discount, products, prices) {
         this.products.set(products[i], prices[i]);
     }
 };
-
 
 Cashier.prototype.getBill = function(product, amount) {
     let total = 0, len = product.length;
