@@ -1,3 +1,4 @@
+// Runtime: 239 ms (Top 28.57%) | Memory: 56.4 MB (Top 42.86%)
 /**
  * @param {string} s
  * @param {string} t
@@ -21,14 +22,14 @@
                 // Considering repeated letters, the unrepeated move should change to r + 26*n (n>=0)
                 // use hash table to count the same letter
                 if(!countMap.has(r)){
-				    // first time to move
+                    // first time to move
                     countMap.set(r, 1);
                     tmp.push(r);
                 }else{
-				    // n time to move, n means the count of the same letter
+                    // n time to move, n means the count of the same letter
                     let c = countMap.get(r);
                     tmp.push(r + c * 26);
-					// update count
+                    // update count
                     countMap.set(r, c+1);
                 }
             }
@@ -44,6 +45,6 @@
     }else{
         res = false;
     }
-    
-    return res;    
+
+    return res;
 };
