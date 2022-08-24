@@ -1,3 +1,4 @@
+// Runtime: 107 ms (Top 43.06%) | Memory: 139.6 MB (Top 38.28%)
 class Solution {
     public int maximumInvitations(int[] favorite) {
         List<List<Integer>> graph = new ArrayList<>();
@@ -25,7 +26,7 @@ class Solution {
         for (List<Integer> pair: pairs) {
             answer += dfs(graph, pair.get(0), visited) + dfs(graph, pair.get(1), visited);
         }
-        
+
         int[] counter = new int[favorite.length];
         int[] round = new int[favorite.length];
 
