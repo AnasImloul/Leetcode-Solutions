@@ -1,6 +1,7 @@
+// Runtime: 7 ms (Top 90.17%) | Memory: 50.3 MB (Top 42.47%)
 class Solution {
     LinkedList<String> res = new LinkedList<>();
-    
+
     public List<String> findItinerary(List<List<String>> tickets) {
         HashMap<String,PriorityQueue<String>> map= new HashMap<>();
         for(int i=0;i<tickets.size();i++){
@@ -12,10 +13,10 @@ class Solution {
             }
             map.get(a).add(b);
         }
-        
+
         dfs("JFK",map);
         return res;
-        
+
     }
     private void dfs(String departure,HashMap<String,PriorityQueue<String>> map){
         PriorityQueue<String> arrivals= map.get(departure);
