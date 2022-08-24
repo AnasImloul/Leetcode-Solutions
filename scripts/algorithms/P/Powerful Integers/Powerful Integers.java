@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 39.15%) | Memory: 41.9 MB (Top 60.38%)
 class Solution {
     public List<Integer> powerfulIntegers(int x, int y, int bound) {
         HashSet<Integer> set = new HashSet<>();
