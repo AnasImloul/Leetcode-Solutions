@@ -1,3 +1,4 @@
+// Runtime: 82 ms (Top 52.25%) | Memory: 75.8 MB (Top 66.61%)
 class Pair{
     int to;
     double prob;
@@ -28,7 +29,7 @@ class Solution {
                 if(((curr.prob)*(x.prob))>probs[x.to]){
                     probs[x.to]=((curr.prob)*(x.prob));
                     pq.offer(new Pair(x.to,probs[x.to]));
-                    
+
                 }
                 else{
                     continue;
