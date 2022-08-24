@@ -1,3 +1,4 @@
+// Runtime: 108 ms (Top 71.63%) | Memory: 49.5 MB (Top 46.05%)
 /**
  * @param {number[]} prices
  * @param {number} fee
