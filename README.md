@@ -4,7 +4,7 @@
 
 
 
-## <div align="left"><img src="/algo.svg" width="32px" align="left"/>Algorithms</div>
+## <div align="left"><img src="icons/algo.svg" width="32px" align="left"/>Algorithms</div>
 
 
 |[0-9](./scripts/algorithms/0-9/#algorithms-solutions)|[A](./scripts/algorithms/A/#algorithms-solutions)|[B](./scripts/algorithms/B/#algorithms-solutions)|[C](./scripts/algorithms/C/#algorithms-solutions)|[D](./scripts/algorithms/D/#algorithms-solutions)|[E](./scripts/algorithms/E/#algorithms-solutions)|[F](./scripts/algorithms/F/#algorithms-solutions)|[G](./scripts/algorithms/G/#algorithms-solutions)|[H](./scripts/algorithms/H/#algorithms-solutions)|[I](./scripts/algorithms/I/#algorithms-solutions)|[J](./scripts/algorithms/J/#algorithms-solutions)|[K](./scripts/algorithms/K/#algorithms-solutions)|[L](./scripts/algorithms/L/#algorithms-solutions)|[M](./scripts/algorithms/M/#algorithms-solutions)|[N](./scripts/algorithms/N/#algorithms-solutions)|
@@ -13,7 +13,7 @@
 
 <br>
 
-## <div align="center left"><img src="/data.svg" width="32px" align="left"/>Database</div>
+## <div align="center left"><img src="icons/data.svg" width="32px" align="left"/>Database</div>
 
 |<span style='color:grey'>  0-9 </span>|[A](./scripts/database/A/#database-solutions)|[B](./scripts/database/B/#database-solutions)|[C](./scripts/database/C/#database-solutions)|[D](./scripts/database/D/#database-solutions)|[E](./scripts/database/E/#database-solutions)|[F](./scripts/database/F/#database-solutions)|[G](./scripts/database/G/#database-solutions)|[H](./scripts/database/H/#database-solutions)|<span style='color:grey'>  I </span>|<span style='color:grey'>  J </span>|<span style='color:grey'>  K </span>|<span style='color:grey'>  L </span>|[M](./scripts/database/M/#database-solutions)|[N](./scripts/database/N/#database-solutions)|
 |:------------------------------------:|:-------------------------------------------:|:-------------------------------------------:|:-------------------------------------------:|:-------------------------------------------:|:-------------------------------------------:|:-------------------------------------------:|:-------------------------------------------:|:-------------------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:-------------------------------------------:|:-------------------------------------------:|
@@ -21,7 +21,7 @@
 
 <br>
 
-## <div align="center left"><img src="/shell.svg" width="32px" align="left"/>Shell</div>
+## <div align="center left"><img src="icons/shell.svg" width="32px" align="left"/>Shell</div>
 
 |<span style='color:grey'>  0-9 </span>|<span style='color:grey'>  A </span>|[B](./scripts/shell/B/#shell-solutions)|<span style='color:grey'>  C </span>|<span style='color:grey'>  D </span>|<span style='color:grey'>  E </span>|<span style='color:grey'>  F </span>|<span style='color:grey'>  G </span>|<span style='color:grey'>  H </span>|<span style='color:grey'>  I </span>|<span style='color:grey'>  J </span>|<span style='color:grey'>  K </span>|<span style='color:grey'>  L </span>|<span style='color:grey'>  M </span>|<span style='color:grey'>  N </span>|
 |:------------------------------------:|:----------------------------------:|:-------------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|
@@ -29,7 +29,7 @@
 
 <br>
 
-## <div align="center left"><img src="/concurrency.svg" width="32px" align="left"/>Concurrency</div>
+## <div align="center left"><img src="icons/concurrency.svg" width="32px" align="left"/>Concurrency</div>
 
 |<span style='color:grey'>  0-9 </span>|<span style='color:grey'>  A </span>|[B](./scripts/concurrency/B/#concurrency-solutions)|<span style='color:grey'>  C </span>|<span style='color:grey'>  D </span>|<span style='color:grey'>  E </span>|[F](./scripts/concurrency/F/#concurrency-solutions)|<span style='color:grey'>  G </span>|<span style='color:grey'>  H </span>|<span style='color:grey'>  I </span>|<span style='color:grey'>  J </span>|<span style='color:grey'>  K </span>|<span style='color:grey'>  L </span>|<span style='color:grey'>  M </span>|<span style='color:grey'>  N </span>|
 |:------------------------------------:|:----------------------------------:|:-------------------------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:-------------------------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|:----------------------------------:|
