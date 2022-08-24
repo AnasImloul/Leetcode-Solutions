@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 75.09%) | Memory: 8.5 MB (Top 12.83%)
 class Solution {
 public:
     int specialArray(vector<int>& nums) {
