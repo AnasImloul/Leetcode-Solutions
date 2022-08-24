@@ -1,3 +1,4 @@
+// Runtime: 76 ms (Top 85.71%) | Memory: 44.9 MB (Top 50.00%)
 /**
  * @param {number} n
  * @return {number}
