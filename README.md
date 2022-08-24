@@ -1,7 +1,8 @@
 <h1 align="center">Leetcode-solutions</h1>
-<p align="center">A Github repo with over 7k+ solutions :rocket: to more than 1800 Leetcode problem written in C++, Python, Java, and Javascript.</p>
-
+<p align="center">A Github repo with over 7k+ solutions :rocket: to more than 1800 Leetcode problem written in C++, Python, Java, and Javascript<br>The solutions are classed in an alphabetical order.</p>
 <br>
+
+
 
 ## <div align="left"><img src="/algo.svg" width="32px" align="left"/>Algorithms</div>
 
