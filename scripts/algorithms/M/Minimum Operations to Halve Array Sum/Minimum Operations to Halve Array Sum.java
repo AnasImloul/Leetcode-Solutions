@@ -1,3 +1,4 @@
+// Runtime: 392 ms (Top 56.62%) | Memory: 107.3 MB (Top 79.45%)
 class Solution {
     public int halveArray(int[] nums) {
         PriorityQueue<Double> q = new PriorityQueue<>(Collections.reverseOrder());
