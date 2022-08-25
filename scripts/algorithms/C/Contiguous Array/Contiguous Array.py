@@ -1,3 +1,4 @@
+// Runtime: 1678 ms (Top 14.14%) | Memory: 19.3 MB (Top 69.39%)
 class Solution:
     def findMaxLength(self, nums: List[int]) -> int:
         max_length =0
@@ -15,7 +16,7 @@ class Solution:
                 # if count is 0, we have a new subarray with length+1
                 max_length=i+1
             if count in hash:
-                max_length=max(max_length,i-hash[count]) 
+                max_length=max(max_length,i-hash[count])
             else:
                 hash[count]=i
         return max_length
