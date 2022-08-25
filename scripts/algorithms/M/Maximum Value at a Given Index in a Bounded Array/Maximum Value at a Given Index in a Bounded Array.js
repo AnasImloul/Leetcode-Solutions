@@ -1,3 +1,4 @@
+// Runtime: 74 ms (Top 88.00%) | Memory: 43.2 MB (Top 44.00%)
 var maxValue = function(n, index, maxSum) {
     function getSum(len,v){
         var sum = 0;
