@@ -1,23 +1,24 @@
+// Runtime: 14 ms (Top 41.48%) | Memory: 50.7 MB (Top 46.85%)
 class MyLinkedList {
-    
+
     public class ListNode {
         public int val;
         public ListNode next;
-        
+
         public ListNode() {
-            
+
         }
-        
+
         public ListNode(int val) {
             this.val = val;
         }
-        
+
         public ListNode(int val, ListNode next) {
             this.val = val;
             this.next = next;
         }
     }
-    
+
     private ListNode head;
     private ListNode tail;
     private int length;
@@ -25,7 +26,7 @@ class MyLinkedList {
     public MyLinkedList() {
         length = 0;
     }
-    
+
     public int get(int index) {
         if (index > length - 1 || index < 0) return -1;
         int thisIndex = 0;
@@ -36,13 +37,13 @@ class MyLinkedList {
         }
         return temp.val;
     }
-    
+
     public void addAtHead(int val) {
         head = new ListNode(val, head);
         length++;
         if (length == 1) tail = head;
     }
-    
+
     public void addAtTail(int val) {
         length++;
         if (length == 1) {
@@ -54,7 +55,7 @@ class MyLinkedList {
         tail.next = new ListNode(val);
         tail = tail.next;
     }
-    
+
     public void addAtIndex(int index, int val) {
         if (index <= length) {
             if (index == 0) {
@@ -75,7 +76,7 @@ class MyLinkedList {
             temp.next = new ListNode(val, temp.next);
         }
     }
-    
+
     public void deleteAtIndex(int index) {
         if (index >= length || index < 0) return;
         length--;
