@@ -1,3 +1,4 @@
+// Runtime: 2522 ms (Top 39.98%) | Memory: 66.3 MB (Top 18.63%)
 class Solution:
     def spiralMatrix(self, m: int, n: int, head: Optional[ListNode]) -> List[List[int]]:
         num = m * n
