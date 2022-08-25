@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 23.02%) | Memory: 5.9 MB (Top 36.86%)
 class Solution {
 public:
     int minOperations(int n) {
