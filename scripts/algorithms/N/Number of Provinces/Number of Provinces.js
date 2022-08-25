@@ -1,3 +1,4 @@
+// Runtime: 110 ms (Top 51.77%) | Memory: 45.5 MB (Top 30.12%)
 function DisjointSet (size) {
     this.root = []
     this.rank = []
