@@ -1,8 +1,9 @@
+// Runtime: 55 ms (Top 99.11%) | Memory: 42 MB (Top 77.88%)
 var longestDiverseString = function(a, b, c) {
     let str = '', aCount = 0, bCount = 0, cCount = 0;
     let len = a + b + c;
     for(let i = 0; i < len; i++) {
-        if (a >= b && a >= c && aCount != 2 || bCount == 2 && a > 0 || cCount == 2 && a > 0)  { 
+        if (a >= b && a >= c && aCount != 2 || bCount == 2 && a > 0 || cCount == 2 && a > 0) {
             adjustCounts('a', aCount+1, 0, 0);
             a--;
         } else if (b >= a && b >= c && bCount != 2 || aCount == 2 && b > 0 || cCount == 2 && b > 0) {
@@ -13,13 +14,13 @@ var longestDiverseString = function(a, b, c) {
             c--;
         }
     }
-    
+
     function adjustCounts(letter, newA, newB, newC){
         aCount = newA;
         bCount = newB;
         cCount = newC;
         str += letter;
     }
-    
+
     return str;
 };
