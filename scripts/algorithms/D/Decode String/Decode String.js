@@ -1,6 +1,7 @@
+// Runtime: 84 ms (Top 55.68%) | Memory: 41.5 MB (Top 92.94%)
 var decodeString = function(s) {
     const stack = [];
-    
+
     for (let char of s) {
          if (char === "]") {
             let curr = stack.pop();
@@ -17,11 +18,11 @@ var decodeString = function(s) {
             }
             stack.push(curr);
             for (let i=0; i<Number(num);i++) {
-                stack.push(str);    
+                stack.push(str);
             }
-        } 
+        }
         else stack.push(char);
     }
-    
+
     return stack.join('');
 };
