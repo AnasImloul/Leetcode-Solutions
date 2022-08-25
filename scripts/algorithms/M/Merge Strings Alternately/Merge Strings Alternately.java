@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 93.63%) | Memory: 41.7 MB (Top 86.60%)
 class Solution {
     public String mergeAlternately(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
