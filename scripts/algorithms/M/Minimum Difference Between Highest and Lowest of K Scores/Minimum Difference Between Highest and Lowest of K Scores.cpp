@@ -1,3 +1,4 @@
+// Runtime: 16 ms (Top 92.85%) | Memory: 13.7 MB (Top 67.83%)
 class Solution {
 public:
     int minimumDifference(vector<int>& nums, int k) {
