@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 71.23%) | Memory: 45.5 MB (Top 49.32%)
 class Solution {
   public int largestMagicSquare(int[][] grid) {
     int m = grid.length;
@@ -56,8 +57,8 @@ class Solution {
 
     // check both diagonal
     int diagonal = 0;
-    //  \
-    //   \
+    // \
+    // \
     for (int k = 0; k < l; k++) {
       diagonal += grid[i + k][j + k];
     }
@@ -66,8 +67,8 @@ class Solution {
       return false;
     }
 
-    //   /
-    //  /
+    // /
+    // /
     for (int k = 0; k < l; k++) {
       diagonal -= grid[i + l - 1 - k][j + k];
     }
