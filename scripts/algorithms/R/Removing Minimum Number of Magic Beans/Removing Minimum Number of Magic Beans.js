@@ -1,3 +1,4 @@
+// Runtime: 419 ms (Top 42.86%) | Memory: 59 MB (Top 60.32%)
 /**
  * @param {number[]} beans
  * @return {number}
