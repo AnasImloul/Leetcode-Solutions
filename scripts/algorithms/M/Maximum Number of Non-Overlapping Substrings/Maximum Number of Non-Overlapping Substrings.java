@@ -1,3 +1,4 @@
+// Runtime: 132 ms (Top 24.51%) | Memory: 55.2 MB (Top 53.55%)
 class Solution {
     public List<String> maxNumOfSubstrings(String s) {
         int n = s.length();
@@ -18,7 +19,7 @@ class Solution {
                 bit[i].set(s.charAt(j)-'a');
             }
         }
-        boolean go = true; 
+        boolean go = true;
         while(go){ // keep merging until there is no more range change.
             go = false;
             for (int i = 0; i < 26; i++){
@@ -34,7 +35,7 @@ class Solution {
         }
         List<String> ans = new ArrayList<>();
         boolean[] seen = new boolean[n];
-        for (int i = 0; i < 26; i++){ // populate the answer 
+        for (int i = 0; i < 26; i++){ // populate the answer
             boolean ok = L[i] >= 0 && !seen[L[i]];
             for (int j = 0; j < 26 && ok; j++){
                 if (i != j && L[j] >= 0){ // only take those that has no smaller valid ranges.
