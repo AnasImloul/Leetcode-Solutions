@@ -1,3 +1,4 @@
+// Runtime: 1019 ms (Top 30.96%) | Memory: 17.6 MB (Top 38.10%)
 class Solution {
 public:
     long long wonderfulSubstrings(string word) {
@@ -14,14 +15,13 @@ public:
                int x=temp^(1<<j);
                 ans+=m[x];
                 j++;
-                
+
             }
             ans+=m[mask];
             m[mask]++;
         }
-        
-        
+
         return ans;
-        
+
     }
 };
