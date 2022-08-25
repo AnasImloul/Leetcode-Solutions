@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 30.76%) | Memory: 6.8 MB (Top 63.53%)
 class Solution {
 public:
     bool isValidSerialization(string preorder) {
