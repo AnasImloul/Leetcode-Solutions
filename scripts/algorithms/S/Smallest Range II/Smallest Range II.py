@@ -1,3 +1,4 @@
+// Runtime: 2599 ms (Top 5.22%) | Memory: 15.4 MB (Top 17.63%)
 class Solution:
     def smallestRangeII(self, lis: List[int], k: int) -> int:
         lis.sort()
@@ -9,5 +10,5 @@ class Solution:
             maxi = max(l[-1]+k, r[-1]-k)
             ans = min(ans, maxi-mini)
         return ans
-            
-	```
+
+    ```
