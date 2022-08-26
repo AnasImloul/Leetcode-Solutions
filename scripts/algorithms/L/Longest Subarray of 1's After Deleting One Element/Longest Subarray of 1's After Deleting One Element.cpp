@@ -1,3 +1,4 @@
+// Runtime: 76 ms (Top 31.66%) | Memory: 36.5 MB (Top 84.20%)
 class Solution {
 public:
     int longestSubarray(vector<int>& nums) {
