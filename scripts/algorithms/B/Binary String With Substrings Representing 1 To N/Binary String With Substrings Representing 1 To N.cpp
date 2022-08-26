@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 42.03%) | Memory: 6.5 MB (Top 32.61%)
 class Solution {
 public:
     bool queryString(string s, int n) {
