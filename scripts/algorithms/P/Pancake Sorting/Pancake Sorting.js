@@ -1,3 +1,4 @@
+// Runtime: 134 ms (Top 20.79%) | Memory: 44.1 MB (Top 74.26%)
 var pancakeSort = function(arr) {
 let res = [];
 
