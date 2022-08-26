@@ -1,3 +1,4 @@
+// Runtime: 19 ms (Top 100.00%) | Memory: 22 MB (Top 65.01%)
 class Solution {
 public:
     bool simplified(int n, int i){
@@ -8,7 +9,7 @@ public:
         if(n>1) return false;
         else return true;
     }
-    
+
     vector<string> simplifiedFractions(int n) {
         vector<string> ans;
         while(n>1){
