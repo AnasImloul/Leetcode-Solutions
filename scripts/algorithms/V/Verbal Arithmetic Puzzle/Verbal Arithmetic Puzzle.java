@@ -1,3 +1,4 @@
+// Runtime: 31 ms (Top 67.39%) | Memory: 49 MB (Top 10.87%)
 class Solution {
     public boolean isSolvable(String[] words, String result) {
         boolean[] l = new boolean[26]; // init for all info here in this huge block
@@ -28,7 +29,7 @@ class Solution {
     }
 
     private boolean solve(int idx, int carry, boolean[] l, List<Integer>[] d, int[] r, int[] a, int[] b){
-        if (idx == -1){ // this function indicates that we are done with a list, moving onto the next list 
+        if (idx == -1){ // this function indicates that we are done with a list, moving onto the next list
             return r.length>d.length? carry > 0 &&
                    ok(carry, r[0], a, b) : carry == 0;
         }
@@ -75,6 +76,6 @@ class Solution {
 
     private boolean ok(int d, int c, int[] a, int[] b){ // check if there is a conflict.
         return a[c] == -1 && b[d] == -1
-            || a[c] ==  d && b[d] == c;
+            || a[c] == d && b[d] == c;
     }
 }
