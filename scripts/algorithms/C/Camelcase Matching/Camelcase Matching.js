@@ -1,3 +1,4 @@
+// Runtime: 117 ms (Top 20.64%) | Memory: 42.2 MB (Top 53.97%)
 var camelMatch = function(queries, pattern) {
     function camelMatch(q, p){
         let qlist=[]
@@ -14,6 +15,6 @@ var camelMatch = function(queries, pattern) {
         }
         return pi===p.length
     }
-    
+
     return queries.map(q=>seqMatch(q, pattern))
 }
