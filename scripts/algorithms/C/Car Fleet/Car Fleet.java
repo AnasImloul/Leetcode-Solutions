@@ -1,3 +1,4 @@
+// Runtime: 186 ms (Top 36.59%) | Memory: 87.4 MB (Top 48.79%)
 class Solution {
     class pair implements Comparable<pair>{
         int pos;
