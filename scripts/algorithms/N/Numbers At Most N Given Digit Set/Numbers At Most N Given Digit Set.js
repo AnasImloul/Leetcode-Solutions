@@ -1,3 +1,4 @@
+// Runtime: 68 ms (Top 95.45%) | Memory: 41.6 MB (Top 100.00%)
 var atMostNGivenDigitSet = function(digits, n) {
     const asString = ""+ n;
     let smaller = 0;
