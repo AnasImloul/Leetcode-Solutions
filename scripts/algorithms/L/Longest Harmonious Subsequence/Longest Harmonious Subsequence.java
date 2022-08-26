@@ -1,3 +1,4 @@
+// Runtime: 26 ms (Top 74.55%) | Memory: 54.5 MB (Top 74.21%)
 class Solution {
     public static int firstOccurence(int[] arr,int target)
     {
