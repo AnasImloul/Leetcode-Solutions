@@ -1,21 +1,22 @@
+// Runtime: 8 ms (Top 6.60%) | Memory: 7 MB (Top 20.63%)
 class MyStack {
 public:
     queue<int> q1;
     queue<int> q2;
     MyStack() {
-        
+
     }
-    
+
     void push(int x) {
         q1.push(x);
     }
-    
+
     int pop() {
-        
+
         while(q1.size() !=1){
          int temp = q1.front();
             q1.pop();
-            q2.push(temp);   
+            q2.push(temp);
         }
         int temp = q1.front();
         q1.pop();
@@ -26,12 +27,12 @@ public:
         }
         return temp;
     }
-    
+
     int top() {
         while(q1.size() !=1){
          int temp = q1.front();
             q1.pop();
-            q2.push(temp);   
+            q2.push(temp);
         }
         int temp = q1.front();
         q1.pop();
@@ -43,7 +44,7 @@ public:
         }
         return temp;
     }
-    
+
     bool empty() {
         if(q1.empty()){
             return true;
