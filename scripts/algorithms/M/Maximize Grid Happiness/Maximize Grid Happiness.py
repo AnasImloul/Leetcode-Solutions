@@ -1,3 +1,4 @@
+// Runtime: 2256 ms (Top 53.49%) | Memory: 63.7 MB (Top 23.26%)
 from functools import lru_cache
 class Solution:
     def getMaxGridHappiness(self, m: int, n: int, introvertsCount: int, extrovertsCount: int) -> int:
@@ -18,7 +19,7 @@ class Solution:
                 ternary.append(tmp % 3)
                 tmp //= 3
             mask_all[mask] = ternary[::-1]
-            rolling[mask] = [ #get the three states after a slide 
+            rolling[mask] = [ #get the three states after a slide
                 mask % highest * 3 + 0,
                 mask % highest * 3 + 1,
                 mask % highest * 3 + 2
@@ -30,12 +31,12 @@ class Solution:
             x, y = divmod(pos, n)
             #put 0 in pos
             best = dfs(pos + 1, rolling[borderline][0], i, e)
-			#put 1 in pos
+            #put 1 in pos
             if i > 0:
                 best = max(best, 120 + calc(1, mask_all[borderline][0]) +
                           (0 if y == 0 else calc(1, mask_all[borderline][n - 1])) +
                           dfs(pos + 1, rolling[borderline][1], i - 1, e))
-			#put 2 in pos
+            #put 2 in pos
             if e > 0:
                 best = max(best, 40 + calc(2, mask_all[borderline][0]) +
                           (0 if y == 0 else calc(2, mask_all[borderline][n - 1])) +
