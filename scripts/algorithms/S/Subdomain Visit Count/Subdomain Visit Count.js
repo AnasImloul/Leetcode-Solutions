@@ -1,3 +1,4 @@
+// Runtime: 146 ms (Top 31.11%) | Memory: 46.7 MB (Top 73.89%)
 /**
  * @param {string[]} cpdomains
  * @return {string[]}
@@ -17,4 +18,3 @@ var subdomainVisits = function(cpdomains) {
     for(let key in map) result.push(map[key] + " "+ key)
     return result
 };
-
