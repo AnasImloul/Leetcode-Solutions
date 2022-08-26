@@ -1,24 +1,25 @@
+// Runtime: 3 ms (Top 42.85%) | Memory: 6.7 MB (Top 18.22%)
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
         vector<vector<int>> vec( n , vector<int> (n, 0));
-        
+
         vector<int>helper;
         for(int i=0;i<n*n;i++){
             helper.push_back(i+1);
         }
-        
+
         int k = 0;
         int top = 0;
         int down = n-1;
-        
+
         int left = 0;
         int right = n-1;
-        
+
         int direction = 0;
-        
+
         vector<int>result;
-        
+
         while(top<=down and left<=right){
             if(direction==0){
                 for(int i=left;i<=right;i++){
