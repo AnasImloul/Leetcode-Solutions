@@ -1,5 +1,4 @@
-// Runtime: 212 ms (Top 38.91%) | Memory: 16.2 MB (Top 66.09%)
-
+// Runtime: 124 ms (Top 78.91%) | Memory: 16.3 MB (Top 35.00%)
 //When the xor of all the even times numbers are done it results in 0. The xor of the vowels are done by indicating
 //them with a single digit and the xor value is stored in a map
 class Solution {
