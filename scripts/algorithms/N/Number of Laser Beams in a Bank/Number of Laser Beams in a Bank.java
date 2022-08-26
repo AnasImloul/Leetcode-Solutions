@@ -1,3 +1,4 @@
+// Runtime: 34 ms (Top 22.34%) | Memory: 54.9 MB (Top 32.26%)
 class Solution {
     public int numberOfBeams(String[] bank) {
         int ans = 0, pre = 0;
