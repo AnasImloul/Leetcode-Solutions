@@ -1,3 +1,4 @@
+// Runtime: 20 ms (Top 58.35%) | Memory: 143.3 MB (Top 38.21%)
 class Solution {
     // O(sLen + queries.length) time, O(sLen) space
     public int[] platesBetweenCandles(String s, int[][] queries) {
