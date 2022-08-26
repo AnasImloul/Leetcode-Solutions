@@ -1,3 +1,4 @@
+// Runtime: 11 ms (Top 85.53%) | Memory: 42.5 MB (Top 53.95%)
 class Solution {
     public int minDistance(int[] houses, int k) {
         Arrays.sort(houses);
