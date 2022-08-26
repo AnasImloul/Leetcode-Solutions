@@ -1,3 +1,4 @@
+// Runtime: 238 ms (Top 81.29%) | Memory: 62.6 MB (Top 82.53%)
 class Solution {
 public:
     void dfs(vector<vector<int>> &graph,int i,int j,vector<vector<int>> &ans,vector<bool> &vis){
@@ -7,11 +8,11 @@ public:
                 ans[x].push_back(i);
                 dfs(graph,i,x,ans,vis);
             }
-            
+
         }
     }
     vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges) {
-        
+
         vector<vector<int>> ans(n),graph(n);
         for(auto &v:edges){
             graph[v[0]].push_back(v[1]);
