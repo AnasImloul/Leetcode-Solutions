@@ -1,3 +1,4 @@
+// Runtime: 27 ms (Top 11.43%) | Memory: 66.7 MB (Top 10.52%)
 class Solution {
     int []parent;
     int []rank;
@@ -18,7 +19,7 @@ class Solution {
         int count=0;
         for(int i=0;i<parent.length;i++){
             if(parent[i]!=i||rank[i]>0){
-              count++;   
+              count++;
             }
         }
         return count;
