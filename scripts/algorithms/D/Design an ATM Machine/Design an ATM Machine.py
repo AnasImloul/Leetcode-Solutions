@@ -1,3 +1,4 @@
+// Runtime: 906 ms (Top 67.28%) | Memory: 18 MB (Top 21.66%)
 class ATM:
     def __init__(self):
         self.cash = [0] * 5
@@ -18,4 +19,3 @@ class ATM:
             return res
         else:
             return [-1]
-
