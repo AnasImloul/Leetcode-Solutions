@@ -1,4 +1,4 @@
-// Runtime: 112 ms (Top 35.59%) | Memory: 31.8 MB (Top 95.34%)
+// Runtime: 73 ms (Top 69.07%) | Memory: 31.8 MB (Top 95.34%)
 class Solution {
 public:
     bool validateBinaryTreeNodes(int n, vector<int>& leftChild, vector<int>& rightChild) {
