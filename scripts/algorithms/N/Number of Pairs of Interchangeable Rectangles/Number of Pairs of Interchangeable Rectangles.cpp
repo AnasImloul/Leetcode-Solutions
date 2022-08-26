@@ -1,3 +1,4 @@
+// Runtime: 610 ms (Top 86.39%) | Memory: 140.5 MB (Top 68.04%)
 class Solution {
 public:
     long long interchangeableRectangles(vector<vector<int>>& rectangles) {
@@ -8,7 +9,7 @@ public:
             mp[ratio]++;
         }
         long long count = 0;
-                
+
         for(auto i: mp){
             long long x = i.second;
             x = (x * (x-1))/2.0;
