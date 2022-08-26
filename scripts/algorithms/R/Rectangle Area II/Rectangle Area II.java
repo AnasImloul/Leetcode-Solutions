@@ -1,3 +1,4 @@
+// Runtime: 32 ms (Top 17.31%) | Memory: 42.3 MB (Top 86.54%)
 class Solution {
       public int rectangleArea(int[][] rectangles) {
           int n = rectangles.length;
@@ -7,12 +8,12 @@ class Solution {
               coorx.add(rec[0]); coorx.add(rec[2]);
               coory.add(rec[1]); coory.add(rec[3]);
           }
-          
+
           Integer[] compressx = coorx.toArray(new Integer[0]);
           Arrays.sort(compressx);
           Integer[] compressy = coory.toArray(new Integer[0]);
           Arrays.sort(compressy);
-          
+
           Map<Integer, Integer> mapx = new HashMap<>();
           for(int i = 0; i < compressx.length; i++) {
               mapx.put(compressx[i], i);
@@ -21,7 +22,7 @@ class Solution {
           for(int i = 0; i < compressy.length; i++) {
               mapy.put(compressy[i], i);
           }
-          
+
           boolean[][] grid = new boolean[compressx.length][compressy.length];
           for (int[] rec: rectangles) {
               for (int x = mapx.get(rec[0]); x < mapx.get(rec[2]); x++) {
@@ -30,7 +31,7 @@ class Solution {
                   }
               }
           }
-          
+
           long res = 0L;
           for (int i = 0; i < grid.length; i++) {
               for (int j = 0; j < grid[0].length; j++) {
