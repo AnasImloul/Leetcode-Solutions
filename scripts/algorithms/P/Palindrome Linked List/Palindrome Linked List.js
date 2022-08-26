@@ -1,8 +1,9 @@
+// Runtime: 157 ms (Top 94.07%) | Memory: 62.9 MB (Top 99.05%)
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
+ * this.val = (val===undefined ? 0 : val)
+ * this.next = (next===undefined ? null : next)
  * }
  */
 /**
