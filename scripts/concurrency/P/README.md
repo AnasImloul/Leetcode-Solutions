@@ -1,8 +1,8 @@
-# Concurrency-solutions
-This folder contains Solutions to 3 Concurrency Leetcode problems that starts with 'P' written in the following programming languages ( Python ,C++ ).<br><br>
-### Problems ###
-|problems|langages|difficulty|Leetcode|
-|:-------|:------:|:--------:|:------:|
-|[Print FooBar Alternately](./Print%20FooBar%20Alternately)|[C++](./Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.cpp), [Python](./Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.py)|Medium|[link](https://leetcode.com/problems/print-foobar-alternately)|
-|[Print in Order](./Print%20in%20Order)|[C++](./Print%20in%20Order/Print%20in%20Order.cpp), [Python](./Print%20in%20Order/Print%20in%20Order.py)|Easy|[link](https://leetcode.com/problems/print-in-order)|
-|[Print Zero Even Odd](./Print%20Zero%20Even%20Odd)|[C++](./Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.cpp), [Python](./Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.py)|Medium|[link](https://leetcode.com/problems/print-zero-even-odd)|
+## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/concurrency.svg" width="32px" align="left"/>Concurrency-solutions</div>
+<br>
+
+| Problem name | Difficulty | Languages | LeetCode |
+|:-------------|:----------:|:----------|:--------:|
+|[Print in Order](./Print%20in%20Order)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/easy.svg" height="12px" align="center"/>|<a href="./Print%20in%20Order/Print%20in%20Order.cpp"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Print%20in%20Order/Print%20in%20Order.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/python.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/print-in-order)|
+|[Print FooBar Alternately](./Print%20FooBar%20Alternately)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.cpp"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Print%20FooBar%20Alternately/Print%20FooBar%20Alternately.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/python.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/print-foobar-alternately)|
+|[Print Zero Even Odd](./Print%20Zero%20Even%20Odd)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.cpp"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Print%20Zero%20Even%20Odd/Print%20Zero%20Even%20Odd.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/python.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/print-zero-even-odd)|

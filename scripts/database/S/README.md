@@ -1,9 +1,9 @@
-# Database-solutions
-This folder contains Solutions to 4 Database Leetcode problems that starts with 'S' written in the following programming languages ( Mysql ).<br><br>
-### Problems ###
-|problems|langages|difficulty|Leetcode|
-|:-------|:------:|:--------:|:------:|
-|[Sales Analysis III](./Sales%20Analysis%20III)|[Mysql](./Sales%20Analysis%20III/Sales%20Analysis%20III.sql)|Easy|[link](https://leetcode.com/problems/sales-analysis-iii)|
-|[Sales Person](./Sales%20Person)|[Mysql](./Sales%20Person/Sales%20Person.sql)|Easy|[link](https://leetcode.com/problems/sales-person)|
-|[Second Highest Salary](./Second%20Highest%20Salary)|[Mysql](./Second%20Highest%20Salary/Second%20Highest%20Salary.sql)|Medium|[link](https://leetcode.com/problems/second-highest-salary)|
-|[Swap Salary](./Swap%20Salary)|[Mysql](./Swap%20Salary/Swap%20Salary.sql)|Easy|[link](https://leetcode.com/problems/swap-salary)|
+## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/data.svg" width="32px" align="left"/>Database-solutions</div>
+<br>
+
+| Problem name | Difficulty | Languages | LeetCode |
+|:-------------|:----------:|:----------|:--------:|
+|[Second Highest Salary](./Second%20Highest%20Salary)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Second%20Highest%20Salary/Second%20Highest%20Salary.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/second-highest-salary)|
+|[Sales Person](./Sales%20Person)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/easy.svg" height="12px" align="center"/>|<a href="./Sales%20Person/Sales%20Person.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/sales-person)|
+|[Swap Salary](./Swap%20Salary)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/easy.svg" height="12px" align="center"/>|<a href="./Swap%20Salary/Swap%20Salary.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/swap-salary)|
+|[Sales Analysis III](./Sales%20Analysis%20III)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/easy.svg" height="12px" align="center"/>|<a href="./Sales%20Analysis%20III/Sales%20Analysis%20III.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/sales-analysis-iii)|

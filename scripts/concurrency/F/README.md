@@ -1,6 +1,6 @@
-# Concurrency-solutions
-This folder contains Solutions to 1 Concurrency Leetcode problems that starts with 'F' written in the following programming languages ( Python ).<br><br>
-### Problems ###
-|problems|langages|difficulty|Leetcode|
-|:-------|:------:|:--------:|:------:|
-|[Fizz Buzz Multithreaded](./Fizz%20Buzz%20Multithreaded)|[C++](./Fizz%20Buzz%20Multithreaded/Fizz%20Buzz%20Multithreaded.cpp), [Python](./Fizz%20Buzz%20Multithreaded/Fizz%20Buzz%20Multithreaded.py)|Medium|[link](https://leetcode.com/problems/fizz-buzz-multithreaded)|
+## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/concurrency.svg" width="32px" align="left"/>Concurrency-solutions</div>
+<br>
+
+| Problem name | Difficulty | Languages | LeetCode |
+|:-------------|:----------:|:----------|:--------:|
+|[Fizz Buzz Multithreaded](./Fizz%20Buzz%20Multithreaded)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Fizz%20Buzz%20Multithreaded/Fizz%20Buzz%20Multithreaded.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/python.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/fizz-buzz-multithreaded)|

@@ -1,9 +1,8 @@
-# Database-solutions
-This folder contains Solutions to 4 Database Leetcode problems that starts with 'T' written in the following programming languages ( Mysql ).<br><br>
-### Problems ###
-|problems|langages|difficulty|Leetcode|
-|:-------|:------:|:--------:|:------:|
-|[The Latest Login in 2020](./The%20Latest%20Login%20in%202020)|[Mysql](./The%20Latest%20Login%20in%202020/The%20Latest%20Login%20in%202020.sql)|Easy|[link](https://leetcode.com/problems/the-latest-login-in-2020)|
-|[Top Travellers](./Top%20Travellers)|[Mysql](./Top%20Travellers/Top%20Travellers.sql)|Easy|[link](https://leetcode.com/problems/top-travellers)|
-|[Tree Node](./Tree%20Node)|[Mysql](./Tree%20Node/Tree%20Node.sql)|Medium|[link](https://leetcode.com/problems/tree-node)|
-|[Trips and Users](./Trips%20and%20Users)|[Mysql](./Trips%20and%20Users/Trips%20and%20Users.sql)|Hard|[link](https://leetcode.com/problems/trips-and-users)|
+## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/data.svg" width="32px" align="left"/>Database-solutions</div>
+<br>
+
+| Problem name | Difficulty | Languages | LeetCode |
+|:-------------|:----------:|:----------|:--------:|
+|[Trips and Users](./Trips%20and%20Users)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/hard.svg" height="12px" align="center"/>|<a href="./Trips%20and%20Users/Trips%20and%20Users.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/trips-and-users)|
+|[Tree Node](./Tree%20Node)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Tree%20Node/Tree%20Node.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/tree-node)|
+|[Top Travellers](./Top%20Travellers)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/easy.svg" height="12px" align="center"/>|<a href="./Top%20Travellers/Top%20Travellers.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/top-travellers)|
