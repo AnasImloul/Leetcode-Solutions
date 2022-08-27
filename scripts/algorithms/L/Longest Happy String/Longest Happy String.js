@@ -1,4 +1,4 @@
-// Runtime: 55 ms (Top 99.11%) | Memory: 42 MB (Top 77.88%)
+// Runtime: 112 ms (Top 17.70%) | Memory: 41.8 MB (Top 94.69%)
 var longestDiverseString = function(a, b, c) {
     let str = '', aCount = 0, bCount = 0, cCount = 0;
     let len = a + b + c;
