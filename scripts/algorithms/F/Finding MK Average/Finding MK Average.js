@@ -1,3 +1,4 @@
+// Runtime: 4716 ms (Top 20.00%) | Memory: 181.4 MB (Top 20.00%)
 
 class ArraySegTree{
     // Array to perfrom operations on, range query operation, PointUpdate operation
@@ -26,7 +27,7 @@ class ArraySegTree{
         return this.op(
                 this.rangeQuery(l,Math.min(r,mid),tl,mid,idx*2),
                 this.rangeQuery(Math.max(l,mid+1),r,mid+1,tr,idx*2+1)
-        ) 
+        )
     }
     //just specify arrIdx,newVal on actual pointUpdates
     pointUpdate=(arrIdx,newVal,tl=0,tr=this.n-1,idx=1)=>{
@@ -59,7 +60,7 @@ var MKAverage = function(m, k) {
     this.S2=new ArraySegTree([...Array(1e5+2)].map(d=>0))//sums
 };
 
-/** 
+/**
  * @param {number} num
  * @return {void}
  */
@@ -80,15 +81,15 @@ MKAverage.prototype.addElement = function(num) {
 MKAverage.prototype.calculateMKAverage = function() {
     if(this.A.length<this.m)
         return -1
-    
+
     let S=this.S1.seachPrefixIndex(this.k+1),
         count1=this.S1.rangeQuery(0,S),
         take=(count1-this.k)*S
-    
+
     let E=this.S1.seachPrefixIndex(this.m-this.k),
         count2=this.S1.rangeQuery(0,E),
         remove=(count2-this.m+this.k)*E
-    
+
     let midSum=this.S2.rangeQuery(S+1,E)
     return (take+midSum-remove)/this.div>>0
 };
