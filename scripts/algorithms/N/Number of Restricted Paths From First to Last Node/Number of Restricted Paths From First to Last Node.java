@@ -1,3 +1,4 @@
+// Runtime: 411 ms (Top 5.65%) | Memory: 130.8 MB (Top 66.13%)
 class Solution {
     int dp[];
     //We use memoization
@@ -20,14 +21,14 @@ class Solution {
         pq.offer(base);
         while(!pq.isEmpty()){
             int[] currNode = pq.poll();
-            
+
             for(Map.Entry<Integer, Integer> neighbour: graph.get(currNode[0]).entrySet()){
                 int node = neighbour.getKey();
                 int d = neighbour.getValue()+currNode[1];
                 if(node==n) continue;
                 //Select only those neighbours, whose new distance is less than existing distance
                 //New distance = distance of currNode from n + weight of edge between currNode and neighbour
-            
+
                 if( dist[node]==0 || d < dist[node]){
                     int[] newNode = new int[2];
                     newNode[0]=node;
@@ -45,8 +46,8 @@ class Solution {
         if(node==n){
             return 1;
         }
-        
-        //Memoization avoid computaion of common subproblems. 
+
+        //Memoization avoid computaion of common subproblems.
         if(dp[node]!=-1) return dp[node];
 
         int ans = 0;
@@ -57,7 +58,7 @@ class Solution {
                     ans = (ans + find(currNode, graph, n, dist)) % 1000000007;
             }
         }
-        
+
         return dp[node] = ans;
     }
 }
