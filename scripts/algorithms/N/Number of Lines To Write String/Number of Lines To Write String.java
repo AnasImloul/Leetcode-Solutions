@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 73.53%) | Memory: 41.8 MB (Top 76.89%)
 class Solution {
     public int[] numberOfLines(int[] widths, String s) {
             int sum=0,count=0;
