@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 42.4 MB (Top 93.53%)
 class Solution {
     public boolean evaluateTree(TreeNode root) {
         if(root.val == 1)
