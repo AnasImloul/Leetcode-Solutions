@@ -1,3 +1,4 @@
+// Runtime: 125 ms (Top 33.41%) | Memory: 82.2 MB (Top 27.68%)
 class Solution {
     public int maximumSum(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
