@@ -1,3 +1,4 @@
+// Runtime: 133 ms (Top 21.62%) | Memory: 42.3 MB (Top 86.49%)
 var lastStoneWeightII = function(stones) {
     var sum = stones.reduce((a, b) => a + b);
     var target = Math.ceil(sum / 2);
