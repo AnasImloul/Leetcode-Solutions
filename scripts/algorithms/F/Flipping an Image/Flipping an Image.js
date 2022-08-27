@@ -1,3 +1,4 @@
+// Runtime: 83 ms (Top 79.20%) | Memory: 44.5 MB (Top 14.19%)
 var flipAndInvertImage = function(image) {
     const resversedArr = []
     for(let i=0; i<image.length; i++){
