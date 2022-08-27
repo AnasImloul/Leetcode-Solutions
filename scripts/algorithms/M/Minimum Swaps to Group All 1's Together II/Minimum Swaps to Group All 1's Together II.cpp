@@ -1,3 +1,4 @@
+// Runtime: 229 ms (Top 10.78%) | Memory: 80.5 MB (Top 44.03%)
 class Solution {
 public:
     int minSwaps(vector<int>& nums) {
@@ -7,9 +8,9 @@ public:
             if(nums[i]==1) ones++;
         }
         if(ones<=1) return 0;
-        
+
         int k = ones; // sliding window length
-        int maxOnes = 0; // maxOnes in sub array of length k 
+        int maxOnes = 0; // maxOnes in sub array of length k
         int cnt = 0;
         for(int i=0;i<k;i++){
             if(nums[i]==1) cnt++;
@@ -20,6 +21,6 @@ public:
             if(nums[i%n]==1) cnt++; // if element adding to window is 1, then increase count.
             maxOnes = max(maxOnes,cnt); // maintaing maxOnes for all sub arrays of length k.
         }
-        return(k - maxOnes); // (total length of subarray - ones in the sub array found) 
+        return(k - maxOnes); // (total length of subarray - ones in the sub array found)
     }
 };
