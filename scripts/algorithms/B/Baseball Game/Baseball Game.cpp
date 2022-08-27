@@ -1,3 +1,4 @@
+// Runtime: 11 ms (Top 21.91%) | Memory: 8.5 MB (Top 29.43%)
 class Solution {
 public:
     int calPoints(vector<string>& ops) {
