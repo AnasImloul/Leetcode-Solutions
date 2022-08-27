@@ -1,8 +1,9 @@
+// Runtime: 98 ms (Top 42.29%) | Memory: 42.5 MB (Top 72.31%)
 var generateParenthesis = function(n) {
     let ans = []
     generate_parenthisis(n, 0, 0, "")
     return ans
-    
+
     function generate_parenthisis(n, open, close, res){
 
         if(open==n && close == n){
