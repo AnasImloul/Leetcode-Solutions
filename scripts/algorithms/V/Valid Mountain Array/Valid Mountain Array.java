@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 77.02%) | Memory: 54.3 MB (Top 41.77%)
 class Solution {
     public boolean validMountainArray(int[] arr) {
         // edge case
