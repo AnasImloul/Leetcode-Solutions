@@ -1,3 +1,4 @@
+// Runtime: 298 ms (Top 20.37%) | Memory: 77.6 MB (Top 7.41%)
 /**
  * @param {string} binary
  * @return {string}
@@ -24,7 +25,7 @@ var maximumBinaryString = function(binary) {
         }
     }
     if(firstZeroIndex==-1){
-        return  binary; 
+        return binary;
     }
     let onlyZeroInAns = firstZeroIndex + (zeroCount-1);
     for(let i=0;i<binary.length;i++){
