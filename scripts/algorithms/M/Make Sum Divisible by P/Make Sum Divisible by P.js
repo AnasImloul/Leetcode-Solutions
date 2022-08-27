@@ -1,3 +1,4 @@
+// Runtime: 181 ms (Top 72.22%) | Memory: 63.8 MB (Top 94.44%)
 var minSubarray = function(nums, p) {
     let n = nums.length;
     let map = new Map([[0,-1]])
@@ -6,7 +7,7 @@ var minSubarray = function(nums, p) {
         total += nums[i]
     }
     total = total % p
-    
+
     for(let i=0; i<n; i++){
         sum = (sum + nums[i]) % p
         map.set(sum, i)
