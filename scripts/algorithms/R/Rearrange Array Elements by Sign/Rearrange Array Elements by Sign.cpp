@@ -1,3 +1,4 @@
+// Runtime: 604 ms (Top 5.08%) | Memory: 138.6 MB (Top 22.35%)
 class Solution {
 // Uncomment/comment the below two lines for logs
 // #define ENABLE_LOG(...) __VA_ARGS__
@@ -20,12 +21,11 @@ public:
             for (int v: nums) cout << v << " "; cout << endl;
         )
         // Denotion:
-        //   the i-th positive number in original array: P_i.
-        //   the i-th negative number in original array: N_i
-        
-        
+        // the i-th positive number in original array: P_i.
+        // the i-th negative number in original array: N_i
+
         // Step 1: Sort each chunk stably so that positive numbers appear before
-        //   negative numbers
+        // negative numbers
         vector<int> chunk_buffer(chunk_size); // stores sorted result
         for (int i=0; i < nums.size(); i += chunk_size) {
             chunk_buffer.clear();
@@ -42,7 +42,7 @@ public:
             cout << "chunk-sorted array: ";
             for (int v: nums) cout << v << " "; cout << endl;
         )
-        
+
         // Step 2: Merge every two chunks so that each chunk are either all positive numbers
         // or all negative numbers
         //
@@ -52,7 +52,7 @@ public:
         // a) if m+p >= chunk_size, we extract chunk_size positives into an all-positive chunk and put the remaining (m+p-chunk_size positives and n+q negatives) into the "buffer" chunk
         // b) if n+q >= chunk_size, we extract chunk_size negatives into an all-negative chunk and make the remaining (m+p positives and n+q-chunk_size negatives) the "buffer" chunk
         // Note that in either of the above two cases, the relative order for positive/negative numbers are unchanged
-        
+
         chunk_buffer = vector<int>{nums.begin(), nums.begin() + chunk_size};
         for (int i = chunk_size; i<nums.size(); i+= chunk_size) {
             const int m = find_if(chunk_buffer.cbegin(), chunk_buffer.cend(), [](int v) {
@@ -63,7 +63,7 @@ public:
                 return v < 0;
             }) - (nums.cbegin() + i);
             const int q = chunk_size - p;
-            
+
             if (m + p >= chunk_size) {
                 // Copy positives to the previous chunk
                 copy_n(chunk_buffer.cbegin(), m, nums.begin() + i - chunk_size);
@@ -94,22 +94,21 @@ public:
             }
         }
         copy_n(chunk_buffer.cbegin(), chunk_size, nums.begin() + nums.size() - chunk_size);
-        
+
         ENABLE_LOG(
             cout << "homonegeous array: ";
             for (int v: nums) cout << v << " "; cout << endl;
         )
-        
+
         // Step 3:
         // After the above step, we will have sqrt(N) / 2 all-positive chunks and sqrt(N) / 2 all-negative chunks.
         // Their initial chunk location is at (0, 1, 2, ..., sqrt(N))
         // We want them to interleave each other, i.e., Positive Chunk1, Negative Chunk 1, Positive Chunk 2, Negative Chunk 2
         // which could be achieved via cyclic permutation using an additional array tracking the target location of each chunk
-        
-        
+
         // due to above padding, chunk_cnt is always a multiple of 4
         const int chunk_cnt = nums.size() / chunk_size;
-        
+
         vector<int> target(chunk_cnt); // O(sqrt(N))
         int positive_chunks = 0, negative_chunks = 0;
         for (int i=0; i<chunk_cnt; ++i) {
@@ -130,10 +129,10 @@ public:
             cout << "sorted array: ";
             for (int v: nums) cout << v << " "; cout << endl;
         )
-        
+
         // Step 4:
         // Now we get Positive Chunk1, Negative Chunk 1, Positive Chunk 2, Negative Chunk 2, ...
-        // For each pair of adjacent (positive, negative) chunks, we can reorder the elements inside 
+        // For each pair of adjacent (positive, negative) chunks, we can reorder the elements inside
         // to make positive and negative numbers interleave each other
         vector<int> two_chunk_elements_interleaved; // O(2 * chunk_size) = O(sqrt(N))
         for (int i=0; i<nums.size(); i += 2 * chunk_size) {
