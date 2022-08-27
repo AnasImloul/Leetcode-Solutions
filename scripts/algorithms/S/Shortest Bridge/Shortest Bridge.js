@@ -1,3 +1,4 @@
+// Runtime: 169 ms (Top 64.28%) | Memory: 49.7 MB (Top 82.47%)
 /**
  * @param {number[][]} grid
  * @return {number}
@@ -13,7 +14,7 @@ var shortestBridge = function(grid) {
     const que = [];
     const ROWS = grid.length;
     const COLS = grid[0].length;
-    
+
     // find first insland
     outer:
     for(let row=0; row<ROWS; row++) {
