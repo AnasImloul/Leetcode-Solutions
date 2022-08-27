@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 59.27%) | Memory: 8.3 MB (Top 95.54%)
 class Solution {
 public:
     int numRabbits(vector<int>& answers) {
@@ -10,7 +11,7 @@ public:
                 num--;
                 i++;
             }
-            
+
         }
         return ans;
     }
