@@ -1,5 +1,4 @@
-// Runtime: 122 ms (Top 5.79%) | Memory: 41.7 MB (Top 68.81%)
-
+// Runtime: 66 ms (Top 81.19%) | Memory: 41.8 MB (Top 59.65%)
 /**
  * @param {number} columnNumber
  * @return {string}
