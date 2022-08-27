@@ -1,3 +1,4 @@
+// Runtime: 92 ms (Top 97.50%) | Memory: 55.5 MB (Top 40.63%)
 /**
  * @param {number[]} nums
  * @param {number} limit
@@ -13,7 +14,7 @@ var longestSubarray = function(nums, limit) {
         while(maxQueue.length > 0 && maxQueue[maxQueue.length - 1] < num) {
             maxQueue.pop();
         }
-        
+
         while(minQueue.length > 0 && minQueue[minQueue.length - 1] > num) {
             minQueue.pop();
         }
@@ -23,15 +24,15 @@ var longestSubarray = function(nums, limit) {
             if(maxQueue[0] === nums[start]) {
                 maxQueue.shift();
             }
-            
+
             if(minQueue[0] === nums[start]) {
                 minQueue.shift();
             }
-            
+
             start +=1;
         }
         res = Math.max(res, end - start + 1);
     }
-    
+
     return res;
 };
