@@ -1,3 +1,4 @@
+// Runtime: 20 ms (Top 63.84%) | Memory: 50.7 MB (Top 74.53%)
 class Solution {
   public List<String> invalidTransactions(String[] transactions) {
     Map<String, List<Transaction>> nameToTransaction = new HashMap<>();
