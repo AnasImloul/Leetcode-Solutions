@@ -1,3 +1,4 @@
+// Runtime: 75 ms (Top 50.47%) | Memory: 17.5 MB (Top 77.07%)
 class Solution {
 public:
     void dfs(vector<vector<int>>& heights,vector<vector<bool>>&v,int i,int j)
@@ -23,11 +24,11 @@ public:
         }
     }
     vector<vector<int>> pacificAtlantic(vector<vector<int>>& heights) {
-        int m=heights.size(); 
+        int m=heights.size();
         vector<vector<int>>ans;
         if(m==0)
         {
-            return ans;  
+            return ans;
         }
         int n=heights[0].size();
         if(n==0)
@@ -53,21 +54,17 @@ public:
             {
                 if(pa[i][j]&&at[i][j])
                 {
-                    
+
                     p.push_back(i);
                     p.push_back(j);
                     ans.push_back(p);
-                    p.clear(); 
+                    p.clear();
                 }
-                 
+
             }
-           
+
         }
         return ans;
-        
+
     }
 };
-
-
-
-
