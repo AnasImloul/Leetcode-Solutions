@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 43.6 MB (Top 61.18%)
 class Solution {
     public int findMin(int[] nums) {
         int l = 0;
