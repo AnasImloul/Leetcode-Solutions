@@ -1,3 +1,4 @@
+// Runtime: 16 ms (Top 40.82%) | Memory: 46.2 MB (Top 88.53%)
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String,ArrayList<String>> hm=new HashMap<>();
