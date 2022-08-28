@@ -1,3 +1,4 @@
+// Runtime: 431 ms (Top 37.35%) | Memory: 110.7 MB (Top 26.25%)
 class Solution {
 public:
     int totalStrength(vector<int>& strength) {
