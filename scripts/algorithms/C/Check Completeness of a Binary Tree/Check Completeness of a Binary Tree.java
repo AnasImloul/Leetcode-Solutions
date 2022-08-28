@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 49.17%) | Memory: 42.4 MB (Top 73.50%)
 class Solution {
     public boolean isCompleteTree(TreeNode root) {
         boolean end = false;
