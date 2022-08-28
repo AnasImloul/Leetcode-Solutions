@@ -1,5 +1,4 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 45.6 MB (Top 46.72%)
-
+// Runtime: 0 ms (Top 100.00%) | Memory: 45.6 MB (Top 46.04%)
 class Solution {
     public TreeNode trimBST(TreeNode root, int low, int high) {
         if (root == null) return root;
