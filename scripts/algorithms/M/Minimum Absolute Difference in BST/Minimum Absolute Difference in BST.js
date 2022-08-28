@@ -1,3 +1,4 @@
+// Runtime: 233 ms (Top 5.19%) | Memory: 47.2 MB (Top 96.75%)
 var getMinimumDifference = function(root) {
     let order = inOrder(root, []);
     let diff = Math.abs(order[1] - order[0]);
