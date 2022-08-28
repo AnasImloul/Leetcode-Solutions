@@ -1,3 +1,4 @@
+// Runtime: 267 ms (Top 75.00%) | Memory: 62.7 MB (Top 77.27%)
 /**
  * @param {number[][]} tiles
  * @param {number} carpetLen
@@ -6,7 +7,7 @@
 var maximumWhiteTiles = function(tiles, carpetLen) {
     const sorted = tiles.sort((a, b) => a[0]-b[0])
     let res = 0
-    
+
     let total = 0
     let right = 0
 
@@ -24,6 +25,6 @@ var maximumWhiteTiles = function(tiles, carpetLen) {
         }
         total -= tile[1] - tile[0] + 1
     }
-    
+
     return res
 };
