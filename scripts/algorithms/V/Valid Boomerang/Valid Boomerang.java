@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 58.12%) | Memory: 42.3 MB (Top 12.94%)
 class Solution {
     public boolean isBoomerang(int[][] points) {
         double a, b, c, d, area;
