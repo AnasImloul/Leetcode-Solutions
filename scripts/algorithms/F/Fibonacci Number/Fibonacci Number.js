@@ -1,3 +1,4 @@
+// Runtime: 86 ms (Top 69.22%) | Memory: 41.9 MB (Top 44.06%)
 /**
  * @param {number} n
  * @return {number}
@@ -11,7 +12,7 @@ var fib = function(n,cache ={}) {
     if(n == 1 || n == 2) {
         return 1;
     }
-    cache[n] = fib(n-1,cache) + fib(n-2,cache) 
+    cache[n] = fib(n-1,cache) + fib(n-2,cache)
     return cache[n]
 };
 //Tabulation approach
