@@ -1,3 +1,4 @@
+// Runtime: 70 ms (Top 44.94%) | Memory: 14.9 MB (Top 51.98%)
 class Solution {
     vector<int> dp;
     int countJumps(vector<int>& arr, int i, int d){
@@ -16,7 +17,7 @@ class Solution {
         k = 1;
         while(k <= d && i - k >= 0){
             if(arr[i] > arr[i - k]){
-                jumps =  max(countJumps(arr, i-k, d)+1, jumps);
+                jumps = max(countJumps(arr, i-k, d)+1, jumps);
                 k++;
             }
             else{
