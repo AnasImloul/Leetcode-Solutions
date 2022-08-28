@@ -1,9 +1,10 @@
+// Runtime: 13 ms (Top 17.35%) | Memory: 7.1 MB (Top 91.58%)
 class Solution {
 public:
     vector<int> numOfBurgers(int tomatoSlices, int cheeseSlices) {
         // Observation
         // Total Number of Burgers is Equal to Number of cheeseSlices
-        // Try to make 1 --> cheeseSlices Amount of Jumbo Burgers and 
+        // Try to make 1 --> cheeseSlices Amount of Jumbo Burgers and
         // remaining will be Small Burger
         vector <int> ans;
         if(tomatoSlices == 0 and cheeseSlices == 0) {
