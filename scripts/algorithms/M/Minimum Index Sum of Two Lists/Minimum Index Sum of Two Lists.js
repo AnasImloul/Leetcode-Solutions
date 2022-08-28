@@ -1,3 +1,4 @@
+// Runtime: 170 ms (Top 33.33%) | Memory: 48.8 MB (Top 57.06%)
 var findRestaurant = function(list1, list2) {
     let obj ={}
     for(let i =0; i <list1.length; i ++){
@@ -13,7 +14,7 @@ var findRestaurant = function(list1, list2) {
                 obj[sum]['value']=[]
                 obj[sum]['value'].push(list1[i])
             }
-            
+
         }
     }
     return Object.values(obj)[0]['value']
