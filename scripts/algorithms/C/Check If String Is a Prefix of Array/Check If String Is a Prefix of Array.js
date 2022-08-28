@@ -1,3 +1,4 @@
+// Runtime: 93 ms (Top 50.00%) | Memory: 43.3 MB (Top 14.29%)
 var isPrefixString = function(s, words) {
     let str = words[0];
     if(s === words[0]){
@@ -8,8 +9,8 @@ var isPrefixString = function(s, words) {
             return true;
         }
         if( s.startsWith(str)){
-            str += words[i]; 
-            continue;       
+            str += words[i];
+            continue;
         }else{
             return false;
         }
@@ -17,5 +18,5 @@ var isPrefixString = function(s, words) {
     if(s !== str){
             return false;
         }
-    return true;    
+    return true;
 };
