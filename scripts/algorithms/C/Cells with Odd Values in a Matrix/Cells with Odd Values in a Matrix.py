@@ -1,5 +1,4 @@
-# Runtime: 52 ms (Top 87.57%) | Memory: 13.9 MB (Top 91.35%)
-
+// Runtime: 81 ms (Top 40.72%) | Memory: 13.9 MB (Top 91.29%)
 class Solution:
     def oddCells(self, row: int, col: int, indices: List[List[int]]) -> int:
         rows, cols = [False] * row, [False] * col
