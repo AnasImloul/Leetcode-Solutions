@@ -1,3 +1,4 @@
+// Runtime: 414 ms (Top 6.65%) | Memory: 100.2 MB (Top 5.02%)
 class Solution {
     public int minSwaps(String s) {
         // remove the balanced part from the given string
