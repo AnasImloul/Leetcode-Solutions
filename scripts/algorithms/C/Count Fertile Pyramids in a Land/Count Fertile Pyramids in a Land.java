@@ -1,3 +1,4 @@
+// Runtime: 17 ms (Top 60.00%) | Memory: 67.7 MB (Top 80.00%)
 class Solution {
     public int countPyramids(int[][] grid) {
         int m = grid.length, n = grid[0].length;
