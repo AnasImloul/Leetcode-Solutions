@@ -1,3 +1,4 @@
+// Runtime: 157 ms (Top 60.61%) | Memory: 61.9 MB (Top 9.09%)
 /**
  * @param {string[]} words
  * @return {number}
@@ -21,7 +22,7 @@ var minimumLengthEncoding = function(words) {
             root.isWord = true;
             return;
         }
-        
+
         const character = word[index];
         // If we do not have a char in children, create a node and add it under root
         if (!root.children.has(character)) {
@@ -40,11 +41,11 @@ var minimumLengthEncoding = function(words) {
 
         buildTrie(node, word, index - 1);
     };
-    
+
     const root = new Trie();
     for (const word of sortedWords) {
         buildTrie(root, word, word.length - 1);
     }
-    
+
     return minEncodingLength;
 };
