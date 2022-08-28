@@ -1,3 +1,4 @@
+// Runtime: 47 ms (Top 94.62%) | Memory: 71.9 MB (Top 80.64%)
 class Solution {
     private static final int[] primes;
     // precompute prime numbers
@@ -26,7 +27,7 @@ class Solution {
             for (int num = p + p; num <= max; num += p) {
                 var existing = map[num];
                 if (existing == 0) continue; // value doens't exist in array
-                if (existing == num) map[num] = group;  // 1st hit, set group, otherwise, group merging
+                if (existing == num) map[num] = group; // 1st hit, set group, otherwise, group merging
                 else if ((existing = root(map, existing)) < group) {
                     map[group] = existing;
                     group = existing;
