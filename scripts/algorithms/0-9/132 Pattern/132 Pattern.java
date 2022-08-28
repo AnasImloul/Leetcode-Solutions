@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 96.40%) | Memory: 67 MB (Top 55.57%)
 class Solution {
     public boolean find132pattern(int[] nums) {
         int min = Integer.MIN_VALUE;
@@ -10,7 +11,7 @@ class Solution {
             while (peak < nums.length && nums[i] > nums[peak])
                 min = nums[peak++];
             // Now we have nums[i] <= nums[peak]
-            // We push nums[i] to the "stack"            
+            // We push nums[i] to the "stack"
             peak--;
             nums[peak] = nums[i];
         }
