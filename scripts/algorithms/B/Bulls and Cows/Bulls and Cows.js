@@ -1,3 +1,4 @@
+// Runtime: 149 ms (Top 11.68%) | Memory: 44.9 MB (Top 52.42%)
 var getHint = function(secret, guess) {
     let ACount = 0, BCount = 0;
     const secretMap = new Map(), guessMap = new Map();
