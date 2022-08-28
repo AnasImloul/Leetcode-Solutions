@@ -1,9 +1,10 @@
+// Runtime: 740 ms (Top 67.46%) | Memory: 89.4 MB (Top 63.10%)
 class Solution {
     static long INF = (long) 1e10;
     public long kthSmallestProduct(int[] nums1, int[] nums2, long k) {
         int m = nums1.length, n = nums2.length;
         long lo = -INF - 1, hi = INF + 1;
-        while (lo < hi) {            
+        while (lo < hi) {
             long mid = lo + ((hi - lo) >> 1), cnt = 0;
             for (int i : nums1) {
                 if (0 <= i) {
