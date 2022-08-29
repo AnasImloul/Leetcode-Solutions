@@ -1,5 +1,6 @@
+// Runtime: 7 ms (Top 89.00%) | Memory: 6.1 MB (Top 94.15%)
 /*
-Logic Here used is: 
+Logic Here used is:
  - we need to find, max no of floors soluiton can be found with K egg by using m move
  - recursion will use like to find m moves no of floor count we need to add dp[m-1][k-1] & dp[m-1][k];
 
@@ -19,4 +20,3 @@ public:
         return m;
     }
 };
-
