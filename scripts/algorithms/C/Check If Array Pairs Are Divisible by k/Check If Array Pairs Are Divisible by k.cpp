@@ -1,3 +1,4 @@
+// Runtime: 377 ms (Top 24.57%) | Memory: 76 MB (Top 31.59%)
 
 //ask the interviewer
 //can we have negative values?
@@ -7,15 +8,15 @@ public:
     bool canArrange(vector<int>& arr, int k)
     {
         unordered_map<int,int>memo;//remainder : occurence
-        
+
         //we are storing the frequency of curr%k
-        //i.e. the frequency of the remainder 
+        //i.e. the frequency of the remainder
         for(auto curr : arr)
         {
             int remainder = ((curr%k)+k)%k;
             memo[remainder]++;
         }
-        
+
         for(int i =1; i<=k/2; i++)
         {
             if(memo[i] != memo[k-i])
@@ -26,5 +27,3 @@ public:
         return true;
     }
 };
-
-
