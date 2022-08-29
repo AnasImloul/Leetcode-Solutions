@@ -1,3 +1,4 @@
+// Runtime: 9000 ms (Top 21.88%) | Memory: 36.5 MB (Top 15.63%)
 from collections import defaultdict
 
 class TrieNode:
@@ -9,14 +10,14 @@ class Trie:
 
     def __init__(self):
         self.root = TrieNode()
-    
+
     def insert(self, val):
         cur = self.root
         for i in reversed(range(15)):
             bit = val >> i & 1
             cur.nodes[bit].cnt += 1
             cur = cur.nodes[bit]
-    
+
     def count(self, val, high):
         res = 0
         cur = self.root
@@ -31,7 +32,7 @@ class Trie:
             else:
                 cur = cur.nodes[bit]
         return res
-    
+
 class Solution:
     def countPairs(self, nums: List[int], low: int, high: int) -> int:
         trie = Trie()
@@ -39,5 +40,5 @@ class Solution:
         for num in nums:
             res += trie.count(num, high + 1) - trie.count(num, low)
             trie.insert(num)
-        
+
         return res
