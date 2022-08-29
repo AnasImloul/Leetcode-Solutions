@@ -1,3 +1,4 @@
+// Runtime: 47 ms (Top 96.11%) | Memory: 41.4 MB (Top 80.98%)
 class Solution {
 public:
     void sumGparent(TreeNode* child, int& sum, TreeNode* parent, TreeNode* Gparent){
@@ -6,7 +7,7 @@ public:
         sumGparent(child->left, sum, child, parent);
         sumGparent(child->right, sum, child, parent);
     }
-    
+
     int sumEvenGrandparent(TreeNode* root) {
         if(!root) return 0;
         int sum=0;
