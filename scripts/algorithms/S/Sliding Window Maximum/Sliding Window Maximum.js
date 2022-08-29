@@ -1,3 +1,4 @@
+// Runtime: 948 ms (Top 34.96%) | Memory: 100.4 MB (Top 5.58%)
 /**
  * @param {number[]} nums
  * @param {number} k
@@ -16,7 +17,7 @@ var maxSlidingWindow = function(nums, k) {
             }
             deque.push(nums[j])
         }
-        
+
         if(j-i+1 === k){
             if(nums[i] === deque[0]){
                 output.push(deque.shift());
@@ -26,7 +27,7 @@ var maxSlidingWindow = function(nums, k) {
             i++;
         }
         j++;
-        
+
     }
     return output
 };
