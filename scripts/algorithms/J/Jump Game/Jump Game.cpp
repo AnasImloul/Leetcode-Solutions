@@ -1,3 +1,4 @@
+// Runtime: 72 ms (Top 91.03%) | Memory: 48.3 MB (Top 93.54%)
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
