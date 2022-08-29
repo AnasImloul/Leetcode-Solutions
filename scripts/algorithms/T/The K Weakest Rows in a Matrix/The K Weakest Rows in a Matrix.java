@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 17.72%) | Memory: 48.7 MB (Top 54.45%)
 class Solution {
     public int[] kWeakestRows(int[][] mat, int k) {
         Map<Integer, Integer> map = new HashMap<>();
