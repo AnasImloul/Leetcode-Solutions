@@ -1,3 +1,4 @@
+// Runtime: 85 ms (Top 89.19%) | Memory: 53.4 MB (Top 61.26%)
 var find132pattern = function(nums) {
     let m = -Infinity
     // Initialise a empty stack...
