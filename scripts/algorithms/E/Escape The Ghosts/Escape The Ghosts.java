@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.8 MB (Top 88.81%)
 // Escape The Ghosts
 // Leetcode: https://leetcode.com/problems/escape-the-ghosts/
 
@@ -9,6 +10,6 @@ class Solution {
                 return false;
             }
         }
-        return true;       
+        return true;
     }
 }
