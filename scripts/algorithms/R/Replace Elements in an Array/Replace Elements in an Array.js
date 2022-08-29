@@ -1,3 +1,4 @@
+// Runtime: 445 ms (Top 59.00%) | Memory: 110.1 MB (Top 14.00%)
 /**
  * @param {number[]} nums
  * @param {number[][]} operations
@@ -5,12 +6,12 @@
  */
 var arrayChange = function(nums, operations) {
     let map = new Map()
-    
+
     for(let i = 0; i < nums.length; i++){
         let num = nums[i]
         map.set(num, i)
     }
-    
+
     for(let op of operations){
         let key = op[0]
         let value = op[1]
@@ -22,11 +23,11 @@ var arrayChange = function(nums, operations) {
             map.delete(key)
         }
     }
-    
+
     for(let [key, idx] of map){
         nums[idx] = key
     }
-    
+
     return nums
-    
+
 };
