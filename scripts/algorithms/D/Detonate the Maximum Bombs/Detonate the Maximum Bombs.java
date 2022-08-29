@@ -1,5 +1,4 @@
-// Runtime: 426 ms (Top 16.09%) | Memory: 66.1 MB (Top 18.40%)
-
+// Runtime: 234 ms (Top 36.67%) | Memory: 42.3 MB (Top 94.92%)
 class Solution {
     /*
     Make directed graph
