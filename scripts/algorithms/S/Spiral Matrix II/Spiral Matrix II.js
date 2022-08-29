@@ -1,3 +1,4 @@
+// Runtime: 51 ms (Top 99.51%) | Memory: 42.1 MB (Top 65.95%)
 var generateMatrix = function(n) {
     const arr = new Array(n).fill(0).map(() => new Array(n).fill(0));
     let count = 1, index = 1, i = 0, j =0, changed = false, toIncrease = true;
