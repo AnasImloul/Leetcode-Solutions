@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 17.33%) | Memory: 42.9 MB (Top 9.03%)
 class Solution {
     public int matrixScore(int[][] grid) {
         ArrayList<Integer> arr=new ArrayList<Integer>();
@@ -14,7 +15,7 @@ class Solution {
              for(int j=1;j<grid[0].length;j++)
             {
                 grid[i][j]^=1;
-            }   
+            }
             }
         }
         for(int i=1;i<grid[0].length;i++)
@@ -42,7 +43,7 @@ class Solution {
             for(int j=0;j<grid.length;j++)
             {
                 grid[j][i]^=1;
-            }   
+            }
         }
         int sum=0;
         for(int i=0;i<grid.length;i++)
