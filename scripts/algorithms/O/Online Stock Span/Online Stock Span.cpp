@@ -1,12 +1,13 @@
+// Runtime: 324 ms (Top 61.68%) | Memory: 88.2 MB (Top 5.31%)
 class StockSpanner {
 public:
     stack<pair<int , int>>s; //val , index
     vector<int>prices;
     vector<int>res;
     StockSpanner() {
-        
+
     }
-    
+
     int next(int price) {
         prices.push_back(price);
         int n = prices.size();
