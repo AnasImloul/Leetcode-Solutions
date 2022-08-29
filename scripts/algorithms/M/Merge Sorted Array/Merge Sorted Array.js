@@ -1,3 +1,4 @@
+// Runtime: 79 ms (Top 70.72%) | Memory: 42.3 MB (Top 41.15%)
 var merge = function(nums1, m, nums2, n) {
     // Initialize i and j to store indices of the last element of 1st and 2nd array respectively...
     let i = m - 1 , j = n - 1;
