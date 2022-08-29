@@ -1,3 +1,4 @@
+// Runtime: 140 ms (Top 39.77%) | Memory: 21.9 MB (Top 32.10%)
 class Solution {
 public:
     int mod=1e9+7;
@@ -19,7 +20,7 @@ public:
         int n=s.size();
         vector<int> dp(n+1,-1);
         return f(0,k,s,dp);
-        // dp[i]=total ways to 
+        // dp[i]=total ways to
         // create possible arrays starting at index i
     }
 };
