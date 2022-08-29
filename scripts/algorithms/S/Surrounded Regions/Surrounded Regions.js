@@ -1,3 +1,4 @@
+// Runtime: 139 ms (Top 46.98%) | Memory: 46.3 MB (Top 81.77%)
 // time O(n * m) | space O(1)
 
 // We essentially invert this question
@@ -7,7 +8,7 @@
 // We do no care if it is not connected to an 'O' edge node and thus never dfs for it.
 var solve = function(board) {
     if (!board.length) return [];
-    
+
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board[0].length; j++) {
             // Only dfs if an 'O' and on the edge
@@ -16,7 +17,7 @@ var solve = function(board) {
             }
         }
     }
-    
+
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board[0].length; j++) {
             if (board[i][j] === 'V') {
@@ -26,16 +27,16 @@ var solve = function(board) {
             }
         }
     }
-    
+
     return board;
-    
+
     function dfs(r, c) {
         if (r < 0 || r >= board.length || c < 0 || c >= board[0].length || board[r][c] === 'X' || board[r][c] === 'V') {
             return;
         }
-        
+
         board[r][c] = 'V';
-        
+
         dfs(r + 1, c);
         dfs(r - 1, c);
         dfs(r, c - 1);
