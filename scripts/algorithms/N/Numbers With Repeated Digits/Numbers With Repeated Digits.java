@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 98.74%) | Memory: 41.1 MB (Top 50.94%)
 class Solution {
     public int numDupDigitsAtMostN(int n) {
         // 983582
