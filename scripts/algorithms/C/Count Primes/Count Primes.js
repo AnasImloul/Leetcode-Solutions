@@ -1,3 +1,4 @@
+// Runtime: 439 ms (Top 90.04%) | Memory: 82.1 MB (Top 91.87%)
 function makeSieve(n) {
     let arr = new Array(n+1)
     arr[0] = false;
