@@ -1,3 +1,4 @@
+// Runtime: 432 ms (Top 5.05%) | Memory: 74.1 MB (Top 5.26%)
 class Solution {
     HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
     LinkedList<Integer> list = new LinkedList();
@@ -18,7 +19,7 @@ class Solution {
             }
         }
     }
-    
+
     public int pick() {
         Random rand = new Random();
         int index = rand.nextInt(size);
