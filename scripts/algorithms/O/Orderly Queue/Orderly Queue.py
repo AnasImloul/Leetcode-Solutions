@@ -1,3 +1,4 @@
+// Runtime: 36 ms (Top 85.00%) | Memory: 13.8 MB (Top 97.50%)
 class Solution:
     def orderlyQueue(self, s: str, k: int) -> str:
         if k>1:
