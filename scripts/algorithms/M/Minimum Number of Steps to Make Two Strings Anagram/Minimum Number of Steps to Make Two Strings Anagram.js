@@ -1,9 +1,10 @@
+// Runtime: 290 ms (Top 23.15%) | Memory: 46.9 MB (Top 83.22%)
 var minSteps = function(s, t) {
-        
+
     let hash1 = hash(s);
     let hash2 = hash(t);
     let steps = 0;
-    
+
     for(let key of Object.keys(hash1)) {
         if( hash2[key]) {
             hash1[key] = hash1[key] - hash2[key];
@@ -12,7 +13,7 @@ var minSteps = function(s, t) {
             steps += hash1[key];
         }
     }
-    
+
     return steps;
 };
 
@@ -26,6 +27,6 @@ function hash(str) {
             hash[letter] = 1;
         }
     }
-    
+
     return hash;
 }
