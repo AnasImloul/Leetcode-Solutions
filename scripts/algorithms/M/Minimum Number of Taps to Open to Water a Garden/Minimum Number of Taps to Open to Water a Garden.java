@@ -1,3 +1,4 @@
+// Runtime: 26 ms (Top 14.75%) | Memory: 49.6 MB (Top 26.03%)
 class Solution {
     public int minTaps(int n, int[] ranges) {
         Integer[] idx = IntStream.range(0, ranges.length).boxed().toArray(Integer[]::new);
