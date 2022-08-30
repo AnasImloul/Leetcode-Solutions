@@ -1,5 +1,4 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 6.3 MB (Top 60.16%)
-
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.4 MB (Top 58.32%)
 class Solution {
 public:
     int countPoints(string rings) {
