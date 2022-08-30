@@ -1,3 +1,4 @@
+// Runtime: 55 ms (Top 55.51%) | Memory: 71 MB (Top 93.72%)
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
