@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 29.72%) | Memory: 41.4 MB (Top 86.57%)
 class Solution {
     public boolean detectCapitalUse(String word) {
         int count = 0;
