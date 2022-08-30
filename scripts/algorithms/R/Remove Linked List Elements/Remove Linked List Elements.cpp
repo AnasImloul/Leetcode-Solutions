@@ -1,3 +1,4 @@
+// Runtime: 27 ms (Top 83.86%) | Memory: 15.3 MB (Top 20.54%)
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
@@ -23,6 +24,6 @@ public:
             }
         }
         return head;
-                 
+
     }
 };
