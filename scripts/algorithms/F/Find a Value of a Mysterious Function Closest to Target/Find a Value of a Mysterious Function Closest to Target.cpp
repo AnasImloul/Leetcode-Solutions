@@ -1,3 +1,4 @@
+// Runtime: 195 ms (Top 98.04%) | Memory: 62.7 MB (Top 95.42%)
 class Solution {
 public:
     int closestToTarget(vector<int>& arr, int target) {
