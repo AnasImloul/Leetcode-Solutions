@@ -1,3 +1,4 @@
+// Runtime: 146 ms (Top 9.14%) | Memory: 57.5 MB (Top 92.55%)
 class Solution {
 public:
     bool kLengthApart(vector<int>& nums, int k) {
