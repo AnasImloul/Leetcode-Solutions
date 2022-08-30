@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 93.75%) | Memory: 58 MB (Top 51.88%)
 class Restaurant {
     int id, rating;
     Restaurant(int id, int rating) {
