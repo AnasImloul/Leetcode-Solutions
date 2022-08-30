@@ -1,3 +1,4 @@
+// Runtime: 281 ms (Top 86.85%) | Memory: 57.9 MB (Top 59.15%)
 /**
  * @param {number[][]} heights
  * @return {number}
@@ -39,7 +40,7 @@ var minimumEffortPath = function(heights) {
                 if (differences[newX][newY] > maxDiff) {
                     differences[newX][newY] = maxDiff;
                     pq.push([newX, newY], maxDiff);
-                } 
+                }
             }
         });
     }
