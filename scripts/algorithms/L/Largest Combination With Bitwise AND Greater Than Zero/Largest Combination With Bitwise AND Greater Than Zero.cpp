@@ -1,3 +1,4 @@
+// Runtime: 308 ms (Top 28.18%) | Memory: 57.4 MB (Top 84.43%)
 class Solution {
 public:
     int largestCombination(vector<int>& candidates) {
@@ -11,10 +12,10 @@ public:
             }
         }
         int ans = 0;
-		for(int i = 0; i < 32; i++){
+        for(int i = 0; i < 32; i++){
             //cout<<bits[i]<<" ";
-			ans = max(ans, bits[i]);
+            ans = max(ans, bits[i]);
         }
-		return ans;
+        return ans;
     }
 };
