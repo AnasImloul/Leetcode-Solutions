@@ -1,3 +1,4 @@
+// Runtime: 36 ms (Top 16.60%) | Memory: 11.7 MB (Top 62.43%)
 class Solution {
 public:
     vector<string> subdomainVisits(vector<string>& cpdomains) {
@@ -12,7 +13,7 @@ public:
             }
             int r=stoi(rep);
             m[it.substr(i+1,it.size())]+=r;
-            
+
             while(it[i]!='.'){
                 i++;
             }
@@ -24,9 +25,9 @@ public:
             if(i!=it.size()){
             m[it.substr(i+1,it.size())]+=r;
             }
-           
+
         }
-        
+
         for(auto it : m){
             string a=it.first;
             string b=to_string(it.second);
