@@ -1,3 +1,4 @@
+// Runtime: 150 ms (Top 37.48%) | Memory: 50.4 MB (Top 25.68%)
 class Solution {
 public:
     vector<int> sortArray(vector<int>& nums) {
@@ -12,8 +13,7 @@ public:
             ans.push_back(pq.top());
             pq.pop();
         }
-        
-        
+
         return ans;
     }
 };
