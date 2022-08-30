@@ -1,3 +1,4 @@
+// Runtime: 14 ms (Top 41.00%) | Memory: 13.8 MB (Top 71.46%)
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
