@@ -1,3 +1,4 @@
+// Runtime: 71 ms (Top 95.00%) | Memory: 44.8 MB (Top 96.25%)
 var minCameraCover = function(root) {
     let cam = 0;
     // 0 --> No covered
@@ -5,10 +6,10 @@ var minCameraCover = function(root) {
     // 2 --> has camera
     function dfs(root) {
         if(root === null) return 1;
-        
+
         const left = dfs(root.left);
         const right = dfs(root.right);
-        
+
         if(left === 0 || right === 0) { // child required a camera to covered
             cam++;
             return 2;
@@ -18,10 +19,10 @@ var minCameraCover = function(root) {
             return 0;
         }
     }
-    
+
     const ans = dfs(root);
-    
+
     if(ans === 0) ++cam;
-    
+
     return cam;
 };
