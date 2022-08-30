@@ -1,3 +1,4 @@
+// Runtime: 148 ms (Top 52.13%) | Memory: 56 MB (Top 21.28%)
 var minCost = function(colors, neededTime) {
     let stack = [], time = 0;
     for (let i = 0; i < colors.length; i++) {
