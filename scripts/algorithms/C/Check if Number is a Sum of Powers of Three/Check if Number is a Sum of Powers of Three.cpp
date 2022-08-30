@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 5.9 MB (Top 49.47%)
 class Solution {
 public:
     bool checkPowersOfThree(int n) {
