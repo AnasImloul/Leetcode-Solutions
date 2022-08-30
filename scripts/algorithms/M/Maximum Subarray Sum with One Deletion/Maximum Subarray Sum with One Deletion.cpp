@@ -1,3 +1,4 @@
+// Runtime: 73 ms (Top 25.99%) | Memory: 23.3 MB (Top 89.10%)
 class Solution {
 public:
     int maximumSum(vector<int>& arr) {
@@ -11,6 +12,6 @@ public:
             no_del=max(arr[i],no_del+arr[i]);
             ans=max(ans,max(del,no_del));
         }
-        return ans;    
+        return ans;
     }
 };
