@@ -1,4 +1,4 @@
-// Runtime: 130 ms (Top 14.57%) | Memory: 28.8 MB (Top 33.71%)
+// Runtime: 63 ms (Top 47.00%) | Memory: 28.6 MB (Top 35.26%)
 class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums)
