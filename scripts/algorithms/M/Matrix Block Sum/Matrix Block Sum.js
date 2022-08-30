@@ -1,3 +1,4 @@
+// Runtime: 111 ms (Top 82.18%) | Memory: 44.7 MB (Top 58.42%)
 /**
  * @param {number[][]} mat
  * @param {number} k
@@ -7,7 +8,7 @@ var matrixBlockSum = function(mat, k) {
     let sum = 0;
     let dp = Array(mat.length + 1);
     dp[0] = Array(mat[0].length).fill(0);
-    
+
     // sum of row el
     for (let i = 0; i < mat.length; i++){
         dp[i + 1] = Array(mat[0].length).fill(0);
@@ -17,7 +18,7 @@ var matrixBlockSum = function(mat, k) {
         }
         sum = 0;
     }
-    
+
     // sum of col el
     for (let j = 0; j < mat[0].length; j++){
         for (let i = 0; i < mat.length; i++){
@@ -26,9 +27,9 @@ var matrixBlockSum = function(mat, k) {
         }
         sum = 0;
     }
-    
+
     dp = dp.slice(1);
-    
+
     // cal sum of blocks
     for (let i = 0; i < mat.length; i++){
         let r1 = Math.max(0, i - k);
@@ -36,9 +37,9 @@ var matrixBlockSum = function(mat, k) {
         for (let j = 0; j < mat[0].length; j++){
             let c1 = Math.max(0, j - k);
             let c2 = Math.min(mat[0].length - 1, j + k);
-            
+
             let value = dp[r2][c2];
-            
+
             if (r1 - 1 >= 0){
                 value -= dp[r1 - 1][c2];
             }
@@ -51,7 +52,7 @@ var matrixBlockSum = function(mat, k) {
             mat[i][j] = value;
         }
     }
-    
+
     return mat;
-    
+
 };
