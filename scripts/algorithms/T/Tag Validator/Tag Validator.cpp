@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 26.26%) | Memory: 6.5 MB (Top 84.85%)
 class Solution {
     class Tag {
     public:
@@ -6,14 +7,14 @@ class Solution {
         Tag():value(""), isStart(true){}
         Tag(string value, bool isStart):value(value), isStart(isStart){}
     };
-    
+
     pair<int, bool> parseCData(string& s, int pos) {
-        //cout << "Parse cdata " << s.substr(pos) << endl;  
+        //cout << "Parse cdata " << s.substr(pos) << endl;
         const string startPattern = "<![CDATA[";
         if (s.find(startPattern, pos) != pos) {
             return {pos, false};
         }
-        
+
         const string endPattern = "]]>";
         int end = s.find(endPattern, pos);
         if (end == -1) {
@@ -21,7 +22,7 @@ class Solution {
         }
         return {end+3, true};
     }
-    
+
     pair<Tag, bool> parseTag(string& s, int& pos) {
         //cout << "Parse tag " << s.substr(pos) << endl;
         Tag res;
@@ -94,4 +95,3 @@ public:
         return isValid(tags, 1, m-2);
     }
 };
-
