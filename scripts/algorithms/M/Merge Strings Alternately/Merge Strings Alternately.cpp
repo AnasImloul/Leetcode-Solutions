@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 13.35%) | Memory: 9.3 MB (Top 5.39%)
 class Solution {
 public:
     string mergeAlternately(string word1, string word2) {
