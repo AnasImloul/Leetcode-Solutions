@@ -1,3 +1,4 @@
+// Runtime: 722 ms (Top 5.05%) | Memory: 169.4 MB (Top 18.67%)
 class Solution {
 public:
     bool isEvenOddTree(TreeNode* root) {
@@ -7,10 +8,10 @@ public:
         q.push(root);
         int j=0;
         while(q.empty()!=true)
-        {   vector<int>v;
+        { vector<int>v;
             int n=q.size();
             for(int i=0;i<n;i++)
-            {   TreeNode* t=q.front();q.pop();
+            { TreeNode* t=q.front();q.pop();
                 v.push_back(t->val);
                 if(t->left) q.push(t->left);
                 if(t->right) q.push(t->right);
