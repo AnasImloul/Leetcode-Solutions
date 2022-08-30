@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 89.63%) | Memory: 43.5 MB (Top 75.35%)
 class Solution {
     public int[] findRedundantConnection(int[][] edges) {
         UnionFind uf = new UnionFind(edges.length);
@@ -8,11 +9,11 @@ class Solution {
         }
         return null;
     }
-    
+
     private class UnionFind {
         int[] rank;
         int[] root;
-        
+
         UnionFind(int n) {
             rank = new int[n + 1];
             root = new int[n + 1];
@@ -21,14 +22,14 @@ class Solution {
                 rank[i] = 1;
             }
         }
-        
+
         int find(int x) {
             if (x == root[x]) {
                 return x;
             }
             return root[x] = find(root[x]);
         }
-        
+
         boolean union(int x, int y) {
             int rootX = find(x);
             int rootY = find(y);
@@ -39,7 +40,7 @@ class Solution {
                     root[rootX] = root[rootY];
                 } else {
                     root[rootY] = root[rootX];
-                    rank[rootX]++; 
+                    rank[rootX]++;
                 }
                 return true;
             }
