@@ -1,3 +1,4 @@
+// Runtime: 55 ms (Top 25.45%) | Memory: 44.9 MB (Top 5.73%)
 class Solution {
 public:
     vector<int> change(vector<int>arr,vector<int>v){
@@ -18,17 +19,17 @@ public:
             v[i]=i;
         }
         vector<int>arr(n);
-        
+
         arr=change(arr,v);
         if(arr==v){return 1;}
-       
+
         int cnt=1;
-        
+
         while(arr!=v){
             arr=change(arr,arr);
             cnt++;
             if(arr==v){return cnt;}
-           
+
         }
         return cnt;
     }
