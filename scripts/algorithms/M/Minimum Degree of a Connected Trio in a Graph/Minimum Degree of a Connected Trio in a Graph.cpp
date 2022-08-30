@@ -1,3 +1,4 @@
+// Runtime: 1614 ms (Top 22.77%) | Memory: 55.6 MB (Top 5.09%)
 class Solution {
 public:
     int minTrioDegree(int n, vector<vector<int>>& edges) {
@@ -21,7 +22,7 @@ public:
                 }
             }
         }
-        
+
         return res == INT_MAX ? -1 : res;
     }
 };
