@@ -1,3 +1,4 @@
+// Runtime: 259 ms (Top 58.24%) | Memory: 69 MB (Top 25.27%)
 #define MOD 1000000007
 
 // calculating combinatorics
@@ -6,9 +7,9 @@ long long comb(int n, int m) {
     if (c[n][m] != 0)
         return c[n][m];
     long long res;
-    if (m == 0 || m == n) 
+    if (m == 0 || m == n)
         res = 1;
-    else 
+    else
         res = (comb(n - 1, m) + comb(n - 1, m - 1)) % MOD;
     c[n][m] = res;
     return res;
@@ -22,7 +23,7 @@ public:
         for (int i = 0; i < queries.size(); i++) {
             // counting numbers of distinct prime factors
             // note that numbers within 10000 have at most 1 prime factor over 100
-			// if we loop to queries[i][1] here we will get a TLE since one loop grows from 100 to 10000 here
+            // if we loop to queries[i][1] here we will get a TLE since one loop grows from 100 to 10000 here
             factors.clear();
             for (int j = 2; j <= 97; j++) {
                 if (queries[i][1] % j == 0) {
@@ -36,7 +37,7 @@ public:
             }
             if (queries[i][1] != 1)
                 factors.push_back(1);
-            
+
             // calculate ways
             int tmp = 1;
             for (int f : factors) {
