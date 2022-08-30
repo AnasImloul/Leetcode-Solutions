@@ -1,8 +1,9 @@
+// Runtime: 223 ms (Top 73.40%) | Memory: 55.8 MB (Top 38.07%)
 class Solution {
     public int maxValueOfCoins(List<List<Integer>> piles, int k) {
         int n = piles.size();
         int[][] ans = new int[n+1][2001];
-        Collections.sort(piles, (List<Integer> a, List<Integer> b) ->  b.size() - a.size());
+        Collections.sort(piles, (List<Integer> a, List<Integer> b) -> b.size() - a.size());
         for(int i = 1; i <= k; i++) {
             for(int j = 1; j <= n; j++) {
                 int sizeOfPile = piles.get(j-1).size();
@@ -17,7 +18,7 @@ class Solution {
                 }
             }
         }
-        
+
         return ans[n][k];
     }
 }
