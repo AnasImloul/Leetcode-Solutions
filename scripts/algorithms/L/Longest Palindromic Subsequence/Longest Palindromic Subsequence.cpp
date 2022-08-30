@@ -1,3 +1,4 @@
+// Runtime: 111 ms (Top 80.62%) | Memory: 10.8 MB (Top 79.38%)
 class Solution {
 public:
     int longestPalindromeSubseq(string s) {
@@ -14,7 +15,7 @@ public:
                     dp[r][c] = 2+dp[r+1][c-1];
                 }
                 else{
-                    dp[r][c] = max(dp[r][c-1],dp[r+1][c]); 
+                    dp[r][c] = max(dp[r][c-1],dp[r+1][c]);
                 }
             }
         }
