@@ -1,3 +1,4 @@
+// Runtime: 150 ms (Top 64.37%) | Memory: 51.4 MB (Top 22.05%)
 class Solution {
 public:
     int maximumElementAfterDecrementingAndRearranging(vector<int>& arr) {
