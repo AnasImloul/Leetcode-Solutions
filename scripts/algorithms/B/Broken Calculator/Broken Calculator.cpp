@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 18.81%) | Memory: 5.9 MB (Top 70.20%)
 class Solution {
 public:
     int brokenCalc(int startValue, int target) {
