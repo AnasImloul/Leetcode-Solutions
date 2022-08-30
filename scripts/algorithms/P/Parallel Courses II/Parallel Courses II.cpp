@@ -1,3 +1,4 @@
+// Runtime: 699 ms (Top 31.21%) | Memory: 9.5 MB (Top 92.20%)
 class Solution {
     int dp[1<<16];
     int dfs(unordered_map<int, int>& c, int mask, int& k, int &n) {
@@ -6,11 +7,11 @@ class Solution {
         vector<int> canJoinVec;
         for(auto [key, value]: c) {
             if(((value & mask) == value) and !(mask & (1<<key))) {
-            	//get course we can listen
+                //get course we can listen
                 canJoin |= 1<<key;
                 canJoinVec.push_back(key);
             } else if(!(mask & (1<<key))) {
-           		//get courses we can not listen yet
+                   //get courses we can not listen yet
                 canNotJoin |= 1<<key;
             }
         }
@@ -25,7 +26,7 @@ class Solution {
             int nMask = mask | canJoin;
             int left = k - bitset<16>(canJoin).count();
             //if there is some extra slots we can listen in this semester
-	        //pick any thing
+            //pick any thing
             for(int i = 0; i < n and left; i++) {
                 if(!(canNotJoin & (1<<i)) and !(nMask & (1<<i))) {
                     nMask |= 1<<i; left--;
