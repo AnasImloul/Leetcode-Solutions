@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 77.22%) | Memory: 11.5 MB (Top 9.63%)
 class Solution {
 public:
     int minPatches(vector<int>& nums, int n) {
