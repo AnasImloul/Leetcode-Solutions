@@ -1,3 +1,4 @@
+// Runtime: 296 ms (Top 23.08%) | Memory: 45.5 MB (Top 20.19%)
 class Solution {
 
 public:
@@ -14,7 +15,7 @@ bool candown(vector<vector<int>>& grid,int x,int y,bool hor){
             return true;
         }
     }
-    
+
     return false;
 }
 
@@ -28,7 +29,7 @@ bool canright(vector<vector<int>>& grid,int x,int y,bool hor){
             return true;
         }
     }
-    
+
     return false;
 }
 
