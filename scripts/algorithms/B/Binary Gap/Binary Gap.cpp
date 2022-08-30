@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 5.9 MB (Top 76.87%)
 class Solution {
 public:
     int binaryGap(int n) {
