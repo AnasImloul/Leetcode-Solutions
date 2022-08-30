@@ -1,6 +1,7 @@
+// Runtime: 95 ms (Top 39.89%) | Memory: 22 MB (Top 89.42%)
 class Solution {
 public:
-    int numEquivDominoPairs(vector<vector<int>>& dominoes) 
+    int numEquivDominoPairs(vector<vector<int>>& dominoes)
     {
         map<pair<int,int>,int> m;
         int ans=0;
@@ -15,7 +16,7 @@ public:
             ans+=((n-1)*n)/2;
         }
         return ans;
-        
+
     }
 };
 //if you like the solution plz upvote.
