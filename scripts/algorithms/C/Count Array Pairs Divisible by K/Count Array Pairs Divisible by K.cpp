@@ -1,3 +1,4 @@
+// Runtime: 670 ms (Top 16.39%) | Memory: 64.9 MB (Top 74.39%)
 typedef long long ll;
 
 class Solution {
