@@ -1,3 +1,4 @@
+// Runtime: 48 ms (Top 45.59%) | Memory: 42 MB (Top 92.59%)
 class Solution {
     public int maxPoints(int[][] points) {
         int n = points.length;
@@ -15,9 +16,9 @@ class Solution {
         double slope = (point1[1] - point2[1])/(double)(point1[0] - point2[0]);
         int result = 0;
         for(int i = 0; i<points.length; i++){
-            if((points[i][0] == point1[0] && points[i][1] == point1[1]) || 
-               (slope == Double.POSITIVE_INFINITY && (point1[1] - points[i][1])/(double)(point1[0] - points[i][0]) == Double.POSITIVE_INFINITY) || 
-               ((double)(point1[1] - points[i][1])/(double)(point1[0] - points[i][0]) == slope)) 
+            if((points[i][0] == point1[0] && points[i][1] == point1[1]) ||
+               (slope == Double.POSITIVE_INFINITY && (point1[1] - points[i][1])/(double)(point1[0] - points[i][0]) == Double.POSITIVE_INFINITY) ||
+               ((double)(point1[1] - points[i][1])/(double)(point1[0] - points[i][0]) == slope))
                 result++;
         }
         return result;
