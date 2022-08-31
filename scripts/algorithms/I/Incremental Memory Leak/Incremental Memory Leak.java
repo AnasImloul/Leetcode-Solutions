@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 87.96%) | Memory: 41.8 MB (Top 45.37%)
 class Solution {
     public int[] memLeak(int memory1, int memory2) {
         int i = 1;
