@@ -1,3 +1,4 @@
+// Runtime: 171 ms (Top 98.16%) | Memory: 8.2 MB (Top 63.13%)
 class Solution {
 public:
     int dp[205][205];
@@ -18,7 +19,7 @@ public:
         }
         return dp[idx][k] = ans;
     }
-    
+
     int minSpaceWastedKResizing(vector<int>& nums, int k) {
         memset(dp,-1,sizeof(dp));
         return dfs(nums,0,k);
