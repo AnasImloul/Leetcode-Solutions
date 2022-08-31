@@ -1,7 +1,8 @@
+// Runtime: 84 ms (Top 67.40%) | Memory: 25.8 MB (Top 15.42%)
 class Solution {
 public:
     int minSwaps(vector<vector<int>>& grid) {
-        
+
         int n = grid.size();
         vector<int> mr(n,0);
         vector<int> br(n,0);
