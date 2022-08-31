@@ -1,3 +1,4 @@
+// Runtime: 11 ms (Top 100.00%) | Memory: 43.4 MB (Top 96.04%)
 // Time complexity: O(N)
 // Space complexity: O(N), where N is the length of input string
 class Solution {
@@ -10,7 +11,7 @@ class Solution {
         while (i < N) {
             if (res[i] == '.') {
                 i++;
-            } else if (res[i] == 'L') {  // push left
+            } else if (res[i] == 'L') { // push left
                 int j = i-1;
                 while (j >= 0 && res[j] == '.') {
                     res[j--] = 'L';
@@ -27,7 +28,7 @@ class Solution {
                         res[r] = 'L';
                     }
                     i = j + 1;
-                } else {  // if no 'L', push right
+                } else { // if no 'L', push right
                     while (i < j) {
                         res[i++] = 'R';
                     }
