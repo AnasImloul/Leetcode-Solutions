@@ -1,3 +1,4 @@
+// Runtime: 315 ms (Top 46.15%) | Memory: 86.7 MB (Top 38.46%)
 const getBitCount = (n) => {
     let cnt = 0;
     while(n > 0) {
