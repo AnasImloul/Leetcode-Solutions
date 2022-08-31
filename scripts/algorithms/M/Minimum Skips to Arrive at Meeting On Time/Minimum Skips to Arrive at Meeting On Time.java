@@ -1,3 +1,4 @@
+// Runtime: 41 ms (Top 92.86%) | Memory: 43.4 MB (Top 57.14%)
 class Solution {
     public int minSkips(int[] dist, int speed, int hoursBefore) {
         int N = dist.length, INF = (int)1e9;
@@ -16,7 +17,7 @@ class Solution {
         }
         return -1;
     }
-    
+
     private int ceil(int n, int s){
         return n+(s-n%s)%s;
     }
