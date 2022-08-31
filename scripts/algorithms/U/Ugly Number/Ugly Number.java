@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 68.17%) | Memory: 41.1 MB (Top 69.67%)
 class Solution {
     public boolean isUgly(int n) {
         if(n==0) return false; //edge case
@@ -16,6 +17,6 @@ class Solution {
             }
         }
         return true;
-        
+
     }
 }
