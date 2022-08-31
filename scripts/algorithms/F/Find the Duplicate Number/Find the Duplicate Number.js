@@ -1,3 +1,4 @@
+// Runtime: 151 ms (Top 47.90%) | Memory: 70.3 MB (Top 5.11%)
 var findDuplicate = function(nums) {
     let dup = new Map();
 
