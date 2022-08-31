@@ -1,3 +1,4 @@
+// Runtime: 954 ms (Top 69.51%) | Memory: 160.9 MB (Top 95.44%)
 class Solution {
 public:
     vector<vector<int>> findWinners(vector<vector<int>>& matches) {
@@ -22,11 +23,11 @@ public:
                 umap[matches[i][0]]=1;
             }
         }
-        
+
         sort(result[0].begin(),result[0].end());
-        
+
         sort(result[1].begin(),result[1].end());
-        
+
         return result;
     }
 };
