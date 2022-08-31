@@ -1,3 +1,4 @@
+// Runtime: 470 ms (Top 40.74%) | Memory: 79.4 MB (Top 70.37%)
 /**
  * @param {number} n
  * @param {number[][]} relations
@@ -39,5 +40,5 @@ var minimumTime = function(n, relations, time) {
          memo[node] = time[node-1]+max;//use memo to save the longest path from node, so when we reach to this node, we need not to calculate the longest path again
          return memo[node];
     }
-    
+
 };
