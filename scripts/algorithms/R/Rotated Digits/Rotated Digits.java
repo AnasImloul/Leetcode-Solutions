@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 82.34%) | Memory: 39.1 MB (Top 97.40%)
 class Solution {
     public int rotatedDigits(int n) {
         int ans=0;
