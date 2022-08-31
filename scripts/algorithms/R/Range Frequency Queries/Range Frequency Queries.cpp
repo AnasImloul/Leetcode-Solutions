@@ -1,3 +1,4 @@
+// Runtime: 887 ms (Top 68.93%) | Memory: 235.7 MB (Top 56.17%)
 class RangeFreqQuery {
 private:
     int size;
