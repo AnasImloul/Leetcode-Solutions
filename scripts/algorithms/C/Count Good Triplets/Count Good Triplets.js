@@ -1,3 +1,4 @@
+// Runtime: 104 ms (Top 57.56%) | Memory: 42 MB (Top 82.93%)
 var countGoodTriplets = function(arr, a, b, c) {
   let triplets = 0;
 
