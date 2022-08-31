@@ -1,3 +1,4 @@
+// Runtime: 7002 ms (Top 5.13%) | Memory: 106.5 MB (Top 58.97%)
 var getOrder = function(tasks) {
     var n = tasks.length;
     tasks = tasks.map((t,i)=>[...t, i]);
@@ -25,7 +26,7 @@ var getOrder = function(tasks) {
             q.push(tasks[enqIndex]);
             enqIndex++;
         }
-		// sort when needed
+        // sort when needed
         if(curSize < q.length) // hack way to fix TLE to mock PQ
         {
             if(q.length>0)
