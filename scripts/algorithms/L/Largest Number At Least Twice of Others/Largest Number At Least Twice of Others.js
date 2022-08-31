@@ -1,3 +1,4 @@
+// Runtime: 70 ms (Top 84.49%) | Memory: 41.9 MB (Top 82.23%)
 /**
  * @param {number[]} nums
  * @return {number}
