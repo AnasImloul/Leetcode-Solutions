@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 74.68%) | Memory: 51.9 MB (Top 43.97%)
 class Solution {
     public int minFlipsMonoIncr(String s) {
         int count1 =0;
