@@ -1,3 +1,4 @@
+// Runtime: 172 ms (Top 37.35%) | Memory: 51.6 MB (Top 7.23%)
 /**
  * @param {number[][]} board
  * @return {number}
@@ -22,7 +23,7 @@ class BoardState {
         const newBoard = [];
         board.forEach((row) => {
              newBoard.push([...row]);
-        }); 
+        });
         return newBoard;
     }
     flatToString(board) {
