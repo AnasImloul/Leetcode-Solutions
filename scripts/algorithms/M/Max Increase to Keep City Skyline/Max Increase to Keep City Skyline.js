@@ -1,3 +1,4 @@
+// Runtime: 73 ms (Top 92.50%) | Memory: 42.7 MB (Top 88.33%)
 /**
  * @param {number[][]} grid
  * @return {number}
@@ -6,7 +7,7 @@ var maxIncreaseKeepingSkyline = function(grid) {
     let n = grid.length;
     let sum = 0;
     let cache = [];
-    
+
     for (let i = 0; i < n; i++) {
         const rowMax = Math.max(...grid[i]);
 
@@ -25,6 +26,6 @@ var maxIncreaseKeepingSkyline = function(grid) {
             sum += Math.min(rowMax, colMax) - grid[i][j];
         }
     }
-    
+
     return sum;
 };
