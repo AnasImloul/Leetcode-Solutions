@@ -1,3 +1,4 @@
+// Runtime: 180 ms (Top 83.67%) | Memory: 63.4 MB (Top 69.39%)
 const MOD = 1e9 + 7;
 const countNicePairs = (a) => {
     let m = new Map();
@@ -29,6 +30,6 @@ const rev = (num) => {
     let s = num + '';
     let res = '';
     let n = s.length;
-    for (let i = n - 1; ~i; i--)  res += s[i];
+    for (let i = n - 1; ~i; i--) res += s[i];
     return Number(res);
 };
