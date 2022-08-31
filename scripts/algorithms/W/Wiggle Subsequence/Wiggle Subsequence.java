@@ -1,3 +1,4 @@
+// Runtime: 150 ms (Top 5.98%) | Memory: 74.5 MB (Top 5.03%)
 class Solution {
     int n;
     int dp[][][];
@@ -31,7 +32,7 @@ class Solution {
         }
         else{
             int not = f(i + 1 , 1 , a , prev);
-            int take = 0; 
+            int take = 0;
             if(a[i] - prev < 0){
                 take = f(i + 1 , 0 , a , a[i]) + 1;
             }
