@@ -1,3 +1,4 @@
+// Runtime: 245 ms (Top 43.75%) | Memory: 45.1 MB (Top 66.96%)
 var longestIdealString = function(s, k) {
     let n = s.length
     let dp = Array(26).fill(0);
@@ -7,7 +8,7 @@ var longestIdealString = function(s, k) {
         dp[cur] += 1;
         for(let j=Math.max(0, cur-k); j<=Math.min(cur+k, 25); j++){
             if(j !== cur){
-                dp[cur] = Math.max(dp[cur], dp[j]+1);   
+                dp[cur] = Math.max(dp[cur], dp[j]+1);
             }
         }
         ans = Math.max(dp[cur], ans)
