@@ -1,3 +1,4 @@
+// Runtime: 366 ms (Top 17.65%) | Memory: 69.2 MB (Top 29.41%)
 /**
  * @param {string} text
  * @param {string} pattern
@@ -5,7 +6,7 @@
  */
 var maximumSubsequenceCount = function(text, pattern) {
     const arrText = text.split("")
-    const lengthP0 = arrText.filter(x => x === pattern[0]).length    
+    const lengthP0 = arrText.filter(x => x === pattern[0]).length
     const lengthP1 = arrText.filter(x => x === pattern[1]).length
     const [c1, c2, lengthmax] = lengthP0 <= lengthP1 ? [...pattern, lengthP1]: [pattern[1], pattern[0], lengthP0]
     let newText = lengthP0 <= lengthP1 ? [c1,...arrText]: [...arrText, c1]
