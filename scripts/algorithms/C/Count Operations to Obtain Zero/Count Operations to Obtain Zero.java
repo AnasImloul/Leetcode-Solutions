@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 40.8 MB (Top 69.19%)
 class Solution {
     public int countOperations(int num1, int num2) {
         int count=0;
