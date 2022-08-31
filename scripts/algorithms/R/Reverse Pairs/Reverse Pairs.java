@@ -1,3 +1,4 @@
+// Runtime: 354 ms (Top 5.04%) | Memory: 75.8 MB (Top 46.03%)
 class Solution {
     int cnt;
     public int reversePairs(int[] nums) {
