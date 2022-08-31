@@ -1,3 +1,4 @@
+// Runtime: 1073 ms (Top 40.58%) | Memory: 43.7 MB (Top 82.61%)
 var minCut = function(s) {
     function isPal(l, r) {
         while (l < r) {
@@ -5,7 +6,7 @@ var minCut = function(s) {
             else return false;
         } return true;
     }
-    
+
     let map = new Map();
     function dfs(idx = 0) {
         if (idx === s.length) return 0;
