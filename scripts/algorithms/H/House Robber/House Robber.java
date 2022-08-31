@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.8 MB (Top 31.47%)
 class Solution {
     public int rob(int[] nums) {
         int[] t = new int[nums.length] ;
@@ -16,11 +17,11 @@ class Solution {
         if(t[i] != -1){
             return t[i];
         }
-        
+
         int pick = nums[i] + helper(nums,i+2,t);
         int unpicked = helper(nums,i+1,t);
         t[i] = Math.max(pick,unpicked);
         return t[i];
-       
+
     }
 }
