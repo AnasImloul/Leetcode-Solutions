@@ -1,3 +1,4 @@
+// Runtime: 2497 ms (Top 5.55%) | Memory: 83.5 MB (Top 16.67%)
 var peopleIndexes = function(favoriteCompanies) {
     let arr = favoriteCompanies
     let len = arr.length
