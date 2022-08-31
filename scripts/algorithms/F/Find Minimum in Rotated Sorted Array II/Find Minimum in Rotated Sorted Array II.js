@@ -1,3 +1,4 @@
+// Runtime: 66 ms (Top 92.37%) | Memory: 42.5 MB (Top 45.04%)
 /**
  * @param {number[]} nums
  * @return {number}
@@ -8,12 +9,12 @@ var findMin = function(nums) {
     let r = nums.length - 1;
     while (l <= r) {
         const m = Math.floor((l + r) / 2);
-        
+
         // Eliminate dupes ......................... only difference from #153
         while (l < m && nums[l] === nums[m]) l++;
         while (r > m && nums[r] === nums[m]) r--;
         // .........................................
-        
+
         // locate the sorted side, the opposite side has the break point
         // min should be on the side that has the break point, so continue search on that side
         if (nums[l] <= nums[m]) {
@@ -26,7 +27,7 @@ var findMin = function(nums) {
             // break is on left side
             min = Math.min(min, nums[m]);
             r = m - 1;
-        }  
+        }
     }
     return min;
 };
