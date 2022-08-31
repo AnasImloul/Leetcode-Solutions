@@ -1,3 +1,4 @@
+// Runtime: 165 ms (Top 38.49%) | Memory: 6.1 MB (Top 38.40%)
 class Solution {
 public:
     int maximumScore(int a, int b, int c) {
@@ -19,6 +20,6 @@ public:
             pq.push(s);
         }
         return ans;
-        
+
     }
 };
