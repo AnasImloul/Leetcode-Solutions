@@ -1,3 +1,4 @@
+// Runtime: 2425 ms (Top 13.72%) | Memory: 77.5 MB (Top 19.61%)
 var numberOfWays = function(s) {
     const len = s.length;
     const prefix = new Array(len).fill(0).map(() => new Array(2).fill(0));
