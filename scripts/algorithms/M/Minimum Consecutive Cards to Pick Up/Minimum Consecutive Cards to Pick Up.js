@@ -1,3 +1,4 @@
+// Runtime: 415 ms (Top 33.61%) | Memory: 77.3 MB (Top 42.62%)
 var minimumCardPickup = function(cards) {
     let cardsSeen = {};
     let minPicks = Infinity;
