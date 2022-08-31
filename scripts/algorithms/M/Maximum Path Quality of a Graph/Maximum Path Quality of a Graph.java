@@ -1,4 +1,4 @@
-// Runtime: 525 ms (Top 28.72%) | Memory: 100 MB (Top 58.82%)
+// Runtime: 494 ms (Top 30.80%) | Memory: 104.9 MB (Top 47.75%)
 class Solution {
     public int maximalPathQuality(int[] values, int[][] edges, int maxTime) {
         int n = values.length;
