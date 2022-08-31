@@ -1,3 +1,4 @@
+// Runtime: 76 ms (Top 81.10%) | Memory: 42.1 MB (Top 84.25%)
 var countEven = function(num) {
     let count=0;
     for(let i=2;i<=num;i++){
