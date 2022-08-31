@@ -1,6 +1,7 @@
+// Runtime: 105 ms (Top 48.16%) | Memory: 44.6 MB (Top 28.44%)
 var restoreIpAddresses = function(s) {
     const results = [];
-    
+
     const go = (str, arr) => {
         // if we used every character and have 4 sections, it's a good IP!
         if (str.length === 0 && arr.length === 4) {
@@ -25,8 +26,8 @@ var restoreIpAddresses = function(s) {
         }
         return;
     }
-    
+
     go(s, []);
-    
+
     return results;
 };
