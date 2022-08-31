@@ -1,3 +1,4 @@
+// Runtime: 101 ms (Top 95.88%) | Memory: 60 MB (Top 57.22%)
 var validPartition = function(nums) {
   let n = nums.length, memo = Array(n).fill(-1);
   return dp(0);
@@ -15,5 +16,5 @@ var validPartition = function(nums) {
       if (hasThreeEqual || hasThreeConsecutive) return memo[i] = true;
     }
     return memo[i] = false;
-  }  
+  }
 };
