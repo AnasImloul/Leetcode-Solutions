@@ -1,3 +1,4 @@
+// Runtime: 308 ms (Top 14.36%) | Memory: 51.8 MB (Top 95.39%)
 
 var Solution = function(nums) {
     this.nums = nums;
@@ -9,7 +10,7 @@ Solution.prototype.reset = function() {
 };
 
 Solution.prototype.shuffle = function() {
-    
+
     const n = this.nums.length;
     const numsArray = this.nums;
 
@@ -19,6 +20,6 @@ Solution.prototype.shuffle = function() {
         numsArray[i] = numsArray[j];
         numsArray[j] = tmp;
     }
-        
+
     return numsArray;
 };
