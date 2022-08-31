@@ -1,3 +1,4 @@
+// Runtime: 99 ms (Top 38.05%) | Memory: 41.7 MB (Top 86.73%)
 var totalMoney = function(n) {
     let min = 1;
     let days = 7;
