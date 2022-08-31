@@ -1,3 +1,4 @@
+// Runtime: 164 ms (Top 8.73%) | Memory: 11.7 MB (Top 72.75%)
 class Solution {
 public:
     int largest1BorderedSquare(vector<vector<int>>& grid) {
@@ -49,7 +50,7 @@ public:
         int ans = 0;
         for(int i = 0;i<m;i++){
             for(int j = 0;j<n;j++){
-                // take the minimum of the values of the 
+                // take the minimum of the values of the
                 if(grid[i][j] == 1){
                     int ci = i;
                     int cj = j;
@@ -61,7 +62,7 @@ public:
                             ans = max(ans,1);
                         }
                         else{
-                            // now make it maximum value of the 
+                            // now make it maximum value of the
                             if(down[ci][cj+k] >= k+1 && left[ci+k][cj] >=k+1){
                                 ans = max(ans,(k+1)*(k+1));
                             }
@@ -69,7 +70,7 @@ public:
 
                     }
                 }
-                
+
             }
         }
         return ans;
