@@ -1,6 +1,7 @@
+// Runtime: 250 ms (Top 27.92%) | Memory: 125.9 MB (Top 80.67%)
 class Solution {
     public int[] minInterval(int[][] intervals, int[] queries) {
-	    //sort intervals
+        //sort intervals
         Arrays.sort(intervals, (a,b) -> a[0] - b[0]);
         //add [index,query]
         int[][] q = new int[queries.length][2];
