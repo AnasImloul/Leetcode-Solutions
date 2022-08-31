@@ -1,3 +1,4 @@
+// Runtime: 164 ms (Top 39.53%) | Memory: 127.2 MB (Top 83.72%)
 class Solution {
     public int[] closestRoom(int[][] rooms, int[][] queries) {
         int n = rooms.length, k = queries.length;
