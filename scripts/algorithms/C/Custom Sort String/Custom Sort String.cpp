@@ -1,4 +1,4 @@
-// Runtime: 7 ms (Top 18.14%) | Memory: 6.6 MB (Top 11.53%)
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.5 MB (Top 11.00%)
 class Solution {
 public:
     string customSortString(string order, string s) {
