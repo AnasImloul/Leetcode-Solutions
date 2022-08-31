@@ -1,3 +1,4 @@
+// Runtime: 258 ms (Top 70.76%) | Memory: 10.2 MB (Top 70.25%)
 class Solution {
 public:
     int countPrimes(int n) {
