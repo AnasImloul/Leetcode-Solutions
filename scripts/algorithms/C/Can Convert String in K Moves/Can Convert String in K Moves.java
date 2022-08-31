@@ -1,3 +1,4 @@
+// Runtime: 23 ms (Top 58.97%) | Memory: 54.5 MB (Top 69.23%)
 class Solution {
     public boolean canConvertString(String s, String t, int k) {
        //if strings lengths not equal return false
@@ -18,7 +19,7 @@ class Solution {
             if(s.charAt(i)==t.charAt(i)){
                 i++;
             }else{
-                //else now find difference 
+                //else now find difference
                 //+26 because we dont know it can be negative also and again mod with 26
                 int diff=((t.charAt(i)-s.charAt(i))+26)%26;
                 //decrement count after usage of one value of b[diff]
@@ -26,9 +27,9 @@ class Solution {
                 //if b[diff]<0 means over usage than given so return false
                 if(b[diff]<0) return false;
                 //else finally increment
-                else  i++;
+                else i++;
             }
-            
+
         }
         return true;
     }
