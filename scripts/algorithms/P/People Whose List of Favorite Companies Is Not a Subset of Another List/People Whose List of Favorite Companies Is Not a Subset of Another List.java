@@ -1,3 +1,4 @@
+// Runtime: 362 ms (Top 62.96%) | Memory: 52.4 MB (Top 92.59%)
 class Solution {
     public List<Integer> peopleIndexes(List<List<String>> favoriteCompanies) {
         Set<String>[] fav = new Set[favoriteCompanies.size()];
@@ -18,7 +19,7 @@ class Solution {
         Collections.sort(ans);
         return ans;
     }
-    
+
     private boolean isSubSet(Set<String> child, Set<String> parent) {
         if (child.size() > parent.size()) return false;
         return parent.containsAll(child);
