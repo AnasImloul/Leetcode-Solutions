@@ -1,11 +1,12 @@
+// Runtime: 83 ms (Top 95.24%) | Memory: 46.2 MB (Top 100.00%)
 var numFriendRequests = function(ages) {
     const count = new Array(121).fill(0);
-    
+
     ages.forEach((age) => count[age]++);
 
     let res = 0; // total friend request sent
-    let tot = 0;  // cumulative count of people so far
-    
+    let tot = 0; // cumulative count of people so far
+
     for (let i = 0; i <= 120; i++) {
 
         if (i > 14 && count[i] != 0) {
@@ -17,8 +18,8 @@ var numFriendRequests = function(ages) {
         }
 
         tot += count[i];
-        count[i] = tot; 
+        count[i] = tot;
     }
-    
+
     return res;
 };
