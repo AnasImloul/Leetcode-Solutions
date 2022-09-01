@@ -1,3 +1,4 @@
+// Runtime: 72 ms (Top 82.64%) | Memory: 22.7 MB (Top 21.95%)
 class Solution {
 public:
     int countServers(vector<vector<int>>& grid) {
@@ -21,7 +22,7 @@ public:
                     {
                         if(x!=j && grid[i][x] && !visited[i][x])
                             visited[i][x]=true,flag=true;
-                        if(!flag && x!=j &&  visited[i][x])
+                        if(!flag && x!=j && visited[i][x])
                             flag=true;
                     }
                     if(flag)
@@ -34,7 +35,7 @@ public:
             for(int j=0;j<m;j++)
                 if(visited[i][j])
                     ans++;
-        
+
         return ans;
     }
 };
