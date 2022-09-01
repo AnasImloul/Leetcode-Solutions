@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 67.44%) | Memory: 7.6 MB (Top 66.09%)
 class Solution {
 public:
     int timeRequiredToBuy(vector<int>& tickets, int k) {
@@ -8,7 +9,7 @@ public:
                     if(i<=k){
                         ans+= min(ele, tickets[i]);
                     }else{
-                        ans+= min(ele-1, tickets[i]);   
+                        ans+= min(ele-1, tickets[i]);
                     }
             }
             return ans;
