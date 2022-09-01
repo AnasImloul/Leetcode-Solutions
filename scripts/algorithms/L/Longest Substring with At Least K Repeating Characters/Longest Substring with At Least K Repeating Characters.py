@@ -1,10 +1,10 @@
+# Runtime: 57 ms (Top 73.85%) | Memory: 14.4 MB (Top 21.39%)
 from collections import Counter
 
 class Solution:
-    def longestSubstring(self, s: str, k: int) -> int:        
+    def longestSubstring(self, s: str, k: int) -> int:
         return get_longest_substring(s, k)
-                
-        
+
 def get_longest_substring(s, k):
     if len(s) == 0: return 0
     c = Counter(s)
