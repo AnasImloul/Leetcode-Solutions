@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 27.34%) | Memory: 84.2 MB (Top 12.92%)
 class Solution {
     public int getMaxLen(int[] nums)
     {
