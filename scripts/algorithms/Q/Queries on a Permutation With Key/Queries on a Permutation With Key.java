@@ -1,12 +1,13 @@
+// Runtime: 15 ms (Top 39.19%) | Memory: 43.3 MB (Top 49.82%)
 class Solution {
     public int[] processQueries(int[] queries, int m) {
         int[] results = new int[queries.length];
-        ArrayList<Integer>  permutations = new ArrayList<Integer>(); 
-        
+        ArrayList<Integer> permutations = new ArrayList<Integer>();
+
         // Filling the permuations array with numbers.
         for (int i = 0; i < m; i++)
             permutations.add(i+1);
-        
+
         // Looping on the queries & checking their index in the permuations
         for (int i = 0; i < queries.length; i++) {
             int query = queries[i];
@@ -19,8 +20,8 @@ class Solution {
                     break;
                 }
         }
-        
-        return results; 
-        
+
+        return results;
+
     }
 }
