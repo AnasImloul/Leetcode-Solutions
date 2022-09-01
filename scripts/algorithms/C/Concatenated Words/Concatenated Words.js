@@ -1,3 +1,4 @@
+// Runtime: 578 ms (Top 25.39%) | Memory: 72.5 MB (Top 21.92%)
 
 class Node {
     val;
@@ -6,7 +7,7 @@ class Node {
     constructor(val) {
         this.val = val;
     }
-    
+
 }
 class Trie {
     nodes = Array(26);
@@ -21,7 +22,7 @@ class Trie {
             node.children[idx] = childNode;
             node = childNode;
         }
-        
+
         node.isWord = true;
     }
 
@@ -33,15 +34,15 @@ class Trie {
             if (!node) {
                 break;
             }
-            
+
             if (node.isWord) {
                 rslt.push(i-start+1);
             }
         }
-        
+
         return rslt;
     }
-    
+
     getIdx(ch) {
         return ch.charCodeAt(0) - "a".charCodeAt(0);
     }
@@ -61,7 +62,7 @@ var findAllConcatenatedWordsInADict = function(words) {
         }
         tr.addWord(words[i]);
     }
-    
+
     return rslt;
 };
 
@@ -77,15 +78,15 @@ function check(word, i, trie, dp) {
         dp[i] = false;
         return false;
     }
-    
+
     dp[i] = true;
     for (let l of lens) {
         if (check(word, i+l, trie, dp)) {
             return true;
         }
     }
-    
+
     dp[i] = false;
-    
+
     return false;
 }
