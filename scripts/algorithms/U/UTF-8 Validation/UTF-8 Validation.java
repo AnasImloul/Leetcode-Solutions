@@ -1,8 +1,9 @@
+// Runtime: 1 ms (Top 100.00%) | Memory: 48.5 MB (Top 26.95%)
 class Solution {
     public boolean validUtf8(int[] data) {
         return help(data,0);
     }
-    
+
     public boolean help(int[] data,int index) {
         int n=data.length-index;
         if(n==0){
@@ -19,7 +20,7 @@ class Solution {
         }
         return help(data,index+c0);
     }
-    
+
     private int count(int a){
         if((a>>3)==0b11110){
             return 4;
