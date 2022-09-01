@@ -1,3 +1,4 @@
+// Runtime: 1259 ms (Top 62.50%) | Memory: 51.1 MB (Top 100.00%)
 /*
 DSU Class Template
 */
@@ -6,12 +7,12 @@ class DSU {
         this.parents = new Map();
         this.rank = new Map();
     }
-    
+
     add(x) {
         this.parents.set(x, x);
         this.rank.set(x, 0);
     }
-    
+
     find(x) {
         const parent = this.parents.get(x);
         if (parent === x) return x;
@@ -19,7 +20,7 @@ class DSU {
         this.parents.set(x, setParent);
         return setParent;
     }
-    
+
     union(x, y) {
         const xParent = this.find(x), yParent = this.find(y);
         const xRank = this.rank.get(xParent), yRank = this.rank.get(yParent);
@@ -31,7 +32,7 @@ class DSU {
         } else {
             this.parents.set(xParent, yParent);
             this.rank.set(yParent, yRank + 1);
-        }   
+        }
     }
 }
 
@@ -41,7 +42,7 @@ Friend Requests
 var friendRequests = function(n, restrictions, requests) {
     const dsu = new DSU(), result = [];
     for (let i = 0; i < n; i++) dsu.add(i);
-    
+
     for (let [friend1, friend2] of requests) {
         const parent1 = dsu.find(friend1), parent2 = dsu.find(friend2);
         let friendshipPossible = true;
