@@ -1,4 +1,4 @@
-// Runtime: 5 ms (Top 5.42%) | Memory: 43.3 MB (Top 75.85%)
+// Runtime: 3 ms (Top 8.62%) | Memory: 43.1 MB (Top 83.93%)
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null) return head;
