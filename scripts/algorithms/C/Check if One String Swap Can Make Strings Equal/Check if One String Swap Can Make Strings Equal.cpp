@@ -1,4 +1,4 @@
-// Runtime: 4 ms (Top 41.52%) | Memory: 6.3 MB (Top 21.58%)
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.3 MB (Top 62.31%)
 /*
     https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
 
