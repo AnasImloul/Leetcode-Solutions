@@ -1,3 +1,4 @@
+// Runtime: 22 ms (Top 94.19%) | Memory: 42.1 MB (Top 89.53%)
 class Solution {
     public int numberWays(List<List<Integer>> hats) {
         int n = hats.size(), M = (int)1e9+7;
