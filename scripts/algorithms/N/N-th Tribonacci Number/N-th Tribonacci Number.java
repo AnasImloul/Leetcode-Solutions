@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 40.8 MB (Top 58.23%)
 class Solution {
     public int tribonacci(int n) {
         if(n==0)
