@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 62.01%) | Memory: 6 MB (Top 20.41%)
 class Solution {
 public:
     int countTriples(int n) {
