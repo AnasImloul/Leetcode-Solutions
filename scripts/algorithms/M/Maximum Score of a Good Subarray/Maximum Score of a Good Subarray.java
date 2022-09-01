@@ -1,4 +1,4 @@
-// Runtime: 9 ms (Top 69.08%) | Memory: 95.9 MB (Top 37.50%)
+// Runtime: 8 ms (Top 75.40%) | Memory: 51.5 MB (Top 97.59%)
 class Solution {
     public int maximumScore(int[] nums, int k) {
         int n = nums.length;
