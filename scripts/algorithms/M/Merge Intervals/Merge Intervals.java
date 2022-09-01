@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 74.73%) | Memory: 55.4 MB (Top 43.78%)
 class Solution {
     public int[][] merge(int[][] intervals) {
         // sort
@@ -9,7 +10,7 @@ class Solution {
             // case 2 : Non-merging
                 // seperate interval
         // convert ArrayList to array and return
-        
+
         Arrays.sort(intervals, (a,b) -> a[0]-b[0]);
         ArrayList<int[]> list = new ArrayList<>();
         for(int i = 0; i < intervals.length; i++) {
