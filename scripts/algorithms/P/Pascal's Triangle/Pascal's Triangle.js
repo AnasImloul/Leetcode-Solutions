@@ -1,3 +1,4 @@
+// Runtime: 97 ms (Top 29.35%) | Memory: 42 MB (Top 49.80%)
 var generate = function(numRows) {
     let ans = new Array(numRows)
     for (let i = 0; i < numRows; i++) {
