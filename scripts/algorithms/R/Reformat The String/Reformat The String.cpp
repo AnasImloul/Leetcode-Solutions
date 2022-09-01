@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 65.55%) | Memory: 7.5 MB (Top 65.85%)
 class Solution {
 public:
     string reformat(string s) {
