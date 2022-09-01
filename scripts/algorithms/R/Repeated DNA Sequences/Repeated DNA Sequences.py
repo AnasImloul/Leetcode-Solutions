@@ -1,3 +1,4 @@
+# Runtime: 147 ms (Top 16.98%) | Memory: 27.7 MB (Top 15.14%)
 class Solution(object):
     def findRepeatedDnaSequences(self, s):
         """
@@ -13,10 +14,10 @@ class Solution(object):
             else:
                 seqs[curr] = 1
             i += 1
-        
+
         repeats = []
         for seq in list(seqs.keys()):
             if seqs[seq] > 1:
                 repeats.append(seq)
-        
+
         return repeats
