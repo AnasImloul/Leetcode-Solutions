@@ -1,13 +1,14 @@
+// Runtime: 132 ms (Top 76.39%) | Memory: 44.5 MB (Top 80.56%)
 var findTheCity = function(n, edges, distanceThreshold) {
     const dp = Array.from({length: n}, (_, i) => {
         return Array.from({length: n}, (_, j) => i == j ? 0 : Infinity)
     });
-    
+
     for(let edge of edges) {
         const [a, b, w] = edge;
         dp[a][b] = dp[b][a] = w;
     }
-    
+
     // k is intermediate node
     for(let k = 0; k < n; k++) {
         // fix distances from i to other nodes with k as intermediate
@@ -18,7 +19,7 @@ var findTheCity = function(n, edges, distanceThreshold) {
             }
         }
     };
-    
+
     let city = -1, minCity = n;
     for(let i = 0; i < n; i++) {
         let count = 0;
@@ -31,6 +32,6 @@ var findTheCity = function(n, edges, distanceThreshold) {
             city = i;
         }
     }
-    
+
     return city;
 };
