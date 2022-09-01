@@ -1,3 +1,4 @@
+// Runtime: 355 ms (Top 76.39%) | Memory: 43.3 MB (Top 89.82%)
 class Solution {
 public:
     int mod = 1000000007;
@@ -20,7 +21,7 @@ protected:
     }
     int dfs(int x, int y, vector <vector<int>>&grid,vector <vector<int>>&dp){
         if(dp[x][y]!=-1) return dp[x][y];
-        
+
         int ans = 1;
         for(int i = 0; i<4; i++){
             if(isvalid(x+dx[i],y+dy[i],grid) and grid[x][y]>grid[x+dx[i]][y+dy[i]]){
