@@ -1,3 +1,4 @@
+# Runtime: 176 ms (Top 11.57%) | Memory: 14.6 MB (Top 46.27%)
 class FrontMiddleBackQueue:
 
     def __init__(self):
@@ -7,10 +8,10 @@ class FrontMiddleBackQueue:
     def _correct_size(self):
         while len(self.back) > len(self.front):
             self.front.append(self.back.popleft())
-        
+
         while len(self.front) > len(self.back) + 1:
             self.back.appendleft(self.front.pop())
-        
+
     def pushFront(self, val: int) -> None:
         self.front.appendleft(val)
         self._correct_size()
