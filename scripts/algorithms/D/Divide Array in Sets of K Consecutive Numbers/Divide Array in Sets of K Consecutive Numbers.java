@@ -1,6 +1,7 @@
+// Runtime: 127 ms (Top 67.88%) | Memory: 81.5 MB (Top 9.11%)
 class Solution {
     public boolean isPossibleDivide(int[] nums, int k) {
-        if (nums.length % k != 0) return false; 
+        if (nums.length % k != 0) return false;
         Map<Integer, Integer> countMap = new HashMap<>();
         for (int num : nums) {
             int count = countMap.getOrDefault(num, 0);
