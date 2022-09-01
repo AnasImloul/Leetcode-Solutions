@@ -1,3 +1,4 @@
+// Runtime: 85 ms (Top 20.04%) | Memory: 49.5 MB (Top 50.90%)
 class Solution {
     public int countBalls(int lowLimit, int highLimit) {
         Map<Integer,Integer> map = new HashMap<>();
