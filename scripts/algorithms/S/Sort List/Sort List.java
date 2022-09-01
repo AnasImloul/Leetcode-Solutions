@@ -1,11 +1,12 @@
+// Runtime: 19 ms (Top 49.77%) | Memory: 74.3 MB (Top 81.61%)
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * int val;
+ * ListNode next;
+ * ListNode() {}
+ * ListNode(int val) { this.val = val; }
+ * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
 class Solution {
@@ -13,7 +14,7 @@ class Solution {
         if (head == null || head.next == null) {
             return head;
         }
-        
+
         ListNode mid = middle(head);
 
         ListNode left = sortList(head);
