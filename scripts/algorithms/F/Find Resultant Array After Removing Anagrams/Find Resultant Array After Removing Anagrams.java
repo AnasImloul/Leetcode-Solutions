@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 67.01%) | Memory: 45.5 MB (Top 47.50%)
 class Solution {
     public List<String> removeAnagrams(String[] words) {
         String prev ="";
