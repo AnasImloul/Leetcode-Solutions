@@ -1,8 +1,9 @@
+// Runtime: 106 ms (Top 57.76%) | Memory: 45.2 MB (Top 47.13%)
 /**
  * // Definition for a Node.
  * function Node(val,children) {
- *    this.val = val;
- *    this.children = children;
+ * this.val = val;
+ * this.children = children;
  * };
  */
 
