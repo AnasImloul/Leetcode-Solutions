@@ -1,3 +1,4 @@
+# Runtime: 2054 ms (Top 5.33%) | Memory: 24.4 MB (Top 72.78%)
 class Solution:
     def reconstructMatrix(self, upper: int, lower: int, colsum: List[int]) -> List[List[int]]:
         n = len(colsum)
@@ -18,4 +19,4 @@ class Solution:
                     lower -= 1
             if upper < 0 or lower < 0: break
 
-        return matrix if upper == lower == 0 else  []
+        return matrix if upper == lower == 0 else []
