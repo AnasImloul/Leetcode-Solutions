@@ -1,3 +1,4 @@
+// Runtime: 78 ms (Top 87.43%) | Memory: 43.8 MB (Top 68.26%)
 let arr = new Array();
 let size = 0;
 
