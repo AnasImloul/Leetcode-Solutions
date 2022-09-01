@@ -1,3 +1,4 @@
+// Runtime: 156 ms (Top 5.09%) | Memory: 13.4 MB (Top 68.16%)
 class Solution {
 public:
     int findMinDifference(vector<string>& timePoints) {
@@ -7,7 +8,7 @@ public:
             if(st.count(i)) return 0;
             st.insert(i);
         }
-        int ans =  INT_MAX;
+        int ans = INT_MAX;
         int first = -1,prev = 0; // first variable will take the diffrence of the first time stamp given in the input and 00:00
         int hour = 0, minute = 0;
         while(hour<24)
