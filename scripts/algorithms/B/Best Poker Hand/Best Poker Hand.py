@@ -1,3 +1,4 @@
+# Runtime: 38 ms (Top 59.18%) | Memory: 13.9 MB (Top 14.06%)
 class Solution:
     def bestHand(self, ranks: List[int], suits: List[str]) -> str:
         s={}
