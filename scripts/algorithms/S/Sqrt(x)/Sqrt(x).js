@@ -1,3 +1,4 @@
+// Runtime: 112 ms (Top 59.43%) | Memory: 43.6 MB (Top 60.45%)
 /**
  * @param {number} x
  * @return {number}
@@ -13,4 +14,3 @@ var mySqrt = function(x) {
     }
     return x;
 };
-
