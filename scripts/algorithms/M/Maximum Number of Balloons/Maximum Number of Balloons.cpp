@@ -1,3 +1,4 @@
+// Runtime: 11 ms (Top 8.63%) | Memory: 6.7 MB (Top 45.44%)
 class Solution {
 public:
     int maxNumberOfBalloons(string text) {
