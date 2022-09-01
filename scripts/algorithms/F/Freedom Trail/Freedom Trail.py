@@ -1,16 +1,17 @@
+# Runtime: 121 ms (Top 97.21%) | Memory: 14.1 MB (Top 67.25%)
 class Solution:
     def findRotateSteps(self, ring: str, key: str) -> int:
         char_pos = defaultdict(set)
         for i, c in enumerate(ring):
             char_pos[c].add(i)
-        
+
         def minStep(fromm, to):
             if fromm == to:
                 return 0
             minSteps = abs(fromm - to)
             minSteps = min(minSteps, abs(len(ring) - minSteps))
             return minSteps
-        
+
         n = len(key)
         dp = [0] * len(ring)
         for p in char_pos[key[0]]:
