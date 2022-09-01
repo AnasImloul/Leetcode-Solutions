@@ -1,3 +1,4 @@
+// Runtime: 799 ms (Top 28.57%) | Memory: 86.3 MB (Top 42.86%)
 /**
  * @param {number[]} packages
  * @param {number[][]} boxes
@@ -9,7 +10,7 @@ var minWastedSpace = function(packages, boxes) {
     for(let i=0;i<packages.length;i++){
         totalPackagesSize+=BigInt(packages[i]);
     }
-    
+
     for(let i=0;i<boxes.length;i++){
         boxes[i].sort(function(a,b){return a-b});
         p=0;
@@ -27,7 +28,7 @@ var minWastedSpace = function(packages, boxes) {
                 }
             }
         }
-        if(p===packages.length){//Check if the current supplier was able to pack all the packages. 
+        if(p===packages.length){//Check if the current supplier was able to pack all the packages.
             if(totalBoxesAreaForSupplier<minBoxesAreaForAnySupplier){
                 minBoxesAreaForAnySupplier = totalBoxesAreaForSupplier;
             }
@@ -39,7 +40,6 @@ var minWastedSpace = function(packages, boxes) {
         return -1;
     }
 
-    
     function binaryLowerBound(arr,left,right,key){
         let mid,ans=-1;
         while(left<=right){
