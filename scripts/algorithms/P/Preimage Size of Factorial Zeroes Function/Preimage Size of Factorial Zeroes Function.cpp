@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 11.74%) | Memory: 5.9 MB (Top 34.16%)
 #define ll long long
 class Solution {
 public:
