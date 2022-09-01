@@ -1,9 +1,10 @@
+// Runtime: 3 ms (Top 74.74%) | Memory: 42.3 MB (Top 69.99%)
 class Solution {
 
     public int maxNumberOfBalloons(String text) {
         return maxNumberOfWords(text, "balloon");
     }
-    
+
     private int maxNumberOfWords(String text, String word) {
         final int[] tFrequencies = new int[26];
         for (int i = 0; i < text.length(); ++i) {
