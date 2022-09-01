@@ -1,17 +1,18 @@
+// Runtime: 355 ms (Top 14.58%) | Memory: 72.6 MB (Top 6.25%)
 var displayTable = function(orders) {
     var mapOrders = {};
     var tables = [];
     var dishes = [];
     for(var i=0;i<orders.length;i++){
-		//if entry of table doesn't exist in mapOrders
+        //if entry of table doesn't exist in mapOrders
         if(mapOrders[orders[i][1]] == undefined){
-			//conver table number to integer
+            //conver table number to integer
             var tableNo = Number(orders[i][1])
             mapOrders[tableNo] = {}
             mapOrders[tableNo][orders[i][2]] = 1;
-			//if table number doesn't exist in table array, push it in the table array
+            //if table number doesn't exist in table array, push it in the table array
             if(!tables.includes(tableNo)){tables.push(tableNo)}
-			//if dish doesn't exist in dishes array, push it in the dishes array
+            //if dish doesn't exist in dishes array, push it in the dishes array
             if(!dishes.includes(orders[i][2])){dishes.push(orders[i][2])}
         }else{
             //if entry of table exists in mapOrders
