@@ -1,3 +1,4 @@
+// Runtime: 102 ms (Top 97.93%) | Memory: 45.7 MB (Top 99.22%)
 var addToArrayForm = function(num, k) {
     const length = num.length;
     let digit = 0, index = length-1;
