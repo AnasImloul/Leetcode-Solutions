@@ -1,11 +1,12 @@
+// Runtime: 35 ms (Top 51.44%) | Memory: 16.6 MB (Top 55.42%)
 /**
  * Definition for singly-linked list.
  * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * int val;
+ * ListNode *next;
+ * ListNode() : val(0), next(nullptr) {}
+ * ListNode(int x) : val(x), next(nullptr) {}
+ * ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
 class Solution {
@@ -16,9 +17,9 @@ public:
             v.push_back(head->val);
             head=head->next;
         }
-             
+
     }
-    
+
     int getRandom() {
         return v[rand()%v.size()];
     }
