@@ -1,3 +1,4 @@
+// Runtime: 135 ms (Top 21.74%) | Memory: 46.8 MB (Top 86.96%)
 var numSpecialEquivGroups = function(words) {
     const set = new Set()
     const a = 'a'.charCodeAt(0)
