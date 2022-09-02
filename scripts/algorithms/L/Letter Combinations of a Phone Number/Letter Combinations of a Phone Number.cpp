@@ -1,8 +1,9 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.4 MB (Top 81.78%)
 class Solution {
 public:
-    
+
     void solve(string digit,string output,int index,vector<string>&ans,string mapping[])
-    {   // base condition
+    { // base condition
         if(index>=digit.length())
         {
             ans.push_back(output);
@@ -18,13 +19,13 @@ public:
             output.push_back(value[i]);
             solve(digit,output,index+1,ans,mapping);
             //backtrack
-            //backtrach because initially output is empty and one case solves now you have to solve second case in similar way 
-            output.pop_back();        }
-            
+            //backtrach because initially output is empty and one case solves now you have to solve second case in similar way
+            output.pop_back(); }
+
     }
-    
+
     vector<string> letterCombinations(string digits) {
-        
+
         vector<string>ans;
         //if it is empty input string
         if(digits.length()==0)
