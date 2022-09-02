@@ -1,3 +1,4 @@
+// Runtime: 694 ms (Top 19.67%) | Memory: 88 MB (Top 12.50%)
 var maximumSum = function(nums) {
     let sums = nums.map(x => x.toString().split('').map(Number).reduce((a,b)=> a+b,0));
     let max = -1;
