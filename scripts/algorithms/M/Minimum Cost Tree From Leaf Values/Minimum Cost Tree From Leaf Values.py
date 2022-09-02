@@ -1,3 +1,4 @@
+# Runtime: 472 ms (Top 12.37%) | Memory: 14 MB (Top 32.41%)
 class Solution:
     def mctFromLeafValues(self, arr: List[int]) -> int:
         n = len(arr)
@@ -9,7 +10,7 @@ class Solution:
                 if arr[maxx] < arr[i] : maxx = i
             d[(start,end)] = arr[maxx]
             return arr[maxx]
-        
+
         dp = [[float('inf') for i in range(n)] for j in range(n)]
         for gap in range(n):
             for row in range(n - gap):
@@ -22,7 +23,5 @@ class Solution:
                     for k in range(row,col):
                         val = dp[row][k] + findMax(row,k) * findMax(k+1,col) + dp[k+1][col]
                         if val < dp[row][col]: dp[row][col] = val
-                
 
         return dp[0][-1]
-                    
