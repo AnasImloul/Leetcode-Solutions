@@ -1,3 +1,4 @@
+// Runtime: 704 ms (Top 12.50%) | Memory: 92.5 MB (Top 12.50%)
 function gcd(a, b) {
     while (b > 0) {
         a %= b;
