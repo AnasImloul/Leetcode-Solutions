@@ -1,3 +1,4 @@
+// Runtime: 413 ms (Top 31.46%) | Memory: 81.5 MB (Top 29.47%)
 var construct2DArray = function(original, m, n) {
     if (original.length !== (m*n)) return []
     let result = []
