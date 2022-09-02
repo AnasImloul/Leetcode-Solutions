@@ -1,3 +1,4 @@
+// Runtime: 74 ms (Top 79.90%) | Memory: 44.6 MB (Top 9.41%)
 /**
  * @param {string[]} words
  * @param {string} order
