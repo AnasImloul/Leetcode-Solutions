@@ -1,3 +1,4 @@
+// Runtime: 672 ms (Top 71.43%) | Memory: 146.7 MB (Top 50.00%)
 /**
  * @param {number[]} favorite
  * @return {number}
@@ -11,7 +12,7 @@ var maximumInvitations = function(favorite) {
     let rMap = new Map();
     for(let i=0; i<favorite.length; i++){
         indegree[favorite[i]] ++;
-        
+
         if(rMap.has(favorite[i])){
             let arr = rMap.get(favorite[i]);
             arr.push(i);
@@ -20,7 +21,7 @@ var maximumInvitations = function(favorite) {
             rMap.set(favorite[i], [i]);
         }
     }
-	// find the 0 indegree number
+    // find the 0 indegree number
     let arr = [];
     for(let i=0; i<len; i++){
         if(indegree[i] === 0){
@@ -31,7 +32,7 @@ var maximumInvitations = function(favorite) {
     let search = 0;
     // the length of uncircle
     let l = 1;
-	// save the number and the length of uncircle
+    // save the number and the length of uncircle
     let lMap = new Map();
     while(arr.length > 0){
         let tmp = [];
@@ -44,7 +45,7 @@ var maximumInvitations = function(favorite) {
                 tmp.push(next);
             }
         }
-		// update the length of uncircle
+        // update the length of uncircle
         l ++;
         arr = [...tmp];
     }
@@ -61,18 +62,18 @@ var maximumInvitations = function(favorite) {
         let circleLen = 1;
         // the max length of circle
         let maxCircleLen = 0;
-        // sum the length of circle 
+        // sum the length of circle
         let sumCircleLen = 0;
         let cArr = [keys[0]];
-        
+
         while(cArr.length > 0){
             let tmp = [];
             for(let i=0; i<cArr.length; i++){
-				// not find the circle
+                // not find the circle
                 if(!circleMap.has(cArr[i])){
                     circleMap.set(cArr[i], circleLen);
                     tmp.push(favorite[cArr[i]]);
-				// find the circle	
+                // find the circle
                 }else{
                     maxCircleLen = Math.max(maxCircleLen, circleLen-1);
                     // if the length equals 2 then sum the length
@@ -97,7 +98,7 @@ var maximumInvitations = function(favorite) {
         res = Math.max(res, maxCircleLen, sumCircleLen);
     }
 
-    return res;    
+    return res;
 };
 
 function calc(num, rMap, lMap){
