@@ -1,3 +1,4 @@
+// Runtime: 499 ms (Top 76.47%) | Memory: 108.2 MB (Top 70.59%)
 /**
  * @param {number[]} nums
  * @return {number}
@@ -16,7 +17,7 @@ var numberOfArithmeticSlices = function(nums) {
       }
       let apsEndingAtI = dp[i].get(commonDifference) || 0
       let apsEndingAtJ = dp[j].get(commonDifference) || 0
-      
+
       dp[j].set(commonDifference, (apsEndingAtI + apsEndingAtJ + 1));
       ans += apsEndingAtI;
     }
