@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 74.38%) | Memory: 9.1 MB (Top 32.76%)
 class Solution {
 public:
     bool canMakeArithmeticProgression(vector<int>& arr) {
