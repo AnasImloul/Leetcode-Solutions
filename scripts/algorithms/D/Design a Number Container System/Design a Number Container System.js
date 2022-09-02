@@ -1,9 +1,9 @@
+// Runtime: 7877 ms (Top 5.15%) | Memory: 105.2 MB (Top 88.00%)
 
 var NumberContainers = function() {
     this.obj = {}
     this.global = {}
 };
-
 
 NumberContainers.prototype.change = function(index, number) {
 
@@ -19,13 +19,13 @@ NumberContainers.prototype.change = function(index, number) {
                             this.obj[number].push(index);
                         else
                             this.obj[number] = [index];
-                        
+
                         this.global[index]=1;
                         return;
                     }
             }
         }
-    
+
     if(this.obj[number])
         this.obj[number].push(index);
     else
