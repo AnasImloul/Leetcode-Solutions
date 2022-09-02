@@ -1,3 +1,4 @@
+// Runtime: 6 ms (Top 51.94%) | Memory: 44.9 MB (Top 8.50%)
 class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
        HashMap<Integer, Integer> map = new HashMap<>();
