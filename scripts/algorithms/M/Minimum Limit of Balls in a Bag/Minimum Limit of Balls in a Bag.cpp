@@ -1,16 +1,17 @@
+// Runtime: 412 ms (Top 28.34%) | Memory: 56 MB (Top 33.00%)
 class Solution {
 public:
     bool isPossible(vector<int>&nums,int mid_penalty,int maxOperations)
     {
         int operations=0;
-        
+
         for(int i=0;i<nums.size();i++)
         {
             operations+=(nums[i]/mid_penalty); //Operations Nedded to divide that element.
             if(nums[i]%mid_penalty==0) //if it is completely divisible means less 1 less is needed for that nums.
                 operations--;
         }
-        
+
         return operations<=maxOperations?1:0; //If operations are less than maxOperations it is one of our ans.
     }
     int minimumSize(vector<int>& nums, int maxOperations) {
