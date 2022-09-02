@@ -1,3 +1,4 @@
+// Runtime: 1461 ms (Top 30.30%) | Memory: 44.6 MB (Top 59.39%)
 var largestVariance = function(s) {
   let chars = new Set(s.split("")), maxDiff = 0;
   for (let l of chars) {
@@ -15,7 +16,7 @@ var largestVariance = function(s) {
         }
         if (lCount < rCount) {
           lCount = 0, rCount = 0;
-          hasRight = true; 
+          hasRight = true;
         }
       }
     }
