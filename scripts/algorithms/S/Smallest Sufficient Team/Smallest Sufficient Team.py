@@ -1,3 +1,4 @@
+# Runtime: 2036 ms (Top 22.82%) | Memory: 203 MB (Top 6.04%)
 from collections import defaultdict
 from functools import lru_cache
 
