@@ -1,3 +1,4 @@
+// Runtime: 150 ms (Top 50.00%) | Memory: 47.5 MB (Top 33.33%)
 const outerTrees = (trees) => {
     trees.sort((x, y) => {
         if (x[0] == y[0]) return x[1] - y[1];
