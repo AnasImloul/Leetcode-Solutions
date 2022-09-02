@@ -1,3 +1,4 @@
+# Runtime: 54 ms (Top 28.53%) | Memory: 13.9 MB (Top 25.25%)
 class Solution:
     def nextGreaterElement(self, n: int) -> int:
         s=list(str(n))
