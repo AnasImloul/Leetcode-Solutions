@@ -1,3 +1,4 @@
+// Runtime: 45 ms (Top 75.18%) | Memory: 10.3 MB (Top 57.85%)
 class Solution {
 public:
     bool isValid(int row,int col,int n){
@@ -10,18 +11,18 @@ public:
         int col = startPos[1];
         int currRow = row;
         int currCol = col;
-        
+
         for(int i=0; i<len; i++){
             currRow = row;
             currCol = col;
             int currAns = 0;
             for(int j=i; j<len; j++){
-                
+
                 if(s[j] == 'R') currCol++;
                 else if(s[j] == 'L') currCol--;
                 else if(s[j] == 'U') currRow--;
                 else currRow++;
-                
+
                 if(isValid(currRow,currCol,n))
                     currAns++;
                 else
