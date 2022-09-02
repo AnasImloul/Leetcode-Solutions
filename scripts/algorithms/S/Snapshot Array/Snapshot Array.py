@@ -1,12 +1,13 @@
+# Runtime: 600 ms (Top 65.10%) | Memory: 33.5 MB (Top 72.09%)
 class SnapshotArray:
 
     def __init__(self, length: int):
         self.snap_id = 0
         self.history = defaultdict(dict)
-        
+
     def set(self, index: int, val: int) -> None:
         self.history[self.snap_id][index] = val
-        
+
     def snap(self) -> int:
         self.snap_id += 1
         return self.snap_id-1
