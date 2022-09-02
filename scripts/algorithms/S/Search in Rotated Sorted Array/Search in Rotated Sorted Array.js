@@ -1,3 +1,4 @@
+// Runtime: 79 ms (Top 69.19%) | Memory: 42.6 MB (Top 17.29%)
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -16,7 +17,7 @@ var search = function(nums, target) {
             if (nums[hi] === target) return (hi + h) % len;
             break;
         }
-        
+
         const i = Math.floor((lo + hi + 1) / 2);
         // console.log(lo, hi, i)
         const val = nums[i];
@@ -24,6 +25,6 @@ var search = function(nums, target) {
         if (val > target) hi = i;
         else lo = i;
     }
-    
+
     return -1;
 };
