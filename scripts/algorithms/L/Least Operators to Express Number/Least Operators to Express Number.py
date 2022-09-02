@@ -1,7 +1,8 @@
+# Runtime: 3027 ms (Top 7.32%) | Memory: 13.9 MB (Top 97.56%)
 class Solution(object):
     def leastOpsExpressTarget(self, x, target):
         return self.cost(x, target)
-    
+
     def cost(self, x, val):
         if val == x:
             return 0
