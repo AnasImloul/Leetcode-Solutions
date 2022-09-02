@@ -1,3 +1,4 @@
+// Runtime: 144 ms (Top 6.45%) | Memory: 44.9 MB (Top 6.45%)
 /**
  * @param {number[]} row
  * @return {number}
@@ -10,7 +11,6 @@ var minSwapsCouples = function(row) {
     }
 
     let swapCount = 0;
-
 
      for(let j=0;j<row.length;j+=2) // Looping through the couches
          {
@@ -30,27 +30,25 @@ var minSwapsCouples = function(row) {
             currentPositions[correctRightPartner]=j+1;
             currentPositions[tempValue]=tempPosition;
 
-
             swapCount+=1;
         }
-        else 
+        else
         {
 
-        console.log("happy");  
+        console.log("happy");
         }
     }
 
-    
     console.log("currentPositions", currentPositions,"Correct Row", row);
-    
+
     return swapCount;
-    
+
 };
 function getPartner(x){
     if(x%2 ===0)
     {
         return x+1;
     }
-    else 
+    else
         return x-1;
 }
