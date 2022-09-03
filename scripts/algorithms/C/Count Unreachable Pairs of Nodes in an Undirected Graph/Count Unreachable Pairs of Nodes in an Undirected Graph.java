@@ -1,3 +1,4 @@
+// Runtime: 95 ms (Top 56.92%) | Memory: 193.9 MB (Top 33.32%)
 class Solution {
   public long countPairs(int n, int[][] edges) {
     //Building Graph
@@ -14,7 +15,7 @@ class Solution {
       0
     };
     for (int i = 0; i < graph.size(); i++) { // Running for loop on all connected components of graph
-      if (visited[i] == true) continue; // if the node is alredy reached by any of other vertex then we don't need to terverse it again 
+      if (visited[i] == true) continue; // if the node is alredy reached by any of other vertex then we don't need to terverse it again
       dfs(graph, i, visited, count);
       long a = n - count[0]; // (total - current count)
       long b = count[0] - prev; // (current count - prev )
