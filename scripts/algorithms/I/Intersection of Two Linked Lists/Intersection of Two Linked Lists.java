@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 99.75%) | Memory: 55.6 MB (Top 36.20%)
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode tempA = headA, tempB = headB;
