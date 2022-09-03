@@ -1,3 +1,4 @@
+// Runtime: 147 ms (Top 48.60%) | Memory: 103.8 MB (Top 70.82%)
 /*
 Here we are using map and queue
 map for storing the array elements and where are the other indices of the same element
@@ -9,20 +10,20 @@ Now until the queue is empty we have to do few things for a given position
 i> check the next index (i+1)
 ii> check the previous index(i-1)
 iii> check all the indices of the list whih are present in the map
-once these three things have been done we will 
+once these three things have been done we will
 remove the element that is arr[i]
 because if we did not remove it we are going to do the same repeated task over and over again
 and this will result in stack overflow
-so it is important to remove the indices which have been visited once 
+so it is important to remove the indices which have been visited once
 every time we check the queue we incease the answer because viewing a queue means that
-we are not at the last index 
+we are not at the last index
 
 I hope the idea was clear :) you'll understand better when you see the code
 */
 class Solution {
     public int minJumps(int[] arr) {
         int n = arr.length;
-        
+
         if(n <= 1) return 0;
         Map<Integer, List<Integer>> mp = new HashMap<>();
         for(int i = 0;i < arr.length ; i++) {
