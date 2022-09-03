@@ -1,3 +1,4 @@
+// Runtime: 52 ms (Top 25.07%) | Memory: 61 MB (Top 63.35%)
 class Solution {
     public List<String> findRepeatedDnaSequences(String s) {
         HashMap<String,Integer> map =new HashMap();
@@ -5,7 +6,7 @@ class Solution {
         int j=0;
         int k=10;
         StringBuilder sb=new StringBuilder("");
-        
+
         while(j<s.length()){
             sb.append(s.charAt(j));
             if(j-i+1<k){
