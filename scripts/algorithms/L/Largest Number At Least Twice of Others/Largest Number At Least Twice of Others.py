@@ -1,3 +1,4 @@
+# Runtime: 40 ms (Top 86.73%) | Memory: 13.8 MB (Top 57.55%)
 class Solution:
     def dominantIndex(self, nums: List[int]) -> int:
         if len(nums) is 1:
