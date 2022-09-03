@@ -1,3 +1,4 @@
+// Runtime: 131 ms (Top 34.38%) | Memory: 47 MB (Top 75.16%)
 var averageOfLevels = function(root) {
 let avg = [root.val];
 let level = [];
