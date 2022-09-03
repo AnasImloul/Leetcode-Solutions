@@ -1,6 +1,7 @@
+// Runtime: 27 ms (Top 57.45%) | Memory: 46.9 MB (Top 71.39%)
 class Solution {
     public int numUniqueEmails(String[] emails) {
-        
+
         Set<String> finalEmails = new HashSet<>();
         for(String email: emails){
             StringBuilder name = new StringBuilder();
