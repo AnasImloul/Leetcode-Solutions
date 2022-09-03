@@ -1,3 +1,4 @@
+// Runtime: 57 ms (Top 71.43%) | Memory: 109.9 MB (Top 23.21%)
 class Solution {
     public int minimumLines(int[][] stockPrices) {
         if(stockPrices.length == 1) return 0;
@@ -11,7 +12,7 @@ class Solution {
             int x3 = stockPrices[i+1][0];
             int y3 = stockPrices[i+1][1];
             if(((x3-x2)*(y2-y1))==((y3-y2)*(x2-x1))) continue;
-            
+
             count++;
         }
         return count;
