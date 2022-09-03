@@ -1,3 +1,4 @@
+# Runtime: 118 ms (Top 30.98%) | Memory: 14.6 MB (Top 46.10%)
 class Solution:
     def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
         # THREE DIFFERENT TYPES OF REDUNDANT TREES CAN EXISIT IDENTIFY THOSE (CYCLE,NOCYCLE,INDEGREE2)
@@ -24,7 +25,7 @@ class Solution:
                     continue
                 d.union(e[0],e[1])
             return d.isConnected(edge[0],edge[1])
-                    
+
         indegree = []
         count = defaultdict(int)
         for i,j in edges:
@@ -43,31 +44,31 @@ class Solution:
                 if d2.isConnected(e[0],e[1]):
                     return e
                 d2.union(e[0],e[1])
-            
-#         def dfs(node):
-#             if node in seen:
-#                 return False
-#             seen.add(node)
-#             for nb in g[node]:
-#                 if not dfs(nb):
-#                     return False
-#             return True
-#         g = defaultdict(list)
-#         v = defaultdict(int)
-#         total = set()
-#         for i,j in edges:
-#             g[i] = g.get(i,[]) + [j]
-#             v[j] = v.get(j,0) + 1
-#             total.add(i)
-#             total.add(j)
-#         for e in edges[::-1]:
-#             g[e[0]].remove(e[1])
-#             v[e[1]] -= 1
-#             for root in total:
-#                 seen = set()
-#                 if v[root] == 0  and dfs(root) and len(seen) == len(total):
-#                     return e
-            
-#             v[e[1]] += 1
-#             g[e[0]].append(e[1])
-#         return [-1,-1]
+
+# def dfs(node):
+# if node in seen:
+# return False
+# seen.add(node)
+# for nb in g[node]:
+# if not dfs(nb):
+# return False
+# return True
+# g = defaultdict(list)
+# v = defaultdict(int)
+# total = set()
+# for i,j in edges:
+# g[i] = g.get(i,[]) + [j]
+# v[j] = v.get(j,0) + 1
+# total.add(i)
+# total.add(j)
+# for e in edges[::-1]:
+# g[e[0]].remove(e[1])
+# v[e[1]] -= 1
+# for root in total:
+# seen = set()
+# if v[root] == 0 and dfs(root) and len(seen) == len(total):
+# return e
+
+# v[e[1]] += 1
+# g[e[0]].append(e[1])
+# return [-1,-1]
