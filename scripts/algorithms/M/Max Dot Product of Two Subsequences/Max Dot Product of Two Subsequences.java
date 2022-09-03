@@ -1,3 +1,4 @@
+// Runtime: 61 ms (Top 10.42%) | Memory: 54.1 MB (Top 21.35%)
 class Solution {
     public int maxDotProduct(int[] nums1, int[] nums2) {
         int n = nums1.length, m = nums2.length;
@@ -7,7 +8,7 @@ class Solution {
         // return maxDotProduct_Memo(nums1, nums2, n, m, dp);
         return maxDotProduct_Tab(nums1, nums2, n, m, dp);
     }
-    
+
     public int maxDotProduct_Tab(int[] nums1, int[] nums2, int N, int M, int[][] dp){
         for(int n = 0; n <= N; n++){
             for(int m = 0; m <= M; m++){
@@ -29,7 +30,7 @@ class Solution {
     public int maxDotProduct_Memo(int[] nums1, int[] nums2, int n, int m, int[][] dp) {
         if(n == 0 || m == 0)
             return dp[n][m] = -(int)1e8; // to differentiate it from initial dp value we put -1e8 instead of -1e9
-        
+
         if(dp[n][m] != -(int)1e9) return dp[n][m];
 
         int val = nums1[n-1] * nums2[m-1]; // all the numbers will give -ve ans instead of these two indices eg. [20,-3,-4,-5] && [3,2,1]
