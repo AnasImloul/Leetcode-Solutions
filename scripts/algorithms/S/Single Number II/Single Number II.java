@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 11.96%) | Memory: 44.6 MB (Top 34.33%)
 class Solution {
     public int singleNumber(int[] nums) {
 
