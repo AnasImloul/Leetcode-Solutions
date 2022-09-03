@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 43.75%) | Memory: 48.2 MB (Top 87.50%)
 class Solution {
     public int[] threeEqualParts(int[] arr) {
         List<Integer> ones = new ArrayList<>();
