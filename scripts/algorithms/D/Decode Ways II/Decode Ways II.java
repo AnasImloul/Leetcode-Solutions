@@ -1,3 +1,4 @@
+// Runtime: 1171 ms (Top 5.16%) | Memory: 49 MB (Top 90.58%)
 class Solution {
     public int numDecodings(String s) {
         int[] dp = new int[s.length()+1];
@@ -19,7 +20,7 @@ class Solution {
     }
 
     private boolean ok(int val, String s){ // TRUE if the value s represents can equal to val.
-        return (s.equals("**")   && val%10 > 0
+        return (s.equals("**") && val%10 > 0
              || s.charAt(0)=='*' && val%10==s.charAt(1)-'0'
              || s.charAt(1)=='*' && val/10==s.charAt(0)-'0' && val % 10 > 0
              || !s.contains("*") && Integer.parseInt(s)==val);
