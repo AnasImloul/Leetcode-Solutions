@@ -1,3 +1,4 @@
+// Runtime: 13 ms (Top 30.48%) | Memory: 52.1 MB (Top 26.29%)
 class Solution {
     public int singleNumber(int[] nums) {
         Stack numStack = new Stack();
