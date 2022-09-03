@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 42.1 MB (Top 73.63%)
 class Solution {
     public void gameOfLife(int[][] board) {
         int m = board.length, n = board[0].length;
@@ -13,8 +14,8 @@ class Solution {
             }
         }
     }
-    
-    public int nextState(int[][] board, int i, int j, int m, int n) {    
+
+    public int nextState(int[][] board, int i, int j, int m, int n) {
         int ones = 0;
         for (int x = -1; x <=1; x++) {
             for (int y = -1; y <= 1; y++) {
