@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 100.00%) | Memory: 11.4 MB (Top 99.39%)
 class Solution {
 private:
     int countFreq(const string &s) {
