@@ -1,3 +1,4 @@
+// Runtime: 150 ms (Top 11.76%) | Memory: 49.1 MB (Top 5.88%)
 var minTaps = function(n, ranges) {
     let intervals = [];
     for (let i = 0; i < ranges.length; i++) {
@@ -5,12 +6,12 @@ var minTaps = function(n, ranges) {
         let r = i + ranges[i];
         intervals.push([l, r]);
     }
-    
+
     intervals.sort((a, b) => {
         if (a[0] === b[0]) return b[1] - a[1];
         return a[0] - b[0];
     })
-    
+
     // Find the starting idx
     let startIdx;
     for (let i = 0; i < intervals.length; i++) {
