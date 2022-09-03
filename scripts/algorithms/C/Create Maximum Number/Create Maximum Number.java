@@ -1,3 +1,4 @@
+// Runtime: 125 ms (Top 39.80%) | Memory: 117.7 MB (Top 6.97%)
 class Solution {
     public int[] maxNumber(int[] nums1, int[] nums2, int k) {
         String ans="";
