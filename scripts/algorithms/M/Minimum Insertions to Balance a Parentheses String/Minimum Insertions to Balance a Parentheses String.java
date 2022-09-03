@@ -1,8 +1,9 @@
+// Runtime: 19 ms (Top 44.46%) | Memory: 51.9 MB (Top 75.57%)
 class Solution {
     public int minInsertions(String s) {
         int open=0;
         int ans=0;
-        
+
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)=='('){
                 open++;
@@ -30,5 +31,5 @@ class Solution {
         }
         ans+=2*open;
         return ans;
-    }  
+    }
 }
