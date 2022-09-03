@@ -1,3 +1,4 @@
+// Runtime: 1815 ms (Top 40.00%) | Memory: 69.6 MB (Top 20.00%)
 var gcdSort = function(nums) {
     // group numbers by their prime factors
     const unionFind = {};
@@ -27,7 +28,7 @@ function getPrimeFactors(n) {
         primeFactors.add(2);
         n /= 2;
     }
-    
+
     for (let i = 3; i * i <= n; i += 2) {
         while (n % i === 0) {
             primeFactors.add(i);
