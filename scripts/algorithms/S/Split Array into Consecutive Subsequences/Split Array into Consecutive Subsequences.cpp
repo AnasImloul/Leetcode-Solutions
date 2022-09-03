@@ -1,3 +1,4 @@
+// Runtime: 581 ms (Top 5.01%) | Memory: 70.7 MB (Top 7.44%)
 class Solution {
 public:
     bool isPossible(vector<int>& nums) {
@@ -57,7 +58,7 @@ public:
             else if(pq.top() > prev+1)
             {
                 if(count <= 2) return false;
-                
+
                 while(!q.empty())
                 {
                     pq.push(q.front());
