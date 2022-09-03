@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 15.64%) | Memory: 13.5 MB (Top 10.61%)
 class Solution {
     int sum=0;
 public:
