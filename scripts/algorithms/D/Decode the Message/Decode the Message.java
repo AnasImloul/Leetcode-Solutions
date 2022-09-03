@@ -1,4 +1,4 @@
-// Runtime: 24 ms (Top 16.69%) | Memory: 44.5 MB (Top 24.71%)
+// Runtime: 12 ms (Top 48.65%) | Memory: 44.7 MB (Top 35.73%)
 class Solution {
     public String decodeMessage(String key, String message) {
         StringBuilder ans = new StringBuilder();//Using String Builder to append the string
