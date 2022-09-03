@@ -1,3 +1,4 @@
+// Runtime: 91 ms (Top 47.37%) | Memory: 42.5 MB (Top 31.58%)
 var numMovesStones = function(a, b, c) {
     const nums = [a, b, c];
 
