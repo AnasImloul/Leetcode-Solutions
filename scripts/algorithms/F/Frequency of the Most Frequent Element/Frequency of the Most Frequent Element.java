@@ -1,3 +1,4 @@
+// Runtime: 46 ms (Top 33.83%) | Memory: 95.9 MB (Top 65.95%)
 class Solution {
     public int maxFrequency(int[] nums, int k) {
         //Step-1: Sorting->
@@ -11,7 +12,7 @@ class Solution {
         {
             totalSum+=nums[R];
             //The value of "totalSum+k" should be ">=" "windowSize*nums[R]"
-            //then only the window is possible else decrease the "totalSum" 
+            //then only the window is possible else decrease the "totalSum"
             //till the value "totalSum+k" is ">=" "windowSize*nums[R]"
             while(! ((totalSum+k) >= ((R-L+1)*nums[R])) )
             {
