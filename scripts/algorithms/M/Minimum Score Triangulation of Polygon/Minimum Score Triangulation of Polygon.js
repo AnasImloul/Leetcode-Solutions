@@ -1,3 +1,4 @@
+// Runtime: 87 ms (Top 83.78%) | Memory: 42.4 MB (Top 89.19%)
 var minScoreTriangulation = function(values) {
     let dp = Array(values.length).fill().map((i) => Array(values.length).fill(0));
     function dfs(i, j) {
