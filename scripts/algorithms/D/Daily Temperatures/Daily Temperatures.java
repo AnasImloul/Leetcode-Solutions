@@ -1,3 +1,4 @@
+// Runtime: 207 ms (Top 22.03%) | Memory: 127.9 MB (Top 72.12%)
 class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
         HashMap<Integer,Integer>hm=new HashMap<>();
