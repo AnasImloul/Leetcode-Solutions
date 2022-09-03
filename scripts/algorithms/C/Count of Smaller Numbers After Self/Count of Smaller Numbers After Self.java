@@ -1,3 +1,4 @@
+// Runtime: 76 ms (Top 77.01%) | Memory: 57.3 MB (Top 98.23%)
 class Solution {
     int[] id;
     int[] tmp;
@@ -15,7 +16,7 @@ class Solution {
         mergesort(nums, 0, n);
         return IntStream.of(counts).boxed().collect(Collectors.toList());
     }
-    
+
     void mergesort(int[] nums, int lo, int hi) {
         if(lo + 1 >= hi) {
             return;
@@ -25,7 +26,7 @@ class Solution {
         mergesort(nums, mid, hi);
         merge(nums, lo, mid, hi);
     }
-    
+
     void merge(int[] nums, int lo, int mid, int hi) {
         int j = lo, k = mid;
         for(int i = lo; i < hi; i++) {
