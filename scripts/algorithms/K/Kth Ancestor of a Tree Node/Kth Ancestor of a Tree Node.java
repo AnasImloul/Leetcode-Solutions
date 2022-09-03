@@ -1,3 +1,4 @@
+// Runtime: 96 ms (Top 79.04%) | Memory: 112.4 MB (Top 41.18%)
 class TreeAncestor {
     int n;
     int[] parent;
