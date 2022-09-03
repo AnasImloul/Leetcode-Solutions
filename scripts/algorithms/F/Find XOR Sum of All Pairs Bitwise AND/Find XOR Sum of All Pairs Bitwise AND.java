@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 20.86%) | Memory: 82 MB (Top 80.58%)
 class Solution {
 
     public int getXORSum(int[] arr1, int[] arr2) {
