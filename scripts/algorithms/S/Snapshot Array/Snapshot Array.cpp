@@ -1,3 +1,4 @@
+// Runtime: 366 ms (Top 61.08%) | Memory: 85.5 MB (Top 97.26%)
 class SnapshotArray {
     int timestamp;
     unordered_map<int, vector<int>> toSnaps, toValues;
@@ -5,7 +6,7 @@ public:
     SnapshotArray(int length) {
         timestamp = 0;
     }
-    
+
     void set(int index, int val) {
         if (toSnaps.count(index) == 0) {
             // After lower_bound, prevent returning negative lo
@@ -16,18 +17,18 @@ public:
         // same timestamp -> just update value
         if (toSnaps[index].back() == timestamp) {
             toValues[index].back() = val;
-        } 
+        }
         // not -> add timestamp and value
         else {
             toSnaps[index].push_back(timestamp);
             toValues[index].push_back(val);
         }
     }
-    
+
     int snap() {
         return timestamp++;
     }
-    
+
     int get(int index, int snap_id) {
         // check whether index exists or not
         if (toSnaps.count(index) == 0) return 0;
