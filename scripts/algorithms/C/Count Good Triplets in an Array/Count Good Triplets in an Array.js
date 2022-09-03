@@ -1,9 +1,10 @@
+// Runtime: 346 ms (Top 50.00%) | Memory: 66.8 MB (Top 100.00%)
 var goodTriplets = function(nums1, nums2) {
   let n = nums1.length, nums2_idx = Array(n);
   for (let i = 0; i < n; i++) nums2_idx[nums2[i]] = i;
   let idxs = Array(n);
   for (let i = 0; i < n; i++) idxs[i] = nums2_idx[nums1[i]];
-  
+
   let smallerLeft = getSmallerLeft(idxs); // smallerLeft[i] = number of indices to the left of i smaller than idxs[i] in both nums1 and nums2
   let biggerRight = getBiggerRight(idxs); // biggerRight[i] = number of indices to the right of i bigger than idxs[i] in both nums1 and nums2
   let ans = 0;
