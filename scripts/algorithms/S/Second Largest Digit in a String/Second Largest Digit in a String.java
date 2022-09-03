@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 72.70%) | Memory: 42.6 MB (Top 56.41%)
 class Solution {
     public int secondHighest(String s) {
         int[] arr = new int[10];
@@ -14,8 +15,7 @@ class Solution {
                 else first = true;
             }
         }
-        
-        
+
         return -1;
     }
 }
