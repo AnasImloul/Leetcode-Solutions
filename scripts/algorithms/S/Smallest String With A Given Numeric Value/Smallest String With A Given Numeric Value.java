@@ -1,3 +1,4 @@
+// Runtime: 22 ms (Top 80.31%) | Memory: 63.1 MB (Top 85.85%)
 class Solution {
     public String getSmallestString(int n, int k) {
         char[] ch = new char[n];
