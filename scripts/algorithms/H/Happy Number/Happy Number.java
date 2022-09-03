@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 47.06%) | Memory: 41.5 MB (Top 32.65%)
 class Solution {
     public boolean isHappy(int n) {
         // Create a hash set...
