@@ -1,3 +1,4 @@
+// Runtime: 116 ms (Top 31.18%) | Memory: 43.8 MB (Top 89.57%)
 var rotateRight = function(head, k) {
     if(k === 0 || !head) return head;
 
