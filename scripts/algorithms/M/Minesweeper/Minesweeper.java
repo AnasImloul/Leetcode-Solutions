@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.9 MB (Top 100.00%)
 class Solution {
     public char[][] updateBoard(char[][] board, int[] click) {
         int r = click[0];
@@ -10,7 +11,7 @@ class Solution {
         dfs(board, r, c);
         return board;
     }
-    
+
     private void dfs(char[][]board, int r, int c)
     {
         if(r < 0 || r >= board.length || c >= board[0].length || c < 0 || board[r][c] == 'B')//Stop case
@@ -34,7 +35,7 @@ class Solution {
             dfs(board, r + 1, c + 1);
         }
     }
-    
+
     private int countMine(char[][]board, int r, int c)
     {
         int count = 0;
