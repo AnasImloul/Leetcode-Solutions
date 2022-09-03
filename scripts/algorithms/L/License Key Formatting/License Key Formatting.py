@@ -1,3 +1,4 @@
+# Runtime: 81 ms (Top 55.38%) | Memory: 14.3 MB (Top 86.51%)
 class Solution:
     def licenseKeyFormatting(self, s: str, k: int) -> str:
         new_str = s.replace("-", "")
