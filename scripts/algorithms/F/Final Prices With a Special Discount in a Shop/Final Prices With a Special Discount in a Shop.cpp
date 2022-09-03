@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 10 MB (Top 18.49%)
 class Solution {
 public:
     vector<int> finalPrices(vector<int>& prices) {
@@ -9,7 +10,7 @@ public:
                     discount=prices[i]-prices[j];
                     break;
                 }
-                
+
             }
             sk.push_back(discount);
         }
