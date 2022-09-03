@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 39.2 MB (Top 89.45%)
 class Solution {
     public int minFlips(int a, int b, int c) {
         int j=-1;
