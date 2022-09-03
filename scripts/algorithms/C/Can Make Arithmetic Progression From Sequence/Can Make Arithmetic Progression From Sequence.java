@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 91.15%) | Memory: 43.1 MB (Top 10.07%)
 class Solution {
     public boolean canMakeArithmeticProgression(int[] arr) {
         if(arr.length < 1)
