@@ -1,6 +1,7 @@
+// Runtime: 186 ms (Top 96.05%) | Memory: 52.9 MB (Top 100.00%)
 class Solution {
     public long distinctNames(String[] ideas) {
-        // HashSet + String Manipulation; TC: O(26*26*n); SC: O(26*n) 
+        // HashSet + String Manipulation; TC: O(26*26*n); SC: O(26*n)
         HashSet<String> [] arr = new HashSet[26];
         for(int i=0; i<26; i++) {
             arr[i] = new HashSet<>();
