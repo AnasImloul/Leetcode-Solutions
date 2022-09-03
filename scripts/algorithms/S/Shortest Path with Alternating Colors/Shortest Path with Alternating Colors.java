@@ -1,12 +1,13 @@
+// Runtime: 5 ms (Top 93.32%) | Memory: 48.7 MB (Top 36.20%)
 class Solution {
-	// g1-> graph with red edges
-	// g2-> graph with blue edges
+    // g1-> graph with red edges
+    // g2-> graph with blue edges
     List<Integer> g1[], g2[];
     int[] dist1, dist2, ans;
     int MX = (int) 2e9;
-	
+
     public int[] shortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges) {
-		dist1 = new int[n];
+        dist1 = new int[n];
         dist2 = new int[n];
         g1=new ArrayList[n];
         g2=new ArrayList[n];
@@ -52,7 +53,7 @@ class Solution {
                     dist2[v]=dist1[u]+1;
                     dfs(v,!flag);
                 }
-            }           
+            }
         }
     }
 }
