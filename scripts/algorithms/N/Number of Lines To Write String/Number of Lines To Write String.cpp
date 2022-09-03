@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.9 MB (Top 78.33%)
 class Solution {
 public:
     vector<int> numberOfLines(vector<int>& widths, string s) {
