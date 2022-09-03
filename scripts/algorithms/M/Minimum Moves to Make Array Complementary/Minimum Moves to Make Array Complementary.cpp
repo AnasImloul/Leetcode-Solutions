@@ -1,4 +1,4 @@
-// Runtime: 336 ms (Top 29.89%) | Memory: 89 MB (Top 33.33%)
+// Runtime: 367 ms (Top 23.53%) | Memory: 89 MB (Top 32.94%)
 class Solution {
 public:
   int minMoves(vector<int>& nums, int limit) {
