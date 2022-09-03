@@ -1,3 +1,4 @@
+// Runtime: 66 ms (Top 14.27%) | Memory: 9.8 MB (Top 99.25%)
 class Solution {
 public:
     bool checkVowel(char c){
