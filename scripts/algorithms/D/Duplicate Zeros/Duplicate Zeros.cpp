@@ -1,3 +1,4 @@
+// Runtime: 87 ms (Top 26.83%) | Memory: 9.5 MB (Top 93.67%)
 class Solution {
 public:
     void duplicateZeros(vector<int>& arr) {
@@ -10,6 +11,6 @@ public:
               i++;
           }
             }
-        
+
     }
 };
