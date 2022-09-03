@@ -1,3 +1,4 @@
+// Runtime: 101 ms (Top 95.15%) | Memory: 44.2 MB (Top 99.56%)
 const isMatch = (currWord, nextWord) => {
     let mismatch = 0;
     for(let i = 0; i < nextWord.length; i += 1) {
