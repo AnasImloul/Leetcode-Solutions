@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 46.31%) | Memory: 43.1 MB (Top 83.52%)
 class Solution {
     public int equalSubstring(String s, String t, int maxCost) {
         int ans =0;
