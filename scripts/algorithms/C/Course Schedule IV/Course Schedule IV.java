@@ -1,3 +1,4 @@
+// Runtime: 1518 ms (Top 5.07%) | Memory: 118.7 MB (Top 6.29%)
 class Solution {
     public List<Boolean> checkIfPrerequisite(int numCourses, int[][] prerequisites, int[][] queries) {
         // Generating Map
@@ -6,7 +7,7 @@ class Solution {
             graph.putIfAbsent(e[0], new ArrayList<>());
             graph.get(e[0]).add(e[1]);
         }
-        
+
         List<Boolean> list = new ArrayList<>();
         // Appling DFS for every query to get result
         for(int[] q: queries){
