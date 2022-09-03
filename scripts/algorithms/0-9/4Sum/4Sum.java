@@ -1,3 +1,4 @@
+// Runtime: 17 ms (Top 82.83%) | Memory: 42.5 MB (Top 98.57%)
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         Arrays.sort(nums);
@@ -19,7 +20,7 @@ class Solution {
                         ll.add(nums[l]);
                         ll.add(nums[r]);
                         llans.add(ll);
-                        
+
                         while( l<r && nums[l]==nums[l+1]){l++;}
                         while( l<r && nums[r]==nums[r-1]){r--;}
                         l++;
@@ -34,11 +35,11 @@ class Solution {
                 }
                 while( j<nums.length-1 && nums[j]==nums[j+1]){
                     j++;}
-                
+
             }
             while( i<nums.length-1 && nums[i]==nums[i+1]){
                 i++;}
-            
+
         }
         return llans;
     }
