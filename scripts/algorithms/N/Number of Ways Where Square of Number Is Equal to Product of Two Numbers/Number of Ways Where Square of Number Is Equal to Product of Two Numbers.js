@@ -1,3 +1,4 @@
+// Runtime: 355 ms (Top 47.37%) | Memory: 61.1 MB (Top 47.37%)
 var numTriplets = function(nums1, nums2) {
     const nm1 = new Map(), nm2 = new Map();
     const n = nums1.length, m = nums2.length;
@@ -18,7 +19,7 @@ var numTriplets = function(nums1, nums2) {
         }
     }
     let ans = 0;
-    
+
     for(let num of nums1) {
         const sq = num * num;
         if(nm2.has(sq)) {
