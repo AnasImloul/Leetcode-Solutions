@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 20.60%) | Memory: 66.5 MB (Top 16.04%)
 class Solution {
     public int maxScore(int[] cardPoints, int k) {
         int n = cardPoints.length;
@@ -20,7 +21,7 @@ class Solution {
             else{
                 subsum = totalSum[j]-totalSum[i-1];
             }
-            
+
             score = Math.max(score,sum-subsum);
         }
         return score;
