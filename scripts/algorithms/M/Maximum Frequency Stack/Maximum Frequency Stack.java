@@ -1,3 +1,4 @@
+// Runtime: 46 ms (Top 83.25%) | Memory: 51.6 MB (Top 94.52%)
 class Node{
     int data, freq, time;
     Node(int data, int freq, int time){
@@ -14,7 +15,7 @@ class CompareNode implements Comparator<Node>{
             return b.time-a.time;
         }
         return b.freq-a.freq;
-    }   
+    }
 }
 
 class FreqStack {
@@ -25,7 +26,7 @@ class FreqStack {
         pq=new PriorityQueue<>(new CompareNode());
         map=new HashMap<>();
     }
-    
+
     public void push(int val){
         c++;
         int freq=1;
@@ -35,7 +36,7 @@ class FreqStack {
         map.put(val, new Node(val, freq, c));
         pq.add(new Node(val,freq,c++));
     }
-    
+
     public int pop() {
         Node r=pq.remove();
         Node a=map.get(r.data);
