@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 98.94%) | Memory: 51.4 MB (Top 94.35%)
 // Imagine 3 cases
 // Case 1. [3,2,1], we need 3 operations.
 // Case 2. [1,2,3], we need 3 operations.
