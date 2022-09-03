@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 9.6 MB (Top 79.69%)
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
