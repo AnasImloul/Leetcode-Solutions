@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 42.2 MB (Top 37.48%)
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
     int m = matrix.length, n = matrix[0].length;
@@ -14,7 +15,7 @@ class Solution {
             // move the upper bound down
             upper_bound++;
         }
-        
+
         if (left_bound <= right_bound) {
             // traveral from up to dwon on the right side
             for (int i = upper_bound; i <= lower_bound; i++) {
@@ -23,7 +24,7 @@ class Solution {
             // move the right bound left
             right_bound--;
         }
-        
+
         if (upper_bound <= lower_bound) {
             // traveral from rigth to left on the bottom side
             for (int j = right_bound; j >= left_bound; j--) {
@@ -32,7 +33,7 @@ class Solution {
             // move the lower bound up
             lower_bound--;
         }
-        
+
         if (left_bound <= right_bound) {
             //traveral from down to up on the left side
             for (int i = lower_bound; i >= upper_bound; i--) {
