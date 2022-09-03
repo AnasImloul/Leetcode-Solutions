@@ -1,3 +1,4 @@
+// Runtime: 229 ms (Top 67.86%) | Memory: 51.8 MB (Top 92.86%)
 var stoneGameIII = function(stoneValue) {
     let len = stoneValue.length-1
     let bestMoves = [0,0,0]
@@ -18,4 +19,3 @@ var stoneGameIII = function(stoneValue) {
             ? "Bob"
             : "Tie"
 };
-
