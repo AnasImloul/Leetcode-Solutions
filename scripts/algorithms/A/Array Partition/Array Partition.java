@@ -1,3 +1,4 @@
+// Runtime: 21 ms (Top 17.21%) | Memory: 54.6 MB (Top 23.48%)
 class Solution {
     public int arrayPairSum(int[] nums) {
         Arrays.sort(nums);
