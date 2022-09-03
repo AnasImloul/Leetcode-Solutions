@@ -1,10 +1,11 @@
+// Runtime: 374 ms (Top 55.71%) | Memory: 111.2 MB (Top 25.00%)
 /**
  * @param {number[]} edges
  * @return {number}
  */
 var longestCycle = function(edges) {
     let res = -1;
-	// count the node indegree
+    // count the node indegree
     let map = new Map();
     let len = edges.length;
     for(let i=0; i<edges.length; i++){
@@ -18,7 +19,7 @@ var longestCycle = function(edges) {
             }
         }
     }
-	// find the node of 0 indegree
+    // find the node of 0 indegree
     let arr = [];
     for(let i=0; i<len; i++){
         if(!map.has(i)){
@@ -51,23 +52,23 @@ var longestCycle = function(edges) {
         // no circle
     }else{
         // exist circle
-		// consider there may be some circles
+        // consider there may be some circles
         let circleMap = new Map();
         let keys = Array.from(map.keys());
         let circle = [keys[0]];
         let circleLen = 0;
-		// mark the max length of circle
+        // mark the max length of circle
         let max = 0;
         while(circle.length > 0){
             let tmp = [];
             for(let i=0; i<circle.length; i++){
                 if(!circleMap.has(circle[i])){
-				    // node not search
+                    // node not search
                     circleMap.set(circle[i], 1);
                     circleLen ++;
                     tmp.push(edges[circle[i]]);
                 }else{
-				    // node search
+                    // node search
                     max = Math.max(max, circleLen);
                     circleLen = 0;
                     // find the next possible node
