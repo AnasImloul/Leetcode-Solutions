@@ -1,3 +1,4 @@
+// Runtime: 14 ms (Top 36.17%) | Memory: 65.2 MB (Top 76.59%)
 class Solution {
     public List<Integer> findDuplicates(int[] nums) {
         List<Integer> ans = new ArrayList<>();
