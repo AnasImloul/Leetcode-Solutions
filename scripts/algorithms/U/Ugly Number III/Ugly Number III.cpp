@@ -1,13 +1,14 @@
+// Runtime: 5 ms (Top 15.48%) | Memory: 5.9 MB (Top 26.64%)
 // This is a typical Binary Search Problem Here I did Binary Search and Optimized my lcm function a lot.
-// Here Number of Ugly numbers for any number is 
+// Here Number of Ugly numbers for any number is
 // that number/a + that number/b + that number/c + that number/lcm(a,b,c) - that number/lcm(a,b) - that number/lcm(b,c) - that number/(a,c) and howzz that??
-//     See Lets suppose that number is 17 for which you are checking values and a = 2 , b=3 and c= 4 now figure out 
-//     all the possible values for a = 2,4,6,8,10,12,14,16
-//         b = 3,6,9,12,15
-//         c = 4,8,12,16
-//         Now if we add them all we can see 4,6,8,16 are coming twice and 12 is coming thrice so we do lcm(2,3) = 6
-//             then we are basically multiple occurance of numbers divisible by 6 simlarly for lcm(2,4) & lcm(3,4)
-//                 but any number which is divisble by all three of them we have deleted it 3 times we  need at least so we are adding numbers which are divisble by lcm(2,3,4) which is 12 here So if suppose we are countering more numbers than n then h = mid-1 we need to move backward else we need to forward.
+// See Lets suppose that number is 17 for which you are checking values and a = 2 , b=3 and c= 4 now figure out
+// all the possible values for a = 2,4,6,8,10,12,14,16
+// b = 3,6,9,12,15
+// c = 4,8,12,16
+// Now if we add them all we can see 4,6,8,16 are coming twice and 12 is coming thrice so we do lcm(2,3) = 6
+// then we are basically multiple occurance of numbers divisible by 6 simlarly for lcm(2,4) & lcm(3,4)
+// but any number which is divisble by all three of them we have deleted it 3 times we need at least so we are adding numbers which are divisble by lcm(2,3,4) which is 12 here So if suppose we are countering more numbers than n then h = mid-1 we need to move backward else we need to forward.
 class Solution {
 public:
     #define ll long long
@@ -44,7 +45,7 @@ public:
         ll h = INT_MAX;
         while(l<=h)
         {
-             ll  mid = l + (h-l)/2;
+             ll mid = l + (h-l)/2;
              if(check(mid,a,b,c,n) && (mid%a==0 || mid%b==0 || mid%c==0))
              {
                  return mid;
