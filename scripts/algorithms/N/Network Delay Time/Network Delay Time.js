@@ -1,3 +1,4 @@
+// Runtime: 152 ms (Top 76.44%) | Memory: 52.1 MB (Top 42.07%)
 /**
  * @param {number[][]} times
  * @param {number} n
@@ -26,14 +27,14 @@ const dijkastra=(source)=>{
     });
     if(min_heap.length && dijkastra_arr[min_heap[min_heap.length-1]]<MAX_VALUE)
     dijkastra(min_heap[min_heap.length-1]);
-    
+
 }
 var networkDelayTime = function(times, n, k) {
     visited=[];
     edges={};
     dijkastra_arr=[];
     min_heap=[];
-    
+
     for(let i=0;i<times.length;i++){
         if(!edges[times[i][0]])edges[times[i][0]]=[];
         edges[times[i][0]].push(times[i]);
@@ -47,11 +48,11 @@ var networkDelayTime = function(times, n, k) {
         }else{
                   min_heap[i]=i;
         dijkastra_arr[i]=MAX_VALUE;
-        visited[i]=false;  
+        visited[i]=false;
         }
 
     }
-    
+
     dijkastra_arr[k]=0;
     min_heap.sort((a,b)=>{
         return dijkastra_arr[b]-dijkastra_arr[a];
