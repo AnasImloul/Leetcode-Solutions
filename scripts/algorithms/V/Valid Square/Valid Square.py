@@ -1,4 +1,4 @@
-// Runtime: 64 ms (Top 25.62%) | Memory: 14.1 MB (Top 10.56%)
+# Runtime: 65 ms (Top 24.05%) | Memory: 13.9 MB (Top 50.57%)
 class Solution:
     def validSquare(self, p1, p2, p3, p4):
 
