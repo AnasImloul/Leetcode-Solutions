@@ -1,3 +1,4 @@
+// Runtime: 101 ms (Top 27.52%) | Memory: 44.6 MB (Top 5.50%)
 var minCostToMoveChips = function(position) {
     const hashMap = new Map();
     let odd = 0, even = 0;
