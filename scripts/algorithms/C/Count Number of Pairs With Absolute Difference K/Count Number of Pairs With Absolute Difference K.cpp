@@ -1,4 +1,4 @@
-// Runtime: 45 ms (Top 15.79%) | Memory: 14.5 MB (Top 9.64%)
+// Runtime: 18 ms (Top 82.67%) | Memory: 14.6 MB (Top 9.93%)
 class Solution {
 public:
     int countKDifference(vector<int>& nums, int k) {
