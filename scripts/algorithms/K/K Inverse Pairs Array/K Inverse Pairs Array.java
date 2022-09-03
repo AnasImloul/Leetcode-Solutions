@@ -1,3 +1,4 @@
+// Runtime: 28 ms (Top 65.12%) | Memory: 47.8 MB (Top 52.38%)
 class Solution {
     public int kInversePairs(int n, int k) {
         int MOD = 1000000007;
