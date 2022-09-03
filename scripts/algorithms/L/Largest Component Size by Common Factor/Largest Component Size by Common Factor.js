@@ -1,7 +1,8 @@
+// Runtime: 612 ms (Top 71.43%) | Memory: 69.4 MB (Top 100.00%)
 var largestComponentSize = function(nums) {
   const rootByFactor = new Map();
   const parents = new Array(nums.length);
-  
+
   function addFactor(i, factor) {
     if (rootByFactor.has(factor)) {
       let r = rootByFactor.get(factor);
@@ -11,7 +12,7 @@ var largestComponentSize = function(nums) {
     }
     rootByFactor.set(factor, parents[i]);
   }
-  
+
   for (const [i, num] of nums.entries()) {
     parents[i] = i;
     addFactor(i, num);
@@ -22,7 +23,7 @@ var largestComponentSize = function(nums) {
       }
     }
   }
-  
+
   let largest = 0;
   const sums = new Array(nums.length).fill(0);
   for (let r of parents) {
