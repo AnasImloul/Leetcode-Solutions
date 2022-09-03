@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.2 MB (Top 51.28%)
 class Solution {
 public:
     bool isRobotBounded(string instructions) {
