@@ -1,6 +1,7 @@
+// Runtime: 634 ms (Top 19.62%) | Memory: 166 MB (Top 12.21%)
 class Solution {
 public:
-    
+
     bool similar(string s1,string s2)
     {
         int n=s1.size();
@@ -12,8 +13,7 @@ public:
         }
         return 1;
     }
-    
-    
+
     void dfs(string x,unordered_map<string,vector<string>>&adj,unordered_set<string>&visited)
     {
         visited.insert(x);
@@ -21,13 +21,12 @@ public:
         {
             if(visited.find(nbr)==visited.end())
             {
-                
+
                 dfs(nbr,adj,visited);
             }
         }
     }
-    
-    
+
     int numSimilarGroups(vector<string>& strs) {
         int n = strs.size();
         unordered_map<string,vector<string>>adj;
@@ -41,12 +40,12 @@ public:
                 {
                     adj[s1].push_back(s2);
                     adj[s2].push_back(s1);
-                    
+
                 }
             }
-            
+
         }
-        
+
         int count=0;
         unordered_set<string>visited;
         for(auto x:strs)
@@ -59,6 +58,6 @@ public:
             }
         }
         return count;//(strs[0],strs[2]);
-        
+
     }
 };
