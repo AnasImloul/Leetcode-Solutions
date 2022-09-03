@@ -1,9 +1,10 @@
+// Runtime: 27 ms (Top 87.99%) | Memory: 52.8 MB (Top 24.67%)
 class ExamRoom {
-    
+
     private final int max;
     private final TreeSet<Interval> available;
     private final TreeSet<Integer> taken;
-    
+
     public ExamRoom(int n) {
         this.max = n - 1;
         this.available = new TreeSet<>((a, b) -> {
@@ -14,7 +15,7 @@ class ExamRoom {
         this.available.add(new Interval(0, max));
         this.taken = new TreeSet<>();
     }
-    
+
     public int seat() {
         var inter = available.pollFirst();
         var idx = getInsertPosition(inter);
@@ -25,7 +26,7 @@ class ExamRoom {
             available.add(new Interval(idx + 1, inter.e));
         return idx;
     }
-    
+
     public void leave(int p) {
         taken.remove(p);
         var lo = taken.lower(p);
@@ -38,7 +39,7 @@ class ExamRoom {
         available.remove(new Interval(p + 1, hi - 1));
         available.add(new Interval(lo + 1, hi - 1));
     }
-                          
+
     private int getInsertPosition(Interval inter) {
         if (inter.s == 0)
             return 0;
@@ -47,20 +48,20 @@ class ExamRoom {
         else
             return inter.s + (inter.e - inter.s) / 2;
     }
-    
+
     private int getMinDistance(Interval in) {
         return in.s == 0 || in.e == max ? in.e - in.s : (in.e - in.s) / 2;
     }
-    
+
     private final class Interval {
         private final int s;
         private final int e;
-        
+
         Interval(int s, int e) {
             this.s = s;
             this.e = e;
         }
-        
+
         @Override
         public String toString() {
             return "[" + s + "," + e + "]";
