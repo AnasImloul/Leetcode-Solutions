@@ -1,3 +1,4 @@
+// Runtime: 512 ms (Top 28.16%) | Memory: 59.7 MB (Top 88.82%)
 class Solution {
 public:
     bool placeWordInCrossword(vector<vector<char>>& board, string word) {
@@ -15,7 +16,7 @@ public:
         }
         return false;
     }
-    
+
     bool check(vector<vector<char>>& board, string &word, int x, int y, int pos, bool vertical, int inc){
         if(pos == word.size()){
             if(x < 0 || y < 0 || x >= board.size() || y >= board[0].size()) return true;
@@ -28,7 +29,7 @@ public:
         int newy = y + (!vertical) * inc;
         return check(board, word, newx, newy, pos+1, vertical, inc);
     }
-    
+
     bool valid(vector<vector<char>>& board, int x, int y){
         if(x < 0 || y < 0 || x >= board.size() || y >= board[0].size()) return true;
         return board[x][y] == '#';
