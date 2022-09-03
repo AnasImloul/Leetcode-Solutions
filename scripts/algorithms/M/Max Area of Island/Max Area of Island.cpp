@@ -1,7 +1,8 @@
+// Runtime: 23 ms (Top 77.91%) | Memory: 23.3 MB (Top 61.26%)
 class Solution {
 public:
     int cal(vector<vector<int>>& grid,int i,int j,int& m,int& n){
-        if(i==m || j==n || i<0 || j<0 || grid[i][j]==0) 
+        if(i==m || j==n || i<0 || j<0 || grid[i][j]==0)
             return 0;
         grid[i][j]=0;
         return 1+cal(grid,i,j+1,m,n)+cal(grid,i+1,j,m,n)+cal(grid,i,j-1,m,n)+cal(grid,i-1,j,m,n);
