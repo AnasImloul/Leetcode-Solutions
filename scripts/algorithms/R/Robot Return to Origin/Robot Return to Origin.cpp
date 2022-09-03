@@ -1,3 +1,4 @@
+// Runtime: 13 ms (Top 65.86%) | Memory: 8 MB (Top 44.84%)
 class Solution {
 public:
     bool judgeCircle(string moves) {
