@@ -1,3 +1,4 @@
+# Runtime: 779 ms (Top 16.27%) | Memory: 17.7 MB (Top 35.86%)
 from sortedcontainers import SortedList
 class Solution:
     def containsNearbyAlmostDuplicate(self, nums, k, t):
