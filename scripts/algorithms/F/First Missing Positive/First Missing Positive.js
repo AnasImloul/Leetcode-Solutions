@@ -1,3 +1,4 @@
+// Runtime: 120 ms (Top 79.62%) | Memory: 46.8 MB (Top 93.46%)
 /**
  * @param {number[]} nums
  * @return {number}
@@ -9,15 +10,13 @@ var firstMissingPositive = function (nums) {
         if (nums[index] < 0)
             nums[index] = 0
     }
-    
-    
+
     for (let index = 0; index < nums.length; index++) {
         const temp = Math.abs(nums[index])
         const element = temp - 1
-        
+
         if (element < nums.length && element >= 0)
             nums[element] = nums[element] === 0 ? -(nums.length + 1) : Math.abs(nums[element]) * -1
-
 
     }
 
