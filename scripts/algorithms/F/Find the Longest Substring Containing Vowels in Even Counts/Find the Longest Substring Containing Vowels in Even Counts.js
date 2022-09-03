@@ -1,3 +1,4 @@
+// Runtime: 196 ms (Top 22.22%) | Memory: 46.2 MB (Top 66.67%)
 var findTheLongestSubstring = function(s) {
     // u o i e a
     // 0 0 0 0 0 => initial state, all are even letters
@@ -7,7 +8,7 @@ var findTheLongestSubstring = function(s) {
     // 0 0 0 0 1 => at index 2, max = 2
     // 0 0 0 0 0 => at index 3, max = 4
     // 0 0 0 0 0 => at index 4, max = 5
-    
+
     // valid condition: same state in previous index, then it means we have a even count for all letters within the middle substring.
     var mask = 0;
     var t = "aeiou";
