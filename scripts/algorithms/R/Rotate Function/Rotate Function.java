@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 100.00%) | Memory: 54.3 MB (Top 98.33%)
 class Solution {
     public int maxRotateFunction(int[] nums) {
         int sum1 =0,sum2 = 0;
