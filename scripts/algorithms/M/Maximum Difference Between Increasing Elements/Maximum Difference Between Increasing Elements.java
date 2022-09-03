@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.2 MB (Top 99.17%)
 class Solution {
     public int maximumDifference(int[] nums) {
         if(nums.length < 2)
@@ -9,6 +10,6 @@ class Solution {
                 result = Math.max(result, nums[i] - minValue);
             minValue = Math.min(minValue, nums[i]);
         }
-        return result == Integer.MIN_VALUE ? -1 : result;       
+        return result == Integer.MIN_VALUE ? -1 : result;
     }
 }
