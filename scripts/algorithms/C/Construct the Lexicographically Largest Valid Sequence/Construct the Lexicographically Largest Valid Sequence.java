@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 81.69%) | Memory: 42.2 MB (Top 11.27%)
 class Solution {
 
         public int[] constructDistancedSequence(int n) {
@@ -13,7 +14,7 @@ class Solution {
             }
             if (ans[index] != 0) return calc(index + 1, ans, visited, n); // value already assigned in this position. So go ahead with the next index.
             else {
-				// we start from n to 1 since we need to find out the lexicographically largest sequence.
+                // we start from n to 1 since we need to find out the lexicographically largest sequence.
                 for (int i = n; i >= 1; i--) {
                     if (visited[i]) continue;
                     visited[i] = true;
@@ -33,4 +34,3 @@ class Solution {
             return false;
         }
     }
-	
