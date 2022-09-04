@@ -1,3 +1,4 @@
+# Runtime: 2982 ms (Top 22.53%) | Memory: 27.5 MB (Top 95.77%)
 class Solution:
     def stoneGameIX(self, stones: List[int]) -> bool:
         u, d, t = 0, 0, 0
