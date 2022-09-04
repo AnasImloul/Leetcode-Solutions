@@ -1,3 +1,4 @@
+// Runtime: 205 ms (Top 17.71%) | Memory: 48 MB (Top 33.33%)
 var reconstructQueue = function(people) {
     var queue = new Array(people.length);
     people = people.sort((a,b) => (a[0]-b[0]));
