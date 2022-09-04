@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 60.19%) | Memory: 6.1 MB (Top 62.14%)
 class Solution {
 public:
     string alphabetBoardPath(string target) {
@@ -31,6 +32,6 @@ public:
             ans += '!';
         }
         return ans;
-        
+
     }
 };
