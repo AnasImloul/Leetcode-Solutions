@@ -1,10 +1,11 @@
+// Runtime: 91 ms (Top 91.57%) | Memory: 51.6 MB (Top 89.43%)
 class TopVotedCandidate {
-    int[] persons; 
+    int[] persons;
     int[] times;
     int length;
     Map<Integer, Integer> voteCount;
     Map<Integer, Integer> voteLead;
-    
+
     public TopVotedCandidate(int[] persons, int[] times) {
         this.persons = persons;
         this.times = times;
@@ -23,7 +24,7 @@ class TopVotedCandidate {
             voteLead.put(times[i], leadPerson);
         }
     }
-    
+
     public int q(int t) {
         int leadPerson = -1;
         if(voteLead.containsKey(t)) {
@@ -45,7 +46,6 @@ class TopVotedCandidate {
             }
             leadPerson = voteLead.get(times[high]);
         }
-        return leadPerson;   
+        return leadPerson;
     }
 }
-
