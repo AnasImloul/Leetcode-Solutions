@@ -1,3 +1,4 @@
+# Runtime: 6387 ms (Top 5.45%) | Memory: 65.4 MB (Top 5.45%)
 import numpy as np
 class Solution:
     def maxSumRangeQuery(self, nums, requests) -> int:
