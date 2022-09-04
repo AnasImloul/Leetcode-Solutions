@@ -1,3 +1,4 @@
+// Runtime: 310 ms (Top 66.03%) | Memory: 67.9 MB (Top 58.35%)
 class Solution {
 public:
     bool checkValid(vector<vector<int>>& matrix) {
