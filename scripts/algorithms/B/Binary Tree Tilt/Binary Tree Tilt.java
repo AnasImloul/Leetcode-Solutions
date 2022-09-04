@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 45.7 MB (Top 24.54%)
 class Solution {
     int max = 0;
     public int findTilt(TreeNode root) {
