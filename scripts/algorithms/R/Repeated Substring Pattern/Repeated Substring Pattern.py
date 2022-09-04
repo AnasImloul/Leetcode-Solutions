@@ -1,5 +1,6 @@
+# Runtime: 227 ms (Top 34.24%) | Memory: 14.1 MB (Top 15.73%)
 class Solution:
-    def repeatedSubstringPattern(self, s: str) -> bool:      
+    def repeatedSubstringPattern(self, s: str) -> bool:
         i=0
         ans=""
         l=len(s)
