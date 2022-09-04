@@ -1,3 +1,4 @@
+# Runtime: 953 ms (Top 29.31%) | Memory: 14.3 MB (Top 52.22%)
 class Solution(object):
     def findDifference(self, nums1, nums2):
         """
@@ -14,6 +15,6 @@ class Solution(object):
             if nums2[i] not in nums1:
                 b.append(nums2[i])
 
-        c = [list(set(a))] + [list(set(b))] 
+        c = [list(set(a))] + [list(set(b))]
 
         return c
