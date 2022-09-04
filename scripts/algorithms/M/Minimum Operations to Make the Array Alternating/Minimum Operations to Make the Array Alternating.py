@@ -1,3 +1,4 @@
+# Runtime: 3233 ms (Top 5.15%) | Memory: 31.6 MB (Top 46.98%)
 class Solution:
     def minimumOperations(self, nums: List[int]) -> int:
         n = len(nums)
