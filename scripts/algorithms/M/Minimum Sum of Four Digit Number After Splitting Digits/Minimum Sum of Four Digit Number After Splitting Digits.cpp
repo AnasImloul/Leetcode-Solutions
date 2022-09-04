@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 21.96%) | Memory: 5.9 MB (Top 94.64%)
 class Solution{
 public:
     int minimumSum(int num){
