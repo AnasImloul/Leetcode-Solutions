@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 41.31%) | Memory: 6 MB (Top 27.35%)
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
