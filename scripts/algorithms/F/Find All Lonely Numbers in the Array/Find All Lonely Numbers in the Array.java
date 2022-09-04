@@ -1,3 +1,4 @@
+// Runtime: 32 ms (Top 100.00%) | Memory: 61.2 MB (Top 97.43%)
 class Solution {
     public List<Integer> findLonely(int[] nums) {
         Arrays.sort(nums);
