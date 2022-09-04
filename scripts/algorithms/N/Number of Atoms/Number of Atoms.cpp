@@ -1,22 +1,23 @@
+// Runtime: 12 ms (Top 6.32%) | Memory: 8.7 MB (Top 6.10%)
 class Solution {
 public:
     // helper functions
     bool isUpper(char ch) {
-	    return ch >= 65 && ch <= 90;
+        return ch >= 65 && ch <= 90;
     }
 
     bool isLower(char ch) {
-	    return ch >= 97 && ch <= 122;
+        return ch >= 97 && ch <= 122;
     }
-    
+
     bool isLetter(char ch) {
-	    return isUpper(ch) || isLower(ch);
+        return isUpper(ch) || isLower(ch);
     }
 
     bool isNumber(char ch) {
-	    return ch >= 48 && ch <= 57;
+        return ch >= 48 && ch <= 57;
     }
-    
+
     void addKey(map<string, long int>& count, string key, long int value) {
         if(count.find(key) != count.end()) {
             count[key] = count[key] + value;
@@ -45,7 +46,7 @@ public:
         reverse(name.begin(), name.end());
         return name;
      }
-    
+
     // very specific utility function
     long int buildCount(string formula, int& i, vector<long int>& stack) {
         long int num = formula[i] - '0';
@@ -68,13 +69,13 @@ public:
         long int factor = 1;
         string name = "";
         long int num = -1; // -1 indicates a number reset, ie, count = 1
-        
-        // iterator i is passed by reference to keep track of 
-        // the substrings that are builded, ie, atom         
+
+        // iterator i is passed by reference to keep track of
+        // the substrings that are builded, ie, atom
         // names or numbers
         int i = formula.length()-1;
         while (i >= 0) {
-            // here we need the number after the bracket close. This is 
+            // here we need the number after the bracket close. This is
             // either 1 or num depending on whether we built a number before
             if(formula[i] == ')') {
                 if(i+1 <= formula.length()-1 && isNumber(formula[i+1])) {
@@ -91,7 +92,7 @@ public:
                 factor = factor / stack.back();
                 stack.pop_back();
             }
-            // once we detect a letter, we know it can only be a word. num gives us the atom subscript 
+            // once we detect a letter, we know it can only be a word. num gives us the atom subscript
             // and factor gives us the molecular count.
             else if(isLetter(formula[i])) {
                 name = buildName(formula, i);
@@ -108,7 +109,7 @@ public:
             }
             i--;
         }
-        
+
         // arrange name and count in a string
         map<string, long int>::iterator it;
         for (it = count.begin(); it != count.end(); it++)
@@ -121,6 +122,3 @@ public:
         return ans;
     }
 };
-
-
-
