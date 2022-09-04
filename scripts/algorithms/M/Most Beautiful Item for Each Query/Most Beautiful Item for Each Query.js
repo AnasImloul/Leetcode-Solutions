@@ -1,18 +1,17 @@
+// Runtime: 497 ms (Top 7.14%) | Memory: 78 MB (Top 78.57%)
 var maximumBeauty = function(items, queries) {
     items.sort((a,b) => a[0]-b[0]);
     const n = items.length;
-    
-    
+
     let mx = items[0][1];
-    
+
     for (let i = 0; i<n; i++) {
         mx = Math.max(mx, items[i][1]);
         items[i][1] = mx;
     }
-    
-    
+
     const ans = [];
-    
+
     for (const q of queries) {
         let l = 0, r = n-1, a = 0;
         while (l<=r) {
@@ -24,6 +23,6 @@ var maximumBeauty = function(items, queries) {
         }
         ans.push(a)
     }
-    
+
     return ans;
 };
