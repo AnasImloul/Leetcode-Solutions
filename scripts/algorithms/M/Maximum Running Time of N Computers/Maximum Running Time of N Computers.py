@@ -1,3 +1,4 @@
+# Runtime: 1321 ms (Top 44.04%) | Memory: 28.7 MB (Top 24.77%)
 class Solution:
     def maxRunTime(self, n: int, batteries: List[int]) -> int:
         batteries.sort()
