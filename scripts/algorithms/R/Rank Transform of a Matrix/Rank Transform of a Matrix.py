@@ -1,3 +1,4 @@
+# Runtime: 3042 ms (Top 71.65%) | Memory: 50.4 MB (Top 92.27%)
 class Solution:
     def matrixRankTransform(self, matrix: List[List[int]]) -> List[List[int]]:
         m, n = len(matrix), len(matrix[0])
@@ -13,7 +14,7 @@ class Solution:
         def union(i,j):
             pi, pj = find(i), find(j)
             p[pi] = pj
-            newrank[pj] = max(newrank[pi], newrank[pj]) 
+            newrank[pj] = max(newrank[pi], newrank[pj])
         for e in sorted(d):
             p = list(range(m+n))
             newrank = rank[:]
