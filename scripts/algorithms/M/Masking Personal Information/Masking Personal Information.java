@@ -1,7 +1,8 @@
+// Runtime: 1 ms (Top 93.55%) | Memory: 42.3 MB (Top 50.00%)
 class Solution {
     public String maskPII(String s) {
-        StringBuilder sb  = new StringBuilder();
-		         //email handeling
+        StringBuilder sb = new StringBuilder();
+                 //email handeling
         if((s.charAt(0) >= 97 && s.charAt(0) <= 122) || (s.charAt(0) >= 65 && s.charAt(0) <= 90)){
 
             s = s.toLowerCase();
@@ -31,7 +32,7 @@ class Solution {
            sb.append("***").append('-').append("***-");
            StringBuilder last4 = new StringBuilder();
            int count = 0;
-           for(int i  = s.length()-1; i >=0; --i){
+           for(int i = s.length()-1; i >=0; --i){
                if(count == 4){
                    break;
                }
