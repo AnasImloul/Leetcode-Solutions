@@ -1,3 +1,4 @@
+# Runtime: 1092 ms (Top 41.44%) | Memory: 70.6 MB (Top 63.39%)
 class Solution:
     def numDistinct(self, s: str, t: str) -> int:
         if len(t) > len(s):
