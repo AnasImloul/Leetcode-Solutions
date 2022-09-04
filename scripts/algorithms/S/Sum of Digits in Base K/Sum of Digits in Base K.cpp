@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 5.8 MB (Top 72.89%)
 class Solution {
 public:
     int sumBase(int n, int k) {
