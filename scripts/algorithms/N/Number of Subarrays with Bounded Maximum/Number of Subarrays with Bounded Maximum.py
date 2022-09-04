@@ -1,3 +1,4 @@
+# Runtime: 1574 ms (Top 5.27%) | Memory: 22.4 MB (Top 17.30%)
 class Solution:
     def numSubarrayBoundedMax(self, nums: List[int], left: int, right: int) -> int:
         n = len(nums)
