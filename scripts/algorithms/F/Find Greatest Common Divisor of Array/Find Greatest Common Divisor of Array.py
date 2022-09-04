@@ -1,3 +1,4 @@
+# Runtime: 282 ms (Top 5.10%) | Memory: 13.9 MB (Top 81.34%)
 class Solution:
     def findGCD(self, nums: List[int]) -> int:
         i_min = min(nums)
