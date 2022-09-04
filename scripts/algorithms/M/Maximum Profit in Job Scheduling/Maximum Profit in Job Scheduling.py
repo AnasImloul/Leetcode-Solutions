@@ -1,3 +1,4 @@
+# Runtime: 990 ms (Top 41.71%) | Memory: 47.5 MB (Top 21.04%)
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         n = len(startTime)
