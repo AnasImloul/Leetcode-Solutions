@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 99.02%) | Memory: 11.4 MB (Top 15.63%)
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
@@ -9,7 +10,7 @@ public:
             while(t->next!=NULL && t->next->val==t->val)
                 t=t->next;
             if(t==cur)
-            {    
+            {
             if(root==NULL)
                 root->val=t->val;
             else
