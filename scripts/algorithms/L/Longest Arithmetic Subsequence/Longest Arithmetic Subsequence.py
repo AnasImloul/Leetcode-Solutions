@@ -1,3 +1,4 @@
+# Runtime: 7591 ms (Top 12.82%) | Memory: 21.8 MB (Top 96.69%)
 class Solution:
     def longestArithSeqLength(self, nums: List[int]) -> int:
         dp = [[1]*1001 for i in range(len(nums))]
