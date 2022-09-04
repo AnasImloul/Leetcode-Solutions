@@ -1,10 +1,11 @@
+// Runtime: 419 ms (Top 53.33%) | Memory: 12.2 MB (Top 28.24%)
 class Solution {
 public:
     int minimumMountainRemovals(vector<int>& nums) {
         int n = nums.size();
-        
+
         vector<int> dp1(n,1), dp2(n,1);
-        
+
         // LIS from front
         for(int i=0; i<n; i++)
         {
@@ -16,7 +17,7 @@ public:
                 }
             }
         }
-        
+
         //LIS from back
         for(int i=n-1; i>=0; i--)
         {
@@ -27,7 +28,7 @@ public:
                 }
             }
         }
-        
+
         int maxi = 1;
         for(int i=0; i<n; i++){
             if(dp1[i] > 1 && dp2[i] > 1){
@@ -37,4 +38,3 @@ public:
         return (n-maxi);
     }
 };
-
