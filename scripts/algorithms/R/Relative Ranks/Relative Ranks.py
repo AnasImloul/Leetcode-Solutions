@@ -1,3 +1,4 @@
+# Runtime: 162 ms (Top 33.91%) | Memory: 15.3 MB (Top 22.09%)
 class Solution:
     def findRelativeRanks(self, score: List[int]) -> List[str]:
         scores_ids = []
@@ -17,4 +18,3 @@ class Solution:
             pass
 
         return ans
-
