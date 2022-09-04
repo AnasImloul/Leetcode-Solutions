@@ -1,3 +1,4 @@
+// Runtime: 82 ms (Top 57.43%) | Memory: 42.3 MB (Top 30.69%)
 /**
  * @param {string} start
  * @param {string} end
@@ -33,13 +34,13 @@ var minMutation = function(start, end, bank) {
         let q=[];
         let set=new Set();
         q.push(start);
-        
+
         while(q.length>0){
             let size=q.length;
-            
+
             for(let i=0;i<size;i++){
                 let curr=q.shift();
-               
+
                 if(curr==end){
                     return count;
                 }
