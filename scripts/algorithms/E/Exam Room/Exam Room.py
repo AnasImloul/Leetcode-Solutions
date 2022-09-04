@@ -1,3 +1,4 @@
+# Runtime: 182 ms (Top 65.24%) | Memory: 20.7 MB (Top 5.08%)
 class ExamRoom:
 
     def __init__(self, n: int):
@@ -9,20 +10,20 @@ class ExamRoom:
     def seat(self) -> int:
         start, end, distance = heapq.heappop(self.pq)
         self.dict.pop(start, None) #Remove old segment from dictionary
-        self.dict.pop(end, None)   
+        self.dict.pop(end, None)
 
-        if start == end: 
+        if start == end:
             position = start
-        
+
         elif start == 0:
             position = start
             right = self.addSegment(start + 1, end)
-            
+
         elif end == self.N - 1:
             position = end
             left = self.addSegment(start, end - 1)
-            
-        elif end - start == 1: #ONLY ONE PLACE TO PUT 
+
+        elif end - start == 1: #ONLY ONE PLACE TO PUT
             position = start
             left = self.addSegment(start + 1, end)
 
@@ -32,13 +33,13 @@ class ExamRoom:
             left = self.addSegment(position + 1, end)
 
         return position
-        
+
     def leave(self, p: int) -> None:
         left = self.dict.get(p - 1, None)
         right = self.dict.get(p + 1, None)
-    
+
         new_start = new_end = p
-        
+
         if left:
             self.removeSegment(left)
             new_start = left.start
@@ -46,7 +47,7 @@ class ExamRoom:
         if right:
             self.removeSegment(right)
             new_end = right.end
-            
+
         self.addSegment(new_start, new_end)
 
     def addSegment(self, start, end):
@@ -54,12 +55,12 @@ class ExamRoom:
             self.dict[segment.start] = segment
             self.dict[segment.end] = segment
             heapq.heappush(self.pq, segment)
-            
+
     def removeSegment(self, segment):
             self.dict.pop(segment.start, None)
             self.dict.pop(segment.end, None)
             self.pq.remove(segment)
-            
+
 class Segment():
     def __init__(self, start, end, N):
         self.start = start
@@ -77,7 +78,7 @@ class Segment():
             return end - start
 
         else:
-            return (end - start) // 2  
-        
+            return (end - start) // 2
+
     def __iter__(self):
         return iter((self.start, self.end, self.distance))
