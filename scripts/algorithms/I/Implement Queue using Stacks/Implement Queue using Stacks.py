@@ -1,19 +1,20 @@
+# Runtime: 53 ms (Top 33.00%) | Memory: 13.9 MB (Top 98.49%)
 class MyStack:
     def __init__(self):
         self.stack = []
-        
+
     def push(self, x):
         self.stack.append(x)
-        
+
     def top(self):
         return self.stack[-1]
-    
+
     def pop(self):
         return self.stack.pop()
-    
+
     def size(self):
         return len(self.stack)
-    
+
     def isEmpty(self):
         return len(self.stack) == 0
 
@@ -44,7 +45,6 @@ class MyQueue:
 
     def empty(self) -> bool:
         return self.stack1.isEmpty()
-
 
 # Your MyQueue object will be instantiated and called as such:
 # obj = MyQueue()
