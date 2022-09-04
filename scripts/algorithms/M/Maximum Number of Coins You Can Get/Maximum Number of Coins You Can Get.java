@@ -1,3 +1,4 @@
+// Runtime: 43 ms (Top 37.50%) | Memory: 77.8 MB (Top 8.89%)
 class Solution {
     public int maxCoins(int[] piles) {
         Arrays.sort(piles);
