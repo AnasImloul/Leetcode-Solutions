@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 77.31%) | Memory: 8.1 MB (Top 16.67%)
 class Solution {
 public:
     string predictPartyVictory(string senate) {
@@ -11,14 +12,14 @@ public:
                 R.push(i);
             }
         }
-        
+
         while (!D.empty() && !R.empty()) {
             int dIdx = D.front();
             D.pop();
-            
+
             int rIdx = R.front();
             R.pop();
-            
+
             if (dIdx < rIdx) {
                 D.push(dIdx + len);
             }
@@ -26,7 +27,7 @@ public:
                 R.push(rIdx + len);
             }
         }
-        
+
         return D.empty() ? "Radiant" : "Dire";
     }
 };
