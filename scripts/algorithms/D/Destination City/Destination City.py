@@ -1,3 +1,4 @@
+# Runtime: 101 ms (Top 25.06%) | Memory: 13.8 MB (Top 81.64%)
 from collections import defaultdict
 class Solution:
     def destCity(self, paths: List[List[str]]) -> str:
