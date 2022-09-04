@@ -1,3 +1,4 @@
+// Runtime: 40 ms (Top 64.71%) | Memory: 17.5 MB (Top 78.67%)
 class Solution {
 public:
     int findContentChildren(vector<int>& g, vector<int>& s) {
@@ -6,7 +7,7 @@ public:
         int s_idx = 0;
         sort(s.begin(),s.end(),greater<int>());
         sort(g.begin(),g.end(),greater<int>());
-        
+
         while(g_idx<g.size()&&s_idx<s.size())
         {
             if(s[s_idx]>=g[g_idx])
@@ -21,6 +22,6 @@ public:
             }
         }
         return res;
-        
+
     }
 };
