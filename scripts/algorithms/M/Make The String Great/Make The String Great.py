@@ -1,3 +1,4 @@
+# Runtime: 76 ms (Top 13.82%) | Memory: 13.8 MB (Top 62.06%)
 class Solution:
     def makeGood(self, s: str) -> str:
         while True:
