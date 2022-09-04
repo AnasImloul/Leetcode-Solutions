@@ -1,3 +1,4 @@
+// Runtime: 79 ms (Top 80.89%) | Memory: 42.4 MB (Top 62.06%)
 var hammingWeight = function(n) {
     let count = 0, i = 0;
     while(n > 0) {
