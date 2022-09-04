@@ -1,3 +1,4 @@
+// Runtime: 119 ms (Top 68.89%) | Memory: 44.2 MB (Top 75.56%)
 /**
  * @param {string} word
  * @return {number}
