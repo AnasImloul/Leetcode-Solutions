@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 80.41%) | Memory: 7.1 MB (Top 29.42%)
 class Solution {
 public:
     int dfs(vector<vector<int>>&grid,int x,int y,int zero){
@@ -11,22 +12,22 @@ public:
         }
         grid[x][y] = -1; // mark the visited cells as -1;
         zero--; // and reduce the zero by 1
-        
+
         int totalPaths = dfs(grid, x + 1, y, zero) + // calculating all the paths available in 4 directions
-            dfs(grid, x - 1, y, zero) + 
-            dfs(grid, x, y + 1, zero) + 
+            dfs(grid, x - 1, y, zero) +
+            dfs(grid, x, y + 1, zero) +
             dfs(grid, x, y - 1, zero);
-        
+
         // Let's say if we are not able to count all the paths. Now we use Backtracking over here
         grid[x][y] = 0;
         zero++;
-        
+
         return totalPaths; // if we get all the paths, simply return it.
     }
-    
+
     int uniquePathsIII(vector<vector<int>>& grid) {
        int start_x,start_y=0,cntzero=0;
-        
+
         for(int i=0;i<grid.size();i++){
             for(int j=0;j<grid[0].size();j++){
                 if(grid[i][j]==0) cntzero++;
@@ -36,7 +37,7 @@ public:
                 }
             }
         }
-      return  dfs(grid,start_x,start_y,cntzero);
-            
+      return dfs(grid,start_x,start_y,cntzero);
+
     }
 };
