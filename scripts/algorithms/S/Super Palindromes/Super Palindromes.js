@@ -1,3 +1,4 @@
+// Runtime: 114 ms (Top 66.67%) | Memory: 42.4 MB (Top 83.33%)
 var superpalindromesInRange = function(left, right) {
     let ans = 9 >= left && 9 <= right ? 1 : 0
 
