@@ -1,3 +1,4 @@
+# Runtime: 1405 ms (Top 5.77%) | Memory: 15.2 MB (Top 23.08%)
 class Solution:
     def minSwaps(self, grid) -> int:
         n = len(grid)
