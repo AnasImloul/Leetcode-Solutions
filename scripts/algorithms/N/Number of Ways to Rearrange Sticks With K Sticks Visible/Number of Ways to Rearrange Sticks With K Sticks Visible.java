@@ -1,3 +1,4 @@
+// Runtime: 368 ms (Top 16.85%) | Memory: 89.8 MB (Top 41.57%)
 class Solution {
     public int rearrangeSticks(int n, int k) {
         final int MOD = 1_000_000_007;
