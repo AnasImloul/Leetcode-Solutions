@@ -1,3 +1,4 @@
+# Runtime: 658 ms (Top 42.61%) | Memory: 16 MB (Top 39.48%)
 """
 Store every points and number of their appearance
 Group the points by their x value
@@ -9,10 +10,9 @@ Go through every points that has same x1(except the point that is the same as (x
 
 Use the decided side length to calculate p3 and p4, see if they are in the dict. If do, add product of their appearances.
 
-p3     p2     p3`
+p3 p2 p3`
 
-
-p4     p1     p4`
+p4 p1 p4`
 
 Notice that p3 and p4 can be on both left side and right side of side (p2,p1)
 
@@ -48,9 +48,8 @@ class DetectSquares:
                 p3=(x1+b,y2)
                 p4=(x1+b,y1)
                 if p3 in self.pts and p4 in self.pts:
-                    res+=self.pts[p2]*self.pts[p3]*self.pts[p4]                
+                    res+=self.pts[p2]*self.pts[p3]*self.pts[p4]
         return res
-
 
 # Your DetectSquares object will be instantiated and called as such:
 # obj = DetectSquares()
