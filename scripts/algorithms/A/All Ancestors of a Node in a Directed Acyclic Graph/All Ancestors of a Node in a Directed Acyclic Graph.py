@@ -1,3 +1,4 @@
+# Runtime: 2132 ms (Top 14.62%) | Memory: 30.4 MB (Top 89.89%)
 class Solution:
     def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
         graph = {}
