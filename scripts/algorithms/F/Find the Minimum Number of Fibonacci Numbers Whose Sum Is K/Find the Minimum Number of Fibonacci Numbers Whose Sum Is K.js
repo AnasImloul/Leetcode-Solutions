@@ -1,3 +1,4 @@
+// Runtime: 85 ms (Top 83.78%) | Memory: 42.8 MB (Top 62.16%)
 var findMinFibonacciNumbers = function(k) {
     let sequence = [1, 1], sum = sequence[0] + sequence[1];
     let i = 2;
