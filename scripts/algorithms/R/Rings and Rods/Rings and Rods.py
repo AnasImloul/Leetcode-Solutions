@@ -1,3 +1,4 @@
+# Runtime: 56 ms (Top 27.28%) | Memory: 13.8 MB (Top 63.52%)
 class Solution:
     def countPoints(self, r: str) -> int:
         ans = 0
