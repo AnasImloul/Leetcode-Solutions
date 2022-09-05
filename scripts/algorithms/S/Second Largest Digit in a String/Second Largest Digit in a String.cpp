@@ -1,3 +1,4 @@
+// Runtime: 9 ms (Top 31.49%) | Memory: 6.6 MB (Top 98.16%)
 class Solution {
 public:
     int secondHighest(string s) {
