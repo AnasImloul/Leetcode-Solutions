@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 99.90%) | Memory: 22.1 MB (Top 68.12%)
 class Solution {
 public:
     vector<int>res;
@@ -8,7 +9,7 @@ public:
         int mx = INT_MIN;
         queue<TreeNode*>q;
         q.push(root);
-        
+
         while(!q.empty()){
             int sz = q.size();
             while(sz--){
