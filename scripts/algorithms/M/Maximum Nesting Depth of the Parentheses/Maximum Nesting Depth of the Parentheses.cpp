@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.3 MB (Top 56.85%)
 class Solution {
 public:
     int maxDepth(string s) {
