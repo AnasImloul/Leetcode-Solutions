@@ -1,3 +1,4 @@
+// Runtime: 189 ms (Top 50.81%) | Memory: 23.9 MB (Top 34.25%)
 class Solution {
 public:
     int mod = 1e9 + 7;
@@ -13,7 +14,7 @@ public:
         sort(ans.begin(), ans.end());
         int res_sum = 0;
         for(int i = left - 1; i < right; i++){
-            res_sum =  (res_sum +  ans[i]) % mod;
+            res_sum = (res_sum + ans[i]) % mod;
         }
         return res_sum;
     }
