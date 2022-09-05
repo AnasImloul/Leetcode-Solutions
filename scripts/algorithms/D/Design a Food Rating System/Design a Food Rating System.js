@@ -1,3 +1,4 @@
+// Runtime: 576 ms (Top 96.50%) | Memory: 85.2 MB (Top 90.21%)
 var FoodRatings = function(foods, cuisines, ratings) {
   this.heaps = {}, this.foods = {};
   let n = foods.length;
@@ -8,7 +9,7 @@ var FoodRatings = function(foods, cuisines, ratings) {
     })
     this.heaps[cuisine].add([food, rating]);
     this.foods[food] = { cuisine, rating };
-  } 
+  }
 };
 
 FoodRatings.prototype.changeRating = function(food, newRating) {
@@ -18,7 +19,7 @@ FoodRatings.prototype.changeRating = function(food, newRating) {
 };
 
 FoodRatings.prototype.highestRated = function(cuisine) {
-  let heap = this.heaps[cuisine];  
+  let heap = this.heaps[cuisine];
   while (this.foods[heap.top()[0]].rating !== heap.top()[1]) {
     heap.remove();
   }
