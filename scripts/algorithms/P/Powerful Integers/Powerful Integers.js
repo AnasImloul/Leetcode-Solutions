@@ -1,3 +1,4 @@
+// Runtime: 114 ms (Top 36.00%) | Memory: 41.5 MB (Top 100.00%)
 var powerfulIntegers = function(x, y, bound) {
     let ans = new Set()
     for (let xi = 1; xi < bound; xi *= x) {
