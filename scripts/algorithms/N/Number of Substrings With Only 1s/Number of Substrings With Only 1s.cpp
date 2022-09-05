@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 82.80%) | Memory: 8.8 MB (Top 30.73%)
 class Solution {
     /*
     To calculate the substring the formula is (n*n+1)/2 so just find the range and calculate the substrings.
@@ -27,4 +28,3 @@ public:
         return ans;
     }
 };
-
