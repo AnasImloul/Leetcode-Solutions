@@ -1,9 +1,10 @@
+// Runtime: 4 ms (Top 69.87%) | Memory: 7.4 MB (Top 11.07%)
 class Solution {
 private:
     unordered_map<string, string> hash;
     string server = "http://tinyurl.com/";
     string all = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-    
+
 public:
 
     // Encodes a URL to a shortened URL.
@@ -17,9 +18,9 @@ public:
             add += all[index];
             ran--;
         }
-        
-        hash[(server+add)] = longUrl; 
-        
+
+        hash[(server+add)] = longUrl;
+
         return (server + add);
     }
 
