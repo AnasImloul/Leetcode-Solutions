@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 67.33%) | Memory: 55.1 MB (Top 5.58%)
 class Solution {
     public int[] replaceElements(int[] arr) {
       int greatElement = -1;
