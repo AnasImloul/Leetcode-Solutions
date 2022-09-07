@@ -1,8 +1,9 @@
+# Runtime: 1570 ms (Top 45.22%) | Memory: 36.4 MB (Top 42.14%)
 class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         def computeArrivalTime(curr_pos, curr_speed):
             nonlocal target
-            return (target - curr_pos) / curr_speed 
+            return (target - curr_pos) / curr_speed
             # avoid integer division, as a car may arrive at 5.2s and another at 5.6s
 
         cars = list(zip(position, speed))
