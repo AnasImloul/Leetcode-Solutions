@@ -1,3 +1,4 @@
+// Runtime: 411 ms (Top 50.00%) | Memory: 69.9 MB (Top 50.00%)
 /**
  * @param {number} n
  * @param {number[][]} restrictions
@@ -8,11 +9,11 @@ var maxBuilding = function(n, restrictions) {
     restrictions.push([1,0]);//Push extra restriction as 0 for 1
     restrictions.push([n,n-1]);//Push extra restrition as n-1 for n
     restrictions.sort(function(a,b){return a[0]-b[0]});
-    //Propogate from left to right to tighten the restriction: Check building restriction can be furhter tightened due to the left side building restriction.  
+    //Propogate from left to right to tighten the restriction: Check building restriction can be furhter tightened due to the left side building restriction.
     for(let i=1;i<restrictions.length;i++){
         restrictions[i][1] = Math.min(restrictions[i][1], (restrictions[i][0]-restrictions[i-1][0])+restrictions[i-1][1]);
     }
-    //Propogate from right to left to tighten the restriction: Check building restriction can be furhter tightened due to the right side building restriction.   
+    //Propogate from right to left to tighten the restriction: Check building restriction can be furhter tightened due to the right side building restriction.
     for(let i=restrictions.length-2;i>=0;i--){
         restrictions[i][1] = Math.min(restrictions[i][1], (restrictions[i+1][0]-restrictions[i][0])+restrictions[i+1][1]);
     }
