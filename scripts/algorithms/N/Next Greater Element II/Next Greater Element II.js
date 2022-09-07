@@ -1,3 +1,4 @@
+// Runtime: 218 ms (Top 26.53%) | Memory: 48.7 MB (Top 35.44%)
 var nextGreaterElements = function(nums) {
     const len = nums.length;
     const ans = new Array(len).fill(-1);
