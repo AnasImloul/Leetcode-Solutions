@@ -1,3 +1,4 @@
+// Runtime: 1755 ms (Top 5.17%) | Memory: 312.6 MB (Top 5.17%)
 class Solution {
 public:
     int dp[101][101];
@@ -28,7 +29,7 @@ public:
     int strangePrinter(string s)
     {
         memset(dp,-1,sizeof(dp));
-         return solve(s,0,s.size()-1);  
+         return solve(s,0,s.size()-1);
     }
 };
 // if you like the solution plz upvote.
