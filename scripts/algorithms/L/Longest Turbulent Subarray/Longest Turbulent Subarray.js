@@ -1,3 +1,4 @@
+// Runtime: 154 ms (Top 12.50%) | Memory: 63.1 MB (Top 7.81%)
 var maxTurbulenceSize = function(arr) {
     const len = arr.length;
     const dp = Array.from({ length: len + 1 }, () => {
@@ -12,7 +13,7 @@ var maxTurbulenceSize = function(arr) {
         }
         ans = Math.max(ans, ...dp[i]);
     }
-    
+
     // console.log(dp);
     return ans + 1;
 };
