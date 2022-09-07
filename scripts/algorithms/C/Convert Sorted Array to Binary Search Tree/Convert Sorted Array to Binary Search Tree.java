@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 33.54%) | Memory: 45.2 MB (Top 7.46%)
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
         if (nums.length == 0) return null;
