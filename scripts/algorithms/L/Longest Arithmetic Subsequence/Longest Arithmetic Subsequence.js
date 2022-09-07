@@ -1,3 +1,4 @@
+// Runtime: 1333 ms (Top 78.26%) | Memory: 101.5 MB (Top 15.22%)
 var longestArithSeqLength = function(nums) {
     if (nums === null || nums.length === 0) {
         return 0;
@@ -15,6 +16,6 @@ var longestArithSeqLength = function(nums) {
         }
     }
     return maxLen;
-    // T.C: O(N^2) 
+    // T.C: O(N^2)
     // S.C: O(N^2)
 };
