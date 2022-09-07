@@ -1,4 +1,5 @@
-var judgeCircle = function(moves) {    
+// Runtime: 111 ms (Top 44.23%) | Memory: 43.1 MB (Top 76.28%)
+var judgeCircle = function(moves) {
     let x=0,y=0
     for(i=0;i<moves.length;i++){
         switch (moves[i]) {
@@ -18,5 +19,4 @@ var judgeCircle = function(moves) {
     }
      return x === 0 && y === 0
 
-    
 };
