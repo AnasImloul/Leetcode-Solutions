@@ -1,8 +1,9 @@
+# Runtime: 1004 ms (Top 5.08%) | Memory: 28.1 MB (Top 35.29%)
 class Solution:
     def getFolderNames(self, names: List[str]) -> List[str]:
         # Hashmap will store the name as key and the number of times that name has duplicated so fas as value.
         hashmap = {}
-        
+
         for name in names:
             modified = name
             # Check whether the name has already been used
@@ -17,6 +18,6 @@ class Solution:
                 hashmap[name] = k
             # Store the modified {name} with 0 as it is not duplicated yet.
             hashmap[modified] = 0
-            
+
         # Return the keys of hashmap as that would be the unique file names.
         return hashmap.keys()
