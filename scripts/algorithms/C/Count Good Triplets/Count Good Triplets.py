@@ -1,3 +1,4 @@
+# Runtime: 1794 ms (Top 11.20%) | Memory: 13.8 MB (Top 87.90%)
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         count = 0
