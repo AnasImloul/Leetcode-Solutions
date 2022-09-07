@@ -1,3 +1,4 @@
+// Runtime: 96 ms (Top 66.73%) | Memory: 43.9 MB (Top 16.57%)
 var isPowerOfFour = function(n) {
     if(n==1){
         return true
