@@ -1,3 +1,4 @@
+# Runtime: 187 ms (Top 16.67%) | Memory: 14.5 MB (Top 12.03%)
 class Solution:
     def maxChunksToSorted(self, arr: List[int]) -> int:
         sortedArr = sorted(arr)
