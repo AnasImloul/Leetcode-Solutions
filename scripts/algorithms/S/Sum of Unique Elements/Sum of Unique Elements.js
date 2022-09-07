@@ -1,3 +1,4 @@
+// Runtime: 63 ms (Top 94.39%) | Memory: 41.6 MB (Top 96.05%)
 var sumOfUnique = function(nums) {
   let obj = {}
   let sum = 0
@@ -11,6 +12,6 @@ var sumOfUnique = function(nums) {
       obj[num] = -1
     }
   }
-  
+
   return sum
 };
