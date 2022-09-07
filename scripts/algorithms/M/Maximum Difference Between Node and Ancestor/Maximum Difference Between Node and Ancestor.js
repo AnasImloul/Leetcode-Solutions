@@ -1,3 +1,4 @@
+// Runtime: 117 ms (Top 31.87%) | Memory: 45.8 MB (Top 47.25%)
 var maxAncestorDiff = function(root) {
     let ans = 0;
     const traverse = (r = root, mx = root.val, mn = root.val) => {
