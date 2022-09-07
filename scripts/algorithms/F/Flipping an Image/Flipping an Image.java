@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 81.21%) | Memory: 44.9 MB (Top 51.92%)
 class Solution {
     public int[][] flipAndInvertImage(int[][] image) {
         for (int i = 0; i < image.length; ++i) {
