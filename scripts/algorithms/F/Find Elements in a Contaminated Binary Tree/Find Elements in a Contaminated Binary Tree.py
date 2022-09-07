@@ -1,9 +1,10 @@
+# Runtime: 227 ms (Top 13.41%) | Memory: 18.1 MB (Top 62.12%)
 # Definition for a binary tree node.
 # class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+# def __init__(self, val=0, left=None, right=None):
+# self.val = val
+# self.left = left
+# self.right = right
 class FindElements:
 
     def __init__(self, root: Optional[TreeNode]):
@@ -23,7 +24,6 @@ class FindElements:
 
     def find(self, target: int) -> bool:
         return target in self.vals
-
 
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
