@@ -1,24 +1,24 @@
+// Runtime: 6 ms (Top 74.70%) | Memory: 12.3 MB (Top 80.06%)
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * int val;
+ * TreeNode *left;
+ * TreeNode *right;
+ * TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ * TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ * TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
 class Solution {
 public:
 
-    
     // hd - horizontal distance
     // vertical order traversal starts from least hd to highest hd
     // on moving left hd decreases by 1, on moving right it increases by 1
-    
+
     // should do level order traversal to get the nodes with same hd in correct order
-    
+
     vector<vector<int>> verticalTraversal(TreeNode* root) {
         map<int,vector<int>> mp;
         queue<pair<TreeNode*,int>> q;
