@@ -1,3 +1,4 @@
+# Runtime: 11887 ms (Top 6.00%) | Memory: 14.2 MB (Top 88.00%)
 class Solution:
     def numberOfCombinations(self, num: str) -> int:
         if num[0]=='0': return 0
