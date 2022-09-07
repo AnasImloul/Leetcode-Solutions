@@ -1,3 +1,4 @@
+# Runtime: 997 ms (Top 62.25%) | Memory: 22.2 MB (Top 22.99%)
 class Solution:
     def possibleBipartition(self, n: int, dislikes: List[List[int]]) -> bool:
         def dfs(i, c):
@@ -5,13 +6,13 @@ class Solution:
                 if color[i] != c:
                     return False
                 return True
-        
+
             color[i] = c
             for u in e[i]:
                 if not dfs(u, 3 - c):
                     return False
             return True
-        
+
         e = [[] for _ in range(n)]
         for u, v in dislikes:
             u -= 1
