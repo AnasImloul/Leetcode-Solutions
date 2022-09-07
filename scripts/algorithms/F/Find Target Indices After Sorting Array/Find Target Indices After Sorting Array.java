@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 82.14%) | Memory: 43.8 MB (Top 60.21%)
 class Solution {
     /** Algorithm:
         - Parse the array once and count how many are lesser than target and how many are equal
@@ -16,7 +17,7 @@ class Solution {
                 equal++;
             }
         }
-		List<Integer> indices = new ArrayList<>(equal);
+        List<Integer> indices = new ArrayList<>(equal);
         for (int i = smaller; i < smaller + equal; i++) {
             indices.add(i);
         }
