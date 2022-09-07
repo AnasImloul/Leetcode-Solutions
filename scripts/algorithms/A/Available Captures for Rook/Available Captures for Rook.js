@@ -1,12 +1,13 @@
+// Runtime: 100 ms (Top 33.90%) | Memory: 42.4 MB (Top 10.17%)
 var numRookCaptures = function(board) {
     const r=board.length;
     const c=board[0].length;
-    
+
     let res=0
     const dir=[[0,1],[0,-1],[1,0],[-1,0]]; // all the 4 possible directions
     let rook=[];
-    
-	// finding the rook's position
+
+    // finding the rook's position
     for(let i=0;i<r;i++){
         for(let j=0;j<c;j++){
             if(board[i][j]==='R'){
@@ -15,14 +16,14 @@ var numRookCaptures = function(board) {
             }
         }
     }
-    
-	// traversing all the 4 directions
+
+    // traversing all the 4 directions
     for(let [x,y] of dir){
         res+=helper(x,y,rook[0],rook[1])
     }
-    
+
     return res;
-    
+
     function helper(x,y,i,j){
         let newX=x+i
         let newY=y+j
@@ -34,7 +35,7 @@ var numRookCaptures = function(board) {
             }else if(board[newX][newY]==='B'){
                 break
             }
-			// keep moving towards the same direction
+            // keep moving towards the same direction
             newX+=x
             newY+=y
         }
