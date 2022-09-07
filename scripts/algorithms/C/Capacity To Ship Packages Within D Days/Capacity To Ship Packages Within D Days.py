@@ -1,6 +1,7 @@
+# Runtime: 1388 ms (Top 11.51%) | Memory: 17.1 MB (Top 35.27%)
 class Solution:
     def shipWithinDays(self, weights: List[int], days: int) -> int:
-        def calc(m):#function calculate no of days for given  weight
+        def calc(m):#function calculate no of days for given weight
             c,s=0,0
             for i in weights:
                 if i+s>m:
