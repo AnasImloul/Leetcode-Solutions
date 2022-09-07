@@ -1,10 +1,11 @@
-				// 😉😉😉😉Please upvote if it helps 😉😉😉😉
+// Runtime: 286 ms (Top 20.57%) | Memory: 61.3 MB (Top 61.82%)
+                // Please upvote if it helps
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
         int low = 1, high = nums.size() - 1, cnt;
-        
-        while(low <=  high)
+
+        while(low <= high)
         {
             int mid = low + (high - low) / 2;
             cnt = 0;
@@ -20,9 +21,9 @@ public:
             else
             // binary search on right
                 high = mid - 1;
-            
+
         }
         return low;
     }
-	// for github repository link go to my profile.
+    // for github repository link go to my profile.
 };
