@@ -1,3 +1,4 @@
+// Runtime: 91 ms (Top 25.69%) | Memory: 21.6 MB (Top 53.31%)
 class Solution {
 public:
     int numComponents(ListNode* head, vector<int>& nums)
