@@ -1,5 +1,6 @@
+# Runtime: 77 ms (Top 11.09%) | Memory: 13.8 MB (Top 99.05%)
 class Solution:
-    def isValidSerialization(self, preorder: str) -> bool:            
+    def isValidSerialization(self, preorder: str) -> bool:
         nodes = preorder.split(',')
         counter=1
         for i, node in enumerate(nodes):
