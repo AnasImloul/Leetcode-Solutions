@@ -1,3 +1,4 @@
+# Runtime: 67 ms (Top 31.53%) | Memory: 13.9 MB (Top 60.59%)
 class Solution:
     def maxScore(self, s: str) -> int:
         m0=0
@@ -23,9 +24,8 @@ class Solution:
             if max_<c1+c0:
                 max_=c1+c0
                 idx=i
-            max_=max(max_,c1+c0)  
+            max_=max(max_,c1+c0)
             i+=1
         if idx==l-1:
             return max_-1
         return max_
-    
