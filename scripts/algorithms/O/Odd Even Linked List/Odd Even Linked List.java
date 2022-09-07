@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 44.6 MB (Top 61.89%)
 class Solution {
     public ListNode oddEvenList(ListNode head) {
         if(head == null) {
