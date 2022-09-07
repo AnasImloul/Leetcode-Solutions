@@ -1,3 +1,4 @@
+# Runtime: 3127 ms (Top 12.36%) | Memory: 28.8 MB (Top 64.23%)
 class Solution:
     def validSubarraySize(self, nums: List[int], threshold: int) -> int:
         nums = [0] + nums + [0]
