@@ -1,3 +1,4 @@
+// Runtime: 18 ms (Top 22.45%) | Memory: 50.6 MB (Top 24.49%)
 class Solution {
     public boolean sumGame(String num) {
         int q = 0, d = 0, n = num.length();
