@@ -1,3 +1,4 @@
+# Runtime: 27 ms (Top 98.51%) | Memory: 13.8 MB (Top 50.40%)
 class Solution:
     def hammingWeight(self, n: int) -> int:
       i = 0
