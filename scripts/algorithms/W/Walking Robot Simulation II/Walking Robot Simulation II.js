@@ -1,3 +1,4 @@
+// Runtime: 555 ms (Top 33.33%) | Memory: 62.5 MB (Top 46.67%)
 const EAST = "East";
 const NORTH = "North";
 const WEST = "West";
@@ -13,9 +14,9 @@ const ORIGIN = [0,0];
 var Robot = function(width, height) {
     this.width = width;
     this.height = height;
-    
+
     this.path = []; // circular buffer of entire path of robot
-    this.dirAtSquare = [];  // dir robot is facing at each square
+    this.dirAtSquare = []; // dir robot is facing at each square
     this.currentPos = -1;
 
     this.preprocess();
@@ -35,21 +36,21 @@ Robot.prototype.preprocess = function() {
         this.path.push([i, 0]);
         this.dirAtSquare.push(0);
     }
-    
+
     // go up
     const xMax = this.width - 1;
     for (let i = 1; i < this.height; i++) {
         this.path.push([xMax, i]);
         this.dirAtSquare.push(1);
     }
-    
+
     // go left
     const yMax = this.height - 1;
     for (let i = xMax - 1; i >= 0; i--) {
         this.path.push([i, yMax]);
         this.dirAtSquare.push(2);
     }
-    
+
     // go down
     const xMin = 0;
     for (let i = yMax - 1; i >= 0; i--) {
@@ -58,7 +59,7 @@ Robot.prototype.preprocess = function() {
     }
 }
 
-/** 
+/**
  * @param {number} num
  * @return {void}
  */
@@ -71,7 +72,7 @@ Robot.prototype.step = function(num) {
  */
 Robot.prototype.getPos = function() {
     return this.currentPos === -1
-        ? ORIGIN    // we haven't moved
+        ? ORIGIN // we haven't moved
         : this.path[this.currentPos % this.path.length];
 };
 
@@ -84,7 +85,7 @@ Robot.prototype.getDir = function() {
         : DIRECTIONS[this.dirAtSquare[this.currentPos % this.dirAtSquare.length]];
 };
 
-/** 
+/**
  * Your Robot object will be instantiated and called as such:
  * var obj = new Robot(width, height)
  * obj.step(num)
