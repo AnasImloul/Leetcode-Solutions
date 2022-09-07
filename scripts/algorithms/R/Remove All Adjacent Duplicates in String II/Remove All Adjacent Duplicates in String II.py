@@ -1,3 +1,4 @@
+# Runtime: 309 ms (Top 14.94%) | Memory: 18.7 MB (Top 36.81%)
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
         stack=[]
