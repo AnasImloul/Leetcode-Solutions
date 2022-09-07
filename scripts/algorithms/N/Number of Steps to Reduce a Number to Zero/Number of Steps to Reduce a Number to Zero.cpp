@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 38.53%) | Memory: 5.8 MB (Top 74.06%)
 class Solution {
 public:
     int numberOfSteps(int num) {
