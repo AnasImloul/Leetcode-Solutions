@@ -1,3 +1,4 @@
+// Runtime: 77 ms (Top 48.15%) | Memory: 41.6 MB (Top 50.00%)
 class Solution {
     double all = 0;
     public double getProbability(int[] balls) {
