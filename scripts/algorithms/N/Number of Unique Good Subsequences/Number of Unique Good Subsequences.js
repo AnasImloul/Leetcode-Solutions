@@ -1,3 +1,4 @@
+// Runtime: 115 ms (Top 44.44%) | Memory: 45.8 MB (Top 33.33%)
 const MOD = 1000000007;
 
 var numberOfUniqueGoodSubsequences = function(binary) {
