@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 97.73%) | Memory: 44.9 MB (Top 43.86%)
 class Solution {
     public int maxProduct(int[] nums) {
         int ans = Integer.MIN_VALUE;
