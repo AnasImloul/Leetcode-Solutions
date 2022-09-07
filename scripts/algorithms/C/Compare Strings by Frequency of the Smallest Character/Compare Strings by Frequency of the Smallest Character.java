@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 87.83%) | Memory: 46.8 MB (Top 47.53%)
 class Solution {
     public int[] numSmallerByFrequency(String[] queries, String[] words) {
         int[] ans = new int[queries.length];
