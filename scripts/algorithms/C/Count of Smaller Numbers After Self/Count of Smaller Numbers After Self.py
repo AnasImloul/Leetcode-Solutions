@@ -1,8 +1,9 @@
+# Runtime: 6019 ms (Top 15.52%) | Memory: 35.5 MB (Top 33.31%)
 class Solution:
     def countSmaller(self, nums: List[int]) -> List[int]:
         # build the binary indexed tree
-        num_buckets = 10 ** 4 + 10 ** 4 + 1  # 10**4 negative + 10**4 positive numbers + bucket at 0
-        tree = [0] * (num_buckets + 1)  # add 1 because binary indexed tree data starts at index 1
+        num_buckets = 10 ** 4 + 10 ** 4 + 1 # 10**4 negative + 10**4 positive numbers + bucket at 0
+        tree = [0] * (num_buckets + 1) # add 1 because binary indexed tree data starts at index 1
 
         result = [0] * len(nums)
 
