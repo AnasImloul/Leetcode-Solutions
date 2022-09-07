@@ -1,3 +1,4 @@
+// Runtime: 300 ms (Top 33.33%) | Memory: 55.7 MB (Top 66.67%)
 /**
  * @param {string[][]} watchedVideos
  * @param {number[][]} friends
@@ -10,7 +11,7 @@ var watchedVideosByFriends = function(watchedVideos, friends, id, level) {
   queue.push([id, 0]);
   const seen = new Set();
   const map = {};
-  
+
   while (queue.length > 0) {
     const [id, _level] = queue.shift();
     if (seen.has(id)) {
@@ -27,12 +28,12 @@ var watchedVideosByFriends = function(watchedVideos, friends, id, level) {
       }
       continue;
     }
-    
+
     for (const f of friends[id]) {
       queue.push([f, _level + 1]);
     }
   }
-  
+
   return Object.keys(map).sort((a, b) => {
     const diff = map[a] - map[b];
     if (diff == 0) {
