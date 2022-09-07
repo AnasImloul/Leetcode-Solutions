@@ -1,3 +1,4 @@
+// Runtime: 116 ms (Top 79.99%) | Memory: 46.6 MB (Top 80.24%)
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -8,6 +9,6 @@ public:
         return true;
             }
         return false;
-        
+
     }
 };
