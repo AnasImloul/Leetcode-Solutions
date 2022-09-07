@@ -1,3 +1,4 @@
+// Runtime: 15 ms (Top 23.40%) | Memory: 10.6 MB (Top 67.12%)
 class Solution {
 public:
     int bagOfTokensScore(vector<int>& tokens, int power) {
