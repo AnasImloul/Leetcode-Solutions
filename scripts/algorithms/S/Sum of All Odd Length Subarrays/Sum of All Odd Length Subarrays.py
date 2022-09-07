@@ -1,3 +1,4 @@
+# Runtime: 68 ms (Top 74.29%) | Memory: 13.9 MB (Top 63.03%)
 class Solution:
     def sumOddLengthSubarrays(self, arr: List[int]) -> int:
         n = len(arr)
