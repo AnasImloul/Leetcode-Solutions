@@ -1,3 +1,4 @@
+// Runtime: 123 ms (Top 65.91%) | Memory: 46.7 MB (Top 68.76%)
 var convert = function(s, numRows) {
   let result = [];
   let row = 0;
@@ -11,7 +12,7 @@ var convert = function(s, numRows) {
       row++;
       if (row === numRows - 1) goingUp = true; // reverse direction after reaching bottom
     }
-    
+
   }
   return result.join('');
 };
