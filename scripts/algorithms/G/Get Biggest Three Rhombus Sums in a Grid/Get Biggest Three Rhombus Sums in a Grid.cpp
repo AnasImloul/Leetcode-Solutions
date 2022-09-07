@@ -1,10 +1,11 @@
+// Runtime: 644 ms (Top 13.79%) | Memory: 58.3 MB (Top 46.90%)
 class Solution {
 public:
     vector<int> getBiggestThree(vector<vector<int>>& grid) {
-        
+
         int n = grid.size(), m = grid[0].size();
         set<int> s;
-        
+
         // 1x1, 3x3, 5x5
         for (int len = 1; len <= min(m, n); len += 2) {
             for (int i = 0; i + len <= n; i ++) {
@@ -23,10 +24,10 @@ public:
                 }
             }
         }
-        
+
         if (s.size() < 3)
             return vector<int>(s.rbegin(), s.rend());
-        
+
         return vector<int>(s.rbegin(), next(s.rbegin(), 3));
     }
 };
