@@ -1,3 +1,4 @@
+// Runtime: 42 ms (Top 12.33%) | Memory: 44.2 MB (Top 60.27%)
 class Solution {
     public int[] pathsWithMaxScore(List<String> board) {
         int M = (int)1e9+7;
