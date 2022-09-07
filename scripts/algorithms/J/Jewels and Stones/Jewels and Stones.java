@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 31.57%) | Memory: 42.7 MB (Top 19.07%)
 class Solution {
     public int numJewelsInStones(String jewels, String stones) {
         HashSet<Character> hs=new HashSet<>();
