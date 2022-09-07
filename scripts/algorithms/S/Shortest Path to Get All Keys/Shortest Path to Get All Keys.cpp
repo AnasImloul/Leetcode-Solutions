@@ -1,3 +1,4 @@
+// Runtime: 58 ms (Top 69.42%) | Memory: 12.5 MB (Top 64.22%)
 class Solution {
     int dirx[4] = {-1,1,0,0};
     int diry[4] = {0,0,1,-1};
@@ -39,7 +40,7 @@ public:
             }
             //cout << endl;
         }
-        int fnl =  (1 << lk) - 1;
+        int fnl = (1 << lk) - 1;
         //cout << fnl;
         vector<vector<int>> visited(n*m, vector<int>(fnl,1));
         queue<pair<pair<int,int>,int>> q;
