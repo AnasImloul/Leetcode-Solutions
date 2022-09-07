@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 23.76%) | Memory: 8.8 MB (Top 51.52%)
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {
