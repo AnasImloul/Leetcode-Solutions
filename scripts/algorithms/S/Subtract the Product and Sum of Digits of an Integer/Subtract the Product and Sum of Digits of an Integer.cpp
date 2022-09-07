@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.1 MB (Top 26.58%)
 class Solution {
 public:
     int subtractProductAndSum(int n) {
@@ -13,6 +14,6 @@ public:
             sum+=digit[i];
         }
         return product-sum;
-        
+
     }
 };
