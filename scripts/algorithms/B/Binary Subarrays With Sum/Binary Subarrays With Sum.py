@@ -1,3 +1,4 @@
+# Runtime: 680 ms (Top 7.52%) | Memory: 17.5 MB (Top 60.81%)
 class Solution:
     def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
         my_dict = {0:1}
