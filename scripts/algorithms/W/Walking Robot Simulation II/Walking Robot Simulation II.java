@@ -1,3 +1,4 @@
+// Runtime: 134 ms (Top 50.88%) | Memory: 98.9 MB (Top 12.28%)
 class Robot {
 
     int p;
