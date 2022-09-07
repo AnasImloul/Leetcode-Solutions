@@ -1,3 +1,4 @@
+// Runtime: 237 ms (Top 7.93%) | Memory: 10.4 MB (Top 69.08%)
 class Solution {
 public:
     long long subArrayRanges(vector<int>& nums) {
