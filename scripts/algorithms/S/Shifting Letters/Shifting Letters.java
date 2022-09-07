@@ -1,3 +1,4 @@
+// Runtime: 26 ms (Top 23.48%) | Memory: 82.1 MB (Top 8.82%)
 class Solution {
     public String shiftingLetters(String s, int[] shifts) {
         char[] arr = s.toCharArray();
@@ -15,10 +16,10 @@ class Solution {
                 }
             char ch = (char)n;
             arr[i] = ch;
-            
+
         }
-        String string = new String(arr); 
+        String string = new String(arr);
         return string;
-        
+
     }
 }
