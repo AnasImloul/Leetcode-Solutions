@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 7.47%) | Memory: 42.1 MB (Top 50.88%)
 class Solution {
     public int countAsterisks(String s) {
         boolean insidePipe = false;
