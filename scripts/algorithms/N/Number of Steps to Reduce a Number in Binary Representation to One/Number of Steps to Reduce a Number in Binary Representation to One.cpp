@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 22.27%) | Memory: 6.2 MB (Top 89.57%)
 class Solution {
 public:
     int numSteps(string s) {
@@ -10,13 +11,13 @@ public:
             if(carry){
                 if(s[i] == '1'){
                     carry = true; s[i] = '0';
-                }else{ 
+                }else{
                     s[i] = '1'; carry = false;
                 }
             }
             if(s[i] == '0'){ s.pop_back(); steps++;}
             else{carry = true; s.pop_back(); steps += 2;}
-            if(s == "1"){ 
+            if(s == "1"){
                 if(carry) steps++;
                 break;
             }
