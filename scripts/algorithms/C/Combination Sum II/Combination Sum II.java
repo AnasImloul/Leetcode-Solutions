@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 12.41%) | Memory: 43.5 MB (Top 81.01%)
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
@@ -8,7 +9,7 @@ class Solution {
         helper(res, path, candidates, visited, target, 0);
         return res;
     }
-    private void helper(List<List<Integer>> res, 
+    private void helper(List<List<Integer>> res,
                   List<Integer> path, int[] candidates,
                   boolean[] visited, int remain, int currIndex
                  ){
@@ -19,7 +20,7 @@ class Solution {
         if (remain < 0){
             return;
         }
-   
+
         for(int i = currIndex; i < candidates.length; i++){
             if (visited[i]){
                 continue;
@@ -32,7 +33,7 @@ class Solution {
             visited[i] = true;
             helper(res, path, candidates, visited, remain - curr, i + 1);
             path.remove(path.size() - 1);
-            
+
             visited[i] = false;
         }
     }
