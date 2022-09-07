@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 73.70%) | Memory: 42.2 MB (Top 97.84%)
 class Solution {
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
