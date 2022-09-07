@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 21.11%) | Memory: 42.4 MB (Top 35.11%)
 class TrieNode{
     TrieNode[] childs;
     int frequency;
@@ -8,9 +9,9 @@ class TrieNode{
 }
 
 class Solution {
-    
+
     TrieNode root = new TrieNode();
-    
+
     public String longestCommonPrefix(String[] strs) {
         if(strs.length == 0) return "";
         if(strs.length == 1) return strs[0];
@@ -19,7 +20,7 @@ class Solution {
         }
         return findCommonPrefix(strs[0], strs.length);
     }
-    
+
     private void insertIntoTrie(String str) {
         TrieNode ptr = root;
         for(int i=0; i<str.length(); i++){
@@ -31,7 +32,7 @@ class Solution {
             ptr = ptr.childs[str.charAt(i)-'a'];
         }
     }
-    
+
     private String findCommonPrefix(String str, int n) {
         String ans = "";
         for(int i=0; i<str.length(); i++){
