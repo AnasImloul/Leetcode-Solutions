@@ -1,3 +1,4 @@
+// Runtime: 454 ms (Top 75.74%) | Memory: 71.3 MB (Top 97.04%)
 class Solution {
     public int subarrayBitwiseORs(int[] arr) {
         int n = arr.length;
