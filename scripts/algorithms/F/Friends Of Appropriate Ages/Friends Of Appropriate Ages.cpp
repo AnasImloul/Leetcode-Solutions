@@ -1,3 +1,4 @@
+// Runtime: 260 ms (Top 5.36%) | Memory: 37.1 MB (Top 100.00%)
 class Solution {
 public:
     int numFriendRequests(vector<int>& ages) {
