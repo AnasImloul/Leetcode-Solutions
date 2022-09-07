@@ -1,10 +1,11 @@
-class Solution 
+// Runtime: 71 ms (Top 53.30%) | Memory: 48.3 MB (Top 81.34%)
+class Solution
 {
-    public String removeDuplicates(String s, int k) 
+    public String removeDuplicates(String s, int k)
     {
         int i = 0 ;
         StringBuilder newString = new StringBuilder(s) ;
-        int[] count = new int[newString.length()] ;        
+        int[] count = new int[newString.length()] ;
         while( i < newString.length() )
         {
             if( i == 0 || newString.charAt(i) != newString.charAt( i - 1 ) )
