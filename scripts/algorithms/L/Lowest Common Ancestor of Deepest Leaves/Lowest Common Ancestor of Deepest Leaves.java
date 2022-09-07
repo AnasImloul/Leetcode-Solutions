@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 36.92%) | Memory: 42 MB (Top 90.15%)
 class Solution {
     public TreeNode lcaDeepestLeaves(TreeNode root) {
         if (root.left == null && root.right == null) return root;
@@ -23,14 +24,14 @@ class Solution {
         }
         return find(root, set);
     }
-    
+
     public int findDepth(TreeNode root) {
         if (root == null) return 0;
         int left = findDepth(root.left);
         int right = findDepth(root.right);
         return 1 + Math.max(left, right);
     }
-    
+
     public TreeNode find(TreeNode root, Set<Integer> set) {
         if (root == null) return root;
         if (set.contains(root.val)) return root;
@@ -42,4 +43,3 @@ class Solution {
         else return null;
     }
 }
-
