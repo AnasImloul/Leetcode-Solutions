@@ -1,20 +1,21 @@
+// Runtime: 162 ms (Top 8.26%) | Memory: 66.8 MB (Top 51.38%)
 class Solution {
-    public int robotSim(int[] commands, int[][] obstacles) {   
+    public int robotSim(int[] commands, int[][] obstacles) {
         int dir = 0; // states 0north-1east-2south-3west
         int farthestSofar = 0;
-        
+
         int xloc = 0;
         int yloc = 0;
-        
+
         Set<String> set = new HashSet<>();
         for (int[] obs : obstacles) {
             set.add(obs[0] + "," + obs[1]);
         }
-        
-        int steps; 
-        
+
+        int steps;
+
         for(int i: commands){
-            
+
             if( i == -1){//turn right 90
                 dir++;
             }
