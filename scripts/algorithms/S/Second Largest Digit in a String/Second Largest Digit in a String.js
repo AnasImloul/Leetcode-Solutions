@@ -1,3 +1,4 @@
+// Runtime: 116 ms (Top 36.48%) | Memory: 43.8 MB (Top 80.69%)
 /**
  * @param {string} s
  * @return {number}
@@ -12,7 +13,7 @@ var secondHighest = function(s) {
     var res = new Set(digits) //turn the array into a set, to remove duplicates
     if(res.size <=1){
         //if the set is sized 1, then there is no second largest digit
-        return -1 
+        return -1
     }
     else{
         //otherwise, the second largest digit would be at index 1 (because we sorted the array into descending order)
