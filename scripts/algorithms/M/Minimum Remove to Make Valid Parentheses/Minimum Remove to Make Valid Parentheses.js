@@ -1,3 +1,4 @@
+// Runtime: 154 ms (Top 33.70%) | Memory: 56.1 MB (Top 16.54%)
 var minRemoveToMakeValid = function(s) {
     let validity = 0;
     for(let index = 0; index < s.length; index++) {
@@ -8,7 +9,7 @@ var minRemoveToMakeValid = function(s) {
             }
             else {
                 validity--;
-            }         
+            }
         }
         else if(s[index] == '(') {
             validity++;
