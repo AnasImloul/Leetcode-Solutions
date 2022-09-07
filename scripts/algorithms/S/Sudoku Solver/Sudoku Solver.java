@@ -1,3 +1,4 @@
+// Runtime: 25 ms (Top 30.53%) | Memory: 41.7 MB (Top 44.25%)
 class Solution {
     public void solveSudoku(char[][] board) {
        solve(board);
@@ -9,10 +10,10 @@ class Solution {
                     for(char c = '1'; c<='9'; c++){
                         if(isValid(board, c, i, j) == true){
                             board[i][j] = c;
-                            
+
                             if(solve(board) == true) return true;
                             else board[i][j] = '.';
-                        }   
+                        }
                     }
                     return false;
                 }
@@ -20,7 +21,7 @@ class Solution {
         }
         return true;
     }
-    
+
     boolean isValid(char board[][], char c, int row, int col){
         for(int i = 0; i<9; i++){
             if(board[row][i] == c) return false;
