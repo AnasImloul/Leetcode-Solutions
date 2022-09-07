@@ -1,3 +1,4 @@
+// Runtime: 132 ms (Top 59.47%) | Memory: 49 MB (Top 28.57%)
 /**
  * 1. compute all positions for each number
  * 2. filter arrays of max length
@@ -10,7 +11,7 @@ var findShortestSubArray = function(nums) {
         if (numPositions[num] == null) numPositions[num] = [];
         numPositions[num].push(i);
     }
-    
+
     let maxLen = 0;
     // will store the positions of most frequent numbers
     let maxPos = [];
@@ -23,7 +24,7 @@ var findShortestSubArray = function(nums) {
             maxPos = [positions]
         }
     }
-    
+
     let minDist = Number.MAX_SAFE_INTEGER;
     for (const positions of maxPos) {
         minDist = Math.min(minDist, positions[positions.length-1] - positions[0] + 1);
