@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 86.10%) | Memory: 40.1 MB (Top 92.63%)
 class Solution {
     public int sumOfUnique(int[] nums) {
         int res = 0;
