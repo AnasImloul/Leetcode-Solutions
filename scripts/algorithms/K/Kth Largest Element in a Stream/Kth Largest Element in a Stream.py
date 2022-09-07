@@ -1,3 +1,4 @@
+# Runtime: 143 ms (Top 61.21%) | Memory: 18.3 MB (Top 46.75%)
 class KthLargest:
     def __init__(self, k: int, nums: List[int]):
         self.k = k
