@@ -1,3 +1,4 @@
+# Runtime: 6454 ms (Top 9.35%) | Memory: 24.7 MB (Top 37.40%)
 from functools import lru_cache
 
 class Solution:
