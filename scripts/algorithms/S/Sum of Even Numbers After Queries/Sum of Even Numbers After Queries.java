@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 90.94%) | Memory: 68.3 MB (Top 82.52%)
 class Solution {
     public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {
         int sum = 0;
