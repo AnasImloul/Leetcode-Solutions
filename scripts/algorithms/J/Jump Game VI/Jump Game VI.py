@@ -1,3 +1,4 @@
+# Runtime: 2281 ms (Top 16.22%) | Memory: 28.1 MB (Top 44.14%)
 class Solution:
     def maxResult(self, nums: List[int], k: int) -> int:
         n = len(nums)
