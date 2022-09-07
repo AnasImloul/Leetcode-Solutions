@@ -1,3 +1,4 @@
+// Runtime: 173 ms (Top 6.23%) | Memory: 61.5 MB (Top 69.24%)
 class Solution {
 public:
     bool increasingTriplet(vector<int>& nums) {
@@ -19,7 +20,7 @@ public:
                 return true;
             }
         }
-        
+
         return false;
     }
 };
