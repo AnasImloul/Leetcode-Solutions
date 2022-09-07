@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 76.25%) | Memory: 44.5 MB (Top 55.91%)
 class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         int[] sorted = nums.clone();
@@ -23,7 +24,7 @@ class Solution {
         int s = 0;
         int e = arr.length-1;
         int m = (s+e)/2;
-        
+
         while (s<=e) {
             if (arr[m] == target) {
                 return m;
