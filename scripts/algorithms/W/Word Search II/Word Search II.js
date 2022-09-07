@@ -1,3 +1,4 @@
+// Runtime: 1902 ms (Top 50.75%) | Memory: 44.5 MB (Top 91.32%)
 const buildTrie = (words) => {
     const trie = {};
     const addToTrie = (word, index = 0, node = trie) => {
