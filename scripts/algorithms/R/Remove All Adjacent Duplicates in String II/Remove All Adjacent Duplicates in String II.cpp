@@ -1,3 +1,4 @@
+// Runtime: 78 ms (Top 20.22%) | Memory: 10.8 MB (Top 48.34%)
 class Solution {
 public:
     string removeDuplicates(string s, int k) {
