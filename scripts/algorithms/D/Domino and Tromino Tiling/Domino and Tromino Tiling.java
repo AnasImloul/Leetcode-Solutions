@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 24.92%) | Memory: 40.4 MB (Top 83.54%)
 class Solution {
     public int numTilings(int n) {
         int[]dp=new int[n+1];
