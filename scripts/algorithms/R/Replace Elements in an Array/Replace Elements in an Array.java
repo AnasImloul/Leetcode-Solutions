@@ -1,3 +1,4 @@
+// Runtime: 124 ms (Top 26.09%) | Memory: 164.1 MB (Top 72.68%)
 class Solution {
     public int[] arrayChange(int[] nums, int[][] operations) {
         Map<Integer,Integer> map = new HashMap<>();
