@@ -1,3 +1,4 @@
+// Runtime: 31 ms (Top 69.83%) | Memory: 55 MB (Top 18.30%)
 class Solution {
     public String removeKdigits(String num, int k) {
         int n = num.length();
