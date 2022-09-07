@@ -1,9 +1,10 @@
+// Runtime: 112 ms (Top 53.69%) | Memory: 46.9 MB (Top 82.53%)
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
+ * this.val = (val===undefined ? 0 : val)
+ * this.left = (left===undefined ? null : left)
+ * this.right = (right===undefined ? null : right)
  * }
  */
 /**
@@ -11,7 +12,7 @@
  * @return {boolean}
  */
 var isBalanced = function(root) {
-    
+
     let result=true;
     function Dfs(root){
         if(!root)return 0;
@@ -23,4 +24,3 @@ var isBalanced = function(root) {
     Dfs(root)
     return result
 };
-
