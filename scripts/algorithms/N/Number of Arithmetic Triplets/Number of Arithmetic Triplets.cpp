@@ -1,3 +1,4 @@
+// Runtime: 311 ms (Top 8.76%) | Memory: 8.6 MB (Top 54.12%)
 class Solution {
 public:
     int arithmeticTriplets(vector<int>& nums, int diff) {
