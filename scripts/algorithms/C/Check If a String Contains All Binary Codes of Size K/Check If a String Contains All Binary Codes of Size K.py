@@ -1,3 +1,4 @@
+# Runtime: 784 ms (Top 44.64%) | Memory: 51.2 MB (Top 58.20%)
 class Solution:
     def hasAllCodes(self, s: str, k: int) -> bool:
         lst=set()
@@ -8,4 +9,3 @@ class Solution:
             return True
         else:
             return False
-            
