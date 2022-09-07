@@ -1,3 +1,4 @@
+# Runtime: 74 ms (Top 8.76%) | Memory: 14.1 MB (Top 82.26%)
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         self.final_list = []
