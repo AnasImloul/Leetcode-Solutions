@@ -1,8 +1,9 @@
+# Runtime: 56 ms (Top 51.37%) | Memory: 13.9 MB (Top 48.63%)
 class Solution:
     def isSquare(self,num):
         return int(num**0.5)**2 == num
     def makePermutation(self,used,vis,prev,n):
-        if used == n: 
+        if used == n:
             #we reached the end
             self.ans += 1
             return
@@ -14,7 +15,7 @@ class Solution:
                     vis[i] = True
                     self.makePermutation(used+1,vis,self.nums[i],n)
                     vis[i] = False
-        
+
     def numSquarefulPerms(self, nums: List[int]) -> int:
         d = { x:{} for x in nums}
         n = len(nums)
