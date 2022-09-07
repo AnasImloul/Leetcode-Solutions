@@ -1,3 +1,4 @@
+// Runtime: 106 ms (Top 46.81%) | Memory: 44 MB (Top 75.83%)
 /**
  * @param {number[]} flowerbed
  * @param {number} n
