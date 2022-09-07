@@ -1,3 +1,4 @@
+# Runtime: 354 ms (Top 28.01%) | Memory: 13.9 MB (Top 55.93%)
 import heapq
 class Solution:
     def nthUglyNumber(self, n: int) -> int:
@@ -9,7 +10,7 @@ class Solution:
         last_ugly_number = 1
         count = 1
         while count < n:
-            if  2 * h1[0] <= 3 * h2[0] and 2 * h1[0] <= 5 * h3[0]:
+            if 2 * h1[0] <= 3 * h2[0] and 2 * h1[0] <= 5 * h3[0]:
                 # pop from h1
                 x = heapq.heappop(h1)
                 ugly_number = 2 * x
@@ -21,7 +22,7 @@ class Solution:
                 heapq.heappush(h1, ugly_number)
                 heapq.heappush(h2, ugly_number)
                 heapq.heappush(h3, ugly_number)
-                
+
             elif 3 * h2[0] <= 2 * h1[0] and 3 * h2[0] <= 5 * h3[0]:
                 # pop from h2
                 x = heapq.heappop(h2)
@@ -44,5 +45,5 @@ class Solution:
                 heapq.heappush(h1, ugly_number)
                 heapq.heappush(h2, ugly_number)
                 heapq.heappush(h3, ugly_number)
-                
+
         return last_ugly_number
