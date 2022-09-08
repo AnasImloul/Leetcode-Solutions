@@ -1,3 +1,4 @@
+# Runtime: 1522 ms (Top 17.46%) | Memory: 14.2 MB (Top 76.15%)
 class Solution:
     def findSubstring(self, s: str, words: List[str]) -> List[int]:
         req={}
@@ -6,7 +7,7 @@ class Solution:
         l=0
         r=len(words)*len(words[0])
         ans=[]
-        
+
         while r<len(s)+1:
             i=0
             curr={}
