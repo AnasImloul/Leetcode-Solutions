@@ -1,3 +1,4 @@
+# Runtime: 107 ms (Top 60.66%) | Memory: 14.9 MB (Top 70.68%)
 class Solution:
     def duplicateZeros(self, arr: List[int]) -> None:
         """
@@ -11,4 +12,3 @@ class Solution:
                 i+=1
                 arr.pop()
             i+=1
-
