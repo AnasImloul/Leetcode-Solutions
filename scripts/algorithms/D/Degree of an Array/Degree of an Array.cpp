@@ -1,3 +1,4 @@
+// Runtime: 51 ms (Top 82.87%) | Memory: 25.5 MB (Top 58.45%)
 class Solution {
 public:
     int findShortestSubArray(vector<int>& nums)
@@ -18,10 +19,10 @@ public:
             {
                 ans=min(ans,i-first[nums[i]]+1);
             }
-            
+
         }
         return ans;
-        
+
     }
 };
 //if you like the solution plz upvote.
