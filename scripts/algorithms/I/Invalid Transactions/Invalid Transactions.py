@@ -1,3 +1,4 @@
+# Runtime: 451 ms (Top 12.09%) | Memory: 14.8 MB (Top 21.33%)
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         n = len(transactions)
@@ -16,4 +17,3 @@ class Solution:
             if failed[i] == True:
                 ans.append(','.join(transactions[i]))
         return ans
-                    
