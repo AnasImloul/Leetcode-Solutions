@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 97.42%) | Memory: 50.7 MB (Top 93.44%)
 class Solution {
     public int numIslands(char[][] grid) {
         int count = 0;
