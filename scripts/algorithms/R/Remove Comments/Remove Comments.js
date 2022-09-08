@@ -1,3 +1,4 @@
+// Runtime: 96 ms (Top 43.16%) | Memory: 42.5 MB (Top 14.74%)
 var removeComments = function(source) {
     let result = [];
     let multi_line_comment = false;
@@ -38,5 +39,3 @@ var removeComments = function(source) {
     })
     return result;
 }
-
-
