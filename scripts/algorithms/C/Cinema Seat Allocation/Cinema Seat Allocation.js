@@ -1,3 +1,4 @@
+// Runtime: 223 ms (Top 56.47%) | Memory: 52.1 MB (Top 78.82%)
 /**
  * @param {number} n
  * @param {number[][]} reservedSeats
@@ -6,7 +7,7 @@
 var maxNumberOfFamilies = function(n, reservedSeats) {
     let a,b,c,reservedMap={},ans=n*2,takenB={};
     for(let i=0;i<reservedSeats.length;i++){
-        let resverd  = reservedSeats[i];
+        let resverd = reservedSeats[i];
         let row = resverd[0];
         if(reservedMap[row]===undefined){
             reservedMap[row]={}
