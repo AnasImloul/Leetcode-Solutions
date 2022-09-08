@@ -1,3 +1,4 @@
+# Runtime: 1737 ms (Top 72.92%) | Memory: 23.1 MB (Top 74.40%)
 class Solution:
     def maxRotateFunction(self, nums: List[int]) -> int:
         preSum, cur = 0, 0
