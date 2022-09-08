@@ -1,3 +1,4 @@
+// Runtime: 9 ms (Top 5.70%) | Memory: 6 MB (Top 90.27%)
 class Solution {
 public:
     int largestInteger(int num) {
@@ -5,15 +6,15 @@ public:
         priority_queue<int> q; // priority queue to store even digits in descending order
         string nums=to_string(num); // converting num to a string for easy access of the digits
         int n=nums.size(); // n stores the number of digits in num
-        
+
         for(int i=0;i<n;i++){
-            int digit=nums[i]-'0'; 
+            int digit=nums[i]-'0';
             if((digit)%2) // if digit is odd, push it into priority queue p
                 p.push(digit);
             else
                 q.push(digit); // if digit is even, push it into priority queue q
         }
-        
+
         int answer=0;
         for(int i=0; i<n; i++){
             answer=answer*10;
