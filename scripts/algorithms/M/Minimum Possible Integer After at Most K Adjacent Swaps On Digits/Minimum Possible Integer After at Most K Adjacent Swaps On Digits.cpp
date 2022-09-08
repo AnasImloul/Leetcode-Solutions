@@ -1,4 +1,5 @@
-/* 
+// Runtime: 107 ms (Top 58.06%) | Memory: 12.5 MB (Top 32.26%)
+/*
     Time: O(nlogn)
     Space: O(n)
     Tag: Segment Tree, Greedy (put the possible feasible smallest index in place of cur index), Queue
