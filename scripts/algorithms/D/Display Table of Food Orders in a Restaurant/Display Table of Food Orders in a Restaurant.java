@@ -1,3 +1,4 @@
+// Runtime: 157 ms (Top 14.06%) | Memory: 126.7 MB (Top 62.50%)
 class Solution {
     public List<List<String>> displayTable(List<List<String>> orders) {
         List<List<String>> ans = new ArrayList<>();
@@ -19,7 +20,7 @@ class Solution {
         Arrays.sort(arr, 1, head.size());
         head = Arrays.asList(arr);
         ans.add(head);
-        
+
         for(Map.Entry<Integer, Map<String, Integer>> entry: map.entrySet()){
             List<String> l = new ArrayList<>();
             l.add(entry.getKey() + "");
