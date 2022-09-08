@@ -1,3 +1,4 @@
+// Runtime: 228 ms (Top 5.18%) | Memory: 36.6 MB (Top 14.81%)
 // samll trick: for plaindrome question always try to follow concept that if corners are equal we need to only work
 // on middle string to check whether it is also palindrome, instead of check complete strings(both given strings).
 class Solution {
@@ -18,7 +19,7 @@ public:
             j--;
         }
          /*
-          left  cut
+          left cut
           //agar same hote toh
             "ulacfd" ul.zalu //to check for palindrome : za(from b)
             "jizalu" ji.acfd //to check for palindrome : ac(from a)
