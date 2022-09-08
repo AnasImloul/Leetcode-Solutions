@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.6 MB (Top 33.75%)
 class Solution {
     public String bestHand(int[] ranks, char[] suits) {
     int max = 0;
