@@ -1,3 +1,4 @@
+// Runtime: 23 ms (Top 90.82%) | Memory: 9.9 MB (Top 40.33%)
 class Solution {
 public:
     map<string,vector<string>> parent;
@@ -24,12 +25,12 @@ public:
                             child[pos]=c;
                             if(dist.count(child)) {
                                  if(dist[child] > 1 + dist[par]) {
-                                     dist[child] =  1 + dist[par];
-                                     parent[child].clear();   // remove all parents , a better parent exists (shorter path from src to child)
-                                     parent[child].push_back(par);  // add that parent
+                                     dist[child] = 1 + dist[par];
+                                     parent[child].clear(); // remove all parents , a better parent exists (shorter path from src to child)
+                                     parent[child].push_back(par); // add that parent
                                      q.push(child);
                                  }else if(dist[child] == 1 + dist[par]) {
-                                     parent[child].push_back(par);  // add all parents of the best current distance 
+                                     parent[child].push_back(par); // add all parents of the best current distance
                                  }
                             }
                        }
@@ -43,7 +44,7 @@ public:
     }
     void pathfinder(string par,vector<string>&path) {
          if(par=="root") {
-              ans.push_back(path);  // no parent exists of the root node , add the path to answer 
+              ans.push_back(path); // no parent exists of the root node , add the path to answer
               return;
          }
          for(string node : parent[par]) {
