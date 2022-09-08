@@ -1,3 +1,4 @@
+# Runtime: 75 ms (Top 33.45%) | Memory: 13.7 MB (Top 99.77%)
 class Solution:
     def maxDistance(self, colors: List[int]) -> int:
         p, res = inf, 0
