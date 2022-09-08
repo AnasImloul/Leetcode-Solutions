@@ -1,3 +1,4 @@
+// Runtime: 116 ms (Top 33.13%) | Memory: 44.9 MB (Top 21.58%)
 var areOccurrencesEqual = function(s) {
     var freq = {}
     for (let c of s) freq[c] = (freq[c] || 0) + 1
