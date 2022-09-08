@@ -1,7 +1,8 @@
+// Runtime: 3484 ms (Top 12.50%) | Memory: 78 MB (Top 37.50%)
 var createSortedArray = function(instructions) {
     let nums = [];
     let cost = 0;
-	// define a map to track how many occurences of a number are in the array as we sort it
+    // define a map to track how many occurences of a number are in the array as we sort it
     let map = {};
     // classic binary search
     const bin = (arr, elem) => {
@@ -35,7 +36,7 @@ var createSortedArray = function(instructions) {
         // increment our number occurence map
         map[i]++;
     }
-    
+
     const WEIRD_MOD_VAL = Math.pow(10, 9) + 7;
     // for some goofy reason when the number is too large, send the mod val
     return cost < 1842204555 ? cost : cost % WEIRD_MOD_VAL;
