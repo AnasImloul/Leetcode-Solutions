@@ -1,3 +1,4 @@
+# Runtime: 48 ms (Top 59.57%) | Memory: 14.1 MB (Top 30.54%)
 class Solution:
     def numDecodings(self, s: str) -> int:
         if s[0] == '0' or '00' in s:
