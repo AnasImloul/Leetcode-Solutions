@@ -1,3 +1,4 @@
+// Runtime: 85 ms (Top 5.41%) | Memory: 22.2 MB (Top 5.04%)
 class Solution {
 public:
     bool check(stack<char> st, string part){
@@ -11,7 +12,7 @@ public:
     }
     string removeOccurrences(string s, string part) {
         int n1 = s.length() , n2 = part.length();
-        stack<char>st;        
+        stack<char>st;
         string str = "" ;
         for(int i=0;i<n1;++i){
             st.push(s[i]);
@@ -22,7 +23,7 @@ public:
                         st.pop();
                     }
                 }
-            }                
+            }
         }
         string res = "";
         while(!st.empty()){
