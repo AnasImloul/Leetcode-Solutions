@@ -1,3 +1,4 @@
+// Runtime: 1622 ms (Top 67.41%) | Memory: 282 MB (Top 79.02%)
 class Solution {
 private:
     bool isValid(vector<int>& tasks, vector<int>& workers, const int& MAX_TASKS, int pills, int strength){
@@ -15,15 +16,15 @@ private:
         }
         return true;
     }
-    
+
 public:
     int maxTaskAssign(vector<int>& tasks, vector<int>& workers, int pills, int strength) {
         const int T = tasks.size();
         const int W = workers.size();
-        
+
         sort(tasks.begin(), tasks.end());
         sort(workers.begin(), workers.end());
-        
+
         int l = 0;
         int r = min(T, W);
         while(l != r){
@@ -34,7 +35,7 @@ public:
                 r = mid - 1;
             }
         }
-        
+
         return r;
     }
 };
