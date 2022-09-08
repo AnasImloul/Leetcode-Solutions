@@ -1,6 +1,7 @@
+// Runtime: 175 ms (Top 32.17%) | Memory: 41.7 MB (Top 33.74%)
 class Solution {
 public:
-    int findLHS(vector<int>& nums) 
+    int findLHS(vector<int>& nums)
     {
         map<int,int> m;
         for(int i=0;i<nums.size();i++)
@@ -19,7 +20,7 @@ public:
             y=i->second;
         }
         return ans;
-        
+
     }
 };
 //if you like the solution plz upvote.
