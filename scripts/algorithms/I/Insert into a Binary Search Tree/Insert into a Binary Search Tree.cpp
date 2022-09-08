@@ -1,3 +1,4 @@
+// Runtime: 204 ms (Top 5.17%) | Memory: 57 MB (Top 48.48%)
 class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val) {
