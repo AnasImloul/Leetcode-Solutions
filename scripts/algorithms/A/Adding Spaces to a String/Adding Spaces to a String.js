@@ -1,3 +1,4 @@
+// Runtime: 206 ms (Top 91.18%) | Memory: 83.4 MB (Top 96.08%)
 /**
  * @param {string} s
  * @param {number[]} spaces
