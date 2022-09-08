@@ -1,3 +1,4 @@
+// Runtime: 58 ms (Top 49.87%) | Memory: 123 MB (Top 65.81%)
 class Solution {
     public int minimumTime(int n, int[][] relations, int[] time) {
         List<Integer> adj[] = new ArrayList[n];
@@ -16,7 +17,7 @@ class Solution {
                 q.add(i);
             }
         }
-        
+
         while(!q.isEmpty()){
             int u = q.poll();
             for(int v: adj[u]){
@@ -31,4 +32,3 @@ class Solution {
         return res;
     }
 }
-
