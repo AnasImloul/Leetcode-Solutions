@@ -1,3 +1,4 @@
+// Runtime: 1452 ms (Top 22.22%) | Memory: 112 MB (Top 33.33%)
 var findKthBit = function(n, k) {
     return recursivelyGenerate(n-1)[k-1];
 }
