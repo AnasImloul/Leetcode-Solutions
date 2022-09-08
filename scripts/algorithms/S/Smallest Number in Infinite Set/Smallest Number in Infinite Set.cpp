@@ -1,3 +1,4 @@
+// Runtime: 176 ms (Top 46.61%) | Memory: 35.5 MB (Top 86.20%)
 class SmallestInfiniteSet {
 public:
     int cur;
@@ -5,7 +6,7 @@ public:
     SmallestInfiniteSet() {
         cur=1;
     }
-    
+
     int popSmallest() {
         if(s.size()){
             int res=*s.begin(); s.erase(res);
@@ -15,7 +16,7 @@ public:
             return cur-1;
         }
     }
-    
+
     void addBack(int num) {
         if(cur>num) s.insert(num);
     }
