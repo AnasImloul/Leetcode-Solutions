@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 77.01%) | Memory: 6.3 MB (Top 49.43%)
 class Solution {
 public:
     int getMaxRepetitions(string s1, int n1, string s2, int n2) {
@@ -9,9 +10,9 @@ public:
                 int repC = count-countr[j2];
                 int repN = i - indexr[j2];
                 int remainingN = n1 - i;
-				//the times that the pattern repeated
+                //the times that the pattern repeated
                 count += remainingN/repN * repC;
-				//the residue at the end of str1, but still might form valid s2
+                //the residue at the end of str1, but still might form valid s2
                 int j2_ = seqIndex[indexr[j2]+remainingN%repN];
                 count += countr[j2_] - countr[j2];
                 break;
@@ -20,7 +21,7 @@ public:
                 indexr[j2] = i;
                 seqIndex.push_back(j2);
             }
-            
+
             for (int j1=0; j1<s1.size(); j1++) {
                 if (s1[j1] == s2[j2]) {
                     j2++;
