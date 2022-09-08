@@ -1,3 +1,4 @@
+// Runtime: 6 ms (Top 54.44%) | Memory: 45.2 MB (Top 33.72%)
 class Solution {
     public int mostWordsFound(String[] sentences) {
         int max=0;
