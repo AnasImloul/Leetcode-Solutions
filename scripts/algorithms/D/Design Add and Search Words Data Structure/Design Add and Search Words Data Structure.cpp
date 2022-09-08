@@ -1,3 +1,4 @@
+// Runtime: 2662 ms (Top 14.83%) | Memory: 623.6 MB (Top 10.10%)
 class WordDictionary {
 public:
     struct tr {
@@ -8,34 +9,34 @@ public:
             isword = false;
         }
     };
-    
+
     tr *root;
     WordDictionary() {
         root = new tr();
     }
-    
+
     void addWord(string word) {
         tr *cur = root;
-        
+
         for(auto c: word) {
             if(cur->next[c-'a'] == NULL) {
                 cur->next[c-'a'] = new tr();
             }
             cur = cur->next[c-'a'];
         }
-        
+
         cur->isword = true;
     }
-    
+
     bool dfs(string& word, int i, tr* cur) {
         if(!cur ){
             return false;
         }
-        
+
         if(i == word.size()) {
             return cur->isword;
         }
-        
+
         for (; i < word.size(); i++) {
             char c = word[i];
             if (c == '.') {
@@ -53,10 +54,10 @@ public:
                 cur = cur->next[c-'a'];
             }
         }
-        
+
         return cur->isword;
     }
-    
+
     bool search(string word) {
         return dfs(word, 0, root);
     }
