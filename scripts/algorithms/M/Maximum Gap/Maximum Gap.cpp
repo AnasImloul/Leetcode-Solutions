@@ -1,3 +1,4 @@
+// Runtime: 1034 ms (Top 5.00%) | Memory: 142.3 MB (Top 5.23%)
 
 class Solution {
 public:
@@ -14,7 +15,7 @@ public:
         }
         for(auto it: m)
         {
-            if(it.second>maxx) 
+            if(it.second>maxx)
             {
                 maxx=it.second;
             }
@@ -22,4 +23,3 @@ public:
         return maxx;
     }
 };
-
