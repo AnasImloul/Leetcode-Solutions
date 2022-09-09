@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 90.03%) | Memory: 41.4 MB (Top 67.52%)
 class Solution {
     public String strWithout3a3b(int a, int b) {
         StringBuilder sb = new StringBuilder();
