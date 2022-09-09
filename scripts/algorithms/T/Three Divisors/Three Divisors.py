@@ -1,3 +1,4 @@
+# Runtime: 73 ms (Top 19.18%) | Memory: 13.9 MB (Top 56.58%)
 import math
 class Solution:
     def isThree(self, n: int) -> bool:
