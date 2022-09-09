@@ -1,3 +1,4 @@
+// Runtime: 317 ms (Top 27.08%) | Memory: 47.1 MB (Top 71.87%)
 function convertNumber(num) {
     return parseFloat(num.toFixed(5))
 }
