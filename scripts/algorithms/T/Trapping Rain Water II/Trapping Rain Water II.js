@@ -1,5 +1,6 @@
+// Runtime: 157 ms (Top 61.90%) | Memory: 51.4 MB (Top 19.05%)
 const dir = [[0, -1], [-1, 0], [0, 1], [1, 0]];
-const MAX =  200 * 201; // n * m + m
+const MAX = 200 * 201; // n * m + m
 const trapRainWater = (g) => {
     let n = g.length, m = g[0].length;
     if (n == 0) return 0;
@@ -14,7 +15,7 @@ const trapRainWater = (g) => {
             }
         }
     }
-    while (pq.size()) { // BFS 
+    while (pq.size()) { // BFS
         let cur = pq.dequeue().element;
         let h = cur[0], r = cur[1] / m >> 0, c = cur[1] % m; // height row column
         max = Math.max(max, h);
