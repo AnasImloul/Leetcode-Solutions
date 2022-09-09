@@ -1,3 +1,4 @@
+# Runtime: 2037 ms (Top 14.35%) | Memory: 17.2 MB (Top 80.82%)
 class MyHashMap:
 
     def __init__(self):
