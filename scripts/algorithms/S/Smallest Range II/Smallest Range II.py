@@ -1,4 +1,4 @@
-// Runtime: 2599 ms (Top 5.22%) | Memory: 15.4 MB (Top 17.63%)
+# Runtime: 3791 ms (Top 5.08%) | Memory: 15.3 MB (Top 74.05%)
 class Solution:
     def smallestRangeII(self, lis: List[int], k: int) -> int:
         lis.sort()
