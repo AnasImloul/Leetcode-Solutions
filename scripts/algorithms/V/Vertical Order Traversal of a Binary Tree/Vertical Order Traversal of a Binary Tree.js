@@ -1,9 +1,10 @@
+// Runtime: 110 ms (Top 40.72%) | Memory: 44.9 MB (Top 15.23%)
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
+ * this.val = (val===undefined ? 0 : val)
+ * this.left = (left===undefined ? null : left)
+ * this.right = (right===undefined ? null : right)
  * }
  */
 /**
@@ -15,13 +16,13 @@ var verticalTraversal = function(root) {
     let l = 0, ri = 0, mi = 0;
     const preOrder = (r = root, mid = 0, d = 0) => {
         if(!r) return ;
-        
+
         if(mid == 0) {
             if(ans.length < mi + 1) ans.push([]);
             ans[mi].push({v: r.val, d});
         } else if(mid < 0) {
            if(mid < l) {
-               l = mid; 
+               l = mid;
                mi++;
                ans.unshift([{v: r.val, d}]);
            } else {
@@ -30,14 +31,14 @@ var verticalTraversal = function(root) {
            }
         } else {
             if(mid > ri) {
-                ri = mid; 
+                ri = mid;
                 ans.push([{v: r.val, d}]);
             } else {
                 let idx = mi + mid;
                 ans[idx].push({v: r.val, d});
             }
         }
-        
+
         preOrder(r.left, mid - 1, d + 1);
         preOrder(r.right, mid + 1, d + 1);
     }
