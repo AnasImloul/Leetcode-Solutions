@@ -1,3 +1,4 @@
+// Runtime: 6 ms (Top 49.82%) | Memory: 5.8 MB (Top 96.45%)
 class Solution {
 public:
     int consecutiveNumbersSum(int n) {
