@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 45.16%) | Memory: 8 MB (Top 87.37%)
 class Solution {
 public:
     string optimalDivision(vector<int>& nums) {
