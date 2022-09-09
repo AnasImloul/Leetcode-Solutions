@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 38.89%) | Memory: 6.6 MB (Top 89.52%)
 class Solution {
 public:
     bool areOccurrencesEqual(string s) {
