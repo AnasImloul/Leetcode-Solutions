@@ -1,3 +1,4 @@
+// Runtime: 20 ms (Top 8.82%) | Memory: 10.3 MB (Top 50.82%)
 class Solution {
 public:
     int findLucky(vector<int>& arr) {
