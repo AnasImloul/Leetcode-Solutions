@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 31.62%) | Memory: 8.2 MB (Top 80.71%)
 class Solution {
 public:
     bool threeConsecutiveOdds(vector<int>& arr) {
