@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 81.50%) | Memory: 6.6 MB (Top 78.80%)
 class Solution {
 public:
     string countAndSay(int n) {
@@ -23,9 +24,9 @@ public:
             }
             ans += to_string(count);
             ans += curr;
-            
+
             return ans;
         }
-        
+
     }
 };
