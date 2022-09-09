@@ -1,3 +1,4 @@
+# Runtime: 6683 ms (Top 5.01%) | Memory: 13.8 MB (Top 57.45%)
 class Solution:
     def arrangeCoins(self, n: int) -> int:
         for i in range(1,2**31):
