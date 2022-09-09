@@ -1,3 +1,4 @@
+// Runtime: 87 ms (Top 13.18%) | Memory: 134 MB (Top 44.96%)
 class Solution {
     public int maxSumRangeQuery(int[] nums, int[][] requests) {
         int n = nums.length;
