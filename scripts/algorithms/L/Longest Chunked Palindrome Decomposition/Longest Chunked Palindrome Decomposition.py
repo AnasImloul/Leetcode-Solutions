@@ -1,3 +1,4 @@
+# Runtime: 82 ms (Top 23.89%) | Memory: 13.9 MB (Top 78.76%)
 
 class Solution:
     def longestDecomposition(self, text: str) -> int:
@@ -16,5 +17,3 @@ class Solution:
         if left == right or left > last_left + 1:
             sol += 1
         return max(sol, 1)
-
-
