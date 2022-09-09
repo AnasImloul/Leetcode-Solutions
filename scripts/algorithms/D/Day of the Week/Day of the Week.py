@@ -1,3 +1,4 @@
+# Runtime: 67 ms (Top 7.61%) | Memory: 13.9 MB (Top 27.96%)
 class Solution:
     def dayOfTheWeek(self, day: int, month: int, year: int) -> str:
         dic1={2:"Sunday", 3:"Monday", 4:"Tuesday", 5:"Wednesday", 6:"Thursday", 0:"Friday", 1:"Saturday"}
