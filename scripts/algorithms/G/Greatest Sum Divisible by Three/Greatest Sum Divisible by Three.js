@@ -1,3 +1,4 @@
+// Runtime: 134 ms (Top 41.38%) | Memory: 50.9 MB (Top 15.52%)
 var maxSumDivThree = function(nums) {
     // there are 3 options for how the sum fit's into 3 via mod % 3
     // track those 3 options via indices in the dp array
