@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 90.87%) | Memory: 42.6 MB (Top 7.49%)
 class Solution {
     public int minMutation(String start, String end, String[] bank) {
         Set<String> set = new HashSet<>();
