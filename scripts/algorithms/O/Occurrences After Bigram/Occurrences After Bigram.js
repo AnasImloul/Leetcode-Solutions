@@ -1,3 +1,4 @@
+// Runtime: 92 ms (Top 39.29%) | Memory: 41.6 MB (Top 81.43%)
 var findOcurrences = function(text, first, second) {
     let result = [];
     let txt = text.split(' ');
