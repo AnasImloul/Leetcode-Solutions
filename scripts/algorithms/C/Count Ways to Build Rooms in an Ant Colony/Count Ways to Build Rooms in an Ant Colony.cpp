@@ -1,8 +1,9 @@
+// Runtime: 942 ms (Top 54.00%) | Memory: 221.2 MB (Top 27.50%)
 class Solution {
 public:
     int waysToBuildRooms(vector<int>& prevRoom) {
         int n = prevRoom.size();
-        
+
         vector<long> fact(n + 1, 1), inv_fact(n + 1, 1), inv(n+1, 1);
         for (int i = 2; i <= n; ++i) {
             inv[i] = mod - mod / i * inv[mod % i] % mod;
@@ -14,7 +15,7 @@ public:
         for (int i = 1; i < n; ++i) {
             children[prevRoom[i]].push_back(i);
         }
-        
+
         return postorder(children, fact, inv_fact, 0).first;
     }
 private:
