@@ -1,3 +1,4 @@
+// Runtime: 887 ms (Top 51.24%) | Memory: 81.6 MB (Top 89.34%)
 class Solution {
 public:
     int tupleSameProduct(vector<int>& nums) {
