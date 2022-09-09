@@ -1,3 +1,4 @@
+# Runtime: 5049 ms (Top 67.40%) | Memory: 29.4 MB (Top 23.35%)
 class Solution:
     def maxScoreIndices(self, nums: List[int]) -> List[int]:
         zeroFromLeft = [0] * (len(nums) + 1)
@@ -7,13 +8,13 @@ class Solution:
                 zeroFromLeft[i + 1] = zeroFromLeft[i] + 1
             else:
                 zeroFromLeft[i + 1] = zeroFromLeft[i]
-                
+
         for i in range(len(nums))[::-1]:
             if nums[i] == 1:
                 oneFromRight[i] = oneFromRight[i + 1] + 1
             else:
                 oneFromRight[i] = oneFromRight[i + 1]
-        
+
         allSum = [0] * (len(nums) + 1)
         currentMax = 0
         res = []
@@ -25,4 +26,3 @@ class Solution:
             if allSum[i] == currentMax:
                 res.append(i)
         return res
-            
