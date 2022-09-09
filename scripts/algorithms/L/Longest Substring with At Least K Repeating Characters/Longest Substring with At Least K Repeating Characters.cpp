@@ -1,4 +1,4 @@
-// Runtime: 18 ms (Top 46.34%) | Memory: 7 MB (Top 45.67%)
+// Runtime: 21 ms (Top 47.05%) | Memory: 7 MB (Top 42.13%)
 /*
     https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/
 
