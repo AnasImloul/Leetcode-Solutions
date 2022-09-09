@@ -1,3 +1,4 @@
+// Runtime: 25 ms (Top 11.09%) | Memory: 14.2 MB (Top 34.39%)
 class Solution {
 public:
     vector<vector<int>> paths = {{0,1},{0,-1},{-1,0},{1,0}};
@@ -6,7 +7,7 @@ public:
         return true;
     }
     void solve(vector<vector<int>> &image, int sr, int sc, int color, int orig){
-        int n = image.size(), m = image[0].size(); 
+        int n = image.size(), m = image[0].size();
         image[sr][sc] = color;
         for(int i=0;i<4;i++){
             int new_sr = paths[i][0] + sr;
@@ -15,7 +16,7 @@ public:
                 solve(image, new_sr, new_sc, color,orig);
             }
         }
-        
+
     }
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
         if(color==image[sr][sc]) return image;
