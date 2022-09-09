@@ -1,3 +1,4 @@
+# Runtime: 164 ms (Top 43.73%) | Memory: 14 MB (Top 84.10%)
 class Solution:
     def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:
         def dfs(price, special, needs, memo = {}):
