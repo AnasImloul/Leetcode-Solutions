@@ -1,3 +1,4 @@
+// Runtime: 1369 ms (Top 10.94%) | Memory: 161.8 MB (Top 51.63%)
 typedef pair<int, int> pii;
 class Solution {
 public:
@@ -7,13 +8,13 @@ public:
             gp[edge[0]].push_back({edge[1], edge[2]});
             gp[edge[1]].push_back({edge[0], edge[2]});
         }
-        
+
         vector<int> dist(n + 1, INT_MAX);
         priority_queue<pii, vector<pii>, greater<pii> > pq;
         pq.push({0, n});
         dist[n] = 0;
-        
-		int u, v, w;
+
+        int u, v, w;
         while (!pq.empty()) {
             pii p = pq.top(); pq.pop();
             u = p.second;
@@ -28,7 +29,7 @@ public:
         vector<int> dp(n + 1, -1);
         return dfs(gp, n, dp, dist);
     }
-    
+
     int dfs(unordered_map<int, vector<pair<int, int>>>& gp, int s, vector<int>& dp, vector<int>& dist) {
         int mod = 1e9+7;
         if (s == 1) return 1;
