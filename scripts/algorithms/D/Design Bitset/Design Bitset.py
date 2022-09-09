@@ -1,3 +1,4 @@
+# Runtime: 1967 ms (Top 8.78%) | Memory: 45.4 MB (Top 61.95%)
 class Bitset(object):
 
     def __init__(self, size):
