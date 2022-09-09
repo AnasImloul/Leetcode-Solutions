@@ -1,3 +1,4 @@
+// Runtime: 66 ms (Top 42.04%) | Memory: 50.5 MB (Top 75.16%)
 class Solution {
     public String shortestSuperstring(String[] words) {
         int n = words.length;
