@@ -1,4 +1,4 @@
-// Runtime: 73 ms (Top 50.08%) | Memory: 13.8 MB (Top 59.64%)
+# Runtime: 72 ms (Top 49.84%) | Memory: 13.8 MB (Top 58.81%)
 class Solution:
     def minimumCost(self, cost: List[int]) -> int:
         cost.sort(reverse=True)
