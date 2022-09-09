@@ -1,3 +1,4 @@
+# Runtime: 68 ms (Top 97.39%) | Memory: 14.2 MB (Top 53.70%)
 class Solution:
     def minOperations(self, boxes: str) -> List[int]:
         ans = [0]*len(boxes)
