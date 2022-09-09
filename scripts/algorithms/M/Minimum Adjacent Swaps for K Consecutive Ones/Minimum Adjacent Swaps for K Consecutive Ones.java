@@ -1,3 +1,4 @@
+// Runtime: 33 ms (Top 32.47%) | Memory: 112.8 MB (Top 59.74%)
 class Solution {
     public int minMoves(int[] nums, int k) {
         var gaps = new ArrayList<Integer>();
@@ -22,10 +23,10 @@ class Solution {
         for(int p = 0, q = k/2, r = k-1; r < gaps.size(); ++p, ++q, ++r){
             wlsum += (k/2)*gaps.get(q) - lsum;
             lsum += gaps.get(q) - gaps.get(p);
-            
+
             rsum += gaps.get(r) - gaps.get(q);
             wrsum += rsum-((k-1)/2)*gaps.get(q);
-            
+
             ans = Math.min(ans,wlsum+wrsum);
         }
         return ans;
