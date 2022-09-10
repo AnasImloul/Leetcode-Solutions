@@ -1,3 +1,4 @@
+// Runtime: 361 ms (Top 36.73%) | Memory: 68 MB (Top 53.88%)
 class Solution {
     static long[][] dp;
     public int distinctSequences(int n) {
