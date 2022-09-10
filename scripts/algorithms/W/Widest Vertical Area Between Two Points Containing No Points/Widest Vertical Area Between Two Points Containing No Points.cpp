@@ -1,3 +1,4 @@
+// Runtime: 304 ms (Top 89.53%) | Memory: 66.3 MB (Top 79.15%)
 class Solution {
 public:
     int maxWidthOfVerticalArea(vector<vector<int>>& points) {
