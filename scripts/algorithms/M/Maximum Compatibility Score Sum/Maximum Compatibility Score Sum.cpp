@@ -1,3 +1,4 @@
+// Runtime: 189 ms (Top 59.67%) | Memory: 10 MB (Top 51.80%)
 class Solution {
     // Calculating compatibility scores of ith student and jth mentor
     int cal(int i,int j,vector<vector<int>>& arr1,vector<vector<int>>& arr2){
@@ -9,7 +10,7 @@ class Solution {
         }
         return cnt;
     }
-    
+
     int helper(int i,int m,vector<vector<int>>& arr1,vector<vector<int>>& arr2,vector<bool>& vis){
         if(i==m){
             return 0;
@@ -24,7 +25,7 @@ class Solution {
         }
         return ans;
     }
-    
+
 public:
     int maxCompatibilitySum(vector<vector<int>>& students, vector<vector<int>>& mentors) {
         int m = students.size();
