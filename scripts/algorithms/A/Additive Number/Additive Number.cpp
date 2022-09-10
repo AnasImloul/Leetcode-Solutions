@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 35.88%) | Memory: 6.5 MB (Top 9.47%)
 
 class Solution
 {
