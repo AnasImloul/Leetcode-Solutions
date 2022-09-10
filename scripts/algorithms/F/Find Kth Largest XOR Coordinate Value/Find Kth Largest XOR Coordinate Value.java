@@ -1,22 +1,23 @@
+// Runtime: 56 ms (Top 96.62%) | Memory: 250.3 MB (Top 62.84%)
 class Solution {
-    
+
     private static final Random RAND = new Random(0);
-    
+
     public int kthLargestValue(int[][] matrix, int k) {
         var xor = convertToXorArray(matrix);
         var targetIdx = xor.length - k;
         sortPartially(xor, targetIdx, 0, xor.length);
         return xor[targetIdx];
     }
-    
+
     void sortPartially(int[] nums, int targetIdx, int origLo, int origHi) {
         if (origHi - origLo < 2)
             return;
-        
+
         var pivotIdx = RAND.nextInt(origHi - origLo) + origLo;
         var pivot = nums[pivotIdx];
         swap(nums, origLo, pivotIdx);
-        
+
         var lo = origLo;
         var mid = lo + 1;
         var hi = origHi;
@@ -28,19 +29,19 @@ class Solution {
             else
                 mid++;
         }
-        
+
         if (targetIdx < lo)
             sortPartially(nums, targetIdx, origLo, lo);
-        
+
         sortPartially(nums, targetIdx, mid, origHi);
     }
-    
+
     void swap(int[] n, int p, int q) {
         var tmp = n[p];
         n[p] = n[q];
         n[q] = tmp;
     }
-    
+
     int[] convertToXorArray(int[][] matrix) {
         var rows = matrix.length;
         var cols = matrix[0].length;
