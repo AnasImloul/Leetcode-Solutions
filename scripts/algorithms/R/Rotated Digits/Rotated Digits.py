@@ -1,3 +1,4 @@
+# Runtime: 226 ms (Top 14.46%) | Memory: 13.9 MB (Top 71.45%)
 class Solution:
     def rotatedDigits(self, n: int) -> int:
         d={
@@ -23,11 +24,11 @@ class Solution:
                 if r is None:
                     status=False
                     break
-                
+
                 temp+=((10**pos)*r)
                 pos+=1
                 t=t//10
-            
+
             if temp!=i and status:
                 res+=1
         return res
