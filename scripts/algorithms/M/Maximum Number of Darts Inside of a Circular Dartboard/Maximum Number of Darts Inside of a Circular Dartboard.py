@@ -1,13 +1,14 @@
+# Runtime: 275 ms (Top 78.13%) | Memory: 14.5 MB (Top 9.38%)
 class Solution:
     def numPoints(self, points: List[List[int]], r: int) -> int:
-        
+
         def getPointsInside(i, r, n):
             # This vector stores alpha and beta and flag
             # is marked true for alpha and false for beta
             angles = []
 
             for j in range(n):
-                
+
                 if i != j and distance[i][j] <= 2 * r:
                     # acos returns the arc cosine of the complex
                     # used for cosine inverse
@@ -16,15 +17,15 @@ class Solution:
                     # arg returns the phase angle of the complex
                     x1, y1 = points[i]
                     x2, y2 = points[j]
-                    
+
                     A = math.atan2(y1 - y2, x1 - x2)
-                    
+
                     alpha = A - B
-                    
+
                     beta = A + B
-                    
+
                     angles.append((alpha, False))
-                    
+
                     angles.append((beta, True))
 
             # angles vector is sorted and traversed
@@ -35,10 +36,10 @@ class Solution:
             cnt, res = 1, 1
             for angle in angles:
                 # entry angle
-                if angle[1] == False: 
+                if angle[1] == False:
                     cnt += 1
                 # exit angle
-                else: 
+                else:
                     cnt -= 1
 
                 res = max(cnt, res)
