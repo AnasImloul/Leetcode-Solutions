@@ -1,3 +1,4 @@
+# Runtime: 249 ms (Top 78.97%) | Memory: 19.8 MB (Top 29.73%)
 class Solution:
     def countVowelPermutation(self, n: int) -> int:
         # dp[i][j] means the number of strings of length i that ends with the j-th vowel.
@@ -14,5 +15,5 @@ class Solution:
             dp[i][3] = (dp[i - 1][2]) % moduler
             # For vowel u
             dp[i][4] = (dp[i - 1][2] + dp[i - 1][3]) % moduler
-            
+
         return int(sum(dp[-1]) % moduler)
