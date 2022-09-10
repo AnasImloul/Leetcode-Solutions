@@ -1,3 +1,4 @@
+// Runtime: 52 ms (Top 100.00%) | Memory: 44.2 MB (Top 53.23%)
 /**
  * @param {string} s
  * @param {number} k
@@ -12,15 +13,15 @@ var getLucky = function(s, k) {
       }
       return result;
     }
-    
+
     let str = alphabetPosition(s).join("");
     let sum = 0;
     let newArr;
-	
+
     while(k>0){
         newArr = str.split("");
         sum = newArr.reduce((acc, e) => parseInt(acc)+parseInt(e));
-        str = sum.toString();        
+        str = sum.toString();
         k--;
     }
     return sum
