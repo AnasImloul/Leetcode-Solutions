@@ -1,3 +1,4 @@
+# Runtime: 2740 ms (Top 30.44%) | Memory: 19.5 MB (Top 65.22%)
 class Solution(object):
     def countTexts(self, pressedKeys):
         """
