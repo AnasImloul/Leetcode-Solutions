@@ -1,3 +1,4 @@
+// Runtime: 14 ms (Top 62.80%) | Memory: 10.2 MB (Top 31.21%)
 class Solution {
 public:
     int minPathSum(vector<vector<int>>& grid) {
