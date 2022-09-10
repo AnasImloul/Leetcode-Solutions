@@ -1,3 +1,4 @@
+// Runtime: 259 ms (Top 5.00%) | Memory: 35.9 MB (Top 7.81%)
 class Solution {
 public:
     int numEnclaves(vector<vector<int>>& grid) {
@@ -18,7 +19,7 @@ public:
                         a=q.front();
                         q.pop();
                         grid[a[0]][a[1]]=0;
-                        if(a[0]+1<grid.size() &&  grid[a[0]+1][a[1]]==1)
+                        if(a[0]+1<grid.size() && grid[a[0]+1][a[1]]==1)
                         {
                             q.push({a[0]+1,a[1]});
                             grid[a[0]+1][a[1]]=0;
