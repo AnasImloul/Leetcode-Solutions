@@ -1,4 +1,4 @@
-// Runtime: 159 ms (Top 42.07%) | Memory: 14.2 MB (Top 19.67%)
+# Runtime: 213 ms (Top 19.18%) | Memory: 14.1 MB (Top 63.60%)
 class Solution:
 
     def divideArray(self, nums: List[int]) -> bool:
