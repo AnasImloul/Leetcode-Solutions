@@ -1,3 +1,4 @@
+# Runtime: 231 ms (Top 72.60%) | Memory: 19.2 MB (Top 61.18%)
 class Solution:
     def possible(self, i, n, stones, pos, allowedJumps):
         if i == n - 1:
@@ -12,7 +13,7 @@ class Solution:
                     return True
         self.cache[key] = False
         return False
-    
+
     def canCross(self, stones: List[int]) -> bool:
         n = len(stones)
         pos = {}
