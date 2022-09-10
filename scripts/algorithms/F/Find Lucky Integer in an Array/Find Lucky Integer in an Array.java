@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 12.82%) | Memory: 44.3 MB (Top 18.67%)
 class Solution {
     public int findLucky(int[] arr) {
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -12,7 +13,7 @@ class Solution {
                 temp = (int)e.getKey();
             }
             if(max < temp){
-                max= temp; 
+                max= temp;
             }
         }
          if(max != 0)return max;
