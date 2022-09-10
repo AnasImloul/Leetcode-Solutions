@@ -1,8 +1,9 @@
+# Runtime: 514 ms (Top 80.64%) | Memory: 14.5 MB (Top 44.35%)
 from graphlib import TopologicalSorter, CycleError
 
 Color = int
 Corner = Tuple[int, int]
-Rect = Tuple[Corner, Corner]  # [upper-left, lower-right (non-inclusive)]
+Rect = Tuple[Corner, Corner] # [upper-left, lower-right (non-inclusive)]
 Layer = Tuple[Color, Rect]
 
 class Solution:
@@ -56,7 +57,7 @@ class Solution:
 
         # Compare every pair of layers.
         # If overlap is detected, record that the "upper" rectangle depends on the "lower" one.
-        # O(C*C*M*N)  # Number of colors
+        # O(C*C*M*N) # Number of colors
         layers:List[Layer] = list(rects.items())
         graph:Dict[Layer, Set[Layer]] = {layer: set() for layer in layers}
         for i, a in enumerate(layers):
@@ -68,7 +69,7 @@ class Solution:
 
         # Use topological sort on the graph to reproduce the printing order (in the absence
         # of cycles) and print our own grid.
-        # O(C*C) + O(M*N)  // O(C*C) is derived from topological sort O(V+E)
+        # O(C*C) + O(M*N) // O(C*C) is derived from topological sort O(V+E)
         try:
             grid = [[0] * len(targetGrid[0]) for _ in targetGrid]
             for color, (ul, lr) in TopologicalSorter(graph).static_order():
