@@ -1,3 +1,4 @@
+# Runtime: 360 ms (Top 100.00%) | Memory: 14 MB (Top 98.73%)
 class Solution:
     def cherryPickup(self, grid):
         n = len(grid)
