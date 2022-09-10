@@ -1,3 +1,4 @@
+// Runtime: 41 ms (Top 23.63%) | Memory: 19.6 MB (Top 14.15%)
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
