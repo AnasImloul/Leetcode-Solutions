@@ -1,14 +1,15 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 39.4 MB (Top 99.44%)
 class Solution {
     public int rob(int[] nums) {
         if(nums.length==1){
             return nums[0];
         }
         int[] t = new int[nums.length];
-        for(int i = 0 ;  i < t.length;i++){
+        for(int i = 0 ; i < t.length;i++){
             t[i] = -1;
         }
         int[] k = new int[nums.length];
-        for(int i = 0 ;  i < k.length;i++){
+        for(int i = 0 ; i < k.length;i++){
             k[i] = -1;
         }
         return Math.max(helper(nums,0,0,t),helper(nums,1,1,k));
