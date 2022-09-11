@@ -1,3 +1,4 @@
+// Runtime: 16 ms (Top 23.82%) | Memory: 9 MB (Top 5.98%)
 class Solution {
 public:
     static bool comp(vector<int> a, vector<int> b){
@@ -5,7 +6,7 @@ public:
         else if(a[0]==b[0]) return a[1]>b[1];
         return false;
     }
-    
+
     int videoStitching(vector<vector<int>>& clips, int time) {
         sort(clips.begin(), clips.end(), comp);
         vector<vector<int>> res;
