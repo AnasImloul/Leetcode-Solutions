@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 90.24%) | Memory: 43 MB (Top 54.79%)
 class Solution {
     public boolean buddyStrings(String s, String goal) {
         char a = '\u0000', b = '\u0000';
@@ -6,10 +7,10 @@ class Solution {
         int lenGoal = goal.length();
         boolean flag = true;
         HashSet<Character> hset = new HashSet<>();
-        
+
         if(lenS != lenGoal)
             return false;
-        
+
         if(s.equals(goal)){
             for(int i = 0; i < lenS; i++){
                 if(!hset.contains(s.charAt(i))){
