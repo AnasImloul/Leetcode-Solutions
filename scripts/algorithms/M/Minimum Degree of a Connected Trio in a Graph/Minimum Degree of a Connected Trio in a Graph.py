@@ -1,3 +1,4 @@
+# Runtime: 1826 ms (Top 63.02%) | Memory: 50.7 MB (Top 5.73%)
 class Solution:
     def minTrioDegree(self, n: int, edges: List[List[int]]) -> int:
         result = n ** 2 # placeholder value
