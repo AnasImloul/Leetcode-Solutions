@@ -1,3 +1,4 @@
+// Runtime: 122 ms (Top 61.76%) | Memory: 44.5 MB (Top 97.06%)
 var totalHammingDistance = function(nums) {
     let n = nums.length, ans = 0;
     for(let bit = 0; bit < 32; bit++) {
