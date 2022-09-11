@@ -1,3 +1,4 @@
+# Runtime: 4020 ms (Top 5.03%) | Memory: 205.5 MB (Top 14.36%)
 class Solution:
     def minimumDeleteSum(self, s1: str, s2: str) -> int:
         m, n, lookup = len(s1), len(s2), {}
