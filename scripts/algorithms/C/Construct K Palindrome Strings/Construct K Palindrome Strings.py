@@ -1,3 +1,4 @@
+# Runtime: 334 ms (Top 5.05%) | Memory: 14.9 MB (Top 23.23%)
 class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
         characters, numOfOdds = {}, 0
