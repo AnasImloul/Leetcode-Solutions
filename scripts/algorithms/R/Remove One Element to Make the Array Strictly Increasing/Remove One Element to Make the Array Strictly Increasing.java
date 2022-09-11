@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 78.74%) | Memory: 42.8 MB (Top 79.54%)
 class Solution {
     public boolean canBeIncreasing(int[] nums) {
         int count=0;
