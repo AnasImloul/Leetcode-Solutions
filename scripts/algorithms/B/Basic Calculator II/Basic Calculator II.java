@@ -1,3 +1,4 @@
+// Runtime: 33 ms (Top 27.28%) | Memory: 45.6 MB (Top 25.17%)
 class Solution {
     public int calculate(String s) {
         if(s==null ||s.length()==0)return 0;
@@ -29,5 +30,4 @@ class Solution {
         }
         return sum;
     }
-}                                //TC=o(n),SC=o(n)
-
+} //TC=o(n),SC=o(n)
