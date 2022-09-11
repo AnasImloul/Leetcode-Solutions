@@ -1,3 +1,4 @@
+# Runtime: 198 ms (Top 98.00%) | Memory: 16.6 MB (Top 33.56%)
 from heapq import heappush, heappop
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], k: int) -> float:
