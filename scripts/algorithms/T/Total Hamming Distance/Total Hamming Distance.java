@@ -1,3 +1,4 @@
+// Runtime: 24 ms (Top 19.37%) | Memory: 53.8 MB (Top 78.38%)
 class Solution {
     public int totalHammingDistance(int[] nums) {
         int total = 0;
