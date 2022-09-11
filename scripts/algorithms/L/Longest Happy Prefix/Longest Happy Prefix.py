@@ -1,3 +1,4 @@
+# Runtime: 575 ms (Top 52.45%) | Memory: 19 MB (Top 20.00%)
 class Solution:
     def longestPrefix(self, s: str) -> str:
         n = len(s)
