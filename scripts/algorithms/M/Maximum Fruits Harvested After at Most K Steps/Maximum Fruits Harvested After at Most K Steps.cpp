@@ -1,3 +1,4 @@
+// Runtime: 495 ms (Top 92.04%) | Memory: 167 MB (Top 50.64%)
 class Solution {
 public:
     int maxTotalFruits(vector<vector<int>>& fruits, int startPos, int k) {
@@ -5,12 +6,12 @@ public:
         for (int i=0; i<2*k+1; ++i) {
             arr.push_back(0);
         }
-        
+
         for (int i=0; i<fruits.size(); ++i) {
             if ((fruits[i][0] < startPos-k) || (fruits[i][0] > startPos+k)) continue;
             arr[fruits[i][0]-(startPos-k)] += fruits[i][1];
         }
-        
+
         int left = 0, right = 0;
         for (int i = 0; i <= k; ++i) {
             left += arr[i];
@@ -27,8 +28,6 @@ public:
             turn++;
         }
         return maxSeen;
-        
-        
+
     }
 };
-
