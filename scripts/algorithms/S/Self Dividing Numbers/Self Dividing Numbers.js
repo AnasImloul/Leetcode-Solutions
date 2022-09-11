@@ -1,3 +1,4 @@
+// Runtime: 133 ms (Top 16.61%) | Memory: 42.3 MB (Top 87.95%)
 /**
  * @param {number} left
  * @param {number} right
@@ -10,7 +11,7 @@ var selfDividingNumbers = function(left, right) {
       selfDivisibles.push(i);
     }
   }
-  return selfDivisibles;    
+  return selfDivisibles;
 };
 
 function checkDivisibility(num) {
