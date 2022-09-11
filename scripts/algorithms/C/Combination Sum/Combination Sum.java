@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 69.68%) | Memory: 45.9 MB (Top 24.67%)
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<Integer> cur = new ArrayList<>();
