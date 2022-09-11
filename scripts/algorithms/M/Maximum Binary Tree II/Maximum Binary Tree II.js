@@ -1,3 +1,4 @@
+// Runtime: 82 ms (Top 76.74%) | Memory: 43.8 MB (Top 83.72%)
 /**
  * @param {TreeNode} root
  * @param {number} val
@@ -16,7 +17,7 @@ var insertIntoMaxTree = function(root, val) {
     if(val > root.val) {
         return node.left = root, node;
     }
-    
+
     // downward derivation
     root.right = insertIntoMaxTree(root.right, val);
 
