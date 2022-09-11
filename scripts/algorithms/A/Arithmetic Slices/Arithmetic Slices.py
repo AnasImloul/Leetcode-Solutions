@@ -1,21 +1,22 @@
+# Runtime: 37 ms (Top 96.56%) | Memory: 14 MB (Top 93.15%)
 #Baraa
 class Solution:
     def numberOfArithmeticSlices(self, nums: List[int]) -> int:
         """
         what is (x * (x + 1)) // 2? this is series sum formula between n and 1
-        
+
         which means: n + (n - 1) + (n - 2) + (n - 3) .... + 1
-                
+
         when we have a total number of 10 elements that form an arithmetic sum
         eg: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        
+
         we can form subarrays up until count - 2
         which means 1,2,3,4,5,6,7,8
         if we take 7 for example --> [7, 8, 9, 10] or [7, 8, 9]
-        
+
         we cant take [9, 10] as subarray as its length < 3
         """
-        
+
         #this is done for termination only
         nums += [-float("inf")]
         n = len(nums)
@@ -38,4 +39,4 @@ class Solution:
             else:
                 count += 1
                 prev_diff = diff
-        return res      
+        return res
