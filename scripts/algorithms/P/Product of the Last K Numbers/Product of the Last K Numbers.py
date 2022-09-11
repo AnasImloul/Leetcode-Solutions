@@ -1,3 +1,4 @@
+# Runtime: 732 ms (Top 6.90%) | Memory: 163.2 MB (Top 5.18%)
 class ProductOfNumbers:
     def __init__(self):
         self.prods = [1]
