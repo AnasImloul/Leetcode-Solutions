@@ -1,11 +1,12 @@
+// Runtime: 20 ms (Top 20.49%) | Memory: 11.3 MB (Top 60.56%)
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
-        
+
         if(head==NULL){
             return NULL;
         }
-        
+
         Node* temp= head;
         while(temp!=NULL){
             Node* m= new Node(temp->val);
@@ -21,7 +22,7 @@ public:
             else{
                 temp->next->random= temp->random->next;
             }
-            
+
             temp= temp->next->next;
         }
         temp= head;
@@ -36,7 +37,7 @@ public:
             temp= temp->next;
         }
         p->next=NULL;
-        
+
         return r->next;
     }
 };
