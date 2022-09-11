@@ -1,3 +1,4 @@
+# Runtime: 962 ms (Top 100.00%) | Memory: 36.9 MB (Top 93.24%)
 from bisect import bisect_left
 class Solution:
     def minOperations(self, target: List[int], arr: List[int]) -> int:
