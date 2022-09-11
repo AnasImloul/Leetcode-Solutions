@@ -1,3 +1,4 @@
+# Runtime: 58 ms (Top 20.54%) | Memory: 13.9 MB (Top 13.32%)
 class Solution(object):
     def numTrees(self, n):
         if n == 0 or n == 1:
