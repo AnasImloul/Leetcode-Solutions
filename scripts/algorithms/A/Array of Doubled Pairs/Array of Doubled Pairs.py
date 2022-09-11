@@ -1,10 +1,11 @@
+# Runtime: 1769 ms (Top 5.17%) | Memory: 16.6 MB (Top 56.95%)
 class Solution:
     def canReorderDoubled(self, arr: List[int]) -> bool:
         n = len(arr)
         arr.sort()
         times = n//2
         count = {}
-        for i in arr : 
+        for i in arr :
             if i in count:count[i] += 1
             else: count[i] = 1
         for i in count:
