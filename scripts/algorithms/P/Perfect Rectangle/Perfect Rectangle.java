@@ -1,3 +1,4 @@
+// Runtime: 54 ms (Top 81.33%) | Memory: 57.5 MB (Top 77.78%)
 class Solution {
     // Rectangle x0,y0,x1,y1
     public boolean isRectangleCover(int[][] rectangles) {
@@ -6,13 +7,13 @@ class Solution {
            if(r1[1]==r2[1]) return r1[0]-r2[0];
             return r1[1]-r2[1];
         });
-        
+
         // Layering rectangles with pq, ordered by y1 first and x0 second
         PriorityQueue<int[]> pq = new PriorityQueue<>((r1,r2)->{
             if(r1[3]==r2[3]) return r1[0]-r2[0];
             return r1[3]-r2[3];
         });
-        
+
         // Create first layer
         pq.offer(rectangles[0]);
         int i=1;
@@ -20,7 +21,7 @@ class Solution {
             if(rectangles[i][0]!=rectangles[i-1][2]) return false;
             pq.offer(rectangles[i++]);
         }
-        
+
         while(i<rectangles.length){
             int[] curr = rectangles[i++];
             int x=curr[0];
@@ -38,12 +39,12 @@ class Solution {
             if(x<curr[2]) return false;
             pq.offer(curr);
         }
-        
+
         int[] prev=pq.poll();
         while(!pq.isEmpty()){
             if(pq.poll()[3]!=prev[3]) return false;
         }
-        
+
         return true;
     }
 }
