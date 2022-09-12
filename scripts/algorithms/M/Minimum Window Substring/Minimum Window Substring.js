@@ -1,3 +1,4 @@
+// Runtime: 168 ms (Top 36.80%) | Memory: 45.9 MB (Top 56.28%)
 var minWindow = function(s, t) {
     const tf = {}, sf = {};
     for(let c of t) {
@@ -7,21 +8,21 @@ var minWindow = function(s, t) {
     let ml = -1, mr = -1;
     for(; r < s.length; r++) {
         const c = s[r];
-        
+
         if(!tf[c]) continue;
-        
+
         const sc = sf[c] || 0;
         sf[c] = sc + 1;
         if(sf[c] <= tf[c]) {
             rs--;
         }
-        
+
         if(rs == 0) {
             while(true) {
                 if(mr == -1 || mr - ml > r - l) {
                     [mr, ml] = [r, l];
                 }
-                
+
                 const c = s[l];
                 if(!tf[c]) {
                     l++;
