@@ -1,3 +1,4 @@
+// Runtime: 253 ms (Top 86.72%) | Memory: 6.9 MB (Top 96.68%)
 class Solution {
 public:
     static const int N=2005;
