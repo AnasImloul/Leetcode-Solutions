@@ -1,3 +1,4 @@
+// Runtime: 14 ms (Top 30.54%) | Memory: 57.2 MB (Top 69.94%)
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int rows = matrix.length;
@@ -14,7 +15,7 @@ class Solution {
         int[] prospect;
         for (int i = 0; i <= lo; i++) {
             prospect = matrix[i];
-            int l = 0; 
+            int l = 0;
             int h = cols;
             while (l + 1 < h) {
                 int mid = l + (h - l) / 2;
