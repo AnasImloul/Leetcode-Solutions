@@ -1,3 +1,4 @@
+# Runtime: 3867 ms (Top 5.16%) | Memory: 20.8 MB (Top 90.23%)
 class Skiplist:
     def __init__(self):
         self.data = []
