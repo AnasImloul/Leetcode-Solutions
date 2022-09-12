@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 34.04%) | Memory: 8.7 MB (Top 65.50%)
 class Solution {
 public:
     int countStudents(vector<int>& students, vector<int>& sandwiches) {
