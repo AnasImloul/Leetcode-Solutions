@@ -1,3 +1,4 @@
+# Runtime: 1865 ms (Top 50.36%) | Memory: 27.8 MB (Top 82.98%)
 class TextEditor:
 
     def __init__(self):
