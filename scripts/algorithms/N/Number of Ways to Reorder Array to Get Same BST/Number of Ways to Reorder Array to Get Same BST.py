@@ -1,3 +1,4 @@
+# Runtime: 556 ms (Top 18.24%) | Memory: 15.4 MB (Top 89.19%)
 class node:
     def __init__(self, val):
         self.val = val
@@ -18,7 +19,7 @@ class Solution:
                 return
             else:
                 self.BST(root.right, cur)
-    
+
     def solve(self, root):
         if root.left == None and root.right == None:
             return 1
@@ -29,7 +30,7 @@ class Solution:
             right = self.solve(root.right)
         self.total *= math.comb(left + right, left)
         return left + right + 1
-    
+
     def numOfWays(self, nums: List[int]) -> int:
         import math
         self.total = 1
