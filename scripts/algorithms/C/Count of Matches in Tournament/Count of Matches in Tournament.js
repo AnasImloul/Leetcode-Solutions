@@ -1,3 +1,4 @@
+// Runtime: 103 ms (Top 28.10%) | Memory: 42.3 MB (Top 15.43%)
 /**
  * @param {number} n
  * @return {number}
@@ -15,4 +16,3 @@ var numberOfMatches = function(n) {
     }
     return matches;
 };
-
