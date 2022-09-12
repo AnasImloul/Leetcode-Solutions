@@ -1,3 +1,4 @@
+// Runtime: 91 ms (Top 9.61%) | Memory: 14.2 MB (Top 85.49%)
 class Solution {
 public:
     vector<string> findItinerary(vector<vector<string>>& tickets) {
