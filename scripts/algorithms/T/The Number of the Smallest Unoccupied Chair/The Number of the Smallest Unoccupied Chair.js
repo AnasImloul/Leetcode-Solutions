@@ -1,3 +1,4 @@
+// Runtime: 292 ms (Top 83.33%) | Memory: 56.3 MB (Top 91.67%)
 /**
  * @param {number[][]} times
  * @param {number} targetFriend
@@ -12,12 +13,12 @@ var smallestChair = function(times, targetFriend) {
     const chairsByLeaveTime = new Map(); // key - arrival time, value - chair index
     let chairsCount = 0;
     let arriving = 0, leaving = 0; // two pointers for keeping track of available chairs
-    
+
     while (arriving < arrivalQueue.length) {
         let chairIdx;
         const arrival = arrivalQueue[arriving][0];
         const leave = leavingQueue[leaving][1];
-		if (arrival < leave) {
+        if (arrival < leave) {
             chairIdx = chairsCount++; // if no one is leaving, take a new chair
         } else {
             let freeChairIdx = leaving;
