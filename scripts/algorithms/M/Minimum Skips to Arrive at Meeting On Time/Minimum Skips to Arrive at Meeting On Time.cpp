@@ -1,3 +1,4 @@
+// Runtime: 289 ms (Top 50.82%) | Memory: 17.8 MB (Top 60.66%)
 class Solution {
 public:
     vector<int>D;
@@ -7,7 +8,7 @@ public:
         if (idx < 0 ) return 0;
         long long &ret = memo[idx][k];
         if (ret != -1 ) return ret;
-        long long d = dfs_with_minimum_time_with_k_skip(idx - 1, k)  + D[idx];
+        long long d = dfs_with_minimum_time_with_k_skip(idx - 1, k) + D[idx];
         if (d % s) d = ((d/s) + 1)*s;
         ret = d;
         if (k > 0 ) ret = min(ret, dfs_with_minimum_time_with_k_skip(idx - 1, k - 1) + D[idx]);
@@ -21,7 +22,7 @@ public:
         H *=s;
         last = dist[n-1];
         for (int dd : dist) d += dd;
-		memset(memo, -1, sizeof(memo));
+        memset(memo, -1, sizeof(memo));
         if (d /s > hoursBefore) return -1;
         while (lo < hi) {
             int mid = (lo + hi) / 2;
@@ -30,6 +31,6 @@ public:
             else lo = mid + 1;
         }
         return lo == D.size() ? -1 : lo;
-        
+
     }
 };
