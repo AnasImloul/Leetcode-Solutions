@@ -1,3 +1,4 @@
+# Runtime: 305 ms (Top 5.46%) | Memory: 15.4 MB (Top 49.03%)
 """
 # Definition for a Node.
 class Node(object):
@@ -31,7 +32,7 @@ class Solution(object):
         if currentRight:
             if currentRight.right:
                 return currentRight.right
-            if  currentRight.left:
+            if currentRight.left:
                 return currentRight.left
         root, rootlevel = rootLevelInfo
         rightMost = self.findRightMost(root, rootlevel, requiredLevel)
@@ -69,11 +70,11 @@ class Solution(object):
         currentLeft = self.findLeftMostFromRoot(rightRootStart, 1, None)
         currentRight = self.findRightMostFromRoot(leftRootStart, 1, None)
         while currentLeft and currentRight:
-            currentRight.next = currentLeft 
+            currentRight.next = currentLeft
             connectLevel += 1
             currentLeft = self.findLeftMostFromRoot(rightRootStart, connectLevel, currentLeft)
             currentRight = self.findRightMostFromRoot(leftRootStart, connectLevel, currentRight)
-            
+
         self.stitch(root.left)
         self.stitch(root.right)
     def connect(self, root):
