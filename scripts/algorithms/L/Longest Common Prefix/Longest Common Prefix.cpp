@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 30.63%) | Memory: 9.3 MB (Top 55.11%)
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
