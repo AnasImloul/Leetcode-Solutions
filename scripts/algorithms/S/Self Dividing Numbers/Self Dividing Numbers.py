@@ -1,3 +1,4 @@
+# Runtime: 99 ms (Top 32.60%) | Memory: 13.9 MB (Top 25.64%)
 class Solution:
     def selfDividingNumbers(self, left: int, right: int) -> List[int]:
         res = []
