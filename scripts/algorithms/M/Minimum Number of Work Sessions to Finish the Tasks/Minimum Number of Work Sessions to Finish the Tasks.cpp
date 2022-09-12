@@ -1,3 +1,4 @@
+// Runtime: 103 ms (Top 74.10%) | Memory: 10.8 MB (Top 42.47%)
 // C++ Solution
 class Solution {
 public:
