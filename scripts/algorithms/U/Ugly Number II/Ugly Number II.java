@@ -1,6 +1,6 @@
+// Runtime: 7 ms (Top 41.12%) | Memory: 41.5 MB (Top 87.73%)
 // Ugly number II
 // https://leetcode.com/problems/ugly-number-ii/
-
 
 class Solution {
     public int nthUglyNumber(int n) {
@@ -13,6 +13,6 @@ class Solution {
             if (dp[i] == dp[i3] * 3) i3++;
             if (dp[i] == dp[i5] * 5) i5++;
         }
-        return dp[n - 1];       
+        return dp[n - 1];
     }
 }
