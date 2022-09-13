@@ -1,8 +1,9 @@
+# Runtime: 95 ms (Top 46.38%) | Memory: 14.3 MB (Top 75.93%)
 class Solution:
     def racecar(self, target: int) -> int:
         q = [(0, 1)]
         steps = 0
-        
+
         while q:
             num = len(q)
             for i in range(num):
