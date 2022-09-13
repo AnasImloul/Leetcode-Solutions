@@ -1,3 +1,4 @@
+// Runtime: 236 ms (Top 97.78%) | Memory: 172.2 MB (Top 58.73%)
 class Solution {
 public:
     int countSpecialSubsequences(vector<int>& nums) {
