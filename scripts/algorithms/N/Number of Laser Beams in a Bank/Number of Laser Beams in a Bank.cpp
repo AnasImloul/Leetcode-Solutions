@@ -1,3 +1,4 @@
+// Runtime: 263 ms (Top 9.43%) | Memory: 23.1 MB (Top 58.02%)
 class Solution {
 public:
     int numberOfBeams(vector<string>& bank) {
