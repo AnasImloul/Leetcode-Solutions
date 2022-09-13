@@ -1,6 +1,7 @@
+// Runtime: 7 ms (Top 68.11%) | Memory: 9.5 MB (Top 56.46%)
 class Solution {
 public:
-    bool isAlienSorted(vector<string>& words, string order) 
+    bool isAlienSorted(vector<string>& words, string order)
     {
         unordered_map<char,char> m;
         for(int i=0;i<26;i++)
@@ -14,8 +15,8 @@ public:
                 ch=m[ch];
             }
         }
-        return is_sorted(words.begin(),words.end());// check sorting 
-        
+        return is_sorted(words.begin(),words.end());// check sorting
+
     }
 };
 //if you like the solution plz upvote;
