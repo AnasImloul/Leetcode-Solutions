@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 70.59%) | Memory: 17.4 MB (Top 21.88%)
 /*
 Run BFS and store the index of the node when it was stored in the flattened manner.
 Take the diff of each of the level and keep traking of max value
@@ -5,7 +6,7 @@ Take the diff of each of the level and keep traking of max value
  */
 class Solution {
 public:
-    
+
     int widthOfBinaryTree(TreeNode* root) {
         if(!root) return 0;
         int res = 0;
