@@ -1,3 +1,4 @@
+# Runtime: 124 ms (Top 90.60%) | Memory: 14.5 MB (Top 61.93%)
 class Solution:
     def regionsBySlashes(self, grid: List[str]) -> int:
         n=len(grid)
@@ -5,7 +6,7 @@ class Solution:
         par=[0]*(dots*dots)
         rank=[0]*(dots*dots)
         self.count=1
-        
+
         def find(x):
             if par[x]==x:
                 return x
@@ -41,7 +42,7 @@ class Solution:
                 if ch[j]=='/':
                     cellno1=i*dots+j+1
                     cellno2=(i+1)*dots+j
-                    
+
                     union(cellno1,cellno2)
                 elif ch[j]=='\\':
                     cellno1=i*dots+j
