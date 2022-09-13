@@ -1,3 +1,4 @@
+// Runtime: 1076 ms (Top 5.06%) | Memory: 153.3 MB (Top 5.00%)
  var numberOfWeakCharacters = function(properties) {
     // sort strongest to weakest
     properties.sort((a, b) => {
@@ -6,7 +7,7 @@
         }
         return b[1] - a[1];
     });
-    
+
     // map all the unique index 0 values to a (descending)
     // sorted array
     const uniqueZeroIndexToOneIndex = new Map();
@@ -16,7 +17,7 @@
         }
         uniqueZeroIndexToOneIndex.get(a).push(b);
     }
-    
+
     // get all the unique index 0 values
     const nums = [...uniqueZeroIndexToOneIndex.keys()];
 
@@ -25,18 +26,18 @@
     for (let i = 0; i < nums.length; i++) {
         // skip key in case if we deleted the key
         if (!uniqueZeroIndexToOneIndex.has(nums[i])) continue;
-        
+
         const maxValOfI = uniqueZeroIndexToOneIndex.get(nums[i])[0];
         if (maxValOfI <= maxValue) continue;
         maxValue = maxValOfI;
-        
+
         for (let j = i + 1; j < nums.length; j++) {
             // skip key in case if we deleted the key
             if (!uniqueZeroIndexToOneIndex.has(nums[j])) continue;
-            
+
             // valuesOfJ will be sorted in descending order
             const valuesOfJ = uniqueZeroIndexToOneIndex.get(nums[j])
-            
+
             // pop off all the weak values and add to numWeakCharacters
             for (let k = valuesOfJ.length - 1; k >= 0; k--) {
                 if (maxValue > valuesOfJ[k]) {
