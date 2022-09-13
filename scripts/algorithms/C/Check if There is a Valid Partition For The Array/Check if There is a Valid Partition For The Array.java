@@ -1,3 +1,4 @@
+// Runtime: 27 ms (Top 12.25%) | Memory: 82.9 MB (Top 64.19%)
 // Time O(n)
 // Space O(n)
 class Solution {
