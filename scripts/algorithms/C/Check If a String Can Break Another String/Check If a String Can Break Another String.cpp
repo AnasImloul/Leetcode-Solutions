@@ -1,6 +1,7 @@
+// Runtime: 58 ms (Top 86.01%) | Memory: 11.8 MB (Top 16.62%)
 class Solution {
 public:
-    
+
     bool checkIfCanBreak(string s1, string s2)
     {
        vector<int>freq1(26,0),freq2(26,0);
