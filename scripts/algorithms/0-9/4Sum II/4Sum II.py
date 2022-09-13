@@ -1,3 +1,4 @@
+# Runtime: 1360 ms (Top 29.95%) | Memory: 14.2 MB (Top 70.39%)
 class Solution:
     def fourSumCount(self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]) -> int:
         n1n2 = defaultdict(int)
