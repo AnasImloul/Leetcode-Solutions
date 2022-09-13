@@ -1,4 +1,4 @@
-// Runtime: 34 ms (Top 74.32%) | Memory: 23.5 MB (Top 82.44%)
+// Runtime: 28 ms (Top 84.86%) | Memory: 23.4 MB (Top 89.65%)
 class Solution {
     void tree2str(TreeNode* root,string &s) {
         if(!root) return;
