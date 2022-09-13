@@ -1,3 +1,4 @@
+// Runtime: 86 ms (Top 97.61%) | Memory: 26.9 MB (Top 59.63%)
 class Solution {
 public:
     int longestBeautifulSubstring(string word) {
@@ -16,7 +17,7 @@ public:
                 cnt = 1;
                 len = 1;
             }
-            
+
             if (cnt == 5) {
                 max_len = max(max_len, len);
             }
