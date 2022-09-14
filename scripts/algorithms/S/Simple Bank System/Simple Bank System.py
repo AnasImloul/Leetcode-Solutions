@@ -1,8 +1,8 @@
+# Runtime: 1834 ms (Top 5.30%) | Memory: 43.9 MB (Top 45.70%)
 class Bank:
 
     def __init__(self, bal: List[int]):
-        self.store = bal  # storage list
-
+        self.store = bal # storage list
 
     def transfer(self, a1: int, a2: int, money: int) -> bool:
         try:
@@ -19,7 +19,6 @@ class Bank:
             # returning false when accounts don't exist
             return False
 
-
     def deposit(self, ac: int, mn: int) -> bool:
         try:
             # if account exists performing transaction
@@ -28,7 +27,6 @@ class Bank:
         except:
             # returning false when account doesn't exist
             return False
-
 
     def withdraw(self, ac: int, mn: int) -> bool:
         try:
