@@ -1,3 +1,4 @@
+// Runtime: 753 ms (Top 12.23%) | Memory: 149.9 MB (Top 18.31%)
 class Solution {
 public:
     void solve(vector<int> arr,vector<vector<int>> &ans,vector<int> &temp,int k,int x){
