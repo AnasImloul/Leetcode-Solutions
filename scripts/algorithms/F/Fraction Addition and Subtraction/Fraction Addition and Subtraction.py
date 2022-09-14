@@ -1,5 +1,6 @@
+# Runtime: 35 ms (Top 88.02%) | Memory: 14.1 MB (Top 5.79%)
 """
-approach: 
+approach:
 first replace - with +- in the string so that implementation gets
 a little easy
 """
@@ -23,17 +24,17 @@ class Solution:
                     return b * get_lcm(a/b, 1)
                 else:
                     return b * get_lcm(a, 1)
-                
+
         for part in parts:
             num, den = part.split('/')
             numes.append(int(num))
             denoms.append(int(den))
             lcm = get_lcm(lcm, int(den))
-            
+
         result = 0
         for num, den in zip(numes, denoms):
              result +=num * int(lcm/den)
-                
+
         def get_gcd(a, b):
             if a == 0:
                 return b
@@ -45,6 +46,6 @@ class Solution:
                 return get_gcd(a, b-a)
             else:
                 return get_gcd(a-b, b)
-            
+
         gcd = get_gcd(abs(result), lcm)
         return str(int(result/gcd)) + '/' + str(int(lcm/gcd))
