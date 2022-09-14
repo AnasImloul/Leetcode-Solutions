@@ -1,3 +1,4 @@
+# Runtime: 2542 ms (Top 7.54%) | Memory: 19.1 MB (Top 61.04%)
 class Solution:
     def restoreMatrix(self, rs: List[int], cs: List[int]) -> List[List[int]]:
         row = len(rs)
