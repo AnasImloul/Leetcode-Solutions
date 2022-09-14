@@ -1,3 +1,4 @@
+// Runtime: 11 ms (Top 9.91%) | Memory: 6.8 MB (Top 26.17%)
 class Solution {
 public:
     bool halvesAreAlike(string s) {
