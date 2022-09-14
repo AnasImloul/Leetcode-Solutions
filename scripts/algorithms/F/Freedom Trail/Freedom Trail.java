@@ -1,3 +1,4 @@
+// Runtime: 28 ms (Top 46.01%) | Memory: 46.5 MB (Top 66.67%)
 class Solution {
     public int findRotateSteps(String ring, String key) {
         Map<Character, TreeSet<Integer>> locMap = new HashMap<>();
@@ -19,7 +20,7 @@ class Solution {
             return memo[cur][where]=dfs(cur+1, where, locMap, key, memo)+1;
         }
         Integer hi = idx.higher(where); // otherwise, we can take the higher key
-        Integer lo = idx.lower(where);  // or, the lower key
+        Integer lo = idx.lower(where); // or, the lower key
         if (hi == null){ // if no higher key, it becomes the lowest key.
             hi = idx.first();
         }
