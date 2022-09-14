@@ -1,3 +1,4 @@
+// Runtime: 690 ms (Top 5.03%) | Memory: 64.7 MB (Top 5.59%)
 var increasingTriplet = function(nums) {
     const length = nums.length, arr = [];
     let tripletFound = false, arrLength, added = false, found = false;
@@ -26,7 +27,7 @@ var increasingTriplet = function(nums) {
         if(tripletFound) break;
         if(!added && !found) {
                 arr.push([nums[index],1]);
-            }        
+            }
     }
     return tripletFound;
 };
