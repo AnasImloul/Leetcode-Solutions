@@ -1,3 +1,4 @@
+// Runtime: 100 ms (Top 27.69%) | Memory: 29.4 MB (Top 37.30%)
 class Solution {
 public:
     bool isGoodArray(vector<int>& nums) {
