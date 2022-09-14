@@ -1,3 +1,4 @@
+// Runtime: 121 ms (Top 23.03%) | Memory: 43.2 MB (Top 71.09%)
 var isHappy = function(n) {
     if(n<10){
         if(n === 1 || n === 7){
