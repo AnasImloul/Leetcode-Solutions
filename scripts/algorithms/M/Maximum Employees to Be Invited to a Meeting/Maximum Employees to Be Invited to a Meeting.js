@@ -1,4 +1,4 @@
-// Runtime: 672 ms (Top 71.43%) | Memory: 146.7 MB (Top 50.00%)
+// Runtime: 748 ms (Top 53.33%) | Memory: 151.7 MB (Top 40.00%)
 /**
  * @param {number[]} favorite
  * @return {number}
