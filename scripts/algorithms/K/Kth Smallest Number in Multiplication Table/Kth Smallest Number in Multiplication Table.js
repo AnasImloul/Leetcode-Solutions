@@ -1,3 +1,4 @@
+// Runtime: 130 ms (Top 39.13%) | Memory: 42.1 MB (Top 82.61%)
 /**
  * @param {number} m
  * @param {number} n
@@ -9,16 +10,16 @@ var findKthNumber = function(m, n, k) {
   // not going to be our answer
   let lo = 0;
   let hi = m * n;
-  
+
   // the loop stops when lo and hi point to two adjascent numbers
   // because lo is always incorrect, hi will contain our final answer
   while (lo + 1 < hi) {
-    
+
     // As a general practice don't do a (lo + hi) / 2 because that
     // might cause integer overflow
     const mid = lo + Math.floor((hi - lo) / 2);
     const count = countLessThanEqual(mid, m, n);
-    
+
     // Find the minimum mid, such that count >= k
     if (count >= k) {
       hi = mid;
