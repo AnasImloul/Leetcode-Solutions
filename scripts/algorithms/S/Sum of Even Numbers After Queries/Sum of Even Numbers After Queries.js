@@ -1,3 +1,4 @@
+// Runtime: 187 ms (Top 62.12%) | Memory: 50.6 MB (Top 51.52%)
 /**
  * @param {number[]} nums
  * @param {number[][]} queries
@@ -20,6 +21,6 @@ var sumEvenAfterQueries = function(nums, queries) {
         nums[idx] += val
         ans.push(sumEven)
     }
-    
+
     return ans
 };
