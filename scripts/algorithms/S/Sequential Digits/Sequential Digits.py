@@ -1,3 +1,4 @@
+# Runtime: 62 ms (Top 11.46%) | Memory: 13.9 MB (Top 73.14%)
 class Solution:
     def sequentialDigits(self, l: int, h: int) -> List[int]:
         q=[*"123456789"]
