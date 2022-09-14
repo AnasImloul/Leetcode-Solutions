@@ -1,3 +1,4 @@
+// Runtime: 172 ms (Top 24.83%) | Memory: 57.7 MB (Top 11.96%)
 var removeDuplicates = function(s, k) {
   const stack = []
   for(const c of s){
