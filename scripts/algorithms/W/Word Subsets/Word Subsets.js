@@ -1,3 +1,4 @@
+// Runtime: 409 ms (Top 44.03%) | Memory: 65.6 MB (Top 60.70%)
 var wordSubsets = function(words1, words2) {
     this.count = Array(26).fill(0);
     let tmp = Array(26).fill(0);
@@ -14,8 +15,8 @@ var wordSubsets = function(words1, words2) {
 };
 
 function isSub(tmp){
-    for(let i=0; i<26; i++) 
-        if(tmp[i] < this.count[i])   
+    for(let i=0; i<26; i++)
+        if(tmp[i] < this.count[i])
             return false;
     return true;
 };
