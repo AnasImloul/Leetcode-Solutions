@@ -1,4 +1,4 @@
-// Runtime: 933 ms (Top 28.58%) | Memory: 15.5 MB (Top 24.40%)
+# Runtime: 947 ms (Top 34.04%) | Memory: 15.5 MB (Top 30.97%)
 class Solution:
     def totalHammingDistance(self, arr: List[int]) -> int:
 
