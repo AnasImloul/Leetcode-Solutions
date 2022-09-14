@@ -1,3 +1,4 @@
+// Runtime: 78 ms (Top 90.91%) | Memory: 42.4 MB (Top 65.91%)
 /**
  * @param {number} a
  * @param {number} b
@@ -28,12 +29,11 @@ var maximumScore = function(a, b, c) {
     if(resultArray[0]+resultArray[1]+resultArray[2]===0) return counter;
     if(resultArray[0]<0||resultArray[1]<0||resultArray[2]<0) counter--;
     return counter;
-    
+
     function exchange(array, indexa,indexb){
         let temp = array[indexa];
         array[indexa] = array[indexb];
         array[indexb] = temp;
     }
-    
-    
+
 };
