@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 17.94%) | Memory: 6.2 MB (Top 15.94%)
 class Solution {
 public:
     int kthFactor(int n, int k) {
