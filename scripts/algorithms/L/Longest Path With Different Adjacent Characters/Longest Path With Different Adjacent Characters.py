@@ -1,3 +1,4 @@
+# Runtime: 5213 ms (Top 8.25%) | Memory: 84.5 MB (Top 93.36%)
 from graphlib import TopologicalSorter
 
 class Solution:
