@@ -1,8 +1,9 @@
+# Runtime: 151 ms (Top 10.13%) | Memory: 17.7 MB (Top 81.63%)
 # Definition for singly-linked list.
 # class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+# def __init__(self, val=0, next=None):
+# self.val = val
+# self.next = next
 class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
         prev=head
