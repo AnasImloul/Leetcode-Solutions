@@ -1,3 +1,4 @@
+// Runtime: 310 ms (Top 7.97%) | Memory: 117.9 MB (Top 6.60%)
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> hash = new HashMap<>();
