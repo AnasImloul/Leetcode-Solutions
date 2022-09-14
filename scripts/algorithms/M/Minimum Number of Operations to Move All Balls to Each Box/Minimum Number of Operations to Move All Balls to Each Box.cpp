@@ -1,3 +1,4 @@
+// Runtime: 287 ms (Top 34.81%) | Memory: 9.4 MB (Top 44.61%)
 class Solution {
 public:
     vector<int> minOperations(string boxes) {
