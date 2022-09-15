@@ -1,3 +1,4 @@
+// Runtime: 67 ms (Top 34.79%) | Memory: 60.8 MB (Top 55.99%)
 class Solution {
     public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
         PriorityQueue<int[]> pq=new PriorityQueue<>((a,b)->(b[1]-a[1]));
