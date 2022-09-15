@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 88.45%) | Memory: 40.9 MB (Top 66.50%)
 import java.util.*;
 class Solution {
     public int trailingZeroes(int n) {
@@ -22,6 +23,5 @@ Step 2: Find no. of 5s = floor(n/5);
 
 Summary: So, first divide 'n' by 5 and remove all single 5s, then divide by 25 to remove extra 5s, and so on.
         Summarized Formula:
-        [Trailing 0s in n!= floor(n/5)+floor(n/25)+floor(n/125)+....] 
+        [Trailing 0s in n!= floor(n/5)+floor(n/25)+floor(n/125)+....]
 */
-
