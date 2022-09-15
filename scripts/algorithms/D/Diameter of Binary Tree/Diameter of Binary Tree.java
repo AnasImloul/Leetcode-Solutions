@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 65.91%) | Memory: 42.9 MB (Top 74.91%)
 class Solution {
     // Declare Global Variable ans to 0
     int ans = 0;
@@ -8,14 +9,13 @@ class Solution {
         int lh = dfs(root.left);
         // recursive call for right height
         int rh = dfs(root.right);
-        
+
         // update ans
         ans = Math.max(ans, lh + rh);
-        
+
         // return max value
         return Math.max(lh, rh) + 1;
     }
-    
 
     // Diameter of Binary Tree Function
     public int diameterOfBinaryTree(TreeNode root) {
