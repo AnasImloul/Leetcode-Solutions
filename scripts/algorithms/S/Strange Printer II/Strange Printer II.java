@@ -1,12 +1,13 @@
+// Runtime: 85 ms (Top 41.74%) | Memory: 54.3 MB (Top 53.04%)
 class Solution {
     // store each color's left, top, right, bottom
     private Set<Integer>[] graph;
     private int[] indegrees;
-    private int[][] ranges; 
+    private int[][] ranges;
     private boolean[] exists;
     private int m;
     private int n;
-    private int maxColor = 60; 
+    private int maxColor = 60;
     public boolean isPrintable(int[][] targetGrid) {
         this.m = targetGrid.length;
         this.n = targetGrid[0].length;
@@ -55,7 +56,7 @@ class Solution {
         }
         maxColor = max;
     }
-	// TC O(n^3) to build graph
+    // TC O(n^3) to build graph
     private void buildGraph(int[][] targetGrid) {
         graph = new Set[maxColor + 1];
         indegrees = new int[maxColor + 1];
