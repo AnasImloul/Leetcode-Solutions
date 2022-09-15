@@ -1,3 +1,4 @@
+// Runtime: 9 ms (Top 7.20%) | Memory: 7.1 MB (Top 26.56%)
 class Solution {
 public:
     int findSecondMinimumValue(TreeNode* root) {
