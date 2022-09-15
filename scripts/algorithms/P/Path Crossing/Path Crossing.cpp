@@ -1,4 +1,4 @@
-// Runtime: 3 ms (Top 71.20%) | Memory: 6.8 MB (Top 80.05%)
+// Runtime: 3 ms (Top 74.64%) | Memory: 6.9 MB (Top 45.17%)
 class Solution {
 public:
     bool isPathCrossing(string path) {
