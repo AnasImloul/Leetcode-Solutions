@@ -1,3 +1,4 @@
+// Runtime: 97 ms (Top 33.68%) | Memory: 42.5 MB (Top 7.37%)
 var maximumTime = function(time) {
     time = time.split('')
     if (time[0] === "?") time[0] = time[1] > 3 ? "1" : "2"
