@@ -1,5 +1,6 @@
+// Runtime: 130 ms (Top 41.46%) | Memory: 49.2 MB (Top 19.51%)
 var parseBoolExpr = function(expression) {
-    let sol, stack = [], 
+    let sol, stack = [],
         op={t:true, f:false};
     for(let i=0; i<expression.length; i++){
         if(expression[i] != ")"){
@@ -22,7 +23,7 @@ var parseBoolExpr = function(expression) {
             }
             stack.push(ko);
         }
-       
+
     }
     return stack.pop()=='f'?false:true;
 };
