@@ -1,3 +1,4 @@
+// Runtime: 25 ms (Top 22.57%) | Memory: 50.5 MB (Top 79.00%)
 class Solution {
     public int countHomogenous(String s) {
         int res = 1;
@@ -8,8 +9,8 @@ class Solution {
             else carry = 1;
             res = (res + carry) % mod;
         }
-        
+
         return res;
-        
+
     }
 }
