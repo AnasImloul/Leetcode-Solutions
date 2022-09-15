@@ -1,3 +1,4 @@
+# Runtime: 65 ms (Top 39.49%) | Memory: 13.8 MB (Top 98.53%)
 class Solution(object):
     def numTilings(self, n):
         """
@@ -15,7 +16,7 @@ class Solution(object):
         iv) f(n) = f(n-1) + f(n-2) + 2*f(n-3) + f(n-1) - f(n-2) - f(n-3)
         Simplifying iv in terms of f()
         v) f(n) = 2*f(n-1) + f(n-3)
-        
+
         Recurrence Equation from above:
         f(n) = 0 when n=0;
              = 1 when n=1
