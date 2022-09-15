@@ -1,3 +1,4 @@
+# Runtime: 881 ms (Top 97.89%) | Memory: 49.3 MB (Top 35.92%)
 class Solution:
     def areConnected(self, n: int, threshold: int, queries: List[List[int]]) -> List[bool]:
         parent = list(range(n+1))
