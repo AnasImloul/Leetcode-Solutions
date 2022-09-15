@@ -1,3 +1,4 @@
+# Runtime: 127 ms (Top 14.40%) | Memory: 14 MB (Top 75.22%)
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
         n = len(cost)
