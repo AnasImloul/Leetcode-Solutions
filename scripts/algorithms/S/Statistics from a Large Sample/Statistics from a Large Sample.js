@@ -1,3 +1,4 @@
+// Runtime: 417 ms (Top 7.69%) | Memory: 44.4 MB (Top 23.08%)
 /**
  * @param {number[]} count
  * @return {number[]}
@@ -17,14 +18,14 @@ var sampleStats = function(count) {
         sum += (count[i] * i);
         prefix += count[i];
         prefixSum.set(prefix, i);
-    } 
-    const mean = sum / prefix; 
-	// min, max, mean, mode found
-	// finding median using prefixSum map
+    }
+    const mean = sum / prefix;
+    // min, max, mean, mode found
+    // finding median using prefixSum map
     let median;
     let medianLeft;
     let medianRight;
-    const medianPoint = Math.ceil(prefix/2);    
+    const medianPoint = Math.ceil(prefix/2);
     for (let i=medianPoint; i<=prefix; i++) {
         if (!prefixSum.has(i)) continue;
         if (medianLeft !== undefined) {
@@ -39,6 +40,6 @@ var sampleStats = function(count) {
         median = prefixSum.get(i);
         break;
     }
-    
+
     return [min, max, mean, median, mode];
 };
