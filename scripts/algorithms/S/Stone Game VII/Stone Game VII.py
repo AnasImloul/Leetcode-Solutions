@@ -1,3 +1,4 @@
+# Runtime: 6869 ms (Top 56.16%) | Memory: 13.9 MB (Top 96.15%)
 class Solution:
     def stoneGameVII(self, S: List[int]) -> int:
         N, dp = len(S), [0] * len(S)
