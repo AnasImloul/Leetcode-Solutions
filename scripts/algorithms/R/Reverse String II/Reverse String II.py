@@ -1,3 +1,4 @@
+# Runtime: 92 ms (Top 5.11%) | Memory: 14.1 MB (Top 58.38%)
 class Solution:
     def reverseStr(self, s: str, k: int) -> str:
         a=list(s)
