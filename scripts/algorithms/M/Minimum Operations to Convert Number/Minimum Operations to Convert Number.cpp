@@ -1,3 +1,4 @@
+// Runtime: 356 ms (Top 70.09%) | Memory: 8.7 MB (Top 99.54%)
 class Solution {
 public:
     int minimumOperations(vector<int>& nums, int start, int goal) {
@@ -5,10 +6,10 @@ public:
         // BFS
         queue<int> q;
         vector<bool> vis(1001, false);
-        
+
         q.push(goal);
         if (0 <= goal && goal <= 1000) vis[goal] = true;
-        
+
         int dist = -1;
         bool done = false;
         while (!q.empty() && !done) {
@@ -36,7 +37,7 @@ public:
                 }
             }
         }
-    
+
         return done ? dist : -1;
     }
 };
