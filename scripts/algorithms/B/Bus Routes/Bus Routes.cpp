@@ -1,3 +1,4 @@
+// Runtime: 1454 ms (Top 5.06%) | Memory: 53.4 MB (Top 75.63%)
 class Solution {
 public:
     int numBusesToDestination(vector<vector<int>>& routes, int source, int target) {
@@ -6,7 +7,7 @@ public:
         vector<bool> vis(routes.size(), 0);
         vector<vector<int>> g(routes.size());
         vector<unordered_set<int>> rout(routes.size());
-        
+
         //create graph between the buses - which buses are connected to single stop
         for(int i = 0; i < routes.size(); ++i){
             for(auto r: routes[i]){
@@ -23,7 +24,7 @@ public:
                 vis[i] = true;
             }
         }
-        
+
         //search path to target using bfs
         int level = 0;
         while(!q.empty()){
