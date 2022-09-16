@@ -1,3 +1,4 @@
+# Runtime: 65 ms (Top 73.60%) | Memory: 14 MB (Top 91.27%)
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
         nums1.sort()
