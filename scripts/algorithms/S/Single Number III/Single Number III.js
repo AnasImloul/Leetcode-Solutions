@@ -1,3 +1,4 @@
+// Runtime: 192 ms (Top 11.57%) | Memory: 47.5 MB (Top 5.66%)
 var singleNumber = function(nums) {
     let hash ={}
     for ( let num of nums){
@@ -6,10 +7,10 @@ var singleNumber = function(nums) {
         else
             hash[num]++
     }
-    
+
     let result =[]
     for ( let [key, value] of Object.entries(hash)){
-		 if(value==1)
+         if(value==1)
          result.push(key)
     }
     return result
