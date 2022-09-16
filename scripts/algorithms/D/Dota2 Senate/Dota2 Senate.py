@@ -1,3 +1,4 @@
+# Runtime: 162 ms (Top 30.92%) | Memory: 14.2 MB (Top 58.94%)
 class Solution:
     def predictPartyVictory(self, senate: str) -> str:
         nxt = ""
@@ -21,4 +22,4 @@ class Solution:
         if (ar) :
             return 'Radiant'
         else:
-            return 'Dire' 
+            return 'Dire'
