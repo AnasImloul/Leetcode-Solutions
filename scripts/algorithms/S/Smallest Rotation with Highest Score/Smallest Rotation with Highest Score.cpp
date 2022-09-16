@@ -1,3 +1,4 @@
+// Runtime: 348 ms (Top 19.35%) | Memory: 77.3 MB (Top 21.94%)
 class Solution {
 public:
     int bestRotation(vector<int>& nums) {
@@ -10,7 +11,7 @@ public:
                 pointsForIShifts[l]+=1;pointsForIShifts[h+1]-=1;
             }
             l=i+1;h=i+sz-nums[i];
-            pointsForIShifts[l]+=1;pointsForIShifts[h+1]-=1;            
+            pointsForIShifts[l]+=1;pointsForIShifts[h+1]-=1;
         }
         int maxP=pointsForIShifts[0],k=0;
         for(int i=1;i<pointsForIShifts.size();i++){
