@@ -1,7 +1,8 @@
+// Runtime: 194 ms (Top 50.00%) | Memory: 46.5 MB (Top 62.50%)
 var shortestSuperstring = function(words) {
     let N = words.length, suffixes = new Map(),
         edges = Array.from({length: N}, () => new Uint8Array(N))
-    
+
     // Build the edge graph
     for (let i = 0, word = words; i < N; i++) {
         let word = words[i]
@@ -20,11 +21,11 @@ var shortestSuperstring = function(words) {
                     edges[i][j] = Math.max(edges[i][j], k)
         }
     }
-    
+
     // Initialize DP array
-    let M = N - 1, 
+    let M = N - 1,
         dp = Array.from({length: M}, () => new Uint16Array(1 << M))
-    
+
     // Helper function to find the best value for dp[curr][currSet]
     // Store the previous node with bit manipulation for backtracking
     const solve = (curr, currSet) => {
@@ -38,16 +39,16 @@ var shortestSuperstring = function(words) {
             }
         return (bestOverlap << 4) + bestPrev
     }
-    
+
     // Build DP using solve
     for (let currSet = 1; currSet < 1 << M; currSet++)
         for (let curr = 0; curr < N; curr++)
-            if (currSet & 1 << curr) 
+            if (currSet & 1 << curr)
                 dp[curr][currSet] = solve(curr, currSet)
-    
+
     // Join the ends at index M
     let curr = solve(M, (1 << N) - 1) & (1 << 4) - 1
-    
+
     // Build the circle by backtracking path info from dp
     // and find the best place to cut the circle
     let path = [curr], currSet = (1 << M) - 1,
@@ -59,7 +60,7 @@ var shortestSuperstring = function(words) {
             lowOverlap = overlap, bestStart = N - path.length
         curr = prev, path.unshift(curr)
     }
-    
+
     // Build and return ans by cutting the circle at bestStart
     let ans = []
     for (let i = bestStart; i < bestStart + M; i++) {
