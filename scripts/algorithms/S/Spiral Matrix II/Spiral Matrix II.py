@@ -1,3 +1,4 @@
+# Runtime: 61 ms (Top 26.67%) | Memory: 13.9 MB (Top 37.41%)
 class Solution(object):
     def generateMatrix(self, n):
         if n==1:
@@ -38,4 +39,4 @@ class Solution(object):
                 i-=1
             le_b+=1
         return matrix
-		```
+        ```
