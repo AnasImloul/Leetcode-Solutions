@@ -1,8 +1,9 @@
+# Runtime: 84 ms (Top 11.90%) | Memory: 14.2 MB (Top 91.96%)
 # Definition for singly-linked list.
 # class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+# def __init__(self, x):
+# self.val = x
+# self.next = None
 
 class Solution:
     def deleteNode(self, node):
