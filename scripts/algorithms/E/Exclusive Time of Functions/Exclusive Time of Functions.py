@@ -1,3 +1,4 @@
+# Runtime: 78 ms (Top 92.98%) | Memory: 14.2 MB (Top 33.69%)
 class Solution:
     #T=O(n), S=O(d)
     #n=len of logs, d=depth of stack
@@ -26,9 +27,9 @@ class Solution:
             else:
                 #get the time consumed by current function
                 #dont forget to add 1 as the last unit of time should be included
-                res[id] += timestamp - stack.pop()[1] + 1 
+                res[id] += timestamp - stack.pop()[1] + 1
                 if stack:
                     #update the start time of last function in stack to get the cumulative result
                     stack[-1][1] = timestamp + 1
-                
+
         return res
