@@ -1,3 +1,4 @@
+// Runtime: 151 ms (Top 59.59%) | Memory: 49.8 MB (Top 86.99%)
 var numberOfBeams = function(bank) {
     let before = 0,after = 0,total = 0;
     for(i=0;i<bank.length;i++){
