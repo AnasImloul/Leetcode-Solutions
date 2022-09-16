@@ -1,8 +1,9 @@
+// Runtime: 162 ms (Top 5.33%) | Memory: 43.1 MB (Top 65.07%)
 var isUgly = function(n) {
     let condition = true;
-    if(n == 0)  // 0 has infinite factors. So checking if the number is 0 or not
+    if(n == 0) // 0 has infinite factors. So checking if the number is 0 or not
         return false;
-    while(condition){   //applying for true until 2, 3, 5 gets removed from the number
+    while(condition){ //applying for true until 2, 3, 5 gets removed from the number
         if(n % 2 == 0)
             n = n / 2;
         else if(n % 3 == 0)
