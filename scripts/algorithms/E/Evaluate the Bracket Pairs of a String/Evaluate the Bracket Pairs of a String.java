@@ -1,3 +1,4 @@
+// Runtime: 77 ms (Top 56.41%) | Memory: 91.9 MB (Top 81.62%)
 class Solution {
     public String evaluate(String s, List<List<String>> knowledge) {
         Map<String, String> map = new HashMap<>();
