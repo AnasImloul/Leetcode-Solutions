@@ -1,3 +1,4 @@
+// Runtime: 1929 ms (Top 21.74%) | Memory: 140.6 MB (Top 8.70%)
 var minAbsDifference = function(nums, goal) {
     let mid = Math.floor(nums.length / 2);
     let part1 = nums.slice(0, mid), part2 = nums.slice(mid);
@@ -7,11 +8,11 @@ var minAbsDifference = function(nums, goal) {
         findSubsetSums(arr, set, idx + 1, sum);
         findSubsetSums(arr, set, idx + 1, sum + arr[idx]);
     }
-    
+
     let sum1 = new Set(), sum2 = new Set();
     findSubsetSums(part1, sum1);
     findSubsetSums(part2, sum2);
-    
+
     sum1 = [...sum1.values()];
     sum2 = [...sum2.values()];
     sum2.sort((a, b) => a - b);
