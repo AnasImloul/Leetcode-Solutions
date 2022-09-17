@@ -1,3 +1,4 @@
+// Runtime: 131 ms (Top 30.56%) | Memory: 46 MB (Top 85.19%)
 var canThreePartsEqualSum = function(arr) {
     const length = arr.length;
     let sum =0, count = 0, partSum = 0;
