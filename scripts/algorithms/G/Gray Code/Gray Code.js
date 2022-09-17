@@ -1,3 +1,4 @@
+// Runtime: 267 ms (Top 20.55%) | Memory: 67.5 MB (Top 7.22%)
 /**
  * @param {number} n
  * @return {number[]}
@@ -8,9 +9,9 @@ var grayCode = function(n) {
 
 const dfs = (n, arr) => {
     if (n === 1) return arr
-    
+
     const revArr = [...arr].reverse()
-    
+
     addOneBefore('0', arr)
     addOneBefore('1', revArr)
 
