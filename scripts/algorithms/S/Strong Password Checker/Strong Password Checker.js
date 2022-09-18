@@ -1,3 +1,4 @@
+// Runtime: 101 ms (Top 27.85%) | Memory: 42.4 MB (Top 18.99%)
 const strongPasswordChecker = (passwd) => {
     let steps = 0;
     let mustAdd = 0;
