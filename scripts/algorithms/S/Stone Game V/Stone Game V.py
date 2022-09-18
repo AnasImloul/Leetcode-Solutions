@@ -1,8 +1,9 @@
+# Runtime: 6408 ms (Top 13.33%) | Memory: 26.1 MB (Top 43.33%)
 from collections import defaultdict
 from itertools import accumulate
 
 class Solution:
-    
+
     def stoneGameV(self, stoneValue: List[int]) -> int:
         n = len(stoneValue)
         dp = [[0]*n for _ in range(n)]
@@ -12,7 +13,7 @@ class Solution:
 
         def sum(i,j):
             return prefix[j+1]-prefix[i]
-        
+
         row_idx = [i for i in range(n)]
         for i in range(n):
             left[i][i] = stoneValue[i]
@@ -25,7 +26,7 @@ class Solution:
                     dp[i][j] = max(left[i][row_idx[i]], left[j][row_idx[i]+1])
                 else:
                     if row_idx[i] == i:
-                        dp[i][j] = left[j][i+1]                    
+                        dp[i][j] = left[j][i+1]
                     elif row_idx[i] == j:
                         dp[i][j] = left[i][j-1]
                     else:
