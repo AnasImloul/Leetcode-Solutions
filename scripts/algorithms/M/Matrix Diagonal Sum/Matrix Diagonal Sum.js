@@ -1,4 +1,5 @@
-var diagonalSum = function(mat) {   
+// Runtime: 101 ms (Top 40.82%) | Memory: 43.3 MB (Top 79.80%)
+var diagonalSum = function(mat) {
     return mat.reduce((acc, matrix, i)=>{
       const matrixlength = matrix.length-1;
        return acc += (i !== matrixlength-i) ? matrix[i]+ matrix[matrixlength-i] : matrix[i];
