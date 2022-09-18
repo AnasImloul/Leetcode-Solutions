@@ -1,3 +1,4 @@
+# Runtime: 2571 ms (Top 53.06%) | Memory: 28.4 MB (Top 82.81%)
 class Solution:
     def maxAlternatingSum(self, nums: List[int]) -> int:
         ans = 0
