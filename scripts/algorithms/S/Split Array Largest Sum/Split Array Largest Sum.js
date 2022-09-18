@@ -1,3 +1,4 @@
+// Runtime: 2555 ms (Top 5.03%) | Memory: 70 MB (Top 5.53%)
 var splitArray = function(nums, m) {
 const n = nums.length;
 var mat = [];
