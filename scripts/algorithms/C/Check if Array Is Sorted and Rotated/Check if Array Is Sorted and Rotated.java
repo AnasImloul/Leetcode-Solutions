@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.6 MB (Top 54.56%)
 class Solution {
     public boolean check(int[] nums) {
         // here we compare all the neighbouring elemnts and check whether they are in somewhat sorted
