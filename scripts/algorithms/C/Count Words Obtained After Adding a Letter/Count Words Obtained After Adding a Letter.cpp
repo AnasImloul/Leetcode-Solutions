@@ -1,7 +1,8 @@
+// Runtime: 308 ms (Top 95.07%) | Memory: 104.8 MB (Top 66.85%)
 class Solution {
 public:
     int wordCount(vector<string>& startWords, vector<string>& targetWords) {
-	// generates hashes for startWords.
+    // generates hashes for startWords.
         unordered_set<int> vis;
         for (string s : startWords) {
             int hash = 0;
@@ -10,8 +11,8 @@ public:
             }
             vis.insert(hash);
         }
-        
-		// check each target Word
+
+        // check each target Word
         int res = 0;
         for (string s : targetWords) {
             int hash = 0;
@@ -28,7 +29,7 @@ public:
                 }
             }
         }
-        
+
         return res;
     }
 };
