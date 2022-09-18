@@ -1,3 +1,4 @@
+# Runtime: 993 ms (Top 30.00%) | Memory: 25.8 MB (Top 18.75%)
 class Solution:
     def lastSubstring(self, s: str) -> str:
         n = len(s)
