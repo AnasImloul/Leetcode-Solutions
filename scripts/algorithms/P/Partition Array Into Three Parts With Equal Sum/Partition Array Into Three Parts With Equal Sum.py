@@ -1,3 +1,4 @@
+# Runtime: 668 ms (Top 23.61%) | Memory: 21 MB (Top 37.82%)
 class Solution:
     def canThreePartsEqualSum(self, arr: List[int]) -> bool:
         total = sum(arr)
