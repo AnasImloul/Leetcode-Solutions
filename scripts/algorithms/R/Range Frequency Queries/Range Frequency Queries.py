@@ -1,3 +1,4 @@
+# Runtime: 3295 ms (Top 30.98%) | Memory: 53.7 MB (Top 24.88%)
 class RangeFreqQuery:
     def __init__(self, arr: List[int]):
         self.l = [[] for _ in range(10001)]
