@@ -1,3 +1,4 @@
+// Runtime: 248 ms (Top 14.67%) | Memory: 67.8 MB (Top 53.58%)
 class Solution {
 public:
     int maxSubArray(vector<int>& nums)
