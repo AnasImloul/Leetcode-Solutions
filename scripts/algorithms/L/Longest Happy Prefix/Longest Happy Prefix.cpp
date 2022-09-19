@@ -1,3 +1,4 @@
+// Runtime: 59 ms (Top 53.19%) | Memory: 15.1 MB (Top 86.23%)
 class Solution {
 public:
     string longestPrefix(string s) {
@@ -20,7 +21,7 @@ public:
             else{
                 prevLPS = arr[prevLPS - 1];
             }
-        } 
+        }
         int oplen = arr[n-1];
         string temp = s.substr(n - oplen, oplen);
         return temp;
