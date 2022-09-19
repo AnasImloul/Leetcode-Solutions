@@ -1,7 +1,8 @@
+// Runtime: 321 ms (Top 35.18%) | Memory: 117.7 MB (Top 29.49%)
 class Solution {
 public int numSubmatrixSumTarget(int[][] matrix, int target) {
     int m = matrix.length, n = matrix[0].length;
-    
+
     int[] summedArray = new int[n];
     int ans = 0;
     for(int i = 0; i < m; i++){ //starting row
@@ -29,7 +30,7 @@ public int numSubmatrixSumTarget(int[][] matrix, int target) {
             count += map.get(diff);
         }
         map.put(sum, map.getOrDefault(sum, 0) + 1);
-    }        
+    }
     return count;
 }
 }
