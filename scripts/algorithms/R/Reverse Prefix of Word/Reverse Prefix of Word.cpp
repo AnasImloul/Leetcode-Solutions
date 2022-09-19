@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.1 MB (Top 72.47%)
 class Solution {
 public:
     string reversePrefix(string word, char ch) {
