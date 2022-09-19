@@ -1,3 +1,4 @@
+// Runtime: 107 ms (Top 57.83%) | Memory: 44.1 MB (Top 42.17%)
 /**
  * @param {string} s
  * @param {string[]} words
@@ -21,7 +22,7 @@ var expressiveWords = function(s, words) {
         let i = 0;
         let flag = true;
         if(charArr.length > s.length)continue
-        
+
         while( i < charArr.length ){
             let count = 1
             while(charArr[i] === charArr[i+1]){
@@ -34,9 +35,7 @@ var expressiveWords = function(s, words) {
             }
             idx++;
             i++
-            
-            
-            
+
         }
         if(idx !== arr.length)flag = false
         if(flag)ans++
