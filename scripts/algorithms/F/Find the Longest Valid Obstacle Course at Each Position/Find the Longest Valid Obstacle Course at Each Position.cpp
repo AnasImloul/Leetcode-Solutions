@@ -1,3 +1,4 @@
+// Runtime: 684 ms (Top 14.03%) | Memory: 119 MB (Top 52.52%)
 class Solution {
 public:
     vector<int> longestObstacleCourseAtEachPosition(vector<int>& obstacles) {
@@ -5,7 +6,7 @@ public:
         int result=1;
         vector<int> b(obstacles.size()+1, INT_MAX);
         b[0]=INT_MIN;
-       
+
         for(int i=0; i<obstacles.size(); i++){
             auto k = upper_bound(b.begin(), b.end(), obstacles[i]) - b.begin();
             b[k] = obstacles[i];
