@@ -1,4 +1,4 @@
-// Runtime: 3 ms (Top 33.59%) | Memory: 42.3 MB (Top 26.32%)
+// Runtime: 2 ms (Top 77.11%) | Memory: 42.1 MB (Top 31.42%)
 class Solution {
     public int heightChecker(int[] heights) {
 
