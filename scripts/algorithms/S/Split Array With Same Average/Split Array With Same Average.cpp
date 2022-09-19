@@ -1,3 +1,4 @@
+// Runtime: 319 ms (Top 70.63%) | Memory: 37 MB (Top 67.84%)
 class Solution {
 public:
     int totsum;
@@ -10,7 +11,7 @@ public:
         }
         return findans(dp, nums, start+1, sum, bitcnt) || findans(dp, nums, start+1, sum+nums[start], bitcnt+1);
     }
-    
+
     void filldp(vector<set<int>>& dp, vector<int>& nums, int start, int mask){
         if(start==nums.size()/2){
             int sum = 0, cnt=0;
@@ -25,7 +26,7 @@ public:
         filldp(dp, nums, start+1, mask);
         filldp(dp, nums, start+1, mask^(1<<start));
     }
-    
+
     bool splitArraySameAverage(vector<int>& nums) {
         totsum = 0;
         for(int i=0; i<nums.size(); i++)
