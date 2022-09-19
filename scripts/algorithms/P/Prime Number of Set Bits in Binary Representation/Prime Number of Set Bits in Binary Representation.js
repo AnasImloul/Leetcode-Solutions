@@ -1,3 +1,4 @@
+// Runtime: 128 ms (Top 86.90%) | Memory: 42.1 MB (Top 96.43%)
 var countPrimeSetBits = function(left, right) {
   let ans = 0;
 
@@ -10,14 +11,14 @@ var countPrimeSetBits = function(left, right) {
       numBits++;
       num &= num-1;
     }
-    
+
     if(numBits === 1) continue outer;
     for(let j = 2; j <= Math.floor(Math.sqrt(numBits)); j++) {
       if(numBits % j === 0) continue outer;
     }
-      
+
     ans++;
   }
-  
+
   return ans;
 };
