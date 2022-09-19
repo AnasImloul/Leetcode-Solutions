@@ -1,4 +1,4 @@
-// Runtime: 87 ms (Top 39.73%) | Memory: 17 MB (Top 32.47%)
+// Runtime: 128 ms (Top 29.33%) | Memory: 17.1 MB (Top 36.21%)
 class Solution {
 public:
     static bool myfunction(vector<int>& a, vector<int>& b){
