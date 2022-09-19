@@ -1,5 +1,6 @@
+// Runtime: 134 ms (Top 50.88%) | Memory: 46.8 MB (Top 94.74%)
 const RED = "red";
-const BLUE  = "blue";
+const BLUE = "blue";
 
 function mapAllEdges(edges) {
     const map = new Map();
@@ -37,7 +38,7 @@ function bfs(color, redNodeMap, blueNodeMap, result) {
 }
 
 function shortestPath(redEdges, blueEdges, color, result) {
-    const redNodeMap = mapAllEdges(redEdges);    
+    const redNodeMap = mapAllEdges(redEdges);
     const blueNodeMap = mapAllEdges(blueEdges);
     bfs(color, redNodeMap, blueNodeMap, result);
 }
