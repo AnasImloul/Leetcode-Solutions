@@ -1,9 +1,10 @@
+// Runtime: 252 ms (Top 66.67%) | Memory: 50.7 MB (Top 73.33%)
 /**
  * @param {character[][]} grid
  * @return {number}
  */
 var minPushBox = function(grid) {
-	// common info & utils
+    // common info & utils
     const m = grid.length
     const n = grid[0].length
     const dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]]
@@ -12,7 +13,7 @@ var minPushBox = function(grid) {
     const validate = ([x, y]) => x >= 0 && y >= 0 && x < m && y < n
     const getKey = ([x, y]) => x * n + y
 
-	// find all player, ball, target, and free cells
+    // find all player, ball, target, and free cells
     const init = () => {
         let player
         let ball
@@ -39,7 +40,7 @@ var minPushBox = function(grid) {
     const { player, ball, target, freeSet } = init()
     const targetKey = getKey(target)
 
-	// detect whether two cells are connected
+    // detect whether two cells are connected
     const connCache = new Map() // [x,y,x2,y2,x3,y3] => boolean
     const getConnKey = (a, b, ball) => {
         if (
@@ -88,7 +89,7 @@ var minPushBox = function(grid) {
         return false
     }
 
-	// solve the game
+    // solve the game
     const getStateKey = ([x, y], [xx, yy]) => [x, y, xx, yy].join(',') // ball, player
     const stateCache = new Set() // Set<stateKey>
     let queue = [[ball, player]]
