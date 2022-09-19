@@ -1,4 +1,5 @@
-// time complexity: 
+// Runtime: 65 ms (Top 100.00%) | Memory: 42.7 MB (Top 47.37%)
+// time complexity:
 // while loop is - o(n) beacuse we can potentially get to n with nums array full of ones and we will pass on each of them
 // in some cases it will hit o(logn) if the nums array is pretty empty
 var minPatches = function(nums, n) {
