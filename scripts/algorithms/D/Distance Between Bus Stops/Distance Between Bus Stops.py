@@ -1,3 +1,4 @@
+# Runtime: 99 ms (Top 16.24%) | Memory: 15 MB (Top 12.33%)
 class Solution:
     def distanceBetweenBusStops(self, distance: List[int], start: int, destination: int) -> int:
         total = sum(distance)
