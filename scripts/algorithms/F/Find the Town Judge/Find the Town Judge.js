@@ -1,3 +1,4 @@
+// Runtime: 207 ms (Top 21.58%) | Memory: 50.5 MB (Top 79.28%)
 var findJudge = function(n, trust) {
     const length = trust.length;
     let possibleJudge = [], judgeMap = new Map(), value, judge = -1;
