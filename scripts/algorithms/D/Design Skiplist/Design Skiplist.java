@@ -1,3 +1,4 @@
+// Runtime: 324 ms (Top 17.56%) | Memory: 57.1 MB (Top 16.13%)
 class Skiplist {
 
         public static final int MAX_LEVEL = 4;
@@ -18,34 +19,34 @@ class Skiplist {
             //init new SkipList with defined level
             //Firstly, create the root level (level = 0) entry for left (min) and right (max)
             // and linked it
-            //          LEFT <------------------------------------------------> RIGHT
+            // LEFT <------------------------------------------------> RIGHT
             SkipListEntry left = new SkipListEntry(Integer.MIN_VALUE, Integer.MIN_VALUE);
             SkipListEntry right = new SkipListEntry(Integer.MAX_VALUE, Integer.MAX_VALUE);
             left.right = right;
             right.left = left;
 
             // After, we can define left and right as the head and tail nodes
-            //   HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
+            // HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
             this.head = left;
             this.tail = right;
 
             // Next, we can define left and right nodes for other levels and linked it
             // 0 HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
-            //            ^                                                  ^
-            //            |                                                  |
-            //            v                                                  v
+            // ^ ^
+            // | |
+            // v v
             // 1 HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
-            //            ^                                                  ^
-            //            |                                                  |
-            //            v                                                  v
+            // ^ ^
+            // | |
+            // v v
             // 2 HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
-            //            ^                                                  ^
-            //            |                                                  |
-            //            v                                                  v
+            // ^ ^
+            // | |
+            // v v
             // 3 HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
-            //            ^                                                  ^
-            //            |                                                  |
-            //            v                                                  v
+            // ^ ^
+            // | |
+            // v v
             // N HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
             for (int i = 1; i < this.levels; i++) {
                 left.down = new SkipListEntry(
