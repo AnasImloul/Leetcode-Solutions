@@ -1,3 +1,4 @@
+# Runtime: 631 ms (Top 87.94%) | Memory: 14.8 MB (Top 94.52%)
 class Solution:
     def minFlips(self, s: str) -> int:
         prev = 0
