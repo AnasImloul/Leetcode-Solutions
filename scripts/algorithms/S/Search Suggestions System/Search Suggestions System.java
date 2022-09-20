@@ -1,13 +1,14 @@
-class Solution 
+// Runtime: 68 ms (Top 48.70%) | Memory: 45.5 MB (Top 96.95%)
+class Solution
 {
-    public List<List<String>> suggestedProducts(String[] products, String searchWord) 
+    public List<List<String>> suggestedProducts(String[] products, String searchWord)
     {
         PriorityQueue<String> pq= new PriorityQueue<String>();
-        List<List<String>> res= new  LinkedList<List<String>>();
+        List<List<String>> res= new LinkedList<List<String>>();
         List<String> segment= new LinkedList<String>();
         for(int i=0;i<products.length;i++)
             pq.offer(products[i]);
-        
+
         for(int j=0;j<searchWord.length();j++)
         {
             segment= new LinkedList<String>();
