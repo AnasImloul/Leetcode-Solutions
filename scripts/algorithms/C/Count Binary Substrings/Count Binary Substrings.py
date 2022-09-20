@@ -1,3 +1,4 @@
+# Runtime: 609 ms (Top 8.10%) | Memory: 14.5 MB (Top 82.48%)
 class Solution:
     def countBinarySubstrings(self, s: str) -> int:
         n = len(s)
