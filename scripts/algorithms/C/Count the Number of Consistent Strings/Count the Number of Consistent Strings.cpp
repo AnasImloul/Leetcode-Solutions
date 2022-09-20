@@ -1,3 +1,4 @@
+// Runtime: 122 ms (Top 32.58%) | Memory: 30.1 MB (Top 90.27%)
 class Solution {
 public:
     int countConsistentStrings(string allowed, vector<string>& words) {
