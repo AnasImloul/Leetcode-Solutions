@@ -1,13 +1,14 @@
+# Runtime: 61 ms (Top 84.84%) | Memory: 14 MB (Top 37.55%)
 class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
-        
+
         # use memoization
         def inf():
             return float('inf')
         mins = collections.defaultdict(inf)
-        
+
         depth = 0
-        
+
         # use top-down approach to recursively place squares
         # hL = height of horizontal leg of the "L" shape
         # vL = width of vertical leg of any "L" shape
@@ -17,9 +18,9 @@ class Solution:
             # trim problems that are too deep
             if ((n, m, n, m) in mins) and (depth > mins[(n, m, n, m)]):
                 return float('inf')
-            
+
             depth += 1
-            
+
             # trim empty legs
             if hL == 0:
                 jj = vL
@@ -31,12 +32,12 @@ class Solution:
             if ii > jj:
                 ii, jj, hL, vL = jj, ii, vL, hL
 
-            # print(f'{" "*(depth)}minSquares({ii}, {jj}, {hL}, {vL}) :: executing.') 
-            
+            # print(f'{" "*(depth)}minSquares({ii}, {jj}, {hL}, {vL}) :: executing.')
+
             # don't recaculate overlapping subproblems
             if (ii, jj, hL, vL) not in mins:
                 # print(f'{" "*(depth+1)}calculating a new value.')
-                
+
                 # ============
                 # calculate new subproblem min based on shape
                 # ============
@@ -48,7 +49,7 @@ class Solution:
                 # deal with rectangles
                 elif (ii == hL) and (jj == vL):
                     # cut a series of consecutively smaller squares
-                    # from corner and recursively find 
+                    # from corner and recursively find
                     # the minSquares of each new L-shape
                     # print(f'{" "*(depth+2)}Found a rectangle.')
                     for length in range (ii, min(ii//2, jj//2), -1):
@@ -68,7 +69,7 @@ class Solution:
                     j = jj
                     h = hL
                     v = vL
-                    if   hL < ii <= vL:
+                    if hL < ii <= vL:
                         # cut from right
                         # print(f'{" "*(depth+2)}Cutting from right.')
                         v -= ii
@@ -103,19 +104,18 @@ class Solution:
                     mins[(ii, jj, hL, vL)] = min(
                         mins[(ii, jj, hL, vL)],
                         minSquares(i, j, h, v) + 1
-                    )                    
-                    
+                    )
+
                     # print(f'{" "*(depth+1)}Final L-shape mins({ii}, {jj}, {hL}, {vL}) = {mins[(n, m, hL, vL)]}')
                     pass
-                    
+
             depth -= 1
 
-            
             # return current min
             return mins[(ii, jj, hL, vL)]
-        
+
         result = minSquares(n, m, n, m)
         # print(f'mins = {mins}')
         # print(f'result = {result}')
-        
+
         return result
