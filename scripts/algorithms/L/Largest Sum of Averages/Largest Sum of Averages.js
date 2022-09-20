@@ -1,3 +1,4 @@
+// Runtime: 124 ms (Top 33.33%) | Memory: 44.8 MB (Top 33.33%)
 /**
  * @param {number[]} nums
  * @param {number} k
@@ -15,10 +16,10 @@ var largestSumOfAverages = function(nums, k) {
     for (let i = 1; i < len; i++) {
         sum[i] = sum[i - 1] + nums[i];
     }
-    
+
     // set dynamic programming
     const dp = new Array(k + 1).fill("").map(() => new Array(len).fill(0));
-    
+
     // according to the meaning of the problem, set the value of dp
     for (let i = 0; i < len; i++) {
         dp[1][i] = sum[i] / (i + 1);
@@ -33,7 +34,7 @@ var largestSumOfAverages = function(nums, k) {
             }
         }
     }
-    
+
     // result
     return dp[k][len - 1];
 };
