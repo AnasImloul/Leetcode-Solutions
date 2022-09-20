@@ -1,3 +1,4 @@
+// Runtime: 339 ms (Top 60.98%) | Memory: 67.8 MB (Top 76.72%)
 class Solution {
 public:
     vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
