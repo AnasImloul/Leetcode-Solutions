@@ -1,3 +1,4 @@
+// Runtime: 158 ms (Top 24.60%) | Memory: 46.4 MB (Top 75.40%)
 var snakesAndLadders = function(board) {
     let n = board.length;
   let seen = new Set();
