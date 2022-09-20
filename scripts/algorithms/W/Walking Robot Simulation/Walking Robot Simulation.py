@@ -1,3 +1,4 @@
+# Runtime: 970 ms (Top 9.86%) | Memory: 20.6 MB (Top 59.47%)
 class Solution:
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         obs = set(tuple(o) for o in obstacles)
