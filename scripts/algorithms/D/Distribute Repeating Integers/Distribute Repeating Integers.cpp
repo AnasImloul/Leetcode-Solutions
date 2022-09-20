@@ -1,3 +1,4 @@
+// Runtime: 1691 ms (Top 10.64%) | Memory: 76.9 MB (Top 63.83%)
 class Solution {
 public:
     bool solve(vector<int>&q, map<int,int>&count, int idx){
@@ -22,6 +23,6 @@ public:
         }
         sort(quantity.begin(),quantity.end(),greater<int>());
         return solve(quantity,count,0);
-        
+
     }
 };
