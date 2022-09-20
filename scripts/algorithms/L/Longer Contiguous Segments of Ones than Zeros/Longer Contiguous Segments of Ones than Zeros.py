@@ -1,3 +1,4 @@
+# Runtime: 47 ms (Top 65.12%) | Memory: 13.9 MB (Top 66.60%)
 class Solution:
     def checkZeroOnes(self, s: str) -> bool:
         s1 = s.split('0')
