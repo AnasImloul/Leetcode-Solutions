@@ -1,3 +1,4 @@
+// Runtime: 715 ms (Top 57.14%) | Memory: 85.7 MB (Top 42.86%)
 var longestObstacleCourseAtEachPosition = function(obstacles) {
     var n = obstacles.length;
     var lis = [];
