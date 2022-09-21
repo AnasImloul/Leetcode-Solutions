@@ -1,3 +1,4 @@
+// Runtime: 104 ms (Top 17.42%) | Memory: 41.6 MB (Top 89.39%)
 /**
  * @param {number[]} rec1
  * @param {number[]} rec2
