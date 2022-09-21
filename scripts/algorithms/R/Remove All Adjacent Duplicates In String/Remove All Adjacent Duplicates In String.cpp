@@ -1,3 +1,4 @@
+// Runtime: 74 ms (Top 29.17%) | Memory: 11.6 MB (Top 27.11%)
 class Solution {
 public:
     stack<char>st;
