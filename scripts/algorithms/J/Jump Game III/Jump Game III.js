@@ -1,3 +1,4 @@
+// Runtime: 84 ms (Top 85.29%) | Memory: 51.6 MB (Top 46.69%)
 var canReach = function(arr, start) {
     const N = arr.length;
     const visited = new Set();
@@ -10,7 +11,7 @@ var canReach = function(arr, start) {
 
         for (const node of nodes) {
             const jump = arr[node];
-                
+
             if (jump === 0) {
                 return true;
             }
@@ -30,11 +31,11 @@ var canReach = function(arr, start) {
                 newNodes.push(newNode);
             }
         }
-        
+
         if (newNodes.length > 0) {
             queue.push(newNodes);
         }
     }
-    
+
     return false;
 };
