@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 5.8 MB (Top 87.89%)
 class Solution {
 public:
     int maximumSwap(int num) {
@@ -12,7 +13,7 @@ public:
                 maxIdx=i;
                 continue;
             }
-            
+
             if(st_n[i]<maxNum)
             {
                 leftidx=i;
@@ -21,9 +22,8 @@ public:
         }
         if(leftidx==-1)
             return num;
-        
+
         swap(st_n[leftidx],st_n[rightidx]);
         return stoi(st_n);
     }
 };
-
