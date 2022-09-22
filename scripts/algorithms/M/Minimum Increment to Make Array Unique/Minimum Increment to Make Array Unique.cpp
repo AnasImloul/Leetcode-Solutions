@@ -1,3 +1,4 @@
+// Runtime: 363 ms (Top 33.60%) | Memory: 65.6 MB (Top 68.46%)
 class Solution {
 public:
     int minIncrementForUnique(vector<int>& nums) {
