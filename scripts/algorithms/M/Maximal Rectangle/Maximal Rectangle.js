@@ -1,3 +1,4 @@
+// Runtime: 186 ms (Top 17.87%) | Memory: 45.1 MB (Top 72.77%)
 var maximalRectangle = function(matrix) {
     const m = matrix.length;
     const n = matrix[m - 1].length;
