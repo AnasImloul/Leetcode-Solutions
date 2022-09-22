@@ -1,3 +1,4 @@
+// Runtime: 60 ms (Top 31.22%) | Memory: 20.4 MB (Top 66.96%)
 class Solution {
 public:
     int maxProductDifference(vector<int>& nums) {
@@ -9,7 +10,7 @@ public:
         int min2=INT_MAX;
         for(int i=0;i<nums.size();i++)
         {
-            
+
             if(nums[i]>max1)
             {
                 //assign the second max to max2
@@ -21,7 +22,7 @@ public:
                 //it can become second max
                 max2= nums[i];
             }
-            
+
             //check for the minimum
             if(nums[i]<min1)
             {
