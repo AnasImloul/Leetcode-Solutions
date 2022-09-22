@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 78.39%) | Memory: 6.3 MB (Top 85.17%)
 class Solution {
 public:
     string addBinary(string a, string b) {
