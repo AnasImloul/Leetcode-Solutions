@@ -1,6 +1,7 @@
+// Runtime: 3 ms (Top 81.15%) | Memory: 6.2 MB (Top 80.00%)
 class Solution {
 public:
-    int countSubstrings(string s, string t) 
+    int countSubstrings(string s, string t)
     {
         int n=s.size();
         int m=t.size();
