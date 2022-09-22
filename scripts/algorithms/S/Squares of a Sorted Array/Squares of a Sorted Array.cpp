@@ -1,3 +1,4 @@
+// Runtime: 96 ms (Top 8.36%) | Memory: 26 MB (Top 33.66%)
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
