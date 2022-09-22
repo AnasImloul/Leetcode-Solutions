@@ -1,3 +1,4 @@
+# Runtime: 755 ms (Top 91.19%) | Memory: 25.4 MB (Top 98.78%)
 class Solution(object):
     def maxProbability(self, n, edges, succProb, start, end):
         adj=[[] for i in range(n)]
