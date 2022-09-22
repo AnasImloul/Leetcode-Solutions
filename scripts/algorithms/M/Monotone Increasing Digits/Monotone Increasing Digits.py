@@ -1,3 +1,4 @@
+# Runtime: 43 ms (Top 69.04%) | Memory: 13.9 MB (Top 20.57%)
 class Solution:
     def monotoneIncreasingDigits(self, n: int) -> int:
         num = list(str(n))
