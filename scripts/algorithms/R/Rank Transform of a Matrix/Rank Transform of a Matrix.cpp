@@ -1,3 +1,4 @@
+// Runtime: 755 ms (Top 45.61%) | Memory: 71.2 MB (Top 85.38%)
 class DisjointSet {
 private:
     vector<int> parent;
@@ -41,15 +42,15 @@ public:
         int m = matrix.size();
         int n = matrix[0].size();
         vector<vector<int>> answer(m, vector<int>(n, 1));
-        
+
         // mp:(sorted) value to positions
-        map<int, vector<pair<int, int>>> mp; 
+        map<int, vector<pair<int, int>>> mp;
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
                 mp[matrix[i][j]].push_back(make_pair(i, j));
             }
         }
-        
+
         vector<int> rowMax(m, 0);
         vector<int> colMax(n, 0);
         DisjointSet* disjointSet = new DisjointSet(m + n);
@@ -58,7 +59,7 @@ public:
             disjointSet->reset();
             group2positions.clear();
             group2positions.resize(m + n);
-            
+
             // grouping positions with the same value by col and row
             for (auto& [x, y] : element.second) {
                 disjointSet->merge(x, m + y);
@@ -67,7 +68,7 @@ public:
             for (auto& [x, y] : element.second) {
                 group2positions[disjointSet->find(x)].push_back(make_pair(x, y));
             }
-            
+
             // for each group, assign the ranking
             for (auto& group : group2positions) {
                 int rank = 1;
