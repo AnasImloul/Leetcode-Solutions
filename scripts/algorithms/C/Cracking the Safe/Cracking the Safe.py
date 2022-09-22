@@ -1,10 +1,11 @@
+# Runtime: 121 ms (Top 27.97%) | Memory: 27.9 MB (Top 17.84%)
 class Solution:
     def crackSafe(self, n: int, k: int) -> str:
         seen=set()
         def dfs(s,last_n):
             if len(seen)==(k**n): return s
-            if len(last_n)<n:            # If len<n,keep adding zeros as and valid string can be returned
-                if len(s+"0")==n: 
+            if len(last_n)<n: # If len<n,keep adding zeros as and valid string can be returned
+                if len(s+"0")==n:
                     seen.add(s+"0")
                 ans=dfs(s+"0",last_n+"0")
                 return ans
