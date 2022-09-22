@@ -1,6 +1,7 @@
+// Runtime: 153 ms (Top 12.53%) | Memory: 26.2 MB (Top 15.03%)
 class Solution {
 public:
-    int minFlips(string s) 
+    int minFlips(string s)
     {
      int n = s.size();
      string ss = s+s;
