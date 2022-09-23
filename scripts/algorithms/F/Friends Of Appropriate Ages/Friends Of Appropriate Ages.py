@@ -1,6 +1,7 @@
+# Runtime: 936 ms (Top 28.73%) | Memory: 14.9 MB (Top 52.36%)
 class Solution:
     """
-    approach: 
+    approach:
     we can try solving this problem by finding the valid age group for each age
     sort the array in descending order
     iterate from right to left
@@ -18,7 +19,7 @@ class Solution:
             return self.binary_search(arr, low, mid-1, value)
         else:
             return self.binary_search(arr, mid+1, high, value)
-        
+
     def numFriendRequests(self, ages: List[int]) -> int:
         ages = sorted(ages)
         total_count = 0
