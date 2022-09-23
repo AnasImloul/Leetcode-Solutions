@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 5.9 MB (Top 98.83%)
 class Solution {
 public:
     int numOfArrays(int n, int m, int k) {
