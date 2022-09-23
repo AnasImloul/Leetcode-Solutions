@@ -1,3 +1,4 @@
+# Runtime: 4205 ms (Top 48.47%) | Memory: 237.6 MB (Top 7.47%)
 class Solution:
     def longestDupSubstring(self, s: str) -> str:
         """
