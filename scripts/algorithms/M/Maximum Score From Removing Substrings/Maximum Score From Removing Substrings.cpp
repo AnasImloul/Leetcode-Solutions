@@ -1,6 +1,7 @@
+// Runtime: 345 ms (Top 11.27%) | Memory: 21.5 MB (Top 63.27%)
 class Solution {
 public:
-    
+
     int helper(string&str, char a, char b){
         int count =0;
         stack<char> st;
@@ -21,7 +22,7 @@ public:
         reverse(str.begin(),str.end());
         return count;
     }
-    
+
     int maximumGain(string s, int x, int y) {
         int ca=0,cb=0;
         if(x>y) {
