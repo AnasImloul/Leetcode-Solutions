@@ -1,3 +1,4 @@
+# Runtime: 1961 ms (Top 83.96%) | Memory: 47.2 MB (Top 5.66%)
 MAX_N = 2*10**4
 MAX_BIT = MAX_N.bit_length()
 class MajorityChecker:
