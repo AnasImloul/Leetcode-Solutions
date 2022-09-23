@@ -1,3 +1,4 @@
+# Runtime: 325 ms (Top 99.70%) | Memory: 33.7 MB (Top 29.42%)
 class Solution:
     def arrayRankTransform(self, arr: List[int]) -> List[int]:
         arr_set = list(sorted(set(arr)))
