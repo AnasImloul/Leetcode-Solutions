@@ -1,3 +1,4 @@
+# Runtime: 43 ms (Top 68.00%) | Memory: 14 MB (Top 33.92%)
 class Solution(object):
     def wordBreak(self, s, wordDict):
         """
@@ -5,7 +6,7 @@ class Solution(object):
         :type wordDict: List[str]
         :rtype: List[str]
         """
-        
+
         dic = defaultdict(list)
         for w in wordDict:
             dic[w[0]].append(w)
@@ -13,20 +14,14 @@ class Solution(object):
         def recursion(idx , ans):
             if idx >= len(s):
                 result.append(" ".join(ans))
-                return 
-            
+                return
+
             for w in dic[s[idx]]:
                 if s[idx : idx+len(w)] == w:
                     ans.append(w)
                     recursion(idx+len(w), ans)
                     ans.pop()
-            
-            return 
+
+            return
         recursion(0, [])
-        return result 
-        
-        
-                    
-                
-                
-        
+        return result
