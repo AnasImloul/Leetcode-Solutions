@@ -1,3 +1,4 @@
+// Runtime: 39 ms (Top 48.99%) | Memory: 14.4 MB (Top 36.44%)
 class Solution {
 public:
     vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
@@ -27,8 +28,6 @@ public:
         if(res.size()==numCourses)
             return res;
         return {};
-        
-        
+
     }
 };
-
