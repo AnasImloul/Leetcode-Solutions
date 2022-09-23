@@ -1,8 +1,8 @@
+# Runtime: 2359 ms (Top 39.76%) | Memory: 44.3 MB (Top 93.27%)
 from math import ceil, log2
 from typing import List
 
 NO_PARENT = -1
-
 
 class TreeAncestor:
     def __init__(self, n: int, parent: List[int]):
