@@ -1,3 +1,4 @@
+# Runtime: 47 ms (Top 88.16%) | Memory: 16.3 MB (Top 23.73%)
 class Solution(object):
     def maxDepth(self, root):
         """
@@ -8,7 +9,7 @@ class Solution(object):
         depths = []
         self.handler(root, result, depths)
         return max(depths)
-    
+
     def handler(self, root, result, depths):
         if root:
             result += 1
