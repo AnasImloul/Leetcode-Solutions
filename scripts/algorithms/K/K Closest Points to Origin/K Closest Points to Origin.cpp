@@ -1,3 +1,4 @@
+// Runtime: 470 ms (Top 43.73%) | Memory: 66.6 MB (Top 60.32%)
 class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k)
@@ -22,6 +23,3 @@ public:
         return ans;
     }
 };
-
-
-
