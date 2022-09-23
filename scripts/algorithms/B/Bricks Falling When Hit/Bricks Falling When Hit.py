@@ -1,3 +1,4 @@
+# Runtime: 7285 ms (Top 5.13%) | Memory: 29.8 MB (Top 5.13%)
 from collections import defaultdict
 
 class Solution:
@@ -35,7 +36,7 @@ class Solution:
                         union((r, c),(r+dr, c+dc))
                 if r == 0:
                     union((r,c),(row,col))
-        res = [0]*len(hits)            
+        res = [0]*len(hits)
         for i in range(len(hits)-1,-1,-1):
             r, c = hits[i]
             if (r,c) in empty:
@@ -50,4 +51,4 @@ class Solution:
             nextbricks = sz[find((row,col))]
             if nextbricks > curbricks:
                 res[i] = nextbricks - curbricks - 1
-        return res           
+        return res
