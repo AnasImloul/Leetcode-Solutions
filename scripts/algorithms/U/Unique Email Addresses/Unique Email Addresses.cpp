@@ -1,6 +1,7 @@
+// Runtime: 22 ms (Top 96.52%) | Memory: 13.7 MB (Top 81.90%)
 class Solution {
 public:
-    int numUniqueEmails(vector<string>& emails) 
+    int numUniqueEmails(vector<string>& emails)
     {
         unordered_set<string> st;
         for(auto &e:emails)
@@ -18,7 +19,7 @@ public:
             st.insert(clean_email);
         }
         return st.size();
-        
+
     }
 };
 //if you like the solution plz upvote.
