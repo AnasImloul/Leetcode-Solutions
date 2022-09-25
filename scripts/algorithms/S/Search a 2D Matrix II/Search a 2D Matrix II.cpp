@@ -1,3 +1,4 @@
+// Runtime: 548 ms (Top 8.60%) | Memory: 14.8 MB (Top 88.19%)
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
