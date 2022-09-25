@@ -1,9 +1,10 @@
+// Runtime: 121 ms (Top 79.59%) | Memory: 44.5 MB (Top 97.46%)
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
+ * this.val = (val===undefined ? 0 : val)
+ * this.left = (left===undefined ? null : left)
+ * this.right = (right===undefined ? null : right)
  * }
  */
 /**
@@ -24,6 +25,6 @@ var buildTree = function(preorder, inorder) {
         root.right = create(mid + 1, inorderEnd);
         return root;
     }
-    
-    return create(0, inorder.length -1); 
+
+    return create(0, inorder.length -1);
 };
