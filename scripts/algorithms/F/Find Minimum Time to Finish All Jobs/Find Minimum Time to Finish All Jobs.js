@@ -1,6 +1,7 @@
+// Runtime: 7724 ms (Top 6.25%) | Memory: 48.8 MB (Top 25.00%)
 var minimumTimeRequired = function(jobs, k) {
     let n=jobs.length, maskSum=[...Array(1<<n)].map(d=>0)
-    for(let mask=0;mask<(1<<n);mask++)  //pre-store the sums of every mask
+    for(let mask=0;mask<(1<<n);mask++) //pre-store the sums of every mask
         for(let i=0;i<n;i++)
             maskSum[mask]+=Number(((1<<i) & mask)!=0)*jobs[i]
     let dp=[...Array(k+1)].map(d=>[...Array(1<<n)].map(d=>Infinity))
