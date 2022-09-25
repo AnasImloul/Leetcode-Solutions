@@ -1,3 +1,4 @@
+# Runtime: 75 ms (Top 97.76%) | Memory: 14 MB (Top 88.55%)
 class Solution(object):
     def groupThePeople(self, groupSizes):
         """
