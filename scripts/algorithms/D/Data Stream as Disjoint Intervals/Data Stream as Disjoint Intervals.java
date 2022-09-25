@@ -1,3 +1,4 @@
+// Runtime: 169 ms (Top 23.71%) | Memory: 73.9 MB (Top 52.59%)
 class SummaryRanges {
 
     Map<Integer, int[]> st;
@@ -49,9 +50,9 @@ class SummaryRanges {
             }
         }
 
-		seen.addAll(pending);
+        seen.addAll(pending);
         pending.clear(); // remember to clear the pending list.
-		
+
         if (!addSet.isEmpty()){ // IF there is no new intervals to insert, we SKIP this.
             List<int[]> addList = new ArrayList<>(addSet);
             addList.sort(Comparator.comparingInt(o -> o[0]));
