@@ -1,3 +1,4 @@
+// Runtime: 6 ms (Top 79.92%) | Memory: 42 MB (Top 31.89%)
 class Solution {
     /** Closest cost result */
     int closestCost = Integer.MAX_VALUE;
@@ -17,7 +18,7 @@ class Solution {
             closestCostDiff = costDiff;
             closestCost = cost;
         }
-        
+
         // Since toppings are all positive cost, stop dfs early if cost exceeds target
         if (toppingIndex >= toppingCosts.length || cost > target)
             return;
