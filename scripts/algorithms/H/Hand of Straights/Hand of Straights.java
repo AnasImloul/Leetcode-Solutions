@@ -1,11 +1,12 @@
+// Runtime: 96 ms (Top 31.30%) | Memory: 61.2 MB (Top 7.04%)
 class Solution {
     public boolean isNStraightHand(int[] hand, int groupSize) {
         if(hand.length % groupSize != 0)
             return false;
-        
-        Map<Integer, Integer> map = new HashMap<>();        
+
+        Map<Integer, Integer> map = new HashMap<>();
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        
+
         for(int card : hand){
             if(map.containsKey(card))
                 map.put(card, map.get(card) + 1);
@@ -14,7 +15,7 @@ class Solution {
                 minHeap.add(card);
             }
         }
-        
+
         while(!minHeap.isEmpty()){
             int min = minHeap.peek();
             for(int i=min; i < min + groupSize; i++){
@@ -25,7 +26,7 @@ class Solution {
                     if(minHeap.peek() != i)
                         return false;
                     minHeap.poll();
-                }   
+                }
             }
         }
         return true;
