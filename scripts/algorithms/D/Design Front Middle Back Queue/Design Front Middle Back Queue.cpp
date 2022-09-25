@@ -1,14 +1,15 @@
+// Runtime: 112 ms (Top 10.29%) | Memory: 20 MB (Top 68.57%)
 struct Node {
     int val;
     Node *prev, *next;
     Node() {
         val = 0, prev = next = NULL;
     }
-    
+
     Node(int x) {
         val = x, prev = next = NULL;
     }
-    
+
     Node(int x, Node *p, Node *n) {
         val = x, prev = p, next = n;
     }
@@ -22,7 +23,7 @@ public:
         head = NULL;
         size = 0;
     }
-    
+
     void pushFront(int val) {
         head = new Node(val, NULL, head);
         if(head->next) {
@@ -30,19 +31,19 @@ public:
         }
         size++;
     }
-    
+
     void pushMiddle(int val) {
         if(size == 0) {
             head = new Node(val);
             size++;
             return;
         }
-        
+
         if(size == 1) {
             pushFront(val);
             return;
         }
-        
+
         Node *ptr = NULL;
         int n = size/2;
         while(n--) {
@@ -51,7 +52,7 @@ public:
             else
                 ptr = ptr->next;
         }
-        
+
         // Even or Odd push to next of ptr
         Node *next = ptr->next;
         ptr->next = new Node(val, ptr, next);
@@ -59,7 +60,7 @@ public:
             next->prev = ptr->next;
         size++;
     }
-    
+
     void pushBack(int val) {
         Node *ptr = head;
         if(ptr == NULL)
@@ -72,7 +73,7 @@ public:
         }
         size++;
     }
-    
+
     int popFront() {
         if(size == 0)
             return -1;
@@ -83,18 +84,18 @@ public:
         size--;
         return val;
     }
-    
+
     int popMiddle() {
         if(size == 0)
             return -1;
-        
+
         if(size == 1) {
             int val = head->val;
             head = NULL;
             size--;
             return val;
         }
-        
+
         int n = size/2;
         Node *ptr = NULL;
         while(n--) {
@@ -103,10 +104,10 @@ public:
             else
                 ptr = ptr->next;
         }
-        
+
         int val = -1;
         Node *temp = NULL;
-        
+
         if(size & 1) { // Odd size delete ptr->next
             val = ptr->next->val;
             temp = ptr->next->next;
@@ -127,7 +128,7 @@ public:
         size--;
         return val;
     }
-    
+
     int popBack() {
         if(size == 0)
             return -1;
@@ -137,12 +138,12 @@ public:
             size = 0;
             return val;
         }
-        
+
         Node *ptr = head;
         while(ptr->next) {
             ptr = ptr->next;
         }
-        
+
         if(ptr->prev)
             ptr->prev->next = NULL;
         size--;
