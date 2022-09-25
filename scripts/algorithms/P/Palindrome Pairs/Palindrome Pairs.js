@@ -1,4 +1,5 @@
-var palindromePairs = function(words) {  
+// Runtime: 1780 ms (Top 68.62%) | Memory: 64.1 MB (Top 88.11%)
+var palindromePairs = function(words) {
     let wmap = new Map(), ans = []
     for (let i = 0; i < words.length; i++)
         wmap.set(words[i], i)
