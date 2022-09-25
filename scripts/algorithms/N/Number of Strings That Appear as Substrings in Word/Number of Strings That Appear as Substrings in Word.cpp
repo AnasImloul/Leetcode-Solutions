@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 84.96%) | Memory: 8.8 MB (Top 65.84%)
 class Solution {
 public:
     int numOfStrings(vector<string>& patterns, string word) {
