@@ -1,3 +1,4 @@
+// Runtime: 136 ms (Top 98.52%) | Memory: 57.8 MB (Top 75.56%)
 /**
  * @param {number} n
  * @param {number[][]} connections
