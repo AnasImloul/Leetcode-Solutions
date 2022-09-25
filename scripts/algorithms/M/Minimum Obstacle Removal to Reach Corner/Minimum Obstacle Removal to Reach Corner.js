@@ -1,3 +1,4 @@
+// Runtime: 1576 ms (Top 35.29%) | Memory: 109.4 MB (Top 35.29%)
 /**
  * @param {number[][]} grid
  * @return {number}
@@ -12,7 +13,7 @@ var minimumObstacles = function(grid) {
         }
     }
     return bfs(0,0);
-    
+
     function bfs(row,col){
         let queue=[];
         distance[row][col]=0;
@@ -34,7 +35,7 @@ var minimumObstacles = function(grid) {
                         queue.push([i,j]);
                         distance[i][j]=dist;
                     }
-                    
+
                 }
             }
         }
