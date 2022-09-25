@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 55.01%) | Memory: 41.3 MB (Top 44.82%)
 class Solution {
     public int largestInteger(int num) {
         PriorityQueue<Integer> opq = new PriorityQueue<>();
