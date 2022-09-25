@@ -1,3 +1,4 @@
+// Runtime: 90 ms (Top 75.46%) | Memory: 69.9 MB (Top 33.86%)
 class Engineer {
     int speed, efficiency;
     Engineer(int speed, int efficiency) {
