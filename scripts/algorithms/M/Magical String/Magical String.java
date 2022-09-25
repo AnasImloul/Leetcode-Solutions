@@ -1,3 +1,4 @@
+// Runtime: 21 ms (Top 32.48%) | Memory: 43.8 MB (Top 21.66%)
 class Solution {
     public int magicalString(int n) {
         if(n <= 3)
@@ -12,17 +13,17 @@ class Solution {
 }
 
 class Magical{
-    
+
     private Deque<Integer> nums;
     private int n;
-    
+
     public Magical(){
         nums = new ArrayDeque<>();
         nums.offerLast(1);
         nums.offerLast(1);
         n = 1;
     }
-    
+
     public int next(){
         if(n-- < 0){
             int c = nums.pollFirst();
