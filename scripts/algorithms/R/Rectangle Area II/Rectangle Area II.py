@@ -1,8 +1,9 @@
+# Runtime: 133 ms (Top 41.78%) | Memory: 13.9 MB (Top 70.89%)
 class SegmentTree:
     def __init__(self, xs):
         #cnts[v] means that the node's interval is active
         self.cnts = defaultdict(int)
-        #total[v] length of active intervals that are contained the node's interval 
+        #total[v] length of active intervals that are contained the node's interval
         self.total = defaultdict(int)
         self.xs = xs
 
@@ -16,13 +17,13 @@ class SegmentTree:
             tm = (tl + tr)//2
             self.update(v*2, tl, tm, l, r, h)
             self.update(v*2+1, tm+1, tr, l, r, h)
-        #node interval is included in the active interval  
+        #node interval is included in the active interval
         if self.cnts[v] > 0:
             self.total[v] = self.xs[tr + 1] - self.xs[tl]
         else:
             self.total[v] = self.total[v*2] + self.total[v*2+1]
         return self.total[v]
-    
+
 class Solution:
     def rectangleArea(self, rectangles):
         #index i means the interval from xs[i] to xs[i+1]
@@ -39,7 +40,7 @@ class Solution:
             area += (y - cur_y) * cur_x_sum
             cur_y = y
             #one index corresponds to one interval, that's why we use xs_i[x2]-1 instead of xs_i[x2]
-            st.update(1, 0,  len(xs) - 1, xs_i[x1], xs_i[x2]-1, open_close)
+            st.update(1, 0, len(xs) - 1, xs_i[x1], xs_i[x2]-1, open_close)
             cur_x_sum = st.total[1]
-            
+
         return area % (10 ** 9 + 7)
