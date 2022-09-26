@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 6.4 MB (Top 25.35%)
 class Solution {
 public:
     int minAddToMakeValid(string s) {
