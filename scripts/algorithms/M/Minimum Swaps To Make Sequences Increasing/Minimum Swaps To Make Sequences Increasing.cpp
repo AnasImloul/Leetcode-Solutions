@@ -1,3 +1,4 @@
+// Runtime: 370 ms (Top 57.12%) | Memory: 107.8 MB (Top 57.19%)
 class Solution {
 public:
     int n;
@@ -30,7 +31,7 @@ public:
         }
         return dp[index][sp]=ans;
     }
-    int minSwap(vector<int>& nums1, vector<int>& nums2) 
+    int minSwap(vector<int>& nums1, vector<int>& nums2)
     {
         memset(dp,-1,sizeof(dp));
         nums1.insert(nums1.begin(),-1);
