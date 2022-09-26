@@ -1,4 +1,4 @@
-// Runtime: 210 ms (Top 78.26%) | Memory: 16.7 MB (Top 74.66%)
+# Runtime: 175 ms (Top 92.56%) | Memory: 16.8 MB (Top 75.67%)
 class Solution:
     def candy(self, ratings: List[int]) -> int:
         n=len(ratings)
