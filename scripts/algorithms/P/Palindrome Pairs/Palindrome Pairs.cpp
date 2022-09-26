@@ -1,6 +1,7 @@
+// Runtime: 2661 ms (Top 8.68%) | Memory: 415.7 MB (Top 73.21%)
 class Solution {
 public:
-   // Maybe I should learn trie!  :'(  this code just beats the time limit !
+   // Maybe I should learn trie! :'( this code just beats the time limit !
     pair<bool,bool> dp[5001][301];
     long long mod = 1011001110001111 , base = 31;
     pair<long long,long long> Hashes[5001];
@@ -29,7 +30,7 @@ public:
                    pw = (pw * base)%mod;
              }
          }
-         set<pair<int,int>> ss; 
+         set<pair<int,int>> ss;
          for(int i=0; i<words.size(); i++) {
               int len = words[i].size();
               long long cur1 = Hashes[i].first;
@@ -44,7 +45,7 @@ public:
                           }else if(pref<0) {
                                ss.insert({i,pos[len][k].second});
                           }
-                    } 
+                    }
               }
               for(int k=0; k<posR[len].size(); k++) {
                     pair<long long,int> nxt = posR[len][k];
@@ -57,8 +58,8 @@ public:
                     }
               }
          }
-        
-        // palindrome + ""  empty  is a  valid pair 
+
+        // palindrome + "" empty is a valid pair
         for(int i=0; i<words.size(); i++) {
              if(words[i].size()==0) {
                  for(int j=0; j<words.size(); j++) {
@@ -74,5 +75,3 @@ public:
         return ans;
     }
 };
-
-
