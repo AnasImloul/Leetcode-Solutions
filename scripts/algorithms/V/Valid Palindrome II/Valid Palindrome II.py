@@ -1,4 +1,4 @@
-// Runtime: 7032 ms (Top 5.01%) | Memory: 643 MB (Top 5.03%)
+# Runtime: 9164 ms (Top 5.04%) | Memory: 645.8 MB (Top 5.21%)
 class Solution:
     def validPalindrome(self, s: str) -> bool:
         has_deleted = False
