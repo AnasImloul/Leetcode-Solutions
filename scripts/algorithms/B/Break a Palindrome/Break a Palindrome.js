@@ -1,3 +1,4 @@
+// Runtime: 96 ms (Top 40.74%) | Memory: 41.7 MB (Top 89.81%)
 var breakPalindrome = function(palindrome) {
     // domain n / 2 k pehlay
     palindrome = palindrome.split('');
