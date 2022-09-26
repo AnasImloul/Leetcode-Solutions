@@ -1,3 +1,4 @@
+// Runtime: 44 ms (Top 25.15%) | Memory: 5.9 MB (Top 73.44%)
 class Solution {
 public:
     bool isPowerOfThree(int n) {
