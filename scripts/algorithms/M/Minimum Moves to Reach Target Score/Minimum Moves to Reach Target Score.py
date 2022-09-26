@@ -1,3 +1,4 @@
+# Runtime: 58 ms (Top 30.40%) | Memory: 14 MB (Top 14.20%)
 class Solution:
     def minMoves(self, target: int, maxDoubles: int) -> int:
         c=0
