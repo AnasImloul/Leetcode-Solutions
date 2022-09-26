@@ -1,19 +1,20 @@
+// Runtime: 837 ms (Top 5.88%) | Memory: 54.6 MB (Top 67.65%)
 var getBiggestThree = function(grid) {
     const m = grid.length;
     const n = grid[0].length;
-    
+
     const set = new Set();
-    
+
     for (let i = 0; i < m; ++i) {
         for (let j = 0; j < n; ++j) {
             let sum = grid[i][j];
-           
+
             set.add(sum)
-            
+
             let len = 1;
             let row = i;
             let col = j;
-            
+
             while (withinBound(row + 1, col - 1)) {
                 ++len;
                 ++row;
@@ -24,11 +25,11 @@ var getBiggestThree = function(grid) {
             }
         }
     }
-    
+
     let max1;
     let max2;
     let max3;
-    
+
     for (const num of set) {
         if (max1 == null || num > max1) {
             max3 = max2;
@@ -45,15 +46,13 @@ var getBiggestThree = function(grid) {
     }
 
     const res = [];
-    
+
     if (max1) res[0] = max1;
     if (max2) res[1] = max2;
     if (max3) res[2] = max3;
-  
+
     return res;
-    
-    
-    
+
     function traverse(destRow, destCol, currRow, currCol, totSum, lenSize, currLen, currDir) {
         if (currRow === destRow && currCol === destCol) {
             set.add(totSum);
@@ -93,8 +92,7 @@ var getBiggestThree = function(grid) {
             traverse(destRow, destCol, currRow - 1, currCol - 1, totSum, lenSize, currLen, "topLeft");
         }
     }
-    
-    
+
     function withinBound(row, col) {
         return row >= 0 && col >= 0 && row < m && col < n;
     }
