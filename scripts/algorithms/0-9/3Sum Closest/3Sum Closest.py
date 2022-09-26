@@ -1,3 +1,4 @@
+# Runtime: 6903 ms (Top 55.05%) | Memory: 16.2 MB (Top 12.59%)
 from math import inf
 
 class Solution:
