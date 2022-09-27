@@ -1,3 +1,4 @@
+// Runtime: 30 ms (Top 53.45%) | Memory: 14 MB (Top 39.66%)
 class Solution {
 public:
     //Idea is to use KMP Longest Prefix Suffix array to match if one array is subarray of another array.
@@ -18,7 +19,7 @@ public:
                 }
                 lps[i] = j;
             }
-            
+
             //Step 2 - Matching
             int j = 0;
             while(index<m){
@@ -40,7 +41,7 @@ public:
             if(j != n)
                 return false;
         }
-        
+
         return true;
     }
 };
