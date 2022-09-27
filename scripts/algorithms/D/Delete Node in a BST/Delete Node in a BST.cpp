@@ -1,9 +1,10 @@
+// Runtime: 73 ms (Top 21.98%) | Memory: 32.7 MB (Top 81.48%)
 class Solution {
 public:
-    
+
     TreeNode *loc;
     TreeNode *par;
-    
+
     TreeNode *smallestbst(TreeNode *root)
     {
         if (root == NULL)
@@ -132,7 +133,7 @@ public:
         loc->right = NULL;
         return root;
     }
-    
+
     TreeNode* deleteNode(TreeNode* root, int key) {
         if(root == NULL) return NULL;
         while(true)
@@ -151,7 +152,7 @@ public:
                 break;
             }
         }
-        
+
         return root;
     }
 };
