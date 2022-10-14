@@ -1,6 +1,7 @@
+// Runtime: 937 ms (Top 48.06%) | Memory: 237.5 MB (Top 19.94%)
 class Solution {
 public:
-    
+
     int merge_count(vector<int> &nums,int s,int e){
         int i;
         int mid = (s+e)/2;
@@ -37,7 +38,7 @@ public:
         }
         return count;
     }
-    
+
     int reverse_count(vector<int> &nums,int s,int e){
         if(s>=e){
             return 0;
@@ -48,7 +49,7 @@ public:
         int s_count = merge_count(nums,s,e);
         return (l_count+r_count+s_count);
     }
-    
+
     int reversePairs(vector<int>& nums) {
         int res = reverse_count(nums,0,nums.size()-1);
         return res;
