@@ -1,3 +1,4 @@
+// Runtime: 150 ms (Top 93.74%) | Memory: 49.8 MB (Top 86.31%)
 struct Task {
     int start, end, profit;
     Task(int s, int e, int p) : start(s), end(e), profit(p) {};
@@ -7,12 +8,12 @@ class Solution {
 public:
     int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
         int n = startTime.size();
-		// sort by ascending end time
+        // sort by ascending end time
         vector<Task> tasks;
         for (int i = 0; i < n; i++) tasks.push_back(Task(startTime[i], endTime[i], profit[i]));
         auto cmp = [] (const Task& t1, const Task& t2) { return t1.end < t2.end; };
         sort(tasks.begin(), tasks.end(), cmp);
-        
+
         vector<int> dp(n, 0);
         dp[0] = tasks[0].profit;
         for (int i = 1; i < n; i++) {
