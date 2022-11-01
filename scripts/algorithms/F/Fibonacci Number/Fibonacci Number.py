@@ -1,4 +1,4 @@
-# Runtime: 66 ms (Top 35.29%) | Memory: 13.8 MB (Top 55.50%)
+# Runtime: 46 ms (Top 80.68%) | Memory: 13.8 MB (Top 55.21%)
 class Solution:
     def fib(self, n: int) -> int:
         fa = [0, 1]
