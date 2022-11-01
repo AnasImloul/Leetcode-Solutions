@@ -1,4 +1,4 @@
-// Runtime: 2 ms (Top 36.92%) | Memory: 42 MB (Top 90.15%)
+// Runtime: 7 ms (Top 8.73%) | Memory: 45 MB (Top 22.93%)
 class Solution {
     public TreeNode lcaDeepestLeaves(TreeNode root) {
         if (root.left == null && root.right == null) return root;
