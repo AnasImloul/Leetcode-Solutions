@@ -1,4 +1,4 @@
-// Runtime: 19 ms (Top 49.77%) | Memory: 74.3 MB (Top 81.61%)
+// Runtime: 20 ms (Top 51.11%) | Memory: 78.2 MB (Top 48.67%)
 /**
  * Definition for singly-linked list.
  * public class ListNode {
