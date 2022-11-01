@@ -1,4 +1,4 @@
-// Runtime: 560 ms (Top 5.11%) | Memory: 54 MB (Top 5.84%)
+// Runtime: 541 ms (Top 5.28%) | Memory: 54.1 MB (Top 5.61%)
 #include <regex>
 
 class Solution {
