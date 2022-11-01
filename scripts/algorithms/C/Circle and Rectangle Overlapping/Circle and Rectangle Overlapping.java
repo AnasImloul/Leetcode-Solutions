@@ -1,5 +1,4 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 41.3 MB (Top 24.68%)
-
+// Runtime: 1 ms (Top 38.18%) | Memory: 41.1 MB (Top 21.82%)
 class Solution
 {
     public boolean checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2)
