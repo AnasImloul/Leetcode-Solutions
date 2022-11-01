@@ -1,3 +1,4 @@
+// Runtime: 9 ms (Top 9.81%) | Memory: 7.4 MB (Top 10.15%)
 class Solution {
 public:
     int minCostToMoveChips(vector<int>& position) {
@@ -8,7 +9,7 @@ public:
                     even++;
                 else
                     odd++;
-            
+
         }
         return min(odd,even);
     }
