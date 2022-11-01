@@ -1,4 +1,4 @@
-// Runtime: 5 ms (Top 57.68%) | Memory: 42.9 MB (Top 39.28%)
+// Runtime: 4 ms (Top 79.86%) | Memory: 42.3 MB (Top 82.62%)
 class Solution {
     public boolean isMatch(String s, String p) {
         if (p == null || p.length() == 0) return (s == null || s.length() == 0);
