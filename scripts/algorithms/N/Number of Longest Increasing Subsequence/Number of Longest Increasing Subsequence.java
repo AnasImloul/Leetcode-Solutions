@@ -1,3 +1,4 @@
+// Runtime: 29 ms (Top 72.27%) | Memory: 44.7 MB (Top 20.08%)
 class Solution {
     public int findNumberOfLIS(int[] nums) {
         int N = nums.length;
