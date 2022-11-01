@@ -1,4 +1,4 @@
-// Runtime: 3 ms (Top 69.08%) | Memory: 7 MB (Top 15.60%)
+// Runtime: 3 ms (Top 69.84%) | Memory: 7 MB (Top 11.11%)
 class Solution
 {
 public:
