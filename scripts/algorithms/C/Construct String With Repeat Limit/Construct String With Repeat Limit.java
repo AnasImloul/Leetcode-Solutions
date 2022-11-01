@@ -1,4 +1,4 @@
-// Runtime: 28 ms (Top 95.86%) | Memory: 64.6 MB (Top 55.86%)
+// Runtime: 35 ms (Top 93.53%) | Memory: 64.8 MB (Top 62.59%)
 class Solution {
     public String repeatLimitedString(String s, int repeatLimit) {
         int[] counter = new int[26];
