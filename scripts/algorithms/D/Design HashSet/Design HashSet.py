@@ -1,4 +1,4 @@
-# Runtime: 3520 ms (Top 6.01%) | Memory: 173.8 MB (Top 5.23%)
+# Runtime: 1864 ms (Top 22.23%) | Memory: 174.5 MB (Top 5.09%)
 class MyHashSet:
 
     def __init__(self):
