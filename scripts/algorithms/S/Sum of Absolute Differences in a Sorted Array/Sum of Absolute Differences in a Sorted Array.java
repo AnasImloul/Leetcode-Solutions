@@ -1,3 +1,4 @@
+// Runtime: 26 ms (Top 7.55%) | Memory: 110.7 MB (Top 79.24%)
 class Solution {
     public int[] getSumAbsoluteDifferences(int[] nums) {
         int n = nums.length;
