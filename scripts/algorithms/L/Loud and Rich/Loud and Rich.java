@@ -1,3 +1,4 @@
+// Runtime: 27 ms (Top 42.47%) | Memory: 65.2 MB (Top 60.25%)
 class Solution {
         ArrayList<ArrayList<Integer>> adj =new ArrayList<>();
         int res[];
@@ -30,4 +31,4 @@ class Solution {
         }
         return res[node];
     }
-} 
+}
