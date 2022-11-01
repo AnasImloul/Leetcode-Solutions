@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 43.75%) | Memory: 41.9 MB (Top 57.50%)
 class Solution {
     public int[] numMovesStones(int a, int b, int c) {
         int[] arr ={a,b,c};
@@ -19,13 +20,13 @@ class Solution {
             count++;
         }
         return count + findMaximum(arr);
-        
+
     }
-    
+
     public int findMinimum(int max,int[] arr){
         Arrays.sort(arr);
         if(max == 0) return 0;
-        else if(Math.abs(arr[0]-arr[1]) >2  && Math.abs(arr[1]-arr[2]) >2 ) return 2;
+        else if(Math.abs(arr[0]-arr[1]) >2 && Math.abs(arr[1]-arr[2]) >2 ) return 2;
         else return 1;
     }
 }
