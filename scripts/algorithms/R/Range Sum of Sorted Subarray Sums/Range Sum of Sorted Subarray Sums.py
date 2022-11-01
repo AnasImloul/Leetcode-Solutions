@@ -1,3 +1,4 @@
+# Runtime: 276 ms (Top 95.45%) | Memory: 37.2 MB (Top 59.09%)
 from itertools import accumulate
 
 class Solution:
