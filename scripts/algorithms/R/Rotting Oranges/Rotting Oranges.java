@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 57.93%) | Memory: 42.6 MB (Top 71.50%)
 class Solution {
     public int orangesRotting(int[][] grid) {
         int freshOranges = 0;
