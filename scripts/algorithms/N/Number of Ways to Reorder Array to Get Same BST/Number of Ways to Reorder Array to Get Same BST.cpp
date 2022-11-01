@@ -1,3 +1,4 @@
+// Runtime: 69 ms (Top 94.92%) | Memory: 29.1 MB (Top 88.14%)
 class Solution {
     struct Node {
         unique_ptr<Node> left;
