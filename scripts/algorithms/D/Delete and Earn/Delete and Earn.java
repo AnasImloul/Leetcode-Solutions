@@ -1,4 +1,4 @@
-// Runtime: 19 ms (Top 27.32%) | Memory: 44.9 MB (Top 85.45%)
+// Runtime: 20 ms (Top 44.61%) | Memory: 44.9 MB (Top 82.96%)
 class Solution {
     public int deleteAndEarn(int[] nums) {
         Arrays.sort(nums);
