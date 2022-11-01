@@ -1,3 +1,4 @@
+# Runtime: 311 ms (Top 32.52%) | Memory: 13.8 MB (Top 65.03%)
 class Solution:
     def countOperations(self, num1: int, num2: int) -> int:
         ct=0
