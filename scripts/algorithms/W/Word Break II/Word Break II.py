@@ -1,4 +1,4 @@
-# Runtime: 43 ms (Top 68.00%) | Memory: 14 MB (Top 33.92%)
+# Runtime: 56 ms (Top 49.21%) | Memory: 14 MB (Top 33.37%)
 class Solution(object):
     def wordBreak(self, s, wordDict):
         """
