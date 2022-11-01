@@ -1,4 +1,4 @@
-// Runtime: 23 ms (Top 19.68%) | Memory: 20.6 MB (Top 34.65%)
+// Runtime: 32 ms (Top 12.73%) | Memory: 20.7 MB (Top 30.32%)
 class Solution {
 public:
     string reverseWords(string s) {
