@@ -1,7 +1,8 @@
+// Runtime: 3 ms (Top 92.59%) | Memory: 42.2 MB (Top 79.63%)
 class Solution {
     public int superpalindromesInRange(String left, String right) {
         int ans = 9 >= Long.parseLong(left) && 9 <= Long.parseLong(right) ? 1 : 0;
-  
+
         for (int dig = 1; dig < 10; dig++) {
             boolean isOdd = dig % 2 > 0 && dig != 1;
             int innerLen = (dig >> 1) - 1,
@@ -38,7 +39,7 @@ class Solution {
         }
         return ans;
     }
-    
+
     private boolean isPal(String str) {
         for (int i = 0, j = str.length() - 1; i < j; i++, j--)
             if (str.charAt(i) != str.charAt(j)) return false;
