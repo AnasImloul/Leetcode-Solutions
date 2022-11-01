@@ -1,3 +1,4 @@
+# Runtime: 197 ms (Top 13.70%) | Memory: 26.4 MB (Top 30.94%)
 class Solution:
     # @param {TreeNode} root
     # @param {TreeNode} p
