@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 38.91%) | Memory: 42.8 MB (Top 36.01%)
 class Solution {
     String modifiedNumber="";
     public String reformatNumber(String number) {
