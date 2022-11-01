@@ -1,5 +1,6 @@
+# Runtime: 87 ms (Top 67.15%) | Memory: 13.9 MB (Top 59.65%)
 class Solution:
-    def clumsy(self, n: int) -> int: 
+    def clumsy(self, n: int) -> int:
         if(n>2):
             sum=n*(n-1)//(n-2)+(n-3)
         else:
@@ -9,5 +10,5 @@ class Solution:
                 sum=sum-i
                 break;
             sum=sum-(i)*(i-1)//(i-2)+(i-3)
-            
+
         return sum
