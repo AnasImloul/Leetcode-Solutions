@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 57.50%) | Memory: 43.4 MB (Top 57.64%)
 class Solution {
     public int minTimeToVisitAllPoints(int[][] points) {
         int max = 0, x, y;
