@@ -1,4 +1,4 @@
-// Runtime: 419 ms (Top 53.33%) | Memory: 12.2 MB (Top 28.24%)
+// Runtime: 862 ms (Top 5.02%) | Memory: 12.1 MB (Top 84.66%)
 class Solution {
 public:
     int minimumMountainRemovals(vector<int>& nums) {
