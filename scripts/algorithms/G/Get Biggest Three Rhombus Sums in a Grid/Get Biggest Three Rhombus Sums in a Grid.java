@@ -1,4 +1,4 @@
-// Runtime: 38 ms (Top 93.09%) | Memory: 52.8 MB (Top 78.80%)
+// Runtime: 41 ms (Top 89.47%) | Memory: 52.7 MB (Top 72.81%)
 class Solution {
     public int[] getBiggestThree(int[][] grid) {
         int end = Math.min(grid.length, grid[0].length);
