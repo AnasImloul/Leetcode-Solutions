@@ -1,4 +1,4 @@
-# Runtime: 150 ms (Top 9.30%) | Memory: 13.9 MB (Top 38.82%)
+# Runtime: 136 ms (Top 34.40%) | Memory: 13.9 MB (Top 76.00%)
 class Solution:
     def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
         prev_x, prev_y = points[0]
