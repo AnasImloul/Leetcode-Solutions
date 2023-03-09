@@ -1,24 +1,9 @@
 class Solution {
-public:
-    int smallestRepunitDivByK(int k) {
-        long long n=1,res=1;
-        while(n<k){
-            n=n*10+1;
-            res++;
-        }
-        if(n==k)
-            return res;
-        set<int> a;
-        while(true){
-            n%=k;
-            if(n==0)return res;
-            if(a.count(n)){
-                break;
-            }
-            a.insert(n);
-            n=n*10+1;
-            res++;
-        }
+public: 
+    int smallestRepunitDivByK(int K) {
+        for (int r = 0, N = 1; N <= K; ++N)
+            if ((r = (r * 10 + 1) % K) == 0)
+                return N;
         return -1;
     }
 };
