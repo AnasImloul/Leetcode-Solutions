@@ -1,10 +1,21 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
 var pivotIndex = function(nums) {
-    let leftValue = 0
-    let rightValue = nums.reduce((a, b) => a + b )
-    for(let pivot = 0; pivot < nums.length; pivot++) {  
-        leftValue += nums[pivot - 1] || 0
-        rightValue -= nums[pivot]
-        if (leftValue === rightValue) return pivot
+   //step 1
+    var tot=0;
+    for (let i = 0; i < nums.length; i++) {
+        tot+= nums[i];       
+    }
+    // Step 2
+    left = 0 ;
+    for (let j = 0; j < nums.length; j++) {
+        right = tot - nums[j] - left;
+        if (left == right){
+            return j
+        }
+        left += nums[j];
     }
     return -1
 };
