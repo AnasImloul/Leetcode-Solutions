@@ -1,28 +1,51 @@
 class Solution {
     public boolean parseBoolExpr(String expression) {
-        Deque<Boolean> stack = new ArrayDeque<>();
-        Deque<Character> op = new ArrayDeque<>();
-        Deque<Character> p  = new ArrayDeque<>();
-        for (char ch : expression.toCharArray()){
-            switch(ch){
-                case '!', '&', '|' -> p.push(ch);
-                case 'f', 't' -> stack.push(ch == 't');
-                case '(' -> {op.push(ch); if (p.peek() == '!') op.push('!');}
-                case ')' -> {go(op, stack); op.pop(); p.pop();}
-                default  -> {go(op, stack); op.push(p.peek());}
-            };
+        int n=expression.length();
+        
+        Stack<Character>operator=new Stack<>();
+        Stack<Character>operand=new Stack<>();
+        
+        for(int i=0;i<n;i++){
+            char c=expression.charAt(i);
+            if(c==','){
+                continue;
+            }
+            
+            if(c=='!' || c=='|' || c=='&'){
+                operator.push(c);
+            }else if(c=='(' || c=='f' || c=='t'){
+                operand.push(c);
+            }else{
+                char op=operator.pop();
+                char ans=operand.pop();
+                boolean flag=false;
+                while(!operand.isEmpty() && operand.peek()!='('){
+                    ans=evaluate(ans,operand.pop(),op);
+                    flag=true;
+                }
+                operand.pop();
+                if(!flag){
+                    if(op=='!'){
+                    operand.push(ans=='f'?'t':'f');    
+                    }else{
+                        operand.push(ans);
+                    }
+                    
+                }else{
+                operand.push(ans);    
+                }
+                
+            }
         }
-        go(op, stack);
-        return stack.pop();
+        return operand.peek()=='t';
     }
-
-    private void go(Deque<Character> op, Deque<Boolean> stack){
-        while(!op.isEmpty() && op.peek() != '('){
-            switch(op.pop()){
-                case '|' -> stack.push(stack.pop() | stack.pop());
-                case '&' -> stack.push(stack.pop() & stack.pop());
-                default  -> stack.push(!stack.pop());
-            };
+    
+    public char evaluate(char a, char b, char op){
+        if(op=='|'){
+            return (a=='t' || b=='t')?'t':'f';
+        }else if(op=='&'){
+            return (a=='t' && b=='t')?'t':'f';
         }
+        return 't';
     }
 }
