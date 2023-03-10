@@ -1,26 +1,20 @@
-class Solution:
-    def recursion(self, digits , inc , size , n  , pos):
-        ans = 0
-        if pos == size:return 0
-        if pos in self.dp:return self.dp[pos]
-        for i in digits:
-            if i < n[pos]:
-                val = 1
-                for j in range(size-pos):
-                    ans+=val
-                    val*=inc
-            elif i > n[pos]:
-                if size == pos + 1:continue
-                val = 1
-                for j in range(size-pos-1):
-                    ans+=val
-                    val*=inc
-            else:
-                ans+=1
-                ans+=self.recursion(digits , inc , size , n ,pos+1)
-        self.dp[pos]=ans
-        return ans
-    def atMostNGivenDigitSet(self, digits: List[str], n: int) -> int:
-        n = str(n)
-        self.dp = {}
-        return self.recursion(digits , len(digits) , len(n) , n , 0)
+class Solution():
+    def atMostNGivenDigitSet(self, digits, n):
+        cache = {}
+        target = str(n)
+
+        def helper(idx, isBoundary, isZero):
+            if idx == len(target): return 1
+            if (idx, isBoundary, isZero) in cache: return cache[(idx, isBoundary, isZero)]
+            
+            res = 0
+            if isZero and idx != len(target)-1:
+                res+= helper(idx+1, False, True)
+            for digit in digits:
+                if isBoundary and int(digit) > int(target[idx]): continue
+                res+= helper(idx+1, True if isBoundary and digit == target[idx] else False, False)
+
+            cache[(idx, isBoundary, isZero)] = res
+            return res
+
+        return helper(0, True, True)
