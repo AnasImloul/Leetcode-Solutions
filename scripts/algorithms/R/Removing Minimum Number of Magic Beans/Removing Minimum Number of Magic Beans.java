@@ -1,25 +1,19 @@
 class Solution {
     public long minimumRemoval(int[] beans) {
-        long total = 0;
-        for (int num: beans) {
-            total += num;
+        Arrays.parallelSort(beans);
+        long sum=0,min=Long.MAX_VALUE;
+        int n=beans.length;
+        for(int i:beans)
+            sum+=i;
+        for(int i=0;i<n;i++)
+        {
+            long temp=sum-((n-i+0L)*beans[i]);
+            min=(long)Math.min(min,temp);
+           
         }
+        return min;
         
         
-        long sumSoFar = 0, output = Long.MAX_VALUE;
-        Arrays.sort(beans);
-        for (int i = 0; i < beans.length; ++ i) {
-            long current = sumSoFar;
-            while (i + 1 < beans.length && beans[i] == beans[i + 1]) {
-                sumSoFar += beans[i];
-                ++ i;
-            }
-            sumSoFar += beans[i];
-            current += total - sumSoFar - (long)(beans.length - i - 1) * beans[i];
-            
-            output = Math.min(current, output);
-        }
         
-        return output;
     }
 }
