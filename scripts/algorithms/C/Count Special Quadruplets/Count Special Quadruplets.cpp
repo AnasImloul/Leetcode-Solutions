@@ -1,22 +1,17 @@
 class Solution {
 public:
     int countQuadruplets(vector<int>& nums) {
-        int res = 0;
-        int len = nums.size();
-        
-        unordered_map<int, int> count;
-        count[nums[len-1] - nums[len-2]] = 1;
-        
-        for (int b = len - 3; b >= 1; b--) {
-            for (int a = b - 1; a >= 0; a--) {
-                res += count[nums[a] + nums[b]];
+        int n=nums.size();
+        unordered_map<int,int> m;
+        int ans=0;
+        for(int i=1;i<n-2;i++){
+            for(int j=0;j<i;j++){
+                m[nums[i]+nums[j]]++;
             }
-            
-            for (int x = len - 1; x > b; x--) {
-                count[nums[x] - nums[b]]++;
+            for(int k=i+2;k<n;k++){
+               ans+= m[nums[k]-nums[i+1]];
             }
         }
-        
-        return res;
+        return ans;
     }
 };
