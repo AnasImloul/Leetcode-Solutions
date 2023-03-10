@@ -1,37 +1,39 @@
 class Solution {
 public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
-        sort(nums.begin(),nums.end());
+    vector<vector<int>> threeSum(vector<int>& nums) 
+    {
+        sort(nums.begin(), nums.end());
         vector<vector<int>> ans;
-        if(nums[0]>0){
-            return {};
-        }
-        for(int i=0;i<nums.size();i++){
-            int l=i+1,j=nums.size()-1,sum=0;
-            if(nums[i]>0){
-                break;
-            }
-            if(i!=0 && nums[i]==nums[i-1]){
+
+        for (int i = 0; i < nums.size() - 2; i++)
+        {
+            if(i > 0 && (nums[i] == nums[i - 1]))
                 continue;
-            }
-            while(l<j){
-                sum=nums[i]+nums[l]+nums[j];
-                if(sum<0){
-                    l++;
-                }
-                else if(sum>0){
-                    j--;
-                }
-                else{
-                    ans.push_back({nums[i],nums[l],nums[j]});
-                    int last_l = nums[l] ; int last_h = nums[j];
-                
+
+            int left_index = i + 1;
+            int right_index = nums.size() - 1;
+
+            while(left_index < right_index)
+            {
+                int threesome = nums[i] + nums[left_index] + nums[right_index];
+                if (threesome > 0)
+                    right_index--;
+                else if (threesome < 0)
+                    left_index++;
+                else
+                {
+                    ans.push_back({nums[i], nums[left_index], nums[right_index]});
                     
-                    while (l < j && nums[l] == last_l)  l++;
-                    while (l < j && nums[j] == last_h) j--;
+                    while(((left_index < right_index) && nums[left_index] == nums[left_index + 1]))
+                        left_index++;
+                    left_index ++;
+
                 }
+
             }
+            
         }
+
         return ans;
     }
-};
+}; 
