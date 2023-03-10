@@ -1,36 +1,27 @@
 class Solution {
 public:
-    int subarraySum(vector<int> &nums, int k){
-        unordered_map<int,int> um;
-        um[0] = 1;
-        int curr = 0;
-        int ans = 0;
-        for(auto it: nums){    
-            curr += it;
-            int rem = curr-k;
-            if(um.find(rem) != um.end()){
-                ans += um[rem];
-            }
-            um[curr] += 1;
-        }
-        return ans;
-    }
-    
     int numSubmatrixSumTarget(vector<vector<int>>& matrix, int target) {
-        int ans = 0;
-		// Each iteration calculates the count for submatrix from row i to matrix.size()
-        for(int i=0; i<matrix.size(); i++){
-			// Sum stores the sum of the elements from row i to j 
-            vector<int> sum(matrix[0].size(), 0);
-            for(int j=i; j<matrix.size(); j++){
-                for(int k=0; k<matrix[0].size(); k++){
-                    sum[k] += matrix[j][k];
-                }
-				// Now calculate the count for the submatrix from row i to j
-                ans += subarraySum(sum, target);
+        int n=matrix.size(),m=matrix[0].size(),count=0;
+        vector<vector<int>>temp(n+1,vector<int>(m));
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                temp[i+1][j]=temp[i][j]+matrix[i][j];
             }
         }
-        
-        return ans;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<=n;j++){
+                for(int k=0;k<m;k++){
+                    int sum=0;
+                    for(int l=k;l<m;l++){
+                        sum+=temp[j][l]-temp[i][l];
+                        if(sum==target){
+                            // cout<<j<<" "<<i<<" "<<k<<endl;
+                            count++;
+                        }
+                    }
+                }
+            }
+        }
+        return count;
     }
 };
