@@ -1,13 +1,11 @@
-// Runtime: 1 ms (Top 81.71%) | Memory: 41.5 MB (Top 17.69%)
 class Solution {
-    public int minBitFlips(int start, int goal) {
-        int xor =start ^ goal;
-        int count=0;
-        while(xor>0){
-            count++;
-            xor=xor & (xor-1);
-        }
-        return count;
-
-    }
+	public static int minBitFlips(int a1, int a2) {
+		int n = (a1 ^ a2);
+		int res = 0;
+		while (n != 0) {
+			res++;
+			n &= (n - 1);
+		}
+		return res;
+	}
 }
