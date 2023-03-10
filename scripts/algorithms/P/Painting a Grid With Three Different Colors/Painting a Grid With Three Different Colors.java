@@ -1,5 +1,4 @@
-// Runtime: 90 ms (Top 77.11%) | Memory: 54.6 MB (Top 39.76%)
-class Solution
+class Solution 
 {
     static int mod=(int)(1e9+7);
    public static int dfs(int n,ArrayList<ArrayList<Integer>> arr,int src,int dp[][])
@@ -56,7 +55,7 @@ class Solution
         {
             adj.add(new ArrayList<Integer>());
         }
-
+    
         for(int i=0;i<adj.size();i++)
         {
             for(int j=0;j<arr.size();j++)
@@ -78,6 +77,6 @@ class Solution
                  sum12=(sum12%mod+dfs(n-1,adj,i,dp)%mod)%mod;
         }
         return sum12;
-
+       
     }
 }
