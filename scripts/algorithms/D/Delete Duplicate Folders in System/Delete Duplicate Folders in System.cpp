@@ -1,58 +1,54 @@
-class node{
-    public: 
-        map<string, node*> child;
-        bool end;
-        bool exclude;
-        string name;
-        node(string fname){
-            exclude = false;
-            end = false;
-            name = fname;
+struct Trie {
+    void insert(const vector<string>& path) {
+        auto node = this;
+        for (auto& p: path) {
+            if (!node->children.count(p)) {
+                node->children[p] = make_unique<Trie>();
+            }
+            node = node->children[p].get();
         }
+    }
+    map<string, unique_ptr<Trie>> children;    
 };
 
 class Solution {
+    Trie root;
+    
+    map<string, Trie*> seen;
+    unordered_set<Trie*> toDelete;
+    
+    string deduplicate(Trie* node) {
+        
+        string path;        
+        for (auto& [s, n]: node->children) {   
+            path += s + deduplicate(n.get());
+        }        
+        if (path.empty()) return "";
+        
+        if (seen.count(path)) {
+            toDelete.insert(seen[path]);
+            toDelete.insert(node);
+        } else seen[path] = node;     
+        
+        return "(" + path + ")";
+    }
+    
+    void getPaths(Trie* node, vector<vector<string>>& paths, vector<string>& path) {
+        for (auto& [s, n]: node->children) {
+            if (toDelete.count(n.get())) continue;
+            path.push_back(s);
+            getPaths(n.get(), paths, path);
+            path.pop_back();
+        }
+        
+        if (!path.empty()) paths.push_back(path);
+    }
 public:
-    node *root;
-    unordered_map<string, vector<node*>> parentMap;
-    vector<vector<string>> ans;
     vector<vector<string>> deleteDuplicateFolder(vector<vector<string>>& paths) {
-        root = new node("/");
-        for(int i = 0 ; i < paths.size(); i++) insert(root, paths[i], 0);
-        dfs(root);
-        for(auto &e : parentMap)
-            if(e.second.size() > 1)
-                for(auto &parent : e.second)
-                    parent->exclude = true;
-        vector<string> temp;
-        getans(root, temp);
-        return ans;
-    }
-    
-    void getans(node *root, vector<string> &temp){
-        if(root->exclude) return;
-        if(root->name != "/") temp.push_back(root->name);
-        if(root->end) ans.push_back(temp);
-        for(auto &e : root->child)
-            getans(e.second, temp);
-        if(root->name != "/") temp.pop_back();
-    }
-    
-    string dfs(node *root){
-        string childPath = "";
-        for(auto &e : root->child){
-            childPath += dfs(e.second);
-            childPath += "|";
-        }
-        if(childPath != "") parentMap[childPath].push_back(root);
-        return root->name + "|" + childPath;
-    }
-    
-    void insert(node *root, vector<string> &path, int pos){
-        if(pos < path.size()){
-            if(root->child.count(path[pos]) == 0) root->child[path[pos]] = new node(path[pos]);
-            insert(root->child[path[pos]], path, pos+1);
-        }
-        else if(pos == path.size()) root->end = true;
+        for (auto& path: paths) root.insert(path);
+        paths.clear();
+        deduplicate(&root);
+        getPaths(&root, paths, vector<string>() = {});
+        return paths;
     }
 };
