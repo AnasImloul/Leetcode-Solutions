@@ -1,39 +1,33 @@
-// Runtime: 205 ms (Top 50.00%) | Memory: 51 MB (Top 57.45%)
-const dir = [[0, 1], [0, -1], [1, 0], [-1, 0]];
-const WALKED = '-', WALL = '+', NO_EXIT = -1;
-
-/**
- * @param {character[][]} maze
- * @param {number[]} entrance
- * @return {number}
- */
-var nearestExit = function(maze, entrance) {
-  const m = maze.length, n = maze[0].length;
-  const [ey, ex] = entrance;
-  maze[ey][ex] = WALKED;
-
-  const queue = new Queue([[ey, ex, 0]]);
-  while (queue.size()) {
-    const [y, x, step] = queue.dequeue();
-
-    for (const [dy, dx] of dir) {
-      const ny = y + dy, nx = x + dx, nextStep = step + 1;
-      const overBorder = ny < 0 || ny >= m || nx < 0 || nx >= n;
-      if (overBorder) {
-        continue;
-      }
-      if (maze[ny][nx] === WALKED || maze[ny][nx] === WALL) {
-        continue;
-      }
-      const isExit = ny === 0 || ny === m - 1 || nx === 0 || nx === n - 1;
-      if (isExit) {
-        return nextStep;
-      }
-
-      maze[ny][nx] = WALKED;
-      queue.enqueue([ny, nx, nextStep]);
-    }
+function nearestExit(maze, entrance) {
+  const queue = []; // queue for bfs
+  const empty = ".";
+  const [height, width] = [maze.length, maze[0].length];
+  const tried = [...Array(height)].map(() => Array(width).fill(false));
+  const tryStep = (steps, row, col) => {
+    // don't reuse once it's already been tried
+    if (tried[row][col]) return;
+    tried[row][col] = true;
+    if (maze[row][col] !== empty) return; // blocked? i.e. can't step
+    queue.push([steps, row, col]);
+  };
+  const edges = { right: width - 1, bottom: height - 1, left: 0, top: 0 };
+  const trySteppableDirs = (steps, row, col) => {
+    // try steppable directions
+    if (col < edges.right) tryStep(steps, row, col + 1);
+    if (row < edges.bottom) tryStep(steps, row + 1, col);
+    if (col > edges.left) tryStep(steps, row, col - 1);
+    if (row > edges.top) tryStep(steps, row - 1, col);
+  };
+  let steps = 1, [row, col] = entrance;
+  tried[row][col] = true; // don't reuse the entrance
+  trySteppableDirs(steps, row, col);
+  while (queue.length > 0) { // bfs
+    [steps, row, col] = queue.shift();
+    // path to the edge found?
+    if (col === edges.left || col === edges.right) return steps;
+    if (row === edges.top || row === edges.bottom) return steps;
+    trySteppableDirs(steps + 1, row, col);
   }
-
-  return NO_EXIT;
-};
+  // NO path to the edge found
+  return -1;
+}
