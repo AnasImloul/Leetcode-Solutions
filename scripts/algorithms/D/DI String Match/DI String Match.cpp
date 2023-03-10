@@ -1,18 +1,13 @@
 class Solution {
 public:
     vector<int> diStringMatch(string s) {
-        vector<int> res;
-    
-        int I = 0;
-        int D = s.size();
-        
-        for(int i=0;i<s.size()+1;i++)
+        int p=0, j=s.size();
+        vector<int>v;
+        for(int i=0; i<=s.size(); i++)
         {
-            if(s[i]=='I')
-                res.push_back(I++);
-            else
-                res.push_back(D--);
+            if(s[i]=='I')v.push_back(p++);
+            else v.push_back(j--);
         }
-        return res;
+        return v;
     }
 };
