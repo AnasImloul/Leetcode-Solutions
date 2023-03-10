@@ -1,14 +1,18 @@
-// Runtime: 263 ms (Top 9.43%) | Memory: 23.1 MB (Top 58.02%)
 class Solution {
 public:
-    int numberOfBeams(vector<string>& bank) {
-        int ans = 0, pre = 0;
-        for (int i = 0;i < bank.size(); i ++) {
-            int n = count(bank[i].begin(), bank[i].end(), '1');
-            if (n == 0) continue;
-            ans += pre * n;;
-            pre = n;
+    int numberOfBeams(vector<string>& bank) 
+    {
+        int rowLaserCount=0,totalLaserCount=0,prevCount=0;
+        for(int i=0;i<bank.size();i++)
+        {
+            rowLaserCount=0;
+            for(char j:bank[i])
+            {
+              if(j=='1')  rowLaserCount++;
+            }totalLaserCount+=(prevCount*rowLaserCount);
+            if(rowLaserCount)prevCount=rowLaserCount;
         }
-        return ans;
+        return totalLaserCount;
+        
     }
 };
