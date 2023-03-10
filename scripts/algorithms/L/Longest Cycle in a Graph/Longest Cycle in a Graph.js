@@ -1,90 +1,50 @@
-// Runtime: 374 ms (Top 55.71%) | Memory: 111.2 MB (Top 25.00%)
 /**
  * @param {number[]} edges
  * @return {number}
  */
 var longestCycle = function(edges) {
-    let res = -1;
-    // count the node indegree
-    let map = new Map();
-    let len = edges.length;
-    for(let i=0; i<edges.length; i++){
-        if(edges[i] !== -1){
-            if(map.has(edges[i])){
-                let c = map.get(edges[i]);
-                c ++;
-                map.set(edges[i], c);
-            }else{
-                map.set(edges[i], 1);
-            }
-        }
-    }
-    // find the node of 0 indegree
-    let arr = [];
-    for(let i=0; i<len; i++){
-        if(!map.has(i)){
-            arr.push(i);
-        }
-    }
-    // count the search node
-    let search = 0;
-    while(arr.length > 0){
-        let tmp = [];
-        for(let i=0; i<arr.length; i++){
-            search ++;
-            let next = edges[arr[i]];
+    // visited array will be -1 if not visited or index of first visited node
+    const visited = Array(edges.length).fill(-1)
+    let ans = -1
+    
+    for (let i = 0; i < edges.length; i++) {
+        
+        // Since one node could be part of only one solution, only compute if it is not already visited.
+        if (visited[i] !== -1) continue;
+        
+        // detect cycle: check if node is already visited
+        // if it was visited and the visited[i] === i, 
+        // it means we came to this node during this iteration
+        // hence find the length
+        
+        let currNode = i
 
-            if(next !== -1){
-                let c = map.get(next);
-                c --;
-                if(c === 0){
-                    tmp.push(next);
-                    map.delete(next);
-                }else{
-                    map.set(next, c);
+        while(currNode !== -1) {
+            // if not already visited, mark as visited
+            if (visited[currNode] === -1) {
+                visited[currNode] = i
+                currNode = edges[currNode]
+                continue;
+            }
+            
+            // if already visited, and value is equal to current index
+            // it means we came to node during this iteration, hence we found the cycle 
+            if (visited[currNode] === i) {
+                // find the cycle length
+                let currCycleLen = 1
+                let cycleStartNode = currNode
+                currNode = edges[currNode]
+                
+                // revisit all the nodes since first cycle node and note the length
+                while(currNode !== cycleStartNode) {
+                    currCycleLen++
+                    currNode = edges[currNode]
                 }
+                ans = Math.max(currCycleLen, ans)
             }
+            break;
         }
-        arr = [...tmp];
     }
-
-    if(search === len){
-        // no circle
-    }else{
-        // exist circle
-        // consider there may be some circles
-        let circleMap = new Map();
-        let keys = Array.from(map.keys());
-        let circle = [keys[0]];
-        let circleLen = 0;
-        // mark the max length of circle
-        let max = 0;
-        while(circle.length > 0){
-            let tmp = [];
-            for(let i=0; i<circle.length; i++){
-                if(!circleMap.has(circle[i])){
-                    // node not search
-                    circleMap.set(circle[i], 1);
-                    circleLen ++;
-                    tmp.push(edges[circle[i]]);
-                }else{
-                    // node search
-                    max = Math.max(max, circleLen);
-                    circleLen = 0;
-                    // find the next possible node
-                    for(let j=0; j<keys.length; j++){
-                        if(!circleMap.has(keys[j])){
-                            tmp.push(keys[j]);
-                            break;
-                        }
-                    }
-                }
-            }
-            circle = [...tmp];
-        }
-
-        res = max;
-    }
-
-    return res;
+    // console.log(visited)
+    return ans
 };
