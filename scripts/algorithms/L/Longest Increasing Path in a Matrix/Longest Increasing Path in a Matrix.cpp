@@ -1,58 +1,70 @@
 class Solution {
 public:
-    int memo[200][200];
-
-    int util(vector<vector<int>>& matrix, vector<vector<bool>>& visited, int i, int j, int prev) {
-        if(memo[i][j]) return memo[i][j];
-
-        int temp=0;
-        if(i>0) {
-            if(matrix[i-1][j]>prev && !visited[i-1][j]) {
-                visited[i-1][j]=true;
-                temp=max(temp, 1+util(matrix, visited, i-1, j, matrix[i-1][j]));
-                visited[i-1][j]=false;
+    
+    // declare a dp
+    
+    int dp[205][205];
+    
+    // direction coordinates of left, right, up, down
+    
+    vector<int> dx = {-1, 0, 1, 0};
+    
+    vector<int> dy = {0, 1, 0, -1};
+    
+    // dfs function
+    
+    int dfs(vector<vector<int>>& matrix, int i, int j, int n, int m)
+    {
+        // if value is already calculated for (i, j)th cell
+        
+        if(dp[i][j] != -1)
+            return dp[i][j];
+        
+        // take the maximum of longest increasing path from all four directions
+        
+        int maxi = 0;
+        
+        for(int k = 0; k < 4; k++)
+        {
+            int new_i = i + dx[k];
+            
+            int new_j = j + dy[k];
+            
+            if(new_i >= 0 && new_i < n && new_j >= 0 && new_j < m && matrix[new_i][new_j] > matrix[i][j])
+            {
+                maxi = max(maxi, dfs(matrix, new_i, new_j, n, m));
             }
         }
-        if(i<matrix.size()-1) {
-            if(matrix[i+1][j]>prev && !visited[i+1][j]) {
-                visited[i+1][j]=true;
-                temp=max(temp, 1+util(matrix, visited, i+1, j, matrix[i+1][j]));
-                visited[i+1][j]=false;
-            }
-        }
-        if(j>0) {
-            if(matrix[i][j-1]>prev && !visited[i][j-1]) {
-                visited[i][j-1]=true;
-                temp=max(temp, 1+util(matrix, visited, i, j-1, matrix[i][j-1]));
-                visited[i][j-1]=false;
-            }
-        }
-        if(j<matrix[0].size()-1) {
-            if(matrix[i][j+1]>prev && !visited[i][j+1]) {
-                visited[i][j+1]=true;
-                temp=max(temp, 1+util(matrix, visited, i, j+1, matrix[i][j+1]));
-                visited[i][j+1]=false;
-            }
-        }
-
-        return memo[i][j]=temp;
-    } 
+        
+        // store the res and return it
+        
+        return dp[i][j] = 1 + maxi;
+    }
     
     int longestIncreasingPath(vector<vector<int>>& matrix) {
-        int m=matrix.size(), n=matrix[0].size();
         
-        int ans=0;
+        int n = matrix.size();
         
-        vector<vector<bool>> visited(m, vector<bool>(n, false));
+        int m = matrix[0].size();
         
-        for(int i=0; i<m; i++) {
-            for(int j=0; j<n; j++) {
-                visited[i][j]=true;
-                ans=max(ans, 1+util(matrix, visited, i, j, matrix[i][j]));
-                visited[i][j]=false;
+        // initialize dp with -1
+        
+        memset(dp, -1, sizeof(dp));
+        
+        // find the longest increasing path for each cell and take maximum of it
+        
+        int maxi = INT_MIN;
+        
+        for(int i = 0; i < n; i++)
+        {
+            for(int j = 0; j < m; j++)
+            {
+                int ans = dfs(matrix, i, j, n, m);
+                
+                maxi = max(maxi, ans);
             }
         }
         
-        return ans;
+        return maxi;
     }
 };
