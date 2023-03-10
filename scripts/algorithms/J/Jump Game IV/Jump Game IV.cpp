@@ -1,46 +1,48 @@
 class Solution {
 public:
-    
-    int minJumps(vector<int>& arr) {
-        if(arr.size()<=1) return 0;
-        unordered_map<int,vector<int>> mp;
+    int minJumps(vector<int>& arr) 
+    {
         int n = arr.size();
-        vector<bool> vis(n);
-        queue<int> q;
-        q.push(0);
-        for(int i=0;i<n;i++) mp[arr[i]].push_back(i);
-        int k = 1;
-        vis[0]=true;
-        while(!q.empty()){
-            int sz=q.size();
-            while(sz--){
-                int node = q.front();
-                q.pop();
-
-                if(node+1<n and !vis[node+1]){
-                    if(node+1==n-1) return k;
-                    q.push(node+1);
-                    vis[node+1]=true;
-                }
-
-                if(node-1>=0 and !vis[node-1]){
-                    if(node-1==n-1) return k;
-                    q.push(node-1);
-                    vis[node-1]=true;
-                }
-
-                for(auto i:mp[arr[node]]){
-                    if(i==node or vis[i]) continue;
-                    if(i==n-1) return k;
-                    q.push(i);
-                    vis[i]=true;
-                }
-                
-                mp[arr[node]].clear();
-            }
-            k++;
-        }
+        unordered_map<int, vector<int>>mp;
+        for (int i = 0; i < n; i++) mp[arr[i]].push_back(i);
         
+        queue<int>q;
+        vector<bool>visited(n, false);
+        q.push(0);
+        int steps = 0;
+        while(!q.empty())
+        {
+            int size = q.size();
+            while(size--)
+            {
+                int currIdx = q.front();
+                q.pop();
+                if (currIdx == n - 1) return steps;
+                //================================================================
+                //EXPLORE ALL POSSIBLE OPTIONS
+                if (currIdx + 1 < n && !visited[currIdx + 1])  //OPTION-1 (Move Forward)
+                {
+                    visited[currIdx + 1] = true;
+                    q.push(currIdx + 1);
+                }
+                if (currIdx - 1 >= 0 && !visited[currIdx - 1]) //OPTION-2 (Move Backward)
+                {
+                    visited[currIdx - 1] = true;
+                    q.push(currIdx - 1);
+                }
+                for (int newIdx : mp[arr[currIdx]])  //OPTION-3 (Move to same valued idx)
+                {                                 //newIdx coud be before currIdx or after currIdx
+                    if (!visited[newIdx]) 
+                    {
+                        visited[newIdx] = true;
+                        q.push(newIdx);
+                    }
+                }
+                //===================================================================
+                mp[arr[currIdx]].clear();    //EXPLAINED BELOW :)
+            }
+            steps++;
+        }
         return -1;
     }
 };
