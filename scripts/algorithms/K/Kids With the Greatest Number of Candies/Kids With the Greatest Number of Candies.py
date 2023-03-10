@@ -1,20 +1,15 @@
-# Runtime: 48 ms (Top 80.79%) | Memory: 13.9 MB (Top 16.98%)
-class Solution(object):
-    def kidsWithCandies(self, candies, extraCandies):
-        """
-        :type candies: List[int]
-        :type extraCandies: int
-        :rtype: List[bool]
-        """
-
-        maxCandies = 0
-        for candy in candies :
-            if candy >= maxCandies:
-                maxCandies = candy
-
-        for i, candy in enumerate(candies):
-            if candy + extraCandies >= maxCandies:
-                candies[i] = True
+class Solution:
+    def kidsWithCandies(self, candy, extra):
+        #create an array(res) with all values as True and it's lenght is same as candies
+        res = [True]*len(candy)
+        #iterate over the elements in the array candy
+        for i in range(len(candy)):
+            #if the no. of canides at curr position + extra is greater than or equal to the maximum of candies then continue 
+            if (candy[i] + extra) >= max(candy):
+                continue
+            #if not 
             else:
-                candies[i] = False
-        return candies
+                #change the value of that position in res as false
+                res[i] = False
+        #return the res list
+        return res   
