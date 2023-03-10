@@ -1,9 +1,17 @@
-/**
- * @param {number[][]} edges
- * @return {number}
- */
 var findCenter = function(edges) {
-    const [p1, p2] = edges[0]
-    const [p3, p4] = edges[1]
-    return p1 == p3 || p1 == p4 ? p1 : p2
+    // InDegree We need to count
+    let indegree = {};
+    
+    for (let item of edges) {
+        for (let i = 0; i < item.length; i++) {
+            if (indegree[item[i]]) {
+                indegree[item[i]] += 1;
+            } else {
+                indegree[item[i]] = 1;
+            }
+            if (indegree[item[i]] === edges.length) {
+                return item[i];
+            }
+        }
+    }
 };
