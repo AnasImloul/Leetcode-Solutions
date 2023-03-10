@@ -1,53 +1,31 @@
+int dp[16384];
+int gcd_table[14][14];
+
 class Solution {
 public:
     int maxScore(vector<int>& nums) {
-        
-        int n = nums.size();
-        
-        vector<int> dp( 1 << n ,  0); // dp contains score of masks - by default, scores are 0
-        
-        for(int i = 0 ; i < n ; i++) {//we have precomputed score for mask with only 2 set bits
-            for(int j = 0 ; j < i ; j++){
-                int mask = (1 << i) + (1 << j);
-                dp[mask] = __gcd(nums[i] , nums[j]);// score after selecting only 2 nums is just their gcd
-            }
+        memset(dp, -1, sizeof(dp));
+        int sz = nums.size();
+
+        // Build the GCD table 
+        for (int i = 0; i < sz; ++i) {
+            for (int j = i+1; j < sz; ++j) {gcd_table[i][j] = gcd(nums[i], nums[j]);}
         }
-        
-        dp[0] = 0; // score after selecting 0 nums is 0 by default
-        
-        for(int mask = 2 ; mask < (1 << n) ; mask ++ ){
-    
-            vector<int> nz;//here we would count and store non-zero bit positions of the mask in vector nz
-            for(int i = 0 ; i < n ; i++)
-                if(mask & (1 << i))
-                    nz.push_back(i);
-            
-            if(nz.size() % 2) // if set bits is odd, we cannot compute as we need pairs for gcd
-                continue;
-            
-            if(nz.size() == 2)//since we have precomputed dp for mask with only 2 set bits above
-                continue;
-            
-            int op = nz.size() / 2; // we are performing opth operation now
-            
-            for(int i = 0 ; i < nz.size() ; i++) // nz[i]th bit not in submask
-            {
-                for(int j = 0 ; j < i ; j++){ // nz[j]th bit not in submask
-                    
-                    int pos1 = nz[i];
-                    int pos2 = nz[j];
-                    int submask = (mask ^ (1 << pos1)) ^ (1 << pos2);
-                    
-                    int g = dp[(1 << pos1) + (1 << pos2)] ;// to be added to get dp[mask] from dp[submask]
-                    
-                    dp[mask] = max(dp[mask] , op * g + dp[submask]);  
-					//maximizing dp[mask] using the recursive equation explained above
+
+        // Looping from state 0 to (1<<sz)-1
+        dp[0] = 0;
+        for (int s = 0; s < (1<<sz); ++s) {
+            int cnt = __builtin_popcount(s);
+            if (cnt &1 )continue; // bitcount can't be odd
+            for (int i = 0; i < sz; ++i) {
+                if (s & (1<<i)) continue;
+                for (int j = i+1; j < sz; ++j) {
+                    if (s & (1<<j)) continue;
+                    int next_state = s^(1<<i)^(1<<j);
+                    dp[next_state] = max(dp[next_state], dp[s] + (cnt/2+1)*gcd_table[i][j]);
                 }
             }
-                
         }
-        
-        return dp.back();
-        
+        return dp[(1<<sz)-1];
     }
 };
