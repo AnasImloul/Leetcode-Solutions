@@ -1,22 +1,25 @@
-# Runtime: 88 ms (Top 43.53%) | Memory: 15.4 MB (Top 42.69%)
-
 class Solution:
-    def recursion(self, idx , n , height , width):
-        if idx == n:return height
+    def minHeightShelves(self, books, shelf_width: int) -> int:
+        n, dp = len(books), [float('inf')] * (len(books)+1)
+        dp[0] = 0
 
-        if (idx,height,width) in self.dp: return self.dp[(idx,height,width)]
+        for i in range(1, n+1):
+            max_width, max_height, j = shelf_width, 0, i - 1
+            
+            while j >= 0 and max_width - books[j][0] >= 0:
+                max_width -= books[j][0]
+                max_height = max(max_height, books[j][1])
+                dp[i] = max_height
+                j -= 1
 
-        choice1 = self.recursion(idx+1,n,max(self.books[idx][1],height), width - self.books[idx][0])\
-        if width >= self.books[idx][0] else float('inf')
+            if j >= 0 and max_width - books[j][0] < 0:
+                j = i - 1
+                dp[i] = float('inf')
+                width, height = 0, 0
+                while j >= 0 and width + books[j][0] <= shelf_width:
+                    width = width + books[j][0]
+                    height = max(books[j][1], height)
+                    dp[i] = min(dp[i], height + dp[j])
+                    j -= 1
 
-        choice2 = self.recursion(idx+1,n,self.books[idx][1], self.shelfWidth - self.books[idx][0]) + height
-
-        ans = min(choice1,choice2)
-        self.dp[(idx,height,width)] = ans
-        return ans
-
-    def minHeightShelves(self, books: List[List[int]], shelfWidth: int) -> int:
-        self.books = books
-        self.shelfWidth = shelfWidth
-        self.dp = {}
-        return self.recursion(0,len(books),0,shelfWidth)
+        return dp[n]
