@@ -1,30 +1,40 @@
-typedef pair<int,int> pi;
 class Solution {
 public:
     vector<int> assignTasks(vector<int>& servers, vector<int>& tasks) {
-        vector<pi>serv;
-        for(int i = 0; i<servers.size(); i++)serv.push_back({servers[i],i});
-        int curr = 0;
-        priority_queue<pi, vector<pi>, greater<pi>>mi(serv.begin(),serv.end());
-        vector<int>ans;
-        map<int,vector<pi>>free;
-        int t = 0;
-        while(1){
-            for(auto s : free[t])mi.push(s);
-            free.erase(t);
-            while(curr<=t && curr<tasks.size() && !mi.empty()){
-                auto se = mi.top();
-                mi.pop();
-                free[t+tasks[curr]].push_back(se);
-                ans.push_back(se.second);
-                curr++;
+        priority_queue<vector<long long>, vector<vector<long long>>, greater<vector<long long>>> free, busy; 
+        for (int i = 0; i < servers.size(); ++i) {
+            free.push(vector<long long>{servers[i], i});
+        }
+        vector<int> ans;
+        long long time = 0;
+        queue<int> task_queue;
+        while (ans.size() < tasks.size()) { 
+            // Bring all eligible tasks to task_queue.
+            for (int i = ans.size() + task_queue.size(); i <= time && i < tasks.size(); ++i) {
+                task_queue.push(tasks[i]);
             }
-            if(curr>=tasks.size())break;
-            if(mi.empty()){
-                auto it = free.begin();
-                t = it->first;
+            // Bring all eligible servers to free queue.
+            while (!busy.empty() && busy.top()[0] <= time) {
+                auto& top = busy.top();
+                free.push(vector<long long>{top[1], top[2]});
+                busy.pop();
             }
-            else t++;
+            // If we have no servers, we cannot match until one of the servers becomes free.
+            if (free.empty()) {
+                time = busy.top()[0];
+                continue;
+            }
+            while(!task_queue.empty() && !free.empty()) {
+                // Now we just take the first task and first server as per defined priority and match the two.
+                int task = task_queue.front(); 
+                auto& top = free.top();
+                ans.push_back(top[1]);
+                busy.push(vector<long long>{time + task, top[0], top[1]});
+                task_queue.pop();
+                free.pop();
+            }
+            // Only increment time to receive new tasks once we have processed all tasks so far.
+            if (task_queue.empty()) time++;
         }
         return ans;
     }
