@@ -1,15 +1,7 @@
-class Solution:
-    def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        sum_below = 0
-        sum_total = 0
-        for num in nums:
-            sum_total += num
+from itertools import accumulate 
+
+class Solution(object):
+    def getSumAbsoluteDifferences(self, nums):
+        total, n = sum(nums), len(nums) #for i, ri in zip(nums, reversed(nums)): pref.append(pref[-1] + i)
+        return [(((i+1) * num) - pref) + ((total-pref) - ((n-i-1) * num)) for (i, num), pref in zip(enumerate(nums), list(accumulate(nums)))]
         
-        res = []
-        for i in range(n):
-            num = nums[i]
-            sum_total -= num
-            res.append(sum_total - (n - 1 - i) * num + i * num - sum_below)
-            sum_below += num
-        return res
