@@ -1,18 +1,26 @@
-// Runtime: 70 ms (Top 48.18%) | Memory: 21.1 MB (Top 93.21%)
 class Solution {
 public:
     string getSmallestString(int n, int k) {
-        string res(n, 'a');
-        k -= n;
-
-        int i = res.size() - 1;
-        while (k > 0) {
-            int tmp = min(k, 25);
-            res[i] += tmp;
-            k -= tmp;
-            --i;
+        string str="";
+        for(int i=0;i<n;i++){
+            str+='a';
         }
-
-        return res;
+        int curr=n;
+        int diff=k-curr;
+        if(diff==0) return str;
+        for(int i=n-1;i>=0 && diff>0;i--){
+            if(diff>25){
+                str[i]='z';
+                diff-=25;
+            }else{
+                str[i]=char('a'+diff);
+                return str;
+            }
+        }
+        return str;
     }
 };
+// a a a a a
+// 5
+// diff= 73-5
+// 
