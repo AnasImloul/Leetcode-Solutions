@@ -1,50 +1,28 @@
 class Solution {
 public:
-    int solve(vector<string>& words,vector<int> &f,unordered_map<string,vector<int>> &word_f,
-              unordered_map<string,int> &word_score,int n)
-    {
-        if(n==0)return 0;
-        
-        vector<int> v=word_f[words[n-1]],temp=f;
-        int score=word_score[words[n-1]];
-        int flag=1;
-        for(int i=0;i<26;i++)
-        {
-            if(f[i]<v[i])
-            {
-                flag=0;
+    int calc(vector<string>& words,map<char,int>&m,vector<int>& score,int i){ 
+        int maxi=0;
+        if(i==words.size())
+            return 0;
+        map<char,int>m1=m;//Creating a duplicate in case the given word does not satisfy our answer
+        int c=0;//Store the score
+        for(int j=0;j<words[i].length();j++){
+            if(m1.find(words[i][j])==m1.end()||m1[words[i][j]]==0){//If frequency of the letter reduces to zero or that letter is not present in our hashMap            
+                c=-1;
                 break;
             }
-            else
-            {
-                temp[i]-=v[i];
-            }
-        }
-        if(flag)
-        {
-            return max(solve(words,f,word_f,word_score,n-1),
-                       solve(words,temp,word_f,word_score,n-1)+score);
-        }
-        else
-            return solve(words,f,word_f,word_score,n-1);
-    }
+            c+=score[words[i][j]-'a'];
+            m1[words[i][j]]--;
+        }        
+        if(c!=-1)           
+          maxi=c+(calc(words,m1,score,i+1));//We are considering the current word and adding it to our answer
+        return max(maxi,calc(words,m,score,i+1));//FInding tha maximum between when we consider the current word and when we DONT consider current word
+        
+}
     int maxScoreWords(vector<string>& words, vector<char>& letters, vector<int>& score) {
-        vector<int> f(26,0);
-        for(auto i:letters)f[i-'a']++;
-        unordered_map<string,vector<int>> word_f;
-        unordered_map<string,int> word_score;
-        for(auto s:words)
-        {
-            vector<int> freq(26,0);
-            int total=0;
-            for(auto i:s)
-            {
-                freq[i-'a']++;
-                total+=score[i-'a'];
-            }
-            word_score[s]=total;
-            word_f[s]=freq;
-        }
-        return solve(words,f,word_f,word_score,words.size());
+        map<char,int>m;       
+        for(auto i:letters)
+            m[i]++;
+        return calc(words,m,score,0);   
     }
 };
