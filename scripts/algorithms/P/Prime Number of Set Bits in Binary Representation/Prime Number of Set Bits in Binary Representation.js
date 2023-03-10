@@ -1,24 +1,36 @@
-// Runtime: 128 ms (Top 86.90%) | Memory: 42.1 MB (Top 96.43%)
-var countPrimeSetBits = function(left, right) {
-  let ans = 0;
+var countPrimeSetBits = function (left, right) {
+    let count = 0;
 
-  // The `outer` is valid javascript syntax, just not well-known: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label
-  outer:
-  for(let i = left; i <= right; i++) {
-    let num = i;
-    let numBits = 0;
-    while(num) {
-      numBits++;
-      num &= num-1;
+    for (let i = left; i <= right; i++) {
+        let sum = 0;
+        let bytes = i.toString(2);
+
+        for (let i = 0; i < bytes.length; i++) {
+            const element = bytes[i];
+            element === "1" ? sum += 1 : 0
+        }
+        
+        checkPrime(sum) ? count++ : 0;
     }
 
-    if(numBits === 1) continue outer;
-    for(let j = 2; j <= Math.floor(Math.sqrt(numBits)); j++) {
-      if(numBits % j === 0) continue outer;
+    return count;
+
+}
+
+
+const checkPrime = (number) => {
+    isPrime = true;
+    if (number < 1) {
+        isPrime = false;
+    } else if (number === 1) {
+        isPrime = false;
+    } else {
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                isPrime = false;
+            }
+            
+        }
     }
-
-    ans++;
-  }
-
-  return ans;
-};
+    return isPrime;
+}
