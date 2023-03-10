@@ -2,52 +2,56 @@
  * @param {string[]} words
  * @return {number}
  */
-var longestStrChain = function(words) {
-    const len = words.length;
-    words.sort((a, b)=> a.length - b.length );
-    // dp[i] meaning: the longest string chain length ending with sorted words[i]
-    let dp= new Array(words.length).fill(1);
+var longestStrChain = function(words) 
+{
+        let tiers = new Array(16);
+        for(let i=0; i<tiers.length; i++)
+                tiers[i] = [];
+        for(let word of words)
+                tiers[word.length-1].push({word,len:1});
 
-// verify if a is a predecessor of word b
-    const isValid=(a,b)=>{
-        if(b.length - a.length !==1){
-            return false;
+        const isPredecessor = function(word1,word2)     // Assumes word2.length = word1.length+1
+        {
+                let w1p = 0, misses = 0;
+                for(let w2p = 0; w2p < word2.length; w2p++)
+                {
+                        if(word2[w2p] !== word1[w1p])
+                        {
+                                if(misses === 1)
+                                        return false;
+                                misses = 1;
+                        }
+                        else
+                        {
+                                w1p++;
+                                if(w1p === word1.length)
+                                        return true;
+                        }
+                }
+                return true;
+        };
+        
+        
+        for(let i=tiers.length-1; i>0; i--)
+        {
+                for(let w2=0; w2<tiers[i].length; w2++)
+                {
+                        for(let w1 = 0; w1 < tiers[i-1].length; w1++)
+                        {
+                                if(tiers[i-1][w1].len >= tiers[i][w2].len+1)
+                                        continue;
+                                if(isPredecessor(tiers[i-1][w1].word, tiers[i][w2].word))
+                                        tiers[i-1][w1].len = tiers[i][w2].len+1;
+                        }
+                }
         }
-        let lenOfA = a.length;
-        let lenOfB = b.length;
-        let i=0;
-        let j=0;
-        while(i<lenOfA && j<lenOfB){
-            if(a.charAt(i) === b.charAt(j)){
-                i++;
-                j++;
-            }
-            else{
-                j++
-            }
+        
+        let max = 0;
+        for(let i=0; i<tiers.length; i++)
+        {
+                for(let j=0; j<tiers[i].length; j++)
+                        max = Math.max(max,tiers[i][j].len);
         }
-		// if the last char is diff, then i = j
-		// if a char is different in the middle, then i = j - 1
-        if(i=== j-1 || i===j){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    
-    for(let i=0; i< len; i++){
-        for(let j=i+1; j< len; j++){
-            if(isValid(words[i],words[j])){
-                dp[j] = Math.max(dp[j], dp[i]+1);
-            }
-        }
-    }
-    let max = dp[0];
-    for(let i = 0;i<dp.length; i++){
-        max = Math.max(max, dp[i]);
-    }
-    return max
-    
-    
+        
+        return max;
 };
