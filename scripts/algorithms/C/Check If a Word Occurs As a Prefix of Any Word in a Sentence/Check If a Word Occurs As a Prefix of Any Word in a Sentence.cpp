@@ -1,19 +1,13 @@
-// Runtime: 3 ms (Top 38.04%) | Memory: 6.2 MB (Top 59.82%)
-
 class Solution {
 public:
-    int isPrefixOfWord(string sentence, string searchWord) {
-        istringstream iss(sentence) ;
-        string word = "" ;
-        int idx = 1 ;
-
-        while(iss >> word){
-            for(int sz = 1 ; sz <= size(word) ; ++sz ){
-                if(searchWord == word.substr(0,sz)) return idx ;
-            }
-            ++idx ;
+    int isPrefixOfWord(string s, string sw) {
+    stringstream ss(s);
+    string temp;
+    int i=1;
+        while(ss>>temp) {
+            if(temp.compare(0, sw.size(),sw)==0) return i;
+            i++;
         }
-
-        return -1 ;
+        return -1;
     }
 };
