@@ -1,24 +1,28 @@
 class Solution {
-   public:
-    vector<double> getCollisionTimes(vector<vector<int>>& cars) {
-        const auto n = cars.size();
-        vector<double> ret(n, -1);
-        vector<int> stk;
-        for (int i = n; i-- != 0;) {
-            while (!stk.empty() && cars[stk.back()][1] >= cars[i][1]) {
-                stk.pop_back();
-            }
-            for (int j = stk.size(); j-- != 0;) {
-                const auto c = stk[j];
-                const auto t =
-                    1.0 * (cars[c][0] - cars[i][0]) / (cars[i][1] - cars[c][1]);
-                if (t <= ret[c] || ret[c] == -1) {
-                    ret[i] = t;
+public:
+    vector<double> getCollisionTimes(vector<vector<int>>& cars)
+    {
+        int n = cars.size();
+        vector<double> res(n,-1.0);
+        stack<int> st;// for storing indices
+        for(int i=n-1;i>=0;i--)
+        {
+    //traversing from back if someone has greater speed and ahead of lesser speed car it will always be ahead 
+            while(!st.empty() && cars[st.top()][1]>= cars[i][1])
+                st.pop();
+            while(!st.empty()) // for lesser speed car ahead of greater spped car
+            {
+                double collision_time = (double)(cars[st.top()][0]-cars[i][0])/(cars[i][1]-cars[st.top()][1]);
+                if(collision_time <=res[st.top()] || res[st.top()] == -1)
+                {
+                    res[i] = collision_time;
                     break;
                 }
+                st.pop();
             }
-            stk.push_back(i);
+            
+            st.push(i);
         }
-        return ret;
+        return res;
     }
 };
