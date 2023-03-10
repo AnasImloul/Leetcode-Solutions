@@ -1,59 +1,64 @@
-// Runtime: 1534 ms (Top 45.54%) | Memory: 199 MB (Top 25.74%)
 class Solution {
+    vector<int> st;
 public:
-    map<pair<int, int>, int>edgeCount;
-    vector<int>degree;
-
-    vector<int> countPairsHelper(vector<int>&indegree, vector<int>&queries, int n){
-        vector<int>ans;
-
-        // for each query, time: O(2*n) for two pointer and O(uniqueEdgesCount)
-        for(int query: queries){
-            // two pointer
-            int i = 0, j = n-1, total = 0;
-            while(i != j){
-                if(degree[i] + degree[j] > query){
-                    j--;
-                }
-                else{
-                    total += (n-j-1);
-                    i++;
-                }
+    void update(int tind,int tl,int tr,int ind,int val){
+        if(tl>tr)
+            return;
+        if(tl==tr){
+            st[tind]+=val;
+            return;
+        }
+        int tm=tl+((tr-tl)>>1),left=tind<<1;
+        if(ind<=tm)
+            update(left,tl,tm,ind,val);
+        else
+            update(left|1,tm+1,tr,ind,val);
+        st[tind]=st[left]+st[left|1];
+    }
+    
+    int query(int tind,int tl,int tr,int ql,int qr){
+        if(tl>tr or qr<tl or ql>tr)
+            return 0;
+        if(ql<=tl and tr<=qr)
+            return st[tind];
+        int tm=tl+((tr-tl)>>1),left=tind<<1;
+        return query(left,tl,tm,ql,qr)+query(left|1,tm+1,tr,ql,qr);
+    }
+    
+    vector<int> countPairs(int n,vector<vector<int>>& a,vector<int>& q) {
+        vector<int> f(n+2,0);
+        vector<unordered_map<int,int>> mp(n+2); // using a normal map gives TLE
+        
+        for(auto v:a){
+            int mx=max(v[0],v[1]),mn=min(v[1],v[0]);
+            f[mx]++;
+            f[mn]++;
+            mp[mx][mn]++;
+        }
+        
+        vector<int> ans(q.size(),0);
+        int m=a.size();
+        st.resize(4*m+40,0);
+        
+        for(int i=n;i;i--){
+			// reducing the common edges between current node and its adjacent
+            for(auto e:mp[i]){
+                update(1,0,m,f[e.first],-1);
+                update(1,0,m,f[e.first]-e.second,1);
             }
-            while(i < n){
-                total += (n-i-1);
-                i++;
+            
+            int curr=f[i];
+            for(int j=0;j<q.size();j++)
+                ans[j]+=query(1,0,m,max(0,q[j]-curr+1),m);
+            
+			// reversing the changes made initially
+            for(auto e:mp[i]){
+                update(1,0,m,f[e.first],1);
+                update(1,0,m,f[e.first]-e.second,-1);
             }
-
-            // remove the negative contribution of edgeCount from all the pairs so far counted
-            for(auto i: edgeCount){
-                int u = i.first.first, v = i.first.second, w = i.second;
-                // cout<<indegree[u] + indegree[v] - w<<endl;
-                if(indegree[u] + indegree[v] > query && indegree[u] + indegree[v] - w <= query){
-                    total -= 1;
-                }
-            }
-            ans.push_back(total);
+            
+            update(1,0,m,f[i],1);
         }
         return ans;
-    }
-    vector<int> countPairs(int n, vector<vector<int>>& edges, vector<int>& queries) {
-
-        vector<int>indegree(n, 0);
-        for(auto edge: edges){
-            int x = edge[0], y = edge[1];
-            int u = min(x,y);
-            int v = max(x,y);
-            --u, --v;
-            edgeCount[{u,v}] += 1;
-            indegree[u]++;
-            indegree[v]++;
-        }
-
-        for(int i = 0; i < n; ++i){
-            degree.push_back(indegree[i]);
-        }
-        sort(degree.begin(), degree.end()); // sort degree to apply smart two pointer
-        return countPairsHelper(indegree, queries, n);
     }
 };
