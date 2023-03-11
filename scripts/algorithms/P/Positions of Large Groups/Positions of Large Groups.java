@@ -1,28 +1,32 @@
-// Runtime: 3 ms (Top 46.85%) | Memory: 45.5 MB (Top 9.24%)
 class Solution {
     public List<List<Integer>> largeGroupPositions(String s) {
-        List<List<Integer>> ans = new ArrayList<>();
-        int count = 1;
-        int si = -1;
+        List<List<Integer>> res = new ArrayList<>();
         int i = 0;
-        for (; i < s.length() - 1; i++) {
-            char ch = s.charAt(i);
-            if (ch == s.charAt(i + 1)) {
-                if (si == -1) {
-                    si = i;
+        while(i<s.length()-1){
+            int j = i+1;
+            while(j<s.length()){
+                List<Integer> temp = new ArrayList<>();
+                if(s.charAt(i) == s.charAt(j)){
+                    j++;
+                    
                 }
-                count++;
-            } else {
-                if (count >= 3) {
-                    ans.add(new ArrayList<Integer>(Arrays.asList(si, i)));
+                else{
+                    if(j - i >= 3 ){
+                        temp.add(i);
+                        temp.add(j-1);
+                        res.add(temp);
+                    }
+                    i = j;
+                    j = i+1;
                 }
-                si = -1;
-                count = 1;
+                if(j == s.length() && j - i >= 3){
+                    temp.add(i);
+                    temp.add(j-1);
+                    res.add(temp);
+                }
             }
+            i = j+1;
         }
-        if (count >= 3) {
-            ans.add(new ArrayList<Integer>(Arrays.asList(si, i)));
-        }
-        return ans;
+        return res;
     }
 }
