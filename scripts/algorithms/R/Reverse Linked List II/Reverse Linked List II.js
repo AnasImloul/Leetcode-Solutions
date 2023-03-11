@@ -1,17 +1,44 @@
-// Runtime: 100 ms (Top 29.59%) | Memory: 42.2 MB (Top 54.69%)
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} left
+ * @param {number} right
+ * @return {ListNode}
+ */
+
 var reverseBetween = function(head, left, right) {
-    if(!head) return null
-    let dummy = new ListNode()
-    dummy.next = head
-    let pre = dummy
-    for(let i=0; i<left-1; i++) pre = pre.next;
-    let start = pre.next
-    let tmp = start.next
-    for(let i=0; i<right-left; i++){
-        start.next = tmp.next
-        tmp.next = pre.next
-        pre.next = tmp
-        tmp = start.next
+    
+    if (!head || !head.next || left === right) {
+        
+        return head;
     }
-    return dummy.next
+        
+        let dummyHead = new ListNode(-1);
+
+        dummyHead.next = head;
+
+        let prev = dummyHead;
+
+        for (let i = 1; i < left; i++) {
+            
+            prev = prev.next;
+        }
+
+        let curr = prev.next;
+
+        for (let i = left; i < right; i++) {
+
+            let next = curr.next;
+            curr.next = next.next;
+            next.next = prev.next;
+            prev.next = next;
+        }
+        
+        return dummyHead.next;
 };
