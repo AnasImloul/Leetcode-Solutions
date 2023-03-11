@@ -1,22 +1,20 @@
-/**
- * Encodes a tree to a single string.
- *
- * @param {TreeNode} root
- * @return {string}
- */
- var serialize = function(root) {
-  let result = [];
-  const dfs = (r) => {
-    if (!r) {
-      result.push('N');
-      return;
+var serialize = function (root) {
+  if (!root) return "";
+  let res = [];
+
+  function getNode(node) {
+    if (!node) {
+      res.push("null");
+    } else {
+      res.push(node.val);
+      getNode(node.left);
+      getNode(node.right);
     }
-    result.push(r.val);
-    dfs(r.left);
-    dfs(r.right);
   }
-  dfs(root);
-  return result.join(",")
+
+  getNode(root);
+
+  return res.join(",");
 };
 
 /**
@@ -25,18 +23,21 @@
  * @param {string} data
  * @return {TreeNode}
  */
-var deserialize = function(data) {
-  const vals = data.split(",");
-  const dfs = (stream) => {
-    const item = stream.shift();
-    if (item == 'N') {
-      return null;
-    }
-    const node = new TreeNode(item);
-    node.left = dfs(stream);
-    node.right = dfs(stream);
-    return node;
-  };
+var deserialize = function (data) {
+  if (data === "") return null;
+  const arr = data.split(",");
 
-  return dfs(vals);
+  function buildTree(array) {
+    const nodeVal = array.shift();
+
+    if (nodeVal === "null") return null;
+
+    const node = new TreeNode(nodeVal);
+    node.left = buildTree(array);  //build left first
+    node.right = buildTree(array); //build right with updated array.
+
+    return node;
+  }
+
+  return buildTree(arr);
 };
