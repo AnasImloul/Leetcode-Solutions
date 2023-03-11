@@ -1,10 +1,21 @@
-var taskSchedulerII = function(tasks, space) {
-    let days = 0, readyFor = {};
-    
-    tasks.forEach(task => {
-        days = Math.max(days + 1, readyFor[task] ?? 0);
-        readyFor[task] = days + space + 1;
-    })
-    
-    return days;
+var taskSchedulerII = function(tasks, n) {
+	const config = {};
+	let totalIteration = 0;
+	let currentTime = 0;
+	for (const iterator of tasks) {
+		currentTime++;
+		if (!config[iterator]) {
+			config[iterator] = 0;
+		} else {
+			if (config[iterator] > currentTime) {
+				let difference = config[iterator] - currentTime;
+				totalIteration += difference;
+				currentTime += difference;
+			}
+		}
+		config[iterator] = currentTime + n + 1;
+		totalIteration++;
+	}
+
+	return totalIteration;
 };
