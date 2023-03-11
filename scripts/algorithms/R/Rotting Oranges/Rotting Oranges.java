@@ -1,38 +1,45 @@
-// Runtime: 4 ms (Top 57.93%) | Memory: 42.6 MB (Top 71.50%)
 class Solution {
+    class Pair{
+        int i;
+        int j;
+        int t;
+        
+        public Pair(int i,int j,int t){
+            this.i = i;
+            this.j = j;
+            this.t = t;
+        }
+    }
+    int ans = 0;
+    final int[][] dir = {{-1,0},{1,0},{0,-1},{0,1}};
     public int orangesRotting(int[][] grid) {
-        int freshOranges = 0;
-        int rows = grid.length;
-        int cols = grid[0].length;
-        Queue<int[]> queue = new LinkedList<>();
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (grid[i][j] == 2) {
-                    queue.add(new int[]{i, j});
-                }
-                if (grid[i][j] == 1) {
-                    freshOranges++;
+        int countFresh = 0;
+        Queue<Pair> q = new LinkedList<>();
+        for(int i=0;i<grid.length;i++){
+            for(int j = 0;j<grid[0].length;j++){
+                if(grid[i][j] == 2){
+                    q.offer(new Pair(i,j,0));
+                }else if(grid[i][j] == 1){
+                    countFresh++;
                 }
             }
         }
-        int[][] dirs = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
-        int time = 0;
-        while(!queue.isEmpty() && freshOranges > 0) {
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
-                int[] pop = queue.poll();
-                for (int[] dir : dirs) {
-                    int row = dir[0] + pop[0];
-                    int col = dir[1] + pop[1];
-                    if (row >= 0 && row < rows && col >= 0 && col < cols && grid[row][col] == 1) {
-                        queue.add(new int[]{row, col});
-                        grid[row][col] = 2;
-                        freshOranges--;
-                    }
+        int count = 0;
+        while(q.size() != 0){
+            Pair temp = q.poll();
+            ans = Math.max(ans,temp.t);
+            for(int[] d : dir){
+                int r = temp.i + d[0];
+                int c = temp.j + d[1];
+                int t = temp.t +1;
+                if(r >= 0 && c >= 0 && r <grid.length && c < grid[0].length && grid[r][c] == 1){
+                    q.offer(new Pair(r,c,t));
+                    grid[r][c] = 2;
+                    count++;
                 }
             }
-            time++;
         }
-        return freshOranges == 0 ? time : -1;
+        if(count != countFresh) return -1;
+        return ans;
     }
 }
