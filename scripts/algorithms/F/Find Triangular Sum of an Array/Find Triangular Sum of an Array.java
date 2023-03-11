@@ -1,12 +1,15 @@
 class Solution {
     public int triangularSum(int[] nums) {
-        while(nums.length > 1){
-            int[] arr = new int[nums.length-1];
-            for(int i=0; i<arr.length; i++){
-                arr[i] = (nums[i] + nums[i+1]) % 10;
-            }
-            nums = arr;
+        return find(nums,nums.length);
+    }
+    
+    public int find(int[] a, int n){
+        if(n == 1)
+            return a[0];
+            
+        for(int i=0;i<n-1;i++){
+            a[i] = (a[i] + a[i+1])%10; 
         }
-        return nums[0];
+        return find(a,n-1);
     }
 }
