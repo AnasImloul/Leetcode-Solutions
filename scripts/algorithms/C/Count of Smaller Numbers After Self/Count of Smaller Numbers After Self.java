@@ -1,45 +1,49 @@
-// Runtime: 76 ms (Top 77.01%) | Memory: 57.3 MB (Top 98.23%)
 class Solution {
-    int[] id;
-    int[] tmp;
-    int[] idTmp;
-    int[] counts;
+    public int[] tree = new int[400000];
+    
     public List<Integer> countSmaller(int[] nums) {
         int n = nums.length;
-        id = new int[n];
-        tmp = new int[n];
-        idTmp = new int[n];
-        counts = new int[n];
-        for(int i = 0; i < n; i++) {
-            id[i] = i;
+        List<Integer> list =  new ArrayList<>();
+        for(int i = 0 ; i < n ; i++)
+            nums[i] = nums[i]+10000;
+        
+        for(int i = n-1 ; i >= 0 ; i--)
+        {
+            updateTree(0 , 0 , 20000 , nums[i]);
+            list.add(query(0 , 0 , 20000 , 0 , nums[i]-1));
         }
-        mergesort(nums, 0, n);
-        return IntStream.of(counts).boxed().collect(Collectors.toList());
+        
+        Collections.reverse(list);
+        return list;
     }
-
-    void mergesort(int[] nums, int lo, int hi) {
-        if(lo + 1 >= hi) {
+    
+    public void updateTree(int ind , int low , int high , int val){
+        if(low == high){
+            tree[ind]++;
             return;
         }
-        int mid = lo + (hi - lo) / 2;
-        mergesort(nums, lo, mid);
-        mergesort(nums, mid, hi);
-        merge(nums, lo, mid, hi);
+        
+        int mid = (low+high)/2;
+        if(mid >= val)
+            updateTree(2*ind+1 , low , mid , val);
+        else
+            updateTree(2*ind+2 , mid+1 , high  , val);
+        
+        tree[ind] = tree[2*ind+1] + tree[2*ind+2];
     }
-
-    void merge(int[] nums, int lo, int mid, int hi) {
-        int j = lo, k = mid;
-        for(int i = lo; i < hi; i++) {
-            if(k == hi || (j < mid && nums[j] > nums[k])) {
-                counts[id[j]] += (hi - k);
-                idTmp[i] = id[j];
-                tmp[i] = nums[j++];
-            } else {
-                idTmp[i] = id[k];
-                tmp[i] = nums[k++];
-            }
+    
+    public int query(int ind , int low , int high , int left , int right){
+        if(low >= left && high <= right){
+            return tree[ind];
         }
-        System.arraycopy(tmp, lo, nums, lo, hi - lo);
-        System.arraycopy(idTmp, lo, id, lo, hi - lo);
+        
+        if(high < left || low > right)
+            return 0;
+        
+        int mid = (low+high)/2;
+        int leftFind = query(2*ind+1 , low , mid , left , right);
+        int rightFind = query(2*ind+2 , mid+1 , high , left , right);
+        
+        return leftFind+rightFind;
     }
 }
