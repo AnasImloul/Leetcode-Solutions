@@ -1,24 +1,28 @@
-// Runtime: 390 ms (Top 44.42%) | Memory: 83.7 MB (Top 91.38%)
-
 class Solution {
 public:
-    long long countBadPairs(vector<int>& nums)
-    {
-        unordered_map<int,int> hash;
-        long long goodpair_count=0;
-        long long int n=nums.size();
-        for(int i=0;i<nums.size();++i)
+    long long countBadPairs(vector<int>& nums) {
+        
+        //j - i != nums[j] - nums[i] means  nums[i]-i != nums[j]-j
+        map<long long,long long >mp;
+        for(int i=0;i<nums.size();i++)
         {
-            long long difference = i-nums[i];
-            if(hash.count(difference)==1)
-            {
-                goodpair_count+= hash[difference];
-                hash[difference]++;
-            }
-            else
-                hash[difference]=1;
+            nums[i] = nums[i]-i;
+            
+            mp[nums[i]]++;
         }
-        long long totalpair= (n*(n-1))/2;
-        return totalpair-goodpair_count;
+        long long  n = nums.size();
+        long long totalPair = n*(n-1)/2;
+        
+        for(auto& it:mp)
+        {
+            if(it.second>1)
+            {
+                totalPair -= (it.second)*(it.second-1)/2;
+            } 
+        }
+        
+        
+        
+        return totalPair;
     }
 };
