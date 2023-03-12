@@ -1,18 +1,27 @@
-from heapq import heappush, heappop
-class Solution:
-    def eatenApples(self, A: List[int], D: List[int]) -> int:
-        ans, i, N = 0, 0, len(A)
-        h = []
-        while i < N or h:
-            # only push to heap when you have a valid i, and the apple has atleast one day to stay fresh.
-            if i<N and A[i] > 0:
-                heappush(h, [i+D[i], A[i]])
-            # remove the rotten apples batches and the batches with no apples left (which might have got consumed).
-            while h and (h[0][0] <= i or h[0][1] <= 0):
-                heappop(h)
-            # only if there is batch in heap after removing all the rotten ones, you can eat. else wait for the subsequent days for new apple batch by incrementing i.
-            if h:
-                h[0][1]-=1
-                ans+=1
-            i+=1
-        return ans 
+import heapq
+class Solution(object):
+    def eatenApples(self, apples, days):
+        """
+        :type apples: List[int]
+        :type days: List[int]
+        :rtype: int
+        """
+        heap = [(days[0], apples[0])]
+        heapq.heapify(heap)
+        day = 0
+        rtn = 0
+        while heap or day < len(days):
+            # print(heap, day)
+            apple = 0
+            if heap :
+                cnt, apple = heapq.heappop(heap)
+                while heap and cnt <= day and apple > 0:
+                    cnt, apple = heapq.heappop(heap)
+            if apple > 0 and cnt > day  :
+                rtn +=1
+            day +=1
+            if apple >  1 and cnt > day:
+                heapq.heappush(heap, (cnt, apple-1))
+            if day < len(days) and apples[day] > 0 :
+                heapq.heappush(heap, (day +days[day], apples[day]))
+        return rtn 
