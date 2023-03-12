@@ -1,32 +1,24 @@
 var minimumDeleteSum = function(s1, s2) {
-    s1 = s1.split('');
-    s2 = s2.split('');
+    const len1 = s1.length, len2 = s2.length;
+    const dp = [...Array(len1+1)].map(() => Array(len2+1).fill(0));
     
-    const s1Len = s1.length, s2Len = s2.length;
-    const dp = new Array(s1Len).fill(-1).map(() => {
-        return new Array(s2Len).fill(-1);
-    });
-    const solve = (i = 0, j = 0) => {
-        let cost = 0;
-        if(i == s1Len) {
-            while(j < s2Len) cost += s2[j++].charCodeAt(0);
-            return cost;
-        }
-        
-        if(j == s2Len) {
-            while(i < s1Len) cost += s1[i++].charCodeAt(0);
-            return cost;
-        }
-        
-        if(dp[i][j] != -1) return dp[i][j];
-        
-        if(s1[i] == s2[j]) return solve(i + 1, j + 1);
-        
-        let del = solve(i + 1, j) + s1[i].charCodeAt(0);
-        let add = solve(i, j + 1) + s2[j].charCodeAt(0);
-        
-        return dp[i][j] = Math.min(add, del);
+    for(let i = 1; i <= len1; i++) {
+        dp[i][0] = dp[i-1][0] + s1.charCodeAt(i-1);
     }
     
-    return solve();
+    for(let j = 1; j <= len2; j++) {
+        dp[0][j] = dp[0][j-1] + s2.charCodeAt(j-1);
+    }
+    
+    for(let i = 1; i <= len1; i++) {
+        for(let j = 1; j <= len2; j++) {
+            if(s1[i-1] == s2[j-1]) dp[i][j] = dp[i-1][j-1];
+            else {
+                const del1 = s1.charCodeAt(i-1) + dp[i-1][j];
+                const del2 = s2.charCodeAt(j-1) + dp[i][j-1];
+                dp[i][j] = Math.min(del1, del2);
+            }
+        }
+    }
+    return dp[len1][len2];
 };
