@@ -1,24 +1,12 @@
-// Runtime: 133 ms (Top 5.63%) | Memory: 44.8 MB (Top 5.42%)
-/**
- * @param {string} jewels
- * @param {string} stones
- * @return {number}
- */
 var numJewelsInStones = function(jewels, stones) {
-    const jewelsCountObj = {};
-    let jewelsCount = 0;
+    let trackDict = new Map();
+    let output = 0;
 
-    for (const i of jewels) {
-        jewelsCountObj[i] = 0;
-    }
+    for (let char of stones)
+        trackDict.set(char, trackDict.has(char) ? trackDict.get(char) + 1 : 1);
+    
+    for (let char of jewels)
+        output += trackDict.has(char) ? trackDict.get(char) : 0;
 
-    for (const i of stones) {
-        if (jewelsCountObj[i] >= 0) jewelsCountObj[i] += 1;
-    }
-
-    for (const i in jewelsCountObj) {
-        jewelsCount += jewelsCountObj[i];
-    }
-
-    return jewelsCount;
+    return output;
 };
