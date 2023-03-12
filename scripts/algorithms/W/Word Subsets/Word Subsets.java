@@ -1,35 +1,39 @@
 class Solution {
     public List<String> wordSubsets(String[] words1, String[] words2) {
-        List<String> answer = new ArrayList<>();
-        int[] countB = new int[26];
-        for(String word2: words2) {
-            int[] temp = counter(word2);
-            for(int i=0;i<26;++i) {
-                countB[i] = Math.max(countB[i], temp[i]);
+        List<String> list=new ArrayList<>();
+        int[] bmax=count("");
+        for(String w2:words2)
+        {
+            int[] b=count(w2);
+            for(int i=0;i<26;i++)
+            {
+                bmax[i]=Math.max(bmax[i],b[i]);
             }
         }
-        for(String word1: words1) {
-            if(isUniversal(counter(word1), countB)) {
-                answer.add(word1);
-            }
+        for(String w1:words1)
+        {
+            int[] a=count(w1);
+            for(int i=0;i<26;i++)
+            {
+                if(a[i]<bmax[i])
+                {
+                    break;
+                }
+                  if(i==25)
+             {
+                 list.add(w1);
+             }
+            } 
         }
-        return answer;
+        return list;
     }
-    
-    private int[] counter(String s) {
-        int[] count = new int[26];
-        for(char c : s.toCharArray()) {
-            ++count[c - 'a'];
+    public int[] count(String s)
+    {
+        int[] ans=new int[26];
+        for(char c:s.toCharArray())
+        {
+            ans[c-'a']++;
         }
-        return count;
-    }
-    
-    private boolean isUniversal(int[] countA, int[] countB) {
-        for(int i=0;i<26;++i) {
-            if(countA[i] < countB[i]){
-                return false;
-            }
-        }
-        return true;
+        return ans;
     }
 }
