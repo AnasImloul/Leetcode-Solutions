@@ -1,22 +1,24 @@
 class Solution {
 public:
     int countBinarySubstrings(string s) {
-        vector<int> res;
-        int ct = 1;
-        int n = s.size();
-        for(int i =0; i< n - 1 ; ++i){
-            if(s[i] == s[i + 1]) ct++;
+       //Space Complexity -> O(n)
+        //Time Complexity -> O(n)
+        int n=s.length();
+        vector<int> temp(n,0);
+        temp[0]=1;
+      int idx=0;
+        for(int i=1;i<n;i++){
+          if(s[i-1]==s[i]){
+              temp[idx]++;
+          }  
             else{
-                res.push_back(ct);
-                ct = 1;
+                idx++;
+                temp[idx]=1;
             }
         }
-        res.push_back(ct);
-        
-        int ans = 0;
-        n = res.size();
-        for(int i =0; i< n - 1; ++i){
-            ans += min(res[i], res[i + 1]);
+        int ans=0;
+        for(int i=1;i<temp.size();i++){
+            ans+=min(temp[i-1],temp[i]);
         }
         return ans;
     }
