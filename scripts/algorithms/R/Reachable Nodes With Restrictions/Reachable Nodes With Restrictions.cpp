@@ -1,33 +1,35 @@
 class Solution {
 public:
-    int dfs(vector<int>adj[],int uu,vector<int>&res,vector <int>&vis){
-        vis[uu]=1;
-        int count=1;
-        for(auto nn:adj[uu]){
-            if(res[nn]==1){
-                continue;
-            }
-            
-            if(vis[nn]==-1){
-                count+=dfs(adj,nn,res,vis);
+    int count=1;  // node 0 is already reached as it is starting point
+    vector<vector<int>> graph;
+    unordered_set<int> res;  // to store restricted numbers for fast fetch
+    vector<bool> vis;  // visited array for DFS
+    
+    void dfs(int i){
+        for(int y: graph[i]){
+            if(!vis[y] && res.count(y)==0){
+                vis[y]= true;
+                dfs(y);
+                count++;
             }
         }
-        return count;
     }
     
     int reachableNodes(int n, vector<vector<int>>& edges, vector<int>& restricted) {
-        vector <int> adj[n];
-        vector <int> vis(n,-1);
-   
-        for(int i=0;i<edges.size();i++){
-            adj[edges[i][0]].push_back(edges[i][1]);
-            adj[edges[i][1]].push_back(edges[i][0]);
+        for(int x:restricted) res.insert(x);
+        
+        // creating graph
+        graph.resize(n);
+        vis.resize(n);
+        for(auto &x:edges){
+            graph[x[0]].push_back(x[1]);
+            graph[x[1]].push_back(x[0]);
         }
-
-        vector <int> res(n,0);
-        for(int i=0;i<restricted.size();i++){
-            res[restricted[i]]=1;
-        }
-        return dfs(adj,0,res,vis);
+        
+        // mark 0 as visited coz it is starting point and is already reached 
+        vis[0]= true;
+        dfs(0);
+        
+        return count;
     }
 };
