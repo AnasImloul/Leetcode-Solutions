@@ -1,64 +1,114 @@
+vector<vector<int> > dp,pre,par;
+
+bool startWith(string s, string t)
+{
+// returns true if string s starts with string t
+    int i;
+    for(i=0; i<s.length()&&i<t.length(); i++)
+    {
+        if(s[i]==t[i])
+            continue;
+        else
+            return false;
+    }
+    if(i==t.length())
+        return true;
+    else
+        return false;
+}
+
+int calc(string A, string B)
+{
+ // calculate the number of extra characters required to be appended to A
+ // if A is followed by B
+ // for eg. calc("abcd","cdef") = 2
+ 
+    int a=A.length(),b=B.length();
+    for(int i=0; i<a; i++)
+    {
+        if(a-i<=b&&startWith(B,A.substr(i)))
+        {
+            return b-(a-i); 
+        }
+    }
+    return b;
+}
+
+int finalMask,n;
+
+int helper(int mask, int last)
+{
+ // returns the minimum length of string required if last string appended was A[last] 
+ // the sets bit in mask represents the strings that were already appended to the final string
+ 
+    if(mask==finalMask)  // all strings are appended in final string
+        return 0;
+
+    if(dp[mask][last]!=-1) // memoization
+        return dp[mask][last];
+        
+    int mn=INT_MAX;
+    int p;
+    for(int i=0; i<n; i++)
+    {
+        if(mask&(1<<i))
+            continue;
+        int cost=pre[last][i]+helper(mask|(1<<i),i);  // extra characters need to be appended
+        if(cost<mn)
+        {
+            mn=cost;
+            p=i;
+        }
+    }
+    par[mask][last]=p;  // store parent, so that it is easy to traceback and find the final result
+    return dp[mask][last]=mn; // store result in DP table
+}
+
+
+
 class Solution {
 public:
-    
-    int n;
-    int ov[12][12];
-    int overlap(int last,int i){
-        if(last==n) return 0;
-         return ov[last][i];
-    }
-    
-    int minStr(vector<string>& words ,int mask,int last,vector<vector<int>>& dp){
-        
-        if(mask==(1<<n)-1) return 0;
-        int ans=1e9;
-        if(dp[mask][last]!=-1) return dp[mask][last];
-        for(int j=0;j<words.size();j++){
-         
-            if((mask&(1<<j))==0){ 
-               ans=min(ans,(int) words[j].size()-overlap(last,j)+minStr(words,mask|(1<<j) ,j,dp) ); 
-            }
+    string shortestSuperstring(vector<string>& A) {
+    n=A.size();
+    pre.assign(n,vector<int>(n));  // for pre-computing calc(a,b) for all pairs of strings
+    par.assign(1<<n,vector<int>(n,-1));    
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            if(j==i)
+                continue;
+            pre[i][j]=calc(A[i],A[j]);
         }
-        return dp[mask][last]=ans;
-        
     }
-    
-    string shortestSuperstring(vector<string>& words) {
-        n=words.size();
-        string ans;
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                ov[i][j]=0;
-                for(int l=min(words[i].size(),words[j].size());l>=1;l--){
-                   if( words[j].substr(0,l)==words[i].substr(words[i].size()-l)) {
-                       ov[i][j]=l;
-                       break;
-                   } 
-                    
-                } 
-            }
+    finalMask=(1<<n)-1;  
+    dp.assign(1<<n,vector<int>(n,-1));
+    int len=INT_MAX;  // len will contain minimum length of required string
+    int ind;
+    for(int i=0; i<n; i++)
+    {
+        int prev=len;
+        len=min(len, (int)A[i].length()+helper(1<<i,i));
+        if(len!=prev)
+        {
+            ind=i;
         }
-        vector<vector<int>> dp(1<<n,vector<int>(n+1,-1));
-        minStr(words,0,n,dp);
-        
-        int mask=0;
-        int last=n;
-        
+    }
 
-       while(mask!=(1<<n)-1){
-            for(int j=0;j<n;j++){
-         
-               if((mask&(1<<j))==0){ 
-                   if(dp[mask][last]==(int) words[j].size()-overlap(last,j)+minStr(words,mask|(1<<j) ,j,dp)){
-                       ans=ans+words[j].substr(overlap(last,j));
-                       mask=mask|(1<<j);
-                       last=j;
-                       break;
-                   } 
-                }
-            }  
-       }
-        
-      return ans;
+ // Now traceback to find the final answer
+    string ans=A[ind];
+    int msk=1<<ind;
+    int prev_ind=ind;
+    ind=par[msk][ind];
+    while(ind!=-1)
+    {
+        len=pre[prev_ind][ind];
+        int alen=A[ind].length();
+        ans+=A[ind].substr(alen-len,len);            
+        msk=msk^(1<<ind);
+        prev_ind=ind;
+        ind=par[msk][ind];  
+    }
+        return ans;
     }
 };
