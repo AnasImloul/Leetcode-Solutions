@@ -1,53 +1,41 @@
-// Runtime: 123 ms (Top 42.01%) | Memory: 21.4 MB (Top 49.39%)
-
 class Solution {
+    vector<int> dr = {0,0,1,-1};
+    vector<int> dc = {1,-1,0,0};
 public:
-    int dx[4]={0,0,-1,1};
-    int dy[4]={1,-1,0,0};
+    bool isPos(int r,int c,int n){
+        return ( r>=0 && c>=0 && r<n && c<n );
+    }
+
     int maxDistance(vector<vector<int>>& grid) {
-        queue<pair<int,int>> q;
-        int n=grid.size(),m=grid[0].size();
-        vector<vector<int>> dis(n,vector<int>(m,INT_MAX));
-        for(int i=0;i<n;++i)
-        {
-            for(int j=0;j<m;++j)
-            {
-                if(grid[i][j]==1)
-                {
-                    q.push({i,j});
-                    dis[i][j]=0;
+        int n = grid.size();
+        vector< vector<int> > dist(n,vector<int>(n,-1));
+        queue< vector<int> > pq;
+        for(int i=0 ; i<n ; i++){
+            for(int j=0 ; j<n ; j++){
+                if( 1==grid[i][j] ){
+                    dist[i][j] = 0;
+                    pq.push({i,j});
                 }
             }
         }
-        while(!q.empty())
-        {
-            auto temp=q.front();
-            q.pop();
-            int x=temp.first;
-            int y=temp.second;
-            for(int i=0;i<4;++i)
-            {
-                int nx=x+dx[i];
-                int ny=y+dy[i];
-                int ndis=dis[x][y]+1;
-                if(nx>=0 && ny>=0 && nx<n && ny<m && ndis<dis[nx][ny])
-                {
-                    q.push({nx,ny});
-                    dis[nx][ny]=ndis;
+        int ans = 0;
+        while( !pq.empty() ){
+            vector<int> vect = pq.front();
+            pq.pop();
+            int r = vect[0];
+            int c = vect[1];
+            if( 0==grid[r][c] ){
+                ans = max(ans,dist[r][c]);
+            }
+            for(int i=0 ; i<4 ; i++){
+                int nr = r+dr[i];
+                int nc = c+dc[i];
+                if( isPos(nr,nc,n) && -1==dist[nr][nc] ){
+                    dist[nr][nc] = dist[r][c]+1;
+                    pq.push({nr,nc});
                 }
             }
         }
-        int ans=-1;
-        for(int i=0;i<n;++i)
-        {
-            for(int j=0;j<m;++j)
-            {
-                if(grid[i][j]!=1)
-                {
-                    ans=max(ans,dis[i][j]);
-                }
-            }
-        }
-        return (ans!=INT_MAX)?ans:-1; // if ans==INT_MAX then there are only wate(no land)
+        return (ans==0 ? -1 : ans);
     }
 };
