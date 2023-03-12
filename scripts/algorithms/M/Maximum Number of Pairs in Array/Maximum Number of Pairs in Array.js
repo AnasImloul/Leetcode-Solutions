@@ -1,15 +1,17 @@
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
 var numberOfPairs = function(nums) {
-    const map = {};
-    let pairs = 0;
-    
-    for(let i = 0; i < nums.length; i++) {
-        if(map[nums[i]]) {
-            delete map[nums[i]];
-            pairs++;
-        } else {
-            map[nums[i]] = 1;
-        }
+  let pairs = 0;
+  const s = new Set();
+  for (const num of nums) {
+    if (s.has(num)) {
+      pairs += 1;
+      s.delete(num);
+    } else {
+      s.add(num);
     }
-    
-    return [pairs, Object.values(map).length]  
+  }
+  return [pairs, nums.length - pairs * 2];
 };
