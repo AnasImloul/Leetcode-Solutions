@@ -1,10 +1,11 @@
 class Solution:
     def countVowels(self, word: str) -> int:
-        count = 0
-        sz = len(word)
-        
-        for pos in range(sz):
-            if word[pos] in 'aeiou':
-                count += (sz - pos) * (pos + 1)
+        count = vowelIndexSum = 0
+        vowels = {'a', 'e', 'i', 'o', 'u'}
+
+        for i, c in enumerate(word, start=1):
+            if c in vowels:
+                vowelIndexSum += i
+            count += vowelIndexSum
         
         return count
