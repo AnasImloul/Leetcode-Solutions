@@ -1,35 +1,19 @@
-var allPathsSourceTarget = function(graph) {
-    
+/**
+ * @param {number[][]} graph
+ * @return {number[][]}
+ */
+const allPathsSourceTarget = function(graph) {
+    const n = graph.length;
     const result = [];
-    const path = [];
-    
-    dfs(0);
+    const dfs = (node, path) => {
+        if (node === n-1) {
+            result.push([...path, node]); // Add the current path to the result if we have reached the target node
+            return;
+        }
+        for (const neighbor of graph[node]) {
+            dfs(neighbor, [...path, node]); // Recursively explore all neighbors of the current node
+        }
+    };
+    dfs(0, []); // Start the DFS from the source node
     return result;
-
-    
-    // [1,2], [3], [3], []]
-    //          [0]
-    // [1]              [2]
-    // [3]              [3]
-    //         return
-    
-    function dfs(index) {
-
-        if (index === graph.length - 1) {
-            
-            return result.push([...path, index]);
-            
-            // path.push(index);
-            // const copyPath = [...path]
-            // path.pop();
-            // return result.push([...path]);
-        }
- 
-        const elements = graph[index];    // [ 1, 2 ]
-        for (let j = 0; j < elements.length; j++) { // [ 1 ]
-            path.push(index);  // path: [ 0 ]
-            dfs(elements[j]);     // dfs(1);
-            path.pop();     
-        }
-    }
 };
