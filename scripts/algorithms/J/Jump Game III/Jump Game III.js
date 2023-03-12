@@ -1,41 +1,18 @@
-// Runtime: 84 ms (Top 85.29%) | Memory: 51.6 MB (Top 46.69%)
+/**
+ * @param {number[]} arr
+ * @param {number} start
+ * @return {boolean}
+ */
 var canReach = function(arr, start) {
-    const N = arr.length;
-    const visited = new Set();
-    const queue = [[start]];
-    const diff = [1, -1];
-
-    while (queue.length > 0) {
-        const nodes = queue.pop();
-        const newNodes = [];
-
-        for (const node of nodes) {
-            const jump = arr[node];
-
-            if (jump === 0) {
-                return true;
-            }
-
-            for (const d of diff) {
-                const newNode = node + (jump * d);
-
-                if (newNode < 0 || newNode >= N) {
-                    continue;
-                }
-
-                if (visited.has(newNode)) {
-                    continue;
-                }
-
-                visited.add(newNode);
-                newNodes.push(newNode);
+        let queue = [start];
+        while(queue.length) {
+            let index = queue.shift();
+            if(index >= 0 && index < arr.length && arr[index] >=0 ){
+                if(arr[index] === 0)return true;
+                let move = arr[index]
+                arr[index] = -1   
+                queue.push(index +move , index-move)
             }
         }
-
-        if (newNodes.length > 0) {
-            queue.push(newNodes);
-        }
-    }
-
     return false;
 };
