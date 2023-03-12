@@ -1,26 +1,12 @@
-# Runtime: 67 ms (Top 46.85%) | Memory: 14.2 MB (Top 25.08%)
-
 class Solution:
     def addStrings(self, num1: str, num2: str) -> str:
-        num1 = list(num1)
-        num2 = list(num2)
+        def func(n):
+            value = {'0':0, '1':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
+            result = 0
+            for digit in n:
+                result = 10 * result + value[digit]
 
-        ans = ''
-        carry = 0
-        while num1 and num2:
-            p = int(num1.pop()) + int(num2.pop()) + carry
-            carry = p//10
-            ans = str(p%10) + ans
+            return result
 
-        while num1:
-            p = int(num1.pop()) + carry
-            carry = p//10
-            ans = str(p%10) + ans
-
-        while num2:
-            p = int(num2.pop()) + carry
-            carry = p//10
-            ans = str(p%10) + ans
-
-        if carry: ans = str(carry) + ans
-        return ans
+        ans = func(num1) + func(num2)
+        return str(ans)
