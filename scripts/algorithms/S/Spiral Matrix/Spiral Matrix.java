@@ -1,48 +1,30 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 42.2 MB (Top 37.48%)
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
-    int m = matrix.length, n = matrix[0].length;
-    int upper_bound = 0, lower_bound = m - 1;
-    int left_bound = 0, right_bound = n - 1;
-    List<Integer> res = new LinkedList<>();
-    // res.size() == m * n to go through the whole matrix
-    while (res.size() < m * n) {
-        if (upper_bound <= lower_bound) {
-            // from left to right on the top
-            for (int j = left_bound; j <= right_bound; j++) {
-                res.add(matrix[upper_bound][j]);
-            }
-            // move the upper bound down
-            upper_bound++;
-        }
+        List<Integer> ans = new ArrayList<>();
+        int top = 0, left = 0, bottom = matrix.length - 1, right = matrix[0].length - 1;
 
-        if (left_bound <= right_bound) {
-            // traveral from up to dwon on the right side
-            for (int i = upper_bound; i <= lower_bound; i++) {
-                res.add(matrix[i][right_bound]);
-            }
-            // move the right bound left
-            right_bound--;
-        }
+        while (top <= bottom && left <= right) 
+        {
+            for (int i = left; i <= right; i++)
+                ans.add(matrix[top][i]);
+            top++;
 
-        if (upper_bound <= lower_bound) {
-            // traveral from rigth to left on the bottom side
-            for (int j = right_bound; j >= left_bound; j--) {
-                res.add(matrix[lower_bound][j]);
-            }
-            // move the lower bound up
-            lower_bound--;
-        }
+            for (int i = top; i <= bottom; i++)
+                ans.add(matrix[i][right]);
+            right--;
 
-        if (left_bound <= right_bound) {
-            //traveral from down to up on the left side
-            for (int i = lower_bound; i >= upper_bound; i--) {
-                res.add(matrix[i][left_bound]);
+            if (top <= bottom) {
+                for (int i = right; i >= left; i--)
+                    ans.add(matrix[bottom][i]);
+                bottom--;
             }
-            // move the left bound rigth
-            left_bound++;
+
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--)
+                    ans.add(matrix[i][left]);
+                left++;
+            }
         }
+        return ans;
     }
-    return res;
-}
 }
