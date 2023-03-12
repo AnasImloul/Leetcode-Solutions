@@ -1,36 +1,29 @@
-var minCost = function(grid) {
-    const m = grid.length, n = grid[0].length;
-    const vis = Array.from({ length: m}, () => {
-        return new Array(n).fill(false);
-    });
-    const dir = [
-        [0, 1, 1],
-        [0, -1, 2],
-        [1, 0, 3],
-        [-1, 0, 4]
-    ];
-    
-    const heap = new MinPriorityQueue({
-        priority: x => x[0]
-    });
-    
-    heap.enqueue([0, 0, 0]);
-    const isInside = (x, y) => {
-        return x >= 0 && y >= 0 && x < m && y < n;
-    }
-    while(heap.size()) {
-        const [dis, x, y] = heap.dequeue().element;
-        if(x == m - 1 && y == n - 1) return dis;
-        
-        if(vis[x][y]) continue;
-        vis[x][y] = true;
-        
-        for(let [a, b, dr] of dir) {
-            a += x, b += y;
-            if(!isInside(a, b)) continue;
-            heap.enqueue(
-                [dis + (grid[x][y] != dr),a, b]
-            )
-        }
-    }
+const minCost = function (grid) {
+	const m = grid.length,
+		n = grid[0].length,
+		checkPos = (i, j) =>
+			i > -1 && j > -1 && i < m && j < n && !visited[i + "," + j],
+		dir = { 1: [0, 1], 2: [0, -1], 3: [1, 0], 4: [-1, 0] },
+		dfs = (i, j) => {
+			if (!checkPos(i, j)) return false;
+			if (i === m - 1 && j === n - 1) return true;
+			visited[i + "," + j] = true;
+			next.push([i, j]);
+			return dfs(i + dir[grid[i][j]][0], j + dir[grid[i][j]][1]);
+		},
+		visited = {};
+	let changes = 0, cur = [[0, 0]], next;
+	while (cur.length) {
+		next = [];
+		for (const [i, j] of cur) if (dfs(i, j)) return changes;
+		changes++;
+		cur = [];
+		next.forEach(pos => {
+			for (let d = 1; d < 5; d++) {
+				const x = pos[0] + dir[d][0],
+					y = pos[1] + dir[d][1];
+				if (checkPos(x, y)) cur.push([x, y]);
+			}
+		});
+	}
 };
