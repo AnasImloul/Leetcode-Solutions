@@ -1,37 +1,25 @@
-/**
- * @param {string} s
- * @return {boolean}
- */
-var validPalindrome = function(s) {
-    let left = 0, right = s.length - 1, res = true;
-    while(left < right)
-    {
-        if(s[left] !== s[right])
-        {
-            res = isPalindrome(s, left + 1, right) || isPalindrome(s, left, right - 1);
-            break;
+var validPalindrome = function(s, count) {
+    let cursorStart = 0;
+    let cursorEnd = s.length - 1;
+    let countRemove = count || 0;
+    
+    while (cursorStart < cursorEnd) {
+        if (s[cursorStart] === s[cursorEnd]) {
+            cursorStart++;
+            cursorEnd--;
+        } else if (s[cursorStart] === s[cursorEnd - 1] && s[cursorStart + 1] === s[cursorEnd]) {
+            return validPalindrome(s.slice(cursorStart + 1, cursorEnd + 1), countRemove + 1) || validPalindrome(s.slice(cursorStart, cursorEnd), countRemove + 1) ;
+        } else if (s[cursorStart] === s[cursorEnd - 1]) {
+            cursorEnd--;
+            countRemove++;
+        } else if (s[cursorStart + 1] === s[cursorEnd]) {
+            cursorStart++;
+            countRemove++;
+        } else {
+            return false;
         }
-        
-        left++;
-        right--;
+        if (countRemove > 1) return false;
     }
-    return res;
+    
+    return true;
 };
-
-function isPalindrome(str, start, end) {
-    let res = true;
-    while(start < end)
-    {
-        if(str[start] === str[end])
-        {
-            start++;
-            end--;
-        }
-        else
-        {
-            res = false;
-            break;
-        }
-    }
-    return res;
-}
