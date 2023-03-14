@@ -1,42 +1,35 @@
 class Solution {
 public:
-    bool isNiceSubstring(string& s, int i, int j) {
-        unordered_map<int, bool> mp;
-        bool isTrue = true;
-        for (int x = i; x <= j; x++) {
-            mp[s[x]] = true;
-        }
-        
-        while (i <= j) {
-            if (s[i] < 97) {
-                if (!mp[s[i] + 32]) {
-                    return false;
-                }
-            } else {
-                if (!mp[s[i] - 32]) {
-                    return false;
-                }
-            }
-            i++;
-        }
-        
-        return true;
-    }
+    
     string longestNiceSubstring(string s) {
-        int n = s.length();
-        int maxLength = 0;
-        string result;
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                if (isNiceSubstring(s, i, j)) {
-                    if (j - i + 1 > maxLength) {
-                        maxLength = j - i + 1;
-                        result = s.substr(i, j - i + 1);
-                    }
-                }
-            }
+        int arr1[26]={};
+        int arr2[26]={};
+        if(s.length()<2)
+            return "";
+        for(char ch:s)
+        {
+            if(ch>='A' && ch<='Z')
+                arr1[(ch|32)-'a']++;
+            else
+                arr2[ch-'a']++;
         }
-        
-        return result;
+        vector<int> index;
+        index.push_back(-1);
+        for(int i=0;i<s.length();i++)
+        {
+            if((arr1[(s[i]|32)-'a']>=1 && arr2[(s[i]|32)-'a']==0) || (arr1[(s[i]|32)-'a']==0 && arr2[(s[i]|32)-'a']>=1))
+                index.push_back(i);
+        }
+        //index.push_back(2);
+        index.push_back(s.length());
+        if(index.size()==2)
+            return s;
+        string minn="";
+        for(int i=0;i<index.size()-1;i++)
+        {
+            string temp = longestNiceSubstring(s.substr(index[i]+1,index[i+1]-index[i]-1));
+            minn = temp.length()>minn.length()?temp:minn;
+        }
+        return minn;
     }
 };
