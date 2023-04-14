@@ -1,26 +1,47 @@
 class Solution {
 public:
-    
-    int addRungs(vector<int>& rungs, int dist) {
-        int count=0;
-        
-        //represents the previous height
-        int prevHeight=0;
-        int diff;
-        for(int i=0;i<rungs.size();i++)
-        {
-            diff=rungs[i]-prevHeight;
-            if(diff>dist)
-            {
-                //the number of rungs needed to be inserted
-                count+=(diff)/dist;
-                //if the diference is divided by dist with 0 remainder then count may count-1 are needed
-                //for example  [4] dist=2 here , (4-0)/2 =2 but (4-0)%2 == 0 so count decreases (count-1) the ans is [2,4]
-                if((diff)%dist==0)
-                    count--;
-            }
-            prevHeight=rungs[i];
-        }
-        return count;
+    int addRungs(vector<int>& rungs, int dist) 
+    {
+         //to keep the track of the number of extra rung to be added
+         long long int count = 0;
+       
+         //our curr pos at the beggining
+         long long int currpos = 0;
+
+         //to keep the track of the next pos to be climed
+         long long int nextposidx = 0;
+
+         while(true)
+         {
+             if(currpos == rungs[rungs.size()-1])
+             {
+                 break;
+             }
+
+             if((rungs[nextposidx] - currpos) <= dist)
+             {
+                 currpos = rungs[nextposidx];
+                 nextposidx++;
+             }
+             else
+             {
+                 //cout<<"hello"<<endl;
+                 long long int temp = (rungs[nextposidx] - currpos);
+                 //cout<<"temp = "<<temp<<endl;
+                 
+                 if((temp%dist) == 0)
+                 {
+                     long long int val = temp/dist;
+                     count = count + (val - 1);
+                 }
+                 else
+                 {
+                    long long int val = floor(((temp*1.00)/(dist*1.00)));
+                    count = count + (val);
+                 }
+                 currpos = rungs[nextposidx];
+             }
+         }
+         return count;
     }
 };
