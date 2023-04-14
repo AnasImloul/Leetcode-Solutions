@@ -1,8 +1,11 @@
-# Runtime: 127 ms (Top 17.65%) | Memory: 13.9 MB (Top 92.19%)
+from heapq import heapify, heapreplace
+
 class Solution:
     def largestSumAfterKNegations(self, nums: List[int], k: int) -> int:
-        for i in range(k):
-            x = min(nums)
-            y = nums.index(x)
-            nums[y] = -1*x
+        heapify(nums)
+        while k and nums[0] < 0:
+            heapreplace(nums, -nums[0])
+            k -= 1
+        if k % 2:
+            heapreplace(nums, -nums[0])
         return sum(nums)
