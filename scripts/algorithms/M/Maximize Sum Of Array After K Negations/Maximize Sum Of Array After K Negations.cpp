@@ -1,18 +1,17 @@
-// Runtime: 4 ms (Top 87.70%) | Memory: 8.9 MB (Top 92.33%)
 class Solution {
 public:
-    int largestSumAfterKNegations(vector<int>& nums, int k) {
-
-        int neg = 0, small = INT_MAX;
-
-        for (auto &i: nums) small = min(abs(i), small), neg += i < 0;
-
-        if (k >= neg) return reduce(begin(nums), end(nums), 0, [](int &a, int &b) {return abs(a) + abs(b);})
-                             + (((k - neg) % 2) ? -2 * small : 0);
-
-        nth_element(begin(nums), begin(nums) + k - 1, end(nums));
-
-        return reduce(begin(nums), begin(nums) + k, 0, [](int &a, int &b) {return abs(a) + abs(b);})
-               + reduce(begin(nums) + k, end(nums));
+    int largestSumAfterKNegations(vector<int>& A, int k) {
+       priority_queue<int, vector<int>, greater<int>> pq(A.begin(), A.end());
+        while(k--){
+            int t=pq.top();pq.pop();
+            pq.push(t*-1);
+        }
+    
+        int n=0;
+       while(!pq.empty()){
+           int t=pq.top();pq.pop();
+           n+=t;
+       }
+        return n;
     }
 };
