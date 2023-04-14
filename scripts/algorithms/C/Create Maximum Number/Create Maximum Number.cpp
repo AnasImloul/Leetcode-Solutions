@@ -1,79 +1,55 @@
 class Solution {
 public:
-    vector<int> func(vector<int> &nums, int k)
-    {
-        vector<int> ret(k, 0);
+    vector<int> maxArray(vector<int>&nums,int k){
         int n=nums.size();
-        for(int i=0; i<nums.size(); i++)
-        {
-            if(ret.empty() || ret.back()>=nums[i])
-            {
-                if(ret.size()<k)
-                    ret.push_back(nums[i]);
-            }
-            else{
-                while(!ret.empty() && n-i>k-ret.size() && ret.back()<nums[i])
-                    ret.pop_back();
-                ret.push_back(nums[i]);
-            }
+        stack<int>seen;
+        for(int i=0;i<n;i++){
+            int right=n-i-1;
+            while(not seen.empty() and seen.top()<nums[i] and right+seen.size()>=k)seen.pop();
+            if(seen.size()<k)seen.push(nums[i]);
         }
-        return ret;
+        vector<int>res(k,0);
+        for(int i=res.size()-1;i>=0;i--){
+            res[i]=seen.top();
+            seen.pop();
+        }
+        return res;
     }
-    bool isGreater(vector<int> &a, vector<int> &b)
-    {
-        for(int i=0; i<a.size(); i++)
-        {
-            if(b[i]>a[i])
-                return false;
-            else if(b[i]<a[i])
-                return true;
+    bool greater(vector<int>&arr1,int i,vector<int>&arr2,int j){
+        for(;i<arr1.size() and j<arr2.size();i++,j++){
+            if(arr1[i]==arr2[j])continue;
+            return arr1[i]>arr2[j];
         }
-        return false;
+        return i!=arr1.size();
+    }
+    vector<int> merge(vector<int>&arr1,vector<int>&arr2){
+        vector<int>res(arr1.size()+arr2.size());
+        for(int ind=0,i=0,j=0;ind<res.size();ind++){
+            if(greater(arr1,i,arr2,j)){
+                res[ind]=arr1[i];
+                i++;
+            }else{
+                res[ind]=arr2[j];
+                j++;
+            }
+        }
+        return res;
     }
     vector<int> maxNumber(vector<int>& nums1, vector<int>& nums2, int k) {
-        vector<vector<int>> v1, v2;
-        vector<int> ret(k, 0);
-        for(int i=0; i<=k; i++)
-        {
-            if(i>nums1.size() || k-i>nums2.size())
-                continue;
-            vector<int> x, y;
-            if(i)
-                x=func(nums1, i);
-            if(k-i)
-                y=func(nums2, k-i);
-            vector<int> res;
-            int p=0, q=0, m=x.size(), n=y.size();
-            x.push_back(0);
-            y.push_back(0);
-            while(p<m && q<n)
-            {
-                if(x[p]>y[q])
-                    res.push_back(x[p++]);
-                else if(x[p]<y[q])
-                    res.push_back(y[q++]);
-                else
-                {
-                    bool flag=true;
-                    int t=1;
-                    while(p+t<m && q+t<n && x[p+t]==y[q+t])
-                        t++;
-                    if(p+t>=m || (q+t<n && x[p+t]<y[q+t]))
-                        flag=false;
-                    if(flag)
-                        res.push_back(x[p++]);
-                    else
-                        res.push_back(y[q++]);
+        int m=nums1.size(),n=nums2.size();
+        vector<int>ans;
+        for(int len1=max(0,k-n);len1<=min(m,k);len1++){
+            int len2 = k-len1;
+            vector<int> arr1 = maxArray(nums1,len1);
+            vector<int> arr2 = maxArray(nums2,len2);
+            vector<int> temp_res = merge(arr1,arr2);
+            if(greater(temp_res,0,ans,0)){
+                ans.resize(temp_res.size());
+                for(int i=0;i<temp_res.size();i++){
+                    ans[i]=temp_res[i];
                 }
             }
-            while(p<m)
-                res.push_back(x[p++]);
-            while(q<n)
-                res.push_back(y[q++]);
-            if(isGreater(res, ret))
-                ret=res;
         }
-        return ret;
+        return ans;
     }
 };
-
