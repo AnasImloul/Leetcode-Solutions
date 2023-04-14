@@ -1,41 +1,32 @@
 class Solution {
 public:
-    int solve(vector<int>& obstacles, int pos, int lane)
-    {
-        if(pos == obstacles.size()-2)
+    int func(int i,int l,vector<int>&obstacles,vector<vector<int>>&dp){
+        if(i==obstacles.size()-2){
+            if(obstacles[i+1]==l)return 1;
             return 0;
-        
-        if(obstacles[pos+1]!=lane)
-        {
-            return solve(obstacles, pos+1, lane);
         }
-        if(obstacles[pos+1]==lane){
-            int l1=0, l2=0;
-            if(lane==1)
-            {
-                l1=2;
-                l2=3;
-            }
-            else if(lane==2)
-            {
-                l1=1;
-                l2=3;
-            }
-            else{
-                l1=1;
-                l2=2;
-            }
-            if(obstacles[pos]==l1)
-                return 1 + solve(obstacles, pos+1, l2);
-            else if(obstacles[pos]==l2)
-                return 1 + solve(obstacles, pos+1, l1);
-            else
-                return 1 + min(solve(obstacles, pos+1, l1), solve(obstacles, pos+1, l2));
+
+        if(dp[i][l]!=-1)return dp[i][l];
+
+        if(obstacles[i+1]!=l){
+            return dp[i][l] = func(i+1,l,obstacles,dp);
         }
-        return 0;
-    }
+
     
+        int b=INT_MAX;
+        for(int j=1;j<=3;j++){
+            if(l==j)continue;
+            if(obstacles[i]==j)continue;
+            b=min(b,1+func(i,j,obstacles,dp));
+        }
+    
+
+        return dp[i][l] = b;
+    }
+
     int minSideJumps(vector<int>& obstacles) {
-        return solve(obstacles, 0, 2);
+        int n=obstacles.size();
+        vector<vector<int>>dp(n,vector<int>(4,-1));
+        return func(0,2,obstacles,dp);
     }
 };
