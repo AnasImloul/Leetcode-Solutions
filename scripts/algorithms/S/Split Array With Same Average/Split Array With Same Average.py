@@ -1,21 +1,15 @@
 class Solution:
-    def splitArraySameAverage(self, nums: List[int]) -> bool:
-        n=len(nums)
-        ssum=sum(nums)
-        if ssum==0:
-            return True if n>1 else False
-        @lru_cache(None)
-        def subset_sum(idx,val,n1):                # This is O(n^2 * sum) ~ approx
-            if idx==n:
-                return True if (val==0 and n1==0) else False
-            res=False
-            #take this element
-            if val>=nums[idx]:
-                res=res or subset_sum(idx+1,val-nums[idx],n1-1)
-            #dont take
-            res= res or subset_sum(idx+1,val,n1)
-            return res
-        for i in range(1,n):     #This is O(n)
-            if (ssum*i)%n==0 and subset_sum(0,(ssum*i)//n,i):
+    def splitArraySameAverage(self, A: List[int]) -> bool:
+        A.sort()
+        DP=[set() for _ in range(len(A)//2+1)]    #DP[i] stores the all available sum with i items in a bracket
+        all_sum=sum(A)
+        DP[0]=set([0])
+        for item in A:                  #iterate over items in the list
+            for count in range(len(DP)-2,-1,-1):          # iterate backwards w.r.t. the bracket size
+                if len(DP[count])>0:                             # if DP[i] is not empty, then update DP[i+1] by adding the current item into all sums in DP[i]
+                    for a in DP[count]:
+                        DP[count+1].add(a+item)
+        for size in range(1,len(DP)):
+            if all_sum*size/len(A) in DP[size]:
                 return True
         return False
