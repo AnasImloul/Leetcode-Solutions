@@ -1,18 +1,8 @@
-    class Solution:
-    def uniqueMorseRepresentations(self, words: List[str]) -> int:
-        morse=[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
-        alpha='abcdefghijklmnopqrstuvwxyz'
-        k={}
-        for i in alpha:
-            for j in morse:
-                k[i]=j
-                morse.remove(j)
-                break
-        l=[]
-        for word in words:
-            m=''
-            for i in word:
-                m+=k[i]
-            l.append(m)
-        p=set(l)
-        return(len(p))``
+class Solution:
+	def uniqueMorseRepresentations(self, words: List[str]) -> int:
+		code = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..","--","-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."]
+		out = []
+		for word in words:
+			res = [code[ord(char)-ord('a')] for char in word]
+			out.append("".join(res))
+		return len(set(out))
