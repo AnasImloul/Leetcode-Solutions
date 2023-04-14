@@ -5,30 +5,18 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def getMinimumDifference1(self, root: Optional[TreeNode]) -> int:
-        
-        self.res = float('inf')
-        self.prev = float('inf')
-        def inorder(root):
-            if root==None:
-                return
-            inorder(root.left)
-            self.res=min(self.res,abs(self.prev-root.val))
-            self.prev=root.val
-            inorder(root.right)
-            
-        inorder(root)
-        return self.res
     def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
-        self.res=float("inf")
-        self.prev=float("inf")
-        def inorder(root):
-            if root==None:
-                return 
-            inorder(root.left)
-            self.res=min(self.res,abs(self.prev-root.val))
-            self.prev=root.val
-            inorder(root.right)
-        inorder(root)
-        return self.res
-
+        res, pre = inf, inf
+        def dfs(n: Optional[TreeNode]) -> None:
+            # base case
+            if not n:
+                return
+            # recursion
+            dfs(n.left)
+            nonlocal res
+            nonlocal pre
+            res, pre = min(res, abs(pre - n.val)), n.val
+            dfs(n.right)
+        
+        dfs(root)
+        return res
