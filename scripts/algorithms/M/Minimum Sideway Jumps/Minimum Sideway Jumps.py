@@ -1,49 +1,30 @@
-def greedy(k,a):
-    
-    def do_stuff(x,y,i,j,l):
-        if a[j]==x: #check previous obstacle and change lane
-            return y
-        elif a[j]==y:
-            return x
-        else:
-            while i<n and (a[i+1]==0 or a[i+1]==l):#to avoid 0s and same lane duplicates
-                i+=1
-            if i==n:
-                return -1
-            if a[i+1]==x: #check the next coming obstacle
-                return y
-            elif a[i+1]==y:
-                return x
-    n=k-1
-    ans=0
-    
-    l=2 #current lane
-    
-    i=0
-    while i<n:
-        if l==a[i+1]: #when we encounter next obstacle
-            j=i #stored for checking before obstacle
-            while i<n and l==a[i+1]: #avoiding same lane duplicates
-                i+=1
-            ans+=1
-            if i==n:
-                break
-
-            if l==2: #deciding which lane to shift next
-                l = do_stuff(1,3,i,j,l)
-            elif l==1:
-                l = do_stuff(2,3,i,j,l)
-            else:
-                l= do_stuff(1,2,i,j,l)
-            
-            if l==-1: #case when i==n hits
-                    break
-                
-            if i>0: #edge case
-                i-=1
-        i+=1
-    return ans
-
 class Solution:
     def minSideJumps(self, obstacles: List[int]) -> int:
-        return greedy(len(obstacles),obstacles)
+        
+        """
+        # TLE Recursion DP
+        @cache
+        def dp(curr_lane = 2, point = 0):
+            if point == len(obstacles)-1:
+                return 0
+            if obstacles[point+1] == curr_lane:
+                return min(dp(lane, point+1) for lane in range(1, 4) if obstacles[point+1] != lane and obstacles[point]!=lane) + 1
+            
+            return dp(curr_lane, point+1)
+        
+        
+        return dp()
+            
+        """
+        
+        n = len(obstacles)        
+        dp = [[0, 0, 0, 0] for _ in range(n)]
+        
+        for point in range(n-2, -1, -1):
+            for curr_lane in range(4):
+                if obstacles[point+1] == curr_lane:
+                    dp[point][curr_lane] = min(dp[point+1][lane] for lane in range(1, 4) if obstacles[point+1] != lane and obstacles[point]!=lane) + 1
+                else:
+                    dp[point][curr_lane] = dp[point+1][curr_lane]
+                    
+        return dp[0][2]
