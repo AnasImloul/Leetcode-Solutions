@@ -1,21 +1,51 @@
-# Runtime: 415 ms (Top 31.43%) | Memory: 14.8 MB (Top 57.14%)
-
 class Solution:
+
+    """Compute the convex hull of a set of points.
+
+        Use Andrew's Monotone Chain algorithm, which has order O(N log(N)),
+        where N is the number of input points.
+    """
+
+    def cross(self, p, a, b):
+        """Return the cross product of the vectors p -> a and p -> b."""
+        return (a[0] - p[0]) * (b[1] - p[1]) \
+            - (a[1] - p[1]) * (b[0] - p[0])
+
+    def _convex_hull_monotone_chain(self, points):
+        """Compute the convex hull of a list of points.
+        
+        Use Andrew's Monotone Chain algorithm, which is similar to Graham Scan,
+        except that it doesn't require sorting the points by angle.  This algorithm
+        takes O(N log(N)) time, where N is len(points).
+        """
+        # Ensure all points are unique, and sort lexicographically.
+        points = list(sorted(set(points)))
+        
+        # If there are fewer than three points, they must form a hull.
+        if len(points) <= 2:
+            return points
+        
+        # Compute the lower and upper portion of the hull.
+        lower, upper = [], []
+        for out, it in ((lower, points), (upper, reversed(points))):
+            for p in it:
+                while len(out) >= 2 and self.cross(out[-2], out[-1], p) > 0:
+                    out.pop()
+                out.append(p)
+
+        # Concatenate the upper and lower hulls.  Remove the last point from each
+        # because those points are duplicated in both upper and lower.
+        return lower[:-1] + upper[:-1]
+
     def outerTrees(self, trees: List[List[int]]) -> List[List[int]]:
-        trees = sorted(trees, key = lambda e:(e[0],e[1]))
-        if len(trees) <= 1:
-            return trees
-        #checking orientation of vectors oa and ob
-        def ccw(o,a,b):
-            return (a[0]-o[0])*(b[1]-o[1])-(b[0]-o[0])*(a[1]-o[1]) > 0
-        lower_chain = []
-        for p in trees:
-            while len(lower_chain) > 1 and ccw(lower_chain[-1], lower_chain[-2], p):
-                lower_chain.pop()
-            lower_chain.append(p)
-        upper_chain = []
-        for p in reversed(trees):
-            while len(upper_chain) > 1 and ccw(upper_chain[-1], upper_chain[-2], p):
-                upper_chain.pop()
-            upper_chain.append(p)
-        return set([(e[0],e[1]) for e in lower_chain[:-1]+upper_chain[:-1]])
+        """
+        Find the convex hull of a collection of points.
+        Return a list of indices of points forming the hull in clockwise order,
+        starting with the leftmost point.
+        """
+        # Convert input points to tuples.
+        points = [tuple(p) for p in trees]
+        ans = set()
+        for point in self._convex_hull_monotone_chain(points):
+            ans.add(point)
+        return ans
