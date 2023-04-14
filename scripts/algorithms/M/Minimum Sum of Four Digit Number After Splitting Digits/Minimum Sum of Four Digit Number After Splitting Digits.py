@@ -1,9 +1,13 @@
 class Solution:
     def minimumSum(self, num: int) -> int:
-        s = list(str(num))
-        s.sort()
-        s1 = s[0]+s[2]
-        s2 = s[1]+s[3]
-        sum = int(s1)+int(s2)
-            
-        return sum
+
+
+        nums=[int(ch) for ch in str(num)]
+
+        nums.sort()
+
+        val1=int(str(nums[0]) + str(nums[-1]))
+        val2=int(str(nums[1]) + str(nums[2]))
+
+        return val1+val2
+        
