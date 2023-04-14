@@ -1,32 +1,19 @@
-// Runtime: 5 ms (Top 10.42%) | Memory: 5.8 MB (Top 97.34%)
-class Solution {
+class Solution
+{
 public:
+    const string strs[7] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     string dayOfTheWeek(int day, int month, int year)
     {
-        int months[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
-        string dayName[7] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-        int sum = 4;
-        for(int i = 1971; i < year; i++)
+        return strs[compute(day, month, year)];
+    }
+    int compute(int d, int m, int y)
+    {
+        int w;
+        if (m == 1 || m == 2)
         {
-            if(((i % 4 ==0) && (i % 100 != 0)) || (i%400 == 0))
-            {
-                sum += 366;
-            }
-            else
-            {
-                sum += 365;
-            }
+            m += 12, y--;
         }
-        for(int i = 1; i < month; i++)
-        {
-            if(i==2 && (((year%4==0) && (year%100!=0)) || (year%400==0))){
-                sum += 1;
-            }
-            sum += months[i];
-        }
-        sum += day;
-
-        return dayName[sum%7];
-
+        w = (d + (2 * m) + (3 * (m + 1) / 5) + y + (y / 4) - (y / 100) + (y / 400) + 1) % 7;
+        return w;
     }
 };
