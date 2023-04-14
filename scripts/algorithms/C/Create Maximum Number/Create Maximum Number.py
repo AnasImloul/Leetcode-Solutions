@@ -1,55 +1,62 @@
-# Runtime: 5629 ms (Top 6.28%) | Memory: 14.3 MB (Top 62.78%)
 class Solution:
     def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
-        def maximum_num_each_list(nums: List[int], k_i: int) -> List[int]:
-            # monotonically decreasing stack
-            s = []
-            m = len(nums) - k_i
-            for n in nums:
-                while s and s[-1] < n and m > 0:
-                    s.pop()
-                    m -= 1
-                s.append(n)
-            s = s[:len(s)-m] # very important
-            return s
-        def greater(a, b, i , j): # get the number which is lexiographically greater
-            while i< len(a) or j < len(b):
-                if i == len(a): return False
-                if j == len(b): return True
-                if a[i] > b[j]: return True
-                if a[i] < b[j]: return False
-                i += 1 # we increment until each of their elements are same
-                j += 1
-
-        def merge(x_num, y_num):
-            n = len(x_num)
-            m = len(y_num)
-            i = 0
-            j = 0
-            s = []
-            while i < n or j < m:
-                a = x_num[i] if i < n else float("-inf")
-                b = y_num[j] if j < m else float("-inf")
-
-                if a > b or greater(x_num, y_num, i , j):
-# greater(x_num, y_num, i , j): this function is meant for check which list has element lexicographically greater means it will iterate through both arrays incrementing both at the same time until one of them is greater than other.
-                    chosen = a
-                    i += 1
+        m = len(nums1)
+        n = len(nums2)
+        dp = {}
+        
+        # get the max number string with "length" from index "i" in nums1 and index "j" in nums2
+        # using number string to easy to compare
+        def getMaxNumberString(i, j, length):
+            if length == 0:
+                return ""
+            
+            # using memoization to optimize for the overlapping subproblems
+            key = (i, j, length)
+            if key in dp:
+                return dp[key]
+            
+            # greedy to find the possible max digit from nums1 and nums2
+            # 1) bigger digit in the higher position of the number will get bigger number
+            # 2) at the same time, we need to ensure that we still have enough digits to form a number with "length" digits
+            
+            # try to find the possible max digit from index i in nums1
+            index1 = None
+            for ii in range(i, m):
+                if (m - ii + n - j) < length:
+                    break
+                if index1 is None or nums1[index1] < nums1[ii]:
+                    index1 = ii
+            
+            # try to find the possible max digit from index j in nums2
+            index2 = None
+            for jj in range(j, n):
+                if (m - i + n - jj) < length:
+                    break
+                if index2 is None or nums2[index2] < nums2[jj]:
+                    index2 = jj
+                    
+            maxNumberStr = None
+            if index1 is not None and index2 is not None:
+                if nums1[index1] > nums2[index2]:
+                    maxNumberStr = str(nums1[index1]) + getMaxNumberString(index1 + 1, j, length - 1)
+                elif nums1[index1] < nums2[index2]:
+                    maxNumberStr = str(nums2[index2]) + getMaxNumberString(i, index2 + 1, length - 1)
                 else:
-                    chosen = b
-                    j += 1
-                s.append(chosen)
-            return s
+                    # get the same digit from nums1 and nums2, so need to try two cases and get the max one 
+                    maxNumberStr = max(str(nums1[index1]) + getMaxNumberString(index1 + 1, j, length - 1), str(nums2[index2]) + getMaxNumberString(i, index2 + 1, length - 1))
+            elif index1 is not None:
+                maxNumberStr = str(nums1[index1]) + getMaxNumberString(index1 + 1, j, length - 1)
+            elif index2 is not None:
+                maxNumberStr = str(nums2[index2]) + getMaxNumberString(i, index2 + 1, length - 1)
+            
+            dp[key] = maxNumberStr
+            return maxNumberStr
 
-        max_num_arr = []
-        for i in range(k+1): # we check for all values of k and find the maximum number we can create for that value of k and we repeat this for all values of k and then at eacch time merge the numbers to check if arrive at optimal solution
-            first = maximum_num_each_list(nums1, i)
-            second = maximum_num_each_list(nums2, k-i)
-            merged = merge(first, second)
-            # these two conditions are required because list comparison in python only compares the elements even if one of their lengths is greater, so I had to add these conditions to compare elements only if length is equal.
-            # Alternatively you can avoid this and convert them both to int and then compare, but I wanted to this as it is somewhat more efficient.
-            if len(merged) == len(max_num_arr) and merged > max_num_arr:
-                max_num_arr = merged
-            elif len(merged) > len(max_num_arr):
-                max_num_arr = merged
-        return max_num_arr
+        result_str = getMaxNumberString(0, 0, k)
+        
+        # number string to digit array
+        result = []
+        for c in result_str:
+            result.append(int(c))
+        
+        return result
