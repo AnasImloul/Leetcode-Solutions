@@ -1,26 +1,12 @@
 class Solution:
-    def maxIncreaseKeepingSkyline(self, grid: List[List[int]]) -> int:
-        n = len(grid)
-        Rows_max = {}
-        Cols_max = {}
-        for i in range(n):
-            Rows_max[i] = max(grid[i])
-            Max = 0
-            for j in range(n):
-                Max = max(grid[j][i], Max)
-            
-            Cols_max[i] = Max
-
-
-        count = 0
-        for r in range(n):
-            for c in range(n):
-                if grid[r][c] == Rows_max[r] or grid[r][c] == Cols_max[c]:
-                    continue
-                
-                height_to_add = min(Rows_max[r], Cols_max[c])
-                count += height_to_add - grid[r][c]
-                
-        return count
-            
-        
+	def maxIncreaseKeepingSkyline(self, grid: List[List[int]]) -> int:
+		mxr = [max(i) for i in grid]
+		mxc = [0 for _ in range(len(grid[0]))]
+		for i in range(len(grid)):
+			for j in range(len(grid[0])):
+				mxc[j] = max(grid[i][j],mxc[j])
+		ans =0 
+		for i in range(len(grid)):
+			for j in range(len(grid)):
+				ans+=(min(mxr[i],mxc[j]) - grid[i][j]) 
+		return ans
