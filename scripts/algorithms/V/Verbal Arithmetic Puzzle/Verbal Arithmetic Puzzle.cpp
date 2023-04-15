@@ -1,50 +1,73 @@
 class Solution {
-public:
-int vals[7]={1,10,100,1000,10000,100000,1000000};
-	bool util(unordered_set<char>&leadingZeroes,unordered_map<char,int>&map,int diff,int curr,string &s,int &visited){
-    if(curr==s.length())
-        return diff==0;
-    
-    //check for every value
-    for(int i=0;i<=9;i++){
-        if((visited&(1<<i))==0 && (i>0 || leadingZeroes.find(s[curr])==leadingZeroes.end())){
-            visited=(visited | (1<<i));
-            if(util(leadingZeroes,map,diff+map[s[curr]]*i,curr+1,s,visited))
+    int limit = 0;
+    unordered_map<char, int> c2i;
+    unordered_map<int, char> i2c;
+    bool helper(vector<string> &words, string &result, int digit, int wid, int sum)
+    {
+        if(digit==limit)
+            return sum == 0;
+        if(wid==words.size())
+        {
+            if(c2i.count(result[digit])==0 && i2c.count(sum%10)==0)
+            {
+                if(sum%10==0 && digit+1 == limit)
+                    return false; //Means leading zeros
+                c2i[result[digit]] = sum%10;
+                i2c[sum%10] = result[digit];
+                bool tmp = helper(words, result, digit+1, 0, sum/10); //0 because it will
+                //go one digit at a time until all digits in words are finished
+                c2i.erase(result[digit]);
+                i2c.erase(sum%10);
+                return tmp;
+            }
+            else if(c2i.count(result[digit]) && c2i[result[digit]] == sum%10) //c2i for that exits and is equal to sum%10, remember default will be 0 and sum%10 can also be 0
+            {
+                if(digit+1 == limit && c2i[result[digit]]==0)
+                    return false; //again same condition of leading zeros
+                return helper(words, result, digit+1, 0, sum/10);
+            }
+            else //if result[digit] exists in c2i but is not equal to sum%10
+                return false;
+        }
+        if(digit>=words[wid].length()) //digit>current words length
+            return helper(words, result, digit, wid+1, sum); //go to next word at same position
+        //(digit) and sum, also going wid + 1 that is why checking wid limit in last condition already
+        if(c2i.count(words[wid][digit]))
+        {
+            if(digit+1 == words[wid].length() && words[wid].length() > 1 && c2i[words[wid][digit]]==0)
+                return false; //here we checking if there is no leading 0 in the word itself
+            return helper(words, result, digit, wid+1, sum+c2i[words[wid][digit]]);
+        }
+        for(int i=0; i<10; i++)
+        {
+            if(digit+1==words[wid].length() && i==0 && words[wid].length()>1)
+                continue;
+            if (i2c.count(i))
+                continue;
+            c2i[words[wid][digit]] = i;
+            i2c[i] = words[wid][digit];
+            bool tmp = helper(words, result, digit, wid+1, sum+i);
+            c2i.erase(words[wid][digit]);
+            i2c.erase(i);
+            if(tmp)
                 return true;
-            visited=(visited^(1<<i));
         }
+        return false;
     }
     
-    return false;
-    
-}
-bool isSolvable(vector<string>& words, string result) {
-    //PRUNING : 1st There should be no leading zeroes
-    //CALCULATION PRUNING : this can be explained using a example i.e MATH so if lets say M=4 so what M can contribute to the                     //whole result = 4*1000 i.e 4th place so using this we can calculate the value of the whole array lets say array look like 
-    // {MATH,PARTH} and mapping is like M=4,A=1,R=3,T=2,P=6,H=0 so the values will look like 4000+100+20+60000+1000+300+20+0 
-    //So we can check for every mapping if we can get result if we can than we can return true
-    //further we can use bitmasking for checking the visited values
-    unordered_set<char>leadingZeroes;
-    unordered_map<char,int>map;
-    for(auto &x:words)
-        for(int i=0;i<x.length();i++){
-            if(i==0 && x.length()>1)
-                leadingZeroes.insert(x[i]);
-            map[x[i]]+=vals[x.length()-i-1];
-        
+public:
+    bool isSolvable(vector<string>& words, string result) {
+        limit = result.length();
+        for(auto s:words)
+        {
+            if(s.length()>limit)
+                return false;
         }
-    for(int i=0;i<result.size();i++){
-        if(i==0 && result.length()>1)
-            leadingZeroes.insert(result[i]);
-        map[result[i]]-=vals[result.length()-i-1];
+        for(auto &s:words)
+        {
+            reverse(s.begin(), s.end());
+        }
+        reverse(result.begin(), result.end());
+        return helper(words, result, 0, 0, 0);
     }
-    
-    string s="";
-    for(auto &x:map)
-        s+=x.first;
-    //cout<<s;
-    int visited=0;
-    return util(leadingZeroes,map,0,0,s,visited);
-
-}
 };
