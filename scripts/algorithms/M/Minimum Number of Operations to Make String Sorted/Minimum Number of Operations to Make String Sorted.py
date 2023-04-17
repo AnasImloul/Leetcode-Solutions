@@ -1,16 +1,18 @@
-class Solution:
-    @lru_cache(None)
-    def f(self,i):
-        return 1 if i <= 1 else (self.f(i-1)*i) % (10**9+7)
+from math import gcd
 
-    def makeStringSorted(self, s):
-        N, n, out = 10**9 + 7, len(s), 0
-        cnt = [0]*26
-        for i in range(n-1, -1, -1):
-            ind = ord(s[i]) - ord("a")
-            cnt[ind] += 1
-            ans = sum(cnt[:ind]) * self.f(n-i-1)
-            for j in range(26):
-                ans = ans * pow(self.f(cnt[j]), N-2, N) % N
-            out += ans
-        return out % N
+class Solution:
+    def makeStringSorted(self, s: str) -> int:
+        s = [ord(c) - ord('a') for c in s]
+        ans, MOD = 0, 10 ** 9 + 7
+        cnt, t, d, step = [0] * 26, 1, 1, 1
+        cnt[s[-1]] = 1
+        for c in reversed(s[:-1]):
+            d *= (cnt[c] + 1)
+            t *= step
+            g = gcd(d, t)
+            d //= g
+            t //= g
+            ans = (ans + t * sum(cnt[i] for i in range(c)) // d) % MOD
+            cnt[c] += 1
+            step += 1
+        return ans
