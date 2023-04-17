@@ -1,18 +1,20 @@
-  class Solution:
-	def watchedVideosByFriends(self, w: List[List[str]], f: List[List[int]], id: int, l: int):
-		d=deque([(id,0)])
-		v={id}
-		q={}
-		while d:
-			x,y=d.popleft()
-			if y<l:
-				for j in f[x]:
-					if j not in v:
-						v.add(j)
-						d.append((j,y+1))
-			else:
-				for j in w[x]:
-					q[j]=q.get(j,0)+1
-		s=sorted([j,q[j]]for j in q)
-		s.sort(key=lambda x:x[1])
-		return [i[0] for i in s]
+class Solution:
+	def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
+		q=[id]
+		vis=set([id])
+		l=0
+		while l<level:
+			new_q=[]
+			for x in q:
+				for friend in friends[x]:
+					if not friend in vis:
+						vis.add(friend)
+						new_q.append(friend)
+			q=new_q
+			l+=1
+		a=Counter()
+		for x in q:
+			for vids in watchedVideos[x]:
+				a[vids]+=1
+		A=sorted([[a[x],x] for x in a])
+		return [x[1] for x in A]
