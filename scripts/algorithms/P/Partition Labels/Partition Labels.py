@@ -1,21 +1,23 @@
-class Solution(object):
-    def partitionLabels(self, s):
-        """
-        :type s: str
-        :rtype: List[int]
-        """
-        m = map(s.index, s) # s: 'ababc' -> m: [0, 1, 0, 1, 4]
-        n = len(s)
-        res = []
+class Solution:
+    def partitionLabels(self, s: str) -> List[int]:
+        d = defaultdict(list)
+        for i, char in enumerate(s):
+            d[char].append(i)
+        nums = []
         
-        start = 0
-        i = 0
-        while i < n:
-            for j in range(i+1, n):
-                if m[j] <= i:
-                    i = j
-            i += 1
-            res.append(i - start)
-            start = i
-            
-        return res
+        for v in d.values():
+            nums.append([v[0], v[-1]])
+
+        start = nums[0][0]
+        maxIndex = nums[0][1]
+        ans = []
+        for i in range(1, len(nums)):
+            if nums[i][0] <= maxIndex:
+                maxIndex = max(maxIndex, nums[i][1])
+            else:
+                ans.append(maxIndex - start + 1)
+                start = nums[i][0]
+                maxIndex = nums[i][1]
+        ans.append(maxIndex - start + 1)
+        # print(ans)
+        return ans
