@@ -1,38 +1,34 @@
-# Runtime: 175 ms (Top 99.44%) | Memory: 16.6 MB (Top 61.84%)
 class Solution:
+    def calMines(self,board,x,y):
+        directions = [(-1,-1), (0,-1), (1,-1), (1,0), (1,1), (0,1), (-1,1), (-1,0)]
+        mines = 0
+        for d in directions:
+            r, c = x+d[0],y+d[1]
+            if self.isValid(board,r,c) and (board[r][c] == 'M' or board[r][c] == 'X'):
+                mines+=1
+        return mines
+
     def updateBoard(self, board: List[List[str]], click: List[int]) -> List[List[str]]:
-        m, n = len(board), len(board[0])
-        x, y = click
-
-        def dfs(x, y):
-            mines = 0
-            # Return if we are out of range on the board or if the space is already filled
-            if x < 0 or x >= m or y < 0 or y >= n or board[x][y] != "E":
-                return
-
-            # Search for mines in any direction at your current location, increment mine count if one is found
-            for newX, newY in [(1,0), (-1,0), (0,1), (0,-1), (1,1), (1,-1), (-1,1), (-1,-1)]:
-                if 0 <= x+newX < m and 0 <= y+newY < n and board[x+newX][y+newY] == "M":
-                    mines += 1
-
-            # If no mines found, then it is a blank space
-            if mines == 0:
-                board[x][y] = "B"
-            # If mines are found them put the count on the board, then return as we don't need to search past this location on the board
-            else:
-                board[x][y] = str(mines)
-                return
-
-            # Recurse through other board locations
-            for newX, newY in [(1,0), (-1,0), (0,1), (0,-1), (1,1), (1,-1), (-1,1), (-1,-1)]:
-                dfs(x+newX, y+newY)
-
-            return
-
-        # If you clicked on a bomb, game over immediately
+        x,y = click[0],click[1]
+        options = []
         if board[x][y] == "M":
             board[x][y] = "X"
-        # Else game on!
         else:
-            dfs(x, y)
+            count = self.calMines(board,x,y)
+            if count == 0:
+                board[x][y] = "B"
+                for r in range(x-1,x+2):
+                    for c in range(y-1,y+2):
+                        if self.isValid(board,r,c) and board[r][c]!='B':
+                            self.updateBoard(board,[r,c])
+            else:
+                board[x][y] = str(count)
+
         return board
+    
+    
+    def isValid(self,board,a,b):
+            return 0<=a<len(board) and 0<=b<len(board[0])
+
+
+        
