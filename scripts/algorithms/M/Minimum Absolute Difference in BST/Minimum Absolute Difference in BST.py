@@ -6,17 +6,20 @@
 #         self.right = right
 class Solution:
     def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
-        res, pre = inf, inf
-        def dfs(n: Optional[TreeNode]) -> None:
-            # base case
-            if not n:
+        st = []
+
+        def dfs(node):
+            if node is None:
                 return
-            # recursion
-            dfs(n.left)
-            nonlocal res
-            nonlocal pre
-            res, pre = min(res, abs(pre - n.val)), n.val
-            dfs(n.right)
+            heapq.heappush(st, node.val)
+            dfs(node.left)
+            dfs(node.right)
         
         dfs(root)
-        return res
+        ans = 1e18
+        first = heapq.heappop(st)
+        while st:
+            second = heapq.heappop(st)
+            ans = min(ans, second - first)
+            first = second
+        return ans
