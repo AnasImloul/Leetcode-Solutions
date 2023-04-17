@@ -1,12 +1,24 @@
 class Solution(object):
+	def __init__(self, w):
+		"""
+		:type w: List[int]
+		"""
+		#Cumulative sum
+		self.list = [0] * len(w)
 
-    def __init__(self, w):
-        self.preSums = [w[0]]
-        for i in range(1, len(w)):
-            self.preSums.append(self.preSums[-1] + w[i])
-        
+		s = 0
+		for i, n in enumerate(w):
+			s += n
+			self.list[i] = s
 
-    def pickIndex(self):
-        x = random.randint(1, self.preSums[-1])
-        index = bisect_left(self.preSums, x)
-        return index
+
+	def pickIndex(self):
+		"""
+		:rtype: int
+		"""
+		return bisect_left(self.list, random.randint(1, self.list[-1]))
+
+
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(w)
+# param_1 = obj.pickIndex()
