@@ -1,19 +1,18 @@
 class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
-        def helper(idx, reachable):
-            if reachable or visited[idx]:
-                return reachable
-            if arr[idx] == 0:
-                reachable = True
-                return reachable
-            visited[idx] = True
-            left, right = idx-arr[idx], idx+arr[idx]
-            if left >=0:
-                reachable = helper(left,reachable)
-            if right < len(arr):
-                reachable = helper(right,reachable)
-            visited[idx] = False 
-            return reachable
-        
-        visited = [False for _ in arr]
-        return helper(start,False)
+        vis = [0]*len(arr)
+        q = deque() 
+        q.append(start) 
+        while q:
+            cur = q.popleft() 
+            print(cur)
+            vis[cur] = 1
+            if arr[cur] == 0:
+                return True
+            if cur+arr[cur]<len(arr) and vis[cur+arr[cur]] == 0:
+                q.append(cur+arr[cur]) 
+            if cur-arr[cur]>=0 and vis[cur-arr[cur]] == 0: 
+                q.append(cur-arr[cur])  
+        return False
+
+            
