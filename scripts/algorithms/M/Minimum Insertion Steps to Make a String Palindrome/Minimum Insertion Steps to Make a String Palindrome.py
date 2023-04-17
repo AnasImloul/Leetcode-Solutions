@@ -1,10 +1,17 @@
-# Runtime: 1431 ms (Top 63.05%) | Memory: 169.5 MB (Top 11.22%)
-
 class Solution:
     def minInsertions(self, s: str) -> int:
-        @cache
-        def dfs(l, r):
-            if l >= r: return 0
-            if s[l] == s[r]: return dfs(l+1, r-1)
-            else: return 1 + min(dfs(l+1, r), dfs(l, r-1))
-        return dfs(0, len(s)-1)
+        n = len(s)
+        prev_prev = [0]*n
+        prev = [0]*n
+        curr = [0] * n
+
+        for l in range(1, n):
+            for i in range(l, n):
+                if s[i] == s[i-l]:
+                    curr[i] = prev_prev[i-1]
+                else:
+                    curr[i] = min(prev[i-1], prev[i])+1
+            # print(curr)
+            prev_prev, prev, curr = prev, curr, prev_prev
+        
+        return prev[-1]
