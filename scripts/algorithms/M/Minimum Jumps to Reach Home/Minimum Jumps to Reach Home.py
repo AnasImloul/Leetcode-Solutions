@@ -1,26 +1,15 @@
 class Solution:
-    def minimumJumps(self, forbidden: List[int], a: int, b: int, x: int) -> int:
-        queue = deque([(0,1)])
-        jumps = 0
-        forbidden = set(forbidden)
-        forbidden.add(0)
-        MAX_DIST = max(x, max(forbidden)) + a + b
-        while queue:
-            tmp = deque()
-            for elem in queue:
-                (pos, direction) = elem
-                if pos == x: return jumps
-                forward = pos + a
-                if forward not in forbidden and forward <= MAX_DIST:
-                    tmp.append((forward, 1))
-                    forbidden.add(forward)
-            for elem in queue:
-                (pos, direction) = elem
-                if pos == x: return jumps
-                backward = pos - b
-                if direction != -1 and backward >= 0 and backward not in forbidden:
-                    tmp.append((backward, -1))
-                    forbidden.add(backward)
-            queue = tmp
-            jumps += 1
+    def minimumJumps(self, fb: List[int], a: int, b: int, x: int) -> int:
+        fb = set(fb)
+        q = deque([[0,0,True]])
+        while(q):
+            n,l,isf = q.popleft()
+            if(n<0 or n in fb or n>2000+2*b):
+                continue
+            fb.add(n)
+            if(n==x):
+                return l
+            if isf and n-b>0:
+                q.append([n-b,l+1,False])                
+            q.append([n+a,l+1,True])
         return -1
