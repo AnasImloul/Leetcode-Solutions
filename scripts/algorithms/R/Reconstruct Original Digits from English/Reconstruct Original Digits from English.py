@@ -1,19 +1,22 @@
 class Solution:
     def originalDigits(self, s: str) -> str:
-        cnt = collections.Counter(s)
+        c = dict()
         
-        res = [0 for _ in range(10)]
+        c[0] = s.count("z")
+        c[2] = s.count("w")
+        c[4] = s.count("u")
+        c[6] = s.count("x")
+        c[8] = s.count("g")
         
-        res[0] = cnt['z']
-        res[2] = cnt['w']
-        res[4] = cnt['u']
-        res[6] = cnt['x']
-        res[8] = cnt['g']
+        c[3] = s.count("h") - c[8]
+        c[5] = s.count("f") - c[4]
+        c[7] = s.count("s") - c[6]
         
-        res[1] = cnt['o'] - (res[0] + res[2] + res[4])
-        res[3] = cnt['t'] - (res[2] + res[8])
-        res[5] = cnt['f'] - res[4]
-        res[7] = cnt['s'] - res[6]
-        res[9] = cnt['i'] - (res[5] + res[6] + res[8])
+        c[9] = s.count("i") - (c[8] + c[5] + c[6])
+        c[1] = s.count("o") - (c[0] + c[2] + c[4])
         
-        return ''.join(str(i)*f for i, f in enumerate(res))
+        c = sorted(c.items(), key = lambda x: x[0])
+        ans = ""
+        for k, v in c:
+            ans += (str(k) * v)
+        return ans
