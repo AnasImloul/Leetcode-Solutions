@@ -1,23 +1,16 @@
 class Solution:
     def reverseParentheses(self, s: str) -> str:
-        def solve(string):
-            n = len(string)
-            word = ""
-            i = 0
-            while i <n:
-                if string[i] == '(':
-                    new = ""
-                    count = 0
-                    while True:
-                        count += 1 if string[i] == '(' else -1 if string[i] == ')' else 0
-                        if count == 0: break
-                        new += string[i]
-                        i += 1
-                    i += 1
-                    word += solve(new[1:])
-                else:
-                    word += string[i]
-                    i += 1
-            return word[::-1]
-        return solve(s)[::-1]
-    
+        stack = []
+        ans = ""
+        res = deque([])
+        s = list(s)
+        for i in s:
+            if i==")":
+                while stack[-1] != "(":
+                    res.append(stack.pop())
+                stack.pop()
+                while res:
+                    stack.append(res.popleft())
+            else:
+                stack.append(i)
+        return "".join(stack)
