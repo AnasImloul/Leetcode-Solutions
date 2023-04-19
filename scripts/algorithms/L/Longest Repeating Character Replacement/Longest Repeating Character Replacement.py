@@ -1,23 +1,24 @@
-    int characterReplacement(string s, int k) {
-        int n = s.length();
-        if(n == k) return n;
-        if(n == 1) return 1;
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        # Initialize variables
+        window_start = 0
+        max_length = 0
+        max_count = 0
+        char_count = {}
 
-        int res = 0;
-
-        unordered_map<char, int> mp;
-        using pair_type = decltype(mp)::value_type;
-        auto it =[] (const pair_type& p1, const pair_type& p2) {return p1.second < p2.second;};
+        # Traverse the string s
+        for window_end in range(len(s)):
+            # Increment the count of the current character
+            char_count[s[window_end]] = char_count.get(s[window_end], 0) + 1
+            # Update the maximum count seen so far
+            max_count = max(max_count, char_count[s[window_end]])
+            
+            # Shrink the window if required
+            if window_end - window_start + 1 > max_count + k:
+                char_count[s[window_start]] -= 1
+                window_start += 1
+            
+            # Update the maximum length of the substring with repeating characters seen so far
+            max_length = max(max_length, window_end - window_start + 1)
         
-        for(int l = 0, r = 0; r < n; r++)
-        {
-            mp[s[r]]++;
-            while(r - l + 1 - (max_element(mp.begin(), mp.end(), it)->second) > k){
-                mp[s[l]]--;
-                l++;
-            }
-            res = max(r - l + 1, res);
-        }
-        return res;
-    }
-};
+        return max_length
