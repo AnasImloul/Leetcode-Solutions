@@ -1,3 +1,13 @@
 class Solution:
     def addRungs(self, rungs: List[int], dist: int) -> int:
-        return sum((a - b - 1) // dist for a, b in zip(rungs, [0] + rungs))
+        rungs=[0]+rungs
+        i,ans=1,0
+        while i<len(rungs): 
+            if rungs[i]-rungs[i-1] > dist:
+                ans+=ceil((rungs[i]-rungs[i-1])/dist)-1
+            i+=1
+        return ans
+
+
+
+            
