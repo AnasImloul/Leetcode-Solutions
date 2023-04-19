@@ -1,21 +1,15 @@
 class Solution:
     def maxNumberOfBalloons(self, text: str) -> int:
-        d1={}
-        for i in text:
-            if i in d1:
-                d1[i]+=1
-            else:
-                d1[i]=1
-        d2={}
-        for i in "balloon":
-            if i in d2:
-                d2[i]+=1
-            else:
-                d2[i]=1
-        min_=10001
-        for i in d2:
-            if i in d1:
-                min_=min(min_,d1[i]//d2[i])
-            else:
-                return 0
-        return min_
+        freq = {'b': 0, 'a': 0, 'l': 0, 'o': 0, 'n': 0}
+        
+        for char in text:
+            if not char in freq:
+                continue
+                
+            step = 0.5 if char == 'l' or char == 'o' else 1
+            
+            freq[char] += step
+        
+        result = min(freq.values())
+        
+        return floor(result)
