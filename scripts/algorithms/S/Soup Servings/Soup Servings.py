@@ -1,13 +1,11 @@
-# Runtime: 77 ms (Top 19.02%) | Memory: 14.8 MB (Top 20.86%)
 class Solution:
     def soupServings(self, n: int) -> float:
-        if n >= 4276: return 1.0
-
-        @lru_cache(None)
-        def f(a: int, b: int)->float:
-            if a <= 0 and b <= 0: return 0.5
-            if a <= 0: return 1
-            if b <= 0: return 0
-            return (f(a-100,b) + f(a-75,b-25) + f(a-50,b-50) + f(a-25,b-75))*.25
-
-        return f(n,n)
+        @cache                                 # cache the result for input (a, b)
+        def dfs(a, b):
+            if a <= 0 and b > 0: return 1      # set criteria probability
+            elif a <= 0 and b <= 0: return 0.5
+            elif a > 0 and b <= 0: return 0
+            return (dfs(a-4, b) + dfs(a-3, b-1) + dfs(a-2, b-2) + dfs(a-1, b-3)) * 0.25 # dfs
+        if n > 4275: return 1                  # observe the distribution you will find a tends to be easier to get used up than b
+        n /= 25                                # reduce the input scale
+        return dfs(n, n)                       # both soup have n ml
