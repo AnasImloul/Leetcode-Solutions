@@ -1,27 +1,19 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
-    def smallestFromLeaf(self, root: Optional[TreeNode]) -> str:
+    res = 'z' * 13           # init max result, tree depth,  12< log2(8000) < 13
+    
+    def smallestFromLeaf(self, root: TreeNode) -> str:
         
-        def dfs(root, s):
+        def helper(node: TreeNode, prev):
+            prev = chr(97 + node.val) + prev
             
-            if not root: return
-            
-            if not root.left and not root.right:
-                s += chr(root.val+97)
-                res.append(s[-1::-1])
+            if not node.left and not node.right:
+                self.res = min(self.res, prev)
                 return
             
-            dfs(root.left, s+chr(root.val+97))
-            dfs(root.right, s+chr(root.val+97))
-            
-            
-        res = []
-        dfs(root, "")
-        return min(res)
-		
-		# An Upvote will be encouraging
+            if node.left:
+                helper(node.left, prev)
+            if node.right:
+                helper(node.right, prev)
+        
+        helper(root, "")
+        return self.res
