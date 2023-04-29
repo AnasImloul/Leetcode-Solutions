@@ -1,12 +1,18 @@
-# Runtime: 177 ms (Top 17.25%) | Memory: 15.5 MB (Top 9.55%)
 class Solution:
     def minMoves2(self, nums: List[int]) -> int:
+        
+        n=len(nums)
         nums.sort()
-        n = len(nums)
-        m = n//2
-        median = nums[m]
-
-        ans = 0
-        for num in nums:
-            ans += abs(num-median)
+        
+        if n%2==1:
+            median=nums[n//2]
+        else:
+            median = (nums[n//2 - 1] + nums[n//2]) // 2
+        
+        ans=0
+        
+        for val in nums:
+            ans+=abs(val-median)
+        
         return ans
+        
