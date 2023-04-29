@@ -1,40 +1,44 @@
 class Solution {
 public:
-    
-    int SIZE, N;
-
-    bool fillIndex(vector<int> &a, vector<bool> &used, int idx) {
-        if(idx == SIZE) return true; 
-        if(a[idx]) return fillIndex(a,used,idx+1);
-        
-        for(int num = N-1 ; num >= 1 ; num--) {
-            if(used[num]) continue;
-            if(num != 1 and (idx + num >= SIZE or a[idx + num] != 0)) continue;
-            a[idx] = num;
-            if(num != 1) a[idx+num] = num;
-            used[num] = true;
-            if(fillIndex(a,used,idx+1)) return true;
-            a[idx] = 0 ;
-            if(num != 1) a[idx + num] = 0;
-            used[num] = false;
+   
+    bool helper(vector<int> &res,unordered_set<int> &s,int i,int n){
+        if(s.size()==0){
+            return true;
         }
-        
+        if(res[i]!=-1){
+            return helper(res,s,i+1,n);
+        }
+        for(int j = n; j >= 1; j-- ){
+            int distance;
+            if(j > 1){
+                distance = j;
+            }
+            else{
+                distance = 0;   // if j == 1 distance is 0 as one is to be inserted only once
+            }
+            if((i+distance < res.size() and res[i+distance] == -1) and s.count(j)){
+                res[i] = j;
+                res[i+distance] = j;
+                s.erase(j);
+                if(helper(res,s,i+1,n)){
+                    return true;
+                }
+                res[i] = -1;
+                res[i+distance] = -1;
+                s.insert(j);
+            }
+        }
         return false;
     }
     
     vector<int> constructDistancedSequence(int n) {
-        SIZE = 1 + (n-1)*2, N = n;
-        vector<int> a(SIZE,0);
-        vector<bool> used(n,false);
-        
-        if(n==1) {
-            a[0] = 1;
-        } else {
-            a[0] = a[n] = n;
-            used[n] = true;
-            fillIndex(a,used,1);
+        int len = 2*(n-1)+1;
+        vector<int> res(len,-1);
+        unordered_set<int> s;
+        for(int i = 1;i <= n;i++){
+            s.insert(i);
         }
-        
-        return a;
+        helper(res,s,0,n);
+        return res;
     }
 };
