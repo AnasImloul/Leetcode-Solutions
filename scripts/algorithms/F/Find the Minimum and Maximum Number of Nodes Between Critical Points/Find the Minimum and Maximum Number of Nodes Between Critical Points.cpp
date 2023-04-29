@@ -1,24 +1,31 @@
 class Solution {
 public:
     vector<int> nodesBetweenCriticalPoints(ListNode* head) {
-        ListNode *prev=head;
-        head=head->next;
-        int i=1;
-        vector<int> index;
+        if(!head or !head->next or !head->next->next) return {-1,-1};
+        int mini = 1e9;
+        int prevInd = -1e9;
+        int currInd = 0;
+        int start = -1e9;
+        int prev = head->val;
+        head = head->next;
+
         while(head->next){
-            if((prev->val < head->val and head->val > head->next->val) ||( prev->val > head->val and head->val < head->next->val)){
-                index.push_back(i);
+            if(prev<head->val and head->next->val<head->val){
+                mini = min(mini,currInd-prevInd);
+                prevInd = currInd;
+                if(start==-1e9) start = currInd;
             }
-            prev=head;
-            head=head->next;
-            i++;
+            if(prev>head->val and head->next->val>head->val){
+                mini = min(mini,currInd-prevInd);
+                prevInd = currInd;
+                if(start==-1e9) start = currInd;
+            }
+            prev = head->val;
+            head = head->next;
+            currInd++;
         }
-        if(index.size() < 2) return {-1,-1};
-        
-        int mindist=INT_MAX;
-        for(int i=0;i<index.size()-1;i++){
-            mindist=min(index[i+1]-index[i],mindist);
-        }
-        return {mindist,index.back()-index[0]};
+
+        if(start!=prevInd) return {mini,prevInd-start};
+        return {-1,-1};
     }
 };
