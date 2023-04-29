@@ -1,3 +1,4 @@
 class Solution:
     def minOperations(self, n: int) -> int:
-        return n*(n//2)-(n//2)**2
+
+        return sum([n-x for x in range(n) if x % 2 != 0])
