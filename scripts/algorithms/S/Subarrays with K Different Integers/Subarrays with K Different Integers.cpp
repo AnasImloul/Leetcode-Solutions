@@ -1,57 +1,45 @@
-// Runtime: 286 ms (Top 33.47%) | Memory: 46.2 MB (Top 52.14%)
+/*
+    https://leetcode.com/problems/subarrays-with-k-different-integers/submissions/
+    
+    We use a different problem to solve this. We find the number of substrings with atmost
+    K unique chars. 
+    substrings with exactly k = atmost unique (K) - atmost unique (K-1)
+    This diff only leaves the substrings with exactly k unique chars
+*/
 class Solution {
 public:
-
-    // function for finding the no. of subarrays which has at most k distinct integers
-
-    int count_at_most_k(vector<int>& nums, int k)
-    {
-        int n = nums.size();
-
-        int count = 0;
-
-        unordered_map<int, int> mp;
-
-        int left = 0;
-
-        for(int right = 0; right < n; right++)
-        {
-            // increment the count of the curr element
-
-            mp[nums[right]]++;
-
-            // if no. of distinct elements is greater than k in a subarray
-
-            // decrement the count from left side
-
-            while(left <= right && mp.size() > k)
-            {
-                mp[nums[left]]--;
-
-                if(mp[nums[left]] == 0)
-                {
-                    mp.erase(nums[left]);
-                }
-
-                left++;
+    // Finds the substring with atmost K unique chars
+    int atmostK(vector<int>& arr, int K) {
+        int i = 0, j = 0, substrings = 0;
+        unordered_map<int, int> freq;
+        const int N = arr.size();
+        
+        while(i < N) {
+            // Expand the window
+            if(K >= 0) {
+                ++freq[arr[i]];
+                if(freq[arr[i]] == 1)
+                    --K;
+                ++i;
             }
-
-            // update the count
-
-            count += right - left + 1;
+            // make the window valid
+            while(K < 0) {
+                --freq[arr[j]];
+                if(freq[arr[j]] == 0)
+                    ++K;
+                ++j;
+            }
+            // Each valid window adds the subarrays which satisfies the condition
+            // For : 1,2,1, k=2
+            // 1: [1] 
+            // 2: [2], [1,2]
+            // 3: [1,2], [2,1], [1,2,1]
+            substrings += i - j + 1;
         }
-
-        return count;
+        return substrings;
     }
-
-    int subarraysWithKDistinct(vector<int>& nums, int k) {
-
-        int at_most_k = count_at_most_k(nums, k);
-
-        int at_most_k_1 = count_at_most_k(nums, k - 1);
-
-        // this will give the no. of subarrays which has exactly k distinct numbers
-
-        return at_most_k - at_most_k_1;
+    
+    int subarraysWithKDistinct(vector<int>& arr, int K) {
+        return atmostK(arr, K) - atmostK(arr, K-1);
     }
 };
