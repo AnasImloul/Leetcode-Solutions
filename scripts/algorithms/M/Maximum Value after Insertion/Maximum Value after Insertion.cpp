@@ -1,20 +1,39 @@
-class Solution {
+class Solution { 
+
 public:
-    string maxValue(string n, int x) {
-        if(isdigit(n[0])){
-            for(int i=0;i<n.size();i++)
-                if(n[i]-'0' < x){
-                    n.insert(i,to_string(x));
-                    return n;
-                }
-        }else{
-            for(int i=1;i<n.size();i++)
-                if(n[i]-'0' > x){
-                    n.insert(i,to_string(x));
-                    return n;
-                }
+string maxValue(string s, int x) {
+    int p=0,flag=0;
+    char ch='0'+x;  //change int to char
+    string str;
+	
+    if(s[0]=='-')
+    {   //for negative numbers
+	     for(int i=1;i<s.size();i++)
+        {
+          if(ch<s[i] && !flag){
+            str+=ch;
+            str+=s[i];
+            flag=1; 
+          }
+          else 
+           str+=s[i];
         }
-        n.insert(n.size(),to_string(x));
-        return n;
+        if(!flag) str+=ch;
+        return '-'+str;
     }
+    
+	// if number is positive
+    for(int i=0;i<s.size();i++)
+    {
+       if(ch>s[i] && !flag){
+         str+=ch;
+         str+=s[i];
+         flag=1;
+       }
+       else 
+        str+=s[i];
+    }    
+    if(!flag) str+=ch;
+    return str;
+  }
 };
