@@ -1,45 +1,36 @@
-// Runtime: 73 ms (Top 69.07%) | Memory: 31.8 MB (Top 95.34%)
 class Solution {
 public:
+    int find_parent(vector<int>&parent,int x){
+        if(parent[x]==x)
+        return x;
+        return parent[x]=find_parent(parent,parent[x]);
+    }
     bool validateBinaryTreeNodes(int n, vector<int>& leftChild, vector<int>& rightChild) {
-
-        vector<int> dsu(n, -1);
-        for(int i = 0; i < n; i++)
-        {
-            if(leftChild[i] != -1)
-            {
-                if(dsu[leftChild[i]] != -1 || leftChild[i] == findParent(i, dsu))
-                    return false;
-
-                dsu[leftChild[i]] = i;
+        vector<int> parent(n);
+        for(int i=0;i<n;i++){
+            parent[i]=i;
+        }
+        int cnt=0;
+        for(int i=0;i<n;i++){
+            int y=find_parent(parent,i);
+            if(leftChild[i]!=-1){
+                int x=find_parent(parent,leftChild[i]);
+                if(x!=leftChild[i]||y==x)
+                return false;
+                parent[leftChild[i]]=y;
             }
-
-            if(rightChild[i] != -1)
-            {
-                if(dsu[rightChild[i]] != -1 || rightChild[i] == findParent(i, dsu))
-                    return false;
-
-                dsu[rightChild[i]] = i;
+            if(rightChild[i]!=-1){
+                int x=find_parent(parent,rightChild[i]);
+                if(x!=rightChild[i]||y==x)
+                return false;
+                parent[rightChild[i]]=y;
             }
         }
-
-        int cnt = 0;
-        for(auto &i : dsu)
-            if((cnt += i == -1) > 1)
-                return false;
-
+        int x=find_parent(parent,0);
+        for(int i=1;i<n;i++){
+            if(find_parent(parent,i)!=x)
+            return false;
+        }
         return true;
-    }
-
-    int findParent(int i, vector<int> &dsu)
-    {
-        int a = i;
-        while(dsu[a] >= 0)
-            a = dsu[a];
-
-        if(dsu[i] != -1)
-            dsu[i] = a;
-
-        return a;
     }
 };
