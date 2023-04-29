@@ -1,28 +1,38 @@
 class Solution:
-    def group(self, word):
-        result = [[word[0], 1]]
-        for i in range(1, len(word)):
-            if word[i] == result[-1][0]:
-                result[-1][1] += 1
-            else:
-                result.append([word[i], 1])
-        return result
+    def expressiveWords(self, s: str, words: List[str]) -> int:
+        # edge cases
+        if len(s) == 0 and len(words) != 0:
+            return False
+        if len(words) == 0 and len(s) != 0:
+            return False
+        if len(s) == 0 and len(words) == 0:
+            return True
+     
+        # helper function, compressing string and extract counts
+        def compressor(s_word):
+            init_string =[s_word[0]]
+            array = []
+            start = 0
+            for i,c in enumerate(s_word):
+                if c == init_string[-1]:
+                    continue
+                array.append(i-start)
+                start = i
+                init_string += c  
+            array.append(i-start+1)    
+            return init_string,array
 
-    def expressiveWords(self, s: str, words: list[str]) -> int:
-        final = self.group(s)
-        count = 0
-        for i in words:
-            temp = self.group(i)
-            flag = True
-            if len(final) != len(temp):
-                continue
-            else:
-                ptr = 0
-                while ptr < len(final):
-                    if temp[ptr][0] != final[ptr][0] or (final[ptr][1] < 3 and final[ptr][1] != temp[ptr][1]) or final[ptr][1] < temp[ptr][1]:
-                        flag = False
+        res = len(words)
+        s_split, s_array = compressor(s)
+        for word in words:
+            word_split = ['']
+            word_array = []
+            word_split,word_array = compressor(word)
+            if s_split == word_split:
+                for num_s,num_word in zip(s_array,word_array):
+                    if num_s != num_word and num_s < 3 or num_word > num_s:
+                        res -= 1
                         break
-                    ptr += 1
-                if flag:
-                    count += 1
-        return count
+            else:
+                res -= 1
+        return res
