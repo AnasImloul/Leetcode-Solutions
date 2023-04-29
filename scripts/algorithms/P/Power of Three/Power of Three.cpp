@@ -1,12 +1,8 @@
-// Runtime: 44 ms (Top 25.15%) | Memory: 5.9 MB (Top 73.44%)
 class Solution {
 public:
-    bool isPowerOfThree(int n) {
-        if(n==0)return false;
-        if(n==1)return true;
-        if(n % 3 == 0){
-            return isPowerOfThree(n/3);
-        }
-        return false;
-    }
+	bool isPowerOfThree(int n) {
+		if(n<=0){return false;}
+		if(n>pow(2, 31)-1 || n<pow(2, 31)*(-1)){return false;}
+		return 1162261467%n==0;
+	}
 };
