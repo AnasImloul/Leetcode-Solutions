@@ -1,10 +1,36 @@
 class Solution:
     def validIPAddress(self, queryIP: str) -> str:
-        ipv4 = re.compile(r"((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])")
-        ipv6 = re.compile(r"([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4})")
-        if ipv4.fullmatch(queryIP) :
+        queryIP = queryIP.replace(".",":")
+        ct = 0
+        for i in queryIP.split(":"):
+            if i != "":
+                ct += 1
+        if ct == 4:
+            for i in queryIP.split(":"):
+                if i == "":
+                    return "Neither"
+                if i.isnumeric():
+                    if len(i) > 1:
+                        if i.count('0') == len(i) or int(i) > 255 or i[0] == '0':
+                            return "Neither"
+                else:
+                    return "Neither"
             return "IPv4"
-        if ipv6.fullmatch(queryIP) :
+        elif ct == 8:
+            a = ['a','b','c','d','e','f','A','B','C','D','E','F']
+            for i in queryIP.split(":"):
+                if i == "":
+                    return "Neither"
+                if len(i) < 5:
+                    for j in i:
+                        if j not in a and j.isdigit() == False:
+                            return "Neither"
+                else:
+                    return "Neither"
             return "IPv6"
-        return "Neither"
-		
+        else:
+            return "Neither"
+                   
+
+
+        
