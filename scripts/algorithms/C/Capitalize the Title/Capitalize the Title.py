@@ -1,3 +1,9 @@
 class Solution:
     def capitalizeTitle(self, title: str) -> str:
-        return " ".join([word.capitalize() if len(word) > 2 else word.lower() for word in title.split()])
+        li = title.split()
+        for i,l in enumerate(li):
+            if len(l) <= 2:
+                li[i] = l.lower()
+            else:
+                li[i] = l[0].upper() + l[1:].lower()
+        return ' '.join(li)
