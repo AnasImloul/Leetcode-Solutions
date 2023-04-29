@@ -1,56 +1,43 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
 class Solution {
 public:
-    ListNode* reverseList(ListNode* head){
-        if(head == NULL) return head;
-        ListNode* ptr, *fptr, *prev;
-        ptr = head;
-        fptr = ptr->next;
-        ptr-> next = NULL;
-        while(fptr != NULL){
-            prev = ptr;
-            ptr= fptr;
-            fptr = fptr->next;
-            ptr->next = prev;
+    ListNode* reverse(ListNode* l1){
+        if(l1==NULL||l1->next==NULL){
+            return l1;
         }
-        return ptr;
+        ListNode* ans=reverse(l1->next);
+        l1->next->next=l1;
+        l1->next=NULL;
+        return ans;
     }
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* head = new ListNode();
-        ListNode* ptr = head;
-        l1 = reverseList(l1);
-        l2 = reverseList(l2);
-        int carry = 0;
-        while(l1 && l2){ 
-            ptr->next = new ListNode();
-            ptr = ptr->next;
-            ptr->val = l1->val + l2->val  + carry;
-            carry = ptr->val/10;
-            ptr->val = ptr->val % 10;
-            l1 = l1->next;
-            l2 = l2->next;
+       ListNode* l11= reverse(l1);
+       ListNode* l22= reverse(l2);
+        ListNode* dummy=new ListNode(0);
+        ListNode* curr=dummy;
+        int carry=0;
+        int sum=0;
+        while(l11||l22||carry!=0){
+            int x=l11?l11->val:0;
+            int y=l22?l22->val:0;
+            sum=x+y+carry;
+            carry=sum/10;
+            curr->next=new ListNode(sum%10);
+            curr=curr->next;
+            l11=l11?l11->next:nullptr;
+            l22=l22?l22->next:nullptr;
         }
-        while(l1){ 
-            ptr->next = new ListNode();
-            ptr = ptr->next;
-            ptr->val = l1->val + carry;
-            carry = ptr->val/10;
-            ptr->val = ptr->val % 10;
-            l1 = l1->next;
-        }
-        while(l2){ 
-            ptr->next = new ListNode();
-            ptr = ptr->next;
-            ptr->val = l2->val  + carry;
-            carry = ptr->val/10;
-            ptr->val = ptr->val % 10;
-            l2 = l2->next;
-        }
-        if(carry){
-            ptr->next = new ListNode();
-            ptr = ptr->next;
-            ptr->val = carry;
-        }
-        head = reverseList(head->next);
-        return head;
+        dummy=dummy->next;
+       dummy=reverse(dummy);
+        return dummy;
     }
 };
