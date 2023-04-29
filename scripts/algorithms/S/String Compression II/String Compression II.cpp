@@ -1,29 +1,22 @@
 class Solution {
 public:
-    vector<vector<int>> dp;
-    int find(int n){   // return the compressed length of 'n' similiar char
-        if(n==1) return 1;
-        else if(n>1 && n<10) return 2;
-        else if(n>=10 && n<100) return 3;
-        else return 4;
-    }
-    int dfs(string &s,int in,int k){
-        if(k<0) return INT_MAX;
-        if(in>=s.size() || (s.size()-in)<=k) return 0;
-        if(dp[in][k]!=-1) return dp[in][k];
-        
-        int n = 0, t = 0,i = in;  char ch = s[in];  // n = no. of contigous same char after removing 't' char in-between.
-        int re = dfs(s,in+1,k-1);  // Min length after removing current char from [in+1 to s.size()-1]
-        
-        for(; i<s.size() && t<=k;++i){
-            if(s[i]==ch) n++;
-            else re = min(re,find(n)+dfs(s,i,k-t++)); // check for subseq [i to s.size()]
+    int dp[101][101];
+    int dfs(string &s, int left, int K) {
+        int k = K;
+        if(s.size() - left <= k) return 0;
+        if(dp[left][k] >= 0) return dp[left][k];
+        int res = k ? dfs(s, left + 1, k - 1) : 10000, c = 1;
+        for(int i = left + 1; i <= s.size(); ++i) {
+            res = min(res, dfs(s, i, k) + 1 + (c >= 100 ? 3 : (c >= 10 ? 2 : (c > 1 ? 1 :0))));
+            if(i == s.size()) break;
+            if(s[i] == s[left]) ++c;
+            else if(--k < 0) break;
         }
-        if(t<=k) re = min(re,find(n)+dfs(s,i,k-t));
-        return dp[in][k] = re;
+        return dp[left][K] = res;
     }
+    
     int getLengthOfOptimalCompression(string s, int k) {
-        dp = vector<vector<int>>(s.size()+1,vector<int>(k+1,-1));
-        return dfs(s,0,k);
+        memset(dp, -1, sizeof(dp));
+        return dfs(s, 0, k);
     }
 };
