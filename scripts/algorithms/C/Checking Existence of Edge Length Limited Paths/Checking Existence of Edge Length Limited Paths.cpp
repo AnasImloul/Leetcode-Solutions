@@ -1,74 +1,52 @@
+class DSU {
+public:
+    vector<int>Parent;
+    vector<int>Rank;
+    DSU(int n) {
+        Parent.resize(n);
+        Rank.resize(n, 0);
+        for(int i = 0; i < n; i++) Parent[i] = i;
+    }
+
+    int Find(int x) {
+        return Parent[x] = Parent[x] == x? x : Find(Parent[x]);
+    }
+
+    void Union(int a, int b) {
+        a = Find(a);
+        b = Find(b);
+        if(Rank[a] == Rank[b]) Rank[a]++;
+        if(Rank[a] > Rank[b]){
+            Parent[b] = a;
+        }
+        else {
+            Parent[a] = b;
+        }
+    }
+};
+
 class Solution {
 public:
-    vector<int>parent,rank;
-    
-    void initialize(int n){
-        for(int i=0;i<n;i++){
-            parent[i]=i;
-            rank[i]=0;
+    vector<bool> distanceLimitedPathsExist(int n, vector<vector<int>>& edgeList, vector<vector<int>>& q) {
+        int nq = q.size();
+        for(int i = 0; i < nq; i++) {
+            q[i].push_back(i);
         }
-    }
-    
-    int findPar(int v){
-        if(v==parent[v]) return v;
-        return parent[v]=findPar(parent[v]);
-    }
-    
-    vector<bool> distanceLimitedPathsExist(int n, vector<vector<int>>& edgeList, vector<vector<int>>& queries) {
-        int s=edgeList.size();
-        int m=queries.size();
-        parent.resize(n);
-        rank.resize(n);
-        initialize(n);
-        
-        vector<vector<int>>edges,q;
-        for(int i=0;i<s;i++){
-            vector<int>t;
-            t.push_back(edgeList[i][2]); t.push_back(i);
-            edges.push_back(t);
-        }
-        for(int i=0;i<m;i++){
-            vector<int>t;
-            t.push_back(queries[i][2]); t.push_back(i);
-            q.push_back(t);
-        }
-        
-        sort(edges.begin(),edges.end());
-        sort(q.begin(),q.end());
-        
-        vector<bool>ans(m);
-        int start=0;
-        
-        for(int i=0;i<m;i++){
-            int weight=q[i][0];
-            int qv1=queries[q[i][1]][0];
-            int qv2=queries[q[i][1]][1];
-            for(int j=start;j<s;j++){
-                if(edges[j][0]<weight){
-                    int v1=edgeList[edges[j][1]][0];
-                    int v2=edgeList[edges[j][1]][1];
-                    int u=findPar(v1);
-                    int v=findPar(v2);
-                    if(u!=v){
-                        //union
-                        if(rank[u]<rank[v])
-                            parent[u]=v;
-                        else if(rank[v]<rank[u])
-                            parent[v]=u;
-                        else
-                            parent[v]=u,rank[u]++;
-                    }
-                    start++;
-                    
-                }
-                else
-                    break;
-                
-            }
-            if(findPar(qv1)==findPar(qv2))
-                ans[q[i][1]]=true;
-            else
-                ans[q[i][1]]=false;
+        sort(begin(q), end(q), [&](auto const& a, auto const& b) {
+          return a[2] < b[2];
+        });
+        sort(begin(edgeList), end(edgeList), [&](auto const& a, auto const& b) {
+          return a[2] < b[2];
+        });
+        vector<bool>ans(nq, 0);
+        int i = 0;
+        DSU dsu(n);
+        for(int j = 0; j < nq; j++) {
+          while(i < edgeList.size() && edgeList[i][2] < q[j][2]) {
+            dsu.Union(edgeList[i][0], edgeList[i][1]);
+            i++;
+          }
+          if(dsu.Find(q[j][0]) == dsu.Find(q[j][1])) ans[q[j][3]] = 1;
         }
         return ans;
     }
