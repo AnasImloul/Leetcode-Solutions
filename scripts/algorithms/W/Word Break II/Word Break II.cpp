@@ -1,32 +1,31 @@
-// Runtime: 4 ms (Top 33.21%) | Memory: 7.3 MB (Top 37.14%)
-
 class Solution {
 public:
-    vector<string> ans;
-    void solve(string& a,unordered_set<string>& words,int idx,string cstr)
-    {
-        if(idx>=a.length())
-        {
-            ans.push_back(cstr);
+    void helper(string s, unordered_set<string>& dict,int start, int index,string current,vector<string>& ans){
+        if(start==s.size()){
+            ans.push_back(current);
             return;
         }
-        if(cstr.length()!=0)
-        {
-            cstr+=" ";
+        if(index==s.size()) return;
+
+        string sub=s.substr(start,index-start+1);
+
+        if(dict.count(sub)>0){
+            string recursion;
+            if(current.size()==0) recursion=sub;
+            else recursion=current+" "+sub; 
+            helper(s,dict,index+1,index+1,recursion,ans);
         }
-        for(int i=idx;i<a.length();++i)
-        {
-            string str=a.substr(idx,i-idx+1);
-            if(words.find(str)!=words.end())
-            {
-                solve(a,words,i+1,cstr+str);
-            }
-        }
+        helper(s,dict,start,index+1,current,ans);
+        return;
     }
     vector<string> wordBreak(string s, vector<string>& wordDict) {
-        ans.clear();
-        unordered_set<string> st(wordDict.begin(),wordDict.end());
-        solve(s,st,0,"");
+        unordered_set<string> dict;
+        for(int i=0;i<wordDict.size();i++){
+                dict.insert(wordDict[i]);
+        }
+        vector<string> ans;
+        helper(s,dict,0,0,"",ans);
         return ans;
+        
     }
 };
