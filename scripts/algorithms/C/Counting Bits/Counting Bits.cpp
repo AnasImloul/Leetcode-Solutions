@@ -1,26 +1,20 @@
-				// 😉😉😉😉Please upvote if it helps 😉😉😉😉
 class Solution {
+private:
+    int countones( int n ){
+        int count = 0;
+        while(n){
+            count ++;
+            n = n & ( n-1 );
+        }
+        return count;
+    }
 public:
     vector<int> countBits(int n) {
         vector<int> ans;
-		
-		// iterating fromt 0 to n
-        for(int i = 0; i<=n; i++)
-        {
-			// sum is initialised as 0
-            int sum = 0;
-            int num = i;
-			// while num not equals zero
-            while(num != 0)
-            {
-				// we have to count 1's in binary representation of i, therefore % 2
-                sum += num%2;
-                num = num/2;
-            }
-			// add sum to ans vector
-            ans.push_back(sum);
+        for( int i = 0; i <= n; i++ ){
+            int x = countones(i);
+            ans.push_back(x);
         }
-		// return 
         return ans;
     }
 };
