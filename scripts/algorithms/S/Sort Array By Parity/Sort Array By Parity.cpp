@@ -1,30 +1,30 @@
 class Solution {
 public:
-    vector<int> sortArrayByParity(vector<int>& nums) {
-        int n = nums.size();
-        if (n == 1)
+    vector<int> sortArrayByParity(vector<int>& nums)
+    {
+        vector<int> v;
+        vector<int> odd;
+        if(nums.size()==1)
         {
             return nums;
         }
-        
-        int j = n - 1;
-        for (int i = 0; i < j; i ++)
+        for(auto it : nums)
         {
-            while(j > i)
+            if(it%2==0)
             {
-                if (nums[j] % 2 == 0)
-                {
-                    break;
-                }
-                j --;
+                v.push_back(it);
+            }
+            else
+            {
+                   odd.push_back(it);
             }
             
-            if (nums[i] % 2)
-            {
-                swap(nums[i], nums[j]);
-            }
         }
-        
-        return nums;
+
+        for(auto i : odd)
+        {
+            v.push_back(i);
+        }
+        return v;
     }
 };
