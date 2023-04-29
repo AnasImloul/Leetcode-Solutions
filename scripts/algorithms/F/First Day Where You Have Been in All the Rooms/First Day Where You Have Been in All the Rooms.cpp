@@ -1,20 +1,17 @@
-// Runtime: 301 ms (Top 34.09%) | Memory: 97.1 MB (Top 92.27%)
+#define ll long long 
+int  mod=1e9+7;
 class Solution {
 public:
     int firstDayBeenInAllRooms(vector<int>& nextVisit) {
-        int n = nextVisit.size();
-        int mod = 1e9 + 7;
-        long long dp[n];
-        dp[0] = 0;
-
-        for(int i = 1 ; i < n ; i++)
-        {
-            if(dp[i-1] == nextVisit[i-1])
-                dp[i] = dp[i-1] + 2;
-            else
-                dp[i] = (2 + 2*dp[i-1] + mod - dp[nextVisit[i-1]])%mod;
-        }
-
-        return (int) dp[n-1]%mod;
+          int n=nextVisit.size();
+          vector<vector<ll>>dp(n,vector<ll>(2,0));
+          dp[0][0]=2;
+          dp[0][1]=1;
+          for(int i=1;i<n;i++)
+          {   dp[i][1]=dp[i-1][0]+1;
+               if(i==n-1)break;
+              dp[i][0]=(dp[i][1]+(dp[i-1][0]-dp[nextVisit[i]][1])+2)%mod;  
+          }
+          return (dp[n-1][1]+mod-1)%mod;
     }
 };
