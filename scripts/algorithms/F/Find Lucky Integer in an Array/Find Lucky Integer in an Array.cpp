@@ -1,13 +1,32 @@
-// Runtime: 20 ms (Top 8.82%) | Memory: 10.3 MB (Top 50.82%)
 class Solution {
 public:
     int findLucky(vector<int>& arr) {
-        unordered_map<int, int> mp;
-        int res = -1;
-        for(int i : arr) mp[i]++;
-        for(int i : arr) {
-            if(mp[i] == i) res = max(res, i);
+        // sort(arr.begin(),arr.end());
+        map<int,int>mp;
+        vector<int>v;
+        for(int i=0;i<arr.size();i++)
+        {
+            mp[arr[i]]++;
         }
-        return res;
+
+        for(auto x:mp)
+        {
+            if(x.first == x.second)
+            {
+                v.push_back(x.first);
+            }
+           
+        }
+
+        int mx = -1;
+        for(int i=0;i<v.size();i++)
+        {
+            mx = max(mx,v[i]);
+        }
+
+
+
+        return mx;
+        
     }
 };
