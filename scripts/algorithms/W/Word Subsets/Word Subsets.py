@@ -1,13 +1,15 @@
-# Runtime: 1721 ms (Top 30.52%) | Memory: 18.6 MB (Top 42.04%)
 class Solution:
-    def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
-        result = []
-        tempDict = Counter()
-        for w in words2:
-            tempDict |= Counter(w)
-        print(tempDict)
-
-        for w in words1:
-            if not tempDict - Counter(w):
-                result.append(w)
-        return result
+    def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
+        freq = [0]*26 
+        
+        for w in B: 
+            temp = [0]*26
+            for c in w: temp[ord(c)-97] += 1
+            for i in range(26): freq[i] = max(freq[i], temp[i])
+                
+        ans = []
+        for w in A: 
+            temp = [0]*26
+            for c in w: temp[ord(c)-97] += 1
+            if all(freq[i] <= temp[i] for i in range(26)): ans.append(w)
+        return ans 
