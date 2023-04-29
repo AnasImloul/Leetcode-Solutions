@@ -1,28 +1,55 @@
-// Runtime: 1171 ms (Top 32.21%) | Memory: 180.1 MB (Top 55.65%)
-
 class Solution {
 public:
     ListNode* swapNodes(ListNode* head, int k) {
-        ListNode* left = head;
-        ListNode* right = head;
+        
+        // declare a dummy node
+        
+        ListNode* dummy = new ListNode(0);
+        
+        // point dummy -> next to head
+        
+        dummy -> next = head;
+        
+        // declare a tail pointer and point to dummy
+        
+        ListNode* tail = dummy;
+        
+        // move the curr pointer (k - 1) times
+        
+        // this will maintain a gap of (k - 1) between curr and tail pointer
+        
         ListNode* curr = head;
-
-        int counter = 1;
-        while(curr!=NULL){
-            if (counter<k){
-                left = left->next;
-            }
-            if (counter>k){
-                right = right->next;
-            }
-            curr = curr->next;
-            counter++;
+        
+        while(k > 1)
+        {
+            curr = curr -> next;
+            
+            k--;
         }
-        //swap values
-        int temp = left->val;
-        left->val = right->val;
-        right->val = temp;
-
-        return head;
+        
+        // store the address in start pointer
+        
+        ListNode* start = curr;
+        
+        // maintaing a gap of (k - 1) between curr and tail, move both pointer
+        
+        while(curr)
+        {
+            tail = tail -> next;
+            
+            curr = curr -> next;
+        }
+        
+        // store the address of kth node from end
+        
+        ListNode* end = tail;
+        
+        // swap the values
+        
+        swap(start -> val, end -> val);
+        
+        // dummy -> next will be head
+        
+        return dummy -> next;
     }
 };
