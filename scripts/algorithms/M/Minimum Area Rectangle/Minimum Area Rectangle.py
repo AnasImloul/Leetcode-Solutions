@@ -1,20 +1,21 @@
-from collections import defaultdict
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
-        hashmap = defaultdict(set)
-        for x, y in points:
-            hashmap[x].add(y)
+        points = sorted(points, key=lambda item: (item[0], item[1]))
+        cols = defaultdict(list)
+        
+        for x,y in points:
+            cols[x].append(y)
+        
+        lastx = {}
+        ans = float('inf')
+        
+        for x in cols:
+            col = cols[x]
+            for i, y1 in enumerate(col):
+                for j in range(i):
+                    y2 = col[j]
+                    if (y2,y1) in lastx:
+                        ans = min(ans, abs((x-lastx[y2,y1])*(y2-y1)))
+                    lastx[y2,y1] = x
             
-        min_area = math.inf
-             
-        i = 0
-        for x1, y1 in points:
-            i += 1
-            for x2, y2 in points[i:]:
-                if x1 != x2 and y1 != y2:
-                    if y2 in hashmap[x1] and y1 in hashmap[x2]:
-                        min_area = min(min_area, abs(x1 - x2) * abs(y1 - y2))
-                        if min_area == 1:
-                            return 1
-                
-        return min_area if min_area != math.inf else 0
+        return 0 if ans==float('inf') else ans
