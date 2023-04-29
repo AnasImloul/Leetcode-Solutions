@@ -1,44 +1,22 @@
 class Solution:
-
     def scoreOfStudents(self, s: str, answers: List[int]) -> int:
-        correct_ans = eval(s)
-        standard_form = []
-        for x in s:
-            if x == '+':
-                standard_form.append(0)
-            elif x == '*':
-                standard_form.append(1)
-            else:
-                standard_form.append(int(x))
-
-        @lru_cache(None)
-        def divide_and_conquer(equation: Tuple[int]) -> Set[int]:
-            if len(equation) == 1:
-                return {equation[0]}
-
-            if len(equation) == 3:
-                if equation[1] == 0:  # Add
-                    return {equation[0] + equation[-1]}
-                else:  # Multiply
-                    return {equation[0] * equation[-1]}
-
-            my_answers = set()
-            for split_point in range(1, len(equation), 2):
-                left_answers = divide_and_conquer(equation[:split_point])
-                right_answers = divide_and_conquer(equation[split_point + 1:])
-
-                if equation[split_point] == 0:  # Add
-                    my_answers |= {x + y for x in left_answers for y in right_answers if x + y <= 1000}
-                else:  # Multiply
-                    my_answers |= {x * y for x in left_answers for y in right_answers if x * y <= 1000}
-
-            return my_answers
-
-        incorrect_answers = divide_and_conquer(tuple(standard_form))
-        total_grade = 0
-        for x in answers:
-            if x == correct_ans:
-                total_grade += 5
-            elif x in incorrect_answers:
-                total_grade += 2
-        return total_grade
+        
+        @cache
+        def fn(lo, hi): 
+            """Return possible answers of s[lo:hi]."""
+            if lo+1 == hi: return {int(s[lo])}
+            ans = set()
+            for mid in range(lo+1, hi, 2): 
+                for x in fn(lo, mid): 
+                    for y in fn(mid+1, hi): 
+                        if s[mid] == "+" and x + y <= 1000: ans.add(x + y)
+                        elif s[mid] == "*" and x * y <= 1000: ans.add(x * y)
+            return ans 
+                
+        target = eval(s)
+        cand = fn(0, len(s))
+        ans = 0 
+        for x in answers: 
+            if x == target: ans += 5
+            elif x in cand: ans += 2
+        return ans 
