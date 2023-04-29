@@ -1,23 +1,14 @@
-// Runtime: 74 ms (Top 28.00%) | Memory: 21.8 MB (Top 71.53%)
 class Solution {
 public:
     int largestPerimeter(vector<int>& nums) {
-        int res = 0;
-
-        sort(nums.begin(),nums.end(),greater<int>());
-
-        for(int i = 0;i < nums.size()-2;i++)
-        {
-            int a = nums[i];
-            int b = nums[i+1];
-            int c = nums[i+2];
-
-            if(a<b+c&&b<a+c&&c<b+a)
-            {
-                res = res+a+b+c;
-                break;
-            }
+	// sort the elements 
+        sort(nums.begin(),nums.end());
+		// iterate in everse order to get maximum perimeter
+        for (int i=nums.size()-2; i>=1 ; i--){
+		//Triangle is formed if sum of two sides is greater than third side
+        if (nums[i]+nums[i-1] >nums[i+1])return (nums[i]+nums[i+1]+nums[i-1]); // return perimeter which is sum of three sides
         }
-        return res;
+        return 0; // when no triangle possible it will come out of loop so return 0 here
+        
     }
 };
