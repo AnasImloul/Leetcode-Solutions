@@ -1,13 +1,9 @@
-# Runtime: 62 ms (Top 35.34%) | Memory: 13.7 MB (Top 99.68%)
 class Solution:
-    def check(self, nums: List[int]) -> bool:
-        count = 0
-        length = len(nums) - 1
-        for i in range(length):
-            if nums[i] > nums[i + 1]:
-                count+=1
-
-        if count > 1 or (count == 1 and nums[0] < nums[length]):
-            return False
-
-        return True
+    def check(self, num: List[int]) -> bool:
+        ct=0
+        for i in range(1,len(num)):
+            if num[i-1]>num[i]:
+                ct+=1
+        if num[len(num)-1]>num[0]:
+            ct+=1
+        return ct<=1
