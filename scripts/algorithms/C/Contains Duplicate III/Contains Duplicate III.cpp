@@ -1,44 +1,29 @@
-			class Solution {
-			public:
-				bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) 
-				{
-					if(k==0)
-						return false;
-					multiset<long> window;
-
-					for(int i=0;i<nums.size();i++)
-					{
-						if(i>k)
-							window.erase(nums[i-k-1]);
-						auto it=window.lower_bound((long)nums[i]-(long)t);
-						if(it!=window.end() && *it<=(long)nums[i]+(long)t)
-							return true;
-						window.insert(nums[i]);
-					}
-					return false;
-				}
-			};
-
-
-
-
-
-			// class Solution {
-			// public:
-			//     bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) 
-			//     {
-			//         double x;
-			//         for(int i=0;i<nums.size();i++)
-			//         {
-			//             for(int j=i+1;j<nums.size();j++)
-			//             {
-			//                 x=0.0+nums[i]-nums[j];
-			//                 if(x<0)
-			//                     x=-1*x;
-			//                 if(i!=j && x<=t && abs(i-j)<=k)
-			//                     return true;
-			//             }
-			//         }
-			//         return false;
-			//     }
-			// };
+class Solution {
+public:
+    bool containsNearbyAlmostDuplicate(vector<int>& nums, int indexDiff, int valueDiff) {
+        int i=0;
+        map<int,int> mp;
+        int n=nums.size();
+        for(int j=0;j<n;j++){
+            auto val=mp.lower_bound(nums[j]);
+            if(val!=mp.end() and (val->first-nums[j])<=valueDiff){
+                return true;
+            }
+            if(val!=mp.begin()){
+                val--;
+                if(abs(val->first-nums[j])<=valueDiff){
+                    return true;
+                }
+            }
+            mp[nums[j]]++;
+            if((j-i)==indexDiff){
+                mp[nums[i]]--;
+                if(mp[nums[i]]==0){
+                    mp.erase(nums[i]);
+                }
+                i++;
+            }
+        }
+        return false;
+    }
+};
