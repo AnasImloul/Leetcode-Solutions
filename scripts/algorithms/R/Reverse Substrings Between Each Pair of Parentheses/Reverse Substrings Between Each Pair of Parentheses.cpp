@@ -1,37 +1,31 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 6.2 MB (Top 81.63%)
 class Solution {
-private:
-    void revString(string& s, int start, int end) {
-        while(start < end) {
-            swap(s[start], s[end]);
-            start++;
-            end--;
-        }
-    }
 public:
     string reverseParentheses(string s) {
-        stack<int> startIdx;
-        string ans = "";
-        int n = s.length();
-
-        for (int i = 0; i < n; i++) {
-
-            if (s[i] == '(') {
-                startIdx.push(i);
+        stack<int> st;
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]=='(')
+            {
+                st.push(i);
             }
-
-            if (s[i] == ')') {
-                revString(s, startIdx.top(), i);
-                startIdx.pop();
-            }
-        }
-
-        for (auto ch : s) {
-            if (ch != '(' && ch != ')') {
-                ans += ch;
+            else if(s[i]==')')
+            {
+              int strt=st.top();
+              strt=strt+1;
+              int end=i;
+              reverse(s.begin()+strt,s.begin()+end);
+              st.pop();
             }
         }
-
+        string ans="";
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]=='(' || s[i]==')')
+            {
+                continue;
+            }
+            ans+=s[i];
+        }
         return ans;
     }
 };
