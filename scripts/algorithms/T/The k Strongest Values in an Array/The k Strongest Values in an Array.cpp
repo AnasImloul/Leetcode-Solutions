@@ -1,28 +1,22 @@
-class Solution {
+class Solution 
+{
 public:
-    vector<int> getStrongest(vector<int>& arr, int k) {
-        if(arr.size()<=k){
-            return arr;
-        } else {
-            sort(arr.begin(),arr.end());
-            vector<int>ans;
-            int start=0,end=arr.size()-1;
-            int median=arr[(arr.size()-1)/2];
-            while(k!=0 and start<end){
-                if(abs(arr[start]-median)==abs(arr[end]-median)){
-                    if(arr[start]>arr[end]){
-                     ans.push_back(arr[start++]);
-                    } else {
-                        ans.push_back(arr[end--]);
-                    }
-                } else if(abs(arr[start]-median)>abs(arr[end]-median)){
-                    ans.push_back(arr[start++]);
-                } else {
-                    ans.push_back(arr[end--]);
-                }
-                k--;
-            }
-            return ans;
+    vector<int> getStrongest(vector<int>& arr, int k) 
+    {
+        int n=arr.size();
+        sort(arr.begin(),arr.end());
+        int m=arr[(n-1)/2];
+        priority_queue<pair<int,int>> pq;
+        for(auto it: arr)
+        {
+            pq.push({abs(it-m),it});
         }
+        vector<int> ans;
+        while(k-- && !pq.empty())
+        {
+            ans.push_back(pq.top().second);
+            pq.pop();
+        }
+        return ans;
     }
 };
