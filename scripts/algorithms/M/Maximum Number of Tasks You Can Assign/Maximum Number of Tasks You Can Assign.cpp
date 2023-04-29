@@ -1,41 +1,32 @@
-// Runtime: 1622 ms (Top 67.41%) | Memory: 282 MB (Top 79.02%)
 class Solution {
-private:
-    bool isValid(vector<int>& tasks, vector<int>& workers, const int& MAX_TASKS, int pills, int strength){
-        multiset<int> workersMultiset(workers.end() - MAX_TASKS, workers.end());
-        for(int i = MAX_TASKS - 1; i >= 0; --i){
-            auto it = workersMultiset.lower_bound(tasks[i]);
-            if(it == workersMultiset.end()){
-                pills -= 1;
-                it = workersMultiset.lower_bound(tasks[i] - strength);
-            }
-            if(it == workersMultiset.end() || pills < 0){
-                return false;
-            }
-            workersMultiset.erase(it);
-        }
-        return true;
-    }
-
 public:
     int maxTaskAssign(vector<int>& tasks, vector<int>& workers, int pills, int strength) {
-        const int T = tasks.size();
-        const int W = workers.size();
+        sort(begin(workers), end(workers));
+        sort(begin(tasks), end(tasks));
 
-        sort(tasks.begin(), tasks.end());
-        sort(workers.begin(), workers.end());
+        int lTasks = -1, rTasks = min(tasks.size(), workers.size()) - 1;
 
-        int l = 0;
-        int r = min(T, W);
-        while(l != r){
-            int mid = (l + r + 1) / 2;
-            if(isValid(tasks, workers, mid, pills, strength)){
-                l = mid;
-            }else{
-                r = mid - 1;
+        while (lTasks < rTasks) {
+            int midTasks = (lTasks + rTasks + 1) >> 1, t = midTasks;
+            deque<int> dq;
+
+            for (int w = workers.size() - 1, freePills = pills; t >= 0; t--) {
+                if (dq.size() > 0 && dq.front() >= tasks.at(t)) {
+                    dq.pop_front();
+                } else if (w >= 0 && workers.at(w) >= tasks.at(t)) {
+                    w--;
+                } else if (freePills > 0) {
+                    while (w >= 0 && workers.at(w) + strength >= tasks.at(t))
+                        dq.push_back(workers.at(w--));
+
+                    if (dq.size() == 0) break;
+                    dq.pop_back(), freePills--;
+                } else break;
             }
+
+            t == -1 ? lTasks = midTasks : rTasks = midTasks - 1;
         }
 
-        return r;
+        return lTasks + 1;
     }
 };
