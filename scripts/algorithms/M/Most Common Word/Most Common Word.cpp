@@ -1,27 +1,28 @@
-// Runtime: 8 ms (Top 56.16%) | Memory: 7.9 MB (Top 32.68%)
 class Solution {
 public:
-    string mostCommonWord(string paragraph, vector<string>& banned)
-    {
-         unordered_set<string> ban(banned.begin(),banned.end());
-        unordered_map<string,int> m;
-        for(auto &c:paragraph)
-        {
-            c=isalpha(c)?tolower(c):' ';
-        }
-        istringstream s(paragraph);
-        string w;
-        pair<string,int> res({"",0});
-
-        while (s >> w)
-        {
-            if (ban.find(w) == ban.end() && ++m[w] > res.second)
-            {
-                res = make_pair(w, m[w]);
+    string mostCommonWord(string paragraph, vector<string>& banned) {
+        string temp;
+        vector<string> words;
+        for(char c:paragraph){
+            if(isalpha(c) && !isspace(c)) temp+=tolower(c);
+            else{
+                if(temp.length()) words.push_back(temp);
+                temp="";
             }
         }
-        return res.first;
-
+        if(temp.length()) words.push_back(temp);
+        
+        map<string,int> mp;
+        for(string i:words) mp[i]++;
+        for(string i:banned) mp[i]=0;
+        string ans;
+        int maxUsedFreq=0;
+        for(auto i:mp){
+            if(i.second>maxUsedFreq){ 
+                ans=i.first;
+                maxUsedFreq=i.second;
+            }
+        }
+        return ans;
     }
 };
-//if you like the solution plz upvote.
