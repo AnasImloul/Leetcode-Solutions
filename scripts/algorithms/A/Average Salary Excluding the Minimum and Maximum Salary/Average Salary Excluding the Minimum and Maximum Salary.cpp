@@ -1,14 +1,12 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 7.2 MB (Top 42.17%)
 class Solution {
 public:
     double average(vector<int>& salary) {
-        sort(salary.begin(), salary.end());
-        double sum = 0;
-        for(int i = 1; i < salary.size()-1; i++)
-        {
-            sum += salary[i];
+        int n = salary.size();
+        double ans=0;
+        sort(salary.begin(),salary.end());
+        for(int i=1;i<n-1;i++){
+            ans+=salary[i];
         }
-
-        return sum/(salary.size()-2);
+        return ans/(n-2);
     }
 };
