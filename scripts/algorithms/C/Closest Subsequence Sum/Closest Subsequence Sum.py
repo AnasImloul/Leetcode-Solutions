@@ -1,38 +1,58 @@
 class Solution:
-    # generate all possible summation 
-    def helper(self, arr):
-        n = len(arr)
-        #we need to keep unique elements
-		#For this array (Say array nums) of size n, we have 2 ^ n subset from it (you must know some math).
-#For this problem, n is not too large (n <= 20) so that we can utilize bitmask technique.
-#Mask is an 32-bit integer, if i-th bit of this mask is on, it means our subset contains i-th element of nums.
-#All mask values are in the range between 0b000...0000 (n 0's)  and 0b111...1111 (n 1's), so it means all masks are in the range of [0, (1 << n) - 1]
-        ans = {0}  # initially, answer array contains 0 because of Empty subset
-        for mask in range(1, 1 << n):
-            ss = 0
-            for i, val in enumerate(arr):
-                if (1 << i) & mask:  # using bitmask to check whether subset contains the i-th element of arr or not
-                    ss += val
-            ans.add(ss)
-        return list(ans)
     def minAbsDifference(self, nums: List[int], goal: int) -> int:
-        n = len(nums)
-      #  random.shuffle(nums)
-        n_2 = n // 2
-        s1, s2 = self.helper(nums[:n_2]), self.helper(nums[n_2 :])
-        s1.sort()
-        s2.sort()
-        ans = abs(goal)
 
-        # 2 pointers to find the answer
-        i1, i2 = 0, len(s2) - 1
-        while i1 < len(s1) and i2 >= 0:
-            cur = s1[i1] + s2[i2]
-            ans = min(ans, abs(cur - goal))
-            if cur == goal:
-                return 0
-            elif cur > goal:
-                i2 -= 1
-            else:
-                i1 += 1
-        return ans
+        # When goal 0 we can just choose no elements 
+        if goal == 0: return 0
+
+        n = len(nums)
+        mid = n // 2
+        # Split the list in 2 parts and then find all possible subset sums 
+        # T = O(2^n/2) to build all subset sums
+        leftList = nums[:mid]
+        leftSums = []
+        rightList = nums[mid:]
+        rightSums = []
+
+        # T = O(2^n/2) to build all subset sums (we only consider half list)
+        def buildSubsetSums(usedNums, numsToChooseFrom, ind, storeIn):
+            if ind == len(numsToChooseFrom):
+                # We also keep elements with sum 0 to deal with cases like this where we don't select nums
+                # List: [1,2,3], Target: -7 (choosing no elements will give a sum close to goal)
+                # We can also have cases where we want to take only 1 element from the list
+                # so sum 0 for left and right list needs to be an option
+                storeIn.append(sum(usedNums))
+                return 
+
+            usedNums.append(numsToChooseFrom[ind])
+            buildSubsetSums(usedNums, numsToChooseFrom, ind+1, storeIn)
+            usedNums.pop()
+            buildSubsetSums(usedNums, numsToChooseFrom, ind+1, storeIn)
+
+
+        buildSubsetSums([], leftList, 0, leftSums)
+        buildSubsetSums([], rightList, 0, rightSums)
+        # 2^n/2 log(2^n/2) = n/2 * 2^n/2 time to sort
+        rightSums.sort()
+
+        diff = float('inf')
+
+        # Loop runs 2^n/2 times and inside binary search tale n/2 time 
+        # So total time is n/2 * 2^n/2
+        for leftSum in leftSums:
+            complement = goal - leftSum
+            # Bisect left takes log(2^n/2) = n/2 search time
+            idx = bisect.bisect_left(rightSums, complement)
+
+            for i in [idx - 1, idx, idx + 1]:
+                if 0 <= i < len(rightSums):
+                    finalSum = leftSum + rightSums[i]
+                    diff = min(diff, abs(goal - finalSum))
+        
+        # Over all time complexity is - n/2 * 2^n/2
+        # 1. Making subset sums will take - 2^n/2
+        # 2. Sorting right list takes - 2^n/2 * n/2
+        # 3. Iterating one list and finding closest complement in other 
+        # takes n/2 * 2^n/2
+        # Space will be O(n/2) for the list and call stack for building subset 
+        return diff
+
