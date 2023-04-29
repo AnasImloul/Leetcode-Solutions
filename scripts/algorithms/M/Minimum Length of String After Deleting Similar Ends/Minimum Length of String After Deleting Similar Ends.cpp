@@ -1,19 +1,35 @@
 class Solution {
 public:
     int minimumLength(string s) {
-        deque<char> dq;
-        
-        for(char c : s)
-            dq.push_back(c);
-        
-        while(!dq.empty() && dq.front() == dq.back() && dq.size()!=1){
-            char front = dq.front();
-            while(!dq.empty() && dq.back() == front)
-                dq.pop_back();
-            while(!dq.empty() && dq.front() == front)
-                dq.pop_front();
+        int i=0,j=s.length()-1;
+        while(i<j)
+        {
+            if(s[i]!=s[j])
+            {
+                break;
+            }
+            else
+            {
+                char x=s[i];
+                while(s[i]==x)
+                {
+                    i++;
+                }
+                if(i>j)
+                {
+                    return 0;
+                }
+                while(s[j]==x)
+                {
+                    j--;
+                }
+                if(j<i)
+                {
+                    return 0;
+                }
+            }
         }
         
-        return dq.size();
+        return j-i+1;
     }
 };
