@@ -1,15 +1,16 @@
 class Solution:
     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        temp = ListNode()
-        sort = temp
-        val = []
-        while head:
-            val.append(head.val)
-            head = head.next
-        val = sorted(val)
-        for i in val:
-            curr = ListNode(i)
-            sort.next = curr
-            sort = sort.next
-        return temp.next
-
+        store = []
+        curr = head
+        while curr:
+            store.append(curr.val)
+            curr = curr.next
+        store.sort()
+        dummyNode = ListNode(0)
+        temp = dummyNode
+        
+        for i in store:
+            x = ListNode(val = i)
+            temp.next = x
+            temp = x
+        return dummyNode.next
