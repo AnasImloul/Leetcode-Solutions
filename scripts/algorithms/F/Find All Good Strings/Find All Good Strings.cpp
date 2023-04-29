@@ -1,42 +1,78 @@
-// Runtime: 38 ms (Top 52.14%) | Memory: 6.9 MB (Top 75.00%)
 class Solution {
-private:
-    string s1,s2,evil;
-    vector<int> KMP;
-    int dp[500][50][2][2]={};
-    int calculate(int pos,int evilpos,bool s1equal, bool s2equal){
-        if(pos==s1.size())
-            return 1;
-        if(!dp[pos][evilpos][s1equal][s2equal]){
-            for(auto c='a'; c<='z';c++){
-                int curpos=evilpos;
-                while(c!=evil[curpos] && curpos>0)
-                    curpos=KMP[curpos-1];
-                if(c==evil[curpos]) curpos++;
-                if((s1equal && c<s1[pos]) || (s2equal && c>s2[pos]) || (curpos==evil.size()))
-                    continue;
-                else
-                {
-                    dp[pos][evilpos][s1equal][s2equal]=(dp[pos][evilpos][s1equal][s2equal]+calculate(pos+1,curpos,(s1equal && c==s1[pos]),s2equal && c==s2[pos])) % 1000000007;
-                }
-            }
-        }
-        return dp[pos][evilpos][s1equal][s2equal];
-    }
 public:
+    using ll = long long;
     int findGoodStrings(int n, string s1, string s2, string evil) {
-        this->s1=s1;
-        this->s2=s2;
-        this->evil=evil;
-        KMP.resize(evil.size(),0);
-        //build kmp of evil word
-        KMP[0]=0;
-        int k=0;
-        for(int i=1;i<evil.length();i++){
-            while(evil[i]!=evil[k] && k>0) k=KMP[k-1];
-            if(evil[i]==evil[k]) KMP[i]=++k;
+      int M = 1e9+7;
+      int m = evil.size();
+      // kmp
+      int f[m];
+      f[0] = 0;
+      for (int i = 1, j = 0; i < m; ++i) {
+        while (j != 0 && evil[i] != evil[j]) {
+          j = f[j-1];
         }
-        return calculate(0,0,1,1);
-     }
-
+        if (evil[i] == evil[j]) {
+          ++j;
+        }
+        f[i] = j;
+      }
+      // next(i,c) jump function when matched i length and see c
+      int next[m+1][26];
+      for (int i = 0; i <= m; ++i) {
+        for (int j = 0; j < 26; ++j) {
+          if (i < m && evil[i] == 'a'+j) {
+            next[i][j] = i+1;
+          } else {
+            next[i][j] = i == 0? 0: next[f[i-1]][j];
+          }
+        }
+      }
+      // dp(i,j,l1,l2) length i greater than s1, less than s2;
+      // match j length of evil
+      // l1 true means limited for s1, l2 true means limited for s2
+      ll dp[n+1][m+1][2][2];
+      memset(dp, 0, sizeof(dp));
+      dp[0][0][1][1] = 1;
+      for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+          for (int c = 0; c < 26; ++c) {
+            int k = next[j][c];
+            char ch = 'a'+c;
+            dp[i+1][k][0][0] += dp[i][j][0][0];
+            if (dp[i][j][1][1]) {
+              if (ch > s1[i] && ch < s2[i]) {
+                dp[i+1][k][0][0] += dp[i][j][1][1];
+              } else if (ch == s1[i] && ch == s2[i]) {
+                dp[i+1][k][1][1] += dp[i][j][1][1];
+              } else if (ch == s1[i]) {
+                dp[i+1][k][1][0] += dp[i][j][1][1];
+              } else if (ch == s2[i]) {
+                dp[i+1][k][0][1] += dp[i][j][1][1];
+              }
+            }
+            if (dp[i][j][1][0]) {
+              if (ch > s1[i]) {
+                dp[i+1][k][0][0] += dp[i][j][1][0];
+              } else if (ch == s1[i]) {
+                dp[i+1][k][1][0] += dp[i][j][1][0];
+              }
+            }
+            if (dp[i][j][0][1]) {
+              if (ch < s2[i]) {
+                dp[i+1][k][0][0] += dp[i][j][0][1];
+              } else if (ch == s2[i]) {
+                dp[i+1][k][0][1] += dp[i][j][0][1];
+              }
+            }
+            dp[i+1][k][0][0] %= M;
+          }
+        }
+      }
+      ll ans = 0;
+      for (int i = 0; i < m; ++i) {
+        ans += dp[n][i][0][0] + dp[n][i][0][1] + dp[n][i][1][0];
+        ans %= M;
+      }
+      return ans;
+    }
 };
