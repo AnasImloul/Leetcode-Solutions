@@ -1,22 +1,17 @@
-// Runtime: 1678 ms (Top 14.14%) | Memory: 19.3 MB (Top 69.39%)
 class Solution:
     def findMaxLength(self, nums: List[int]) -> int:
-        max_length =0
-        hash={}
-        count=0
-        for i in range(len(nums)):
-            current=nums[i]
-            if current==0:
-                count-=1 # decrement our count if our current element is 0
+        # dictionary
+        prefixSum = {0: -1}
+        total = 0
+        maxlength = 0
+        
+        for index, value in enumerate(nums):
+            if value == 0:
+                total -= 1
             else:
-                # increment our count if current element is 1
-             count+=1
-
-            if count==0:
-                # if count is 0, we have a new subarray with length+1
-                max_length=i+1
-            if count in hash:
-                max_length=max(max_length,i-hash[count])
+                total += 1
+            if total not in prefixSum.keys():
+                prefixSum[total] = index
             else:
-                hash[count]=i
-        return max_length
+                maxlength = max(maxlength, index-prefixSum[total])        
+        return maxlength
