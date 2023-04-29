@@ -1,11 +1,7 @@
 class Solution:
-    def stoneGameVI(self, alice: List[int], bob: List[int]) -> int:
-        t=list(zip(alice,bob))
-        t=sorted(t,key=lambda x: sum(x),reverse=True)
-        al=sum([i[0] for i in t[::2]])
-        bb=sum([i[1] for i in t[1::2]])
-        if al>bb:
-            return 1
-        elif al<bb:
-            return -1
-        return 0
+    def stoneGameVI(self, A, B):
+        G  = [a+b for a,b in zip(A,B)]
+        G.sort()
+        L  = len(A)
+        d  = -sum(B) + sum( G[i] for i in range(L-1,-1,-2) )
+        return 1 if d>0 else ( -1 if d<0 else 0 )
