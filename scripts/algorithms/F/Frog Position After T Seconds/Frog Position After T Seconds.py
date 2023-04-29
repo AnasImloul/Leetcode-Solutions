@@ -1,26 +1,18 @@
 class Solution:
     def frogPosition(self, n: int, edges: List[List[int]], t: int, target: int) -> float:
-        
-        g = [[] for _ in range(n)]
-        for i,j in edges:
-            g[i-1] += [j-1]
-            g[j-1] += [i-1]
-        q = queue.Queue()
-        q.put((0,1,-1,0))
-        while not q.empty():
-            node,p,parent,rem = q.get()
-            if node == target - 1 and rem == t:
-                return p
-            if rem <= t:
-                rem += 1
-            else:
-                break
-            if parent != -1:
-                g[node].remove(parent)
-            neighbours_len = len(g[node])
-            if neighbours_len == 0:
-                q.put((node,p,-1,rem))
-            for neighbour in g[node]:
-                q.put((neighbour,p*(1/neighbours_len),node,rem))
+        adj = [[] for i in range(n)]
+        for u,v in edges:
+            adj[u-1].append(v-1)
+            adj[v-1].append(u-1)
+        def f(u,p,tt):
+            if(u==target-1): return tt==0 or len(adj[u])==(p>=0)
+            if(tt==0): return 0
+            res = 0
+            for v in adj[u]:
+                if(p==v): continue
+                res = max(res,(1/(len(adj[u])-(p!=-1)))*f(v,u,tt-1))
+            return res
+        return f(0,-1,t)
             
-        return 0
+            
+        
