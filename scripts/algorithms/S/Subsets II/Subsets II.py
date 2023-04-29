@@ -1,14 +1,14 @@
-class Solution(object):
-    def subsetsWithDup(self, nums):
-        def fn(nums):
-            if len(nums)==0:
-                return [[]]
-            ele=nums[0]
-            without=self.subsetsWithDup(nums[1:])
-            wit=[]
-            for i in without:
-                l=[ele]+i
-                if l not in without:
-                    wit.append(l)
-            return without+wit
-        return fn(sorted(nums))
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        ans = []
+        nums.sort()
+        def subset(p, up):
+            if len(up) == 0:
+                if p not in ans:
+                    ans.append(p)
+                return 
+            ch = up[0]
+            subset(p+[ch], up[1:])
+            subset(p, up[1:])
+        subset([], nums)
+        return ans
