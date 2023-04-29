@@ -1,81 +1,101 @@
-struct Trie{
-    Trie* ptr[2];
-    Trie(){
-        ptr[0] = NULL;
-        ptr[1] = NULL;
+/* 
+    Time: O(q+n)
+    Space: O(q+n)
+    Tag: Trie, N-ary Tree
+    Difficulty: H
+*/
+struct Node {
+    int count;
+    vector<Node *> children;
+    Node() {
+        children.resize(2, NULL);
+        count = 0;
     }
 };
-typedef Trie* bptr;
-void clear(bptr &t){
-    if(!t)return;
-    clear(t->ptr[0]);
-    clear(t->ptr[1]);
-    delete t;
-}
-void insert(bptr &T,int n){
-    bptr t = T;
-    for(int i=31;i>=0;i--){
-        int b = ((n>>i)&1);
-        if(!t->ptr[b])t->ptr[b] = new Trie();
-        t = t->ptr[b];
+
+class Trie {
+    Node *root;
+
+public:
+    Trie() {
+        root = new Node();
     }
-}
-int findMaxXorOfN(bptr &T,int n){
-    bptr t = T;
-    int ans = 0;
-    for(int i=31;i>=0;i--){
-        int b = ((n>>i)&1);
-        ans = ans<<1;
-        if(t->ptr[!b]){
-            t = t->ptr[!b];
-            ans|=1;
-        }else{
-            t = t->ptr[b];
-            ans|=0;
+
+    void insert(int num) {
+        Node *cur = root;
+        for (int i = 18; i >= 0; i--) {
+            bool bit = (num & (1 << i));
+            if (!cur->children[bit]) cur->children[bit] = new Node();
+            cur = cur->children[bit];
+            cur->count++;
         }
     }
-    return ans;
-}
-bptr remove(bptr &t,int num,int i){
-    if(!t)return NULL;
-    if(i==-1)return NULL;
-    int b = ((1<<i) & num)>0;
-    t->ptr[b] = remove(t->ptr[b],num,i-1);
-    if(t->ptr[1-b] || t->ptr[b])return t;
-    else return NULL;
-}
+
+    void remove(int num) {
+        Node *cur = root;
+        for (int i = 18; i >= 0; i--) {
+            bool bit = (num & (1 << i));
+            cur = cur->children[bit];
+            cur->count--;
+        }
+    }
+
+    int search(int num) {
+        int res = 0;
+        Node *cur = root;
+        for (int i = 18; i >= 0; i--) {
+            bool bit = (num & (1 << i));
+            if (cur->children[!bit] && cur->children[!bit]->count > 0) {
+                res += (1 << i);
+                cur = cur->children[!bit];
+            } else {
+                cur = cur->children[bit];
+            }
+        }
+        return res;
+    }
+};
 
 class Solution {
-public:
-    unordered_map<int,vector<pair<int,int>>>q;
-    vector<int>ans;
-    void dfs(vector<int>g[],int u,bptr t){
-        insert(t,u);
-        for(auto [val,idx] : q[u]){
-            ans[idx] = findMaxXorOfN(t,val);
+
+    vector<vector<pair<int, int>>> mp;
+    Trie *t;
+    vector<int> res;
+
+    void dfs(vector<int> gr[], int cur) {
+        t->insert(cur);
+        for (auto &child : mp[cur]) {
+            res[child.second] = t->search(child.first);
         }
-        for(int v : g[u]){
-            dfs(g,v,t);
+        for (int &child : gr[cur]) {
+            dfs(gr, child);
         }
-        t = remove(t,u,31);
+        t->remove(cur);
     }
-    vector<int> maxGeneticDifference(vector<int>& parents, vector<vector<int>>& queries) {
-        int m = queries.size();
-        ans.resize(m);
-        for(int i=0;i<m;i++){
-            q[queries[i][0]].emplace_back(queries[i][1],i);
-        }
+
+public:
+    vector<int> maxGeneticDifference(vector<int> &parents, vector<vector<int>> &queries) {
+        t = new Trie();
+
         int n = parents.size();
-        vector<int>g[n];
-        int root = 0;
-        for(int i=0;i<n;i++){
-            if(parents[i]==-1)root = i;
-            else g[parents[i]].emplace_back(i);
+        vector<int> gr[n];
+        res.resize(queries.size());
+
+        int root = -1;
+
+        for (int i = 0; i < n; i++) {
+            if (parents[i] == -1)
+                root = i;
+            else
+                gr[parents[i]].push_back(i);
         }
-        bptr t = new Trie();
-        dfs(g,root,t);
-		
-		clear(t);
-        return ans;
+        mp.resize(n);
+        for (int i = 0; i < queries.size(); i++) {
+            mp[queries[i][0]].push_back({queries[i][1], i});
+        }
+
+        dfs(gr, root);
+
+        return res;
     }
 };
