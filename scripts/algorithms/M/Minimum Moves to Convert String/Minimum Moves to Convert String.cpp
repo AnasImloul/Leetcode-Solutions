@@ -1,14 +1,18 @@
 class Solution {
 public:
     int minimumMoves(string s) {
-        int moves = 0;
-        s += "OO";
-        for(int i = 0; i < s.size(); i++) {
-            if(s[i] == 'X') {
-                s[i] = s[i + 1] = s[i + 2] = 'O';
-                moves++;
+        int count=0;
+        int i=0;
+        
+        for(int i=0;i<s.size();){
+            if(s[i]=='O'){
+             // continue;
+              i++;}
+            else{
+              count++;
+              i+=3;
             }
         }
-        return moves;
+        return count;
     }
 };
