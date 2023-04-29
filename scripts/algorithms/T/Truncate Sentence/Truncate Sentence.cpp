@@ -1,19 +1,25 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 6.5 MB (Top 20.23%)
-class Solution
-{
+class Solution {
 public:
-    string truncateSentence(string s, int k)
-    {
-        string resStr = "";
-        int words = 0;
+	string truncateSentence(string s, int k) {
 
-        for ( char i : s ) {
-            if ( i == ' ')
-                words++;
-            if ( words < k )
-                resStr += i;
-        }
+		int n = s.size();
 
-        return resStr;
-    }
+		string ans;
+		int cnt = 0;
+		for(int i=0 ; i<n ; i++){
+
+			if(s[i] == ' '){
+				cnt++;
+			}
+
+			if(k == cnt){
+				return ans;
+			}
+
+			ans += s[i];
+
+		}
+
+		return ans; 
+	}
 };
