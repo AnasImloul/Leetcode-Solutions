@@ -1,16 +1,18 @@
 class Solution:
-	def nextLargerNodes(self, head: Optional[ListNode]) -> List[int]:
-		ret= []
-		while head:
-			ret.append(head.val)
-			head =  head.next
-
-		ans = [0]*len(ret)
-		stack = []
-		for i,num in enumerate(ret):
-			while stack and stack[-1][0] < num:
-				p,idx = stack.pop()
-				ans[idx] = num
-			stack.append((num,i))
-
-		return ans
+    def nextLargerNodes(self, head: Optional[ListNode]) -> List[int]:
+        stack = []
+        ans = []
+        node = head
+        
+        i = 0
+        while node is not None:
+            while stack and stack[-1][0] < node.val:
+                ans[stack[-1][1]] = node.val
+                stack.pop()
+            
+            stack.append((node.val, i))
+            ans.append(0)
+            i += 1
+            node = node.next
+            
+        return ans
