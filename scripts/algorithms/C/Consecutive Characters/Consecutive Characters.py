@@ -1,11 +1,10 @@
 class Solution:
-    def maxPower(self, s: str) -> int:
-        m=1
-        ans=1
-        for i in range(1,len(s)):
-            if s[i]!=s[i-1]:
-                m=1
-            else:
-                m+=1
-                ans=max(ans,m)
-        return ans
+    def maxPower(self, s):
+        cnt = 0
+        m = 0
+        for i in range(1, len(s)):
+            if (s[i-1] == s[i]): 
+                cnt += 1
+                m = max(cnt, m)
+            else: cnt = 0
+        return m + 1
