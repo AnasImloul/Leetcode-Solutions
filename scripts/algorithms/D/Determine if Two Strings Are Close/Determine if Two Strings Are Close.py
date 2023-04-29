@@ -1,20 +1,16 @@
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
-        # Saves some time
-        if len(word1) != len(word2):
-            return False
-        
-        from collections import Counter
-        counts1 = Counter(word1)
-        counts2 = Counter(word2)
-        
-        # No new chars can appear with operations
-        if counts1.keys() != counts2.keys():
-            return False
-        
-        # Counts can be swapped, but they will stay consistent
-        if sorted(counts1.values()) != sorted(counts2.values()):
-            return False
-        
-        return True
-
+        lst1=[0]*26
+        lst2=[0]*26
+        for i in word1:
+            lst1[ord(i)-97]+=1
+        for i in word2:
+            lst2[ord(i)-97]+=1
+        for i in range(26):
+            if (lst1[i]>0 and lst2[i]==0) or (lst1[i]==0 and lst2[i]>0):
+                return False
+        lst1.sort()
+        lst2.sort()
+        if lst1[:]==lst2[:]:
+            return True
+        return False
