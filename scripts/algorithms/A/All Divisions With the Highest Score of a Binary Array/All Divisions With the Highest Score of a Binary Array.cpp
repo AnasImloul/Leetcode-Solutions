@@ -1,31 +1,51 @@
 class Solution {
 public:
     vector<int> maxScoreIndices(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> left(n+1),right(n+1);
-        left[0]=0;
-        right[n]=0;
-        
-        for(int i=1;i<n+1;i++){
-            if(nums[i-1]==0)
-                left[i]=left[i-1]+1;
-            else 
-                left[i]=left[i-1];
+        int n=nums.size();
+        if(n==1)
+        {
+            if(nums[0]==0)
+                return {1};
+            else
+                return {0};
         }
-        
-        for(int i=n-1;i>=0;i--){
+        int one=0,zero=0;
+        for(int i=0;i<n;i++)
+        {
             if(nums[i]==1)
-                right[i]=right[i+1]+1;
-            else 
-                right[i]=right[i+1];
+                one++;
+        }
+        if(nums[0]==0)
+            zero++;
+        vector<int> v;
+        v.push_back(one);
+        int ans=one;
+        if(nums[0]==1)
+            one--;
+        
+        for(int i=1;i<n;i++)
+        {
+            if(nums[i]==1)
+            {
+                v.push_back(zero+one);
+                one--;
+            }
+            else
+            {
+                v.push_back(zero+one);
+                zero++;
+            }
+            ans=max(ans,zero+one);   
         }
         
-        map<int,vector<int>> mp;
-        
-        for(int i=0;i<n+1;i++){
-            mp[left[i]+right[i]].push_back(i);
+        v.push_back(zero);
+        vector<int> res;
+        for(int i=0;i<=n;i++)
+        {
+            // cout<<v[i]<<" ";
+            if(v[i]==ans)
+                res.push_back(i);
         }
-        
-           return mp.rbegin()->second;
+        return res;
     }
 };
