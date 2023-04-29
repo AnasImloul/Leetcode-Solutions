@@ -1,13 +1,16 @@
 class Solution:
     def backspaceCompare(self, s: str, t: str) -> bool:
-        def preprocess(s):
-            s1 = []
-            for c in s:
-                if c == '#' :
-                    if s1 != []:
-                        s1.pop()
-                else:
-                    s1.append(c)
-            return s1
+        def backwardResult(string):
+            debt = 0
             
-        return preprocess(s) == preprocess(t)
+            for c in reversed(string):
+                if c == '#':
+                    debt += 1
+                
+                elif debt > 0:
+                    debt -= 1
+                
+                else:
+                    yield c
+        
+        return all(a == b for (a, b) in zip_longest(backwardResult(s), backwardResult(t)))
