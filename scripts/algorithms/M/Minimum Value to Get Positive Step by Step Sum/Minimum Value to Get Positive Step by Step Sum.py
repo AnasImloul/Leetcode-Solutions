@@ -1,14 +1,5 @@
+# Runtime: 42 ms (Top 60.3%) | Memory: 16.30 MB (Top 27.0%)
+
 class Solution:
     def minStartValue(self, nums: List[int]) -> int:
-        i=0
-        pos=0
-        l=len(nums)
-        ans=0
-        while i<l:
-            if pos+nums[i] < 1:
-                ans+=abs(pos+nums[i])+1
-                pos=1
-            else:
-                pos+=nums[i]
-            i+=1
-        return max(ans,1)
+        return max(1, 1 - min(accumulate(nums)))
