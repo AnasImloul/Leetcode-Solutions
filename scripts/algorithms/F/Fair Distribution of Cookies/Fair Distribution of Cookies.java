@@ -1,30 +1,33 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 39.28 MB (Top 98.3%)
+
 class Solution {
     int ans;
+    int count[];
     public int distributeCookies(int[] cookies, int k) {
         ans= Integer.MAX_VALUE;
-        int count[]= new int[k];
-        
-        fun(0,cookies, k, count);
+        count= new int[k];
+
+        backtrack(0,cookies, k);
         return ans;
     }
-    public void fun(int start, int[] cookies, int k, int[] count)
+    public void backtrack(int cookieNumber, int[] cookies, int k)
     {
-        if(start==cookies.length)
+        if(cookieNumber==cookies.length)
         {
             int max= 0;
             for(int i=0; i<k; i++)
             {
                 max=Math.max(max, count[i]);
-                
+
             }
             ans = Math.min(ans, max);
             return;
         }
         for(int i=0;i<k; i++)
         {
-            count[i]+=cookies[start];
-            fun(start+1, cookies, k, count);
-            count[i]-=cookies[start];
+            count[i]+=cookies[cookieNumber];
+            backtrack(cookieNumber+1, cookies, k);
+            count[i]-=cookies[cookieNumber];
             if(count[i]==0) break;
         }
     }
