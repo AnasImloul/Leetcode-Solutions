@@ -1,25 +1,19 @@
+# Runtime: 40 ms (Top 58.1%) | Memory: 16.21 MB (Top 73.9%)
+
 class Solution:
     def isSumEqual(self, firstWord: str, secondWord: str, targetWord: str) -> bool:
-        a, b, c = [],[],[]
-        a_,b_,c_="","",""
-        base = ord("a")
+        x=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+        a=""
+        for i in firstWord:
+            a=a+str(x.index(i))
         
-        def getList(l,s):
-            for i in s:
-                l.append(ord(i)-base)
-            return l
-        
-        def getString(x,l):
-            for i in l:
-                x += str(i)
-            return x
-        
-        a = getList(a,firstWord)
-        b = getList(b,secondWord)
-        c = getList(c,targetWord)
-        
-        a_ = getString(a_,a)
-        b_ = getString(b_,b)
-        c_ = getString(c_,c)
-        
-        return(( int(a_)+int(b_)) == int(c_))
+        b=""
+        for i in secondWord:
+            b=b+str(x.index(i))
+
+        c=""
+        for i in targetWord:
+            c=c+str(x.index(i))
+        if int(a)+int(b)==int(c):
+            return True
+        return False
