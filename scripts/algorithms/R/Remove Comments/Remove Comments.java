@@ -1,64 +1,65 @@
-// Runtime: 1 ms (Top 87.54%) | Memory: 42 MB (Top 80.66%)
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.99 MB (Top 67.1%)
+
 class Solution {
     public List<String> removeComments(String[] source) {
-        List<String> al = new ArrayList<>();
+        boolean blockActive = false; //We keep track of whether or not we are within a block comment with the blockActive variable. 
+		//It is initally set to false since we haven't read anything until now. 
 
-        // For building the required line of code as a string
-        StringBuilder ans = new StringBuilder();
 
-        // Whether multi-line comment is still open on the current line
-        boolean multiLine = false;
-
-        for(String string : source) {
-            // To check for single line comment
-            boolean singleLine = false;
-
-            int i = 0;
-            while(i < string.length() - 1) {
-                // Case 1: Whether the current line is a part of previously opened multi-line comment block ("/*") OR
-                // Whether a multi-line comment opening is found on the current index
-                if(multiLine || (string.charAt(i) == '/' && string.charAt(i + 1) == '*')) {
-
-                    // Edge case: If a new multi-line comment opening is found increment i by 2 for a case like "/*/"
-                    if(!multiLine) i += 2;
-
-                    // Traverse the current line until the closing charcters for multi-line comment are found
-                    while(i < string.length() - 1 && (string.charAt(i) != '*' || string.charAt(i + 1) != '/')) {
-                        i++;
-                    }
-
-                    // If closing characters are not found, it means the comment continues on the next line
-                    if(i == string.length() - 1) {
-                        multiLine = true;
-
-                    // Else point the control on the next character, ignoring the discovered comment
-                    } else {
-                        multiLine = false; // Comment closed
-                        i += 2;
-                    }
-
-                // Case 2: For Single Line comments, ignore the entire line after the current character
-                } else if(string.charAt(i) == '/' && string.charAt(i + 1) == '/') {
-                    singleLine = true;
-                    break;
-
-                // Append any normal character to the stringbuilder
-                } else {
-                    ans.append(string.charAt(i++));
-                }
+        List<String> result = new ArrayList<String>();
+        StringBuilder builder = new StringBuilder();
+        
+        //Read every line from the source input. 
+        
+        for(String line: source){
+// Each time we move on to reading a new line, we check if it is a part of a block comment. 
+//If it is already part of a block comment, it means we should skip the implicit newline characters as mentioned in the problem description. 
+//For example if Line 1 was  "int a /*Block comment Started" and Line 2 was "Block comment ends here */ b;", and Line 3 was "int c;" 
+//we want our output to be "int ab", "int c" instead of "int a", "b;", "int c;" 
+            if(!blockActive){ 
+                builder = new StringBuilder();
             }
-
-            // As the loop ran till the last second character, the last one needs to be acknowledged only if there are no comment blocks
-            if(i < string.length() && !multiLine && !singleLine) ans.append(string.charAt(i));
-
-            // If the stringbuilder atleast has one character and it is not a part of any multi-line comment, add it to the answer list
-            if(ans.length() > 0 && !multiLine) al.add(ans.toString());
-
-            // If the answer list gets an addition, redeclare the stringbuilder object for a new line
-            // If there was a multi-line comment active, then the strings before and after the entire multi-line comment block are considered as a single string
-            if(!multiLine) ans = new StringBuilder();
+            for(int i=0; i<line.length(); i++){ //Read every character of line
+                char c = line.charAt(i);
+                if(!blockActive){ //If we aren't currently in a block
+                    
+                    if(c=='/'){ //We check if we encounter the start of a regular comment
+                        //If so, then we need to check if the next character makes it a regular comment, a block comment, or neither of those two. 
+                        
+                        if(i<line.length()-1 && line.charAt(i+1)=='/'){ //Checking if it's a regular comment
+                            break; //If it's a regular comment, we can simply skip everything else 
+							//until the end of the line, so we break from the loop and move on to the next line.
+                        } else if(i<line.length()-1 && line.charAt(i+1)=='*'){ //Or a block comment
+                            i++; //Since we verified it's a block comment, we simply increment i so that we don't re-read the '*' again, 
+							//and mark that we are now part of a block comment. 
+                            blockActive = true;
+                        } else{ // If the second character is neither a / or *, it indicates that a first character must be a valid operator 
+						//(probably a mathematical operator such as multiplication or division, and not part of any comment, 
+						//so simply append it to the builder)
+                            builder.append(c);
+                        }
+                    } else  { //Append all other characters directly to the builder. 
+                        builder.append(c);
+                    }
+                } else {
+                    //We skip all other characters in a block comment, and check for the closing block comment. 
+					//Once we find it, we mark the blockActive variable as false to indicate that it isn't part of the block anymore.  
+                    if(c=='*'){
+                        if(i<line.length()-1 && line.charAt(i+1)=='/'){
+                              blockActive = false;  
+                              i++;
+                        }
+                    }
+                } 
+            }
+            //We append to the result when we aren't part of a block any more, and the builder contains 1 or more characters. 
+            if(!blockActive && builder.length()!=0){
+                result.add(builder.toString());
+            }
+            
         }
-
-        return al;
+        
+        return result;
+        
     }
-    }
+}
