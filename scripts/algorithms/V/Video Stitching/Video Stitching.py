@@ -1,31 +1,13 @@
-# Runtime: 76 ms (Top 9.80%) | Memory: 14.1 MB (Top 5.65%)
-INF = float("inf")
+# Runtime: 46 ms (Top 41.2%) | Memory: 16.25 MB (Top 82.7%)
 
 class Solution:
-    def videoStitching(self, clips, time ) :
-        clips.sort()
-
-        @lru_cache
-        def dp(ci, reeled):
-
-            if ci > len(clips) - 1:
-                return INF#
-
-            if clips[ci][0] > reeled:
-                return INF # cantt take this
-
-            if clips[ci][1] >= time:
-                return 1
-            # takee
-            a1 = 1 + dp(ci+1, clips[ci][1])
-
-            # not take
-            a2 = dp(ci+1, reeled)
-
-            return min(a1, a2)
-
-        res = dp(0, 0)
-        if res == INF:
+    def videoStitching(self, clips: List[List[int]], T: int) -> int:
+        dp = [float('inf')] * (T + 1)
+        dp[0] = 0
+        for i in range(1, T + 1):
+            for start, end in clips:
+                if start <= i <= end:
+                    dp[i] = min(dp[start] + 1, dp[i])
+        if dp[T] == float('inf'):
             return -1
-        else:
-            return res
+        return dp[T]
