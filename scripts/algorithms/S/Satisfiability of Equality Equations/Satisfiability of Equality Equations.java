@@ -1,61 +1,49 @@
+// Runtime: 1 ms (Top 98.0%) | Memory: 40.98 MB (Top 47.4%)
+
 class Solution {
-    private class UF{
-        int count;
-        int[] parent;
-        
-        public UF(int n){
-            count = n;
-            parent = new int[n];
-            for(int i = 0; i < n; i++){
-                parent[i] = i;
-            }
-        }
-        
-        public int find(int x){
-            if(parent[x] != x){
-                parent[x] = find(parent[x]);
-            }
-            return parent[x];
-        }
-        
-        public void union(int a, int b){
-            int rootA = find(a);
-            int rootB = find(b);
-            if(rootA == rootB){
-                return;
-            }
-            parent[rootA] = rootB;
-            count --;
-        }
-        
-        public boolean connected(int a, int b){
-            int rootA = find(a);
-            int rootB = find(b);
-            if(rootA == rootB){
-                return true;
-            }else{
-                return false;
-            }
-        }
+    static int par[];
+
+    public static int findPar(int u) {
+        return par[u] == u ? u : (par[u] = findPar(par[u]));
     }
+
     public boolean equationsPossible(String[] equations) {
-        UF uf = new UF(26);
-        int count = 0;
-        for(String s : equations){
-            if(s.charAt(1) == '='){
-                uf.union(s.charAt(0) - 'a', s.charAt(3) - 'a');
-            }else{
-                equations[count] = s;
-                count++;
-            }
+        par = new int[26];
+        for (int i = 0; i < 26; i++) {
+            par[i] = i;
         }
-        for(String s : equations){
-            count --;
-            if(count < 0){
-                break;
-            }
-            if(s.charAt(1) == '!'){
-                if(uf.connected(s.charAt(0) - 'a', s.charAt(3) - 'a')){
+
+        /*First perform all the merging operation*/
+        for (String s : equations) {
+            int c1 = s.charAt(0) - 'a';
+            int c2 = s.charAt(3) - 'a';
+            char sign = s.charAt(1);
+
+            int p1 = findPar(c1);
+            int p2 = findPar(c2);
+
+            if (sign == '=') {
+                if (p1 != p2) {
+                    if (p1 < p2) {
+                        par[p2] = p1;
+                    } else {
+                        par[p1] = p2;
+                    }
+                }
+            } 
+        }
+
+        /*Now traverse on the whole string and search for any != operation and check if there parents are same*/
+        for (String s : equations) {
+            int c1 = s.charAt(0) - 'a';
+            int c2 = s.charAt(3) - 'a';
+            char sign = s.charAt(1);
+
+            int p1 = findPar(c1);
+            int p2 = findPar(c2);
+
+            if (sign == '!') {
+                if (p1 == p2) {
                     return false;
                 }
             }
