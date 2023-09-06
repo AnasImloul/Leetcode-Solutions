@@ -1,21 +1,17 @@
-# Runtime: 217 ms (Top 12.45%) | Memory: 15.1 MB (Top 94.18%)
+# Runtime: 103 ms (Top 70.1%) | Memory: 17.56 MB (Top 44.2%)
+
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
-
-        res = []
-
-        for asteroid in asteroids:
-
-            while len(res) and asteroid < 0 and res[-1] > 0:
-
-                if res[-1] == -asteroid:
-                    res.pop()
-                    break
-                elif res[-1] < -asteroid:
-                    res.pop()
+        stack = []
+        for a in asteroids:
+            while stack and stack[-1] > 0 > a:
+                if stack[-1] < abs(a):
+                    stack.pop()
                     continue
-                elif res[-1] > -asteroid:
-                    break
+                elif stack[-1] == abs(a):
+                    stack.pop()
+                break # this means asteroid must be destroyed (not add to stack in else statement below)
             else:
-                res.append(asteroid)
-        return res
+                stack.append(a)
+        
+        return stack
