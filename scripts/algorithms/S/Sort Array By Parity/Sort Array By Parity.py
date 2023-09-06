@@ -1,9 +1,9 @@
-class Solution:
-    def sortArrayByParity(self, nums: List[int]) -> List[int]:
-        i = 0
-        for j in range(len(nums)):
-            if nums[j] % 2 == 0:
-                nums[i], nums[j] = nums[j], nums[i]
-                i += 1
+# Runtime: 84 ms (Top 42.8%) | Memory: 17.10 MB (Top 53.6%)
 
-        return nums
+class Solution:
+    def sortArrayByParity(self, A: List[int]) -> List[int]:
+        i, j = 0, len(A) - 1
+        while i < j:
+        	if A[i] % 2 == 1 and A[j] % 2 == 0: A[i], A[j] = A[j], A[i]
+        	i, j = i + 1 - A[i] % 2, j - A[j] % 2
+        return A
