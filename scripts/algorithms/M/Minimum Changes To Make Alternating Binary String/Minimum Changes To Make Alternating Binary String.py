@@ -1,3 +1,5 @@
+# Runtime: 52 ms (Top 66.2%) | Memory: 16.53 MB (Top 16.1%)
+
 class Solution:
     def minOperations(self, s: str) -> int:
         count = 0
