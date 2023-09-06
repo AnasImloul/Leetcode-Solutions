@@ -1,7 +1,23 @@
-# Runtime: 274 ms (Top 25.71%) | Memory: 14.2 MB (Top 95.43%)
-from collections import Counter
-from math import gcd
+# Runtime: 130 ms (Top 52.6%) | Memory: 16.56 MB (Top 64.6%)
+
 class Solution:
     def hasGroupsSizeX(self, deck: List[int]) -> bool:
-        vals = Counter(deck).values()
-        return reduce(gcd, vals) >= 2
+        
+        
+        f=defaultdict(int)
+        
+        for j in deck:
+            f[j]+=1
+           
+        
+        import math
+        
+        u=list(f.values())
+        
+        g=u[0]
+        
+        for j in range(1,len(u)):
+            g=math.gcd(g,u[j])
+        return g!=1
+      
+        
