@@ -1,31 +1,23 @@
+// Runtime: 89 ms (Top 45.5%) | Memory: 63.76 MB (Top 32.3%)
+
 class Solution {
     public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
-        Map<Integer, List<Integer>> employeesByManager = new HashMap<>();
-        employeesByManager.put(headID, new ArrayList<>());
-        for(int i = 0; i < manager.length; i++) {
-            int managerId = manager[i];
-            if(managerId != -1) {
-                employeesByManager.computeIfAbsent(managerId, k -> new ArrayList<>()).add(i);
-            }
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        for(int i=0; i<n; i++) {
+            graph.putIfAbsent(manager[i], new ArrayList<>());
+            graph.get(manager[i]).add(i);
         }
-        int maxTime = -1;
-        Queue<int[]> q = new LinkedList<>();
-        q.add(new int[]{headID, informTime[headID]});
-        while(!q.isEmpty()) {
-            int size = q.size();
-            for(int i = 0; i < size; i++) {
-                int[] currentManagerAndTime = q.poll();
-                maxTime = Math.max(maxTime, currentManagerAndTime[1]);
-                List<Integer> reportees = employeesByManager.get(currentManagerAndTime[0]);
-                if(reportees != null && !reportees.isEmpty()) {
-                    for(int reportee : reportees) {
-                        if(informTime[reportee] != 0) {
-                            q.add(new int[]{reportee, informTime[reportee] + currentManagerAndTime[1]});
-                        }
-                    }
-                }
-            }
+        return dfs(graph, headID, informTime);
+    }
+
+    int dfs(Map<Integer, List<Integer>> graph, int curHead, int[] informTime) {
+        int curMax = 0;
+        if(!graph.containsKey(curHead)){
+            return curMax;
         }
-        return maxTime;
+        for(int subordinate : graph.get(curHead)) {
+            curMax = Math.max(curMax, dfs(graph, subordinate, informTime));
+        }
+        return curMax + informTime[curHead];
     }
 }
