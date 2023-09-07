@@ -1,3 +1,5 @@
+# Runtime: 733 ms (Top 62.5%) | Memory: 31.64 MB (Top 85.1%)
+
 from itertools import accumulate 
 
 class Solution(object):
