@@ -1,16 +1,11 @@
+# Runtime: 44 ms (Top 50.1%) | Memory: 16.36 MB (Top 42.0%)
+
 class Solution:
     def readBinaryWatch(self, turnedOn: int) -> List[str]:
-        ans=[]
+        output = []
+        # Loop through all possible combinations of hours and minutes and count the number of set bits
         for h in range(12):
-            d=0
-            for i in range(5):
-                if(h&(1<<i)):
-                    d+=1
             for m in range(60):
-                c=d
-                for i in range(7):
-                    if(m&(1<<i)):
-                        c+=1
-                if(c==turnedOn):
-                    ans.append(f'{h}:{m:02d}')
-        return ans
+                if bin(h).count('1') + bin(m).count('1') == turnedOn:  # Check if the number of set bits in hours and minutes equals the target number
+                    output.append(f"{h}:{m:02d}")  # Add the valid combination of hours and minutes to the output list
+        return output
