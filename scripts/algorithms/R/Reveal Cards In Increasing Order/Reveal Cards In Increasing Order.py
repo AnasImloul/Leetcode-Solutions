@@ -1,9 +1,17 @@
-# Runtime: 73 ms (Top 54.69%) | Memory: 14.1 MB (Top 45.76%)
+# Runtime: 61 ms (Top 23.0%) | Memory: 16.70 MB (Top 8.0%)
+
 class Solution:
     def deckRevealedIncreasing(self, deck: List[int]) -> List[int]:
-        reveal=deque()
+        def reveal(n):
+            lst = list(range(n))
+            ans = []
+            i = 0
+            while lst:
+                if not i&1: ans.append(lst.pop(0))
+                else: lst.append(lst.pop(0))
+                i += 1
+            return ans
+        ans = reveal(len(deck))
+        ans = sorted([v, i] for i, v in enumerate(ans))
         deck.sort()
-        while deck:
-            reveal.rotate()
-            reveal.appendleft(deck.pop())
-        return reveal
+        return (deck[j] for i,j in ans)
