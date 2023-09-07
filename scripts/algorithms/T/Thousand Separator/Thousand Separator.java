@@ -1,17 +1,16 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 39.69 MB (Top 67.9%)
+
 class Solution {
     public String thousandSeparator(int n) {
-        if(n==0) return "0";
-       StringBuilder str = new StringBuilder();
-        int count=0;
-       while(n>0){
-           int lastDigit = n%10;
-           if(count%3==0 && count!=0){
-               str.append(".");
-           }
-           str.append(lastDigit);
-           count++;
-           n = n/10;
-       }
-        return str.reverse().toString();
+       
+        StringBuffer str = new StringBuffer(Integer.toString(n));
+        int index = str.length() - 3;
+        
+        while(index >= 1){
+            str.insert(index , '.');
+            index = index - 3;
+        }
+        
+        return str.toString();
     }
 }
