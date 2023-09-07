@@ -1,3 +1,5 @@
+// Runtime: 42 ms (Top 58.8%) | Memory: 47.53 MB (Top 50.0%)
+
 class Solution {
     public int minimumTime(String s) {
         int n = s.length();
