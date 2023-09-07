@@ -1,31 +1,20 @@
-# Runtime: 2528 ms (Top 5.27%) | Memory: 54.6 MB (Top 10.20%)
+# Runtime: 687 ms (Top 71.4%) | Memory: 56.78 MB (Top 82.0%)
+
 class Solution:
     def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:
-        min_res = math.inf
-        min_point = max_point = last_point = None
-        prev_val = head.val
-        head = head.next
-        i = 1
-        while head.next:
-            if ((head.next.val < head.val and prev_val < head.val) or
-               (head.next.val > head.val and prev_val > head.val)):
-
-                if min_point is None:
-                    min_point = i
-                else:
-                    max_point = i
-
-                if last_point:
-                    min_res = min(min_res, i - last_point)
-
-                last_point = i
-
-            prev_val = head.val
+        idx, i = [], 1
+        prev, cur = head, head.next
+        while cur and cur.next:
+            if prev.val < cur.val > cur.next.val or prev.val > cur.val < cur.next.val:
+                idx.append(i)
+            prev = cur
+            cur = cur.next
             i += 1
-            head = head.next
 
-        if min_res == math.inf:
-            min_res = -1
-        max_res = max_point - min_point if max_point else -1
+        if len(idx) < 2:
+            return [-1, -1]
+        
+        minDist = min(j - i for i, j in pairwise(idx))
+        maxDist = idx[-1] - idx[0]
 
-        return [min_res, max_res]
+        return [minDist, maxDist]
