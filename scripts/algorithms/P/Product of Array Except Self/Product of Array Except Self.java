@@ -1,25 +1,24 @@
+// Runtime: 2 ms (Top 62.8%) | Memory: 54.05 MB (Top 10.0%)
+
 class Solution {
     public int[] productExceptSelf(int[] nums) {
-        int size=nums.length;
-        int[] prefix=new int[size];
-        int[] suffix=new int[size];
-        int[] answer=new int[size];
-        prefix[0]=nums[0];
-        suffix[size-1]=nums[size-1];
-        for(int i=1;i<size;i++){
-            prefix[i]=prefix[i-1]*nums[i];
+        int n = nums.length;
+        int pre[] = new int[n];
+        int suff[] = new int[n];
+        pre[0] = 1;
+        suff[n - 1] = 1;
+        
+        for(int i = 1; i < n; i++) {
+            pre[i] = pre[i - 1] * nums[i - 1];
         }
-        for(int i=size-2;i>=0;i--){
-            suffix[i]=suffix[i+1]*nums[i];
+        for(int i = n - 2; i >= 0; i--) {
+            suff[i] = suff[i + 1] * nums[i + 1];
         }
-        answer[0]=suffix[1];
-        answer[size-1]=prefix[size-1-1];
-        for(int i=1;i<size-1;i++){
-            answer[i]=prefix[i-1]*suffix[i+1];
+        
+        int ans[] = new int[n];
+        for(int i = 0; i < n; i++) {
+            ans[i] = pre[i] * suff[i];
         }
-       // System.out.println(Arrays.toString(prefix)+'\n'+Arrays.toString(suffix));
-        return answer;
+        return ans;
     }
 }
-
-
