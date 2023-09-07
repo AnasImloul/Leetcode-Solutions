@@ -1,10 +1,12 @@
-from itertools import groupby
+# Runtime: 46 ms (Top 40.6%) | Memory: 14.50 MB (Top 56.2%)
 
-class Solution:
-    def numSub(self, s: str) -> int:
-        # strategy "run length encode" the input (only keep 1s)
-        # based on the runs calculate total w/ n*(n+1)/2 sum trick
-        # return modulo as specified
-        one_counts = [len(list(l)) for k, l in groupby(s) if k == "1"]
-        total = sum([c*(c+1)//2 for c in one_counts])
-        return total % (10**9 + 7)       
+class Solution(object):
+    def numSub(self, s):
+        res, currsum = 0,0
+        for digit in s:
+            if digit == '0':
+                currsum = 0
+            else:
+                currsum += 1 
+                res+=currsum 
+        return res % (10**9+7)
