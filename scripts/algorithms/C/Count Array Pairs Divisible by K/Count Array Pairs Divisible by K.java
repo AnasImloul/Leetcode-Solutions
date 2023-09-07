@@ -1,3 +1,5 @@
+// Runtime: 282 ms (Top 52.2%) | Memory: 55.61 MB (Top 63.3%)
+
 //The condition given to us is (a*b % k==0)
 // So we can rewrite the above condition that if any factor of k is present in a and any other factor of k is present in b then their multiplication will be divisble by k
 
