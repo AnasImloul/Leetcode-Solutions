@@ -1,47 +1,41 @@
+// Runtime: 16 ms (Top 72.7%) | Memory: 43.76 MB (Top 33.3%)
+
 class Solution {
-    int M = (int)1e9+7;
-    public int findGoodStrings(int n, String s1, String s2, String evil) {
-        int[][] where = new int[evil.length()][26];
-        for (int i = 0; i < evil.length(); i++){ // preprocess suffix / prefix matching streak
-            String s = evil.substring(evil.length()-i);
-            for (int j = 0; j < 26; j++){ 
-                String ns = ""+(char)(j+'a')+s;
-                for (int k = ns.length(); k >= 0; k--){
-                    if (evil.endsWith(ns.substring(0, k))){
-                        where[i][j]=k;
-                        break;
-                    }
-                }
-            }
-        }
-        int ans = solve(s2, evil, where) - solve(s1, evil, where) + M;
-        return ans%M + (s2.contains(evil)? 0 : 1);
+    Integer[][][][] dp;
+    int mod = 1000000007;
+    int[] lps;
+    private int add(int a, int b) {
+        return (a % mod + b % mod) % mod;
     }
-	// dp[i][j][k] -> num of ways from the last i characters with j streaks, k = 0 if less than s, 1 otherwise.
-    private int solve(String s, String evil, int[][] where){
-        int[][][] dp = new int[s.length()+1][evil.length()+1][2]; 
-        dp[s.length()][0][1]=1; // empty string is BIGGER (or I should say, "not less")
-        for (int i = s.length()-1; i >= 0; i--){
-            for (int j = 0; j < evil.length(); j++){
-                for (int k = 0; k < 26; k++){
-                    for (int c = 0; c < 2; c++){
-                        int nc = c;
-                        if (k < s.charAt(i) - 'a'){
-                            nc=0;
-                        }else if (k > s.charAt(i) - 'a'){
-                            nc=1;
-                        }
-                        dp[i][where[j][k]][nc]+=dp[i+1][j][c];
-                        dp[i][where[j][k]][nc]%=M;
-                    }
-                }
+    private int solve(char[] s1, char[] s2, int cur, boolean isStrictLower, boolean isStrictUpper, char[] evil, int evI) {
+        if(evI == evil.length) return 0;
+        if(cur == s2.length) return 1;
+        if(dp[cur][isStrictLower ? 1 : 0][isStrictUpper ? 1 : 0][evI] != null) return dp[cur][isStrictLower ? 1 : 0][isStrictUpper ? 1 : 0][evI];
+        char start = isStrictLower ? s1[cur] : 'a';
+        char end = isStrictUpper ? s2[cur] : 'z';
+        int res = 0;
+        for(char ch = start; ch <= end; ch ++) {
+            if(evil[evI] == ch)
+                res = add(res, solve(s1, s2, cur + 1, isStrictLower && ch == start, isStrictUpper && ch == end, evil, evI + 1));
+            else {
+                int j = evI;
+                while (j > 0 && evil[j] != ch) j = lps[j - 1];
+                if (ch == evil[j]) j++;
+                res = add(res, solve(s1, s2, cur + 1, isStrictLower && ch == start, isStrictUpper && ch == end, evil, j));
             }
         }
-        int ans = 0;
-        for (int i = 0; i < evil.length(); i++){
-            ans += dp[0][i][0]; // want strictly less 
-            ans %= M;
+        return dp[cur][isStrictLower ? 1 : 0][isStrictUpper ? 1 : 0][evI] = res;
+    }
+    public int findGoodStrings(int n, String s1, String s2, String evil) {
+        char[] arr = s1.toCharArray();
+        char[] brr = s2.toCharArray();
+        char[] crr = evil.toCharArray();
+        lps = new int[crr.length];
+        for (int i = 1, j = 0; i < crr.length; i++) {
+            while (j > 0 && crr[i] != crr[j]) j = lps[j - 1];
+            if (crr[i] == crr[j]) lps[i] = ++j;
         }
-        return ans;
+        dp = new Integer[n][2][2][crr.length];
+        return solve(arr, brr, 0, true, true, crr, 0);
     }
 }
