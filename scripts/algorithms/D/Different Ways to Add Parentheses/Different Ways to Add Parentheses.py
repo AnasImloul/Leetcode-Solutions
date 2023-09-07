@@ -1,15 +1,21 @@
-from functools import cache
-class Solution:
-    def diffWaysToCompute(self, expression: str) -> List[int]:
-        @cache
-        def dfs(s):
-            if s.isdigit():
-                return [int(s)]
-            res = []
-            for i, c in enumerate(s):
-                if c in "+-*":
-                    left = dfs(s[:i])
-                    right = dfs(s[i+1:])
-                    res.extend(eval(str(x)+c+str(y)) for x in left for y in right)
-            return res
-        return dfs(expression)
+# Runtime: 49 ms (Top 17.3%) | Memory: 13.54 MB (Top 39.1%)
+
+class Solution(object):
+    def diffWaysToCompute(self, input):
+        m = {}
+        return self.dfs(input, m)
+        
+    def dfs(self, input, m):
+        if input in m:
+            return m[input]
+        if input.isdigit():
+            m[input] = int(input)
+            return [int(input)]
+        ret = []
+        for i, c in enumerate(input):
+            if c in "+-*":
+                l = self.diffWaysToCompute(input[:i])
+                r = self.diffWaysToCompute(input[i+1:])
+                ret.extend(eval(str(x)+c+str(y)) for x in l for y in r)
+        m[input] = ret
+        return ret
