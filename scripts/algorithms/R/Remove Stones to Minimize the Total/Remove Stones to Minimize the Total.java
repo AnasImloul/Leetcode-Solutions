@@ -1,25 +1,18 @@
+// Runtime: 304 ms (Top 95.0%) | Memory: 58.55 MB (Top 23.6%)
+
 class Solution {
-    public int minStoneSum(int[] piles, int k) {
-        Queue <Integer> heap = new PriorityQueue (new Comparator <Integer> () {
-           public int compare (Integer a, Integer b) {
-               if (a < b)
-                   return 1;
-               else if (a > b)
-                   return -1;
-               else
-                   return 0;
-           } 
-        });
-        for (int val : piles)
-            heap.offer (val);
-        while (k-- > 0) {
-            int stones = heap.poll ();
-            stones -= (int) (Math.floor (stones / 2));
-            heap.offer (stones);
+        public int minStoneSum(int[] A, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b)->b - a);
+        int res = 0;
+        for (int a : A) {
+            pq.add(a);
+            res += a;
         }
-        int sum = 0;
-        while (!heap.isEmpty ())
-            sum += heap.poll ();
-        return sum;
+        while (k-- > 0) {
+            int a = pq.poll();
+            pq.add(a - a / 2);
+            res -= a / 2;
+        }
+        return res;
     }
 }
