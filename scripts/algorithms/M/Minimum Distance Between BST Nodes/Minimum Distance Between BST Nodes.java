@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.00 MB (Top 72.0%)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -15,32 +17,32 @@
  */
 class Solution {
     
+    int mini=Integer.MAX_VALUE;
+
+    public void find(TreeNode root,ArrayList<Integer>arr){
+    
+    if(root==null){
+        return;
+    }
+    
+    
+    arr.add(root.val);
+    
+    find(root.left,arr);
+    
+    for(int i=arr.size()-2;i>=0;i--){
+    
+        mini=Math.min(mini,Math.abs(root.val-arr.get(i)));
+    }
+    
+    find(root.right,arr);
+    
+    arr.remove(arr.size()-1);
+    }
+
     public int minDiffInBST(TreeNode root) {
-        
-        int prev = -1;
-        int diff = Integer.MAX_VALUE;
-        TreeNode temp = root;
-        while(temp!=null){
-            if(temp.left==null){
-                if(prev!=-1) diff = Math.min(temp.val-prev,diff);
-                prev = temp.val;
-                temp = temp.right;
-            }else{
-                TreeNode left = temp.left;
-                while(left.right!=null&&left.right!=temp){
-                    left = left.right;
-                }
-                if(left.right==null){
-                    left.right = temp;
-                    temp = temp.left;
-                }else{
-                    left.right = null;
-                    if(prev!=-1) diff = Math.min(temp.val-prev,diff);
-                    prev = temp.val;
-                    temp = temp.right;
-                }
-            }
-        }
-        return diff;
+    ArrayList<Integer>arr=new ArrayList<>();
+    find(root,arr);
+    return mini;    
     }
 }
