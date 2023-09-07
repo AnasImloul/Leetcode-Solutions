@@ -1,51 +1,38 @@
-class Solution {     
+// Runtime: 9 ms (Top 37.8%) | Memory: 41.26 MB (Top 83.6%)
+
+class Solution {
     public int maxHeight(int[][] cuboids) {
-		/* You can use Arrays.sort(int[]) for int[] in cuboids */
-        /* We have only three elments in array */
-        for(int[] el: cuboids){
-            if(el[0] > el[2]){
-                int temp = el[0];
-                el[0] = el[2];
-                el[2] = temp;
+        // Sorting all Dimensions
+        for(int[] arr : cuboids) Arrays.sort(arr);
+
+        // sort all cuboids on basis of height, if same then breadth,
+        // if same then length
+        Arrays.sort(cuboids, (a, b) -> (b[2] - a[2] == 0 ? (b[1] - a[1] == 0 ? b[0] - a[0] : b[1] - a[1]) : b[2] - a[2]));
+
+        // use logic of LIS(Longest Increasing Subsequence)
+        return helperTab(cuboids);
+
+    }
+    public int helperTab(int[][] nums){
+        int n = nums.length;
+        int[] currRow = new int[n + 1];
+        int[] nextRow = new int[n + 1];
+
+        for(int curr = n - 1; curr >= 0; curr--){
+            for(int prev = curr - 1; prev >= -1; prev--){
+                int take = 0;
+                if(prev == -1 || check(nums[curr], nums[prev])) take = nums[curr][2] + nextRow[curr + 1];
+                int notTake = 0 + nextRow[prev + 1];
+                currRow[prev + 1] = Math.max(take, notTake);
             }
-            if(el[1] > el[2]){
-                int temp = el[1];
-                el[1] = el[2];
-                el[2] = temp;
-            }
-            if(el[0] > el[1]){
-                int temp = el[0];
-                el[0] = el[1];
-                el[1] = temp;
-            }
+            nextRow = currRow;
         }
-        /* Sort by height, width, length in order */
-        Arrays.sort(cuboids, new Comparator<int[]>(){
-            @Override
-            public int compare(int[] b, int[] a){
-                if(a[2] != b[2]){
-                    return b[2] - a[2];
-                }
-                if(a[1] != b[1]){
-                    return b[1] - a[1];
-                }
-                return b[0] - a[0];
-            }
-        });
-        int n = cuboids.length;
-        int[] dp = new int[n];
-        int res = -1;
-	    /* Longest increasing subsequence */
-		for(int j = 0; j < n; j++){
-            dp[j] = cuboids[j][2];
-            for(int i = 0; i < j; i++){
-				 /* Dont track index, track Sum */
-                if(cuboids[i][1] <= cuboids[j][1] && cuboids[i][0] <= cuboids[j][0]){
-                    dp[j] = Math.max(dp[j], dp[i] + cuboids[j][2]);   
-                }
-            }
-            res = Math.max(res, dp[j]);
-        }
-        return res;
+        return nextRow[0];
+    }
+    // These function checks whether current cuboid can be placed above 
+    //the below one or not, on the basis on condition given in question.
+    public boolean check(int[] a, int[] b){
+        if(a[0] <= b[0] && a[1] <= b[1] && a[2] <= b[2]) return true;
+        else return false;
     }
 }
