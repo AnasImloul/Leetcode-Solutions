@@ -1,20 +1,14 @@
+# Runtime: 613 ms (Top 70.5%) | Memory: 32.76 MB (Top 92.0%)
+
 class Solution:
     def minOperations(self, nums1: List[int], nums2: List[int], k: int) -> int:
-        if nums1 == nums2:
-            return 0
-        
-        if not k and nums1 != nums2:
-            return -1
-            
-        diff1, diff2 = 0, 0
-        
-        for num1, num2 in zip(nums1, nums2):
-            if abs(num1 - num2) % k == 0:
-                if num1 > num2:
-                    diff1 += (num1 - num2) // k
-                if num1 < num2:
-                    diff2 += (num2 - num1) // k
+        s = result = 0
+        for a, b in zip(nums1, nums2):
+            if k == 0: 
+                if a-b: return -1
+            elif abs(a-b) % k != 0: return -1
             else:
-                return -1
-        
-        return (diff1 + diff2) // 2 if diff1 == diff2 else -1
+                s += a-b
+                if a-b > 0: result += (a-b) // k
+
+        return -1 if s != 0 else result
