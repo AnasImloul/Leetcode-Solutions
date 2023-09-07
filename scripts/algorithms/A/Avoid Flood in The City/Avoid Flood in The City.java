@@ -1,35 +1,27 @@
+// Runtime: 70 ms (Top 47.1%) | Memory: 59.86 MB (Top 71.2%)
+
 class Solution {
     public int[] avoidFlood(int[] rains) {
-        HashMap<Integer,Integer> map = new HashMap<>();
-        TreeSet<Integer> drydays = new TreeSet<>();
-        int ans [] = new int [rains.length];
-        for(int i =0;i<rains.length;i++){
-            
-            if(rains[i]==0){
-                drydays.add(i);
-             ans[i]=1;
-            }
-            else{
-                if(map.containsKey(rains[i])){
-                    Integer rainy_day = map.get(rains[i]);
-                    Integer avail_day = drydays.higher(rainy_day);
-                    if(avail_day==null){
-                        return new int [0];
-                    }else{
-                        ans[avail_day]=rains[i];
-                        map.put(rains[i],i);
-                        drydays.remove(avail_day);
-                    ans[i]=-1;
-                    }
-                    
+        // the previous appeared idx of rains[i]
+        Map<Integer, Integer> map = new HashMap<>();
+        TreeSet<Integer> zeros = new TreeSet<>();
+        int[] res = new int[rains.length];
+        for (int i = 0; i < rains.length; i++) {
+            if (rains[i] == 0) {
+                zeros.add(i);
+            } else {
+                if (map.containsKey(rains[i])) {
+                    // find the location of zero that can be used to empty rains[i]
+                    Integer next = zeros.ceiling(map.get(rains[i]));
+                    if (next == null) return new int[0];
+                    res[next] = rains[i];
+                    zeros.remove(next);
                 }
-                else{
-                    map.put(rains[i],i);
-                 ans[i]=-1;
-                }
+                res[i] = -1;
+				map.put(rains[i], i);
             }
-            
         }
-        return ans ;
+        for (int i : zeros) res[i] = 1;
+        return res;
     }
 }
