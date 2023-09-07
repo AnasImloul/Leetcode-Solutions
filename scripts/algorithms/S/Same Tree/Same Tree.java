@@ -1,21 +1,16 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 39.66 MB (Top 84.7%)
+
 class Solution {
-    public static void preorder(TreeNode node, ArrayList<Integer> al){
-        if(node != null){
-            al.add(node.val);
-            preorder(node.left, al);
-            preorder(node.right, al);
-        }
-        else{
-            al.add(null);
-        }
-    }
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        ArrayList <Integer> al1 = new ArrayList<>();
-        ArrayList <Integer> al2 = new ArrayList<>();
-        
-        preorder(p, al1);
-        preorder(q, al2);
-        
-        return al1.equals(al2);
+        // Base case: if both trees are null, they are identical
+        if (p == null && q == null) {
+            return true;
+        }
+        // If only one tree is null or the values are different, they are not identical
+        if (p == null || q == null || p.val != q.val) {
+            return false;
+        }
+        // Recursively check if the left and right subtrees are identical
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 }
