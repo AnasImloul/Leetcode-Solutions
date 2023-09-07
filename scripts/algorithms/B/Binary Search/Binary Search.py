@@ -1,13 +1,17 @@
+# Runtime: 214 ms (Top 71.5%) | Memory: 17.81 MB (Top 65.3%)
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        l = 0
-        r = len(nums) - 1
-        while (l < r):
-            mid = (l + r) >> 1
-            if nums[mid] == target:
+        left = 0
+        right = len(nums)-1
+        
+        while left<=right:
+            mid = (left+right)//2
+            if nums[mid]==target:
                 return mid
-            elif nums[mid] < target:
-                l = mid + 1
+            elif nums[mid]>target:
+                right = mid-1
             else:
-                r = mid - 1
-        return l if nums[l] == target else -1
+                left = mid+1
+        
+        return -1
