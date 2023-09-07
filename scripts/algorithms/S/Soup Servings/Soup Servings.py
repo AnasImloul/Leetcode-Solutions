@@ -1,11 +1,22 @@
+# Runtime: 62 ms (Top 34.5%) | Memory: 18.09 MB (Top 39.7%)
+
 class Solution:
     def soupServings(self, n: int) -> float:
-        @cache                                 # cache the result for input (a, b)
-        def dfs(a, b):
-            if a <= 0 and b > 0: return 1      # set criteria probability
-            elif a <= 0 and b <= 0: return 0.5
-            elif a > 0 and b <= 0: return 0
-            return (dfs(a-4, b) + dfs(a-3, b-1) + dfs(a-2, b-2) + dfs(a-1, b-3)) * 0.25 # dfs
-        if n > 4275: return 1                  # observe the distribution you will find a tends to be easier to get used up than b
-        n /= 25                                # reduce the input scale
-        return dfs(n, n)                       # both soup have n ml
+        if n > 4451: 
+            return 1.0
+        n = (n + 24) // 25
+        memo = dict()
+        
+        def dp(i, j):
+            if (i, j) in memo:
+                return memo[(i, j)]
+            if i <= 0 and j <= 0: 
+                return 0.5
+            if i <= 0: 
+                return 1.0
+            if j <= 0: 
+                return 0.0
+            memo[(i, j)] = 0.25 * (dp(i - 4, j) + dp(i - 3, j - 1) + dp(i - 2, j - 2) + dp(i - 1, j - 3))
+            return memo[(i, j)]
+        
+        return dp(n, n)
