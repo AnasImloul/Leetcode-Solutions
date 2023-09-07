@@ -1,52 +1,43 @@
+# Runtime: 1682 ms (Top 100.0%) | Memory: 18.40 MB (Top 71.7%)
+
 class Solution:
-    def minimumScore(self, nums: List[int], edges: List[List[int]]) -> int:
+    def minimumScore(self, nums: List[int], edges: List[List[int]]) -> int:        
         n = len(nums)
-        visited = [False for _ in range(n)]
-        pc = [] # Store the parent child edge node in our dfs
-        adj = [[] for _ in range(n)]
-        
-        for edge in edges:
-            adj[edge[0]].append(edge[1])
-            adj[edge[1]].append(edge[0])
-        
-        childs = [[False for _ in range(n)] for _ in range(n)] # To store if node a contains b as on of its child tree
-        child_xor = [0 for _ in range(n)] # To store the xor of node a and all its child tree
-        par = [] to store parents of a node a while doing DFS
-        
-        def dfs(i: int) -> int:
-            ans = nums[i]
-            visited[i] = True
+        graph = [[] for _ in range(n)]
+        for u, v in edges: 
+            graph[u].append(v)
+            graph[v].append(u)
             
-            for p in par: childs[p][i] = True
-                
-            par.append(i)
-            
-            for child in adj[i]:
-                if (not visited[child]):
-                    pc.append([i, child])
-                    ans ^= dfs(child)
-            
-            par.pop()
-            child_xor[i] = ans
-            
-            return ans
+        def fn(u, p): 
+            nonlocal t
+            score[u] = nums[u]
+            tin[u] = (t := t+1) # time to enter
+            for v in graph[u]: 
+                if v != p: 
+                    fn(v, u)
+                    score[u] ^= score[v]
+            tout[u] = t # time to exit 
         
-        dfs(0)
+        t = 0 
+        score = [0]*n
+        tin = [0]*n 
+        tout = [0]*n 
+        fn(0, -1)
         
-        ans = 1000000000
-        
-        for i in range(len(pc)):
-            for j in range(i + 1, len(pc)):
-                (a, b) = (pc[i][1], pc[j][1])
-				(xa, xb, xc) = (child_xor[a], child_xor[b], child_xor[0])
-                
-                if childs[a][b]: # here a is an ancestor of b or a has b in its child tree
-                    xc ^= xa
-                    xa ^= xb
-                else:
-                    xc ^= xa
-                    xc ^= xb
-                
-                ans = min(max(xa, xb, xc) - min(xa, xb, xc), ans)
-        
-        return ans
+        ans = inf 
+        for u in range(1, n): 
+            for v in range(u+1, n): 
+                if tin[v] <= tin[u] and tout[v] >= tout[u]: # enter earlier & exit later == parent 
+                    uu = score[u]
+                    vv = score[v] ^ score[u]
+                    xx = score[0] ^ score[v]
+                elif tin[v] >= tin[u] and tout[v] <= tout[u]: 
+                    uu = score[u] ^ score[v]
+                    vv = score[v]
+                    xx = score[0] ^ score[u]
+                else: 
+                    uu = score[u]
+                    vv = score[v]
+                    xx = score[0] ^ score[u] ^ score[v]
+                ans = min(ans, max(uu, vv, xx) - min(uu, vv, xx))
+        return ans  
