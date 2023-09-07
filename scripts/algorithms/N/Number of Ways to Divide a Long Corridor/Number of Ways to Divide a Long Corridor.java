@@ -1,3 +1,5 @@
+// Runtime: 25 ms (Top 89.8%) | Memory: 44.90 MB (Top 30.5%)
+
 class Solution {
     public int numberOfWays(String corridor) {
         int numSeats = 0, numPlants = 0;
