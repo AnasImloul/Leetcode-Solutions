@@ -1,63 +1,47 @@
-class Trie:
-    def __init__(self):
-        self.root = {}
-        
-    def add(self, word):
-        cur = self.root
-        for c in word:
-            if c not in cur:
-                cur[c] = {}
-            cur = cur[c]
-            
-    def find(self, word):
-        cur = self.root
-        res = ""
-        for c in word:
-            desired = "1" if c == "0" else "0"
-            if not desired in cur:
-                desired = c
-            res += desired
-            cur = cur[desired]
-        return res
-    
-    def delete(self, word):
-        cur = self.root
-        path = []
-        for c in word:
-            path.append(cur)
-            cur = cur[c]
-        for c, obj in zip(word[::-1], path[::-1]):
-            if not obj[c]:
-                del obj[c]
-            else:
-                break
-        
-    
+# Runtime: 6663 ms (Top 46.4%) | Memory: 339.09 MB (Top 7.1%)
+
 class Solution:
     def maxGeneticDifference(self, parents: List[int], queries: List[List[int]]) -> List[int]:
-        #since max(10^5,2*10^5) < 2^18, 18 bits are enough to represent a value or node as a bit string 
-        def makebin(x):
-            return bin(x)[2:].zfill(18)
-        node_queries = defaultdict(list)
-        for i, (node, val) in enumerate(queries):
-            node_queries[node].append((i,val))
-        graph = defaultdict(list)
-        for y, x in enumerate(parents):
-            graph[x].append(y)
-        res = [-1 for _ in queries]
-        tree = Trie()
-        #dfs traversal
-        #during the traversal, it is making bit Trie using the nodes from the root to the current node of the graph
-        def dfs(v):
-            v_bin = makebin(v)
-            tree.add(v_bin)
-            for i, val in node_queries[v]:
-                val_bin = makebin(val)
-                target_bin = tree.find(val_bin)
-                res[i] = int(target_bin,2)^val
-            for w in graph[v]:
-                dfs(w)
-            tree.delete(v_bin)
-        dfs(graph[-1][0]) #dfs from the root
+        adj_map = collections.defaultdict(set)
+        root = None
+        for i, node in enumerate(parents):
+            if node == -1:
+                root = i
+            else:
+                adj_map[node].add(i)
+        queries_map = collections.defaultdict(set)
+
+        for q in queries:
+            queries_map[q[0]].add(q[1])
+        self.res_map = {}
+        def helperDFS(curr_root,prefix_map):
+
+            if curr_root in queries_map:
+                for val in queries_map[curr_root]:
+                    bin_rep = format(val, '020b')
+                    best_bin = ""
+                    print(bin_rep)
+                    for i in range(20):
+                        if prefix_map[best_bin+str(1-int(bin_rep[i]))]:
+                            best_bin += str(1-int(bin_rep[i]))
+                        else:
+                            best_bin += bin_rep[i]
+                    self.res_map[(curr_root,val)] = int(best_bin,2) ^ val 
+            for child in adj_map[curr_root]:
+                bin_rep = format(child, '020b')
+                for i in range(1, len(bin_rep)+1):
+                    prefix_map[bin_rep[0:i]].add(child)
+                helperDFS(child, prefix_map)
+                for i in range(1, len(bin_rep)+1):
+                    prefix_map[bin_rep[0:i]].remove(child)
+
+        initial_prefixmap = collections.defaultdict(set)
+        root_rep = format(root, '020b')
+        for i in range(1,21):
+            initial_prefixmap[root_rep[0:i]].add(root)
+        helperDFS(root, initial_prefixmap)
+        res = []
+        for q in queries:
+            res.append(self.res_map[(q[0],q[1])])
         return res
             
