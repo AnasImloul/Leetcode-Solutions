@@ -1,3 +1,5 @@
+// Runtime: 36 ms (Top 90.0%) | Memory: 59.11 MB (Top 43.3%)
+
 class Fenwick {
     public int[] tree;  //Binary indexed Tree array
     
