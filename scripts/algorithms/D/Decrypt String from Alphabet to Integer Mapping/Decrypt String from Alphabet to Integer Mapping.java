@@ -1,33 +1,28 @@
+// Runtime: 2 ms (Top 43.3%) | Memory: 40.72 MB (Top 56.6%)
+
 class Solution {
-    public String freqAlphabets(String s) {
-        Stack<Character> stk = new Stack<>();
-        int i=0;
-        String decoded="";
-        while(i<s.length()) {
-            if(s.charAt(i)=='#') { // if # is encountered, convert and store corresponding alphabet
-                int c1=stk.pop()-48;
-                int c2=stk.pop()-48;
-                int c = 96+(10*c2)+c1;
-                stk.push((char)c);
-                
-            } else {
-                stk.push(s.charAt(i));
-            }
-            i++;
+    public String freqAlphabets(String str) {
+        HashMap<String, Character> map = new HashMap<>();
+        int k = 1;
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+            if (ch < 'j')
+                map.put(String.valueOf(k++), ch);
+            else
+                map.put(String.valueOf(k++)+"#", ch);
         }
         
-        String temp="";
-        
-        while(!stk.isEmpty()) {
-            char c=stk.pop();
-            if(c>='1' && c<='9') {
-                int val=48+c;
-                temp=(char)val+"";
+        StringBuilder sb = new StringBuilder();
+        int i = str.length() - 1;
+        while (i >= 0) {
+            if (str.charAt(i) == '#') {
+                sb.append(map.get(str.substring(i - 2, i+1)));
+                i -= 3;
             } else {
-                temp=c+"";
+                sb.append(map.get(str.substring(i, i + 1)));
+                i--;
             }
-            decoded=temp+decoded;
         }
-        return decoded;
+        
+        return sb.reverse().toString();
     }
 }
