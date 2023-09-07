@@ -1,11 +1,16 @@
-# Runtime: 62 ms (Top 11.46%) | Memory: 13.9 MB (Top 73.14%)
+# Runtime: 41 ms (Top 43.2%) | Memory: 16.29 MB (Top 65.6%)
+
 class Solution:
-    def sequentialDigits(self, l: int, h: int) -> List[int]:
-        q=[*"123456789"]
-        a=[]
-        for i in range(10):
-            for j in range(i+1,10):
-                o=int("".join(q[i:j]))
-                if l<=o<=h:
-                    a+=[o]
-        return sorted(a)
+    def sequentialDigits(self, low: int, high: int) -> List[int]:
+        l = len(str(low))
+        h = len(str(high))
+        ans = []
+        for i in range(l,h+1):
+            for j in range(1,11-i):
+                t = str(j)
+                for k in range(i-1):
+                    t+=str(int(t[-1])+1)
+                if int(t)<=high and int(t)>=low:
+                    ans.append(int(t))
+        ans.sort()
+        return ans
