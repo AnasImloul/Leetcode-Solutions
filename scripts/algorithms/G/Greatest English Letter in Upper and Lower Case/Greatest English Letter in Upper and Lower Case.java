@@ -1,4 +1,5 @@
-// Runtime: 4 ms (Top 85.13%) | Memory: 42 MB (Top 91.86%)
+// Runtime: 6 ms (Top 53.1%) | Memory: 41.50 MB (Top 23.1%)
+
 class Solution
 {
     public String greatestLetter(String s)
@@ -6,7 +7,7 @@ class Solution
         Set<Character> set = new HashSet<>();
         for(char ch : s.toCharArray())
             set.add(ch);
-
+        
         for(char ch = 'Z'; ch >= 'A'; ch--)
             if(set.contains(ch) && set.contains((char)('a'+(ch-'A'))))
                return ""+ch;
