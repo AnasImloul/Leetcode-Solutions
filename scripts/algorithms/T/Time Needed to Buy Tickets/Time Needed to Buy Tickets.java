@@ -1,13 +1,19 @@
+// Runtime: 2 ms (Top 62.6%) | Memory: 40.11 MB (Top 61.2%)
+
 class Solution {
-    public int timeRequiredToBuy(int[] tickets, int k) {
-        int res = 0;
-        for(int i = 0;i<tickets.length;i++){
-            if(i <= k){
-                res += Math.min(tickets[k],tickets[i]);
-            }else{
-                res += Math.min(tickets[k] - 1,tickets[i]);
+    public int timeRequiredToBuy(int[] tickets, int k){
+        int n= tickets.length;
+        int time=0;
+    
+        if(tickets[k]==1) return k+1;
+        while(tickets[k]>0){
+            for(int i=0;i<n;i++){
+                if(tickets[i]==0) continue;
+                tickets[i]=tickets[i]-1;
+                time++;
+                if(tickets[k]==0) break;
             }
-        }
-        return res;
+        }k--;
+        return time;
     }
 }
