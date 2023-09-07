@@ -1,17 +1,16 @@
+# Runtime: 24 ms (Top 100.0%) | Memory: 16.28 MB (Top 81.4%)
+
 class Solution:
-    def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
-        def gcd(a, b):
-            while a > 0:
-                a, b = b % a, a
-            return b
-        def lcm(a, b):
-            return a*b//gcd(a,b)
-        left, right = min(a,b), n*min(a,b)
-        lcm_val = lcm(a,b)
-        while left < right:
-            m = (left + right)//2
-            if m//a + m//b - m//lcm_val >= n:
-                right = m
+    def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
+        import math
+        lcm= A*B // math.gcd(A,B)
+        l,r=2,10**14
+        while l<=r:
+            mid=(l+r)//2
+            n = mid//A+mid//B-mid//lcm
+            if n>=N:
+                r=mid-1
+           
             else:
-                left = m + 1
-        return left % (10**9 + 7)
+                l=mid+1
+        return l%(10**9+7)
