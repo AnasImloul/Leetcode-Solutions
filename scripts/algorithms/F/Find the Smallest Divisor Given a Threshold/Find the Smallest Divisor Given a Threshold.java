@@ -1,45 +1,22 @@
+// Runtime: 6 ms (Top 97.4%) | Memory: 46.77 MB (Top 83.7%)
+
 class Solution {
-    public int smallestDivisor(int[] nums, int threshold) {
-        // Initially assign low to 1 and high to INT_MIN
-        int low = 1;
-        int high = Integer.MIN_VALUE;
-        
-        // Assign high to maximum element in nums to reduce our search space
-        for(int i=0;i<nums.length;i++) {
-            high = Math.max(high,nums[i]);
+    public int smallestDivisor(int[] a, int h) {
+        int l = 1, r = a[0];
+        for (int x : a) if (x > r) r = x;
+
+        while (l < r) {
+            int m = l + (r-l)/2;
+            if (valid(a, m, h)) r = m;
+            else l = m + 1;
         }
-        
-        // Keep ans for updating the answer whenever we get a sum <= threshold
-        int ans = -1;
-        
-        while(low <= high) {
-            int mid = low + (high - low) / 2;
-            
-            if(getDivisorSum(nums,mid) <= threshold) {
-                // If sum <= threshold store mid to ans and try to move leftwards
-                // to get a better or more smaller answer
-                ans = mid;
-                high = mid - 1;
-            } else {
-                // If sum > threshold then we will have to increase the divisor
-                // to reduce the overall sum so move rightwards
-                low = mid + 1;
-            }
-        }        
-        
-        return ans;
-        
-        
+
+        return l;
     }
-    
-    public int getDivisorSum(int[] nums, int divisor) {
-        int sum = 0;
-        
-        // Calculate divisor sum iterating over the nums array
-        for(int i=0;i<nums.length;i++) {
-            sum += Math.ceil((double) nums[i]/divisor);
-        }
-        
-        return sum;
+
+    private boolean valid(int[] a, int m, int h) {
+        for (int x : a)
+            if ((h -= (x + m-1)/m) < 0) return false;
+        return true;
     }
 }
