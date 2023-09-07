@@ -1,41 +1,21 @@
+// Runtime: 329 ms (Top 20.6%) | Memory: 44.12 MB (Top 82.6%)
+
 class Solution {
-    int INF = (int)1e9;
-    public int makeArrayIncreasing(int[] arr1, int[] arr2) {
-        arr2 = Arrays.stream(arr2).distinct().sorted().toArray();
-        int res = solve(0, 0, 0, arr1, arr2, new Integer[arr1.length][arr2.length][2]);
-        return res == INF? -1 : res;
-    }
-
-    private int solve(int i, int j, int p, int[] arr1, int[] arr2, Integer[][][] memo){
-        if (i==arr1.length){
-            return 0;
-        }
-        if (j==arr2.length){
-            return arr1[i]>arr1[i-1]? solve(i+1, j, 0, arr1, arr2, memo) : INF;
-        }
-        if (memo[i][j][p]!=null){
-            return memo[i][j][p];
-        }
-
-        int ans = INF;
-        if (i>0&&arr1[i]>arr1[i-1]||i==0){
-            ans = solve(i+1, j, 0, arr1, arr2, memo);
-        }
-        int lo = j, hi = arr2.length;
-        while(lo < hi && i > 0){
-            int mid = (lo+hi)>>1;
-            if (arr2[mid]>arr1[i-1]){
-                hi=mid;
-            }else{
-                lo=mid+1;
+    public int makeArrayIncreasing(int[] A, int[] B) { // A = arr1, B = arr2
+        TreeSet<Integer> set = new TreeSet<>(Arrays.stream(B).boxed().toList());
+        int[] dp = new int[B.length+1];
+        dp[0]=-1;
+        int INF = (int)2e9;
+        for (int i = 0; i < A.length; i++){
+            for (int j = B.length; j >= 0; j--){
+                int a = A[i] > dp[j]? A[i] : INF; // option A - don't swap
+                Integer b = set.higher(j==0?INF:dp[j-1]); // option B - swap
+                dp[j]=Math.min(a, b==null?INF:b); // take the min of A and B
             }
         }
-        if (lo<arr2.length){
-            int tmp = arr1[i];
-            arr1[i]=arr2[lo];
-            ans = Math.min(ans, solve(i+1, lo+1, 1, arr1, arr2, memo)+1);
-            arr1[i]=tmp;
+        for (int i = 0; i <= B.length; i++) if (dp[i] != INF){
+            return i;
         }
-        return memo[i][j][p]=ans;
+        return -1;
     }
 }
