@@ -1,90 +1,73 @@
-class Solution {    
-    private int trUtil(int n, int m, int[][] cache)
-    {
-        if (n > m)
-        {
-            int temp = n;
-            n = m;
-            m = temp;
-        }
-        
-        if (cache[n][m] != 0)
-            return cache[n][m];
-        
-        if (n == 0)
-        {
-            cache[0][m] = 0;
-            return 0;
-        }
-        
-        if (n == 1)
-        {
-            cache[n][m] = m;
-            return m;
-        }
-        
-        if (n == m)
-        {
-            cache[n][m] = 1;
-            return 1;
-        }
-        
-        if (m % n == 0)
-        {
-            cache[n][m] = m/n;
-            return m/n;
-        }
-        
-        if (m > 2 * n)
-        {
-            int num = (m / n) - 1;
-            int newM = m - num*n;            
-            cache[n][m] = num + trUtil(n, newM, cache);
-            return cache[n][m];
-        }
-        
-        cache[n][m] = 1 + trUtil(Math.min(n, m-n), Math.max(n, m-n), cache);
-        
-        // if 1 < n < m < 2n then we do the following
-        // Let i be size of big square
-        // Let j be size of horizontal extension beyond big square
-        // Horizontal side is of len m, Vertical side is of len n
-        // Bigger square is in bottom left corner, smaller sqaure attached to bigger
-        // is in bottom right corner
-        //
-        /*  ---------------------------
-            |                      *  |
-            |                      *  |
-            |--------i--------..j.>*  |
-            |                |        |
-            n                |        |
-            |                |--------|
-            |                |        |
-            |                |        |
-            --------------m------------
-        */
-        
-        for (int i = (m+1)/2; i < n; i++)
-        {
-            for (int j = 0; j <= (m - i); j++)
-            {
-                cache[n][m] = Math.min(cache[n][m], 2 +
-                                      trUtil(n-i, i+j, cache) +
-                                      trUtil(n - (m-i), (m-i) - j, cache) +
-                                      trUtil(j, i - (m-i), cache));
-            }
-        }
-        
-        return cache[n][m];
+// Runtime: 7 ms (Top 31.8%) | Memory: 39.08 MB (Top 78.7%)
+
+class Solution {
+    int ret; // store the final result
+    int m, n; // m is the height, and n is the width
+	
+	// Note: original signature is changed from n,m to m,n
+    public int tilingRectangle(int m, int n) { 
+        this.m = m;
+        this.n = n;
+        this.ret = m * n; // initilize the result as m*n if cut rectangle to be all 1*1 squares
+        int[][] mat = new int[m][n]; // record the status of every location, 0 means not covered, 1 means covered
+        backtrack(mat, 0); // start backtracking
+        return ret;
     }
     
-    
-    public int tilingRectangle(int n, int m) {
-        int temp = Math.min(n, m);
-        m = Math.max(n, m);
-        n = temp;
+	// the size means how many squares cut now
+    public void backtrack(int[][] mat, int size) {
+        if (size > ret) return; // if we already have more squares than the min result, no need to go forward
         
-        int[][] cache = new int[n+1][m+1];
-        return trUtil(n, m, cache);
+		// find out the leftmost and topmost postion where is not covered yet
+        int x = -1, y = -1;
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                if (mat[i][j] == 0) {
+                    x = i;
+                    y = j;
+                    break;
+                }
+            }
+            if (x != -1 && y != -1) break;
+        }
+		// if not found, we know that all positions are covered
+        if (x == -1 && y == -1) {
+		    // update the result
+            ret = Math.min(size, ret);
+        }
+        else {
+            int len = findWidth(x, y, mat); // find the maximum width to cut the square
+            while(len >= 1) {
+                cover(x, y, len, mat, 1); // cover the current square
+                backtrack(mat, size + 1);
+                cover(x, y, len, mat, 0); // uncover the previous result
+                len--; // decrement the square width by 1
+            }
+        }
+    }
+    
+    public int findWidth(int x, int y, int[][] mat) {
+        int len = 1;
+        while(x + len < m && y + len < n) {
+            boolean flag = true; // flag means the len is reachable
+            for (int i = 0; i <= len; i++) {
+			    // check the right i-th column and the bottom i-th row away from (x, y) 
+                if (mat[x + i][y + len] == 1 || mat[x + len][y + i] == 1) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (!flag) break;
+            len++;
+        }
+        return len;
+    }
+    
+    public void cover(int x, int y, int len, int[][] mat, int val) {
+        for (int i = x; i < x + len; i++) {
+            for (int j = y; j < y + len; j++) {
+                mat[i][j] = val;
+            }
+        }
     }
 }
