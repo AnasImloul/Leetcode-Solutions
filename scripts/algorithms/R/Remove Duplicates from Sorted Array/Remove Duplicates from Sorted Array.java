@@ -1,17 +1,15 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 43.72 MB (Top 69.8%)
+
 class Solution {
-    public int removeDuplicates(int[] nums) {
-        int ptr = 0;
-        int arr[] = new int[nums.length];
-        arr[0] = nums[0];
-        for(int i=1;i<nums.length;i++) {
-            if (arr[ptr] != nums[i]) {
-                arr[ptr + 1] = nums[i];
-                ptr++;
+    public int removeDuplicates(int[] arr) {
+        int i=0;
+        for(int j=1;j<arr.length;j++){
+            if(arr[i]!=arr[j]){
+                i++;
+                arr[i]=arr[j];
             }
         }
-        for(int i=0;i<arr.length;i++) {
-            nums[i] = arr[i];
-        }
-        return ptr+1;
+        return i+1;
+        
     }
 }
