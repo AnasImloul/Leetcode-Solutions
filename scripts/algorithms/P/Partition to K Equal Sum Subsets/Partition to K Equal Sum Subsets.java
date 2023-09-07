@@ -1,19 +1,40 @@
+// Runtime: 277 ms (Top 51.4%) | Memory: 43.53 MB (Top 23.8%)
+
 class Solution {
+    private final List<Set<Integer>> allSubsets = new ArrayList<>();
     public boolean canPartitionKSubsets(int[] nums, int k) {
-        int sum = Arrays.stream(nums).sum(), target = sum/k, n=nums.length;
-        if (sum % k != 0){
-            return false;
+        int sum = Arrays.stream(nums).sum();
+        if(sum % k != 0) return false;
+        getAllSubsets(nums.length, sum / k, new HashSet<>(), nums, false);
+        return allSubsets.size() >= k && canPartition(allSubsets.size(), k, nums.length, new HashSet<>());
+    }
+
+    private boolean canPartition(int n, int k, int size, Set<Integer> current) {
+        if(k == 0 && current.size() == size) return true;
+        if(n == 0 || k < 0) return false;
+        boolean addSet = false;
+        if(allUnique(current, allSubsets.get(n-1))) {
+            current.addAll(allSubsets.get(n - 1));
+            addSet = canPartition(n - 1, k - 1, size, current);
+            current.removeAll(allSubsets.get(n - 1));
         }
-        int[] s = new int[1<<n];
-        for (int i = 1; i < 1<<n; i++){
-            s[i]=(int)1e9;
-            for (int j = 0; j < n && s[i]>0; j++){
-                if ((i & 1 << j) > 0){
-                    int cur = s[i^1<<j]+nums[j];
-                    s[i]=Math.min(s[i], cur==target?0 : cur);
-                }
-            }
+        return addSet || canPartition(n - 1, k, size, current);
+    }
+
+    private void getAllSubsets(int n, int targetSum, Set<Integer> subsets, int[] nums, boolean lol) {
+        if(targetSum == 0) {
+            allSubsets.add(new HashSet<>(subsets));
+            return;
         }
-        return s[(1<<n)-1]==0;
+        if (n == 0 || targetSum < 0) return;
+        subsets.add(n-1);
+        getAllSubsets(n-1, targetSum - nums[n-1], subsets, nums, true);
+        subsets.remove(n-1);
+        getAllSubsets(n-1, targetSum, subsets, nums, false);
+    }
+    
+    private boolean allUnique(Set<Integer> set1, Set<Integer> set2) {
+        for (Integer num: set1) if(set2.contains(num)) return false;
+        return true;
     }
 }
