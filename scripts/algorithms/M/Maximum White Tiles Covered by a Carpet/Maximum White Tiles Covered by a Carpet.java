@@ -1,3 +1,5 @@
+// Runtime: 45 ms (Top 71.1%) | Memory: 71.05 MB (Top 47.1%)
+
 class Solution
 {
     public int maximumWhiteTiles(int[][] tiles, int carpetLen)
