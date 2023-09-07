@@ -1,3 +1,5 @@
+// Runtime: 142 ms (Top 13.4%) | Memory: 44.41 MB (Top 73.2%)
+
 class Solution {
     String s;
     List<String>result;
