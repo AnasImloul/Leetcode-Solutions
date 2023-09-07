@@ -1,25 +1,28 @@
-class Solution:
-    def rangeAddQueries(self, n: int, queries: List[List[int]]) -> List[List[int]]:
-        # initialize the matrix with all zeroes
-        mat = [[0] * n for _ in range(n)]
+# Runtime: 1888 ms (Top 33.3%) | Memory: 33.75 MB (Top 100.0%)
+
+class Solution(object):
+    def rangeAddQueries(self, n, queries):
+        mat = [[0] * (n + 1) for _ in range(n + 1)]
         
-        # perform the queries
-        for row1, col1, row2, col2 in queries:
-            mat[row1][col1] += 1
-            if row2+1 < n:
-                mat[row2+1][col1] -= 1
-            if col2+1 < n:
-                mat[row1][col2+1] -= 1
-            if row2+1 < n and col2+1 < n:
-                mat[row2+1][col2+1] += 1
+        for startRow, startCol, endRow, endCol in queries:
+            for r in range(startRow, endRow + 1):
+                mat[r][startCol] += 1
+                mat[r][endCol + 1] -= 1
+
         
-        # update the matrix
+        
         for i in range(n):
             for j in range(1, n):
-                mat[i][j] += mat[i][j-1]
+                mat[i][j] += mat[i][j - 1]
+
         
-        for i in range(1, n):
+        ans = [[0] * n for _ in range(n)]
+        for i in range(n):
             for j in range(n):
-                mat[i][j] += mat[i-1][j]
+                ans[i][j] = mat[i][j]
+
+        return ans
+
+           
+
         
-        return mat
