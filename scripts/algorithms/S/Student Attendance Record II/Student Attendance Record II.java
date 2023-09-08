@@ -1,37 +1,29 @@
+// Runtime: 343 ms (Top 29.4%) | Memory: 78.58 MB (Top 12.2%)
+
 class Solution {
-
-    private static final int MOD = (int) Math.pow(10, 9) + 7;
-
+    int mod=1000000000+7;
     public int checkRecord(int n) {
-
-        return (int) checkRecord(n, 0, 0, new Integer[n + 1][3][2]);
+        int[][][] cache=new int[n+1][2][3];
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<2; j++){
+                for(int k=0; k<3; k++)cache[i][j][k]=-1;
+            }
+        }
+        return populate(n, 0, 1, 2, cache);
     }
-
-    public int checkRecord(int n, int leaveCount, int absentCount, Integer[][][] memo) {
-
-        if (memo[n][leaveCount][absentCount] != null) return memo[n][leaveCount][absentCount];
-
-        if (n == 0) return 1;
-
-        int recordCount = 0;
-
-        // Add P
-        recordCount += checkRecord(n - 1, 0, absentCount, memo);
-        recordCount = recordCount % MOD;
-
-        // Add L
-        if (leaveCount < 2) {
-            recordCount += checkRecord(n - 1, leaveCount + 1, absentCount, memo);
-            recordCount = recordCount % MOD;
+    public int populate(int n, int ptr, int aCount, int lCount, int[][][] cache){
+        if(ptr>=n)return 1;
+        if(cache[ptr][aCount][lCount]!=-1)return cache[ptr][aCount][lCount];
+        long count=0;
+        // Late
+        if(lCount>0){
+            count=populate(n, ptr+1, aCount, lCount-1, cache)%mod;
         }
-
-        // Add A
-        if (absentCount < 1) {
-            recordCount += checkRecord(n - 1, 0, 1, memo);
-            recordCount = recordCount % MOD;
-        }
-
-        memo[n][leaveCount][absentCount] = recordCount;
-        return recordCount;
+        // Present
+        count=(count+populate(n, ptr+1, aCount, 2, cache))%mod;
+        // Absent
+        if(aCount==1)count=(count+populate(n, ptr+1, aCount-1, 2, cache))%mod;
+        cache[ptr][aCount][lCount]=(int)(count%mod);
+        return cache[ptr][aCount][lCount];
     }
 }
