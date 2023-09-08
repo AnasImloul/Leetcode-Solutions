@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 99.1%) | Memory: 41.07 MB (Top 90.8%)
+
 class Solution {
 	public String capitalizeTitle(String title) {
 
