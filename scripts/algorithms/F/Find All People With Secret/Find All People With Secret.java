@@ -1,3 +1,5 @@
+// Runtime: 100 ms (Top 53.2%) | Memory: 108.54 MB (Top 41.1%)
+
 class Solution {
     public List<Integer> findAllPeople(int n, int[][] meetings, int firstPerson) {
 	
