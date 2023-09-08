@@ -1,3 +1,5 @@
+// Runtime: 82 ms (Top 57.1%) | Memory: 55.85 MB (Top 7.1%)
+
 var maxAbsValExpr = function(arr1, arr2) {
     const l1 = [], l2 = [], l3 = [], l4 = [], res = [];
     
