@@ -1,3 +1,5 @@
+// Runtime: 545 ms (Top 8.4%) | Memory: 230.95 MB (Top 8.4%)
+
 class Solution {
     public int longestPalindrome(String word1, String word2) {
         String lWord = word1 + word2;
@@ -18,4 +20,3 @@ class Solution {
                          palindrome(word, start, end-1, boundary, isFound, dp));
     }
 }
-
