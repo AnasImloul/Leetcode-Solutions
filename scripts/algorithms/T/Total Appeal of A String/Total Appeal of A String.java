@@ -1,3 +1,5 @@
+// Runtime: 9 ms (Top 66.9%) | Memory: 43.90 MB (Top 92.4%)
+
 class Solution {
     public long appealSum(String s) {
         long res = 0;
