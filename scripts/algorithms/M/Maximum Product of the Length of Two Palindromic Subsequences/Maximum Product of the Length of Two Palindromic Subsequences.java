@@ -1,40 +1,33 @@
+// Runtime: 952 ms (Top 21.5%) | Memory: 44.16 MB (Top 54.1%)
+
 class Solution {
+    int res = 0;
     
-    int max = 0;
     public int maxProduct(String s) {
-        
-        char[] c = s.toCharArray();
-        dfs(c, 0, "", "");
-        
-        return max;
+        char[] strArr = s.toCharArray();
+        dfs(strArr, 0, "", "");
+        return res;
     }
-    
-    public void dfs(char[] c, int i, String s1, String s2){
-        
-        if(i >= c.length){
-            
-            if(isPalin(s1) && isPalin(s2))
-                max = Math.max(max, s1.length()*s2.length());
+
+    public void dfs(char[] strArr, int i, String s1, String s2){
+        if(i >= strArr.length){
+            if(isPalindromic(s1) && isPalindromic(s2))
+                res = Math.max(res, s1.length()*s2.length());
             return;
         }
-        
-        dfs(c, i+1, s1+c[i], s2);
-        dfs(c, i+1, s1, s2+c[i]);
-        dfs(c, i+1, s1, s2);
+        dfs(strArr, i+1, s1 + strArr[i], s2);
+        dfs(strArr, i+1, s1, s2 + strArr[i]);
+        dfs(strArr, i+1, s1, s2);
     }
-    
-     public boolean isPalin(String str){
- 
-        int i = 0, j = str.length() - 1;
- 
-        while (i < j) {
- 
-            if (str.charAt(i) != str.charAt(j))
+
+    public boolean isPalindromic(String str){
+        int j = str.length() - 1;
+        char[] strArr = str.toCharArray();
+        for (int i = 0; i < j; i ++){
+            if (strArr[i] != strArr[j])
                 return false;
-            i++;
             j--;
         }
- 
         return true;
     }
 }
