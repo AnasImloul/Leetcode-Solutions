@@ -1,3 +1,5 @@
+// Runtime: 656 ms (Top 81.4%) | Memory: 58.80 MB (Top 88.8%)
+
 var cutOffTree = function(forest) {
     const trees = forest.flat().filter(x => x && x !== 1).sort((a, b) => b - a);
     let currPos = [0, 0], totalDist = 0;
