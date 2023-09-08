@@ -1,33 +1,19 @@
+// Runtime: 2 ms (Top 97.1%) | Memory: 45.45 MB (Top 6.9%)
+
 class Solution {
     public List<Double> averageOfLevels(TreeNode root) {
-        Queue<TreeNode> que= new LinkedList<>();
-        List<Double> list= new ArrayList<>();
-        if(root==null)
-        {
-            return list;
+        Queue<TreeNode> q = new LinkedList<>(List.of(root));
+        List<Double> ans = new ArrayList<>();
+        while (q.size() > 0) {
+            double qlen = q.size(), row = 0;
+            for (int i = 0; i < qlen; i++) {
+                TreeNode curr = q.poll();
+                row += curr.val;
+                if (curr.left != null) q.offer(curr.left);
+                if (curr.right != null) q.offer(curr.right);
+            }
+            ans.add(row/qlen);
         }
-        que.add(root);
-        while(que.isEmpty()==false)
-        {
-            double sum=0;
-           int n= que.size();
-           for(int i=0;i<n;i++)
-           {
-               TreeNode node= que.poll();
-               sum=sum+node.val;
-               if(node.left!=null)
-               {
-                   que.add(node.left);
-               }
-               if(node.right!=null)
-               {
-                   que.add(node.right);
-               }   
-           }
-            double avg= sum/n;
-            list.add(avg);
-        }
-        return list;
-        
+        return ans;
     }
 }
