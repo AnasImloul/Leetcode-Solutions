@@ -1,3 +1,5 @@
+// Runtime: 18 ms (Top 72.0%) | Memory: 54.86 MB (Top 75.9%)
+
 class Solution {
     public int eliminateMaximum(int[] dist, int[] speed) {
         
