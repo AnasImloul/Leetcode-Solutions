@@ -1,74 +1,39 @@
-Dijkstra's Algo : 34 ms
+// Runtime: 34 ms (Top 94.1%) | Memory: 44.35 MB (Top 43.8%)
 
 class Solution {
-    public int minCost(int maxTime, int[][] edges, int[] costVtx) {
-        int N = costVtx.length;
-        ArrayList<int[]>[] graph = new ArrayList[N];
-        for(int i = 0; i < N ; i++) graph[i] = new ArrayList<>();
-        
-        for(int[] e : edges){
-            int u = e[0], v = e[1], w = e[2];
-            graph[u].add(new int[]{v, w});
-            graph[v].add(new int[]{u, w});
+    record Node(int i, int t) {}
+    record Cell(int i, int t, int c) {}
+    public int minCost(int maxTime, int[][] edges, int[] fees) {
+        int n = fees.length;
+
+        // create the adjacency list graph
+        List<Node>[] g = new List[n];
+        for (int i = 0; i < n; i++) g[i] = new ArrayList<>();
+        for (var e : edges) {
+            g[e[0]].add(new Node(e[1], e[2]));
+            g[e[1]].add(new Node(e[0], e[2]));
         }
-        int[] timeHold = new int[N];
-        Arrays.fill(timeHold, (int) 1e9);
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b) -> {
-            return a[1] - b[1];
-        });
-        // vtx | cost | time 
-        pq.add(new int[]{0, costVtx[0], 0});
-        timeHold[0] = 0;
-        while(!pq.isEmpty()){
-            int[] p = pq.remove();
-            int vtx = p[0], cost = p[1], time = p[2]; 
-            if(vtx == costVtx.length - 1) return cost;
-            for(int[] e : graph[vtx]){
-                int v = e[0], n_time = e[1];
-                if(time + n_time > maxTime) continue;
-                if(time + n_time < timeHold[v]){
-                    timeHold[v] = n_time + time;
-                    pq.add(new int[]{v, cost + costVtx[v], timeHold[v]});
-                }
+
+        // Dijkstra
+        Queue<Cell> q = new PriorityQueue<>((a, b) -> a.c == b.c ? a.t - b.t : a.c - b.c);
+        int[] T = new int[n]; // 1. visited: de-dup 2. de-dup on worst time
+
+        q.offer(new Cell(0, 0, fees[0]));
+        Arrays.fill(T, maxTime + 1);
+        T[0] = 0;
+
+        while (!q.isEmpty()) {
+            var cur = q.poll();
+            if (cur.i == n-1) return cur.c;
+            
+            for (var nei : g[cur.i]) {
+                int t2 = cur.t + nei.t;
+                if (t2 >= T[nei.i]) continue; // if time is worst, no reason to continue
+                T[nei.i] = t2;
+                q.offer(new Cell(nei.i, t2, cur.c + fees[nei.i]));
             }
         }
+
         return -1;
     }
 }
-
-Memoization : 234 ms
-
-class Solution {
-    ArrayList<int[]>[] graph;
-    int[][] dp;
-    public int minCost(int maxTime, int[][] edges, int[] passingFees) {
-        int n = 1000;
-        dp = new int[1001][maxTime + 1];
-        for(int[] d : dp) Arrays.fill(d, -1);
-        graph = new ArrayList[n];
-        for(int i = 0; i < n ; i++){
-            graph[i] = new ArrayList<>();
-        }
-        for(int[] e : edges){
-            int u = e[0], v = e[1], w = e[2];
-            graph[u].add(new int[]{v,w});
-            graph[v].add(new int[]{u,w});
-        }
-        int ans = costMaker(maxTime, passingFees, 0);
-        return ans >= (int) 1e8 ? -1 : ans;
-    }
-    
-    public int costMaker(int time, int[] fees, int src){
-        if(time < 0) return (int) 1e8;
-        if(src == fees.length - 1) return dp[src][time] =  fees[src];
-        if(dp[src][time] != -1) return dp[src][time];
-        int cost = (int) 1e8;
-        for(int[] e : graph[src]){
-            int v = e[0], w = e[1];
-            cost = Math.min(cost, costMaker(time - w, fees, v));
-        }
-        return dp[src][time] = cost + fees[src];
-    }
-}
-
-
