@@ -1,3 +1,5 @@
+// Runtime: 14 ms (Top 27.1%) | Memory: 44.54 MB (Top 34.2%)
+
 class Solution {
     public int minCharacters(String a, String b) {
         int[] aCount = new int[26];
