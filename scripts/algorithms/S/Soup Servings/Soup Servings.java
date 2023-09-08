@@ -1,68 +1,18 @@
+// Runtime: 1 ms (Top 90.5%) | Memory: 39.56 MB (Top 93.7%)
+
 class Solution {
     public double soupServings(int n) {
-        //dp[i][j] = 0.25 * dp[i - 100][j] + 0.25 * dp[i - 75][j - 25]
-        //         + 0.25 * dp[i - 50][j - 50] + 0.25 * dp[i - 75][j - 25]
-
-        if (n >= 4276){
-            return 1;
-        }
-
-        n = (n + 24) / 25;
-        double[][] dp = new double[n + 1][n + 1];
-
-        for (int i = 0; i <= n; i++){
-            for (int j = 0; j <= n; j++){
-                if (i == 0 && j == 0){
-                    dp[i][j] = 0.5;
-                }else if (i == 0){
-                    dp[i][j] = 1;
-                }else if (j == 0){
-                    dp[i][j] = 0;
-                }else{
-                    dp[i][j] += dp[max(i - 4)][j] * 0.25;
-                    dp[i][j] += dp[max(i - 3)][max(j - 1)] * 0.25;
-                    dp[i][j] += dp[max(i - 2)][max(j - 2)] * 0.25;
-                    dp[i][j] += dp[max(i - 1)][max(j - 3)] * 0.25;
-                }
-            }
-        }
-
-        return dp[n][n];
+        if(n>4800) return 1;
+         n=(int)Math.ceil(n*1.0/25);
+        double dp[][]= new double[n+1][n+1];
+        return helper(n,n,dp);
     }
-
-    private int max(int a){
-        return Math.max(a, 0);
+    double helper(int a,int b,double dp[][]){
+        if(a<=0 && b<=0) return 0.5;
+        if(b<=0) return 0;
+        if(a<=0) return 1;
+        if(dp[a][b]>0) return dp[a][b];
+        return dp[a][b]=0.25*(helper(a-4,b,dp)+helper(a-3,b-1,dp)+helper(a-2,b-2,dp)+helper(a-1,b-3,dp));
     }
 }
-
-//class Solution {
-//    public double soupServings(int n) {
-//        //dp[i][j] = 0.25 * dp[i - 100][j] + 0.25 * dp[i - 75][j - 25]
-//        //         + 0.25 * dp[i - 50][j - 50] + 0.25 * dp[i - 75][j - 25]
-
-//        double[][] dp = new double[n + 1][n + 1];
-
-//        for (int i = 0; i <= n; i++){
-//            for (int j = 0; j <= n; j++){
-//                if (i == 0 && j == 0){
-//                    dp[i][j] = 0.5;
-//                }else if (i == 0){
-//                    dp[i][j] = 1;
-//                }else if (j == 0){
-//                    dp[i][j] = 0;
-//                }else{
-//                    dp[i][j] += dp[max(i - 100)][j] * 0.25;
-//                    dp[i][j] += dp[max(i - 75)][max(j - 25)] * 0.25;
-//                    dp[i][j] += dp[max(i - 50)][max(j - 50)] * 0.25;
-//                    dp[i][j] += dp[max(i - 25)][max(j - 75)] * 0.25;
-//                }
-//            }
-//        }
-
-//        return dp[n][n];
-//    }
-
-//    private int max(int a){
-//        return Math.max(a, 0);
-//    }
-//}
+// Upvote please !!
