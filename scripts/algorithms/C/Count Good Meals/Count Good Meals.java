@@ -1,22 +1,22 @@
+// Runtime: 160 ms (Top 78.2%) | Memory: 55.21 MB (Top 66.3%)
+
 class Solution {
-    public int countPairs(int[] deliciousness) {
+    int mod = 1000000007;
+    public int countPairs(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int n : deliciousness){ // freq table
-            map.merge(n, 1, Integer::sum);
-        }
-
-        long ans = 0;
-        for (int key : map.keySet()){
-            int i = 1, cur = map.get(key);
-            while(key > i - key) i <<= 1; // only check those no less than the current key number
-            while(i <= (1 << 21)){
-                ans += (key != i - key? 
-                        1L * cur * map.getOrDefault(i - key, 0) : // choose one from each pile
-                       (1L * cur * (cur - 1)) / 2); // edge case -> choose two from the same pile 
-                i <<= 1;
+        int n = arr.length;
+        long res = 0;
+        for (int num : arr) {
+            int power = 1;
+            for (int i = 0; i < 22; i++) {
+                if (map.containsKey(power - num)) {
+                    res += map.get(power - num);
+                    res %= mod;
+                }
+                power *= 2;
             }
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
-
-        return (int)(ans % (int)(1e9+7));
+        return (int) res;
     }
 }
