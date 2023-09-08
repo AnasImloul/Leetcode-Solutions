@@ -1,3 +1,5 @@
+// Runtime: 265 ms (Top 47.0%) | Memory: 88.05 MB (Top 5.8%)
+
  var maximumEvenSplit = function(finalSum) {
 
     if(finalSum % 2) return [];
