@@ -1,46 +1,59 @@
+// Runtime: 14 ms (Top 27.8%) | Memory: 41.85 MB (Top 50.9%)
+
 class Solution {
-    public int maxRepOpt1(String text) {
-        int res = 0;
-        int[] cnt = new int[26];
-        for(char c : text.toCharArray()) cnt[c - 'a']++;
-        for(char curChar = 'a';curChar<='z';curChar++){
-        /*
-        Check every lowercase letter
-        1. Count the gap between the last occurrence with this time
-        2. Count the number of continuous occurrence for current letter
-        3. 
-            (1) If the gap is 1
-                If the number of occurrences of this time and last is smaller than the total, the letter between these two substring can be replaced by another character.
-                If not, the largest result for current letter is the total number of occurrences of current letter
-            (2) For other situations
-                If the number of occurrences of this time is equal to the total number of occurrences of current letter, the result for the whole string might can be updated.
-                If not, we can replace the former one or the later one letter with one current letter
-            
-        */
-            int pre = 0, cur = 0;
-            int idx = 0, gap = 0;
-            while(idx < text.length()){
-                while(idx < text.length() && text.charAt(idx) != curChar){
-                    idx++;
-                    gap++;
-                }
-                while(idx < text.length() && text.charAt(idx) == curChar){
-                    idx++;
-                    cur++;
-                }
-                if(gap == 1){
-                    if(cur+ pre < cnt[curChar-'a']) res = Math.max(cur + pre + 1, res);
-                    else  res = Math.max(cur + pre, res);
-                }
-                else{
-                    if(cur == cnt[curChar - 'a']) res = Math.max(cur, res);
-                    else res = Math.max(cur+1, res);
-                }
-                pre = cur;
-                cur = 0;
-                gap = 0;
-            }
-        }
-        return res;
-    }
-}
+		public int maxRepOpt1(String s) {
+		   int[] count = new int[26];
+		   int[] left = new int[s.length()];
+		   int[] right = new int[s.length()];
+			int max =0;
+			// Left Array Containing Length Of Subarray Having Equal Characters Till That Index
+			for(int i=0;i<s.length();i++){
+				count[s.charAt(i) -'a']++;
+				if(i> 0){
+					if(s.charAt(i) == s.charAt(i-1)){
+						left[i] = left[i-1]+1;
+					}else{
+						left[i] = 1;
+					}
+				}else{
+					left[i] =1;
+				}
+				max = Math.max(max,left[i]);
+			}
+			// Right Array Containing Length Of Subarray Having Equal Characters Till That Index
+			for(int i=s.length()-1;i>=0;i--){
+				if(i < s.length()-1){
+					if(s.charAt(i+1) == s.charAt(i)){
+						right[i] = right[i+1] +1;
+					}else{
+						right[i] =1;
+					}
+				}else{
+					right[i] = 1;
+				}
+			}
+			// Count The Length Of SubString Having Maximum Length When A Character Is Swapped
+			for(int i=1 ; i<s.length()-1 ; i++){
+				if(s.charAt(i-1) == s.charAt(i+1) && s.charAt(i) != s.charAt(i-1)){
+					if(count[s.charAt(i-1) -'a'] == left[i-1] + right[i+1]){
+						max = Math.max(max , left[i-1] + right[i+1]);
+					}else{
+						max = Math.max(max,left[i-1] + right[i+1]+1);
+					}
+				}else{
+					if(count[s.charAt(i) -'a'] == left[i]){
+						max = Math.max(max,left[i]);
+					}
+					else{
+						max = Math.max(max,left[i]+1);
+					}
+				}
+			}
+			 if(count[s.charAt(s.length()-1)-'a']!=left[s.length()-1])
+					{
+						max = Math.max(max, left[s.length()-1]+1);
+					}
+		   return max; 
+		}
+	}
+	
