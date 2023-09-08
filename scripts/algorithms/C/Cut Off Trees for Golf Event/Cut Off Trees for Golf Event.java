@@ -1,3 +1,5 @@
+// Runtime: 273 ms (Top 92.8%) | Memory: 44.58 MB (Top 18.0%)
+
 class Solution {
     //approach: 1st store all the positions in the min heap acc. to their height
     //now start removing the elements from the heap and calculate their dis using bfs
