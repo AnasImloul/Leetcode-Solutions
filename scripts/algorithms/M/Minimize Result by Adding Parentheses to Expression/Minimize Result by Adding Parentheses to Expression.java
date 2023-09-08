@@ -1,3 +1,5 @@
+// Runtime: 8 ms (Top 39.1%) | Memory: 41.03 MB (Top 42.0%)
+
 class Solution {
     public String minimizeResult(String expression) {
         String[] sp = expression.split("\\+");
