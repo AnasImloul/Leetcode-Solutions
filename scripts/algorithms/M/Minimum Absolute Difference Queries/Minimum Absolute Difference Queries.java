@@ -1,3 +1,5 @@
+// Runtime: 152 ms (Top 66.6%) | Memory: 154.57 MB (Top 22.2%)
+
 class Solution {
     public int[] minDifference(int[] nums, int[][] queries) {
         int n = nums.length;
