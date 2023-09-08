@@ -1,25 +1,37 @@
+// Runtime: 17 ms (Top 5.9%) | Memory: 43.57 MB (Top 5.0%)
+
 class Solution {
     public List<Integer> partitionLabels(String s) {
-        Map<Character, Integer> map = new HashMap<>();
-        // filling impact of character's
-        for(int i = 0; i < s.length(); i++){
-            char ch = s.charAt(i);
-            map.put(ch, i);
-        }
-        // making of result
-        List<Integer> res = new ArrayList<>();
-        int prev = -1;
-        int max = 0;
         
-        for(int i = 0; i < s.length(); i++){
-            char ch = s.charAt(i);
-            max = Math.max(max, map.get(ch));
-            if(max == i){
-                // partition time
-                res.add(max - prev);
-                prev = max;
-            }
-        }
-        return res;
+    List<Integer>lr=new ArrayList<>();
+
+    HashMap<Character,Boolean>mp=new HashMap<>();
+
+    int count=0;
+
+    for(int i=0;i<s.length();i++){
+
+    if(!mp.containsKey(s.charAt(i))&&s.lastIndexOf(Character.toString(s.charAt(i)))!=i){
+        mp.put(s.charAt(i),true);
+    }
+    else if(mp.containsKey(s.charAt(i))&&s.lastIndexOf(Character.toString(s.charAt(i)))==i){
+
+    mp.remove(s.charAt(i));
+
+    }
+    
+    if(mp.isEmpty()){
+    lr.add(count+1);
+    count=0;
+    }
+    else{
+        count++;
+    }
+    }
+
+
+    return lr;
+
+
     }
 }
