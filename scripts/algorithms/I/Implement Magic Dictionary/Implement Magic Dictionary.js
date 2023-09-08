@@ -1,44 +1,38 @@
+// Runtime: 101 ms (Top 58.8%) | Memory: 57.40 MB (Top 26.4%)
+
+function TrieNode(){
+    this.children = new Map()
+    this.endOfWord = false;
+}
+
 var MagicDictionary = function() {
-    this.trie = {};
+    this.root = new TrieNode()
 };
 
 MagicDictionary.prototype.buildDict = function(dictionary) {
-    for(let word of dictionary) {
-        let curr = this.trie;
-        for(let c of word) {
-            if(!curr[c]) curr[c] = {};
-            curr = curr[c];
+    for(let word of dictionary){
+        let curr = this.root
+        for(let letter of word){
+            let map = curr.children
+            if(!map.has(letter)) map.set(letter, new TrieNode())
+            curr = map.get(letter)
         }
-        curr['end'] = true;
+        curr.endOfWord = true
     }
 };
 
-MagicDictionary.prototype.search = function(searchWord) {
-    const len = searchWord.length;
-    const searchHelper = (idx = 0, mismatch = 1, curr = this.trie) => {
-        for(let i = idx; i < len; i++) {
-            const c = searchWord[i];
-            
-            if(!curr[c]) {
-                if(mismatch == 0) return false;
-                
-                for(let possibleChar in curr) {
-                    if(searchHelper(i + 1, mismatch - 1, curr[possibleChar])) {
-                        return true;
-                    }
-                }
-                return false;
-            } else {
-                for(let possibleChar in curr) {
-                    if(c == possibleChar) continue;
-                    if(searchHelper(i + 1, mismatch - 1, curr[possibleChar])) {
-                        return true;
-                    }
-                }
-            }
-            curr = curr[c];
-        }
-        return Boolean(curr['end'] && mismatch == 0);
+MagicDictionary.prototype.search = function(searchWord){
+    return  dfs(this.root, searchWord, 0, 0)
+}
+
+function dfs(root, str, i, count){
+    if(count>1) return false
+    if(i==str.length) return count == 1 && root.endOfWord
+	
+    for(let [char, node] of root.children){
+        let c = 0;
+        if(char != str[i]) c = 1
+        if(dfs(node, str, i+1, count+c)) return true;
     }
-    return searchHelper();
-};
+    return false
+}
