@@ -1,74 +1,56 @@
+// Runtime: 6 ms (Top 66.6%) | Memory: 43.77 MB (Top 64.6%)
+
 class Solution {
-    public String shortestCompletingWord(String licensePlate, String[] words)     {
-        HashMap<Character,Integer> plate = new HashMap<Character,Integer>();
-        ArrayList<String> ans = new ArrayList<>();
-        String str = licensePlate.toLowerCase();
-        for(int i=0;i<licensePlate.length();i++)
-        {
-            char c = str.charAt(i);
-            if(c>='a' && c<='z')
-            {
-                if(plate.containsKey(c))
-                {
-                    plate.put(c,plate.get(c)+1);
-                }
-                else
-                {
-                    plate.put(c,1);
-                }
+    public String shortestCompletingWord(String licensePlate, String[] words) {
+        //Store count of letters in LicensePlate
+        int[] licensePlateCount = new int[26];
+        
+        //To store all words which meet the criteria
+        ArrayList<String> res = new ArrayList<>();
+        //To find min length word that meets the criteria
+        int min = Integer.MAX_VALUE;
+        
+        //Add char count for each char in LicensePlate
+        for(Character c:licensePlate.toCharArray()) {
+            if(isChar(c)) {
+                licensePlateCount[Character.toLowerCase(c) - 'a']++;
             }
         }
         
+        //Add char count for each word in words
+        for(String word : words) {
+            int[] wordCharCount = new int[26];
+            boolean flag = true;
             
-        for(int i=0;i<words.length;i++)
-        {
-            String s = words[i].toLowerCase();
-            HashMap<Character,Integer> wordHash = new HashMap<>();
-            
-            for(int j=0;j<words[i].length();j++)
-            {
-                char c = words[i].charAt(j);
-                if(wordHash.containsKey(c))
-                {
-                    wordHash.put(c,wordHash.get(c)+1);
-                }
-                else
-                {
-                    wordHash.put(c,1);
-                }
+            for(Character c:word.toCharArray()) {
+                wordCharCount[Character.toLowerCase(c) - 'a']++;
             }
             
-            int count = 0;
-            
-            for(Map.Entry<Character,Integer> t:plate.entrySet())
-            {
-                if(wordHash.containsKey(t.getKey()))
-                {
-                    if(wordHash.get(t.getKey())>=t.getValue())
-                    {
-                        count++;
-                    }
-                }
+            //Eliminate words that don't satisfy the criteria
+            for(int i = 0; i<26;i++) {
+                if(licensePlateCount[i] > wordCharCount[i]) flag = false;
             }
             
-            if(count==plate.size())
-            {
-                ans.add(words[i]);
+            //Add words satisfying criteria to res and calculate min word length
+            if(flag) {
+                res.add(word);
+                if(word.length() < min) min = word.length();
             }
-            
         }
         
-        Comparator<String> stringLengthComparator = new Comparator<String>()
-        {
-            @Override
-            public int compare(String o1, String o2)
-            {
-                return Integer.compare(o1.length(), o2.length());
-            }
-        };
+        //Return 1st word in array meeting all criteria
+        for(int i = 0; i < res.size();i++) {
+            if(res.get(i).length() == min) return res.get(i);
+        }
         
-        Collections.sort(ans, stringLengthComparator);
+        //If not found, return -1 (or whatever interviewer expects)
+        return "-1";
+    }
+    
+    private boolean isChar(Character c) {
+        if((c >='a' && c <='z') ||
+           (c>='A' && c<='Z')) return true;
         
-        return ans.get(0);
+        return false;
     }
 }
