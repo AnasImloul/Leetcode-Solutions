@@ -1,3 +1,5 @@
+// Runtime: 107 ms (Top 27.4%) | Memory: 53.91 MB (Top 31.3%)
+
 class Solution {
     public String kthLargestNumber(String[] nums, int k) {
         
