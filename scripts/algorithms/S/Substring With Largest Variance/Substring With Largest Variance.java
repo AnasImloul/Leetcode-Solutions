@@ -1,3 +1,5 @@
+// Runtime: 170 ms (Top 86.6%) | Memory: 41.17 MB (Top 94.8%)
+
 class Solution {
     public int largestVariance(String s) {
         
