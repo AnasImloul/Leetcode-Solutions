@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 41.04 MB (Top 6.2%)
+
 class Solution
 {
     public int rearrangeCharacters(String s, String target)
