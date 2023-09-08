@@ -1,48 +1,39 @@
+// Runtime: 44 ms (Top 68.1%) | Memory: 57.23 MB (Top 20.3%)
+
 class Solution {
-    
-    boolean isPossible(int[] position, int m, int mid)
-    {
-        int count = 1;
-        int placed = position[0];
-        for(int i=1; i<position.length; i++)
-        {
-            if(position[i]-placed >= mid)
-            {
-                placed = position[i];
-                count++;
+    public int maxDistance(int[] position, int m) {
+        Arrays.sort(position);
+        int low=Integer.MAX_VALUE;
+        int high=0;
+        for(int i=1;i<position.length;i++){
+            low=Math.min(low,position[i]-position[i-1]);
+        }
+        high=position[position.length-1]-position[0];
+        int ans=-1;
+        while(low<=high){
+            int mid=low+(high-low)/2;
+            if(blackbox(mid,position,m)){
+                ans=mid;
+                low=mid+1;
             }
-            if(count==m)
-            {
-                return true;
+            else{
+                high=mid-1;
             }
+        }
+        return ans;
+    }
+		public boolean blackbox(int maxPossibleDist,int[] position, int m){
+        int balls=1;
+        int prevballplace=position[0];
+        for(int i=1;i<position.length;i++){
+            if(position[i]-prevballplace>=maxPossibleDist){
+                prevballplace=position[i];
+                balls++;
+            }
+        }
+        if(balls>=m){
+            return true;
         }
         return false;
-    }
-    
-    public int maxDistance(int[] position, int m) {
-        
-        Arrays.sort(position);
-        int n = position.length;
-        
-        int s = 1;
-        int e = position[n-1];
-        int ans = 0;
-        
-        while(s<=e)
-        {
-            int mid = (s+e)/2;
-            if(isPossible(position, m, mid))
-            {
-                ans = mid;
-                s = mid+1;
-            }
-            else
-            {
-                e = mid-1;
-            }
-        }
-        
-        return ans;
-        
     }
 }
