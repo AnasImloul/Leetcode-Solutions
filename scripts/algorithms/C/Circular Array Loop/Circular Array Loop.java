@@ -1,67 +1,36 @@
+// Runtime: 16 ms (Top 46.1%) | Memory: 40.11 MB (Top 41.3%)
+
 class Solution {
     public boolean circularArrayLoop(int[] nums) {
-        boolean[] vis = new boolean[nums.length];
-        
-        for(int i =0 ; i < nums.length ; i++)
-        {
-                if(!vis[i] &&checkCycle(nums,i,vis) == true)
-                   return true;
+        for (int i=0; i<nums.length; i++) {
+            boolean isForward = nums[i] > 0;
+            int slow = i;
+            int fast = i; 
+            do {
+                slow = findNextIndex(nums, isForward, slow);
+                fast = findNextIndex(nums, isForward, fast);
+                if (fast != -1) {
+                    fast = findNextIndex(nums, isForward, fast);
+                }
+            } while (slow != -1 && fast != -1 && slow != fast);
+            if (slow != -1 && slow == fast) {
+                return true;
+            }
         }
         return false;
     }
-    
-    boolean checkCycle(int[] nums,int i, boolean[] vis)
-    {
-        vis[i] = true; // mark this position as visited
-        int fast = i; //for cycle detection
-        int slow = i;//for cycle detection
-        int n = nums.length;
-        
-        
-        fast = (fast + nums[fast] + 1000*n)%n; //this equation will greente that I always stay within the array boundries the 1000 is because the smallest negative elment in the array is -1000
-        vis[fast] = true; // mark every visited pos with true
-        fast = (fast + nums[fast] + 1000*n)%n;//3,0,1,3,1
-        vis[fast] = true;
-        slow = (slow + nums[slow] + 1000*n)%n;//3.0
-        
-        while(fast != slow)
-        {
-            fast = (fast + nums[fast] + 1000*n)%n;
-            vis[fast] = true;
-            fast = (fast + nums[fast] + 1000*n)%n;//3,0,1,3,1
-            vis[fast] = true;
-            slow = (slow + nums[slow] + 1000*n)%n;//3.0
+    private int findNextIndex(int[] arr, boolean isForward, int currentIndex) {
+        boolean direction = arr[currentIndex] >= 0;
+        if (isForward != direction) {
+            return -1;
         }
-        //now fast == slow we found the start of our cycle
-		//validate the cycle
-		
-        int start = slow;
-        
-		slow = (slow + nums[slow] + 1000*n)%n;
-        //get the sign of the initial pos
-		boolean startSign = (nums[start] > 0);
-        
-      
-        //one elment loop
-        if(slow == start)
-        {
-            return false;
+        int nextIndex = (currentIndex + arr[currentIndex]) % arr.length;
+        if (nextIndex < 0) {
+            nextIndex += arr.length;
         }
-        
-        while(slow != start)
-        {
-            boolean currentSign = (nums[slow] > 0);
-            
-            if(currentSign != startSign )
-            {
-                return false;
-            }
-            
-            slow = (slow + nums[slow] + 1000*n)%n;
-            
-           
+        if (nextIndex == currentIndex) {
+            nextIndex = -1;
         }
-        
-        return true;
+        return nextIndex;
     }
 }
