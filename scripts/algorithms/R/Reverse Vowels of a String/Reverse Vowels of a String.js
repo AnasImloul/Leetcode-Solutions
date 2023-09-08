@@ -1,37 +1,19 @@
-/**
- * @param {string} s
- * @return {string}
- */
+// Runtime: 62 ms (Top 89.7%) | Memory: 48.50 MB (Top 60.7%)
+
 var reverseVowels = function(s) {
-    const vowels = new Map(); 
-    vowels.set('a');
-    vowels.set('e');
-    vowels.set('i');
-    vowels.set('o');
-    vowels.set('u');
-    
-    let start = 0;
-    let end = s.length - 1;
-    
-    const sArr = s.split('');
-    
-    while (start < end) {
-        if (vowels.has(sArr[start].toLowerCase()) && vowels.has(sArr[end].toLowerCase())) {
-            [sArr[start], sArr[end]] = [sArr[end], sArr[start]];
-            start++;
-            end--;
-            continue;
-        }
-        
-        if (!vowels.has(sArr[start].toLowerCase())) {
-            start++;    
-        } else if (!vowels.has(sArr[end].toLowerCase())) {
-            end--;
+    const VOWELS = { 'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1, 'A': 1, 'E': 1, 'I': 1, 'O': 1, 'U': 1 };
+    const arr = s.split('');
+    let i = 0, j = arr.length - 1;
+    while (i < j) {
+        if (VOWELS[arr[i]] && VOWELS[arr[j]]) {
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            i++;
+            j--;
+        } else if (VOWELS[arr[i]]) {
+            j--;
         } else {
-            start++;    
-            end--;
+            i++;
         }
     }
-    
-    return sArr.join('');
+    return arr.join('');
 };
