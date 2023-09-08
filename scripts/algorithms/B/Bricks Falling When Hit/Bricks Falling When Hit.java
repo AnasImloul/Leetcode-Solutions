@@ -1,103 +1,79 @@
+// Runtime: 11 ms (Top 84.7%) | Memory: 57.45 MB (Top 26.3%)
+
 class Solution {
-    int[]parent;
-    int[]rank;
-    int[]size;
-    int m;
-    int n;
+    int[][] dirs = new int[][]{{1,0},{-1,0},{0,1},{0,-1}};
+
     public int[] hitBricks(int[][] grid, int[][] hits) {
-        m = grid.length;
-        n = grid[0].length;
-        parent = new int[m * n + 1];
-        rank = new int[m * n + 1];
-        size = new int[m * n + 1];
-        for(int i=0;i<parent.length;i++){
-            parent[i] = i;
-            rank[i] = 0;
-            size[i] = 1;
-        }
+        //marking all the hits that has a brick with -1
+        for(int i=0;i<hits.length;i++)
+            if(grid[hits[i][0]][hits[i][1]] == 1)
+                grid[hits[i][0]][hits[i][1]] = -1;
         
-        //Logic Start
-        for(int []hit : hits){          //remove bricks from grid
-            int x = hit[0];
-            int y = hit[1];
-            if(grid[x][y] == 1){
-                grid[x][y] = 2;
-            }
-        }
+        //marking all the stable bricks
+        for(int i=0;i<grid[0].length;i++)
+            markAndCountStableBricks(grid, 0, i);
         
-        for(int i=0;i<m;i++){     //union of all 1's
-            for(int j=0;j<n;j++){
-                if(grid[i][j] == 1){
-                    handleUnion(grid,i,j);
-                }
-            }
-        }
-        
-        int[]res = new int[hits.length];
-        
-        for(int i=hits.length-1;i>=0;i--){      //Add Bricks where they were and calculate size
-            int x = hits[i][0];
-            int y = hits[i][1];
+        int[] res = new int[hits.length];
+        //looping over hits array backwards and restoring bricks
+        for(int i=hits.length-1;i>=0;i--){
+            int row = hits[i][0];
+            int col = hits[i][1];
             
-            if(grid[x][y] == 2){
-                int bricksZ = size[find(0)];
-                grid[x][y] = 1;
-                handleUnion(grid,x,y);
-                int newBricks = size[find(0)];
-                
-                if(newBricks > bricksZ){
-                    res[i] = newBricks - bricksZ - 1;
-                }
-            }
+            //hit is at empty space so continue
+            if(grid[row][col] == 0)
+                continue;
+            
+            //marking it with 1, this signifies that a brick is present in an unstable state and will be restored in the future
+            grid[row][col] = 1;
+            // checking brick stability, if it's unstable no need to visit the neighbours
+            if(!isStable(grid, row, col))
+                continue;
+			
+			//So now as our brick is stable we can restore all the bricks connected to it
+            //mark all the unstable bricks as stable and get the count
+            res[i] = markAndCountStableBricks(grid, hits[i][0], hits[i][1])-1; //Subtracting 1 from the total count, as we don't wanna include the starting restored brick
         }
+        
         return res;
     }
     
-    int[][]dirs = {{0,-1},{1,0},{0,1},{-1,0}};
-    public void handleUnion(int[][]grid,int i,int j){
-        int bno = i*n + j + 1;
-        for(int[]dir : dirs){
-            int ni = i + dir[0];
-            int nj = j + dir[1];
+    private int markAndCountStableBricks(int[][] grid, int row, int col){
+        if(grid[row][col] == 0 || grid[row][col] == -1)
+            return 0;
+        
+        grid[row][col] = 2;
+        int stableBricks = 1;
+        for(int[] dir:dirs){
+            int r = row+dir[0];
+            int c = col+dir[1];
             
-            if(ni >= 0 && ni<m && nj >= 0 && nj < n && grid[ni][nj] == 1){
-                int nbno = ni*n + nj + 1;
-                union(bno,nbno);
-            }
+            if(r < 0 || r >= grid.length || c < 0 || c >= grid[0].length)
+                continue;
+            
+            if(grid[r][c] == 0 || grid[r][c] == -1 || grid[r][c] == 2)
+                continue;
+            
+            stableBricks += markAndCountStableBricks(grid, r, c);
         }
-        if(i == 0){
-            union(0,bno);
-        }
+        
+        return stableBricks;
     }
     
-    public void union(int X,int Y){
-        int x = find(X);
-        int y = find(Y);
+    private boolean isStable(int[][] grid, int row, int col){
+        if(row == 0)
+            return true;
         
-        if(x == y){
-            return;
+        for(int[] dir:dirs){
+            int r = row+dir[0];
+            int c = col+dir[1];
+            
+            if(r < 0 || r >= grid.length || c < 0 || c >= grid[0].length)
+                continue;
+            
+            if(grid[r][c] == 2)
+                return true;
         }
         
-        if(rank[x] < rank[y]){
-            parent[x] = y;
-            size[y] += size[x];
-        }else if(rank[y] < rank[x]){
-            parent[y] = x;
-            size[x] += size[y];
-        }else{
-            parent[y] = x;
-            rank[x]++;
-            size[x] += size[y];
-        }
-        
-        
-    }
-    public int find(int x){
-        if(parent[x] == x){
-            return x;
-        }else{
-            parent[x] = find(parent[x]);
-            return parent[x];
-        }
+        return false;
     }
 }
