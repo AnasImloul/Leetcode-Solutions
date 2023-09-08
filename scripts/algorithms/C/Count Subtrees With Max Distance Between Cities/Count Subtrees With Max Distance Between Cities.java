@@ -1,3 +1,5 @@
+// Runtime: 232 ms (Top 14.5%) | Memory: 44.30 MB (Top 38.1%)
+
 class Solution {
     public int[] countSubgraphsForEachDiameter(int n, int[][] edges) {
          
