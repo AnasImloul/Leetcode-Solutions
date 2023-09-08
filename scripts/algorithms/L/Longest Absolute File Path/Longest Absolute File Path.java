@@ -1,29 +1,35 @@
-class Solution {
-    int ans = 0;
-    public int lengthLongestPath(String input) {
-        int[] fileLenths = new int[input.length()];
-        for(String fileDirName: input.split("\n")) {
-               //dirLevel or number of tabs in beginning of current file/dir
-              int dirLevel = dirLevel(fileDirName);
-              // remove leading tabs
-              fileDirName = fileDirName.substring(dirLevel);
-              // To find length till this dir, you need to add current dir length in the parent (dirLevel-1) length
-              //+1 is for path separator '/'
-              fileLenths[dirLevel] = (dirLevel > 0 ? fileLenths[dirLevel-1] + 1: 0) + fileDirName.length();
-              //if file
-              if(fileDirName.contains(".")) {
-                  ans = Math.max(ans, fileLenths[dirLevel]);
-               } 
+// Runtime: 1 ms (Top 81.1%) | Memory: 40.51 MB (Top 47.9%)
 
+class Solution {
+    public int lengthLongestPath(String input) {
+        var stack = new ArrayDeque<Integer>();
+        int max = 0;
+        String[] lines = input.split("\n");
+        for(var line: lines) {
+            int tabs = countTabs(line);
+            while(tabs < stack.size()) {
+                stack.pop();
+            }
+            int current = stack.isEmpty() ? 0: stack.peek();
+            int nameLength = line.length() - tabs;
+            if(isFilename(line)) {
+                max = Math.max(max, current + nameLength);
+            } else {
+                stack.push(current + nameLength + 1);
+            }
         }
-        return ans;
+        return max;
     }
     
-    //counts number of tabs in front of the file/dire name
-    int dirLevel(String dirName) {
-        int count = 0;
-        int i = 0;
-        while(dirName.charAt(i++) == '\t') count++;
-        return count;
+    private int countTabs(String s) {
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) != '\t') return i;
+        }
+        return 0;
     }
+    
+    private boolean isFilename(String s) {
+        return s.lastIndexOf(".") != -1;
+    }
+    
 }
