@@ -1,35 +1,32 @@
-class Solution 
-{
-    //Keeping the starting position as 1
-    int[][] memo = new int[255][501];
-    final int MOD = (int)(1e9+7);
-    public int numWays(int steps, int arrLen) 
-    {
-        for(int[] x: memo)
-            Arrays.fill(x, -1);
-        return find(1, 0, steps, arrLen);
+// Runtime: 205 ms (Top 20.9%) | Memory: 55.71 MB (Top 10.4%)
+
+class Solution {
+    
+    HashMap<String,Long> map = new HashMap();
+    
+    public int numWays(int steps, int arrLen) {
+        
+        return (int) (ways(steps,arrLen,0) % ((Math.pow(10,9)) +7));
     }
     
-    int[] dx = {-1, 0, 1};
-    public int find(int pos, int stepCount, int steps, int arrLen)
-    {
-        if(stepCount == steps)
-            return pos == 1 ? 1 : 0;
-        if(pos > (steps+1)/2 + 1)//Can't take more than 250 steps to right
+    public long ways(int steps,int arrLen,int index){
+        String curr = index + "->" + steps;
+        
+        if(index == 0 && steps == 0){
+            return 1;
+        }else if(index < 0 || (index >= arrLen) || steps == 0){
             return 0;
-        
-        if(memo[pos][stepCount] != -1)
-            return memo[pos][stepCount];
-        
-        int res = 0;
-        for(int i=0;i<3;i++)
-        {
-            int newPos = pos + dx[i];
-            if(newPos <= 0 || newPos > arrLen)//Out of bounds
-                continue;
-            
-            res = (res + find(newPos, stepCount+1, steps, arrLen))%MOD;
         }
-        return memo[pos][stepCount] = res%MOD;
+        
+        if(map.containsKey(curr)){
+            return map.get(curr);
+        }
+        long stay = ways(steps-1,arrLen,index);
+        long right = ways(steps-1,arrLen,index+1);
+        long left = ways(steps-1,arrLen,index-1);
+        
+        map.put(curr , (stay+right+left) % 1000000007);
+        
+        return (right + left + stay) % 1000000007;
     }
 }
