@@ -1,15 +1,15 @@
+// Runtime: 63 ms (Top 38.1%) | Memory: 43.90 MB (Top 52.3%)
+
+/**
+ * @param {string} preorder
+ * @return {boolean}
+ */
 var isValidSerialization = function(preorder) {
-    preorder = preorder.split(',');
-    const len = preorder.length;
-    const stack = [];
-    for(let i = len - 1; i >= 0; i--) {
-        if(preorder[i] == '#') stack.push('#');
-        else {
-            if(stack.length < 2) return false;
-            if(stack.at(-1) != '#' || stack.at(-2) != '#') return false;
-            stack.pop();
-        }
-    }
-    
-    return stack.length == 1 && stack[0] == '#';
-};
+    let balance = 1
+    for(const node of preorder.split(','))
+        if (balance > 0)
+            if (node === '#') --balance
+            else ++balance
+        else return false
+    return balance < 1
+}
