@@ -1,3 +1,5 @@
+// Runtime: 16 ms (Top 70.5%) | Memory: 56.31 MB (Top 66.2%)
+
 class Solution {
 
     private boolean canFit(int n, long k, int[] batteries) {
