@@ -1,23 +1,27 @@
-// Camelcase Matching
-// https://leetcode.com/problems/camelcase-matching/
+// Runtime: 1 ms (Top 33.0%) | Memory: 40.70 MB (Top 50.3%)
 
 class Solution {
     public List<Boolean> camelMatch(String[] queries, String pattern) {
-        List<Boolean> res = new ArrayList<>();
-        for (String query : queries) {
-            res.add(match(query, pattern));
-        }
-        return res;       
-    }
-    private boolean match(String query, String pattern) {
-        int i = 0;
-        for (char c : query.toCharArray()) {
-            if (i < pattern.length() && c == pattern.charAt(i)) {
-                i++;
-            } else if (Character.isUpperCase(c)) {
-                return false;
+      List<Boolean> list = new ArrayList<>();
+
+      for (var q : queries) {
+         int index = 0;
+         boolean flag = true;
+         for (var c : q.toCharArray()) {
+            if(index < pattern.length() && c == pattern.charAt(index)){
+               index++;
+               continue;
             }
-        }
-        return i == pattern.length();
+            if(c >= 'A' && c <= 'Z'){
+               if(index >= pattern.length() || c != pattern.charAt(index)){
+                  flag = false;
+                  break;
+               }
+            }
+         }
+         flag = flag && index == pattern.length();
+         list.add(flag);
+      }
+      return list;
     }
 }
