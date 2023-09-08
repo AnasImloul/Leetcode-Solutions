@@ -1,54 +1,45 @@
-/*
+// Runtime: 154 ms (Top 50.0%) | Memory: 48.85 MB (Top 59.5%)
 
-startZeroNumFlips:  number of flips if string were to start at i and start with 0
-startOneNumFlips:  number of flips if string were to start at i and start with 1
-
-*/
- var minFlips = function(s) {
-    // value to hold starting with zero
-    let startZeroNumFlips = 0;
-    for (let i = 0; i < s.length; i++) {
-        if (i % 2) {
-            if (s[i] === '0') startZeroNumFlips++;
-        } else {
-            if (s[i] === '1') startZeroNumFlips++;
-        }
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var minFlips = function(s) {
+    let length = s.length-1
+    let flipMap = {
+        '1': '0',
+        '0': '1'
     }
-    let startOneNumFlips = s.length - startZeroNumFlips;
+    s = s + s
+    let alt1 = '1'
+    let alt2 = '0'
+    let left = 0
+    let right = 0
+    let diff1 = 0
+    let diff2 = 0
+    let min = Infinity
 
-    let minimumFlips = Math.min(startZeroNumFlips, startOneNumFlips);
-    const isEvenLength = s.length % 2 === 0;
-
-    for (let i = 1; i < s.length; i++) {
-        
-        // check the previous char to see which
-        // value to decrement
-        if (s[i - 1] === '1') {
-            startZeroNumFlips--;    
-        } else {
-            startOneNumFlips--;
+    while (right < s.length) {
+        if (right > 0) {
+            alt1 = flipMap[alt1]
+            alt2 = flipMap[alt2]
         }
 
-        // swap the 2 variables because we shifted the index by 1
-        [startOneNumFlips, startZeroNumFlips] = [startZeroNumFlips, startOneNumFlips];
-
-        // add corresponding number of flips
-        if (isEvenLength) {
-            if (s[i - 1] === '1') {
-                startOneNumFlips++;
+        let current = s[right]
+        if (current !== alt1) diff1++
+        if (current !== alt2) diff2++
+        if (right-left === length) {
+            min = Math.min(diff1, diff2, min)
+            if ((length+1)%2 === 0) {
+                if (s[left] !== flipMap[alt1]) diff1--
+                if (s[left] !== flipMap[alt2]) diff2--
             } else {
-                startZeroNumFlips++;
+                if (s[left] !== alt1) diff1--
+                if (s[left] !== alt2) diff2--
             }
-        } else {
-            if (s[i - 1] === '1') {
-                startZeroNumFlips++;
-            } else {
-                startOneNumFlips++;
-            }
+            left++
         }
-
-        // calculate the number of flips
-        minimumFlips = Math.min(startZeroNumFlips, startOneNumFlips, minimumFlips);
+        right++
     }
-    return minimumFlips;
+    return min
 };
