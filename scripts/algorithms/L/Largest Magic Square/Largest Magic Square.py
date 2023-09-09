@@ -1,53 +1,26 @@
-# Runtime: 3643 ms (Top 25.24%) | Memory: 14.1 MB (Top 78.64%)
+# Runtime: 1987 ms (Top 15.7%) | Memory: 16.60 MB (Top 82.4%)
+
 class Solution:
     def largestMagicSquare(self, grid: List[List[int]]) -> int:
-
-        def isMagicSquare(i, j, length):
-            s = set()
-
-            #for all rows
-            for x in range(length):
-                sum = 0
-                for y in range(length):
-                    sum += grid[i+x][j+y]
-                s.add(sum)
-                if len(s)>1:
-                    return False
-
-            #for all cols
-            for y in range(length):
-                sum = 0
-                for x in range(length):
-                    sum += grid[i+x][j+y]
-                s.add(sum)
-                if len(s)>1:
-                    return False
-
-            # for forward diagonal
-            sum = 0
-            for x in range(length):
-                sum += grid[i+x][j+x]
-            s.add(sum)
-            if len(s)>1:
-                return False
-
-            #for backward diagonal
-            sum = 0
-            for x in range(length):
-                sum += grid[i+x][j+ length - 1 - x]
-            s.add(sum)
-            if len(s)>1:
-                return False
-            return True
-
-        n = len(grid)
-        m = len(grid[0])
-
-        l = min(n,m)
-
-        for k in range(l, 1, -1):
-            for i in range(n-k+1):
-                for j in range(m-k+1):
-                    if isMagicSquare(i, j, k):
-                        return k
-        return 1
+        m, n = len(grid), len(grid[0]) # dimensions 
+        rows = [[0]*(n+1) for _ in range(m)] # prefix sum along row
+        cols = [[0]*n for _ in range(m+1)] # prefix sum along column
+        
+        for i in range(m):
+            for j in range(n): 
+                rows[i][j+1] = grid[i][j] + rows[i][j]
+                cols[i+1][j] = grid[i][j] + cols[i][j]
+        
+        ans = 1
+        for i in range(m): 
+            for j in range(n): 
+                diag = grid[i][j]
+                for k in range(min(i, j)): 
+                    ii, jj = i-k-1, j-k-1
+                    diag += grid[ii][jj]
+                    ss = {diag}
+                    for r in range(ii, i+1): ss.add(rows[r][j+1] - rows[r][jj])
+                    for c in range(jj, j+1): ss.add(cols[i+1][c] - cols[ii][c])
+                    ss.add(sum(grid[ii+kk][j-kk] for kk in range(k+2))) # anti-diagonal
+                    if len(ss) == 1: ans = max(ans, k+2)
+        return ans 
