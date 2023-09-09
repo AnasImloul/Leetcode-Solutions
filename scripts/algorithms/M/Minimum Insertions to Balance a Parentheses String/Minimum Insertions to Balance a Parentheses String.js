@@ -1,3 +1,5 @@
+// Runtime: 58 ms (Top 100.0%) | Memory: 45.84 MB (Top 50.0%)
+
 var minInsertions = function(s) {
     let rightNeeded = 0;
     let leftNeeded = 0;
