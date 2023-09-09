@@ -1,40 +1,30 @@
-/**
- * @param {number} n
- * @return {number}
- */
- var clumsy = function(n) {
-    let res = 0;
-    let count = 0;
-    let sum = n;
-    let tmp = [];
-    let flag = true;
-    for(let i=n-1; i>=1; i--){
-        if(count === 0){
-            sum = sum * i;
-            count ++;
-        }else if(count === 1){
-            sum = parseInt(sum / i);
-            count ++;
-        }else if(count === 2){
-            if(flag){
-                sum = sum + i;
-            }else{
-                sum = sum - i;
-            }
-            count ++;
-        }else if(count === 3){
-            flag = false;
-            tmp.push(sum);
-            sum = i;
-            count = 0;
+// Runtime: 56 ms (Top 66.6%) | Memory: 44.56 MB (Top 25.0%)
+
+var clumsy = function(N) {
+    let s = [N];
+    let op = "*"
+    for (let i=N-1; i>0; i--) {
+        n = s.length;
+        switch (op) {
+            case "*":
+                s[n-1] *= i;
+                op = "/"
+                break
+            case "/":
+                s[n-1] = (s[n-1]<0) ? -Math.floor(Math.abs(s[n-1])/i) : Math.floor(s[n-1]/i)
+                op = "+"
+                break;
+            case "+":
+                s.push(i)
+                op = "-";
+                break;
+            case "-":
+                s.push(-i)
+                op = "*";
+                break;
         }
     }
-    
-    tmp.push(sum);
-    res = tmp[0];
-    for(let i=1; i<tmp.length; i++){
-        res -= tmp[i];
-    }
-    
-    return res;
+    // console.log(s)
+    let ans = s.reduce((a,b) => a+b)
+    return ans
 };
