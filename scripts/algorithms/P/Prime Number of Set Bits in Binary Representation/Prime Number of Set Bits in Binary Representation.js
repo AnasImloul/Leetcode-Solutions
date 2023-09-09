@@ -1,36 +1,17 @@
-var countPrimeSetBits = function (left, right) {
-    let count = 0;
+// Runtime: 312 ms (Top 24.6%) | Memory: 47.93 MB (Top 40.7%)
 
-    for (let i = left; i <= right; i++) {
-        let sum = 0;
-        let bytes = i.toString(2);
+/**
+ * @param {number} L
+ * @param {number} R
+ * @return {number}
+ */
+var countPrimeSetBits = function(L, R) {
+  let set = new Set([2, 3, 5, 7, 11, 13, 17, 19]);
+  let countPrime = 0;
+  
+  for (let i = L; i <= R; i++) {
+    if (set.has(i.toString(2).replace(/0/g, '').length)) countPrime++;
+  }
 
-        for (let i = 0; i < bytes.length; i++) {
-            const element = bytes[i];
-            element === "1" ? sum += 1 : 0
-        }
-        
-        checkPrime(sum) ? count++ : 0;
-    }
-
-    return count;
-
-}
-
-
-const checkPrime = (number) => {
-    isPrime = true;
-    if (number < 1) {
-        isPrime = false;
-    } else if (number === 1) {
-        isPrime = false;
-    } else {
-        for (let i = 2; i < number; i++) {
-            if (number % i == 0) {
-                isPrime = false;
-            }
-            
-        }
-    }
-    return isPrime;
-}
+  return countPrime;
+};
