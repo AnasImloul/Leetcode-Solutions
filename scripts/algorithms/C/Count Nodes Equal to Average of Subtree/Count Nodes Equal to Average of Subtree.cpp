@@ -1,35 +1,18 @@
-class Solution {
-public:    
-    int count(TreeNode* root)
-    {
-        //if tree is empty
-        if(root==NULL) return 0;
-        
-        //if tree has single node/leaf node
-        if(root->left==NULL && root->right==NULL) return 1;    
-        
-        return 1 + count(root->left) + count(root->right);
-    }
-    
-    
-    int sum(TreeNode* root)
-    {
-        //if tree is empty
-        if(root==NULL) return 0;
-        
-        return root->val + sum(root->left) +  sum(root->right);
-    }
-    
-    int averageOfSubtree(TreeNode* root) {
-        
-        //if tree is empty
-        if(root==NULL) return 0;
-        
-        //if tree has single node/leaf node
-        if(root->left==NULL && root->right==NULL) return 1;
-        
-        //return value or Boolean condition(1 or 0) + rec(root->left) + rec(root->right)
-        return (sum(root)/count(root)==root->val) + averageOfSubtree(root->left) + averageOfSubtree(root->right);
+// Runtime: 3 ms (Top 95.3%) | Memory: 11.96 MB (Top 50.2%)
 
+class Solution {
+public:
+    pair<int,int> func(TreeNode* root,int &ans){
+        if(!root)return {0,0};
+        auto p1=func(root->left,ans);
+        auto p2=func(root->right,ans);
+        int avg=(root->val+p1.first+p2.first)/(p1.second+p2.second+1);
+        if(avg==root->val)ans++;
+        return {root->val+p1.first+p2.first,p1.second+p2.second+1};
+    }
+    int averageOfSubtree(TreeNode* root) {
+        int ans=0;
+        func(root,ans);
+        return ans;
     }
 };
