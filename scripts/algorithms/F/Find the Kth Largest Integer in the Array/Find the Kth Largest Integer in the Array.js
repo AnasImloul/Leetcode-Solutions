@@ -1,3 +1,5 @@
+// Runtime: 7964 ms (Top 6.4%) | Memory: 57.65 MB (Top 58.0%)
+
 var kthLargestNumber = function(nums, k) {
     const n = nums.length;
     k = n - k; 
