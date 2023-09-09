@@ -1,35 +1,29 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.19 MB (Top 57.6%)
+
 class Solution {
 public:
     int addMinimum(string word) {
-        word += "  ";
-        int ans = 0;
-        for(int i = 0; i < word.size() - 2; i++) {
-            int c = word[i];
-            if(c == 'a') {
-                if(word[i + 1] == 'b') {
-                    i++;
-                    if(word[i + 1] == 'c') {
-                        i++;
-                    } else {
-                        ans++;
-                    }
-                } else if(word[i + 1] == 'c'){
-                    i++;
-                    ++ans;
-                } else {
-                    ans += 2;
-                }
-            } else if(c == 'b') {
-                if(word[i + 1] == 'c') {
-                    i++;
-                    ++ans;
-                } else {
-                    ans += 2;
-                }
-            } else if(c == 'c') {
-                ans += 2;
+        
+        int n = word.size(), i = 0, res = 0;
+        
+        while(i < n) {
+            int count = 0;
+            
+            if(word[i] == 'a') {
+                count++;i++;
             }
+             
+            if(i < n and word[i] == 'b') {
+                count++;i++;
+            }
+            
+            if(i < n and word[i] == 'c') {
+                count++;i++;
+            }
+            
+            res += 3 - count;
         }
-        return ans;
+        
+        return res;
     }
 };
