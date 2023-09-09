@@ -1,8 +1,7 @@
-/**
- * @param {number[]} grades
- * @return {number}
- */
+// Runtime: 65 ms (Top 58.3%) | Memory: 50.03 MB (Top 41.6%)
+
 var maximumGroups = function(grades) {
-    let c = grades.length*2;
-    return Math.floor((-1+Math.sqrt(1+4*c))/2)
+    var count=1, length=grades.length;
+    while(length-count > count) length-=count++;
+    return count;
 };
