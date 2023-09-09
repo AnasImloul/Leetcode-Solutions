@@ -1,29 +1,16 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 7.01 MB (Top 57.2%)
+
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
-        
-        int gap=1;
-        for(int i=0;i<matrix.size();i++){
-            
-            for(int j=gap;j<matrix[i].size();j++){
-                swap(matrix[i][j],matrix[j][i]);
+        int row = matrix.size();
+        for(int i=0;i<row; i++){
+            for(int j=0; j<=i;j++){
+                swap(matrix[i][j], matrix[j][i]);
             }
-            gap++;
         }
-        
-        for(int i=0;i<matrix.size();i++){
-            
-            int first=0;
-            int last= matrix[i].size()-1;
-            
-            while(first<last){
-                swap(matrix[i][first],matrix[i][last]);
-                first++;
-                last--;
-                
-            }
-            
+        for(int i=0;i<row;i++){
+            reverse(matrix[i].begin(), matrix[i].end());
         }
-        
     }
 };
