@@ -1,25 +1,30 @@
+// Runtime: 76 ms (Top 14.9%) | Memory: 6.33 MB (Top 5.0%)
+
 class Solution {
 public:
-    //basically if we store the digits of the number in an array, then the question boils down to 
-    //finding the next lexicographically larger permutation of the digits.
     int nextGreaterElement(int n) {
-        vector<int>digits;
-        int number=n;
-        while(number){
-            digits.push_back(number%10);
-            number/=10;
+       vector<int>vec;
+       int temp = n;
+        while(n>0){
+            int r = n%10;
+            vec.push_back(r);
+            n /= 10; 
         }
-        reverse(digits.begin(),digits.end());
-        next_permutation(digits.begin(),digits.end());
-        long ans=0;
-        for(int i=0;i<digits.size();i++){
-            ans*=10;
-            ans+=digits[i];
-        }
-        if(ans>(long)INT_MAX or ans<=n){
-            return -1;
-        } else {
-            return (int)ans;
-        }
+        sort(vec.begin(),vec.end());
+        do{
+            int num=0;
+            long j=0;
+            int s = vec.size()-1;
+            long i = pow(10,s);
+            while(i>0)
+           {
+            num += i*vec[j++];
+            i /= 10;
+           }
+              if(num>temp)
+                 return num;
+    
+        } while(next_permutation(vec.begin(),vec.end()));
+       return -1;
     }
 };
