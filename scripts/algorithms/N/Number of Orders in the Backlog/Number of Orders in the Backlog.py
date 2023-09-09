@@ -1,3 +1,5 @@
+# Runtime: 689 ms (Top 70.7%) | Memory: 55.89 MB (Top 32.0%)
+
 class Solution:
     def getNumberOfBacklogOrders(self, orders):
         b, s = [], []
