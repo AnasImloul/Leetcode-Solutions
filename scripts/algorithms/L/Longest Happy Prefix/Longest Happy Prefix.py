@@ -1,14 +1,16 @@
-# Runtime: 575 ms (Top 52.45%) | Memory: 19 MB (Top 20.00%)
+# Runtime: 186 ms (Top 90.2%) | Memory: 21.02 MB (Top 32.3%)
+
 class Solution:
     def longestPrefix(self, s: str) -> str:
-        n = len(s)
-        lps = [0]*n
+        n=len(s)
+        lps=[0]*n
+        j=0
         for i in range(1,n):
-            j = lps[i-1]
-            while j>0 and s[j] != s[i]:
-                j = lps[j-1]
-            if s[j] == s[i]:
-                j += 1
-            lps[i] = j
-        l = lps[n-1]
-        return s[:l]
+            while s[i]!=s[j] and j>0:
+                j=lps[j-1]
+
+            if s[i]==s[j]:
+                lps[i]=j+1
+                j+=1
+
+        return s[:lps[-1]]
