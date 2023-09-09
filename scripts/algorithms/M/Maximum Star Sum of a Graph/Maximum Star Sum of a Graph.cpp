@@ -1,25 +1,42 @@
-class Solution {
+// Runtime: 342 ms (Top 47.2%) | Memory: 141.26 MB (Top 27.0%)
+
+class Solution 
+{
 public:
-    int maxStarSum(vector<int>& vals, vector<vector<int>>& edges, int k) {
-        vector<int> g[100005];
-        int n = vals.size();
-        for(auto x: edges) {            
-            if(vals[x[1]] > 0) g[x[0]].push_back(vals[x[1]]);
-            if(vals[x[0]] > 0) g[x[1]].push_back(vals[x[0]]);
+    int maxStarSum(vector<int>& vals, vector<vector<int>>& edges, int k) 
+    {
+        int n=vals.size();
+        vector<pair<int, int>> adj[n]; //stores (ai, bi, and bi's value) here ai and bi are node connected with an edge
+        
+        for(int i=0; i<edges.size(); i++) //creating undirected graph with node's value
+        {
+            adj[edges[i][0]].push_back({edges[i][1], vals[edges[i][1]]});
+            adj[edges[i][1]].push_back({edges[i][0], vals[edges[i][0]]});
         }
-        for(int i=0; i<n; i++) {
-            sort(g[i].rbegin(), g[i].rend());
-            for(int j=1; j<g[i].size(); j++) g[i][j] += g[i][j-1];
-        }
-        int ans = INT_MIN;
-        for(int i=0; i<n; i++) {
-            int cnt = vals[i];
-            if(k and g[i].size()) {
-                if(k <= g[i].size()) cnt += g[i][k-1];
-                else cnt += g[i].back();
+        
+        int maxi = INT_MIN;
+        vector<int> connectedNodesVals; //stores connected nodes' value 
+        for(int node=0; node<n; node++)
+        {
+            for(auto it:adj[node]) //storing all the adjacent nodes' value
+            {
+                connectedNodesVals.push_back(it.second);
             }
-            ans = max(ans, cnt);
+            //sort vals in descreasing order to get top-k max vals
+            sort(connectedNodesVals.begin(), connectedNodesVals.end(), greater<int>()); 
+            
+            int i=0, sum=vals[node];
+            maxi = max(maxi, sum); //for handling single node condition & negative nodes' values 
+            while(i<connectedNodesVals.size() && i<k) //calculating max star sum
+            {
+                sum += connectedNodesVals[i++];
+                maxi = max(maxi, sum);
+            }
+            
+            connectedNodesVals.clear(); //clear array for next node
         }
-        return ans;
+        return maxi;
+        
+        
     }
 };
