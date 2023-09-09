@@ -1,18 +1,21 @@
+// Runtime: 84 ms (Top 89.5%) | Memory: 47.08 MB (Top 93.0%)
+
+const moves = [[1,0],[0,1],[-1,0],[0,-1]]
+
 var swimInWater = function(grid) {
-    const dir = [[1, 0], [-1, 0], [0, 1], [0, -1]];
-    const heap = new MinPriorityQueue({compare: (a, b) => a.depth - b.depth});
-    heap.enqueue({row: 0, col: 0, depth: grid[0][0], maxDepth: grid[0][0]})
-    
-    let visited = new Set();
-    while (heap.size()) {
-        let {row, col, maxDepth} = heap.dequeue();
-        visited.add(`${row}-${col}`);
-        if (row === grid.length - 1 && col === grid.length - 1) return maxDepth;
-        for (let [r, c] of dir) {
-            let newR = row + r, newC = col + c;
-            if (visited.has(`${newR}-${newC}`)) continue;
-            if (newR < 0 || newC < 0 || newR >= grid.length || newC >= grid[0].length) continue;
-            heap.enqueue({row: newR, col: newC, depth: grid[newR][newC], maxDepth: Math.max(maxDepth, grid[newR][newC])});
+    let pq = new MinPriorityQueue(),
+        N = grid.length - 1, ans = grid[0][0], i = 0, j = 0
+    while (i < N || j < N) {
+        for (let [a,b] of moves) {
+            let ia = i + a, jb = j + b
+            if (ia < 0 || ia > N || jb < 0 || jb > N || grid[ia][jb] > 2500) continue
+            pq.enqueue((grid[ia][jb] << 12) + (ia << 6) + jb)
+            grid[ia][jb] = 3000
         }
-    }  
+        let next = pq.dequeue().element
+        ans = Math.max(ans, next >> 12)
+        i = (next >> 6) & ((1 << 6) - 1)
+        j = next & ((1 << 6) - 1)
+    }
+    return ans
 };
