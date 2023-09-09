@@ -1,73 +1,52 @@
-static int fast_io = []() 
-{ 
-    std::ios::sync_with_stdio(false); 
-    cin.tie(nullptr); 
-    cout.tie(nullptr); 
-    return 0; 
-}();
-
-#ifdef LOCAL
-    freopen("input.txt", "r" , stdin);
-    freopen("output.txt", "w", stdout);
-#endif
+// Runtime: 677 ms (Top 15.4%) | Memory: 125.54 MB (Top 33.7%)
 
 class Solution {
 public:
-    vector<vector<vector<int>>>dp;
-    bool hasValidPath(vector<vector<char>>& grid) 
+    int n,m;
+    int dp[101][101][200];
+    bool find(vector<vector<char>>& mat,int row,int col,int open)
     {
-        //initializing the dp form memoization
-        dp.resize(grid.size()+1,vector<vector<int>>(grid[0].size()+1,vector<int>(205,-1)));
-
-        //row and col for traversing the grid
-        int row = 0;
-        int col = 0;
-        
-        //mainitng a variable to keep the track of the open and the close bracket
-        int k = 0;
-
-        //fun function will return if there exist any path from top to bottom with valid vps
-        return fun(grid,row,col,k);    
-    }
-    int fun(vector<vector<char>>&grid,int row,int col,int k)
-    {
-          if(row<0 or row>=grid.size() or col<0 or col>=grid[0].size())
-          {
-              return false;
-          }
-
-          if(grid[row][col] == '(')
-          {
-              k++;
-          }      
-          else if(grid[row][col] == ')')
-          {
-              k--;
-          }
-
-          if(k < 0) //no of cloing brackets are now more than no of opening brackets return flase
-          return false;
-
-          if(row == grid.size()-1 and col == grid[0].size()-1)   //if we reach the destination
-          {
-                if(k > 0)  //this means no of opening are more than closing 
-                return false;
-
-                if(k == 0)  //this means all the brackets are balances
+        if(row<0||col<0||row>=n||col>=m||open<0)
+        {
+            return false;
+        }
+        if(dp[row][col][open]!=-1)
+        {
+            return dp[row][col][open];
+        }
+        if(row==n-1&&col==m-1)
+        {
+            if(mat[row][col]=='(')
+            {
+                open++;
+            }
+            else 
+            {
+                open--;
+            }
+            return open==0;
+        }
+        if(mat[row][col]=='(')
+        {
+            if(find(mat,row+1,col,open+1)||find(mat,row,col+1,open+1))
+            {
                 return true;
-
-                if(k < 0)   //no of closing brackets are more than no of opening brackets
-                return false;
-          }
-          
-          //if the state is currently computed
-          if(dp[row][col][k]!=-1)
-          return dp[row][col][k];
-     
-          //checking all the possibility 
-          int choise1 = fun(grid,row+1,col,k);
-          int choise2 = fun(grid,row,col+1,k);
-
-          return dp[row][col][k] = choise1 or choise2;
+            }
+        }
+        else
+        {
+            if(find(mat,row+1,col,open-1)||find(mat,row,col+1,open-1))
+            {
+                return true;
+            }
+        }
+        return dp[row][col][open]=false;
+    }
+    bool hasValidPath(vector<vector<char>>& mat) 
+    {
+        memset(dp,-1,sizeof(dp));
+        n=mat.size();
+        m=mat[0].size();
+        return find(mat,0,0,0);
     }
 };
