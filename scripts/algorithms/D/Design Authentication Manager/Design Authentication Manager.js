@@ -1,59 +1,19 @@
-// Runtime: 360 ms (Top 51.28%) | Memory: 62 MB (Top 5.13%)
-/**
- * @param {number} timeToLive
- */
+// Runtime: 211 ms (Top 9.0%) | Memory: 51.68 MB (Top 72.7%)
+
+// O(n)
 var AuthenticationManager = function(timeToLive) {
-    this.timeToLive=timeToLive;
-    this.tokens=new Map();
+    this.ttl = timeToLive;
+    this.map = {};
 };
-
-/**
- * @param {string} tokenId
- * @param {number} currentTime
- * @return {void}
- */
 AuthenticationManager.prototype.generate = function(tokenId, currentTime) {
-    if(!this.tokens.has(tokenId)){
-        let tokenInfo={
-            tokenId:tokenId,
-            expiresAt:currentTime+this.timeToLive
-        }
-        this.tokens.set(tokenId,tokenInfo);
-    }
+    this.map[tokenId] = currentTime + this.ttl;
 };
-
-/**
- * @param {string} tokenId
- * @param {number} currentTime
- * @return {void}
- */
 AuthenticationManager.prototype.renew = function(tokenId, currentTime) {
-    if(!this.tokens.has(tokenId)) return;
-
-    let token=this.tokens.get(tokenId);
-    if(token.expiresAt>currentTime){
-        this.tokens.set(tokenId,{...token,expiresAt:currentTime+this.timeToLive})
-    }else{
-        this.tokens.delete(tokenId);
+    let curr = this.map[tokenId];
+    if (curr > currentTime) {
+        this.generate(tokenId, currentTime);
     }
 };
-
-/**
- * @param {number} currentTime
- * @return {number}
- */
 AuthenticationManager.prototype.countUnexpiredTokens = function(currentTime) {
-    let activeTokensCount=0;
-    for(let [key,token] of this.tokens.entries()){
-        if(token.expiresAt>currentTime) activeTokensCount++;
-    }
-    return activeTokensCount;
+    return Object.keys(this.map).filter(key => this.map[key] > currentTime).length;
 };
-
-/**
- * Your AuthenticationManager object will be instantiated and called as such:
- * var obj = new AuthenticationManager(timeToLive)
- * obj.generate(tokenId,currentTime)
- * obj.renew(tokenId,currentTime)
- * var param_3 = obj.countUnexpiredTokens(currentTime)
- */
