@@ -1,13 +1,9 @@
+# Runtime: 1091 ms (Top 49.0%) | Memory: 27.44 MB (Top 83.6%)
+
 class Solution:
     def closestToTarget(self, arr: List[int], target: int) -> int:
-        sets = [set() for _ in range(len(arr))]
-        sets[0].add(arr[0])
-        for i in range(1,len(arr)):
-            sets[i].add(arr[i])
-            for e in sets[i-1]:
-                sets[i].add(e & arr[i])
-        res = float('inf')
-        for S in sets:
-            for e in S:
-                res = min(res, abs(e-target))
-        return res
+        ans, seen = inf, set()
+        for x in arr: 
+            seen = {ss & x for ss in seen} | {x}
+            ans = min(ans, min(abs(ss - target) for ss in seen))
+        return ans 
