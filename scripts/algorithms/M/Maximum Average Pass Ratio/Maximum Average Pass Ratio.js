@@ -1,96 +1,119 @@
-var maxAverageRatio = function(classes, extraStudents) {
-    // the heap will automatically find the class that will benefit
-    // the most by adding a passing student
-    const heap = new MaxHeap();
-    
-    // push all the classes into the heap so that
-    // the heap can find the class that will benefit the most
-    for (const x of classes) {
-        heap.push(x);
-    }
-    
-    // while there are extra students
-    while (extraStudents) {
-        
-        // add the extra student to the class that will benefit the most
-        heap.peak()[0] += 1;
-        heap.peak()[1] += 1;
-        
-        // heapify down so that the heap remains valid
-        heap.heapifyDown(0);
-        
-        extraStudents--;
-    }
-    
-    
-    // calculate the new average of all the classes
-    let total = 0;
-    for (const [x , y] of heap.store) {
-        total += (x / y);
-    }
-    return total / heap.store.length;
-};
+// Runtime: 444 ms (Top 100.0%) | Memory: 91.26 MB (Top 83.3%)
 
-
+/**
+ * @param {number[][]} classes
+ * @param {number} extraStudents
+ * @return {number}
+ */
 class MaxHeap {
     constructor() {
-        this.store = [];
+        this.heap = [];
     }
-    
-    peak() {
-        return this.store[0];
+
+    push(value) {
+        this.heap.push(value);
+        this.heapifyUp(this.heap.length - 1);
     }
-    
-    size() {
-        return this.store.length;
-    }
-    
+
     pop() {
-        if (this.store.length < 2) {
-            return this.store.pop();
+        if (this.heap.length === 0) {
+            return null;
         }
-        const result = this.store[0];
-        this.store[0] = this.store.pop();
+        if (this.heap.length === 1) {
+            return this.heap.pop();
+        }
+
+        const top = this.heap[0];
+        this.heap[0] = this.heap.pop();
         this.heapifyDown(0);
-        return result;
+
+        return top;
     }
-    
-    push(val) {
-        this.store.push(val);
-        this.heapifyUp(this.store.length - 1);
-    }
-    
-    heapifyUp(child) {
-        while (child) {
-            const parent = Math.floor((child - 1) / 2);
-            if (this.shouldSwap(child, parent)) {
-                [this.store[child], this.store[parent]] = [this.store[parent], this.store[child]]
-                child = parent;
+
+    heapifyUp(index) {
+        while (index > 0) {
+            const parent = Math.floor((index - 1) / 2);
+            if (this.heap[parent][0] < this.heap[index][0]) {
+                [this.heap[parent], this.heap[index]] = [this.heap[index], this.heap[parent]];
+                index = parent;
             } else {
-                return child;
+                break;
             }
         }
     }
-    
-    heapifyDown(parent) {
+
+    heapifyDown(index) {
+        const n = this.heap.length;
         while (true) {
-            let [child, child2] = [1,2].map((x) => parent * 2 + x).filter((x) => x < this.size());
-            if (this.shouldSwap(child2, child)) {
-                child = child2
+            let largest = index;
+            const left = 2 * index + 1;
+            const right = 2 * index + 2;
+
+            if (left < n && this.heap[left][0] > this.heap[largest][0]) {
+                largest = left;
             }
-            if (this.shouldSwap(child, parent)) {
-                [this.store[child], this.store[parent]] = [this.store[parent], this.store[child]]
-                parent = child;
+            if (right < n && this.heap[right][0] > this.heap[largest][0]) {
+                largest = right;
+            }
+
+            if (largest !== index) {
+                [this.heap[index], this.heap[largest]] = [this.heap[largest], this.heap[index]];
+                index = largest;
             } else {
-                return parent;
+                break;
             }
         }
     }
-    
-    shouldSwap(child, parent) {
-        if (!child) return false;
-        const c = (this.store[child][0] + 1) / (this.store[child][1] + 1) - (this.store[child][0]) / (this.store[child][1]);
-        const p = (this.store[parent][0] + 1) / (this.store[parent][1] + 1) - (this.store[parent][0]) / (this.store[parent][1]);
-        return c > p;
+
+    size() {
+        return this.heap.length;
     }
 }
+
+var maxAverageRatio = function(classes, extraStudents) {
+    const n = classes.length;
+
+    // Helper function to calculate pass ratio increase
+    const passRatioIncrease = (pass, total) => (pass + 1) / (total + 1) - pass / total;
+
+    // Initialize max heap to keep track of classes with maximum improvement
+    const maxHeap = new MaxHeap();
+
+    for (let j = 0; j < n; j++) {
+        const [pass, total] = classes[j];
+        if (pass !== total) {
+            const increase = passRatioIncrease(pass, total);
+            maxHeap.push([increase, j]);
+        }
+    }
+
+    let totalPassRatio = 0;
+
+    for (let j = 0; j < n; j++) {
+        totalPassRatio += classes[j][0] / classes[j][1];
+    }
+
+    for (let i = 0; i < extraStudents; i++) {
+        if (maxHeap.size() === 0) {
+            break; // No more classes to consider
+        }
+
+        const [increase, maxIndex] = maxHeap.pop();
+        const [pass, total] = classes[maxIndex];
+        const newPass = pass + 1;
+        const newTotal = total + 1;
+        const newIncrease = passRatioIncrease(newPass, newTotal);
+        const newAvg = (totalPassRatio - (pass / total)) + (newPass / newTotal);
+
+        if (newAvg <= totalPassRatio) {
+            break; // No further improvement possible
+        }
+
+        totalPassRatio = newAvg;
+        classes[maxIndex][0]++;
+        classes[maxIndex][1]++;
+        maxHeap.push([newIncrease, maxIndex]);
+    }
+
+    return totalPassRatio / n;
+};
