@@ -1,45 +1,55 @@
+// Runtime: 54 ms (Top 93.4%) | Memory: 16.26 MB (Top 14.3%)
+
 class Solution {
 public:
-    int cal(int node, int n, vector<vector<pair<int,int>>> &graph, int maxd) {
-        vector<int> dist(n, INT_MAX);
-        priority_queue<vector<int>, vector<vector<int> >, greater<vector<int>>> pq;
-        pq.push({0, node});
-        dist[node] = 0;
-        while(!pq.empty()) {
-            int d = pq.top()[0];
-            int node = pq.top()[1];
-            pq.pop();
-            if(dist[node] != d) continue;
-            for(auto nbr : graph[node]) {
-                int u = nbr.first;
-                int len = nbr.second;
-                if(dist[u] > len + d) {
-                    dist[u] = len+d;
-                    pq.push({dist[u], u});
-                }
-            }
+unordered_map<int,int>m;
+    int findTheCity(int n, vector<vector<int>>& edges, int threshold) {
+        vector<vector<pair<int,int>>>adj(n);
+        for(auto x:edges)
+        {
+            adj[x[0]].push_back({x[1],x[2]});
+            adj[x[1]].push_back({x[0],x[2]});
         }
-        int cnt = 0;
-        for(int i = 0; i < n; i++) {
-            if(dist[i] <= maxd) cnt++;
-        }
-        return cnt;
-    }
-    int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
-        vector<vector<pair<int, int>>> graph(n);
-        for(auto e : edges) {
-            graph[e[0]].push_back({e[1], e[2]});
-            graph[e[1]].push_back({e[0], e[2]});
-        }
-        int maxcnt = INT_MAX;
-        int resnode = 0;
-        for(int i = 0; i < n; i++) {
-            int cnt = cal(i, n, graph, distanceThreshold);
-            if(maxcnt >= cnt) {
-                maxcnt = cnt;
-                resnode = i;
-            }
-        }
-        return resnode;
+        int ind=-1,ans=1e8;
+       for(int i=0;i<n;i++)
+       {
+           queue<pair<int,int>>q;
+           q.push({i,0});
+           vector<int>dis(n,1e8);
+           dis[i]=0;
+           while(!q.empty())
+           {
+               int node=q.front().first;
+               int wt=q.front().second;
+               q.pop();
+               for(auto x:adj[node])
+               {
+                   int node1=x.first;
+                   int wt1=x.second;
+                   if(wt+wt1<dis[node1])
+                   {
+                       dis[node1]=wt+wt1;
+                       q.push({node1,wt+wt1});
+                   }
+               }
+           }
+           int c=0;
+           for(int i=0;i<dis.size();i++)
+           {
+               if(dis[i]<=threshold)
+               {
+                   c++;
+               }
+           }
+           if(c<=ans)
+           {
+               ans=c;
+               ind=max(ind,i);
+           }
+           
+       }
+       return ind;
+
+
     }
 };
