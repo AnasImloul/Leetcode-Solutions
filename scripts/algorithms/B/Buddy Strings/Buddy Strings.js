@@ -1,23 +1,14 @@
-/**
- * @param {string} s
- * @param {string} goal
- * @return {boolean}
- */
-var buddyStrings = function(s, goal) {
-    if (s.length !== goal.length) return false;
-	// if there are same chars in s and s is the same as goal, s is the buddy string.
-	// Because we can swap this char to keep the string same as origin
-    if (s === goal) return s.length > new Set(s).size;
-    const temp = [];
-    for (let i = 0; i < goal.length; i++) {
-        if (s[i] !== goal[i]) {
-            temp.push(s[i], goal[i]);
-        }
+// Runtime: 49 ms (Top 97.2%) | Memory: 44.05 MB (Top 38.9%)
+
+var buddyStrings = function(A, B) {
+    if(A.length != B.length) return false;
+    const diff = [];
+    
+    for(let i = 0; i < A.length; i++) {
+        if(A[i] != B[i]) diff.push(i);
+        if(diff.length > 2) return false;
     }
-	// If it's buddy string, we can get the array, which has four chars.
-	// [ s[n], goal[n], s[m], goal[m] ]
-    //  if s ="xxabxx", goal="xxbaxx", we will get [ a, b, b, a] for example
-	// Because after we swap the char in n and char in m, we can get the same string
-	// If it's buddy string, s[n] is different with goal[n] and s[m], which means s[n] === goal[m] and s[m] === goal[n];
-    return temp.length === 4 && temp[0] === temp[3] && temp[1] === temp[2];
+    if(!diff.length) return A.length != [...new Set(A)].length;
+    const [i, j] = diff; 
+    return A[i] == B[j] && B[i] == A[j];
 };
