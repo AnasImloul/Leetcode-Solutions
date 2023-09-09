@@ -1,11 +1,8 @@
+// Runtime: 54 ms (Top 83.3%) | Memory: 45.05 MB (Top 16.6%)
+
 var getLastMoment = function(n, left, right) {
-    left.sort(function(a,b){return a-b});
-    right.sort(function(a,b){return a-b});
-    if(left.length == 0){
-        return n-right[0];
-    }
-    if(right.length == 0){
-        return left[left.length-1];
-    }
-    return Math.max(left[left.length-1], n-right[0])
+    const maxLeft = Math.max(...left);
+    const minRight = Math.min(...right);
+
+    return Math.max(n - minRight, maxLeft);
 };
