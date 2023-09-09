@@ -1,64 +1,86 @@
-let parentMap;
-let leaves;
+// Runtime: 165 ms (Top 9.0%) | Memory: 65.69 MB (Top 9.0%)
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} distance
+ * @return {number}
+ */
 var countPairs = function(root, distance) {
-    if(root==null){
-        return 0;
+    var graph = new Map()
+    var leaves = new Map()
+    function dfs(root, parent) {
+        if (!root) return 
+        if (!root.left && !root.right) {
+            leaves.set(root, true)
+        }
+
+        graph.set(root, [])
+        if (root.left) {
+            graph.get(root).push(root.left)
+        }
+        if (root.right) {
+            graph.get(root).push(root.right)
+        }
+        if (parent) {
+            graph.get(root).push(parent)
+        }
+        dfs(root.left, root)
+        dfs(root.right, root)
+    }  
+
+    dfs(root, null)
+
+    var visited = new Map()
+    var count = 0
+
+    function bfs(start, dis) {
+        visited.set(start, true)
+        var queue = [graph.get(start).filter(node => !visited.has(node))]
+
+        var innerVisited = new Map()
+
+        while (queue.length) {
+            var curLevelNodes = queue.shift()
+
+            if (!curLevelNodes.length) break
+            if (dis === 0) break
+
+            var nextLevelNodes = []
+            for (var i = 0; i < curLevelNodes.length; i++) {
+                var curLevelNode = curLevelNodes[i]
+
+                innerVisited.set(curLevelNode, true)
+
+                if (leaves.has(curLevelNode)) {
+                    count++
+                }
+
+                nextLevelNodes.push(
+                    ...graph
+                        .get(curLevelNode)
+                        .filter(node => 
+                            !visited.has(node) && 
+                            !innerVisited.has(node)
+                        )
+                )
+               
+            }
+            queue.push(nextLevelNodes)
+            dis--
+        }
     }
-    leaves = [];
-    parentMap = new Map();
-    let cnt = 0;
-    let visited;
-    
-    // Step1: build parent map
-    findParent(root, null);
-    
-    // Step2: dfs to find all leafNodes
-    dfs1(root);
-     
-    // Step3: count pairs from each leaf
-    for(const leaf of leaves)
-    {
-        visited = new Set();
-        cnt += dfs2(leaf, 0, distance, visited);
-    }
-    
-    return cnt / 2; 
+
+    leaves.forEach((value, leaf) => {
+        bfs(leaf, distance)
+    })
+
+    return count
 };
-
-function findParent(node, pa) {
-    if(node === null) {
-        return;
-    }
-    parentMap.set(node, pa);
-    findParent(node.left, node);
-    findParent(node.right, node); 
-}
-function dfs1(node) {
-    if(node===null) {
-        return;
-    }
-    if(node.left===null && node.right === null) {
-        leaves.push(node);
-        return;
-    }
-    dfs1(node.left);
-    dfs1(node.right);
-}
-
-function dfs2(node, cur, dist, visited)
-{
-    if(!node || cur > dist || visited.has(node) ) {
-        return 0;
-    }
-
-    if(node.left === null && node.right===null && cur !== 0) {
-        return 1;
-    }
-     
-    visited.add(node);
-    let ans = 0;
-    ans += dfs2(parentMap.get(node), cur+1, dist, visited);
-    ans += dfs2(node.left, cur+1, dist, visited);
-    ans += dfs2(node.right, cur+1, dist, visited);
-    return ans;  
-}
