@@ -1,3 +1,5 @@
+// Runtime: 90 ms (Top 100.0%) | Memory: 44.29 MB (Top 89.4%)
+
 var countLatticePoints = function(circles) {
     let minX=minY=Infinity, maxX=maxY=-Infinity;
     for(let i=0; i<circles.length; i++){
