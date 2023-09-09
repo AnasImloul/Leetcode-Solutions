@@ -1,47 +1,40 @@
+// Runtime: 67 ms (Top 8.8%) | Memory: 41.33 MB (Top 13.3%)
+
 class Solution {
 public:
-    vector<int> threeEqualParts(vector<int>& arr) {
-        int c=0;
-        vector<int> v={-1,-1};
-        int n=arr.size();
+    vector<int> threeEqualParts(vector<int>& v) {
+        vector<int> one;
+        int n=v.size();
         for(int i=0;i<n;i++){
-            if(arr[i]==1)
-                c++;
+            if(v[i]==1) one.push_back(i+1);
         }
-        if(c%3!=0)return v;
-        if(c==0)return {0,2}; //can make split from anywhere. this is in case we have 3 size of given array
-        
-        int idx=-1;
-        int cnt=0;
-        // start counting c/3 1s from back,so that we can make 3 equal parts
-        for(int i=n-1;i>=0;i--)
-        {
-            if(arr[i]==1)
-                cnt++;
-            if(cnt==c/3)
-            {  idx=i;
-             break;}
-            
+        if(one.size()==0){
+            return {0,2};
         }
-        int front=0;  // ignoring leading 0s
-        while(arr[front]==0)
-            front++;
-        
-        int strt=idx;
-        while(strt<n && arr[front]==arr[strt]){
-            front++;
-            strt++;
+        if(one.size()%3)    return {-1,-1};
+
+        int ext=n-one.back(),sz=one.size();
+        int gap1=one[sz/3]-one[sz/3-1]-1,gap2=one[2*sz/3]-one[2*sz/3-1]-1;
+        // cout<<gap1<<" "<<gap2<<endl;
+        if(gap1<ext || gap2<ext)    return {-1,-1};
+
+        string s1,s2,s3;
+        for(int i=0;i<=one[sz/3-1]+ext-1;i++){
+            if(s1.length()>0 || v[i])   s1+=to_string(v[i]);
         }
-        if(strt!=n)return v;
-        int frststrt=front-1;
-        while(arr[front]==0)front++;
-        strt=idx;
-        while(strt<n && arr[front]==arr[strt]){
-            front++;
-            strt++;
+
+        for(int i=one[sz/3-1]+ext;i<=one[2*sz/3-1]+ext-1;i++){
+            if(s2.length()>0 || v[i])   s2+=to_string(v[i]);
         }
-         if(strt!=n)return v;
-        return {frststrt,front};
-        
+
+        for(int i=one[2*sz/3-1]+ext;i<=n-1;i++){
+            if(s3.length()>0 || v[i])   s3+=to_string(v[i]);
+        }
+        //All 3 Numbers in vector v :-
+        // num1={0,one[sz/3-1]+ext-1};
+        // num2={one[sz/3-1]+ext,one[2*sz/3-1]+ext-1}
+        // num3={one[2*sz/3-1]+ext,n-1};
+        if(s1==s2 && s2==s3)    return {one[sz/3-1]+ext-1,one[2*sz/3-1]+ext};
+        return {-1,-1};
     }
 };
