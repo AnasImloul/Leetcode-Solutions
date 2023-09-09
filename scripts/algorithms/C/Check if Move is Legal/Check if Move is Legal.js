@@ -1,3 +1,5 @@
+// Runtime: 45 ms (Top 90.9%) | Memory: 42.05 MB (Top 100.0%)
+
 var checkMove = function(board, rMove, cMove, color) {
     const moves = [-1, 0, 1];
     
