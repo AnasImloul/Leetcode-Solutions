@@ -1,52 +1,24 @@
-/**
- * @param {string} characters
- * @param {number} combinationLength
- */
+// Runtime: 91 ms (Top 48.4%) | Memory: 50.62 MB (Top 48.4%)
+
 var CombinationIterator = function(characters, combinationLength) {
-    
-    this.combinations = [];
-    
-    const buildAllCombination = (curString, masterString) => {
-        if(curString.length == combinationLength ){
-            this.combinations.push(curString);
-        }
-        if(curString.length > combinationLength ) return ;
-        for(let g=0; g<masterString.length; g++){
-            buildAllCombination(curString + masterString[g], masterString.slice(g+1));
-        }
-        
-    }
-    //lets sort it first
-    characters = characters.split('').sort( (a, b) => a-b );
-    buildAllCombination('', characters); // lets build the combinations;
-    this.counter = 0;
-    
-    
+    this.stack = Array.from({ length: combinationLength }, (_, i) => i);
+    this.combinationLength = combinationLength;
+    this.characters = characters;
 };
 
-/**
- * @return {string}
- */
 CombinationIterator.prototype.next = function() {
-  
-    let res =  this.combinations[this.counter];
-    this.counter++;
-    return res;
+    const word = this.stack.map((i) => this.characters[i]).join("");
+
+    for (let lastIndex = this.characters.length - 1; this.stack.at(-1) == lastIndex; )
+        lastIndex = this.stack.pop() - 1;
+
+    if (this.stack.length > 0)
+        for (let i = this.stack.pop() + 1; this.stack.length < this.combinationLength; i++)
+            this.stack.push(i);
     
-    
+    return word;
 };
 
-/**
- * @return {boolean}
- */
 CombinationIterator.prototype.hasNext = function() {
-    
-    return this.counter < this.combinations.length;
+    return this.stack.length > 0;
 };
-
-/** 
- * Your CombinationIterator object will be instantiated and called as such:
- * var obj = new CombinationIterator(characters, combinationLength)
- * var param_1 = obj.next()
- * var param_2 = obj.hasNext()
- */
