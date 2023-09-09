@@ -1,26 +1,28 @@
+# Runtime: 1243 ms (Top 52.9%) | Memory: 16.52 MB (Top 32.4%)
+
 class Solution:
     def getMinSwaps(self, num: str, k: int) -> int:
-        def next_permutation(nums):
-            small = len(nums) - 2
-            while small >= 0 and nums[small] >= nums[small+1]: small -= 1 # find last place there is an increase
-            if small == -1: nums.reverse()                                # mono-decrease
-            else:
-                next_larger = small+1
-                for i in range(len(nums)-1, small, -1):
-                    # find smallest number larger than `nums[small]` from right side of `small`, 
-                    #   if there are same value, take the most right one
-                    if nums[small] < nums[i]: next_larger = i; break
-                nums[small], nums[next_larger] = nums[next_larger], nums[small]
-                start = small+1
-                nums[start:] = nums[start:][::-1]
-            return nums
-
-        origin, num = list(num), list(num)
-        for _ in range(k):                    # O(n*k)
-            num = next_permutation(num)
-        ans, n = 0, len(origin)
-        for i in range(n):                    # O(n*n)
-            j = num.index(origin[i], i)
-            ans += j - i
-            num[i:j+1] = [num[j]] + num[i:j]
-        return ans
+        num = list(num)
+        orig = num.copy()
+        
+        for _ in range(k): 
+            for i in reversed(range(len(num)-1)): 
+                if num[i] < num[i+1]: 
+                    ii = i+1 
+                    while ii < len(num) and num[i] < num[ii]: ii += 1
+                    num[i], num[ii-1] = num[ii-1], num[i]
+                    lo, hi = i+1, len(num)-1
+                    while lo < hi: 
+                        num[lo], num[hi] = num[hi], num[lo]
+                        lo += 1
+                        hi -= 1
+                    break 
+        
+        ans = 0
+        for i in range(len(num)): 
+            ii = i
+            while orig[i] != num[i]: 
+                ans += 1
+                ii += 1
+                num[i], num[ii] = num[ii], num[i]
+        return ans 
