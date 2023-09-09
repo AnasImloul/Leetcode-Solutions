@@ -1,3 +1,9 @@
+# Runtime: 46 ms (Top 35.3%) | Memory: 16.23 MB (Top 61.5%)
+
+import math 
 class Solution:
     def isPowerOfFour(self, n: int) -> bool:
-        return n > 0 and not(n & (n-1)) and int(sqrt(n)) * int(sqrt(n)) == n
+
+        if n <= 0:
+            return False
+        return math.log(n, 4).is_integer()
