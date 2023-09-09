@@ -1,23 +1,22 @@
-/**
- * @param {number} low
- * @param {number} high
- * @return {number[]}
- */
+// Runtime: 50 ms (Top 82.3%) | Memory: 42.65 MB (Top 5.8%)
+
 var sequentialDigits = function(low, high) {
-    let res=[];
+    const digits = '123456789';
+    const ans = [];
     
-    function recur(start,num,prev){
-        if(Number(num)>high) return;
-        
-        if(Number(num)>=low){
-            res.push(num);
-        }
-        for(let i=start+1;i<=10;i++){
-            if(prev+1==i || prev==0){
-                recur(i,num+prev,i);
+    const minLen = low.toString().length;
+    const maxLen = high.toString().length;
+    
+    for (let windowSize = minLen; windowSize <= maxLen; ++windowSize) {
+        for (let i = 0; i + windowSize <= digits.length; ++i) {
+            const num = parseInt(digits.substring(i, i + windowSize));
+            
+            if (num >= low && num <= high) {
+                ans.push(num);
             }
         }
     }
-    recur(0,'',0);
-    return res.map((str)=>Number(str)).sort((a,b)=>a-b);
+    
+    
+    return ans;
 };
