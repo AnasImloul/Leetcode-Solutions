@@ -1,20 +1,28 @@
+// Runtime: 66 ms (Top 94.87%) | Memory: 46.30 MB (Top 91.45%)
+
 var minDeletions = function(s) {
-    let arr = Array(26).fill(0)
-    let res = 0
+    let freq = new Array(26).fill(0); // Create an array to store character frequencies
     
-    for(let i=0;i<s.length; i++){
-        let index = s[i].charCodeAt(0) - 'a'.charCodeAt(0)
-        arr[index]++
+    for (let i = 0; i < s.length; i++) {
+        freq[s.charCodeAt(i) - 'a'.charCodeAt(0)]++; // Count the frequency of each character
     }
     
-    arr.sort((a,b)=>b-a)
+    freq.sort((a, b) => a - b); // Sort frequencies in ascending order
     
-    for(let i=1; i<26; i++){
-        while(arr[i] && arr[i] >= arr[i-1]){
-            arr[i]--
-            res++
+    let del = 0; // Initialize the deletion count
+    
+    for (let i = 24; i >= 0; i--) {
+        if (freq[i] === 0) {
+            break; // No more characters with this frequency
+        }
+        
+        if (freq[i] >= freq[i + 1]) {
+            let prev = freq[i];
+            freq[i] = Math.max(0, freq[i + 1] - 1);
+            del += prev - freq[i]; // Update the deletion count
         }
     }
     
-    return res
+    return del; // Return the minimum deletions required
 };
+
