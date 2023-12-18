@@ -1,3 +1,4 @@
+// Runtime: 324 ms (Top 44.4%) | Memory: 22.60 MB (Top 86.42%)
 
 class Solution:
     def mergeInBetween(self, list1: ListNode, a: int, b: int, list2: ListNode) -> ListNode:
