@@ -1,9 +1,5 @@
+// Runtime: 1076 ms (Top 41.88%) | Memory: 30.80 MB (Top 35.63%)
+
 class Solution:
-    def minimumRemoval(self, beans: List[int]) -> int:
-        totalSum = sum(beans)
-        beanLen = len(beans)
-        beans.sort()
-        minRm = float('inf')
-        for i, bean in enumerate(beans):
-            minRm = min(minRm, totalSum - (beanLen - i) * bean)
-        return minRm
+    def minimumRemoval(self, A: List[int]) -> int:
+        return sum(A) - max((len(A) - i) * n for i, n in enumerate(sorted(A)))
