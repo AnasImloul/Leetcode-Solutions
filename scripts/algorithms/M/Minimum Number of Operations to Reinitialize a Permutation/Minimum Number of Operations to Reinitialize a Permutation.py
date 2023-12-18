@@ -1,33 +1,10 @@
+// Runtime: 341 ms (Top 53.7%) | Memory: 16.20 MB (Top 72.22%)
+
 class Solution:
-    def check(self,perm,n) :
-        arr =[]
-        for i in range(len(perm)):
-            if i % 2 == 0:
-                arr.append(perm[i//2])
-            if i % 2 == 1:
-                arr.append(perm[n//2 + (i-1)//2])
-        return arr
-
     def reinitializePermutation(self, n: int) -> int:
-        perm = []
-        for i in range(n):
-            perm.append(i)
-
-        drr = perm
-        c = 0
-        #print(drr)
-        arr =self.check(perm,n)
-        if arr == drr:
-            return 1
-        else:
-            c = c + 1
-
-        while arr != drr:
-            if arr != perm:
-                perm = []
-                perm = arr
-                arr = self.check(perm,n)
-                c = c + 1
-                if arr == drr:
-                    break
-        return c
+        ans = 0
+        perm = list(range(n))
+        while True: 
+            ans += 1
+            perm = [perm[n//2+(i-1)//2] if i&1 else perm[i//2] for i in range(n)]
+            if all(perm[i] == i for i in range(n)): return ans
