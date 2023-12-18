@@ -1,59 +1,57 @@
-class Node{
-  public:
-    int data;
-    int x;
-    int y;
-    Node(int data,int x,int y){
-        this->data=data;
-        this->x=x;
-        this->y=y;
+// Runtime: 53 ms (Top 49.31%) | Memory: 15.90 MB (Top 91.78%)
+
+#include <vector>
+#include <queue>
+#include <limits>
+
+using namespace std;
+
+struct Item {
+    int val;
+    int r;
+    int c;
+    
+    Item(int val, int r, int c): val(val), r(r), c(c) {
     }
 };
 
-class Comparator{
-    public:
-    bool operator()(Node *a,Node *b){
-        return a->data > b->data;
+struct Comp {
+    bool operator() (const Item& it1, const Item& it2) {
+        return it2.val < it1.val;
     }
 };
 
 class Solution {
 public:
     vector<int> smallestRange(vector<vector<int>>& nums) {
-        vector<int>ans;
-       //min heap
-        int ans_min{},ans_max{};
-        priority_queue<Node*,vector<Node*>,Comparator>pq;
+        priority_queue<Item, vector<Item>, Comp> pq;
         
-        int maxi=nums[0][0];
-        //storing each list's starting element in pq and checking the max element
-        for(int i=0;i<nums.size();i++){
-            maxi = maxi>nums[i][0]? maxi : nums[i][0];
-            Node *temp=new Node(nums[i][0],i,0);
-            pq.push(temp);
+        int high = numeric_limits<int>::min();
+        int n = nums.size();
+        for (int i = 0; i < n; ++i) {
+            pq.push(Item(nums[i][0], i, 0));
+            high = max(high , nums[i][0]);
         }
-        ans_min=pq.top()->data;
-        ans_max=maxi;
-        int tempMin(ans_min),tempMax(ans_max);
-        while(pq.size()==nums.size()){
-            Node *temp = pq.top();
+        int low = pq.top().val;
+        
+        vector<int> res{low, high};
+        
+        while (pq.size() == (size_t)n) {
+            auto it = pq.top();
             pq.pop();
-            int i=temp->x;
-            int j=temp->y;
-            if(j+1 < nums[i].size()){
-                Node *nNode = new Node(nums[i][j+1],i,j+1);
-                pq.push(nNode);
-                tempMin=pq.top()->data;
-                tempMax=tempMax > nums[i][j+1] ? tempMax : nums[i][j+1];
-                if(tempMax-tempMin < ans_max-ans_min){
-                    ans_min=tempMin;
-                    ans_max=tempMax;
+            
+            if ((size_t)it.c + 1 < nums[it.r].size()) {
+                pq.push(Item(nums[it.r][it.c + 1], it.r, it.c + 1));
+                high = max(high, nums[it.r][it.c + 1]);
+                low = pq.top().val;
+                if (high - low < res[1] - res[0]) {
+                    res[0] = low;
+                    res[1] = high;
                 }
             }
         }
         
-        ans.push_back(ans_min);
-        ans.push_back(ans_max);
-        return ans;
+        return res;
     }
 };
+
