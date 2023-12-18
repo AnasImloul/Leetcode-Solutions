@@ -1,152 +1,124 @@
-// Runtime: 112 ms (Top 10.29%) | Memory: 20 MB (Top 68.57%)
-struct Node {
-    int val;
-    Node *prev, *next;
-    Node() {
-        val = 0, prev = next = NULL;
-    }
-
-    Node(int x) {
-        val = x, prev = next = NULL;
-    }
-
-    Node(int x, Node *p, Node *n) {
-        val = x, prev = p, next = n;
-    }
-};
+// Runtime: 39 ms (Top 12.5%) | Memory: 21.10 MB (Top 19.7%)
 
 class FrontMiddleBackQueue {
-    Node *head;
-    int size;
 public:
+    deque<int> list1;
+    deque<int> list2;
+    int size;
+    
     FrontMiddleBackQueue() {
-        head = NULL;
-        size = 0;
+        size = 0;        
     }
-
+    
     void pushFront(int val) {
-        head = new Node(val, NULL, head);
-        if(head->next) {
-            head->next->prev = head;
+        
+        if(list1.size()- list2.size() == 0)
+        {
+            list1.push_front(val);
         }
+        else
+        {
+            list1.push_front(val);
+            list2.push_front(list1.back());
+            list1.pop_back();
+        }
+        
         size++;
     }
-
+    
     void pushMiddle(int val) {
-        if(size == 0) {
-            head = new Node(val);
-            size++;
-            return;
+        
+        if(list1.size() - list2.size() == 0)
+        {
+            list1.push_back(val);
         }
-
-        if(size == 1) {
-            pushFront(val);
-            return;
+        else
+        {
+            list2.push_front(list1.back());
+            list1.pop_back();
+            list1.push_back(val);
         }
-
-        Node *ptr = NULL;
-        int n = size/2;
-        while(n--) {
-            if(ptr == NULL)
-                ptr = head;
-            else
-                ptr = ptr->next;
-        }
-
-        // Even or Odd push to next of ptr
-        Node *next = ptr->next;
-        ptr->next = new Node(val, ptr, next);
-        if(next)
-            next->prev = ptr->next;
+        
         size++;
     }
-
+    
     void pushBack(int val) {
-        Node *ptr = head;
-        if(ptr == NULL)
-            head = new Node(val);
-        else {
-            while(ptr->next) {
-                ptr = ptr->next;
-            }
-            ptr->next = new Node(val, ptr, NULL);
+            
+        if(list1.size() - list2.size() == 0)
+        {
+            list2.push_back(val);
+            list1.push_back(list2.front());
+            list2.pop_front();
         }
+        else
+        {
+            list2.push_back(val);
+        }
+        
         size++;
     }
-
+    
     int popFront() {
-        if(size == 0)
-            return -1;
-        int val = head->val;
-        head = head->next;
-        if(head)
-            head->prev = NULL;
+
+        if(size ==0) return -1;
+        
+        int val = list1.front();
+        list1.pop_front();
+        
+        if(list1.size()<list2.size())
+        {
+            list1.push_back(list2.front());
+            list2.pop_front();
+        }
+        
         size--;
         return val;
     }
-
+    
     int popMiddle() {
-        if(size == 0)
-            return -1;
+        
+        if(size ==0) return -1;
+        
+        int val = list1.back();
+        list1.pop_back();
 
-        if(size == 1) {
-            int val = head->val;
-            head = NULL;
-            size--;
-            return val;
+        if(list1.size() < list2.size())
+        {
+            list1.push_back(list2.front());
+            list2.pop_front();
         }
-
-        int n = size/2;
-        Node *ptr = NULL;
-        while(n--) {
-            if(ptr == NULL)
-                ptr = head;
-            else
-                ptr = ptr->next;
-        }
-
-        int val = -1;
-        Node *temp = NULL;
-
-        if(size & 1) { // Odd size delete ptr->next
-            val = ptr->next->val;
-            temp = ptr->next->next;
-            ptr->next = temp;
-            if(temp)
-                temp->prev = ptr;
-        } else { // Even size delete ptr
-            if(ptr == head) {
-                val = popFront();
-                size++; // since decreased by popFront
-            }
-            else {
-                val = ptr->val;
-                ptr->prev->next = ptr->next;
-                ptr->next->prev = ptr->prev;
-            }
-        }
+        
         size--;
         return val;
+        
     }
-
+    
     int popBack() {
-        if(size == 0)
-            return -1;
-        if(size == 1) {
-            int val = head->val;
-            head = NULL;
-            size = 0;
-            return val;
+        
+        if(size ==0) return -1;
+        
+        int val;
+        if(size==1)
+        {
+            val = list1.front();
+            list1.pop_front();
         }
+        else
+        {
+            val = list2.back();
+            list2.pop_back();
 
-        Node *ptr = head;
-        while(ptr->next) {
-            ptr = ptr->next;
+            int s1 = list1.size();
+            int s2 = list2.size();
+
+            if(list1.size() - list2.size() > 1)
+            {
+                list2.push_front(list1.back());
+                list1.pop_back();
+            }                   
         }
-
-        if(ptr->prev)
-            ptr->prev->next = NULL;
+        
         size--;
-        return ptr->val;
+        return val;       
     }
 };
