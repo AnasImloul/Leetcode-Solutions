@@ -1,33 +1,20 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+// Runtime: 7 ms (Top 68.09%) | Memory: 20.80 MB (Top 21.21%)
+
 class Solution {
 public:
     int diameterOfBinaryTree(TreeNode* root) {
-        
         int diameter = 0;
-        height(root,diameter);
+        height(root, diameter);
         return diameter;
-        
     }
-
-    int height(TreeNode* node, int& diameter){
-
-        if(!node) return 0;
-
-        int lh = height(node->left,diameter);
-        int rh = height(node->right,diameter);
-        diameter = max(diameter,lh+rh);
-
-        return 1 + max(lh,rh);
-
+private:
+    int height(TreeNode* node, int& diameter) {
+        if (!node) {
+            return 0;
+        }
+        int lh = height(node->left, diameter);
+        int rh = height(node->right, diameter);
+        diameter = max(diameter, lh + rh);
+        return 1 + max(lh, rh);
     }
 };
