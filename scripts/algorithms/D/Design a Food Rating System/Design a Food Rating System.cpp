@@ -1,4 +1,5 @@
-// Runtime: 487 ms (Top 98.33%) | Memory: 166 MB (Top 48.55%)
+// Runtime: 419 ms (Top 61.84%) | Memory: 166.30 MB (Top 53.62%)
+
 class FoodRatings {
 public:
     unordered_map<string, set<pair<int, string>>> cuisine_ratings;
