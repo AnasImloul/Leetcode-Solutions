@@ -1,3 +1,5 @@
+// Runtime: 46 ms (Top 62.5%) | Memory: 16.50 MB (Top 18.75%)
+
 class Solution:
     def longestSubsequence(self, s: str, k: int) -> int:
     
