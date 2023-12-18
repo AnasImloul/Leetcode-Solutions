@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 64.71%) | Memory: 40.70 MB (Top 25.29%)
+
 class Solution {
     public int countPoints(String rings) {
         Map<Integer,Set<Character>> m=new HashMap<>();
