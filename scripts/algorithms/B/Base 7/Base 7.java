@@ -1,20 +1,21 @@
+// Runtime: 1 ms (Top 62.45%) | Memory: 40.70 MB (Top 12.35%)
+
 class Solution {
     public String convertToBase7(int num) {
-        if (num == 0) {
-            return "0";
-        }
         StringBuilder sb = new StringBuilder();
-        int temp = num;
-        if (temp < 0) {
-            temp = -temp;
-        }
-        while (temp > 0) {
-            int rem = temp % 7;
-            sb.append(rem);
-            temp = temp / 7;
+        while(Math.abs(num) > 6) {
+            sb.append(num % 7);
+            num = num / 7;
         }
         if (num < 0) {
-            sb.append("-");
+            sb.append(Math.abs(num)).append("-");
+        } else {
+            sb.append(num);
+        }
+        for (int i = 0; i < sb.length() - 1; i++) {
+            if (!Character.isDigit(sb.charAt(i))) {
+                sb.replace(i, i + 1, "");
+            }
         }
         return sb.reverse().toString();
     }
