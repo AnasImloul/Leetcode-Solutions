@@ -1,13 +1,33 @@
+// Runtime: 295 ms (Top 84.0%) | Memory: 107.90 MB (Top 94.0%)
+
 var getDistances = function(arr) {
-    const result = [];
+    const map = new Map();
+    const result = new Array(arr.length).fill(0);
+
     for (let i = 0; i < arr.length; i++) {
-        let sum = 0;
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[j] === arr[i]) {
-                sum += Math.abs(i - j);
-            }
-        }
-        result[i] = sum;
+        const num = arr[i];
+        const val = map.get(num) || {
+            count: 0,
+            sum: 0
+        };
+        result[i] += (val.count * i) - val.sum;
+        val.sum += i;
+        val.count++;
+        map.set(num, val);
     }
+    map.clear();
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+        const num = arr[i];
+        const val = map.get(num) || {
+            count: 0,
+            sum: 0
+        };
+        result[i] += val.sum - (val.count * i);
+        val.sum += i;
+        val.count++;
+        map.set(num, val);
+    }
+
     return result;
 };
