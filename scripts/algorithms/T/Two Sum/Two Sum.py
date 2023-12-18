@@ -1,16 +1,11 @@
-# Runtime: 90 ms (Top 72.15%) | Memory: 15.1 MB (Top 64.41%)
+// Runtime: 2571 ms (Top 18.27%) | Memory: 17.10 MB (Top 86.21%)
 
 class Solution:
-
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        n = len(nums)
+        for i in range(n - 1):
+            for j in range(i + 1, n):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+        return []  # No solution found
 
-        arr = dict()
-        # store the index of each number in the array
-        for i,num in enumerate(nums):
-            arr[num] = i
-
-    # iterate one more time over the array to check if there is any element which complement is in the array
-        for j, num in enumerate(nums):
-            rest = target - num
-            if arr.get(rest, j) != j:
-                return [j, arr[rest]]
