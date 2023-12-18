@@ -1,24 +1,30 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.50 MB (Top 45.54%)
+
 class Solution {
     public int dominantIndex(int[] nums) {
-        int max = -1;
-        int smax = -1;
+        if(nums == null || nums.length == 0){
+            return -1;
+        }
         
-        for(int i=0;i<nums.length;i++){
-            
-            if(max == -1 || nums[i] >= nums[max]){
-                smax = max;
-                max = i;
-            }else if(smax == -1 || nums[i] >= nums[smax]){
-                smax = i;
+        if(nums.length == 1){
+            return 0;
+        }
+        int max = Integer.MIN_VALUE + 1;
+        int secondMax = Integer.MIN_VALUE;
+        int index = 0;
+        
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > max){
+                secondMax = max;
+                max = nums[i];
+                index = i;
+            } else if(nums[i] != max && nums[i] > secondMax){
+                secondMax = nums[i];
             }
         }
-        
-        
-        if(nums[max] >= 2*nums[smax]){
-            return max;
+        if(secondMax * 2 <= max){
+            return index;
         }
-        
         return -1;
-        
     }
 }
