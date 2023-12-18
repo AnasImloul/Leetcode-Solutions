@@ -1,50 +1,40 @@
+// Runtime: 115 ms (Top 60.09%) | Memory: 20.40 MB (Top 64.0%)
+
+#define pii pair<int, pair<int,int>>
+
 class Solution {
 public:
-    bool isValid(vector<vector<int>>& h, int x, int y) {
-        return x < n and x >= 0 and y < m and y >= 0;
-    }
-	
-    bool recDFS(vector<vector<int>>& h, int k, int x, int y) {
-        visited[x][y] = true;
-        if (x == n-1 && y == m-1)
-            return true;
-            
-        for (int i = 0; i < 4; i++) {
-            int x_curr = x + x_points[i];
-            int y_curr = y + y_points[i];
-            if (isValid(h, x_curr, y_curr) && !visited[x_curr][y_curr] && abs(h[x_curr][y_curr] - h[x][y]) <= k)
-                if (recDFS(h, k, x_curr, y_curr)) return true;
-        }
-
-        return false;
-    }
+    //Directions (top, right, bottom, left)
+    const int d4x[4] = {-1,0,1,0}, d4y[4] = {0,1,0,-1};
     
-    bool possibleLessEqK(vector<vector<int>>& h, int k) {
-        visited.assign(n,vector<bool> (m, false));
-        return recDFS(h, k, 0, 0);
-    }
-    
-    int minimumEffortPath(vector<vector<int>>& heights) {
-        n = heights.size();
-        m = heights[0].size();
+    int minimumEffortPath(vector<vector<int>>& h) {
+        int n = h.size(), m = h[0].size();
+        //min-heap
+        priority_queue <pii, vector<pii>, greater<pii>> pq;
+        //to store distances from (0,0)
+        vector<vector<int>> dis(n, vector<int>(m, INT_MAX));
+        dis[0][0] = 0;
+        pq.push({0, {0, 0}});
         
-        int lo = 0, hi = 1e6, mid;
-        while (lo < hi) {
-            mid = lo + (hi - lo) / 2;
-            
-            if (possibleLessEqK(heights, mid))
-                hi = mid;
-            else 
-                lo = mid + 1;
+        //Dijstra algorithm
+        while(!pq.empty()) {
+            pii curr = pq.top(); pq.pop();
+            int d = curr.first, r = curr.second.first, c = curr.second.second;
+            // bottom right position
+            if(r==n-1 && c==m-1) return d;
+            for(int i=0; i<4; ++i) {
+                int nx = r + d4x[i], ny = c + d4y[i];
+                //check if new position is invalid
+                if(nx < 0 || nx >= n || ny < 0 || ny >= m)continue;
+				//nd => new distance: which is max of distance till now(d) and curr distance (difference between heights of current cells)
+                int nd = max(d, abs(h[nx][ny] - h[r][c]));
+                if (nd < dis[nx][ny]) {
+                    dis[nx][ny] = nd;
+                    pq.push({nd, {nx, ny}});
+                }
+            }
         }
-        
-        return lo;
+        return 0;
+        //please upvote
     }
-    
-private:
-    vector<vector<bool>> visited;
-    vector<int> x_points = {1, 0, -1, 0};
-    vector<int> y_points = {0, 1, 0, -1};
-    int n;
-    int m;
 };
