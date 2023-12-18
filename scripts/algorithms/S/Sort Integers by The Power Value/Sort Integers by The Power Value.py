@@ -1,16 +1,24 @@
+// Runtime: 156 ms (Top 74.13%) | Memory: 16.70 MB (Top 42.43%)
+
+import heapq
 class Solution:
+    def power(self,n):
+        if n in self.dic:
+            return self.dic[n]
+        if n % 2:
+            self.dic[n] = self.power(3 * n + 1) + 1
+        else:
+            self.dic[n] = self.power(n // 2) + 1
+        return self.dic[n]    
     def getKth(self, lo: int, hi: int, k: int) -> int:
-      self.store = {1:0}
-      items = []
-      for x in range(lo, hi+1):
-        self.compute(x)
-        items.append((self.store[x], x))
-      items.sort()
-      return items[k-1][1]
-    
-    def compute(self, x):
-      if x in self.store:
-        return self.store[x]
-      y = x // 2 if x % 2 == 0 else 3 * x + 1
-      self.store[x] = 1 + self.compute(y)
-      return self.store[x]
+        self.dic = {1:0}
+        for i in range(lo,hi+1):
+            self.power(i)
+                        
+        lst = [(self.dic[i],i) for i in range(lo,hi+1)]
+        heapq.heapify(lst)
+        
+        for i in range(k):
+            ans = heapq.heappop(lst)
+        
+        return ans[1]     
