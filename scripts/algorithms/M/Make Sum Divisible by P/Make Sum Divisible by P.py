@@ -1,26 +1,18 @@
-# Runtime: 824 ms (Top 50.97%) | Memory: 32.5 MB (Top 61.17%)
+// Runtime: 457 ms (Top 46.03%) | Memory: 34.70 MB (Top 85.36%)
+
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
-        r = sum(nums)%p
-        if r == 0: return 0
-
-        d = {0:-1}
-        s = 0
-        ans = None
-
-        for i, n in enumerate(nums):
-            s = (s+n)%p
-
-            # save all possible remainder with latest index only
-            d[s] = i
-
-            # search the target remainder with index closest to current i
-            # s is the current remainder so we can derive such relation:
-            # s - target = r (mod p) => target = s-r (mod p)
-            target = (s-r)%p
-            if target in d:
-                a = i - d[target]
-                if ans is None: ans = a
-                else: ans = min(ans, a)
-        if ans == len(nums) or ans is None: return -1
-        return ans
+        n = len(nums)
+        target = sum(nums)%p
+        if not target:
+            return 0
+        answer = n
+        prefix_sum = 0
+        hashmap = {0: -1}
+        for i, num in enumerate(nums):
+            prefix_sum += num
+            key = (prefix_sum%p - target)%p
+            if key in hashmap:
+                answer = min(answer, i-hashmap[key])
+            hashmap[prefix_sum%p] = i
+        return answer if answer < n else -1
