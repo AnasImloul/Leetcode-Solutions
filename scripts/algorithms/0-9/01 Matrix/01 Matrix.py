@@ -1,25 +1,30 @@
-from collections import deque
-from typing import List
+// Runtime: 534 ms (Top 69.67%) | Memory: 19.20 MB (Top 71.26%)
 
 class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
-        # Initialize a queue and a 2D array to store the distances
+        if not mat or not mat[0]:
+            return []
+
+        m, n = len(mat), len(mat[0])
         queue = deque()
-        dist = [[float('inf') for _ in range(len(mat[0]))] for _ in range(len(mat))]
+        MAX_VALUE = m * n
         
-        # Add all the 0s in the matrix to the queue and set their distance to 0
-        for i in range(len(mat)):
-            for j in range(len(mat[0])):
+        # Initialize the queue with all 0s and set cells with 1s to MAX_VALUE.
+        for i in range(m):
+            for j in range(n):
                 if mat[i][j] == 0:
                     queue.append((i, j))
-                    dist[i][j] = 0
+                else:
+                    mat[i][j] = MAX_VALUE
         
-        # Perform breadth-first search
+        directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+        
         while queue:
-            i, j = queue.popleft()
-            for x, y in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
-                if 0 <= x < len(mat) and 0 <= y < len(mat[0]) and dist[x][y] > dist[i][j] + 1:
-                    dist[x][y] = dist[i][j] + 1
-                    queue.append((x, y))
+            row, col = queue.popleft()
+            for dr, dc in directions:
+                r, c = row + dr, col + dc
+                if 0 <= r < m and 0 <= c < n and mat[r][c] > mat[row][col] + 1:
+                    queue.append((r, c))
+                    mat[r][c] = mat[row][col] + 1
         
-        return dist
+        return mat
