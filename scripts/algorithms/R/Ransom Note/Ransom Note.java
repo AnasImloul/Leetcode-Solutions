@@ -1,11 +1,34 @@
+// Runtime: 17 ms (Top 19.48%) | Memory: 44.60 MB (Top 8.88%)
+
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        for (int i = 0; i < ransomNote.length(); ++i) {
-            String t = ransomNote.substring(i, i+1);
-            int idx = magazine.indexOf(t);
-            if (idx == -1) return false;
-            magazine = magazine.substring(0, idx) + magazine.substring(idx+1);
+        char[] rs = ransomNote.toCharArray();
+        char[] ms = magazine.toCharArray();
+        
+        HashMap<Character, Integer> rm = new HashMap<>();
+        HashMap<Character, Integer> mz = new HashMap<>();
+        
+        for (char c : rs) {
+            if (rm.containsKey(c)) {
+                rm.put(c, rm.get(c) + 1);
+            } else {
+                rm.put(c, 1);
+            }
         }
-        return true;
+
+        for (char c : ms) {
+            if (mz.containsKey(c)) {
+                mz.put(c, mz.get(c) + 1);
+            } else {
+                mz.put(c, 1);
+            }
+        }
+
+        for (char c : rm.keySet()) {
+            if (!mz.containsKey(c) || mz.get(c) < rm.get(c)) {
+                return false;
+            }
+        }
+        return true;  
     }
 }
