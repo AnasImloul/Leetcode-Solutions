@@ -1,11 +1,13 @@
-# Runtime: 2281 ms (Top 16.22%) | Memory: 28.1 MB (Top 44.14%)
+// Runtime: 791 ms (Top 67.87%) | Memory: 30.60 MB (Top 42.3%)
+
 class Solution:
-    def maxResult(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        deq = deque([n-1])
-        for i in range(n-2, -1, -1):
-            if deq[0] - i > k: deq.popleft()
-            nums[i] += nums[deq[0]]
-            while len(deq) and nums[deq[-1]] <= nums[i]: deq.pop()
+    def maxResult(self, nums, k):
+        deq, n = deque([0]), len(nums)
+
+        for i in range(1, n):
+            while deq and deq[0] < i - k: deq.popleft()
+            nums[i] += nums[deq[0]]   
+            while deq and nums[i] >= nums[deq[-1]]: deq.pop()
             deq.append(i)
-        return nums[0]
+            
+        return nums[-1]
