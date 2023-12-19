@@ -1,24 +1,18 @@
+// Runtime: 966 ms (Top 45.98%) | Memory: 41.80 MB (Top 22.32%)
+
 class Solution:
-    def minSessions(self, tasks: List[int], sessionTime: int) -> int:
+    def minSessions(self, tasks, T):
         n = len(tasks)
-        tasks.sort(reverse=True)
-        sessions = []
-        result = [n]
-        
-        def dfs(index):
-            if len(sessions) > result[0]:
-                return
-            if index == n:
-                result[0] = len(sessions)
-                return
-            for i in range(len(sessions)):
-                if sessions[i] + tasks[index] <= sessionTime:
-                    sessions[i] += tasks[index]
-                    dfs(index + 1)
-                    sessions[i] -= tasks[index]
-            sessions.append(tasks[index])
-            dfs(index + 1)
-            sessions.pop()
-        
-        dfs(0)
-        return result[0]
+
+        @lru_cache(None)
+        def dp(mask):
+            if mask == 0: return (1, 0)
+            ans = (float("inf"), float("inf"))
+            for j in range(n):
+                if mask & (1<<j):
+                    pieces, last = dp(mask - (1 << j))
+                    full = (last + tasks[j] > T)
+                    ans = min(ans, (pieces + full, tasks[j] + (1-full)*last))  
+            return ans
+
+        return dp((1<<n) - 1)[0]
