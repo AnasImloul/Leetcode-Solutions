@@ -1,3 +1,5 @@
+// Runtime: 1313 ms (Top 92.99%) | Memory: 41.50 MB (Top 72.32%)
+
 class Solution:
     def maximumImportance(self, n: int, roads: List[List[int]]) -> int:
         Arr = [0] * n  # i-th city has Arr[i] roads
