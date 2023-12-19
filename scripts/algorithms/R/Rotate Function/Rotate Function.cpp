@@ -1,57 +1,31 @@
+// Runtime: 113 ms (Top 56.94%) | Memory: 96.10 MB (Top 55.89%)
+
 class Solution {
 public:
-    
-    //Brute Force
-    vector<int> rotate(vector<int>&nums , int k){
-        int n = nums.size();
-        vector<int>temp;
-        for(int i = n-k ; i <n ; i++){
-            temp.push_back(nums[i]);
+    int maxRotateFunction(vector<int>& A) {
+        long sum = 0, fn = 0;
+        int len = A.size();
+        for(int i=0;i<len;i++) {
+            sum += A[i];
+            fn += (i * A[i]);
+        }
+
+        long l = 1, r;
+        long newfn = fn;
+        
+        while(l < len) {
+            r = l + len - 1;
+            
+            long removed = (l-1) * A[l-1];
+            long added = r * A[r%len];
+            
+            newfn = newfn - removed + added - sum;
+            
+            fn = max(fn, newfn);
+            
+            l++;
         }
         
-        for(int i = 0 ; i < n-k ; i++){
-            temp.push_back(nums[i]);
-        }
-        
-        return temp;
-        
-    }
-    
-    
-    int Sum(vector<int>&nums , int n){
-        int ans = 0;
-        
-        for(int i = 0 ; i < n ; i ++){
-            ans += (nums[i] * i);
-        }
-        
-        return ans;
-        
-        
-    }
-    int maxRotateFunction(vector<int>& nums) {
-        int ans = INT_MIN;
-        int n = nums.size();
-        for(int i = 0; i<n;i++){
-            vector<int>temp = rotate(nums,i);
-            ans = max(ans , Sum(temp , n));
-        }
-        
-        return ans;
-    }
-    
-    //Optimized Approach
-    
-     int maxRotateFunction(vector<int>& nums) {
-        int sum=accumulate(nums.begin(),nums.end(),0),curr=0,n=nums.size(),ans=0;
-        for(int i=0;i<n;i++){
-            curr+=(i*nums[i]); 
-        }
-        ans=curr; 
-        for(int i=n-1;i>=0;i--){
-            curr+=sum-(n*nums[i]);
-            ans=max(curr,ans);
-        }
-        return ans;
+        return (int)fn;
     }
 };
