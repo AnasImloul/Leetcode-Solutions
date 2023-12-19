@@ -1,32 +1,19 @@
-class Solution(object):
-    def maximumSubarraySum(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: int
-        """
-        #number mapped to idx... curr subarray ke mappings honge to check repeititions
-        maps = {}
-        ans = 0
+// Runtime: 631 ms (Top 77.84%) | Memory: 30.70 MB (Top 96.45%)
+
+class Solution:
+    def maximumSubarraySum(self, nums: List[int], k: int) -> int:
         
-        l, r = 0, 0
-        curr = 0
+        res, cur, pos, dup = 0, 0, [-1] * 100001, -1
         
-        while r < len(nums):
+        for i in range(0,len(nums)):
+            cur += nums[i]                      # compute running sum for
+            if i >= k: cur -= nums[i-k]         # the window of length k
             
-            while l < r and (len(maps) >= k or nums[r] in maps):
-                curr -= nums[l]
-                maps.pop(nums[l])
-                l += 1
+            dup = max(dup, pos[nums[i]])        # update LAST seen duplicate
             
-            curr += nums[r]
-            maps[nums[r]] = r
-            
-            if len(maps) == k:
-                ans = max(curr, ans)
-            
-            r += 1
-            
-        
-            
-        return ans
+            if i - dup >= k:                    # if no duplicates were found
+                res = max(res, cur)             # update max window sum
+
+            pos[nums[i]] = i
+
+        return res
