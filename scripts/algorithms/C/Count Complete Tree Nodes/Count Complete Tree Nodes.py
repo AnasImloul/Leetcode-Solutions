@@ -1,16 +1,19 @@
+// Runtime: 73 ms (Top 66.36%) | Memory: 23.80 MB (Top 18.91%)
+
 class Solution:
-    def countNodes(self, root: Optional[TreeNode]) -> int:
-        def solve(_r):
-            # base cond 1 when root is None
-            if _r is None: return 0
-            # base cond 2 when root is the leaf node
-            if _r.left is None and _r.right is None:
-                return 1
-            # count of nodes in left subtree
-            l = solve(_r.left) 
-            # count of nodes in right subtree
-            r = solve(_r.right) 
-            # take the sum of left subtree / right subtree + root(1)
-            return l + r + 1
-            
-        return solve(root)
+        # @param {TreeNode} root
+        # @return {integer}
+        def countNodes(self, root):
+            if not root:
+                return 0
+            leftDepth = self.getDepth(root.left)
+            rightDepth = self.getDepth(root.right)
+            if leftDepth == rightDepth:
+                return pow(2, leftDepth) + self.countNodes(root.right)
+            else:
+                return pow(2, rightDepth) + self.countNodes(root.left)
+    
+        def getDepth(self, root):
+            if not root:
+                return 0
+            return 1 + self.getDepth(root.left)
