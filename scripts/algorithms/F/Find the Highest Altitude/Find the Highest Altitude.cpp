@@ -1,14 +1,16 @@
+// Runtime: 4 ms (Top 37.21%) | Memory: 8.30 MB (Top 69.02%)
+
 class Solution {
 public:
     int largestAltitude(vector<int>& gain) {
-        int max_alt=0;
-        int curr_alt=0;
-        for(int i=0;i<gain.size();i++){
-            curr_alt+=gain[i]; 
-            max_alt=max(curr_alt, max_alt);
+        int maxAltitude = 0;
+        int currentAltitude = 0;
+        
+        for (int i = 0; i < gain.size(); i++) {
+            currentAltitude += gain[i];
+            maxAltitude = max(maxAltitude, currentAltitude);
         }
-        return max_alt;
+        
+        return maxAltitude;
     }
 };
-
-//TC: O(n), SC: O(1)
