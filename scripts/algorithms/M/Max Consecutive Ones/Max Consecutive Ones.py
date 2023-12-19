@@ -1,14 +1,15 @@
-# Runtime: 893 ms (Top 11.80%) | Memory: 14.4 MB (Top 28.22%)
+// Runtime: 297 ms (Top 70.36%) | Memory: 16.60 MB (Top 19.05%)
+
 class Solution:
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
-        count_ones = 0
-        last_count = 0
-        current_count = 0
-        for elem in nums:
-            if elem == 1:
-                current_count += 1
-                if last_count < current_count:
-                    last_count = current_count
+        
+        count = maxCount = 0
+        
+        for i in range(len(nums)):
+            if nums[i] == 1:
+                count += 1
             else:
-                current_count = 0
-        return last_count
+                maxCount = max(count, maxCount)
+                count = 0
+                
+        return max(count, maxCount)
