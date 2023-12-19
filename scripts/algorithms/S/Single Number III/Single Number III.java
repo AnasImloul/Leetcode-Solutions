@@ -1,18 +1,24 @@
+// Runtime: 1 ms (Top 99.89%) | Memory: 44.50 MB (Top 39.71%)
+
 class Solution {
     public int[] singleNumber(int[] nums) {
-        int xor = 0;
-        for (int num : nums) xor ^= num;
-
-        // Find which rightmost bit is set to 1
-        int rightmostBit = 1;
-        while ((rightmostBit & xor) == 0) rightmostBit = rightmostBit << 1;
-
-        // Split nums array into 2 group based rightmost bit set
-        int num1 = 0, num2 = 0;
-        for (int num : nums) {
-            if ((num & rightmostBit) != 0) num1 ^= num;
-            else num2 ^= num;
+        if (nums == null || nums.length < 2 || nums.length % 2 != 0) {
+            throw new IllegalArgumentException("Invalid Input");
         }
-        return new int[]{num1, num2};
+
+        int aXORb = 0;
+        for (int n : nums) {
+            aXORb ^= n;
+        }
+
+        int rightSetBit = aXORb & -aXORb;
+        int a = 0;
+        for (int n : nums) {
+            if ((n & rightSetBit) != 0) {
+                a ^= n;
+            }
+        }
+
+        return new int[] {a, aXORb ^ a};
     }
 }
