@@ -1,3 +1,5 @@
+// Runtime: 81 ms (Top 51.61%) | Memory: 52.50 MB (Top 9.68%)
+
 var sumSubarrayMins = function(arr) {
     
     M = 10**9+7
