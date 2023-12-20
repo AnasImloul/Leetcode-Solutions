@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 40.43%) | Memory: 6.60 MB (Top 24.35%)
+
 class Solution {
 public:
     string digitSum(string s, int k) {
