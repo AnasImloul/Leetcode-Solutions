@@ -1,24 +1,27 @@
+// Runtime: 4 ms (Top 37.02%) | Memory: 8.80 MB (Top 13.84%)
+
 class Solution {
 public:
-    int minimumOperations(vector<int>& nums) 
-    {
-        sort(nums.begin(), nums.end()); //sort nums in increasing order
+    int minimumOperations(vector<int>& nums) {
+        priority_queue <int, vector<int>, greater<int> > pq;
+        
+        for(int i=0;i<nums.size();i++)
+            pq.push(nums[i]);
+        
+        int curr_min=0;
         int count=0;
         
-        for(int i=0; i<nums.size(); i++)
-        {
-            if(nums[i] > 0) //first smallest non-zero element
-            {
-                int x = nums[i];
-                count++;
-                for(int j=i; j<nums.size(); j++) //substract x from all elements greater than it.
-                {
-                    nums[j] = nums[j]-x;
+        while(!pq.empty()){
+            if(pq.top()==0)pq.pop();
+            else{
+                int top=pq.top()-curr_min;
+                if(top!=0){
+                    curr_min+=top;
+                    count++;
                 }
-
+                pq.pop();
             }
         }
         return count;
-        
     }
 };
