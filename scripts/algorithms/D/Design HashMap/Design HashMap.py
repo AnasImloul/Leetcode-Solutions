@@ -1,26 +1,12 @@
-# Runtime: 2037 ms (Top 14.35%) | Memory: 17.2 MB (Top 80.82%)
+// Runtime: 285 ms (Top 33.03%) | Memory: 43.10 MB (Top 5.35%)
+
 class MyHashMap:
-
     def __init__(self):
-        self.keys = []
-        self.values = []
-
-    def put(self, key: int, value: int) -> None:
-        if key not in self.keys:
-            self.keys.append(key)
-            self.values.append(value)
-        else:
-            idx = self.keys.index(key)
-            self.values[idx] = value
-
+        self.data = [None] * 1000001
+    def put(self, key: int, val: int) -> None:
+        self.data[key] = val
     def get(self, key: int) -> int:
-        if key not in self.keys:
-            return -1
-        idx = self.keys.index(key)
-        return self.values[idx]
-
+        val = self.data[key]
+        return val if val != None else -1
     def remove(self, key: int) -> None:
-        if key in self.keys:
-            idx = self.keys.index(key)
-            del self.keys[idx]
-            del self.values[idx]
+        self.data[key] = None
