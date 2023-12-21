@@ -1,14 +1,16 @@
-# Runtime: 50 ms (Top 42.69%) | Memory: 13.9 MB (Top 55.15%)
-class Solution(object):
-    def bitwiseComplement(self, n):
-        m = n
-        mask = 0
+// Runtime: 38 ms (Top 52.6%) | Memory: 17.10 MB (Top 12.47%)
 
+class Solution:
+    def bitwiseComplement(self, n: int) -> int:
+        cnt=0
+        ans=0
         if n==0:
             return 1
-        while m:
-            mask = (mask << 1) | 1
-            m = m>>1
-
-        ans = mask & (~n)
+        while n>0:
+            if n&1:
+                cnt+=1
+            else:
+                ans =ans +(2**cnt)
+                cnt+=1
+            n=n>>1
         return ans
