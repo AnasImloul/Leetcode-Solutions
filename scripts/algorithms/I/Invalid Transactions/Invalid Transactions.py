@@ -1,19 +1,37 @@
-# Runtime: 451 ms (Top 12.09%) | Memory: 14.8 MB (Top 21.33%)
+// Runtime: 51 ms (Top 99.79%) | Memory: 18.10 MB (Top 5.19%)
+
+class Transaction:
+    def __init__(self, name, time, amount, city):
+        self.name = name
+        self.time = int(time)
+        self.amount = int(amount)
+        self.city = city
+
+from collections import defaultdict
 class Solution:
-    def invalidTransactions(self, transactions: List[str]) -> List[str]:
-        n = len(transactions)
-        for i in range(n):
-            transactions[i] = transactions[i].split(',')
-        transactions.sort(key = lambda x: int(x[1]))
-        ans = []
-        failed = [False for i in range(n)]
-        for i in range(n):
-            if int(transactions[i][2]) > 1000 : failed[i] = True
-            for j in range(i+1,n):
-                if int(transactions[j][1]) - int(transactions[i][1]) > 60: break
-                if transactions[j][0] == transactions[i][0] and\
-                transactions[j][-1] != transactions[i][-1]:
-                    failed[i] = failed[j] = True
-            if failed[i] == True:
-                ans.append(','.join(transactions[i]))
-        return ans
+    def invalidTransactions(self, transactions):
+        transactions = [Transaction(*transaction.split(',')) for transaction in transactions]
+        transactions.sort(key=lambda t: t.time) # O(nlogn) time
+
+        trans_indexes = defaultdict(list)
+        for i, t in enumerate(transactions): # O(n) time
+            trans_indexes[t.name].append(i)
+
+        res = []
+        for name, indexes in trans_indexes.items(): # O(n) time
+            left = right = 0
+            for i, t_index in enumerate(indexes):
+                t = transactions[t_index]
+                if (t.amount > 1000):
+                    res.append("{},{},{},{}".format(t.name, t.time, t.amount, t.city))
+                    continue
+                while left <= len(indexes)-2 and transactions[indexes[left]].time < t.time - 60: # O(60) time
+                    left += 1
+                while right <= len(indexes)-2 and transactions[indexes[right+1]].time <= t.time + 60: # O(60) time
+                    right += 1
+                for i in range(left,right+1): # O(120) time
+                    if transactions[indexes[i]].city != t.city:
+                        res.append("{},{},{},{}".format(t.name, t.time, t.amount, t.city))
+                        break
+
+        return res
