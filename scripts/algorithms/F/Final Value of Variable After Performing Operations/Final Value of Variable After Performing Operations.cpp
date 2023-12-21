@@ -1,12 +1,9 @@
+// Runtime: 8 ms (Top 48.49%) | Memory: 14.60 MB (Top 7.99%)
+
 class Solution {
 public:
-    int finalValueAfterOperations(vector<string>& operations) {
-        int num=0;
-        for(int i=0;i<operations.size();i++)
-        {
-            if(operations[i]=="X++" || operations[i] =="++X") num+=1;
-            if(operations[i]=="X--" || operations[i] =="--X") num-=1;
-        }
-        return num;
+    int finalValueAfterOperations(vector<string>& o,int c=0) {
+           for(auto &i:o) if(i=="++X" or i=="X++") c++; else c--;
+           return c;
     }
 };
