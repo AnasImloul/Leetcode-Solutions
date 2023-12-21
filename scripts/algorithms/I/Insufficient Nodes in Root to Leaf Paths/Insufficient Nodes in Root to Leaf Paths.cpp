@@ -1,35 +1,22 @@
+// Runtime: 36 ms (Top 34.43%) | Memory: 33.30 MB (Top 49.32%)
+
+// What we do is a basic DFS from root to leaf, here I used preorder.
 class Solution {
 public:
-    
-    bool prune(TreeNode *root, int limit, int sum){
-            
-        if(root->left == NULL && root->right == NULL){
-            //Signal to you parent if you lie within the limit or not
-            if(root->val+sum >= limit) return true;
-            else return false;
-        }
-        
-        //Wait for signal from left subtree
-        bool lf = root->left ? prune(root->left, limit, sum+root->val): false;
-        
-		//Wait for signal from right subtree
-        bool rt = root->right ? prune(root->right, limit, sum+root->val) : false;
-        
-		//If false the node need to GO
-        if(lf == false) root->left = NULL;
-        if(rt == false) root->right = NULL;
-            
-		//Now signal to your parent
-        return lf | rt;
-    }
-    
     TreeNode* sufficientSubset(TreeNode* root, int limit) {
-        
-        bool stat = prune(root, limit, 0);
-		//If the whole tree doesn't lie within the Limit
-        if(stat == true) return root;
-        else return nullptr;
-        
+// Base cases to check if there is no root node
+        if(!root) return root;
+// or else if there are no leaf nodes to the root node and thus we simply check if the root node is less than the limit or not, if it is less we return null or else we know what to return.
+        if(!root->left && !root->right){
+            if(root->val < limit) return NULL;
+            else return root;
+        } else {
+// We then start out DFS traversal, every time decreasing the limit with the current node's value and after that, we move over ahead and check the base conditions again and see if any case has been satisfied or not
+            root->left = sufficientSubset(root->left, limit-root->val);
+            root->right = sufficientSubset(root->right, limit-root->val);
+            
+            if(!root->left && !root->right) return NULL;
+            else return root;
+        }
     }
-	
 };
