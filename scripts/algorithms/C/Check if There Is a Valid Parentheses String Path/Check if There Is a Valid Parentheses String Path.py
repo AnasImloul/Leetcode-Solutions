@@ -1,3 +1,5 @@
+// Runtime: 1143 ms (Top 75.31%) | Memory: 238.70 MB (Top 9.88%)
+
 class Solution:
     def hasValidPath(self, grid: List[List[str]]) -> bool:  
         m = len(grid)
