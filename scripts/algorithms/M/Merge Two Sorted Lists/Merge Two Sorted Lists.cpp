@@ -1,52 +1,23 @@
-					// 😉😉😉😉Please upvote if it helps 😉😉😉😉
+// Runtime: 8 ms (Top 15.6%) | Memory: 15.10 MB (Top 46.21%)
+
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-       
-	    // if list1 happen to be NULL
-		// we will simply return list2.
-        if(list1 == NULL)
-            return list2;
-		
-		// if list2 happen to be NULL
-		// we will simply return list1.
-        if(list2 == NULL)
-            return list1;
+    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
+        ListNode dummy(INT_MIN);
+        ListNode *tail = &dummy;
         
-        ListNode * ptr = list1;
-        if(list1 -> val > list2 -> val)
-        {
-            ptr = list2;
-            list2 = list2 -> next;
-        }
-        else
-        {
-            list1 = list1 -> next;
-        }
-        ListNode *curr = ptr;
-        
-		// till one of the list doesn't reaches NULL
-        while(list1 &&  list2)
-        {
-            if(list1 -> val < list2 -> val){
-                curr->next = list1;
-                list1 = list1 -> next;
+        while (l1 && l2) {
+            if (l1->val < l2->val) {
+                tail->next = l1;
+                l1 = l1->next;
+            } else {
+                tail->next = l2;
+                l2 = l2->next;
             }
-            else{
-                curr->next = list2;
-                list2 = list2 -> next;
-            }
-            curr = curr -> next;
-                
+            tail = tail->next;
         }
-		
-		// adding remaining elements of bigger list.
-        if(!list1)
-            curr -> next = list2;
-        else
-            curr -> next = list1;
-            
-        return ptr;
-       
+
+        tail->next = l1 ? l1 : l2;
+        return dummy.next;
     }
 };
