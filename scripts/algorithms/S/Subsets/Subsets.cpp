@@ -1,32 +1,28 @@
-class Solution {
-   void subsetGenerator (vector<int> nums, int n, vector<vector<int>> &ans, int i, vector<int> subset)
-   {
-                                                  
-        if(i>=n)    //Base Case
-		{        
-            ans.push_back(subset);  //the subset obatined is pushed into ans
-            return ;
-        }
-        //including the element at index i and then calling the recursive function
-         subset.push_back(nums[i]);
-         solve(nums,n,ans,i+1,subset);
-        
-		
-         //excluding the element at index i and then calling the recursive function
-         subset.pop_back();
-         solve(nums,n,ans,i+1,subset);
-              
-    }
-public:
+// Runtime: 0 ms (Top 100.0%) | Memory: 16.30 MB (Top 20.62%)
 
-    vector<vector<int>> subsets(vector<int>& nums) {
-	    int i=0;                  // index is initialized to 0 as we start from the first element
-        int n=nums.size();        // size of the vector nums
-		vector<int> subset;       // this vector will store each subset which is generated
-        vector<vector<int>> ans;  // will store all the subsets generated
+// Recursive Solution
+// Time complexity : O(N*(2^N))
+// Space complexity : O(N*(2^N))
+class Solution {
+public:
+    vector<vector<int>> ans;
+    
+    void sub(vector<int> &nums, int i, vector<int> temp)
+    {
+        if(i==nums.size())
+        {
+            ans.push_back(temp);
+            return;
+        }
         
-        subsetGenerator(nums, n, ans, i, subset);
-	
+        sub(nums, i+1, temp);
+        temp.push_back(nums[i]);
+        sub(nums, i+1, temp);
+    }
+    
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> temp;       
+        sub(nums, 0, temp); // or sub(nums, 0, vector<int> {});
         return ans;
     }
 };
