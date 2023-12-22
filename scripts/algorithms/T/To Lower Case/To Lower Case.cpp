@@ -1,12 +1,14 @@
+// Runtime: 3 ms (Top 44.79%) | Memory: 6.50 MB (Top 90.75%)
+
 class Solution {
 public:
     string toLowerCase(string s) {
-        int n=s.size();
-        for(int i=0;i<n;i++)
-        {
-            if(s[i]>='A'&&s[i]<='Z')
-                s[i]+=32;
+        string res="";
+        for(auto c:s) {
+            if('A' <= c && c <= 'Z')
+                res+=c - 'A' + 'a';
+            else res+=c;
         }
-        return s;
+        return res;
     }
 };
