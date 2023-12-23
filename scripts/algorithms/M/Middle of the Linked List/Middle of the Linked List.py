@@ -1,11 +1,10 @@
+// Runtime: 45 ms (Top 13.51%) | Memory: 17.40 MB (Top 21.17%)
+
 class Solution:
-    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        # basically we create two pointers
-        # move one pointer extra fast
-        # another pointer would be slow
-        # when fast reaches end slow would be in mid
-        slow = fast = head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-        return slow
+    def middleNode(self, head):
+        Iter, N = head, 0
+        while Iter:
+            Iter, N = Iter.next, N + 1
+        for i in range(N//2):
+            head = head.next
+        return head
