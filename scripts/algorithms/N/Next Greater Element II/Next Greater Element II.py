@@ -1,23 +1,14 @@
+// Runtime: 151 ms (Top 99.29%) | Memory: 19.30 MB (Top 5.84%)
+
 class Solution:
     def nextGreaterElements(self, nums: List[int]) -> List[int]:
-        t=len(nums)
-        nums+=nums
-        l=[-1]*len(nums)
-        d={}
-        stack=[0]
-        for x in range(1,len(nums)):
-            #print(x)
-            if nums[x]>nums[stack[-1]]:
-                while nums[x]>nums[stack[-1]] :
-                    l[stack[-1]]=nums[x]
-                    stack.pop()
-                    if stack==[]:
-                        break
-                    #print(l)
-                stack.append(x)
-                    
-            else:
-                stack.append(x)
-        return l[:t]
-            
-        
+        st = []
+        n = len(nums)
+        ans = [-1] * n
+        for i in range(2*n-1, -1, -1):
+            while st and st[-1] <= nums[i%n]:
+                st.pop()
+            if st and i < n:
+                ans[i] = st[-1]
+            st.append(nums[i%n])
+        return ans
