@@ -1,6 +1,9 @@
-# Runtime: 51 ms (Top 44.02%) | Memory: 13.7 MB (Top 94.97%)
+// Runtime: 35 ms (Top 76.35%) | Memory: 17.40 MB (Top 18.24%)
+
 class Solution:
-    def sumOfThree(self, num):
-        if num % 3: return []
-        x = num // 3
-        return list(range(x-1,x+2))
+    def sumOfThree(self, num: int) -> List[int]:
+        temp=(num-3)/3
+        if floor(temp)==ceil(temp):
+            return [int(temp),int(temp)+1,int(temp)+2]
+        else:
+            return []
