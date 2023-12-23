@@ -1,44 +1,58 @@
-# Runtime: 1864 ms (Top 94.44%) | Memory: 14.6 MB (Top 87.65%)
+// Runtime: 1997 ms (Top 68.37%) | Memory: 360.00 MB (Top 27.55%)
+
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
-        # Find min lenth of the code starting from group ind, if there are res_k characters to delete and
-        # group ind needs to be increased by carry_over additional characters
-        def FindMinLen(ind, res_k, carry_over=0):
-
-            # If we already found the min length - just retrieve it (-1 means we did not calculate it)
-            if carry_over == 0 and dynamic[ind][res_k] != -1:
-                return dynamic[ind][res_k]
-
-            # Number of character occurences that we need to code. Includes carry-over.
-            cur_count = carry_over + frequency[ind]
-
-            # Min code length if the group ind stays intact. The code accounts for single-character "s0" vs. "s" situation.
-            min_len = 1 + min(len(str(cur_count)), cur_count - 1) + FindMinLen(ind+1,res_k)
-
-            # Min length if we keep only 0, 1, 9, or 99 characters in the group - delete the rest, if feasible
-            for leave_count, code_count in [(0,0), (1, 1), (9, 2), (99, 3)]:
-                if cur_count > leave_count and res_k >= cur_count - leave_count:
-                    min_len = min(min_len, code_count + FindMinLen(ind + 1,res_k - (cur_count - leave_count)))
-
-            # If we drop characters between this character group and next group, like drop "a" in "bbbabb"
-            next_ind = chars.find(chars[ind], ind + 1)
-            delete_count = sum(frequency[ind+1:next_ind])
-            if next_ind > 0 and res_k >= delete_count:
-                min_len = min(min_len, FindMinLen(next_ind, res_k - delete_count, carry_over = cur_count))
-
-            # If there was no carry-over, store the result
-            if carry_over == 0: dynamic[ind][res_k] = min_len
-            return min_len
-
-        # Two auxiliary lists - character groups (drop repeated) and number of characters in the group
-        frequency, chars = [], ""
-        for char in s:
-            if len(frequency)==0 or char != chars[-1]:
-                frequency.append(0)
-                chars = chars + char
-            frequency[-1] += 1
-
-        # Table with the results. Number of character groups by number of available deletions.
-        dynamic = [[-1] * (k + 1) for i in range(len(frequency))] + [[0]*(k + 1)]
-
-        return FindMinLen(0, k)
+        # We define f(i, curr_run_ch, run_length, nb_dels_remain) to return 
+        # the minimum, additional, number of characters it will cost to run-length 
+        # compress the substring s[i..n-1].
+        # `curr_run_ch` is the character we have in the current "run", or the same
+        # contiguous block of characters. 
+        # `run_length` is the length of the current "run", or the length of the
+        # contiguous block of identical characters.
+		#     e.g. if we just encoded "aaaaa", `curr_run_ch` is "a" and `run_length` = 5
+        # `nb_dels_remain` is the number of delete operations we have available to us,
+        # should we choose to use them
+        memo = {}
+        def f(i, curr_run_ch, run_length, nb_dels_remain):
+            if i == len(s):
+                return 0
+            
+            key = (i, curr_run_ch, run_length, nb_dels_remain)
+            if key in memo:
+                return memo[key]
+            
+            # At character i, we have two possible options, we could choose to either
+            # delete this character or keep this character. Each choice we make will
+            # incurr some additional run-length encoding length for s[i..n-1]. We return
+            # the minimum of the two.
+            
+            # Delete s[i]
+            del_ch_cost = float('inf')
+            if nb_dels_remain > 0:
+                # Deleting s[i] means the latest character we kept stays the same AND
+                # the current run-length of characters stays the same as well
+                del_ch_cost = f(i + 1, curr_run_ch, run_length, nb_dels_remain - 1)
+            
+            # Keep s[i]
+            keep_ch_cost = 0
+            if s[i] == curr_run_ch:
+			    # The new character at s[i] we are about to encode is the same as the character in the
+				# current "run", we could choose to include it into the current run of course.
+                # Be careful that if we started with run-length of 1, 9, 99, 999 and etc, encoding another
+                # character same as `curr_run_ch`  into the same "run" will require an extra digit.
+                # e.g. 'a' => '2a' '9a' => '10a', '99a' => '100a'
+                extra_digit_cost = 0
+                if run_length == 1 or len(str(run_length + 1)) > len(str(run_length)):
+                    extra_digit_cost = 1
+                keep_ch_cost = extra_digit_cost + f(i + 1, curr_run_ch, run_length + 1, nb_dels_remain)
+            else:
+                # s[i] != curr_run_ch, we are going to need to run-length encode at least
+                # one instance of s[i] which would cost 1, plus whatever the cost to encode
+                # the rest. Of course that also means the current "run" will "reset" and start anew with
+				# a single character s[i]
+                keep_ch_cost = 1 + f(i + 1, s[i], 1, nb_dels_remain)
+            
+            memo[key] = min(keep_ch_cost, del_ch_cost)
+            return memo[key]
+        
+        return f(0, '', 0, k)
