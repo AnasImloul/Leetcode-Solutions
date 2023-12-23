@@ -1,21 +1,13 @@
+// Runtime: 229 ms (Top 99.26%) | Memory: 22.50 MB (Top 16.77%)
+
 class Solution:
-    def findRightInterval(self, A: List[List[int]]) -> List[int]:
-        n = len(A)
-        ans = [-1] * n
-
-        for i in range(n):
-            A[i].append(i)
-
-        A.sort()
-        heap = []
-
-        for i in range(n):
-            if A[i][0] == A[i][1]:
-                ans[A[i][2]] = A[i][2]
-            else:
-                while heap and heap[0][0] <= A[i][0]:
-                    ans[heapq.heappop(heap)[1]] = A[i][2]
-                
-                heapq.heappush(heap, [A[i][1], A[i][2]])
-
-        return ans
+    def findRightInterval(self, intervals):
+        ints = sorted([[j,k,i] for i,[j,k] in enumerate(intervals)])
+        begs = [i for i,_,_ in ints]
+        out = [-1]*len(begs)
+        for i,j,k in ints:
+            t = bisect.bisect_left(begs, j)
+            if t < len(begs):
+                out[k] = ints[t][2]
+        
+        return out
