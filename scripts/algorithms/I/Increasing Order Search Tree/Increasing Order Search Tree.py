@@ -1,24 +1,19 @@
-# Runtime: 22 ms (Top 13.1%) | Memory: 13.44 MB (Top 40.5%)
+// Runtime: 44 ms (Top 21.66%) | Memory: 17.30 MB (Top 23.65%)
 
-class Solution(object):
-    
-    def increasingBST(self, root):
+class Solution:
+    def increasingBST(self, node: TreeNode) -> TreeNode:
+        dummy = tail = TreeNode()
+        while node is not None:
+            if node.left is not None:
+                predecessor = node.left
+                while predecessor.right is not None:
+                    predecessor = predecessor.right
+                
+                predecessor.right = node
+                left, node.left = node.left, None
+                node = left
+            else:
+                tail.right = tail = node
+                node = node.right
         
-        def sortBST(node):
-            if not node:    return []
-            
-            # return the in order BST nodes in list
-            return sortBST(node.left) + [node.val] + sortBST(node.right)
-            
-        # the in order sorted list of the tree nodes
-        sorted_list = sortBST(root)
-        
-        # generate new tree: temp for update, ans for return the root
-        ans = temp = TreeNode(sorted_list[0])
-        
-        # insert nodes to the right side of the new tree
-        for i in range(1, len(sorted_list)):
-            temp.right = TreeNode(sorted_list[i])
-            temp = temp.right
-            
-        return ans
+        return dummy.right
