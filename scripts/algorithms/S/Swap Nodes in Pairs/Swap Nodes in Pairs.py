@@ -1,26 +1,20 @@
-# Runtime: 38 ms (Top 82.22%) | Memory: 13.9 MB (Top 64.44%)
+// Runtime: 41 ms (Top 43.62%) | Memory: 17.40 MB (Top 6.56%)
 
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if not head:
-            return head
-        dummy = ListNode(None, head)
-        prev, curr_1, curr_2 = dummy, head, head.next
-        while curr_1 and curr_2:
-            # 1. define temp nodes, temp nodes are comprised of 1 prev node, and multiple curr nodes. The while condition checks those curr nodes only.
-            node_0 = prev
-            node_1 = curr_1
-            node_2 = curr_2
-            node_3 = curr_2.next
 
-            # 2. swap nodes using temp nodes
-            node_0.next = node_2
-            node_1.next = node_3
-            node_2.next = node_1
+        if not head or not head.next: return head
 
-            # 3. move temp nodes to the next window
-            prev = node_1
-            curr_1 = node_3
-            curr_2 = node_3.next if node_3 else None
+        dummy = ListNode(0)
+        dummy.next = head
+        curr = dummy
 
+        while curr.next and curr.next.next:
+            first = curr.next
+            second = curr.next.next
+            curr.next = second
+            first.next = second.next
+            second.next = first
+            curr = curr.next.next
+        
         return dummy.next
