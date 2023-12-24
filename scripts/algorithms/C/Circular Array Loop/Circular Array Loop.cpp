@@ -1,42 +1,40 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 8.00 MB (Top 36.07%)
+
 class Solution {
 public:
+    
+    int next(vector<int>& nums, int i){
+        int n = nums.size();
+        return (n+nums[i]+i)%n;
+    }
+    
     bool circularArrayLoop(vector<int>& nums) {
-        unordered_set<int>us;
-        for(int i{0};i<nums.size() && us.find(i)==us.end();i++){
-            unordered_map<int,int>um;
-            int index=0;
-            int j=i;
-            um[i];
-            bool flag1=0,flag2=0;
-            while(true){
-                if(nums.at(i)<0){
-                    index=(nums.size()+nums.at(j)+j)%nums.size();
-                    flag1=1;
-                }else{
-                    index=(nums.at(j)+j)%nums.size();
-                    flag2=1;
+        int n = nums.size();
+        // we can use slow and fast pointer to check whether there is loop or not
+        for(int &num: nums)
+            num %= n;
+        for(int i=0;i<n;i++){
+            int slow = i,
+                fast = i;
+            while(nums[slow]*nums[next(nums,fast)]>0 && nums[slow]*nums[next(nums,next(nums,fast))]>0){
+                slow = next(nums,slow);
+                fast = next(nums,next(nums,fast));
+                if(slow==fast){
+                    if(slow==next(nums,slow)) // single length
+                        return false;
+                    return true;
                 }
-                if(nums.at(index)>0 && flag1==1){
-                    break;
-                }else if(nums.at(index)<0 && flag2==1){
-                    break;
-                }
-                if(um.find(index)==um.end()){
-                    um[index];
-                    us.insert(index);
-                }else{
-                    if(j==index){
-                        break;
-                    }
-                    if(um.size()>1){
-                        return true;
-                    }else{
-                        break;
-                    }
-                }
-                j=index;
-            }            
+            }
+			/// DONOT TRAVERSE WHERE THERE IS NO PATH TO GET LOOP.
+            int j = i;
+            int val = nums[i];
+            while (nums[j] * val > 0) {
+                int nexx = next(nums,j);
+                nums[j] = 0;
+                j = nexx;
+            }
         }
+        
         return false;
     }
 };
