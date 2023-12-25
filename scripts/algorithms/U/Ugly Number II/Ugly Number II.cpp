@@ -1,29 +1,18 @@
-// Runtime: 4 ms (Top 94.55%) | Memory: 6 MB (Top 90.93%)
+// Runtime: 113 ms (Top 11.61%) | Memory: 30.00 MB (Top 16.43%)
+
 class Solution {
 public:
     int nthUglyNumber(int n) {
-
-        int dp[n+1];
-        dp[1] = 1;
-
-        int p2 = 1, p3 = 1, p5 = 1;
-        int t;
-
-        for(int i = 2; i < n+1; i++){
-            t = min(dp[p2]*2, min(dp[p3]*3, dp[p5]*5));
-            dp[i] = t;
-
-            if(dp[i] == dp[p2]*2){
-                p2++;
-            }
-            if(dp[i] == dp[p3]*3){
-                p3++;
-            }
-            if(dp[i] == dp[p5]*5){
-                p5++;
-            }
+        set<long> st;
+        st.insert(1);
+        long num = 1;
+        for(int i=0;i<n;i++){
+            num = *st.begin();
+            st.erase(num);
+            st.insert(num * 2);
+            st.insert(num * 3);
+            st.insert(num * 5);
         }
-        return dp[n];
-
+        return num;
     }
 };
