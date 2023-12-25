@@ -1,3 +1,5 @@
+// Runtime: 2780 ms (Top 5.12%) | Memory: 20.00 MB (Top 7.4%)
+
 class Solution {
 public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
