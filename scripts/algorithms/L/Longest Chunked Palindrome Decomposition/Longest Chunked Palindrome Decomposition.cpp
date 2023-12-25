@@ -1,18 +1,29 @@
+// Runtime: 6 ms (Top 43.33%) | Memory: 7.90 MB (Top 47.14%)
+
 class Solution {
 public:
     int longestDecomposition(string text) {
-        if(text.size() == 0)
-            return 0;
-        int i = 0;
-        deque<char> sFront;
-        deque<char> sBack;
-        while(i < text.size() / 2){
-            sFront.push_back(text[i]);
-            sBack.push_front(text[text.size() - 1 - i]);
-            if(sFront == sBack)
-                return 2 + longestDecomposition(text.substr(i + 1, text.size() - 2*(i+1)));
+        int ans=0,i=0,j=text.size()-1;
+        string s="",t="";
+        
+        while(i<j){
+            s+=text[i];
+            t+=text[j];
+            string rev=t;
+            reverse(rev.begin(),rev.end());
+            
+            if(s==rev){
+                ans++;
+                t="";
+                s="";
+            }
+            
             i++;
+            j--;
         }
-        return 1;
+        ans*=2;
+        
+        if(i==j || s.size()!=0)ans++;
+        return ans;
     }
 };
