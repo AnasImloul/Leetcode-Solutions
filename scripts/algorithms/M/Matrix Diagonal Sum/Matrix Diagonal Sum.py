@@ -1,3 +1,5 @@
+// Runtime: 98 ms (Top 89.16%) | Memory: 17.60 MB (Top 5.05%)
+
 class Solution:
     def diagonalSum(self, mat: List[List[int]]) -> int:
         
