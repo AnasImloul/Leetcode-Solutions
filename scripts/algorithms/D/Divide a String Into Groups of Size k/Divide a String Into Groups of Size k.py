@@ -1,10 +1,5 @@
+// Runtime: 38 ms (Top 66.92%) | Memory: 17.30 MB (Top 6.27%)
+
 class Solution:
     def divideString(self, s: str, k: int, fill: str) -> List[str]:
-        l, i, N = [], 0, len(s)
-        while i<N:
-            l.append(s[i:i+k])
-            i += k
-        last = l[-1]
-        if(len(last)<k):
-            l[-1] += fill*(k-len(last))
-        return l
+        return [(s+k*fill)[i:i+k] for i in range(0,len(s),k)]
