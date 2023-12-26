@@ -1,52 +1,20 @@
-from itertools import combinations 
+// Runtime: 61 ms (Top 55.33%) | Memory: 17.40 MB (Top 11.89%)
 
 class Solution:
-    def createNewWord(self, wordList) : 
-        ans = ''
-        for word in wordList :
-            ans += word 
-        
-        charList = [i for i in ans]
-        return charList 
-    
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
-        score_dict = {}
-        ord_a = 97 
-        for i in range(len(score)) : 
-            score_dict[chr(ord_a + i)] = score[i]
-            
-        max_count, sum_list, to_remove = 0, [], []
-        for word in words : 
-            char_list = [i for i in word]
-            max_num = 0
-            for char in set(char_list) : 
-                if char_list.count(char) > letters.count(char) : 
-                    max_num = 0
-                    to_remove.append(word)
-                    break 
-                else : 
-                    max_num += score_dict[char]*char_list.count(char)
 
-            if max_num > 0 :
-                sum_list.append(max_num)
-        
-            if max_num > max_count : 
-                max_count = max_num 
-        
-        new_word = [i for i in words if i not in to_remove]
-        # print(new_word)
-        for i in range(2, len(sum_list)+1) :
-            comb = combinations(new_word, i)
-            for c in comb : 
-                combinedWord = self.createNewWord(c)
-                totalNum = 0
-                for char in set(combinedWord) : 
-                    if combinedWord.count(char) > letters.count(char) : 
-                        totalNum = 0
-                        break 
-                    else : 
-                        totalNum += score_dict[char]*combinedWord.count(char)
-                if totalNum > max_count : 
-                    max_count = totalNum 
-                    
-        return max_count 
+        f, ans = lambda x : sum(score[ord(c) - 97] for c in x), 0
+
+        def dfs(words,letters, tally):
+            nonlocal ans
+            
+            for i in range(len(words)):
+                cWord=Counter(words[i])
+				
+                if all(letters[c] >= cWord[c] for c in cWord):
+                    dfs(words[i+1:], letters - cWord, tally + f(words[i]))
+
+            ans = max(ans,tally)
+            return ans
+
+        return dfs(words, Counter(letters), 0)
