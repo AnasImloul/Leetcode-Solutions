@@ -1,81 +1,26 @@
-class MyCircularQueue {
+// Runtime: 66 ms (Top 68.44%) | Memory: 18.10 MB (Top 5.6%)
 
-    int head = -1;
-    int tail = -1;
-    int[] q;
-    int k;
-    
-    public MyCircularQueue(int k) {
-        q = new int[k];
-        this.k = k;
-    }
-    
-    public boolean enQueue(int value) {
-        if(head == -1 && tail == -1) {
-            // enqueue when the queue is empty
-            head = tail = 0;
-            q[tail] = value;    // enQueue done
-            return true;
-        }
-        if((tail == k-1 && head == 0) || tail+1 == head) {
-            // queue is full
-            return false;
-        }
-        tail++;
-        if(tail == k) // condition for circularity
-            tail = 0;
-        q[tail] = value;    // enQueue done
-        return true;
-    }
-    
-    public boolean deQueue() {
-        if(head == -1) {
-            // check if q is already empty
-            return false;
-        } 
-        if(head == tail) {
-            // only 1 element is there and head,tail both points same index
-            head = tail = -1;   // deQueue done
-            return true;
-        }
-        head++;       // deQueue done
-        if(head == k) // condition for circularity
-            head = 0;
-        return true;
-    }
-    
-    public int Front() {
-        if(head == -1) 
-            return -1;
-        return q[head];
-    }
-    
-    public int Rear() {
-        if(tail == -1) 
-            return -1;
-        return q[tail];
-    }
-    
-    public boolean isEmpty() {
-        if(head == -1 && tail == -1) 
-            return true;
-        return false;
-    }
-    
-    public boolean isFull() {
-        if(tail == k-1 || tail+1 == head) 
-            return true;
-        return false;
-    }
-}
-
-/**
- * Your MyCircularQueue object will be instantiated and called as such:
- * MyCircularQueue obj = new MyCircularQueue(k);
- * boolean param_1 = obj.enQueue(value);
- * boolean param_2 = obj.deQueue();
- * int param_3 = obj.Front();
- * int param_4 = obj.Rear();
- * boolean param_5 = obj.isEmpty();
- * boolean param_6 = obj.isFull();
- */
+class MyCircularQueue:
+    def __init__(self, k: int):
+        self.data = [0] * k
+        self.maxSize = k
+        self.head = 0
+        self.tail = -1
+    def enQueue(self, val: int) -> bool:
+        if self.isFull(): return False
+        self.tail = (self.tail + 1) % self.maxSize
+        self.data[self.tail] = val
+        return True
+    def deQueue(self) -> bool:
+        if self.isEmpty(): return False
+        if self.head == self.tail: self.head, self.tail = 0, -1
+        else: self.head = (self.head + 1) % self.maxSize
+        return True
+    def Front(self) -> int:
+        return -1 if self.isEmpty() else self.data[self.head]
+    def Rear(self) -> int:
+        return -1 if self.isEmpty() else self.data[self.tail]
+    def isEmpty(self) -> bool:
+        return self.tail == -1
+    def isFull(self) -> bool:
+        return not self.isEmpty() and (self.tail + 1) % self.maxSize == self.head
