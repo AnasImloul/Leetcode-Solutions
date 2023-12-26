@@ -1,13 +1,19 @@
+// Runtime: 118 ms (Top 72.74%) | Memory: 18.10 MB (Top 7.4%)
+
 class Solution:
-	"""
-	Time:   O((n+m)*log(n+m))
-	Memory: O(n+m)
-	"""
+	def mergeSimilarItems(self, items1: List[List[int]], items2: List[List[int]]) -> List[List[int]]:
 
-	def mergeSimilarItems(self, first: List[List[int]], second: List[List[int]]) -> List[List[int]]:
-		merged = defaultdict(int)
+		merge_item = items1 + items2
 
-		for value, weight in first + second:
-			merged[value] += weight
+		d = defaultdict(int)
 
-		return sorted(merged.items())
+		for i in merge_item:
+			value,weight = i
+			d[value] = d[value] + weight
+
+		result = []
+
+		for j in sorted(d):
+			result.append([j,d[j]])
+
+		return result
