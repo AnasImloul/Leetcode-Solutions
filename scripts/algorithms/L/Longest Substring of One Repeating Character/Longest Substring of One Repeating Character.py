@@ -1,3 +1,5 @@
+// Runtime: 3460 ms (Top 87.5%) | Memory: 38.10 MB (Top 67.5%)
+
 from sortedcontainers import SortedList
 
 class Solution:
