@@ -1,38 +1,23 @@
+// Runtime: 72 ms (Top 5.04%) | Memory: 55.80 MB (Top 77.26%)
+
 class Solution {
 public:
-    int longestOnes(vector<int>& nums, int k) {
-        
-        // max length of subarray with at most k zeroes 
-    
-        int i=0;
-        int j=0;
-        int cnt = 0;
-        int ans = 0;
-
-        int n = nums.size();
-
-        while(j<n)
-        {
-            if(nums[j]==0)
-                cnt++;
-
-            if(cnt<=k)
-            {
-                ans = max(ans , j-i+1);
-                j++;
+    int longestOnes(vector<int>& A, int K) {
+       int start = 0, max = INT_MIN,zeroCounter=0;
+        for(int end=0 ; end<A.size() ; end++){
+            if(A[end]==0){
+                zeroCounter++;
             }
-            else //cnt>k
-            {
-                while(cnt>k)
-                {
-                    if(nums[i]==0)
-                        cnt--;
-                    i++;
+            while(zeroCounter>K){
+                if(A[start]==0){
+                    zeroCounter--;
                 }
-                j++;
+                start++;
             }
+            
+            max = std::max(max,end-start+1);
         }
-        return ans;
         
+        return max;
     }
 };
