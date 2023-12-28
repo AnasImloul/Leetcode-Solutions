@@ -1,35 +1,37 @@
+// Runtime: 228 ms (Top 5.16%) | Memory: 17.50 MB (Top 5.8%)
+
 class Solution:
     def snakesAndLadders(self, board: List[List[int]]) -> int:
-        
-        # creating a borad map to loop-up the square value
-        board_map = {}
-        i = 1
-        b_rev = board[::-1]
-        for d, r in enumerate(b_rev):
-			# reverse for even rows - here d is taken as direction 
-            if d%2 != 0: r = r[::-1] 
-            for s in r:
-                board_map[i] = s
-                i += 1
-        
-        # BFS Algorithm
-        q = [(1, 0)] # (curr, moves)
-        v = set()
-        goal = len(board) * len(board) # end square
-        
+        n = len(board)
+        moves = 0
+        q = collections.deque([1])
+        visited = [[False for _ in range(n)] for _ in range(n)]
+        visited[n-1][0] = True
         while q:
-            curr, moves = q.pop(0)
-            # win situation
-            if curr == goal: return moves
-            # BFS on next 6 places (rolling a die)
-            for i in range(1, 7):
-                # skip square outside board
-                if curr+i > goal: continue
-                # get value from mapping
-                next_pos = curr+i if board_map[curr+i] == -1 else board_map[curr+i]
-                if next_pos not in v:
-                    v.add(next_pos)
-                    q.append((next_pos, moves+1))
-        
+            size = len(q)
+            for i in range(size):
+                currBoardVal = q.popleft()
+                if currBoardVal == n*n:
+                    return moves
+                for diceVal in range(1, 7):
+                    if currBoardVal + diceVal > n*n:
+                        break
+                    pos = self.findCoordinates(currBoardVal + diceVal, n)
+                    row, col = pos
+                    if not visited[row][col]:
+                        visited[row][col] = True
+                        if board[row][col] == -1:
+                            q.append(currBoardVal + diceVal)
+                        else:
+                            q.append(board[row][col])
+            moves += 1
         return -1
- 
+    
+    def findCoordinates(self, curr: int, n: int) -> Tuple[int, int]:
+        row = n - (curr - 1) // n - 1
+        col = (curr - 1) % n
+        if row % 2 == n % 2:
+            return (row, n - 1 - col)
+        else:
+            return (row, col)
+
