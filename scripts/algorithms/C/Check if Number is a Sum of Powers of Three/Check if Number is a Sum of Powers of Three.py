@@ -1,8 +1,8 @@
-// Runtime: 48 ms (Top 64.16%) | Memory: 13.9 MB (Top 24.70%)
+// Runtime: 79 ms (Top 10.08%) | Memory: 17.20 MB (Top 9.7%)
+
 class Solution:
     def checkPowersOfThree(self, n: int) -> bool:
-        while n:
-            n, rem = divmod(n, 3)
-            if rem == 2:
-                return False
+        while n > 1:
+            n, r = divmod(n, 3)
+            if r == 2: return False
         return True
