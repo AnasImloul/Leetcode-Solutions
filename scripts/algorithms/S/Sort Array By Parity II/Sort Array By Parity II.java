@@ -1,23 +1,25 @@
+// Runtime: 3 ms (Top 44.53%) | Memory: 47.70 MB (Top 5.52%)
+
 class Solution {
-    public int[] sortArrayByParityII(int[] nums) {
-        
-        int[] ans = new int[nums.length];
-        
-        int even_pointer = 0;
-        int odd_pointer = 1;
-        
-        for(int i = 0; i < nums.length; i++){
-            
-            if(nums[i] % 2 == 0){
-                ans[even_pointer] = nums[i];
-                even_pointer += 2;
-            } else{
-                ans[odd_pointer] = nums[i];
-                odd_pointer += 2;
+    public int[] sortArrayByParityII(int[] A) {
+        int i = 0, j = 1, n = A.length;
+        while (i < n && j < n) {
+            while (i < n && A[i] % 2 == 0) {
+                i += 2;
             }
-            
+            while (j < n && A[j] % 2 == 1) {
+                j += 2;
+            }
+            if (i < n && j < n) {
+                swap(A, i, j);
+            }
         }
-        
-        return ans;
+        return A;
+    }
+    private void swap(int[] A, int i, int j) {
+        int temp = A[i];
+        A[i] = A[j];
+        A[j] = temp;
     }
 }
+
