@@ -1,18 +1,21 @@
+// Runtime: 85 ms (Top 42.59%) | Memory: 55.80 MB (Top 31.28%)
+
 class Solution {
-    ArrayList<Integer> ll=new ArrayList<>();
+    Random random;
+    int[] origin;
+    
     public Solution(int[] nums) {
-        for(int i=0;i<nums.length;i++){
-            ll.add(nums[i]);
-        
-        }
+        random = new Random();
+        origin = nums;
     }
+    
     public int pick(int target) {
-        double a=Math.random();
-        int n=(int)(a*this.ll.size());
-        while(this.ll.get(n)!=target){
-            a=Math.random();
-            n=(int)(a*this.ll.size());
+        
+        while(true){
+            int idx = random.nextInt(origin.length);
+            if(origin[idx] == target){
+                return idx;
+            }
         }
-        return n; 
     }
 }
