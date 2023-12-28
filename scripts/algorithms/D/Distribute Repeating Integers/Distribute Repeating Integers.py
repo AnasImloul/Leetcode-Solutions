@@ -1,20 +1,24 @@
+// Runtime: 584 ms (Top 98.04%) | Memory: 28.70 MB (Top 26.47%)
+
+from collections import Counter, defaultdict
+
 class Solution:
     def canDistribute(self, nums: List[int], quantity: List[int]) -> bool:
-        freq = {}
-        for x in nums: freq[x] = 1 + freq.get(x, 0)
+        quantity.sort(reverse=True)
+        freqCounts = defaultdict(int, Counter(Counter(nums).values()))
+        def backtrack(i: int = 0) -> bool:
+            if i == len(quantity):
+                return True
+            
+            for freq, count in list(freqCounts.items()):
+                if freq >= quantity[i] and count > 0:
+                    freqCounts[freq] -= 1
+                    freqCounts[freq - quantity[i]] += 1
+                    if backtrack(i + 1):
+                        return True
+                    freqCounts[freq] += 1
+                    freqCounts[freq - quantity[i]] -= 1
+            
+            return False
         
-        vals = sorted(freq.values(), reverse=True)
-        quantity.sort(reverse=True) # pruning - large values first  
-        
-        def fn(i): 
-            """Return True if possible to distribute quantity[i:] to remaining."""
-            if i == len(quantity): return True 
-            seen = set()
-            for k in range(len(vals)): 
-                if vals[k] >= quantity[i] and vals[k] not in seen: 
-                    seen.add(vals[k]) # pruning - unqiue values 
-                    vals[k] -= quantity[i]
-                    if fn(i+1): return True 
-                    vals[k] += quantity[i] # backtracking
-                    
-        return fn(0)
+        return backtrack()
