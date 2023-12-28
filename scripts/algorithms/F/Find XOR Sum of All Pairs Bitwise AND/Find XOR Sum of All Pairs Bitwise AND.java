@@ -1,18 +1,18 @@
-// Runtime: 7 ms (Top 20.86%) | Memory: 82 MB (Top 80.58%)
+// Runtime: 2 ms (Top 19.55%) | Memory: 56.30 MB (Top 85.71%)
+
 class Solution {
-
     public int getXORSum(int[] arr1, int[] arr2) {
-        int[] x = (arr1.length < arr2.length ? arr2 : arr1);
-        int[] y = (arr1.length < arr2.length ? arr1 : arr2);
-        int xorSumX = 0;
-        for (int xi : x) {
-            xorSumX ^= xi;
+        
+        int xor1 = 0, xor2 = 0;
+        
+        for (int arr : arr1) {
+            xor1 ^= arr;
         }
-        int answer = 0;
-        for (int yj : y) {
-            answer ^= (yj & xorSumX);
+        
+        for (int arr : arr2) {
+            xor2 ^= arr;
         }
-        return answer;
+        
+        return xor1 & xor2;
     }
-
 }
