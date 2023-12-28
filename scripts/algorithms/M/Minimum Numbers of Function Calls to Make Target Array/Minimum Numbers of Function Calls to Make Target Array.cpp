@@ -1,19 +1,23 @@
+// Runtime: 61 ms (Top 41.75%) | Memory: 25.60 MB (Top 89.32%)
+
 class Solution {
 public:
     int minOperations(vector<int>& nums) {
         int ans = 0;
-        int t = 33;
-        while(t--){
-            int flag = false;
-            for(int i = 0; i<nums.size(); i++){
-                if(nums[i]%2) ans++;
-                nums[i]/=2;
-                if(nums[i]!=0) flag = true;
+        while(true) {
+            bool largerThan1 = false;
+            bool allzero = true;
+            for(auto &n : nums) {
+                if(n == 0) continue;
+                allzero = false;
+                if(n > 1) largerThan1 = true;
+                ans += n % 2;
+                n /= 2;
             }
-			
-            if(!flag) break;
-            ans++;
+            ans += largerThan1; //we should do division if some element is larger than 1.
+            if(allzero) break;
         }
         return ans;
     }
 };
+
