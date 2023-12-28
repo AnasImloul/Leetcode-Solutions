@@ -1,32 +1,32 @@
-#define sz(x) static_cast<int32_t>(x.size())
-template <class T> inline void chmax(T &x,T y){ x = max((x), (y));}
+// Runtime: 582 ms (Top 20.33%) | Memory: 189.00 MB (Top 26.83%)
+
+/* 
+    Time: O(V+E)
+    Space: O(V+E)
+    Tags: Graph, Set, Sorting, Greedy
+    Difficulty: H
+*/
 
 class Solution {
 public:
-    int maximumScore(vector<int>& scores, vector<vector<int>>& edges) {
-        int n = scores.size();
-        vector <vector<int>> g(n);
-        for (auto it : edges) {
-            g[it[0]].push_back(it[1]);
-            g[it[1]].push_back(it[0]);
+    int maximumScore(vector<int> &scores, vector<vector<int>> &edges) {
+        set<pair<int, int>> graph[scores.size()];
+        for (auto edge : edges) {
+            graph[edge[0]].insert({scores[edge[1]], edge[1]});
+            graph[edge[1]].insert({scores[edge[0]], edge[0]});
+            if (graph[edge[0]].size() > 3) graph[edge[0]].erase(graph[edge[0]].begin());
+            if (graph[edge[1]].size() > 3) graph[edge[1]].erase(graph[edge[1]].begin());
         }
-        for (int i = 0; i < n; ++i) {
-            sort(g[i].begin(), g[i].end(), [&](const auto a1, const auto a2) {
-                return scores[a1] > scores[a2];
-            });
-        }
-        int ans = -1;
-        for (auto e : edges) {
-            int u = e[0];
-            int v = e[1];
-            for (int i = 0; i < 3; ++i) {
-                for (int j = 0; j < 3; ++j) {
-                    if (i < sz(g[u]) and j < sz(g[v]) and g[u][i] != g[v][j] and u != g[v][j] and v != g[u][i]) {
-                        chmax(ans, scores[u] + scores[v] + scores[g[u][i]] + scores[g[v][j]]);
-                    }
+        int res = -1;
+        for (auto edge : edges) {
+            int ans = scores[edge[0]] + scores[edge[1]];
+            for (auto node1 : graph[edge[0]]) {
+                for (auto node2 : graph[edge[1]]) {
+                    if (node1.second != edge[0] && node1.second != edge[1] && node2.second != edge[0] && node2.second != edge[1] && node2.second != node1.second)
+                        res = max(res, ans + node1.first + node2.first);
                 }
             }
         }
-        return ans;
+        return res;
     }
 };
