@@ -1,44 +1,19 @@
-// Runtime: 9000 ms (Top 21.88%) | Memory: 36.5 MB (Top 15.63%)
-from collections import defaultdict
-
-class TrieNode:
-    def __init__(self):
-        self.nodes = defaultdict(TrieNode)
-        self.cnt = 0
-
-class Trie:
-
-    def __init__(self):
-        self.root = TrieNode()
-
-    def insert(self, val):
-        cur = self.root
-        for i in reversed(range(15)):
-            bit = val >> i & 1
-            cur.nodes[bit].cnt += 1
-            cur = cur.nodes[bit]
-
-    def count(self, val, high):
-        res = 0
-        cur = self.root
-        for i in reversed(range(15)):
-            if not cur:
-                break
-            bit = val >> i & 1
-            cmp = high >> i & 1
-            if cmp:
-                res += cur.nodes[bit].cnt
-                cur = cur.nodes[1^bit]
-            else:
-                cur = cur.nodes[bit]
-        return res
+// Runtime: 1588 ms (Top 85.61%) | Memory: 20.60 MB (Top 80.3%)
 
 class Solution:
-    def countPairs(self, nums: List[int], low: int, high: int) -> int:
-        trie = Trie()
+    def countPairs(self, nums, low, high):
+        return self._countPairs(nums, high + 1) - self._countPairs(nums, low)
+    
+    def _countPairs(self, nums, high):
         res = 0
-        for num in nums:
-            res += trie.count(num, high + 1) - trie.count(num, low)
-            trie.insert(num)
-
-        return res
+        for k in range(31, -1, -1):
+            target = high >> k
+            if target & 1 == 0:
+                continue
+            target -= 1
+            counter = Counter(num >> k for num in nums)
+            for mask in counter:
+                res += counter[mask] * counter[target ^ mask]
+                if mask == target ^ mask:
+                    res -= counter[mask]
+        return res // 2
