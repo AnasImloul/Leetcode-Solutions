@@ -1,24 +1,17 @@
+// Runtime: 171 ms (Top 17.21%) | Memory: 69.00 MB (Top 40.7%)
+
 class Solution {
 public:
-    int findJudge(int n, vector<vector<int>>& trust) {
-        vector<pair<int,int>> v(n+1,{0,0});
-        
-        for(auto i : trust){
-            v[i[0]].first++;
-            v[i[1]].second++;
+    int findJudge(int N, vector<vector<int>>& trust) {
+        vector<int> Trusted(N + 1, 0);
+        for(auto person : trust){
+            Trusted[person[0]]--;
+            Trusted[person[1]]++;
         }
-        
-        int ans = -1;
-        
-
-        for(int i=1;i<=n;i++){
-            auto p = v[i];
-            if(p.first == 0 && p.second == n-1){
-                ans = i;
-                break;
-            }
+        for(int i = 1;i <= N;i++){
+            if(Trusted[i] == N - 1)
+                return i;
         }
-        
-        return ans;
+        return -1;
     }
 };
