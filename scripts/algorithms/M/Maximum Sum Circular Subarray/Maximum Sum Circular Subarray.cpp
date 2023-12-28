@@ -1,18 +1,16 @@
+// Runtime: 52 ms (Top 49.08%) | Memory: 40.20 MB (Top 68.84%)
+
 class Solution {
 public:
     int maxSubarraySumCircular(vector<int>& nums) {
-        int n=nums.size();
-    int currsummin=nums[0],ansmin=nums[0],currsummax=nums[0],ansmax=nums[0],sum=nums[0];
-        for(int i=1;i<n;i++)
-        {
-            sum+=nums[i];
-            
-            currsummin=min(nums[i],currsummin+nums[i]);
-            ansmin=min(ansmin,currsummin);
-            
-            currsummax=max(currsummax+nums[i],nums[i]);
-            ansmax=max(ansmax,currsummax);
-        }
-        return ansmax>0 ? max(ansmax,sum-ansmin) : ansmax;
+        int totalSum = 0, maxSum = INT_MIN, curMax = 0, minSum = INT_MAX, curMin = 0;
+    for (int x : nums) {
+        curMax = max(x, curMax + x);  //update the current max subarray sum
+        maxSum = max(maxSum, curMax); //update the overall max subarray sum
+        curMin = min(x, curMin + x);  //update the current min subarray sum
+        minSum = min(minSum, curMin); //update the overall min subarray sum
+        totalSum += x;
+    }
+    return maxSum > 0 ? max(maxSum, totalSum - minSum) : maxSum;
     }
 };
