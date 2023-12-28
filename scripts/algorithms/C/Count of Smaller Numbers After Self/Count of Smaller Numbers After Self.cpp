@@ -1,70 +1,42 @@
-typedef struct _SmallerValueCount {
-    _SmallerValueCount(const int &value, const int &originalIndex) :
-        mValue(value), mOriginalIndex(originalIndex) {}
-    
-    int mValue = 0;
-    int mOriginalIndex = 0;
-} SmallerValueCount;
+// Runtime: 475 ms (Top 60.1%) | Memory: 194.60 MB (Top 45.85%)
 
 class Solution {
+protected:
+    void merge_countSmaller(vector<int>& indices, int first, int last, 
+                            vector<int>& results, vector<int>& nums) {
+        int count = last - first;
+        if (count > 1) {
+            int step = count / 2;
+            int mid = first + step;
+            merge_countSmaller(indices, first, mid, results, nums);
+            merge_countSmaller(indices, mid, last, results, nums);
+            vector<int> tmp;
+            tmp.reserve(count);
+            int idx1 = first;
+            int idx2 = mid;
+            int semicount = 0;
+            while ((idx1 < mid) || (idx2 < last)) {
+                if ((idx2 == last) || ((idx1 < mid) &&
+                       (nums[indices[idx1]] <= nums[indices[idx2]]))) {
+					tmp.push_back(indices[idx1]);
+                    results[indices[idx1]] += semicount;
+                    ++idx1;
+                } else {
+					tmp.push_back(indices[idx2]);
+                    ++semicount;
+                    ++idx2;
+                }
+            }
+            move(tmp.begin(), tmp.end(), indices.begin()+first);
+        }
+    }
 public:
     vector<int> countSmaller(vector<int>& nums) {
-        vector<SmallerValueCount> convertedNums;
-        convertedNums.reserve(nums.size());
-
-        for (int i = 0; i < nums.size(); ++i)
-            convertedNums.emplace_back(SmallerValueCount(nums[i], i));
-
-        vector<int> smallerCounts(convertedNums.size(), 0);
-        merge_sort(convertedNums, smallerCounts, 0, nums.size() - 1);
-
-        return smallerCounts;
+        int n = nums.size();
+        vector<int> results(n, 0);
+        vector<int> indices(n, 0);
+        iota(indices.begin(), indices.end(), 0);
+        merge_countSmaller(indices, 0, n, results, nums);
+        return results;
     }
-
-    void merge_sort(vector<SmallerValueCount> &nums, vector<int> &smallerCounts, const int &left, const int &right) {
-        if (left >= right)
-            return;
-        const auto mid = (left + right) / 2;
-        merge_sort(nums, smallerCounts, left, mid);
-        merge_sort(nums, smallerCounts, mid+1, right);
-        merge(nums, smallerCounts, left, mid, right);
-    }
-
-    void merge(vector<SmallerValueCount> &nums, vector<int> &smallerCounts, const int &left, const int &mid, const int &right)
-    {
-        vector<SmallerValueCount> buffer;
-        buffer.reserve(right - left + 1);
-
-        int i = left, j = mid + 1;
-        int smallerCount = 0;
-        while (i <= mid && j <= right)
-            if (nums[i].mValue > nums[j].mValue)
-            {
-                ++smallerCount;
-                buffer.push_back(nums[j]);
-                ++j;
-            }
-            else
-            {
-                smallerCounts[nums[i].mOriginalIndex] += smallerCount;
-                buffer.push_back(nums[i]);
-                ++i;
-            }
-
-        while (i <= mid)
-        {
-            smallerCounts[nums[i].mOriginalIndex] += smallerCount;
-            buffer.push_back(nums[i]);
-            ++i;
-        }
-
-        while (j <= right)
-        {
-            buffer.push_back(nums[j]);
-            ++j;
-        }
-
-        std::move(std::begin(buffer), std::end(buffer), std::next(std::begin(nums), left));
-    }
-
 };
