@@ -1,14 +1,11 @@
+// Runtime: 64 ms (Top 5.43%) | Memory: 17.30 MB (Top 11.89%)
+
 class Solution:
     def minimumMoves(self, s: str) -> int:
-        i, m = 0, 0
-        l = len(s)
-
-        while i < l:
-            if s[i] != 'X':
-                i += 1
-            elif 'X' not in s[i:i+1]:
-                i += 2
-            elif 'X' in s[i:i+2]:
-                m += 1
+        ans = i = 0
+        while i < len(s): 
+            if s[i] == "X": 
+                ans += 1
                 i += 3
-        return m
+            else: i += 1
+        return ans 
