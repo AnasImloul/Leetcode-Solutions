@@ -1,3 +1,5 @@
+// Runtime: 1779 ms (Top 5.03%) | Memory: 31.30 MB (Top 6.6%)
+
 class Solution:
     def countSubarrays(self, nums: List[int], k: int) -> int:
         sum, res, j = 0, 0, 0
