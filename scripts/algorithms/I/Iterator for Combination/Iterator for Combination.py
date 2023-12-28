@@ -1,21 +1,29 @@
+// Runtime: 54 ms (Top 68.38%) | Memory: 20.00 MB (Top 5.53%)
+
 class CombinationIterator:
 
     def __init__(self, characters: str, combinationLength: int):
-        res = []
-        def dfs(low, path):
-            if len(path) == combinationLength:
-                res.append(path)
-                return
-            for idx in range(low, len(characters)):
-                dfs(idx+1, path+characters[idx])
-        
-        dfs(0, "")
-        self.combinations = res
-        self.currIdx = 0
-            
+        self.characters = characters
+        self.n = len(characters)
+        self.combinations = gen_combinations(self.n, combinationLength)
+        self.ind = len(self.combinations) - 1
+
     def next(self) -> str:
-        self.currIdx += 1
-        return self.combinations[self.currIdx-1]
+        s = ""
+        for i in range(self.n):
+            if self.combinations[self.ind][i] != "0":
+                s += self.characters[i]
+        self.ind -= 1
+        return s
 
     def hasNext(self) -> bool:
-        return self.currIdx <= len(self.combinations) - 1
+        return self.ind > -1 
+    
+def gen_combinations(l, n):
+    end = int("1" * l, 2)
+    ans = []
+    for i in range(end + 1):
+        b = bin(i)[2:]
+        if b.count('1') == n:
+            ans.append(b.zfill(l))
+    return ans
