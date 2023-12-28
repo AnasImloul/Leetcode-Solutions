@@ -1,4 +1,7 @@
-# Runtime: 145 ms (Top 75.66%) | Memory: 15.5 MB (Top 23.89%)
+// Runtime: 156 ms (Top 5.06%) | Memory: 18.40 MB (Top 7.47%)
+
 class Solution:
-    def smallestRangeI(self, nums: List[int], k: int) -> int:
-        return max(0, max(nums)-min(nums)-2*k)
+    def smallestRangeI(self, A: List[int], K: int) -> int:
+        maxi = max(A)
+        mini = min(A)
+        return max(0, maxi-K-mini-K)
