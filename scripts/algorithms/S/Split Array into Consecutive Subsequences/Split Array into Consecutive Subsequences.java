@@ -1,25 +1,28 @@
+// Runtime: 50 ms (Top 12.39%) | Memory: 45.60 MB (Top 38.5%)
+
 class Solution {
-  public boolean isPossible(int[] nums) {
-    int[] freq = new int[2002], subEnd = new int[2002];
-    for (int i : nums) {
-      int num = i + 1001;
-      freq[num]++;
+    public boolean isPossible(int[] nums) {
+        Map<Integer,Integer> possibility = new HashMap<>();
+        Map<Integer,Integer> counts = new HashMap<>();
+        for(int num:nums){
+            counts.put(num,counts.getOrDefault(num,0)+1);
+        }
+        for(int num:nums){
+            if(counts.get(num)==0)continue;
+            if(possibility.getOrDefault(num,0)>0){
+                possibility.put(num,possibility.getOrDefault(num,0)-1);
+                possibility.put(num+1,possibility.getOrDefault(num+1,0)+1);
+            }
+            else if( counts.getOrDefault(num+1,0)>0 && counts.getOrDefault(num+2,0)>0 ){
+                possibility.put(num+3,possibility.getOrDefault(num+3,0)+1);
+                counts.put(num+1,counts.getOrDefault(num+1,0)-1);
+                counts.put(num+2,counts.getOrDefault(num+2,0)-1);
+            }
+            else{
+                return false;
+            }
+            counts.put(num,counts.get(num)-1);
+        }
+        return true;
     }
-    for (int i : nums) {
-      int num = i + 1001;
-      if (freq[num] == 0) continue; // Num already in use
-      freq[num]--;
-      if (subEnd[num - 1] > 0) { // Put into existing subsequence
-        subEnd[num - 1]--;
-        subEnd[num]++;
-      }
-      // New subsequence of size 3 is possible
-      else if (freq[num + 1] > 0 && freq[num + 2] > 0) {
-        freq[num + 1]--;
-        freq[num + 2]--;
-        subEnd[num + 2]++; // New subsequence
-      } else return false;
-    }
-    return true;
-  }
 }
