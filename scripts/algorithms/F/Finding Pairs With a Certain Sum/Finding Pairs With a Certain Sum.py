@@ -1,4 +1,5 @@
-# Runtime: 2320 ms (Top 5.10%) | Memory: 76.2 MB (Top 10.55%)
+// Runtime: 1039 ms (Top 5.41%) | Memory: 80.00 MB (Top 22.7%)
+
 class FindSumPairs:
 
     def __init__(self, nums1: List[int], nums2: List[int]):
