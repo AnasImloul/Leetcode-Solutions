@@ -1,8 +1,9 @@
+// Runtime: 201 ms (Top 33.23%) | Memory: 18.20 MB (Top 28.53%)
+
 class Solution:
     def appealSum(self, s: str) -> int:
-        res, cur, prev = 0, 0, defaultdict(lambda: -1)
+        res, n, prev = 0, len(s), defaultdict(lambda: -1)
         for i, ch in enumerate(s):
-            cur += i - prev[ch]
+            res += (i - prev[ch]) * (n - i)
             prev[ch] = i
-            res += cur
-        return res  
+        return res
