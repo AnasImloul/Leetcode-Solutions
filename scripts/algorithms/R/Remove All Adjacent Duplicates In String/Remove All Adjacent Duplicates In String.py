@@ -1,9 +1,12 @@
+// Runtime: 69 ms (Top 68.51%) | Memory: 18.40 MB (Top 6.96%)
+
 class Solution:
-    def removeDuplicates(self, s: str) -> str:
+    def removeDuplicates(self, S: str) -> str:
         stack = []
-        for x in s:
-            if(len(stack)!=0 and stack[-1]==x):
+        for char in S:
+            if stack and stack[-1] == char:
                 stack.pop()
             else:
-                stack.append(x)
-        return "".join(stack)
+                stack.append(char)
+        
+        return ''.join(stack)
