@@ -1,52 +1,19 @@
+// Runtime: 3 ms (Top 84.03%) | Memory: 11.60 MB (Top 79.72%)
+
 class Solution {
-public:    
+    int uf[26];
+    int find(int x) {
+        return uf[x] == x ? x : (uf[x] = find(uf[x]));
+    }
+public:
     bool equationsPossible(vector<string>& equations) {
-        
-        unordered_map<char,set<char>> equalGraph;       //O(26*26)
-        unordered_map<char,set<char>> unEqualGraph;     //O(26*26)
-        
-        //build graph:
-        for(auto eq: equations){
-            char x = eq[0], y = eq[3];
-            if(eq[1] == '='){
-                equalGraph[x].insert(y);
-                equalGraph[y].insert(x);
-            } 
-            else{
-                unEqualGraph[x].insert(y);
-                unEqualGraph[y].insert(x);
-            }
+        for (int i = 0; i < 26; ++i) uf[i] = i;
+        for (auto e : equations) {
+            if (e[1] == '=') uf[find(e[0] - 'a')] = find(e[3] - 'a'); 
         }
-        
-        //for each node in inequality, check if they are reachable from equality:
-        for(auto it: unEqualGraph){
-            char node = it.first;
-            set<char> nbrs = it.second;         //all nbrs that should be unequal
-            if(nbrs.size() == 0) continue;
-                        
-            unordered_map<char,bool> seen;  
-            bool temp = dfs(node, seen, equalGraph, nbrs);
-            if(temp) return false;          //if any nbr found in equality, return false
+        for (auto e : equations) {
+            if (e[1] == '!' && find(e[0] - 'a') == find(e[3] - 'a')) return false;
         }
-        
         return true;
-        //TC, SC: O(N*N) + O(26*26)
     }
-    
-    
-     bool dfs(char curNode, unordered_map<char,bool> &seen, unordered_map<char,set<char>> &equalGraph, set<char> &nbrs){
-        
-        seen[curNode] = true;
-        if(nbrs.find(curNode) != nbrs.end()) return true;
-        
-        for(auto nextNode: equalGraph[curNode]){
-            if(seen.find(nextNode) == seen.end()){
-                bool temp = dfs(nextNode, seen, equalGraph, nbrs);
-                if(temp) return true;
-            }
-        }
-        
-        return false;
-    }
-    
 };
