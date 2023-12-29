@@ -1,19 +1,15 @@
+// Runtime: 34 ms (Top 77.79%) | Memory: 17.40 MB (Top 7.9%)
+
 class Solution:
     def findWords(self, words: List[str]) -> List[str]:
-        first_row = "qwertyuiopQWERTYUIOP"
-        second_row = "asdfghjklASDFGHIJKL"
-        third_row = "zxcvbnmZXCVBNM"
-        first_list = []
-        second_list = []
-        third_list = []
-        one_line_words = []
-
-        for word in words:
-            if set(word).issubset(first_row):
-                one_line_words.append(word)
-            if set(word).issubset(second_row):
-                one_line_words.append(word)
-            if set(word).issubset(third_row):
-                one_line_words.append(word)
-
-        return one_line_words
+        #
+        set1 = {'q','w','e','r','t','y','u','i','o','p'}
+        set2 = {'a','s','d','f','g','h','j','k','l'}
+        set3 = {'z','x','c','v','b','n','m'}
+        
+        res = []
+        for i in words:
+            wordset = set(i.lower())
+            if (wordset&set1 == wordset) or (wordset&set2 == wordset) or (wordset&set3 == wordset):
+                res.append(i)
+        return res
