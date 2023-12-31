@@ -1,31 +1,28 @@
+// Runtime: 166 ms (Top 87.34%) | Memory: 113.60 MB (Top 78.69%)
+
 class Solution {
-public:
-    vector<int> nodesBetweenCriticalPoints(ListNode* head) {
-        if(!head or !head->next or !head->next->next) return {-1,-1};
-        int mini = 1e9;
-        int prevInd = -1e9;
-        int currInd = 0;
-        int start = -1e9;
-        int prev = head->val;
-        head = head->next;
-
-        while(head->next){
-            if(prev<head->val and head->next->val<head->val){
-                mini = min(mini,currInd-prevInd);
-                prevInd = currInd;
-                if(start==-1e9) start = currInd;
+   public:
+    vector<int> nodesBetweenCriticalPoints(ListNode *head) {
+        ListNode *curr = head, *prev = NULL;
+        int minDistance = INT_MAX, maxDistance = -1, size = 0, preCP = 0,
+            first = 0;
+        while (curr) {
+            if (curr->next && prev) {
+                if ((curr->val < prev->val && curr->val < curr->next->val) ||
+                    (curr->val > prev->val && curr->val > curr->next->val)) {
+                    if (first == 0) {
+                        first = size;
+                    } else {
+                        minDistance = min(minDistance, size - preCP);
+                        maxDistance = max(maxDistance, size - first);
+                    }
+                    preCP = size;
+                }
             }
-            if(prev>head->val and head->next->val>head->val){
-                mini = min(mini,currInd-prevInd);
-                prevInd = currInd;
-                if(start==-1e9) start = currInd;
-            }
-            prev = head->val;
-            head = head->next;
-            currInd++;
+            size++;
+            prev = curr;
+            curr = curr->next;
         }
-
-        if(start!=prevInd) return {mini,prevInd-start};
-        return {-1,-1};
+        return {minDistance == INT_MAX ? -1 : minDistance, maxDistance};
     }
 };
