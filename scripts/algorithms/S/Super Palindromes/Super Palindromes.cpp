@@ -1,45 +1,43 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.70 MB (Top 62.64%)
+
 class Solution {
 public:
-    int superpalindromesInRange(string lef, string rig) {
-   long L = stol(lef) , R = stol(rig);        
-           int magic = 100000 , ans = 0;
-                   string s = "";
-
-                            for(int k = 1 ; k  < magic ; k++){
-                                     s = to_string(k);
-                                       for(int i = s.length() - 2 ; i >= 0; i--){
-                                                       s += s.at(i);
-                                                                   }
-                                                                               long v = stol(s);
-                                                                                           v *= v;
-                                                                                                       if(v > R) break;
-                                                                                                          if(v >= L && isPalindrome(v)) ans++;
-                                                                                                                  }
-
-                                                                                                                          for(int k = 1 ; k < magic ; k++){
-                                                                                                                                      s = to_string(k);
-                                                                                                                                       for(int i = s.length() - 1 ; i >= 0 ; i--){
-                                                                                                                                                       s += s.at(i);
-                                                                                                                                                                   }
-                                                                                                                                                                               long v = stol(s);
-                                                                                                                                                                                           v *= v;
-                                                                                                                                                                                                       if(v > R) break;
-                                                                                                                                                                                                         if(v >= L && isPalindrome(v)) ans++;
-                                                                                                                                                                                                                 }
-                                                                                                                                                                                                                         return ans;
-                                                                                                                                                                                                                             }
-
-                                                                                                                                                                                                                                     bool isPalindrome(long x){
-                                                                                                                                                                                                                                             return x == reverse(x);
-                                                                                                                                                                                                                                                 }
-
-                                                                                                                                                                                                                                                         long reverse(long x ){
-                                                                                                                                                                                                                                                                 long ans = 0;
-                                                                                                                                                                                                                                                                         while(x > 0){
-                                                                                                                                                                                                                                                                                     ans = 10 * ans + x % 10;
-                                                                                                                                                                                                                                                                                                 x /= 10;
-                                                                                                                                                                                                                                                                                                         }
-                                                                                                                                                                                                                                                                                                                 return ans;
-                                                                                                                                                                                                                                                                                                                     }     
+    int superpalindromesInRange(string left, string right) {
+        int ans = 9 >= stol(left) && 9 <= stol(right) ? 1 : 0;
+        for (int dig = 1; dig < 10; dig++) {
+            bool isOdd = dig % 2 && dig != 1;
+            int innerLen = (dig >> 1) - 1,
+                innerLim = max(1, (int)pow(2, innerLen)),
+                midPos = dig >> 1, midLim = isOdd ? 3 : 1;
+            for (int edge = 1; edge < 3; edge++) {
+                string pal(dig, '0');
+                pal[0] = (char)(edge + 48);
+                pal[dig-1] = (char)(edge + 48);
+                if (edge == 2) innerLim = 1, midLim = min(midLim, 2);
+                for (int inner = 0; inner < innerLim; inner++) {
+                    if (inner > 0) {
+                        string innerStr = bitset<3>(inner).to_string();
+                        innerStr = innerStr.substr(3 - innerLen);
+                        for (int i = 0; i < innerLen; i++) {
+                            pal[1+i] = innerStr[i];
+                            pal[dig-2-i] = innerStr[i];
+                        }
+                    }
+                    for (int mid = 0; mid < midLim; mid++) {
+                        if (isOdd) pal[midPos] = (char)(mid + 48);
+                        long square = stol(pal) * stol(pal);
+                        if (square > stol(right)) return ans;
+                        if (square >= stol(left) && isPal(to_string(square))) ans++;
+                    }
+                }
+            }
+        }
+        return ans;
+    }
     
+    bool isPal(string str) {
+        for (int i = 0, j = str.length() - 1; i < j; i++, j--)
+            if (str[i] != str[j]) return false;
+        return true;
+    }
 };
