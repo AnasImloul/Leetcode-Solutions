@@ -1,48 +1,89 @@
+// Runtime: 8 ms (Top 93.23%) | Memory: 10.30 MB (Top 84.9%)
+
 class Solution {
 public:
-    int row[4] = {-1,1,0,0};
-    int col[4] = {0,0,-1,1};
-    int in[31][31] , lw[31][31] , vis[31][31];
-    bool artpt = false;
-    int time = 0;
     int minDays(vector<vector<int>>& grid) {
-        int n = grid.size() , m = grid[0].size();
-        memset(vis,0,sizeof(vis));
-        int bodies = 0 , land = 0;
-        for(int i=0; i<n; i++) {
-            for(int j=0; j<m; j++) {
-                  if(grid[i][j]==1) {
-                       land++;
-                       if(!vis[i][j]) {
-                           bodies++;
-                           dfs(i,j,-1,-1,grid,n,m);
-                       }
-                  }
+        //if the graph has already greater than 1 components than ans is 0
+        //if the graph has any articulation point than ans is 1
+        //else ans is 2
+        int n = grid.size();
+        int m = grid[0].size();
+        int count = 0;
+        //discovery time
+        vector<vector<int>> disc(n,vector<int>(m,0));
+        //low time
+        vector<vector<int>> low(n,vector<int>(m,0));
+        //visited array
+        vector<vector<bool>> visited(n,vector<bool>(m,false));
+        //direction array
+        int dir[4][2] = {{-1,0},{1,0},{0,-1},{0,1}};
+        //if ok is true means there is a articulation point in the graph
+        bool ok = false;
+        //dfs call
+        function<void(int,int,int&,int)> dfs = [&](int x,int y,int &time,int p){
+            //mark the nodes as visited and update their low and disc time
+            visited[x][y] = true;
+            disc[x][y] = low[x][y] = time++;
+            //for root if there are more than 1 recursive tree than root is a articulation point
+            int rootCall = 0;
+            //going in all direction and making a dfs call
+            for(int i = 0 ; i < 4 ; i++){
+                int newX = x+dir[i][0];
+                int newY = y+dir[i][1];
+                //if child cordinates are valid and there is a 1 at that point ans also it is not parent
+                if(newX >= 0 && newX < n && newY >= 0 && newY < m && grid[newX][newY] == 1 && newX*m+newY != p){
+                    if(!visited[newX][newY]){
+                        dfs(newX,newY,time,x*m+y);
+                        //update the low time
+                        low[x][y] = min(low[x][y],low[newX][newY]);
+                        //checking whether [x,y] is articulation point or not
+                        if(p == -1){
+                            rootCall++;
+                        }else if(disc[x][y] <= low[newX][newY]){
+                            ok = true;
+                        }
+                    }else{
+                        //updating the low time
+                        low[x][y] = min(low[x][y],disc[newX][newY]);
+                    }
+                }
+            }
+            //if root and more than 1 recurive tree formed than articulation point
+            if(p == -1 && rootCall > 1){
+                ok = true;
+            }
+        };
+        //counting the number of 1's and making dfs call
+        int to1 = 0;
+        for(int i = 0 ; i < n ; i++){
+            for(int j = 0 ; j < m ; j++){
+                if(grid[i][j] == 1){
+                    to1++;
+                    if(!visited[i][j]){
+                        int time = 1;
+                        dfs(i,j,time,-1);
+                        count++;
+                    }
+                }
             }
         }
-        if(bodies == 0 || bodies>1) return 0;  // no body or more than one body , already disconnected (more than one island)
-        else if(artpt || land==1) return 1;  // articulation pt or a single patch of land found , just remove that node!
-        else return 2;  // otherwise its a ssc (strongly connected component) remove two nodes , one node each day , hence 2 days !
-    }
-	// learn about how to find articulation points!
-	// https://youtu.be/y8hoABkFbT8
-    void dfs(int r,int c,int pr,int pc,vector<vector<int>>&grid,int n,int m) {
-          vis[r][c] = true;
-          in[r][c] = lw[r][c] = ++time;
-          int children = 0;
-          for(int d=0; d<4; d++) {
-               int R = r + row[d] , C = c + col[d];
-               if(R>=0 && R<n && C>=0 && C<m && grid[R][C]) {
-                      if(!vis[R][C]) {
-                          children++;
-                          dfs(R,C,r,c,grid,n,m);
-                          lw[r][c] = min(lw[r][c],lw[R][C]);
-                          if(in[r][c]<=lw[R][C] && pr!=-1) artpt = true;
-                      }else {
-                          lw[r][c] = min(lw[r][c],in[R][C]);
-                      }
-               }
-          }
-        if(pr == -1 && children>1) artpt = true;
+        
+        if(count > 1){
+            //if more than one components are formed
+            return 0;
+        }else if(ok){
+            //if onlu one component is formed and there is a articulation point
+            return 1;
+        }else{
+            //if total number of 1 is 1
+            if(to1 == 1){
+                return 1;
+            }else if(to1 == 0){
+                //if total number of 1 is 0
+                return 0;
+            }
+            //else
+            return 2;
+        }
     }
 };
