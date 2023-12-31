@@ -1,40 +1,39 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 8.10 MB (Top 52.2%)
+
 class Solution {
 public:
-    vector<string> removeComments(vector<string>& source) {
-        bool commentStart = false;
-        vector<string> res;
-        
-        bool multiComment = false; // are we having a multi-line comment?
-        for (string &eachS : source) {
-            if (!multiComment) {
-                res.emplace_back();
-            }
-            for (int i = 0; i < eachS.size(); i++) {
-                if (!multiComment && eachS[i] == '/') {
-                    i++;
-                    if (eachS[i] == '/') {
-                        break;
-                    } else if (eachS[i] == '*') {
-                        multiComment = true;
-                    } else {
-                        res.back() += '/';
-                        res.back() += eachS[i];
-                    }
-                } else if (multiComment && eachS[i] == '*') {
-                    if (i + 1 < eachS.size() && eachS[i + 1] == '/') {
-                        i++;
-                        multiComment = false;
-                    }
-                } else {
-                    if (!multiComment) {
-                        res.back() += eachS[i];
-                    }
+    vector<string> removeComments(vector<string>& source) {      
+        string cur="";
+        vector<string> out;
+        bool comm=false; // it will help us see whether comment is active or not
+
+        for(string s: source){
+            for(int j=0; j<s.size(); j++){
+                // that means a comment is started
+                if(!comm && s[j]=='/' && s[j+1]=='*'){
+                    comm = true;
+                    j++;
                 }
+                // what if a // <- is present, then full line is not read & break
+                // also make sure it is outside comments
+                else if(!comm && s[j]=='/' && s[j+1]=='/') break;
+                // check if a comment is completed
+                else if(comm && s[j]=='*' && s[j+1]=='/') {
+                    comm=false;
+                    j++;
+                }
+                // or else it is a valid code
+                else if (!comm)
+                    cur+=s[j];
             }
-            if (!multiComment && res.back().empty()) {
-                res.pop_back();
-            } 
+            // now check if it's a comment or not and its not blank (because comments
+            // are blank lines) and add it to output
+
+            if(!comm && cur.size()){
+                out.push_back(cur);
+                cur="";
+            }
         }
-        return res;
+        return out; 
     }
 };
