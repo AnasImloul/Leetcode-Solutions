@@ -1,97 +1,69 @@
+// Runtime: 36 ms (Top 69.86%) | Memory: 13.40 MB (Top 75.51%)
+
+#define ll long long
 class Solution {
 public:
-    int numDecodings(string s) {
-        int n=s.size();
-        if(s[0]=='0')
-        {
-            return 0;
-        }
-        for(int i=0;i<n-1;++i)
-        {
-            if(s[i]==s[i+1]&&s[i]=='0')
-            {
-                return 0;
-            }
-        }
-        long long dp[n][2],mod=1e9+7;
-        //dp[i][0]-no of ways such that 0...i has been mapped with ith digit is mapped alone
-        //dp[i][1]-no of ways such that 0...i has been mapped with ith digit is mapped with previous digit
-        dp[0][0]=(s[0]=='*'?9:1);
-        dp[0][1]=0;
-        for(int i=1;i<n;++i)
-        {
-            if(s[i]!='0')
-            {
-                if(s[i]=='*')
-                {
-                    long long m=9;
-                    dp[i][0]=((m%mod)*((dp[i-1][0]+dp[i-1][1])%mod))%mod;
-                }
-                else
-                {
-                    dp[i][0]=(dp[i-1][0]+dp[i-1][1])%mod;
-                }
-            }
-            else
-            {
-                dp[i][0]=0;
-            }
-            
-            if(s[i-1]=='0')
-            {
-                dp[i][1]=0;
-            }
-            else
-            {
-                if(s[i-1]=='*'||s[i]=='*')
-                {
-                    long long m=1;
-                    if(s[i-1]=='*'&&s[i]=='*')
-                    {
-                        m=15;
-                    }
-                    else if(s[i-1]=='*')
-                    {
-                        int u=s[i]-'0';
-                        if(u>6)
-                        {
-                            m=1;
-                        }
-                        else
-                        {
-                            m=2;
-                        }
-                    }
+    
+    ll numDecodings(string s) {
+        
+        ll M = 1000000007;
+        ll dp[s.size() + 1];
+        memset(dp, 0, sizeof(dp));
+        
+        dp[0] = 1;
+        
+        for(int i = 1; i <= s.size(); i++){
+            if(s[i - 1] == '*' and i == 1)
+                dp[i] = 9;
+            else if(s[i - 1] == '0' and i == 1)
+                dp[i] = 0;
+            else if(i == 1)
+                dp[i] = 1;
+            else{
+                //now we need to check previous 2 characters for *,digit combination
+                if(s[i - 1] == '*')
+                    dp[i] += (9 * dp[i - 1]) % M;
+                else{
+                    if(s[i - 1] == '0')//since previous zero combination not possible according to question no partition can take place with a previous character 0
+                        dp[i] = 0;
                     else
-                    {
-                        int v=s[i-1]-'0';
-                        if(v>2)m=0;
-                        else
-                        {
-                            if(v==1)m=9;
-                            else m=6;
-                        }
-                    }
-                    if(i-2>=0)dp[i][1]=((m%mod)*((dp[i-2][0]+dp[i-2][1])%mod))%mod;
-                    else dp[i][1]=m;
-                }
-                else
-                {
-                    int v=(s[i-1]-'0')*10+(s[i]-'0');
-                    if(v>=1&&v<=26)
-                    {
-                        if(i-2>=0)dp[i][1]=(dp[i-2][0]+dp[i-2][1])%mod;
-                        else dp[i][1]=1;
-                    }
-                    else
-                    {
-                        dp[i][1]=0;
-                    }
-                }
+                        dp[i] += dp[i - 1] % M;
+                } 
                 
+                //for(int i = 0; i <= s.size(); i++)
+                    //cout << dp[i] << " ";
+                //cout << "\n";
+                
+                if(s[i - 2] == '*'){
+                    if(s[i - 1] == '*')
+                        dp[i] += (15 * dp[i - 2]) % M;
+                    else if(s[i - 1] > '6') // only 1 way
+                        dp[i] += dp[i - 2] % M;
+                    else
+                        dp[i] += (2 * dp[i - 2]) % M;
+                        
+                }
+                else if(s[i - 2] == '1'){
+                    if(s[i - 1] == '*'){
+                        dp[i] += (9 * dp[i - 2]) % M;
+                    }
+                    else
+                        dp[i] += dp[i - 2] % M;
+                    
+                }
+                else if(s[i - 2] == '2'){
+                    if(s[i - 1] == '*')
+                        dp[i] += (6 * dp[i - 2]) % M;
+                    else if(s[i - 1] <= '6')
+                        dp[i] += dp[i - 2] % M;
+                }
             }
-            
         }
-        return (dp[n-1][0]+dp[n-1][1])%mod;
+        
+        //for(int i = 0; i <= s.size(); i++)
+            //cout << dp[i] << " ";
+        //cout << "\n";
+        
+        return dp[s.size()] % M;
     }
 };
