@@ -1,31 +1,61 @@
+// Runtime: 338 ms (Top 40.57%) | Memory: 74.10 MB (Top 78.77%)
+
 class FindSumPairs {
 public:
-    //use map to store the element as key and its frequency as its value
-    unordered_map<int,int> freq;
-    vector<int> v1;
-    vector<int> v2;
+    unordered_map<int, int> mp2;
+    
+    unordered_map<int, int> mp1;
+    
+    vector<int> arr;
+    
     FindSumPairs(vector<int>& nums1, vector<int>& nums2) {
-        for(auto ele:nums2)
-            freq[ele]++;
-        v1=nums1;
-        v2=nums2;
+        
+        for(auto x : nums1)
+        {
+            mp1[x]++;
+        }
+        
+        arr = nums2;
+        
+        for(auto x : nums2)
+        {
+            mp2[x]++;
+        }
     }
     
     void add(int index, int val) {
-        //decrease the freq of value at the index
-        freq[v2[index]]-- ;
-        v2[index]+=val;
-        //we got a new value, increment the freq of the value
-        freq[v2[index]]++;
+        
+        mp2[arr[index]]--;
+        
+        if(mp2[arr[index]] == 0)
+        {
+            mp2.erase(arr[index]);
+        }
+        
+        arr[index] += val;
+        
+        mp2[arr[index]]++;
     }
     
     int count(int tot) {
-        //traverese through the v1 and find the elements which sum upto the target tot
-        int pairs=0;
-        for(auto ele:v1)
-            if(tot>ele && freq.count(tot-ele))
-                pairs+=freq[tot-ele];
-        return pairs;
+        
+        int count = 0;
+        
+        for(auto x : mp1)
+        {
+            int val = x.first;
+            
+            int freq = x.second;
+            
+            int need = tot - val;
+            
+            if(mp2.count(need))
+            {
+                count += mp2[need] * freq;
+            }
+        }
+        
+        return count;
     }
 };
 
