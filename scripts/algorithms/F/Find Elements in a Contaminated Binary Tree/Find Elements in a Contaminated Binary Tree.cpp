@@ -1,51 +1,45 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class FindElements {
+// Runtime: 31 ms (Top 65.66%) | Memory: 22.10 MB (Top 59.04%)
+
+class FindElements
+{
 public:
-    void initialize(TreeNode* root,unordered_set<int> &s){
-        queue<TreeNode*> q;
-        q.push(root);
-        while(!q.empty()){
-            auto t = q.front();
-            q.pop();
-            s.insert(t->val);
-            if(t->left != NULL){
-                t->left->val = 2*(t->val)+1;
-                q.push(t->left);
-            }
-            if(t->right != NULL){
-                t->right->val= 2*(t->val)+2;
-                q.push(t->right);
+    unordered_map<int,int>m;
+
+    FindElements(TreeNode* root)
+    {
+        if(root)
+        {
+            root->val = 0;
+            queue<TreeNode*> q;
+            q.push(root);
+            m[0]++;
+
+            while(!q.empty())
+            {
+                TreeNode* temp = q.front();
+                q.pop();
+                int x = temp->val;
+                if(temp->left)
+                {
+                    temp->left->val = x*2 + 1;
+
+                    m[x*2 + 1]++;
+                    q.push(temp->left);
+                }
+
+                if(temp->right)
+                {
+                    temp->right->val = x*2 + 2;
+
+                    m[x*2 + 2]++;
+                    q.push(temp->right);
+                }
             }
         }
     }
-    unordered_set<int> s;
-    FindElements(TreeNode* root) {
-        root->val = 0;
-        
 
-        initialize(root,s);
-        
-    }
-    
-    bool find(int target) {
-        if(s.find(target) != s.end())
-            return true;
-        return false;
+    bool find(int target)
+    {
+        return (m.find(target) != m.end());
     }
 };
-
-/**
- * Your FindElements object will be instantiated and called as such:
- * FindElements* obj = new FindElements(root);
- * bool param_1 = obj->find(target);
- */```
