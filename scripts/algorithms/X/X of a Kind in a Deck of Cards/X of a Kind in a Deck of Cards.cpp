@@ -1,33 +1,35 @@
+// Runtime: 16 ms (Top 24.87%) | Memory: 17.80 MB (Top 45.38%)
+
 class Solution {
 public:
-    int gcd(int a,int b)
-    {
-        while(a>0 && b>0)
-        {
-            if(a>b) a=a%b;
-            else b=b%a;
-        }
-        return (a==0? b:a);
-    }
     bool hasGroupsSizeX(vector<int>& deck) {
-        unordered_map<int,int> mp;
-        vector<int> v;
-        for(auto i:deck)
+        std::unordered_map<int, int> map;
+        for (int i=0; i<deck.size(); i++) // store in unordered_map the amount of cards with each number
+            map[deck[i]]++;
+        
+        int x = INT_MAX;
+        for (std::pair<int, int> num : map) // find minimum
         {
-            mp[i]++;
+            if (num.second < x)
+                x = num.second;
         }
-        for(auto it:mp)
+        if (x < 2) return false;
+        
+        for(int i=2; i<=x;i++) // loop through all numbers smaller than minimum
         {
-            v.push_back(it.second);
+            bool good = true;
+            for (std::pair<int, int> num : map) // if all groups of cards divide by i - flag stays true
+            {
+                if (num.second % i != 0)
+                {
+                    good = false;
+                    break;
+                }
+                    
+            }
+            if (good) return true;
         }
-        int g=-1;
-        for(int i=0;i<v.size();i++)
-        {
-            if(g==-1)
-                g=v[i];
-            else 
-                g=gcd(g,v[i]);
-        }
-        return g>1;
+            
+        return false;
     }
 };
