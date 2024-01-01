@@ -1,42 +1,29 @@
-/**
- * @param {string[]} equations
- * @return {boolean}
- */
-class UnionSet {
-    constructor() {
-        this.father = new Array(26).fill(0).map((item, index) => index);
-    }
-    find(x) {
-        return this.father[x] = this.father[x] === x ? x : this.find(this.father[x]);
-    }
-    merge(a, b) {
-        const fa = this.find(a);
-        const fb = this.find(b);
-        if (fa === fb) return;
-        this.father[fb] = fa;
-    }
-    equal(a, b) {
-        return this.find(a) === this.find(b);
-    }
-}
+// Runtime: 65 ms (Top 68.33%) | Memory: 45.30 MB (Top 86.67%)
+
 var equationsPossible = function(equations) {
-    const us = new UnionSet();
-    const base = 'a'.charCodeAt();
-    // merge, when equal
-    for(let i = 0; i < equations.length; i++) {
-        const item = equations[i];
-        if (item[1] === '!') continue;
-        const a = item[0].charCodeAt() - base;
-        const b = item[3].charCodeAt() - base;
-        us.merge(a, b);
+    const A = 'a'.charCodeAt(0);
+    const n = equations.length;
+    const parent = new Array(26).fill(0).map((_, i) => i++);
+    
+    const find = (x) => {
+        if (parent[x] === x) {
+            return x;
+        } else {
+            return parent[x] = find(parent[x]);
+        }
     }
-    // check, when different
-    for(let i = 0; i < equations.length; i++) {
-        const item = equations[i];
-        if (item[1] === '=') continue;
-        const a = item[0].charCodeAt() - base;
-        const b = item[3].charCodeAt() - base;
-        if (us.equal(a, b)) return false;
+    
+    for (const eq of equations) {
+        if (eq.charAt(1) === "=") {
+            parent[find(eq.charCodeAt(0) - A)] = find(eq.charCodeAt(3) - A); 
+        }
     }
+    
+    for (const eq of equations) {
+        if (eq.charAt(1) === "!" && find(eq.charCodeAt(0) - A) === find(eq.charCodeAt(3) - A)) {
+            return false;
+        }
+    }
+    
     return true;
 };
