@@ -1,18 +1,18 @@
-/**
- * @param {number[]} nums
- * @param {number} diff
- * @return {number}
- */
+// Runtime: 53 ms (Top 78.36%) | Memory: 42.80 MB (Top 13.18%)
+
 var arithmeticTriplets = function(nums, diff) {
-    count = 0
-    for(let i = 0; i < nums.length - 2; i++){
-       for(let j = i + 1; j < nums.length - 1; j++){
-           for(let k = j + 1; k < nums.length; k++){
-            if(i < j && j < k && nums[j] - nums[i] === diff && nums[k] - nums[j] === diff){
-                count++
-            }
-         }
-      }
+    
+    let hash = new Map();
+    let count = 0;
+
+    for(let i=0; i<nums.length; i++){
+        let temp = nums[i] - diff;
+        
+        if(hash.has(temp) && hash.has(temp - diff)){
+            count++;
+        }
+        hash.set(nums[i] , "Hard choices easy life, Easy choices hard life.");
     }
-    return count
+    
+    return count;
 };
