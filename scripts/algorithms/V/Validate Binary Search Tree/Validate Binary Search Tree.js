@@ -1,41 +1,27 @@
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {boolean}
- */
+// Runtime: 118 ms (Top 5.02%) | Memory: 46.60 MB (Top 30.57%)
+
 var isValidBST = function(root) {
-    const nodesToCheck = [{node: root, lowerLimit: -Infinity, upperLimit: Infinity}]
     
-    while (nodesToCheck.length > 0) {
-        const {node: currentNode, lowerLimit, upperLimit} = nodesToCheck.pop()
+    return validate(root, -Infinity, Infinity);
+};
+
+
+var validate = function(node, lower,upper){
+    
+    if ( node == null ){
         
-        if (currentNode.val <= lowerLimit || currentNode.val >= upperLimit) {
-            return false
-        }
-        
-        if (currentNode.left) {
-            nodesToCheck.push({
-                node: currentNode.left,
-                lowerLimit,
-                upperLimit: currentNode.val
-            })
-        }
-        
-        if (currentNode.right) {
-            nodesToCheck.push({
-                node: currentNode.right,
-                lowerLimit: currentNode.val,
-                upperLimit
-            })
-        }
+        // empty node or empty tree
+        return true;
     }
     
-    return true
-};
+    if( (lower < node.val) && ( node.val < upper ) ){
+        
+        // check if all tree nodes follow BST rule
+        return validate( node.left, lower, node.val) && validate( node.right, node.val, upper);
+    }else{
+        
+        // early reject when we find violation
+        return false;
+    }
+    
+}
