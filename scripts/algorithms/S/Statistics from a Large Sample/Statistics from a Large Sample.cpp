@@ -1,67 +1,42 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 8.80 MB (Top 37.04%)
+
 class Solution {
 public:
+    double solve(vector<int>& arr,int n){
+        double count = 0;
+        for(int i = 0;i < arr.size();i++){
+            count += arr[i];
+            if(count >= n)
+                return i;
+        }
+        return -1;
+    }
     vector<double> sampleStats(vector<int>& count) {
-        vector<double> results;
-
-        results.push_back(findMin(count));
-        results.push_back(findMax(count));
-
-        const int sum = std::accumulate(std::begin(count), std::end(count), 0);
-        results.push_back(findMean(count, sum));
-
-        if (sum % 2 == 0)
-        {
-            const auto left = findMedian(count, sum/2);
-            const auto right = findMedian(count, sum/2 + 1);
-            results.push_back ((left + right) / 2.0);
+        int mini = INT_MAX;
+        int maxi = 0;
+        double sum = 0.0;
+        int d = 0;
+        int mode = 0;
+        for(int i = 0;i < count.size();i++){
+            if(count[i] == 0)
+                continue;
+            mini = min(mini,i);
+            maxi = max(maxi,i);
+            sum += double(count[i])*i;
+            d += count[i];
+            if(count[mode] < count[i])
+                mode = i;
+        }
+        vector<double>ans(5,0.0);
+        ans[0] = mini;
+        ans[1] = maxi;
+        ans[2] = sum/d;
+        ans[4] = mode;
+        if(d%2 == 0){
+            ans[3] = (solve(count,d/2) + solve(count,d/2+1))/2;
         }
         else
-            results.push_back(findMedian(count, sum/2 + 1));
-
-        results.push_back(findMode(count));
-
-        return results;
-    }
-    
-private:
-    int findMin(const vector<int> &count) {
-        const auto minPtr = std::find_if(std::begin(count), std::end(count), 
-                                         [](const int& c) { return c > 0; });
-
-        return minPtr - std::begin(count);
-    }
-
-    int findMax(const vector<int> &count) {
-        const auto maxPtr = std::find_if(std::rbegin(count), std::rend(count), 
-                                         [](const int& c) { return c > 0; });
-
-        return (std::rend(count) - 1) - maxPtr;
-    }
-
-    int findMode(const vector<int> &count) {
-    
-        const auto maxCountPtr = std::max_element(begin(count), end(count));
-
-        return maxCountPtr - std::begin(count);
-    }
-
-    double findMean(const vector<int> &count, const int &sum) {
-        auto ratio = 1.0 / sum;
-        auto mean = 0.0;
-
-        for (int i = 0; i < count.size(); ++i)
-            mean += count[i] * ratio * i;
-
-        return mean;
-    }
-
-    int findMedian(const vector<int> &count, int medianCount) {
-        for (int i = 0; i < count.size(); ++i)
-            if (count[i] < medianCount)
-                medianCount -= count[i];
-        else
-            return i;
-        
-        return -1;
+            ans[3] = solve(count,d/2+1);
+        return ans;
     }
 };
