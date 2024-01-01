@@ -1,115 +1,202 @@
+// Runtime: 7 ms (Top 97.22%) | Memory: 8.70 MB (Top 95.14%)
+
+struct node
+{
+    int x,y;
+    node(int xx,int yy)
+    {
+        x=xx;y=yy;
+    }
+};
+
+struct node2
+{
+    int x,y,dir;
+    node2(int xx,int yy,int dd)
+    {
+        x=xx;y=yy;dir=dd;
+    }
+};
+
 class Solution {
-public:
+    vector<vector<int>>dfn;
+    vector<vector<vector<int>>>color;
+    vector<vector<vector<bool>>>cover;
+    vector<vector<int>>mi;
+    vector<vector<char>>grid;
+    int dir[4][2]={{0,1},{0,-1},{1,0},{-1,0}};
+    int id;
+    int sid;
+    vector<vector<bool>>ins;
+    stack<node2>st;
+    int n,m;
     
-    pair<int,int> t; //target
-    pair<int,int> s; //source
-    pair<int,int> b; //box
-    
-    // struct to store each member in priority queue
-    struct node {
-        int heuristic; // to find the dist between target and box
-        int dist; // to keep track of how much the box moved
-        pair<int,int> src; // to store the source
-        pair<int,int> dest; // to store the box location
-    };
-    
-    struct comp {
-        bool operator()(node const& a, node const& b){
-            return a.heuristic + a.dist > b.heuristic + b.dist;
-        }
-    };
- 
-    int direction[4][2]= {{0, 1}, {-1, 0}, {0, -1}, {1, 0}};
-    
-    int minPushBox(vector<vector<char>>& grid) {
-        
-        int m=grid.size();
-        int n=grid[0].size();
-        
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                if(grid[i][j]=='T')
-                    t={i,j};
-                
-                else if(grid[i][j]=='B')
-                    b={i,j};
-                
-                else if(grid[i][j]=='S')
-                    s={i,j};
+    void dfs(int x,int y,int last_dir)
+    {
+        dfn[x][y]=mi[x][y]=++id;
+        int i;
+
+        for(i=0;i<4;i++)
+        {
+            if((last_dir^1)==i)
+            {
+                continue;
+            }
+            int nx,ny;
+            nx=x+dir[i][0];
+            ny=y+dir[i][1];
+
+            if(nx>=0 && nx<n && ny>=0 && ny<m && grid[nx][ny]!='#')
+            {
+                if(cover[x][y][i]==0 && cover[nx][ny][i^1]==0)
+                {
+                    st.push(node2(x,y,i));
+                    cover[x][y][i]=cover[nx][ny][i^1]=1;
+                }
+                if(dfn[nx][ny]==0)
+                {
+                    dfs(nx,ny,i);
+                    if(dfn[x][y]<=mi[nx][ny])
+                    {
+                        node2 now(0,0,0);
+                        do
+                        {
+                            now=st.top();
+                            st.pop();
+                            color[now.x][now.y][now.dir]=sid;
+                            color[now.x+dir[now.dir][0]][now.y+dir[now.dir][1]][now.dir^1]=sid;
+                        }while(now.x!=x || now.y!=y || now.dir!=i);
+                        sid++;
+                    }
+                    mi[x][y]=min(mi[x][y],mi[nx][ny]);
+                }
+                else // if(ins[nx][ny]==1)
+                {
+                    mi[x][y]=min(mi[x][y],dfn[nx][ny]);
+                }
             }
         }
-        
-        priority_queue<node,vector<node>,comp> pq;
-        set<string> visited;
-        
-        node initialState = node{manhattanDist(b.first,b.second),0,s,b};
-        string initialStr = hash(initialState);
-        
-        pq.push(initialState);
-                
-        while(!pq.empty()){
-            auto cur = pq.top();
-            pq.pop();
-            
-            // we have reached the target return
-            if(cur.dest == t) 
-                return cur.dist;
-            
-            // hash the cur string and 
-            string cur_vis = hash(cur);
-            if(visited.count(cur_vis)) continue;
-            
-            // mark it as visited
-            visited.insert(cur_vis);
-            
-            // in all the four directions
-            for(auto& dir:direction){
-                int sx = cur.src.first + dir[0];
-                int sy = cur.src.second + dir[1];
-                
-                // if the new source is valid index
-                if(valid(sx,sy,grid)){
-                    
-                    //if the source is equal to the where the box is
-                    if(sx == cur.dest.first && sy == cur.dest.second){
-                        int bx=cur.dest.first + dir[0];
-                        int by=cur.dest.second + dir[1];
-                        
-                        // if the box is at right position
-                        if(valid(bx,by,grid)){
-                            
-                            // increment the dist by 1 and update the source and box location
-                            node updated = node{manhattanDist(bx,by),cur.dist+1,{sx,sy},{bx,by}};
-                            pq.push(updated);
-                        }
-                    }else{
-                        // update the new location of source 
-                        node updated = node{cur.heuristic,cur.dist,{sx,sy},cur.dest};
-                        pq.push(updated);
+        return;
+    }
+
+public:
+    int minPushBox(vector<vector<char>>& grid) {
+        this->grid=grid;
+        n=grid.size();
+        m=grid[0].size();
+        int i,j,k;
+        dfn=vector<vector<int>>(n,vector<int>(m,0));
+        color=vector<vector<vector<int>>>(n,vector<vector<int>>(m,vector<int>(4,0)));
+        cover=vector<vector<vector<bool>>>(n,vector<vector<bool>>(m,vector<bool>(4,0)));
+        mi=vector<vector<int>>(n,vector<int>(m,INT_MAX));
+        ins=vector<vector<bool>>(n,vector<bool>(m,0));
+        id=0;
+        sid=1;
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<m;j++)
+            {
+                if(grid[i][j]!='#' && dfn[i][j]==0)
+                {
+                    dfs(i,j,-1);
+                }
+            }
+        }
+
+        int sx,sy,ex,ey,bx,by;
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<m;j++)
+            {
+                if(grid[i][j]=='S')
+                {
+                    sx=i;sy=j;
+                }
+
+                if(grid[i][j]=='T')
+                {
+                    ex=i;ey=j;
+                }
+
+                if(grid[i][j]=='B')
+                {
+                    bx=i;by=j;
+                }
+            }
+        }
+
+        ins=vector<vector<bool>>(n,vector<bool>(m,0));
+        queue<node>q;
+        queue<node2>q2;
+        q.push(node(sx,sy));
+        ins[sx][sy]=1;
+        int dp[n][m][4];
+        memset(dp,-1,sizeof(dp));
+
+        while(!q.empty())
+        {
+            node now=q.front();
+            q.pop();
+            for(i=0;i<4;i++)
+            {
+                int nx,ny;
+                nx=now.x+dir[i][0];
+                ny=now.y+dir[i][1];
+                if(nx>=0 && nx<n && ny>=0 && ny<m)
+                {
+                    if(nx==bx && ny==by)
+                    {
+                        dp[bx][by][i^1]=0;
+                        q2.push(node2(bx,by,i^1));
+                    }
+                    else if(grid[nx][ny]!='#' && ins[nx][ny]==0)
+                    {
+                        ins[nx][ny]=1;
+                        q.push(node(nx,ny));
                     }
                 }
             }
         }
-        
-        // we cannot perform the operation
+
+        while(!q2.empty())
+        {
+            node2 now=q2.front();
+            q2.pop();
+
+            if(now.x==ex && now.y==ey)
+            {
+                return dp[now.x][now.y][now.dir];
+            }
+            
+            int nx,ny;
+            
+
+            for(i=0;i<4;i++)
+            {
+                if(i==now.dir)
+                {
+                    continue;
+                }
+
+                nx=now.x+dir[i][0];
+                ny=now.y+dir[i][1];
+                if(nx>=0 && nx<n && ny>=0 && ny<m && grid[nx][ny]!='#' && dp[now.x][now.y][i]==-1 && color[now.x][now.y][now.dir]==color[now.x][now.y][i])
+                {
+                    dp[now.x][now.y][i]=dp[now.x][now.y][now.dir];
+                    q2.push(node2(now.x,now.y,i));
+                }
+            }
+
+            int d=(now.dir^1);
+            nx=now.x+dir[d][0];
+            ny=now.y+dir[d][1];
+            if(nx>=0 && nx<n && ny>=0 && ny<m && grid[nx][ny]!='#' && dp[nx][ny][now.dir]==-1)
+            {
+                dp[nx][ny][now.dir]=dp[now.x][now.y][now.dir]+1;
+                q2.push(node2(nx,ny,now.dir));
+            }
+        }
+
         return -1;
-        
-    }
-    
-    string hash(node t){
-        stringstream ss;
-        ss<<t.src.first<<" "<<t.src.second<<" "<<t.dest.first<<" "<<t.dest.second;
-        return ss.str();
-    }
-    
-    int manhattanDist(int i, int j){
-        return abs(t.first-i) + abs(t.second-j);
-    }
-    
-    bool valid(int i, int j, vector<vector<char>>& g){
-        
-        if(i<0 || j<0 || i>=g.size() || j>=g[0].size() || g[i][j]=='#') return false;
-        
-        return true;
     }
 };
