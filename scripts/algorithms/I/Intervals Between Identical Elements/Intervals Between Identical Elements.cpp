@@ -1,3 +1,5 @@
+// Runtime: 265 ms (Top 66.89%) | Memory: 147.90 MB (Top 38.51%)
+
 class Solution {
 public:
     vector<long long> getDistances(vector<int>& arr) {
