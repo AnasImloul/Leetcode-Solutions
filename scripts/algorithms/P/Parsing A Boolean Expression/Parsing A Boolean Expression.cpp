@@ -1,43 +1,32 @@
+// Runtime: 3 ms (Top 93.12%) | Memory: 7.40 MB (Top 89.68%)
+
 class Solution {
-    pair<bool,int> dfs(string &e, int idx){
-        bool res;
-        if(e[idx]=='!'){
-            auto [a,b]=dfs(e, idx+2);
-            return {!a,b+3};
-        }else if(e[idx]=='&'){
-            int len=2;
-            res=true;
-            idx+=2;
-            while(e[idx]!=')'){
-                if(e[idx]==','){
-                    idx++;len++;
-                }
-                auto [a,b]=dfs(e,idx);
-                res&=a;
-                idx+=b;
-                len+=b;
-            }
-            return {res,len+1};
-        }else if(e[idx]=='|'){
-            int len=2;
-            res=false;
-            idx+=2;
-            while(e[idx]!=')'){
-                if(e[idx]==','){
-                    idx++;len++;
-                }
-                auto [a,b]=dfs(e,idx);
-                res|=a;
-                idx+=b;
-                len+=b;
-            }
-            return {res,len+1};
-        }else{
-            return {e[idx]=='t',1};
-        }
-    }
 public:
-    bool parseBoolExpr(string expression) {
-        return dfs(expression, 0).first;
+    bool parseBoolExpr(string e) {
+        auto it = e.begin();
+        return parse(it);
+    }
+
+    bool parse(string::iterator& it) {
+        switch (*(it++)) {
+            case 't': return true;
+            case 'f': return false;
+            case '|': return parse(it, false, [](bool init, bool val){ return init || val; });
+            case '&': return parse(it, true,  [](bool init, bool val){ return init && val; });
+            case '!': return parse(it, false, [](bool init, bool val){ return !val; });
+        }
+        return false;
+    }
+
+    bool parse(string::iterator& it, bool init, function<bool(bool, bool)> op) {
+        it++; // skip '('
+        while (true) {
+            auto b = parse(it);
+            init = op(init, b);
+            if (*it == ')') break;
+            it++; // skip ','
+        }
+        it++; // skip ')'
+        return init;
     }
 };
