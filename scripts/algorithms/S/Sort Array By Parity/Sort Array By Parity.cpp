@@ -1,30 +1,20 @@
+// Runtime: 7 ms (Top 67.86%) | Memory: 16.80 MB (Top 16.67%)
+
 class Solution {
 public:
-    vector<int> sortArrayByParity(vector<int>& nums)
-    {
-        vector<int> v;
-        vector<int> odd;
-        if(nums.size()==1)
-        {
-            return nums;
-        }
-        for(auto it : nums)
-        {
-            if(it%2==0)
-            {
-                v.push_back(it);
+    std::vector<int> sortArrayByParity(std::vector<int>& nums) {
+        std::vector<int> result;
+        for (int i : nums) {
+            if (i % 2 == 0) {
+                result.push_back(i);
             }
-            else
-            {
-                   odd.push_back(it);
+        }
+        for (int j : nums) {
+            if (j % 2 != 0) {
+                result.push_back(j);
             }
-            
         }
-
-        for(auto i : odd)
-        {
-            v.push_back(i);
-        }
-        return v;
+        return result;
     }
 };
+
