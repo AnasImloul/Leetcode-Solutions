@@ -1,3 +1,5 @@
+// Runtime: 55 ms (Top 83.33%) | Memory: 42.20 MB (Top 85.19%)
+
 var surfaceArea = function(grid) {
     let cube=0, overlap=0;
     for(let i=0; i<grid.length; i++){
