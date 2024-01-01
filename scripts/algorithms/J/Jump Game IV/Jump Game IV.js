@@ -1,57 +1,61 @@
+// Runtime: 196 ms (Top 92.11%) | Memory: 93.10 MB (Top 73.68%)
+
 /**
  * @param {number[]} arr
  * @return {number}
  */
 var minJumps = function(arr) {
-    if(arr.length <= 1) return 0;
-    
-    const graph = {};
-    
-    for(let idx = 0; idx < arr.length; idx ++) {
-        const num = arr[idx];
-        if(graph[num] === undefined) graph[num] = [];
-        graph[num].push(idx);
-    }
-    
-    let queue = [];
-    const visited = new Set();
-    
-    queue.push(0);
-    visited.add(0);
-    
-    let steps = 0;
-    
-    while(queue.length) {
-        const nextQueue = [];
-        
-        for(const idx of queue) {
-            if(idx === arr.length - 1) return steps;
-            
-            const num = arr[idx];
-            
-            for(const neighbor of graph[num]) {
-                if(!visited.has(neighbor)) {
-                    visited.add(neighbor);
-                    nextQueue.push(neighbor);
+    let valuePositionsMap = getValuePositionsMap(arr);
+    let mySet = new Set();
+    mySet.add(0);
+    let aoArray = [0];
+    let counter = 0;
+    while(!mySet.has(arr.length-1)){
+        counter++;
+        let newArray = [];
+        for(let currP of aoArray){
+            for(let item of findAllOptions(arr, currP, mySet, valuePositionsMap)){
+                newArray.push(item);
+                mySet.add(item);
+                if(item == arr.length-1){
+                    break;
                 }
             }
-            
-            if(idx + 1 < arr.length && !visited.has(idx + 1)) {
-                visited.add(idx + 1);
-                nextQueue.push(idx + 1);
+            if(mySet.has(arr.length-1)){
+                break;
             }
-            
-            if(idx - 1 >= 0 && !visited.has(idx - 1)) {
-                visited.add(idx - 1);
-                nextQueue.push(idx - 1);
-            }
-            
-            graph[num].length = 0;
         }
-        
-        queue = nextQueue;
-        steps ++;
+        aoArray = newArray;
     }
-    
-    return -1;
+    return counter;
 };
+
+function getValuePositionsMap(arr){
+    let result = new Map();
+    for(let i=arr.length-1;i>=0;i--){
+        if(!result.has(arr[i])){
+            result.set(arr[i], []); 
+        }
+        result.get(arr[i]).push(i);
+    }
+    return result;
+}
+
+function findAllOptions(arr, currP, mySet, valuePositionsMap){
+    let result = [];
+    if(currP > 0 && arr[currP-1] != arr[currP] && !mySet.has(currP-1)){
+        result.push(currP-1);
+    }
+    if(currP < arr.length-1 && arr[currP+1] != arr[currP] && !mySet.has(currP+1)){
+        result.push(currP+1);
+    }
+    if(valuePositionsMap.has(arr[currP])){
+        for(let i of valuePositionsMap.get(arr[currP])){
+            if(i != currP && !mySet.has(i)){
+                result.push(i);
+            }
+        }
+        valuePositionsMap.delete(arr[currP]);
+    }
+    return result;
+}
