@@ -1,40 +1,25 @@
-/**
- * @param {character[][]} grid
- * @return {boolean}
- */
+// Runtime: 227 ms (Top 76.47%) | Memory: 98.70 MB (Top 70.59%)
+
+const dirs = [[-1,0],[1,0],[0,-1],[0,1]];
+
 var containsCycle = function(grid) {
-    const m = grid.length;
-    const n = grid[0].length;
-    const visited = [...Array(m)].map(i => Array(n).fill(0));
-    const dir = [[-1,0],[1,0],[0,-1],[0,1]];
-    
-    const dfs = (x,y,lx,ly) => {        
-        visited[x][y] = 1;
-        for (const [a, b] of dir) {
-            const nx = x + a;
-            const ny = y + b;
-            
-            if (nx < 0 || nx > m - 1 || ny < 0 || ny > n - 1)
-                continue;
-            
-            if (visited[nx][ny] === 1 && (nx !== lx || ny !== ly) && grid[x][y] === grid[nx][ny]) { // !!! grid[nx][ny] === grid[x][y]
-                return true;
-            }
-            
-            if (visited[nx][ny] === 0 && grid[x][y] === grid[nx][ny]) {
-                if (dfs(nx,ny,x,y))
-                    return true;
-            }
+    const n=grid.length, m=grid[0].length;
+    const dfs = function(type, i, j, previ, prevj){
+        if(i<0 || j<0 || i==n || j==m) return false;
+        if(grid[i][j]!=type) return grid[i][j]==type.toUpperCase();
+        grid[i][j]=grid[i][j].toUpperCase();
+        for(let dir of dirs){
+            if(i+dir[0]==previ && j+dir[1]==prevj) continue;
+            if(dfs(type,i+dir[0],j+dir[1],i,j)) return true;
         }
         return false;
     }
     
-    for (let i = 0; i < m; i++) {
-        for (let j = 0; j < n; j++) {
-            if (visited[i][j] === 0 && dfs(i,j,-1,-1)) // !!!
-                return true;
+    for(let i=0; i<n; i++)
+        for(let j=0; j<m; j++){
+            if(grid[i][j]==grid[i][j].toUpperCase()) continue;
+            if(dfs(grid[i][j], i, j, -1, -1)) return true;
         }
-    }
-    
     return false;
 };
+
