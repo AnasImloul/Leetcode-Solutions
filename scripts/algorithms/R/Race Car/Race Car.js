@@ -1,30 +1,26 @@
-// Runtime: 3079 ms (Top 11.52%) | Memory: 74 MB (Top 23.64%)
+// Runtime: 56 ms (Top 92.31%) | Memory: 46.30 MB (Top 65.38%)
 
-var racecar = function(target) {
-    let queue = [[0, 1, 0]];
-    let visited = new Set(['0,1']);
+/**
+ * @param {number} target
+ * @return {number}
+ */
+var racecar = function(target) {    
+    const queue = [{position: 0, speed: 1, sequence: ""}]
 
-    while(queue.length > 0) {
-        const [pos, speed, distance] = queue.shift();
+    while(queue.length){
+        let { position, speed, sequence } = queue.shift()
+        
+        if(position === target) return sequence.length
 
-        if(pos === target) return distance;
+        const newPosition = position + speed
 
-        const posA = pos + speed;
-        const speedA = speed * 2;
-        const keyA = posA + ',' + speedA;
-
-        const posR = pos;
-        const speedR = speed > 0 ? -1 : 1;
-        const keyR = posR + ',' + speedR;
-
-        if(!visited.has(keyA) && posA >= 0 && posA <= 2*target) {
-            visited.add(keyA);
-            queue.push([posA, speedA, distance + 1]);
-        }
-
-        if(!visited.has(keyR) && posR >= 0 && posR <= 2*target) {
-            visited.add(keyR);
-            queue.push([posR, speedR, distance + 1]);
+        queue.push({ position: newPosition, speed: speed*2, sequence: sequence + 'A' })
+        
+        if(newPosition > target && speed > 0 || newPosition < target && speed < 0) {
+            queue.push({ sequence: sequence + 'R', position, speed: Math.sign(speed) === 1 ? -1:1 })
         }
     }
+
+    return 0
 };
+
