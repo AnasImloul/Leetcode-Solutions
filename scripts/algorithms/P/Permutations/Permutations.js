@@ -1,21 +1,20 @@
+// Runtime: 80 ms (Top 8.91%) | Memory: 44.70 MB (Top 69.1%)
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
 var permute = function(nums) {
-    const output = [];
-    
-    const backtracking = (current, remaining) => {
-        if (!remaining.length) return output.push(current);
-
-        for (let i = 0; i < remaining.length; i++) {
-            const newCurrent = [...current];
-            const newRemaining = [...remaining];
-
-            newCurrent.push(newRemaining[i]);
-            newRemaining.splice(i, 1);
-
-            backtracking(newCurrent, newRemaining);
+    const result = [];
+    const backtrack = (nums, path) => {
+        if (nums.length === 0) {
+            result.push(path);
+            return;
         }
-    }
-    
-    backtracking([], nums);
-
-    return output;
+        for (let i = 0; i < nums.length; i++) {
+            backtrack([...nums.slice(0, i), ...nums.slice(i + 1)], [...path, nums[i]]);
+        }
+    };
+    backtrack(nums, []);
+    return result;
 };
