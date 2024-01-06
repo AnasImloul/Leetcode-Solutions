@@ -1,38 +1,26 @@
-// This is Straightforward Question becuase you need to travel at least one time the incoming rows and column in path.
-// So why you need to complicate the path just traverse staright and to homePos Row and homePos column and you will get the ans...
-// This Question would have become really tough when negative values also possible in the row and column vectors because that negative values could have decresed the results...but here its simple and concise.
+// Runtime: 127 ms (Top 95.56%) | Memory: 150.10 MB (Top 97.22%)
+
 class Solution {
 public:
-    int minCost(vector<int>& startPos, vector<int>& homePos, vector<int>& rowCosts, vector<int>& colCosts) {
+    int minCost(vector<int>& start, vector<int>& end, vector<int>& costR, vector<int>& costC) {
         int ans = 0;
-        if(startPos[0] < homePos[0])
-        {
-            for(int i = startPos[0]+1 ; i <=homePos[0] ; i++)
-            {
-                ans+=rowCosts[i];
-            }
+        int i = start[0], j = start[1];
+        int x = end[0], y = end[1];
+        int changeI = i < x ? 1 : -1;
+        int changeJ = j < y ? 1 : -1;
+
+        while(i != x) {
+            i += changeI;
+            ans += costR[i];
         }
-        if(startPos[0] > homePos[0])
-        {
-            for(int i = startPos[0]-1 ; i >=homePos[0] ; i--)
-            {
-                ans+=rowCosts[i];
-            }
+
+        while(j != y) {
+            j += changeJ;
+            ans += costC[j];
         }
-        if(startPos[1] < homePos[1])
-        {
-            for(int i = startPos[1]+1 ; i <=homePos[1] ; i++)
-            {
-                ans+=colCosts[i];
-            }
-        }
-         if(startPos[1] > homePos[1])
-        {
-            for(int i = startPos[1]-1 ; i >=homePos[1] ; i--)
-            {
-                ans+=colCosts[i];
-            }
-        }
+
         return ans;
+
+
     }
 };
