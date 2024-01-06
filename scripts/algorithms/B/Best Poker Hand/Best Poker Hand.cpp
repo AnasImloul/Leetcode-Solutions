@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 10.50 MB (Top 58.44%)
+
 class Solution {
 public:
     string bestHand(vector<int>& ranks, vector<char>& suits) {
