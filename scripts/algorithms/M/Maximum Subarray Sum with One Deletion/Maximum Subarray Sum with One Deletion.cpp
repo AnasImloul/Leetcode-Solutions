@@ -1,30 +1,23 @@
+// Runtime: 23 ms (Top 76.54%) | Memory: 23.70 MB (Top 72.35%)
+
 class Solution {
 public:
-    int maximumSum(vector<int>& arr) {
-        int n = arr.size(), curr, maxi = INT_MIN;
-        vector<int> fw(n + 1, 0), bw(n + 1, 0);
-        fw[0] = arr[0];
-        maxi = max(maxi, fw[0]);
+    int maximumSum(vector<int>& a) {
         
-		// ith element denotes the maximum subarray sum with ith element as the last element
-        for(int i = 1; i < n; ++i) {
-            curr = max(arr[i], fw[i - 1] + arr[i]);
-            maxi = max(maxi, curr);
-            fw[i] = curr;
-        }
+		// Kadane's Algo
+        // DP time: O(N) space: O(N)
+        // dp[i][2]-->dp[i][0]->suf_del and dp[i][1]->suf_no_del
         
-		// similar to fw array, but in the backward direction
-        bw[n - 1] = curr = arr[n - 1];
-        for(int i = n - 2; i >= 0; --i) {
-            curr = max(arr[i], bw[i + 1] + arr[i]);
-            maxi = max(maxi, curr);
-            bw[i] = curr;
+        // Space optimized time: O(N) space: O(1)
+		int n=a.size();
+        int suf_del=0; 
+        int suf_no_del=a[0];
+        int ans=a[0];
+        for(int i=1;i<n;i++){
+            suf_del=max(suf_del+a[i],suf_no_del);       // suf_del
+            suf_no_del=max(suf_no_del+a[i],a[i]);       // suf_no_del
+            ans=max({ans,suf_del,suf_no_del});         
         }
-        
-        int res = INT_MIN;
-        for(int i = 1; i < n - 1; ++i) {
-            res = max(res, fw[i - 1] + bw[i + 1]);
-        }
-        return max(res, maxi);
+        return ans;
     }
 };
