@@ -1,3 +1,5 @@
+// Runtime: 49 ms (Top 90.74%) | Memory: 44.20 MB (Top 33.33%)
+
 var maximumPopulation = function(logs) {
     const count = new Array(101).fill(0);
     
