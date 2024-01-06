@@ -1,14 +1,12 @@
-// Runtime: 3 ms (Top 38.21%) | Memory: 6 MB (Top 42.79%)
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.20 MB (Top 99.44%)
+
 class Solution {
 public:
-    int xorOperation(int n, int start) {
-
-        int res = start;
-
-        for(int i=1 ; i<n ; i++){
-            res = res ^ (start + 2 * i);
-        }
-
-        return res;
-    }
+	int xorOperation(int n, int start) {
+		int ans =0;
+		for(int i=0;i<n;i++){
+			ans ^= start + 2*i;
+		}
+		return ans;
+	}
 };
