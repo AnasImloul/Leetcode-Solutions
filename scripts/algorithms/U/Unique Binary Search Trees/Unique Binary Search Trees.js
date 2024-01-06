@@ -1,3 +1,5 @@
+// Runtime: 39 ms (Top 96.02%) | Memory: 41.50 MB (Top 68.13%)
+
 var numTrees = function(n) {
     // Create 'sol' array to store the solution...
     var sol = [1, 1];
