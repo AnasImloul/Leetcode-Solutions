@@ -1,26 +1,26 @@
+// Runtime: 99 ms (Top 84.75%) | Memory: 51.20 MB (Top 71.75%)
+
 /**
  * @param {number[][]} graph
  * @return {number[]}
  */
 var eventualSafeNodes = function(graph) {
-    const ans = [];
-    const map = new Map();
-    for(let i=0; i<graph.length; i++) {
-        if(dfs(graph, i, map)) {
-            ans.push(i);
-        }
-    }
-    return ans;
-};
+    const n = graph.length;
+    const result = new Array(n).fill(0);
 
-var dfs = function(graph, node, map) {
-    if(map.has(node)) return map.get(node);
-    map.set(node, false);
-    for(let nei of graph[node]) {
-        if(!dfs(graph, nei, map)) {
-            return false;
+    const dfs = (node) => {
+        if (result[node] !== 0) return result[node] === 2;
+        result[node] = 1;
+        for (let neighbor of graph[node]) {
+            if (result[neighbor] === 1 || !dfs(neighbor)) return false;   
         }
+        result[node] = 2;
+        return true;
+    };
+    const safeNodes = [];
+    for (let node = 0; node < n; node++) {
+        if (dfs(node)) safeNodes.push(node);
+    
     }
-    map.set(node, true);
-    return true;
-}
+    return safeNodes;
+};
