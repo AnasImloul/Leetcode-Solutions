@@ -1,10 +1,12 @@
-// 77 ms, faster than 97.56%
-// 45 MB, less than 87.81%
-var largeGroupPositions = function(s) {
-	let re = /(.)\1{2,}/g;
-	let ans = [];
-	while ((rslt = re.exec(s)) !== null) {
-		ans.push([rslt.index, rslt.index + rslt[0].length-1]);
-	}
-	return ans;
+// Runtime: 61 ms (Top 83.06%) | Memory: 45.00 MB (Top 57.26%)
+
+var largeGroupPositions = function(S) {
+    let j = 0, res = [];
+    for (let i = 0; i < S.length; i++) {
+        if (S[i] !== S[i+1]) {
+            if (i-j+1 >= 3) res.push([j,i]);
+            j = i+1;
+        }
+    }
+    return res;
 };
