@@ -1,21 +1,16 @@
+// Runtime: 48 ms (Top 84.09%) | Memory: 43.20 MB (Top 63.64%)
+
 var reorderedPowerOf2 = function(n) {
-    const orig = convert(n);
+    let str = n.toString();
+   let initialString =  str.split('').sort().join('');
     
-    let num = 1;
     
-    while (num <= 1e9) {
-        const str = convert(num);
-        
-        if (str === orig) return true;
-        num <<= 1;
+    for(let i=0; i<30; i++){
+        let tempString = (1<<i).toString();
+       let finalString = tempString.split('').sort().join('');
+        if(initialString===finalString){
+            return true
+        }
     }
-    
-    return false;
-    
-    function convert(num) {
-        const str = num.toString();
-        const digits = str.split("");
-        const sort = digits.sort();
-        return sort.join("#");
-    }
-};
+    return false
+}
