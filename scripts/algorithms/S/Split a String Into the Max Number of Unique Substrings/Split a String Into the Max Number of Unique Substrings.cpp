@@ -1,3 +1,5 @@
+// Runtime: 191 ms (Top 62.9%) | Memory: 44.30 MB (Top 70.14%)
+
 class Solution {
 public:
     unordered_set<string>st;
