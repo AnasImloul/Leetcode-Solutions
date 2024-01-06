@@ -1,17 +1,15 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.90 MB (Top 23.54%)
+
 class Solution {
 public:
     int countGoodSubstrings(string s) {
-        if(s.size()<3)return 0;
-        char a=s[0],b=s[1],c=s[2];
-        int res=0;
-        for(int i=3;i<=s.size()-1;i++)
-        {
-            if(a!=b and b!=c and c!=a)res++;
-            a=b;
-            b=c;
-            c=s[i];
+        int cnt=0,n=s.size();
+        unordered_map<char,int> map;
+        for(int i=0;i<n;i++){
+            if(i>2 and --map[s[i-3]] == 0) map.erase(s[i-3]);
+            map[s[i]]++;
+            if(map.size() == 3) cnt++;
         }
-        if(a!=b and b!=c and c!=a)res++;
-        return res;
+        return cnt;
     }
 };
