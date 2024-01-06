@@ -1,3 +1,5 @@
+// Runtime: 101 ms (Top 25.0%) | Memory: 50.90 MB (Top 25.0%)
+
 var containVirus = function(isInfected) {
     const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];
     let walls = 0;
