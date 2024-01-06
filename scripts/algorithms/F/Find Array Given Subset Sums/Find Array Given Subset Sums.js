@@ -1,3 +1,5 @@
+// Runtime: 330 ms (Top 100.0%) | Memory: 69.50 MB (Top 100.0%)
+
 /**
  * @param {number} n
  * @param {number[]} sums
