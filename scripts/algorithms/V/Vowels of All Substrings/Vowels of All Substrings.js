@@ -1,3 +1,5 @@
+// Runtime: 69 ms (Top 95.24%) | Memory: 45.10 MB (Top 52.38%)
+
 var countVowels = function(word) {
     const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
     let total = 0;
