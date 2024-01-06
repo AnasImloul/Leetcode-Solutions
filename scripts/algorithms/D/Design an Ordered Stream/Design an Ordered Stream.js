@@ -1,37 +1,19 @@
-/**
- * @param {number} n
- */
+// Runtime: 154 ms (Top 77.78%) | Memory: 53.40 MB (Top 88.89%)
+
 var OrderedStream = function(n) {
-  // initialize array
-  this.arr = [];
-  // start pointer at index of 0
-  this.p = 0;
-  //set array to have length of n
-  this.arr.length = n;
+    this.pointer = 0;
+    this.streamArray = new Array(n).fill(undefined);
 };
-
-/** 
- * @param {number} idKey 
- * @param {string} value
- * @return {string[]}
- */
 OrderedStream.prototype.insert = function(idKey, value) {
-  // push the value into array at index of idKey
-  this.arr[idKey - 1] = value;
-  // initialize result array
-  let result = [];
-  
-  // while the pointer has a value, push that value into the result array and advance the pointer
-  while (this.arr[this.p]) {
-    result.push(this.arr[this.p]);
-    this.p++;
-  }
-  // return the result array which will either be empty if the pointer was null, or will have the chunks pushed into it
-  return result;
+    this.streamArray[idKey-1] = value;
+    if(this.streamArray[this.pointer] === undefined){
+        return [];
+    }else{
+        const result = [];
+        while(this.streamArray[this.pointer] !== undefined){
+            result.push(this.streamArray[this.pointer]);
+            this.pointer++;
+        }
+        return result;
+    }
 };
-
-/** 
- * Your OrderedStream object will be instantiated and called as such:
- * var obj = new OrderedStream(n)
- * var param_1 = obj.insert(idKey,value)
- */
