@@ -1,3 +1,5 @@
+// Runtime: 133 ms (Top 92.5%) | Memory: 102.80 MB (Top 75.0%)
+
 class Solution {
 public:
     long long minSumSquareDiff(vector<int>& nums1, vector<int>& nums2, int k1, int k2) {
