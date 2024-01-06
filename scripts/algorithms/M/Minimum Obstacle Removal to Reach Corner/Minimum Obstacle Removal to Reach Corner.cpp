@@ -1,3 +1,5 @@
+// Runtime: 375 ms (Top 84.23%) | Memory: 127.40 MB (Top 49.7%)
+
 class Solution {
 public:
     int minimumObstacles(vector<vector<int>>& grid) {
