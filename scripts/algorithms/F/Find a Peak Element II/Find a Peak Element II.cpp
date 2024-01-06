@@ -1,35 +1,33 @@
-#include <bits/stdc++.h>
-using namespace std;
+// Runtime: 132 ms (Top 70.56%) | Memory: 46.90 MB (Top 39.59%)
 
 class Solution {
 public:
-    vector<int> findPeakGrid(vector<vector<int>>& mat) {
-        int row = mat.size();
-        int col = mat[0].size();
-        
-        int i=0, j=col-1;
-        
-        while(i>=0 && i<row && j>=0 && j<col) {
-            
-            // finding nums in all 4 directions
-            int up = i-1<0 ? -1 : mat[i-1][j];
-            int down = i+1>=row ? -1 : mat[i+1][j];
-            int left = j-1<0 ? -1 : mat[i][j-1];
-            int right = j+1>=col ? -1 : mat[i][j+1];
-            
-            // check if current is peak
-            if(mat[i][j] > up && mat[i][j] > left && mat[i][j] > right && mat[i][j] > down)
-                return {i, j};
-            
-            // get maxm among 4 direction
-            int maxm=max({up, down, left, right});
-            
-            // move in max direction
-            if(up == maxm) i--;
-            else if(down == maxm) i++;
-            else if(left == maxm) j--;
-            else if(right == maxm) j++;
+    int maxEl(vector<vector<int>>& mat, int n, int m, int col) {
+        int maxi = -1;
+        int ind = -1;  
+        for(int i = 0; i<n; i++) {
+            if(mat[i][col]>maxi) {
+                maxi = mat[i][col];
+                ind = i;
+            }
         }
-        return {-1, -1};
+        return ind;
+    }
+    vector<int> findPeakGrid(vector<vector<int>>& mat) {
+        int n = mat.size();
+        int m = mat[0].size();
+        int low = 0;
+        int high = m - 1; 
+        while(low<=high) {
+            int mid = (low+high)/2;
+            int row = maxEl(mat, n, m, mid);
+            int left = mid-1>=0 ? mat[row][mid-1] : -1; 
+            int right = mid+1<m ? mat[row][mid+1] : -1; 
+            if(mat[row][mid]>left && mat[row][mid]>right) return {row, mid};
+            else if(mat[row][mid]<left) high = mid-1;
+            else low = mid+1;
+        }
+        return {-1,-1};
     }
 };
+
