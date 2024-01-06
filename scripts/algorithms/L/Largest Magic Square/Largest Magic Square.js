@@ -1,3 +1,5 @@
+// Runtime: 93 ms (Top 50.0%) | Memory: 42.90 MB (Top 100.0%)
+
 var largestMagicSquare = function(grid) {
    const row = grid.length;
    const col = grid[0].length;
