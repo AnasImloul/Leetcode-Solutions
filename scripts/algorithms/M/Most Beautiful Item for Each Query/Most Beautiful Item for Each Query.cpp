@@ -1,24 +1,49 @@
+// Runtime: 321 ms (Top 69.62%) | Memory: 89.00 MB (Top 83.54%)
+
 class Solution {
 public:
+
     vector<int> maximumBeauty(vector<vector<int>>& items, vector<int>& queries) {
-       vector<vector<int>> v;
-        int n = queries.size();
-        for(int i = 0; i < n; i++){
-            v.push_back({queries[i],i});
-        }
-        sort(v.begin(),v.end());
         sort(items.begin(),items.end());
-        vector<int> ans(n);
-        int j=0;
-        n = items.size();
-        int mx = 0;
-        for(auto &i: v){
-            while(j<n && items[j][0]<=i[0]){
-                mx = max(mx,items[j][1]);
-                j++;
+        int maxi = items[0][1];
+        // for(auto xt : items)
+        // {
+        //    cout<<xt[0]<<" "<<xt[1]<<endl;
+        // }
+        for(auto &xt : items)
+        {
+            maxi = max(maxi , xt[1]);
+            xt[1] = maxi;
+        }
+        // for(auto xt : items)
+        // {
+        //    cout<<xt[0]<<" "<<xt[1]<<endl;
+        // }
+        vector<int>ans;
+        int n = items.size();
+        
+        for(int key : queries){
+            int left = 0;
+            int right = n - 1;
+
+            int count = 0;
+
+            while (left <= right) {
+                int mid = (right + left) / 2;
+                if (items[mid][0] <= key) {
+                    count = mid + 1;
+                    left = mid + 1;
+                }
+                else
+                    right = mid - 1;
             }
-            ans[i[1]] = mx;
+            
+            if(count==0)
+                ans.push_back(0);
+            else
+                ans.push_back(items[count-1][1]);
         }
         return ans;
     }
 };
+
