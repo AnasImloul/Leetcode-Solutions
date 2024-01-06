@@ -1,41 +1,54 @@
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-
-using namespace std;
-using namespace __gnu_pbds;
-
-//less_equal to use it as a multiset
-typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;
+// Runtime: 69 ms (Top 82.47%) | Memory: 38.40 MB (Top 84.54%)
 
 class TweetCounts {
+private:
+    unordered_map<string, vector<int>> mp;
+
 public:
-    unordered_map<string, pbds> tweet;
     TweetCounts() {
-        tweet.clear();
     }
     
     void recordTweet(string tweetName, int time) {
-        tweet[tweetName].insert(time);
+        mp[tweetName].push_back(time);
     }
     
     vector<int> getTweetCountsPerFrequency(string freq, string tweetName, int startTime, int endTime) {
-        int interval;
-        if(freq == "minute") interval = 60;
-        else if(freq == "hour") interval = 3600;
-        else interval = 86400;
-        
-        vector<int> ans;
-		
-        for(int i=startTime; i<=endTime; i+=interval)
-        {
-            int start = i, end = min(endTime, i+interval-1);
-            
-            //[start - end] or [start - end+1)
-            auto low = tweet[tweetName].order_of_key(start);
-            auto high = tweet[tweetName].order_of_key(end+1);
-            
-            ans.push_back(high-low);
+        if(freq == "minute"){
+            vector<int> ans(((endTime - startTime) / 60) + 1, 0);
+            for(int time : mp[tweetName]){
+                if(time >= startTime && time <= endTime){
+                    int idx = (time - startTime) / 60;
+                    ans[idx]++;
+                }
+            }
+            return ans;
         }
-        return ans;
+        else if(freq == "hour"){
+            vector<int> ans(((endTime - startTime) / (60 * 60)) + 1, 0);
+            for(int time : mp[tweetName]){
+                if(time >= startTime && time <= endTime){
+                    int idx = (time - startTime) / (60 * 60);
+                    ans[idx]++;
+                }
+            }
+            return ans;
+        }
+        else{
+            vector<int> ans(((endTime - startTime) / (3600 * 24)) + 1, 0);
+            for(int time : mp[tweetName]){
+                if(time >= startTime && time <= endTime){
+                    int idx = (time - startTime) / (60 * 60 * 24);
+                    ans[idx]++;
+                }
+            }
+            return ans;
+        }
     }
 };
+
+/**
+ * Your TweetCounts object will be instantiated and called as such:
+ * TweetCounts* obj = new TweetCounts();
+ * obj->recordTweet(tweetName,time);
+ * vector<int> param_2 = obj->getTweetCountsPerFrequency(freq,tweetName,startTime,endTime);
+ */
