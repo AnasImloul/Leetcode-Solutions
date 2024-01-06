@@ -1,18 +1,25 @@
+// Runtime: 112 ms (Top 92.82%) | Memory: 103.30 MB (Top 60.63%)
+
 class Solution {
 public:
     long long getDescentPeriods(vector<int>& prices) {
-        long long ans = 0;
-        long long temp = 0;
-        for(int i=1; i<prices.size(); i++){
-            if(prices[i - 1] - prices[i] == 1){
-                temp++;
-                ans += temp;
+        int n=prices.size();
+        int start=0;
+        int end  =0;
+        long long ans=1;//since, we will be starting our iteration from ist index
+        
+        for(end=1 ; end<n; end++){
+            
+            if(prices[end] == prices[end-1] - 1){
+                ans += end - start + 1;
             }
+            
             else{
-                temp = 0;
+                start=end;
+                ans += end - start + 1;
             }
         }
-        ans += prices.size();
+        
         return ans;
     }
 };
