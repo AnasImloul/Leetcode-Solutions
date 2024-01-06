@@ -1,32 +1,29 @@
+// Runtime: 165 ms (Top 51.74%) | Memory: 58.10 MB (Top 98.81%)
+
+// OJ: https://leetcode.com/contest/weekly-contest-202/problems/magnetic-force-between-two-balls/
+// Author: github.com/lzl124631x
+// Time: O(log(max(A)) * N + NlogN)
+// Space: O(1)
 class Solution {
-public:
-    bool isPossible(vector<int>& position, int m,int mid){
-        long long int basketCount=1;
-        int lastPos=position[0];
-        for(int i=0;i<position.size();i++){
-            if((position[i]-lastPos)>=mid){
-                basketCount++;
-                lastPos=position[i];
-            }
+    bool valid(vector<int> &A, int M, int m) {
+        int prev = 0;
+        for (int i = 1, j = 1; i < m; ++i) {
+            while (j < A.size() && A[j] < A[prev] + M) ++j;
+            if (j >= A.size()) return false;
+            prev = j;
         }
-        return basketCount>=m;
+        return true;
     }
-    int maxDistance(vector<int>& position, int m) {
-        sort(position.begin(),position.end());
-        int n=position.size();
-        long long int start=1;
-        long long int end=position[n-1]-position[0];
-        int ans=0;
-        int mid= start+(end-start)/2;
-        while(start<=end){
-            if(isPossible(position,m,mid)){
-            ans=mid;
-            start=mid+1;
+public:
+    int maxDistance(vector<int>& A, int m) {
+        sort(begin(A), end(A));
+        if (m == 2) return A.back() - A[0];
+        int L = 1, R = A.back() - A[0];
+        while (L <= R) {
+            int M = (L + R) / 2;
+            if (valid(A, M, m)) L = M + 1;
+            else R = M - 1;
         }
-        else
-            end=mid-1;
-           mid= start+(end-start)/2; 
-        }
-        return ans;
+        return R;
     }
 };
