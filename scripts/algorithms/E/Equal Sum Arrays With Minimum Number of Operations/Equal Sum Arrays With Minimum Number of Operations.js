@@ -1,3 +1,5 @@
+// Runtime: 88 ms (Top 88.89%) | Memory: 52.30 MB (Top 77.78%)
+
 var minOperations = function(nums1, nums2) {
     /*
     Two impossible cases:
