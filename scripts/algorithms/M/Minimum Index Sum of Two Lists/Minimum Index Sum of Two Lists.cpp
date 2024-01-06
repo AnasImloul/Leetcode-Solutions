@@ -1,50 +1,28 @@
+// Runtime: 70 ms (Top 74.0%) | Memory: 37.30 MB (Top 38.8%)
+
 class Solution {
 public:
     vector<string> findRestaurant(vector<string>& list1, vector<string>& list2) {
-      vector<string>vc;
-      unordered_map<string,int>umap,umap1;
-      
-      for(int i=0;i<list1.size();i++)
-      {
+        int min=INT_MAX;
+       unordered_map<string,int>un;
+        vector<string>v;
+        for(int i=0;i<list1.size();i++){
+            un[list1[i]]=i;
+        }
+        for(int i=0;i<list2.size();i++){
+            if(un.count(list2[i])!=0){
+              int sum=i+un[list2[i]];
+                if(sum<min){
+                    min=sum;
+                    v.clear();
+                    v.push_back(list2[i]);
+                }else if(sum==min){
+                     v.push_back(list2[i]);
+                }
+            }
+        }
+        return v;
         
-        
-        umap[list1[i]]=i;
-        
-      }
-      
-
-      for(int i=0;i<list2.size();i++)
-      {
-        
-        
-        umap1[list2[i]]=i;
-        
-      }
-      int min=10000;
-for(auto i:umap)
-{
-  int k=0;
-  for(auto j :umap1)
-  {
-    
-    if(i.first==j.first)
-    {
-      k=i.second+j.second;
-      if(min>k)
-      {vc.clear();
-        min=k;
-       vc.push_back(j.first);
-      }
-      else if(k==min)
-      {
-        vc.push_back(j.first);
-      }
         
     }
-  }
-}
-  
-  
-  return vc;
-}
-};
+    };
