@@ -1,21 +1,22 @@
-var canReorderDoubled = function(arr) {
-    const obj = {}
-    let total = 0
-    arr.sort((a,b) => a-b)
-    for (let i = 0; i < arr.length; i++) {
-        const num = arr[i]
-        if (obj[num / 2]) {
-            obj[num / 2]--
-            total++
-        } else if (obj[num * 2]) {
-            obj[num * 2]--
-            total++
-        } else if (obj[num]) {
-            obj[num]++
-        } else {
-            obj[num] = 1
-        }
-    }
+// Runtime: 85 ms (Top 92.31%) | Memory: 47.10 MB (Top 100.0%)
 
-    return total >= arr.length / 2
+var canReorderDoubled = function(arr) {
+    const hashMap = arr.reduce((map, num) => {
+        const count = map.get(num) ?? 0;
+        return map.set(num, count + 1);
+    }, new Map());
+
+    const nums = [...hashMap.keys()].sort((a, b) => {
+        return a < 0 && b < 0 ? b - a : a - b;
+    });
+
+    for (const num of nums) {
+        const count = hashMap.get(num);
+        const pairsCount = hashMap.get(num * 2);
+        if (count > pairsCount) return false;
+        if (count > 0 && pairsCount === undefined) return false;
+    
+        hashMap.set(num * 2, pairsCount - count);
+    }
+    return true;
 };
