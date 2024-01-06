@@ -1,12 +1,19 @@
+// Runtime: 54 ms (Top 59.88%) | Memory: 43.70 MB (Top 21.19%)
+
+// time O(n) space O(n)
 var uniqueOccurrences = function(arr) {
-    const obj = {};
-//     Creating hashmap to store count of each number
-    arr.forEach(val => obj[val] = (obj[val] || 0) + 1);
-//     Creating an array of the count times
-    const val = Object.values(obj).sort((a, b) => a-b);
-//     Now, just finding the duplicates
-    for(let i = 0; i<val.length-1; i++){
-        if(val[i]===val[i+1]) return false;
+    const map = {}
+    
+    for(const number of arr) {
+        if(map[number]) {
+            map[number] += 1
+        } else {
+            map[number] = 1
+        }
     }
-    return true;
+    
+    const frequencies = Object.values(map)
+    const set = new Set(frequencies)
+    
+    return frequencies.length === set.size
 };
