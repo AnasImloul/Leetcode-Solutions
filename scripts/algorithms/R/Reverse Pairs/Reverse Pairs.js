@@ -1,59 +1,55 @@
+// Runtime: 150 ms (Top 60.29%) | Memory: 85.20 MB (Top 11.76%)
+
 /**
  * @param {number[]} nums
  * @return {number}
  */
 var reversePairs = function(nums) {
+  let numReversePairs = 0; 
+  helper(nums);
+  return numReversePairs;
   
-    let ans = mergeSort(nums,0,nums.length-1);
-    return ans;
+  function helper(nums) {
+    if (nums.length <= 1) return nums;   
+    const length = nums.length;
+    const left = helper(nums.slice(0, Math.floor(length/2)));
+    const right = helper(nums.slice(Math.floor(length/2)));    
+    return merge(left, right);    
+  }
   
-    
+  function merge(left, right) {
+    const nums_sorted = [];
+    let leftIndex = 0;
+    let rightIndex = 0;  
+    while(leftIndex < left.length && rightIndex < right.length) {
+      if (left[leftIndex] > 2 * right[rightIndex]) {
+        numReversePairs += (left.length - leftIndex);
+        rightIndex++;
+      } else {
+        leftIndex++;
+      }
+    }    
+    leftIndex = 0;
+    rightIndex = 0;
+    while (leftIndex < left.length && rightIndex < right.length) {
+      if (left[leftIndex] < right[rightIndex]) {
+        nums_sorted.push(left[leftIndex]);
+        leftIndex++;
+      } else {
+        let cur = leftIndex;
+        nums_sorted.push(right[rightIndex]);
+        rightIndex++;
+      }
+    }
+    while (leftIndex < left.length) {
+      nums_sorted.push(left[leftIndex]);
+      leftIndex++;
+    }
+    while (rightIndex < right.length) {
+      nums_sorted.push(right[rightIndex]);
+      rightIndex++;
+    }
+    return nums_sorted;
+  }
+  
 };
-
-var mergeSort = function(nums,l,h){
-    if(l>=h){
-        return 0;
-    }
-    let m = Math.floor((l+h)/2);
-    let inv = mergeSort(nums,l,m);
-    inv = inv + mergeSort(nums,m+1,h);
-    inv = inv + merge(nums,l,m,h);
-    return inv;
-}
-
-var merge = function (nums,l,m,h){
-    let cnt = 0;
-    let j=m+1;
-    for(let i=l;i<=m;i++){
-        while(j<=h && nums[i]> 2*nums[j]){
-            j++;
-        }
-        cnt = cnt+(j-(m+1));
-    }
-    
-    let left = l, right=m+1,temp=[];
-    while(left<=m && right<=h){
-        if(nums[left]<=nums[right]){
-            temp.push(nums[left]);
-            left++;
-        }
-        else{
-            temp.push(nums[right]);
-            right++;
-        }
-    }
-    while(left<=m){
-        temp.push(nums[left]);
-        left++;
-    }
-    while(right<=h){
-        temp.push(nums[right]);
-        right++;
-    }
-    for(let i=l;i<=h;i++){
-        nums[i]=temp[i-l];
-    }
-    return cnt;
-    
-}
-
