@@ -1,3 +1,5 @@
+// Runtime: 148 ms (Top 84.9%) | Memory: 71.10 MB (Top 91.84%)
+
 class Solution {
 public:
     int minJumps(vector<int>& arr) 
