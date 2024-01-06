@@ -1,3 +1,5 @@
+// Runtime: 294 ms (Top 93.33%) | Memory: 126.60 MB (Top 92.59%)
+
 /* 
     Time: addElement: O(logm) | calculateMKAverage: O(1)
     Space: O(m)
