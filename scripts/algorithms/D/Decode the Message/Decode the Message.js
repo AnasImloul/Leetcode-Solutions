@@ -1,3 +1,4 @@
+// Runtime: 49 ms (Top 97.08%) | Memory: 44.30 MB (Top 78.72%)
 
 var decodeMessage = function(key, message) {
   let result = ''
