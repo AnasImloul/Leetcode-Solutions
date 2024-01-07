@@ -1,3 +1,5 @@
+// Runtime: 48 ms (Top 98.13%) | Memory: 42.70 MB (Top 89.72%)
+
 var checkAlmostEquivalent = function(word1, word2) {
     const hm = new Map()
     const addToHm = (ch, add) => {
