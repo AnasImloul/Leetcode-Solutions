@@ -1,3 +1,5 @@
+// Runtime: 55 ms (Top 86.29%) | Memory: 43.80 MB (Top 90.32%)
+
 var minMoves2 = function(nums) {
     // Sort the array low to high
     nums.sort(function(a, b) { return a-b;});
