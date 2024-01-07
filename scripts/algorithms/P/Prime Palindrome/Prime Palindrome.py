@@ -1,25 +1,24 @@
-# Runtime: 4865 ms (Top 9.52%) | Memory: 16.4 MB (Top 7.94%)
+// Runtime: 32 ms (Top 99.21%) | Memory: 17.20 MB (Top 18.9%)
+
 class Solution:
+    def isPrime(self, num):
+        from math import sqrt
+        if num < 2 or num % 2 == 0:
+            return num == 2
+        for i in range(3, int(sqrt(num)) + 1, 2):
+            if num % i == 0:
+                return False
+        return True
+
     def primePalindrome(self, n: int) -> int:
-        if n<3:return 2
-        #generating palindrome less than 10**8
-        l=[""]+[*"1234567890"]
-        for i in l:
-            if len(i)<7:
-                for j in "1234567890":
-                    l+=[j+i+j]
-        #finding prime from generated palindrome
-        q=[]
-        for i in l[2:]:
-            if i[0]!="0":
-                i=int(i)
-                t=i%2
-                if t:
-                    for j in range(3,int(i**.5)+1,2):
-                        if i%j==0:
-                            t=0
-                            break
-                if t:q+=[i]
-        q.sort()
-        q+=[100030001]
-        return q[bisect_left(q,n)]
+        if 8 <= n <= 11:
+            return 11
+        if len(str(n)) % 2 == 0:
+            limit = pow(10, len(str(n)) // 2)
+        else:
+            n_string = str(n)
+            limit = n_string[:len(str(n)) // 2 + 1]
+        for i in range(int(limit), 20000):
+            y = int(str(i) + str(i)[:-1][::-1])
+            if y >= n and self.isPrime(y):
+                return y
