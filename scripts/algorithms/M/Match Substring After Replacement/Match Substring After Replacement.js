@@ -1,51 +1,58 @@
-var matchReplacement = function(s, sub, mappings) {
-    let n= s.length;
-    let m = sub.length;
-    let map = new Array(36).fill().map(_=>new Array(36).fill(0));
-    for(let i=0;i<mappings.length;i++) {
-        let [o,ne] = mappings[i];
-        if(isNaN(o)) {
-            o = (o.toUpperCase()).charCodeAt(0)-55;
-        } else {
-            o = parseInt(o);
-        }
-        
-        if(isNaN(ne)) {
-            ne = (ne.toUpperCase()).charCodeAt(0)-55;
-        } else {
-            ne = parseInt(ne);
-        }
-        map[o][ne]=1;
-    }
-    // let map = new Map(mappings);
-    for(let i=0;i<=n-m;i++) {
-        let z=i;
-        let j=0;
-        while(j<m){
-            if(s[z] !== sub[j]) {
-                let ne = s[z];
-                let o = sub[j];
-                if(isNaN(o)) {
-                    o = (o.toUpperCase()).charCodeAt(0)-55;
-                } else {
-                    o = parseInt(o);
-                }
+// Runtime: 713 ms (Top 100.0%) | Memory: 51.80 MB (Top 33.33%)
 
-                if(isNaN(ne)) {
-                    ne = (ne.toUpperCase()).charCodeAt(0)-55;
-                } else {
-                    ne = parseInt(ne);
-                }
-                if(map[o][ne] !== 1){
-                    break;
-                }
-            }
-            z++;
-            j++;
-        }
-        if(j == m){
-            return true
+/**
+ * @param {string} s
+ * @param {string} sub
+ * @param {character[][]} mappings
+ * @return {boolean}
+ */
+var matchReplacement = function(s, sub, mappings) {
+    let duy={};
+    for(let i = 0 ; i<mappings.length ; i++){
+    		if(duy[mappings[i][0]] == undefined){
+        		duy[mappings[i][0]] = mappings[i][1];
+        }else{
+        		duy[mappings[i][0]] += mappings[i][1];
         }
     }
-    return false
+    let vt=[];
+    for(let i  = 0 ; i < s.length ; i++){
+    	if(s[i] == sub[0]){
+      		vt.push(i)
+      }
+    }
+    if(duy[sub[0]]!=undefined){
+      for(let i  = 0 ; i < s.length ; i++){
+        if(duy[sub[0]].indexOf(s[i])>=0){
+            vt.push(i)
+        }
+      }
+    } 
+    
+    let lck=[],cu="";
+    for(let i = 0 ; i < vt.length ; i++){
+    cu=s.substr(vt[i],sub.length);
+    if(cu.length ==sub.length)
+    	lck.push(cu)
+    }
+    console.log(lck.length)
+
+    let ck="",check=true;
+    for(let i = 0 ; i< lck.length ; i++){
+    	ck=lck[i];
+      check=true;
+    	for(let j = 0 ; j< ck.length ; j++){
+      	if(ck[j] == sub[j] || (duy[sub[j]] &&duy[sub[j]].indexOf(ck[j])>=0 				)){
+        	continue;
+        }
+        else{
+        check=false;
+        break;
+        }
+      }
+      if(check){
+      return true;
+      }
+    }
+    return false;
 };
