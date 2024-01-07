@@ -1,26 +1,28 @@
-# Runtime: 73 ms (Top 9.09%) | Memory: 14 MB (Top 9.30%)
+// Runtime: 31 ms (Top 97.8%) | Memory: 17.40 MB (Top 11.72%)
+
 class Solution:
-    def printTree(self, root: Optional[TreeNode]) -> List[List[str]]:
-        def height(root):
-            if not root:
-                return 0
-            return 1 + max(height(root.left), height(root.right))
-        # 1. Find height of BT
-        h = height(root) - 1
-
-        rows = h + 1
-        cols = pow(2, h + 1) -1
-        # 2. Create a res matrix and intialize with ""
-        res = [["" for _ in range(cols)] for _ in range(rows)]
-
-        def dfs(root, r , c):
-            if not root:
-                return
-
-            res[r][c] = str(root.val)
-            dfs(root.left, r + 1, c - pow(2, h - r - 1))
-            dfs(root.right, r + 1, c + pow(2, h - r - 1))
-            return
-        # 3. Fill the matrix recursively
-        dfs(root, 0, (cols - 1) // 2)
-        return res
+    def printTree(self, root: TreeNode) -> List[List[str]]:
+        height = 0
+        def dfs(node, h):                               # Find height
+            nonlocal height
+            height = max(height, h)
+            if node.left:
+                dfs(node.left, h+1)
+            if node.right:    
+                dfs(node.right, h+1)
+        dfs(root, 0)
+        n = 2 ** (height + 1) - 1                       # Get `n`
+        offset = (n - 1) // 2                           # Column for root node
+        ans = [[''] * n for _ in range(height + 1)]
+        q = [(root, 0, offset)]
+        for i in range(height+1):                       # BFS
+            tmp_q = []
+            while q:
+                cur, r, c = q.pop()
+                ans[r][c] = str(cur.val)
+                if cur.left:
+                    tmp_q.append((cur.left, r+1, c-2 ** (height - r - 1)))
+                if cur.right:    
+                    tmp_q.append((cur.right, r+1, c+2 ** (height - r - 1)))
+            q = tmp_q
+        return ans
