@@ -1,20 +1,27 @@
+// Runtime: 116 ms (Top 100.0%) | Memory: 67.60 MB (Top 61.9%)
+
 var goodDaysToRobBank = function(security, time) {
-    let res = [];
-    if(!time){
-       let i = 0;
-        while(i<security.length) res.push(i), i++;
-        return res;
+    let decrease = [0];
+    let increase = Array(security.length).fill(0);
+    
+    // Prefix
+    for (let i = 1; i < security.length; i++) {
+        if (security[i] <= security[i - 1]) decrease[i] = decrease[i - 1] + 1;
+        else decrease[i] = 0;
     }
-    let increasing = 0;
-    let decreasing = 0;
-    let set = new Set();
-    for(let i = 1; i < security.length; i++){
-        if(security[i]>security[i-1]) decreasing = 0;
-        else decreasing++;
-        if(security[i]<security[i-1]) increasing = 0;
-        else increasing++;
-        if(decreasing>=time) set.add(i);
-        if(increasing>=time&&set.has(i-time)) res.push(i-time);
+	
+    // Suffix
+    for (let j = security.length - 2; j >= 0; j--) {
+        if (security[j] <= security[j + 1]) increase[j] = increase[j + 1] + 1;
+        else increase[j] = 0;
     }
-    return res;
+    
+    let output = [];
+    for (let k = 0; k < security.length; k++) {
+        let left = decrease[k];
+        let right = increase[k];
+        if (left >= time && right >= time) output.push(k);
+    }
+    
+    return output;
 };
