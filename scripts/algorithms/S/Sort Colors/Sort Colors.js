@@ -1,18 +1,30 @@
-var sortColors = function(nums) {
-    let map = {
-        '0': 0,
-        '1': 0,
-        '2': 0
-    };
-    for(let char of nums) {
-        map[char] = map[char] + 1;
+// Runtime: 47 ms (Top 86.98%) | Memory: 41.70 MB (Top 76.34%)
+
+var sortColors = function(arr) {
+    
+    let one=0, zero=0, two=0
+    
+
+    // step1 
+    for(let elem of arr){
+        if(elem == 0) zero++
+        else if ( elem == 1) one ++
+        else two ++
     }
-    let values = Object.values(map);
-    let curr = 0;
-    for(let k=0; k<values.length; k++) {
-        for(let i=curr; i<curr+values[k]; i++) {
-            nums[i] = k;
-        }
-        curr = curr + values[k];
-    }
+
+
+
+
+    // step2
+    arr.length=0
+
+
+
+
+    // step3
+    for(let i=0;i<zero;i++) arr.push(0)
+    for(let i=0;i<one;i++) arr.push(1)
+    for(let i=0;i<two;i++) arr.push(2)    
+    
+
 };
