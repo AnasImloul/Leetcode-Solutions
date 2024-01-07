@@ -1,42 +1,43 @@
-# Runtime: 87 ms (Top 5.40%) | Memory: 14.2 MB (Top 98.06%)
+// Runtime: 38 ms (Top 85.62%) | Memory: 17.70 MB (Top 14.33%)
+
 class Solution:
-    def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
+    def distanceK(self, root, target, K):
+        # Step 1: Build adjacency list graph
+        graph = {}
+        self.buildGraph(root, None, graph)
 
-        # DFS to make the adj List
-        adjList = defaultdict(list)
-        def dfs(node):
-            if not node:
-                return
+        # Step 2: Perform BFS from the target node
+        queue = [(target, 0)]
+        visited = set([target])
+        result = []
+        
+        while queue:
+            node, distance = queue.pop(0)
+            
+            if distance == K:
+                result.append(node.val)
+                
+            if distance > K:
+                break
+            
+            for neighbor in graph[node]:
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.append((neighbor, distance + 1))
+        
+        return result
+    
+    def buildGraph(self, node, parent, graph):
+        if not node:
+            return
+        
+        if node not in graph:
+            graph[node] = []
+            
+        if parent:
+            graph[node].append(parent)
+            graph[parent].append(node)
+            
+        self.buildGraph(node.left, node, graph)
+        self.buildGraph(node.right, node, graph)
 
-            if node.left:
-                adjList[node].append(node.left)
-                adjList[node.left].append(node)
-
-            if node.right:
-                adjList[node].append(node.right)
-                adjList[node.right].append(node)
-            dfs(node.left)
-            dfs(node.right)
-
-        dfs(root)
-
-        # bfs to find the nodes with k distance
-
-        q = deque([(target, 0)])
-        visit = set()
-        visit.add(target)
-        res = []
-        while q:
-            for i in range(len(q)):
-                node, dist = q.popleft()
-
-                if dist == k:
-                    res.append(node.val)
-
-                if dist > k:
-                    break
-                for nei in adjList[node]:
-                    if nei not in visit:
-                        visit.add(nei)
-                        q.append((nei, dist + 1))
-        return res
