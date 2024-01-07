@@ -1,7 +1,9 @@
-var computeArea = function(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {
-    let area1 = (ax2-ax1)*(ay2-ay1)
-    let area2 = (bx2-bx1)*(by2-by1)
-    let overlap = (by1>ay2 || by2<ay1 || bx1>ax2 || bx2<ax1) ? 0 : Math.abs((Math.min(ax2,bx2) - Math.max(ax1, bx1))*(Math.min(ay2,by2) - Math.max(ay1, by1)))
-    
-    return area1 + area2 - overlap
+// Runtime: 95 ms (Top 83.5%) | Memory: 47.80 MB (Top 20.39%)
+
+var computeArea = function(A, B, C, D, E, F, G, H) {
+    var intersectionWidth = Math.min(C,G) - Math.max(A,E);
+    var intersectionHeight = Math.min(D,H) - Math.max(B,F);
+    intersectionWidth = intersectionWidth > 0 ? intersectionWidth : 0;
+    intersectionHeight = intersectionHeight > 0 ? intersectionHeight : 0;
+    return (C - A) * (D - B) + (G - E) * (H - F) - intersectionWidth * intersectionHeight;
 };
