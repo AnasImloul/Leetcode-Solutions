@@ -1,25 +1,24 @@
-/**
- * @param {string} s
- * @return {string[]}
- */
+// Runtime: 37 ms (Top 100.0%) | Memory: 41.70 MB (Top 67.57%)
 
- var printVertically = function(s)
-{
-    let arr = s.split(' '),
-        max = arr.reduce((last, curr) => Math.max(last, curr.length), 0),
-        ans = [];
+var printVertically = function(s) {
+    const res = []
+    const w = s.split(" ")
+    const maxL = Array.from(w).sort((a,b)=>b.length-a.length)[0].length
 
-    arr = arr.map(el => el + ' '.repeat(max - el.length));
-
-    for (let i = 0; i < max; i++)
-    {
-        let word = '';
-
-        for (let j = 0; j < arr.length; j++)
-            word += arr[j][i];
-
-        ans.push(word.replace(new RegExp('\\s+$'), ''));
+    let i = 0
+    while(i<=maxL){
+        let str=''
+        for(let e of w){
+            str+=e[i]?? " "
+        }
+        let trimmed = str.trimEnd()
+        if(trimmed!==""){
+            res.push(trimmed)
+        }
+        str=""
+        i++
     }
 
-    return ans;
+    return res;
 };
+
