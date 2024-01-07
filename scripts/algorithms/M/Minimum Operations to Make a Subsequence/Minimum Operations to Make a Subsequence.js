@@ -1,41 +1,34 @@
-const minOperations = function (targets, arr) {
-  const map = {};
-  const n = targets.length;
-  const m = arr.length;
-  targets.forEach((target, i) => (map[target] = i));
+// Runtime: 266 ms (Top 33.33%) | Memory: 83.90 MB (Top 33.33%)
 
-//map elements in arr to index found in targets array
-  const arrIs = arr.map(el => {
-    if (el in map) {
-      return map[el];
-    } else {
-      return -1;
-    }
-  });
+var lengthOfLIS = function(A) {
+    if(!A.length) return 0;
+    let tails = [-Infinity];  //here -Infinity acts as a Sentinel, for cleaner code (or else I would ahve to place A[0] here)
 
-//create a LIS table dp whose length is the longest increasing subsequence
-  const dp = [];
-
-  for (let i = 0; i < m; i++) {
-    const curr = arrIs[i];
-    if (curr === -1) continue;
-    if (!dp.length || curr > dp[dp.length - 1]) {
-      dp.push(curr);
-    } else if (curr < dp[0]) {
-      dp[0] = curr;
-    } else {
-      let l = 0;
-      let r = dp.length;
-      while (l < r) {
-        const mid = Math.floor((l + r) / 2);
-        if (arrIs[i] <= dp[mid]) {
-          r = mid;
-        } else {
-          l = mid + 1;
+    for(let i=0; i<A.length; i++){
+        // If my curr element is bigger than all possible tails, i just need to create a new subarray, which of course will be of length tails.length-1 +1
+        if(A[i]>tails[tails.length-1])
+            tails.push(A[i]);
+        else{
+            let lo=0, hi = tails.length-1;
+            //binary search to find where to place my current element so i have more chances of creating a bigger subarray
+            while(lo<hi){
+                let mid = (lo+hi)>>1
+                if(tails[mid] < A[i])
+                    lo = mid+1;
+                else
+                    hi = mid;
+            }
+            tails[lo] = A[i];
         }
-      }
-      dp[r] = curr;
     }
-  }
-  return n-dp.length;
+    return tails.length-1;// is the length of the longest possible subarray (-1 because of the -Infinity I added)
+};
+var minOperations = function(T, A) {
+    let seen=new Set(T),res=0,originalIndex={},n=T.length
+    //filter out all the unnecessary values
+    A=A.filter(d=>seen.has(d))
+    for(let i=0;i<T.length;i++)
+        originalIndex[T[i]]=i //maintain the original indices of the values in T
+    A=A.map(d=>originalIndex[d])    
+    return  T.length-lengthOfLIS(A)
 };
