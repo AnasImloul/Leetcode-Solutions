@@ -1,18 +1,23 @@
-/**
- * @param {number[]} arr
- * @param {number} start
- * @return {boolean}
- */
+// Runtime: 57 ms (Top 89.2%) | Memory: 51.60 MB (Top 47.16%)
+
+// Recursion, Backtracking
 var canReach = function(arr, start) {
-        let queue = [start];
-        while(queue.length) {
-            let index = queue.shift();
-            if(index >= 0 && index < arr.length && arr[index] >=0 ){
-                if(arr[index] === 0)return true;
-                let move = arr[index]
-                arr[index] = -1   
-                queue.push(index +move , index-move)
-            }
-        }
-    return false;
+    if (arr === null || arr.length === 0) {
+        return false;
+    }
+    return dfs(arr, start);
+    // T.C: O(N)
+    // S.C: O(N)
 };
+
+const dfs = (arr, idx) => {
+    if (arr[idx] === 0) {
+        return true;
+    }
+    if (idx < 0 || idx > arr.length-1 || arr[idx] < 0) {
+        return false;
+    }
+    let jump = arr[idx];
+    arr[idx] = -1; // marking this index as visited
+    return dfs(arr, idx-jump) || dfs(arr, idx+jump);
+}
