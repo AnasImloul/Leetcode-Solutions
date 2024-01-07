@@ -1,19 +1,20 @@
+// Runtime: 52 ms (Top 62.71%) | Memory: 41.80 MB (Top 53.44%)
+
+/**
+ * @param {number} x
+ * @param {number} y
+ * @return {number}
+ */
 var hammingDistance = function(x, y) {
-  x = x.toString(2).split('')
-  y = y.toString(2).split('')
-  
-  let count = 0;
-  const len = Math.max(x.length,y.length);
-
-  if (x.length < y.length) {
-    x = Array(len - x.length).fill('0').concat(x)
-  } else {
-    y = Array(len - y.length).fill('0').concat(y)
-  } 
-
-  for (let i = 1; i <= len; i++) {
-    x.at(-i) !== y.at(-i)? count++ : null    
-  }
-
-  return count
+    let value = x ^ y;
+    let counter = 0;
+    
+    while (value != 0) {
+        if (value & 1)
+           ++counter
+           
+        value = value >> 1
+    }
+    
+    return counter
 };
