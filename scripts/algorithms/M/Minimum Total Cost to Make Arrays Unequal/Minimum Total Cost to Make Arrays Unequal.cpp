@@ -1,50 +1,50 @@
+// Runtime: 120 ms (Top 92.63%) | Memory: 114.00 MB (Top 34.74%)
+
+typedef long long ll; 
+
 class Solution {
 public:
-    long long minimumTotalCost(vector<int>& nums1, vector<int>& nums2) {
-        int domNum = -1,domCount = 0,totalNum = 0,n = nums1.size();
-        long ans = 0;
-        unordered_map<int,int> store;   //store freq of duplicates in nums1 ad nums2
-
-        for(int i=0;i<n;i++){
-            if(nums1[i] == nums2[i]){
-                ans = ans + i;
-                store[nums1[i]]++;
-
-                if(store[nums1[i]] > domCount){
-                    domCount = store[nums1[i]];
-                    domNum = nums1[i];
+    long long minimumTotalCost(vector<int>& a, vector<int>& b) {
+        int n = a.size(); 
+        vector<int> f(n+1, 0); 
+        for (int i = 0; i < n; ++i) {
+            f[a[i]]++; 
+            f[b[i]]++; 
+        }
+        for (int i = 1; i <= n; ++i) {
+            if (f[i] > n) return -1; 
+            f[i] = 0; 
+        }
+        vector<int> c; 
+        int mx = 0, val = 0, mn = 1e9; 
+        for (int i = 0; i < n; ++i) {
+            if (a[i] == b[i]) {
+                c.push_back(i); 
+                f[a[i]] += 2; 
+                mn = min(mn, i); 
+                if (f[a[i]] > mx) {
+                    mx = f[a[i]]; 
+                    val = a[i]; 
                 }
-
-                totalNum++;
             }
         }
-
-        if( domCount <= (totalNum/2)){
-            //Means Each duplicates will swap among themselves to get the required array
-            return ans;
-        }
-        else{
-            //Duplicates have to be swapped with other elements of original Array
-
-            for(int i=0;i<n;i++){
-                if(nums1[i] != nums2[i] && nums1[i] != domNum && nums2[i] != domNum){
-                    ans = ans + i;
-                    totalNum++;
-
+        
+        if (mx > (int) c.size()) {
+            for (int i = 0; i < n; ++i) {
+                if (a[i] != val && b[i] != val && a[i] != b[i]) {
+                    c.push_back(i); 
+                    mn = min(mn, i);
+                    if (mx <= (int) c.size()) {
+                        break; 
+                    }
                 }
-                
-                if( domCount <= (totalNum/2)){
-                    //Got the required Array , Can stop now
-                    return ans;
-                }
-
             }
         }
-
-        //Not Possible
-        return -1;
+        
+        long long ans = 0; 
+        for (int i = 0; i < (int)c.size(); ++i) ans += c[i]; 
+        
+        return ans; 
         
     }
-
-
 };
