@@ -1,3 +1,5 @@
+// Runtime: 207 ms (Top 100.0%) | Memory: 111.20 MB (Top 98.8%)
+
 int m[1000001];
 class Solution {
 public:
