@@ -1,23 +1,25 @@
+// Runtime: 6 ms (Top 87.16%) | Memory: 11.70 MB (Top 14.09%)
+
 class Solution {
 public:
     vector<vector<int>> matrixReshape(vector<vector<int>>& mat, int r, int c) {
-        if(mat.size()* mat[0].size()!= r * c) {
-            return mat;
-        } 
+        int m = mat.size() , n= mat[0].size();
         vector<vector<int>>v(r,vector<int>(c));
-        int k = 0;
-        int l = 0;
-
-        for(int i = 0; i < mat.size(); i++) {
-            for(int j = 0; j < mat[0].size(); j++) {
-                if(l == v[0].size()) {
-                    l = 0;
-                    k++;
+        queue<int>q;
+        if(m*n == r*c){
+            for(int i=0;i<m;i++){
+                for(int j=0;j<n;j++){
+                    q.push(mat[i][j]);
                 }
-
-                v[k][l++] = mat[i][j];
             }
+            for(int i=0;i<r;i++){
+                for(int j=0;j<c;j++){
+                    v[i][j] = q.front();
+                    q.pop();
+                }
+            }
+            return v;
         }
-        return v;
+        return mat;
     }
 };
