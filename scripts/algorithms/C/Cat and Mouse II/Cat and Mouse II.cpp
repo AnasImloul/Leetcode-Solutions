@@ -1,80 +1,92 @@
+// Runtime: 313 ms (Top 83.33%) | Memory: 61.20 MB (Top 13.89%)
+
 class Solution {
-    int dx[4] = {1, -1, 0, 0};
-    int dy[4] = {0, 0, 1, -1};
-    int dp[2][81][8][8][8][8];
-    inline bool canGo(vector<string>& grid, int i , int j) {
-        return i >= 0 && i < grid.size() && j >= 0 && j < grid[0].size()
-        && grid[i][j] != '#';
+ public:
+  bool canMouseWin(vector<string>& grid, int catJump, int mouseJump) {
+    m = grid.size();
+    n = grid[0].size();
+    int cat;    // cat's position
+    int mouse;  // mouse's position
+
+    for (int i = 0; i < m; ++i)
+      for (int j = 0; j < n; ++j) {
+        if (grid[i][j] != '#')
+          ++nFloors;
+        if (grid[i][j] == 'C')
+          cat = hash(i, j);
+        else if (grid[i][j] == 'M')
+          mouse = hash(i, j);
+      }
+
+    // dp[i][j][k] := true if mouse can win w/
+    // Cat on (i / 8, i % 8), mouse on (j / 8, j % 8), and turns = k
+    dp.resize(m * n, vector<vector<int>>(m * n, vector<int>(nFloors * 2, -1)));
+    return canMouseWin(grid, cat, mouse, 0, catJump, mouseJump);
+  }
+
+ private:
+  const vector<int> dirs{0, 1, 0, -1, 0};
+  int m;
+  int n;
+  int nFloors = 0;
+  vector<vector<vector<int>>> dp;
+
+  bool canMouseWin(const vector<string>& grid, int cat, int mouse, int turn,
+                   const int& catJump, const int& mouseJump) {
+    // We already search whole touchable grid
+    if (turn == nFloors * 2)
+      return false;
+    if (dp[cat][mouse][turn] != -1)
+      return dp[cat][mouse][turn];
+
+    if (turn % 2 == 0) {
+      // mouse's turn
+      const int i = mouse / n;
+      const int j = mouse % n;
+      for (int k = 0; k < 4; ++k) {
+        for (int jump = 0; jump <= mouseJump; ++jump) {
+          const int x = i + dirs[k] * jump;
+          const int y = j + dirs[k + 1] * jump;
+          if (x < 0 || x == m || y < 0 || y == n)
+            break;
+          if (grid[x][y] == '#')
+            break;
+          if (grid[x][y] == 'F')  // Mouse eats the food, so mouse win
+            return dp[cat][mouse][turn] = true;
+          if (canMouseWin(grid, cat, hash(x, y), turn + 1, catJump, mouseJump))
+            return dp[cat][mouse][turn] = true;
+        }
+      }
+      // Mouse can't win, so mouse lose
+      return dp[cat][mouse][turn] = false;
+    } else {
+      // cat's turn
+      const int i = cat / n;
+      const int j = cat % n;
+      for (int k = 0; k < 4; ++k) {
+        for (int jump = 0; jump <= catJump; ++jump) {
+          const int x = i + dirs[k] * jump;
+          const int y = j + dirs[k + 1] * jump;
+          if (x < 0 || x == m || y < 0 || y == n)
+            break;
+          if (grid[x][y] == '#')
+            break;
+          if (grid[x][y] == 'F')  // Cat eats the food, so mouse lose
+            return dp[cat][mouse][turn] = false;
+          const int nextCat = hash(x, y);
+          if (nextCat == mouse)  // Cat catches mouse, so mouse lose
+            return dp[cat][mouse][turn] = false;
+          if (!canMouseWin(grid, nextCat, mouse, turn + 1, catJump, mouseJump))
+            return dp[cat][mouse][turn] = false;
+        }
+      }
+      // Cat can't win, so mouse win
+      return dp[cat][mouse][turn] = true;
     }
+  }
 
-public:
-    int solve(vector<string>& grid, int catJump, int mouseJump, int turn,
-     int mouseSteps, int mousePosX, int mousePosY, int catPosX, int catPosY) {
-        if (mouseSteps > 80) {
-            return 0;
-        }
-        if (grid[mousePosX][mousePosY] == 'F') {
-            return 1;
-        }
-        if (mousePosX == catPosX && mousePosY == catPosY) {
-            return 0;
-        }
-        if (grid[catPosX][catPosY] == 'F') {
-            return 0;
-        }
-
-        int &ans = dp[turn][mouseSteps][mousePosX][mousePosY][catPosX][catPosY];
-        if (ans != -1) {
-            return ans;
-        }
-
-        bool mouseCanWin = 0;
-        if (turn) {
-            mouseCanWin = 1;
-            for (int k = 0; k < 4; k++) {
-                for (int jump = 0; jump <= catJump; jump++) {
-                    int newCatPosX = catPosX + dx[k] * jump;
-                    int newCatPosY = catPosY + dy[k] * jump;
-                    if (canGo(grid, newCatPosX, newCatPosY)) {
-                        mouseCanWin &= solve(grid, catJump, mouseJump, 0, mouseSteps, mousePosX, mousePosY, newCatPosX, newCatPosY);
-                    if (!mouseCanWin) break;
-                    } else break; // cannot jump over the wall
-                }
-            }
-        } else {
-            mouseCanWin = 0;
-            for (int k = 0; k < 4; k++) {
-                for (int jump = 0; jump <= mouseJump; jump++) {
-                    int newMousePosX = mousePosX + dx[k] * jump;
-                    int newMousePosY = mousePosY + dy[k] * jump;
-                    if (canGo(grid, newMousePosX, newMousePosY)) {
-                        mouseCanWin |= solve(grid, catJump, mouseJump, 1, mouseSteps + 1, newMousePosX, newMousePosY, catPosX, catPosY);
-                        if (mouseCanWin) break;
-                    } else break; // cannot jump over the wall               
-                }
-            }
-        }
-        return ans = mouseCanWin;
-    }
-
-    bool canMouseWin(vector<string>& grid, int catJump, int mouseJump) {
-        memset(dp, -1, sizeof(dp));
-        int mousePosX = 0;
-        int mousePosY = 0;
-        int catPosX = 0;
-        int catPosY = 0;
-        for (int i = 0; i < grid.size(); i++) {
-            for (int j = 0; j < grid[0].size(); j++) {
-                if (grid[i][j] == 'C') {
-                    catPosX = i;
-                    catPosY = j;
-                }
-                if (grid[i][j] == 'M') {
-                    mousePosX = i;
-                    mousePosY = j;
-                }
-            }
-        }
-        return solve(grid, catJump, mouseJump, 0, 0, mousePosX, mousePosY, catPosX, catPosY);
-    }
+  int hash(int i, int j) {
+    return i * n + j;
+  }
 };
+
