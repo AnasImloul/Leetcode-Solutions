@@ -1,46 +1,36 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.80 MB (Top 47.46%)
+
 class Solution {
 public:
-    unordered_map<string,string> dp;
-    bool special(string s){
-        int one=0,zero=0;
-        
-        for(auto ch:s){
-            if(ch=='1') one++;
-            else zero++;
-            if(one<zero) return 0;
-        }
-        if(one==zero)
-            return 1;
-        return 0;
-    }
-    string fun(string s){
-        if(s.length()==1) return s;
-        if(dp.count(s)) return dp[s];
-        string ans=s;
-        string start;
-        for(int i=0;i<s.length()-1;i++){
-            start.push_back(s[i]);
-            string end=s.substr(i+1);
-            string comb=end+start;
-            if(comb>ans and special(start) and special(end)) ans=comb;
-        }
-        return dp[s]=ans;
-    }
     string makeLargestSpecial(string s) {
-        string start;
-        string ans=s;
-        string ss=s;
-        for(int i=0;i<s.length();i++){
-            string middle;
-            for(int j=i;j<s.length();j++){
-                middle.push_back(s[j]);
-               string end=s.substr(j+1);
-                string comb=start+fun(middle)+end;
-                if(comb>ans) ans=comb;
+        
+        if(s.length()==0)
+            return ""; //return null string if size is zero
+
+        vector<string> ans; //list to store all current special substrings
+        int count=0,i=0; //keep track of special substring starting index using "i" and 
+                         //"count" to keep the track of special substring is over or not
+
+        for(int j=0;j<s.size();j++){
+            if(s[j] == '1')
+                count++;
+            else
+                count--;
+            
+            if(count==0){
+                //call recursively using mid special substring
+
+                ans.push_back('1' + makeLargestSpecial(s.substr(i+1,j-i-1)) + '0');
+                i = j+1;
             }
-            start.push_back(s[i]);
         }
-        if(ss==ans) return ans;
-        return(makeLargestSpecial(ans));
+        //sort current substring stored list to fulfill the question demand
+
+        sort(ans.begin(),ans.end(),greater<string>());
+        string finalString = "";
+        for(i=0;i<ans.size();i++){
+            finalString += ans[i];
+        }
+        return finalString;
     }
 };
