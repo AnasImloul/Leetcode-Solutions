@@ -1,31 +1,73 @@
+// Runtime: 10 ms (Top 99.69%) | Memory: 9.90 MB (Top 96.62%)
+
 class Solution {
 public:
-    vector<int> smallestSufficientTeam(vector<string>& req_skills, vector<vector<string>>& people) {
-        vector<int> mask(people.size(), 0);
-        for(int i=0; i<people.size(); i++){
-            for(int j=0; j<req_skills.size(); j++){
-                for(int z=0; z<people[i].size(); z++){
-                    if(people[i][z] == req_skills[j]){
-                        mask[i] += (1<<j);
-                        break;
-                    }
-                }
-            }
-        }
-        vector<long long> dp(1<<req_skills.size(), INT_MAX);
-        vector<vector<int>> save(1<<req_skills.size());
-        dp[0] = 0;
-        for(int i=0; i<(1<<req_skills.size()); i++){
-            for(int j=0; j<mask.size(); j++){
-                int new_mask = i&(i^mask[j]);
-                if(dp[new_mask]+1<dp[i]){
-                    dp[i] = dp[new_mask]+1;
-                    save[i] = save[new_mask];
-                    save[i].push_back(j);
-                }
-            }
-        }
-        return save[(1<<req_skills.size())-1];
+    std::vector<int> smallestSufficientTeam(std::vector<std::string>& req_skills, std::vector<std::vector<std::string>>& people) {
+        int n = req_skills.size();
+        int m = people.size();
         
+        std::unordered_map<std::string, int> skillToIndex;
+        for (int i = 0; i < n; i++) {
+            skillToIndex[req_skills[i]] = i;
+        }
+        
+        std::vector<int> arr(m, 0);
+        for (int i = 0; i < m; i++) {
+            std::vector<std::string>& personSkills = people[i];
+            int val = 0;
+            for (const std::string& skill : personSkills) {
+                val |= 1 << skillToIndex[skill];
+            }
+            arr[i] = val;
+        }
+        
+        std::vector<bool> banned(m, false);
+        for (int i = 0; i < m; i++) {
+            for (int j = i + 1; j < m; j++) {
+                int val = arr[i] | arr[j];
+                if (val == arr[i]) {
+                    banned[j] = true;
+                }
+                else if (val == arr[j]) {
+                    banned[i] = true;
+                }
+            }
+        }
+        
+        std::vector<int> ans;
+        helper(0, n, arr, std::vector<int>(), banned, ans);
+        
+        return ans;
+    }
+    
+private:
+    void helper(int cur, int n, const std::vector<int>& arr, std::vector<int> team, const std::vector<bool>& banned, std::vector<int>& ans) {
+        if (cur == (1 << n) - 1) {
+            if (ans.empty() || team.size() < ans.size()) {
+                ans = team;
+            }
+            return;
+        }
+        
+        if (!ans.empty() && team.size() >= ans.size()) {
+            return;
+        }
+        
+        int zero = 0;
+        while (((cur >> zero) & 1) == 1) {
+            zero++;
+        }
+        
+        for (int i = 0; i < arr.size(); i++) {
+            if (banned[i]) {
+                continue;
+            }
+            
+            if (((arr[i] >> zero) & 1) == 1) {
+                team.push_back(i);
+                helper(cur | arr[i], n, arr, team, banned, ans);
+                team.pop_back();
+            }
+        }
     }
 };
