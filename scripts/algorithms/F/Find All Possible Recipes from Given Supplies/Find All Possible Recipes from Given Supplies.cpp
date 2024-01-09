@@ -1,69 +1,44 @@
+// Runtime: 544 ms (Top 27.33%) | Memory: 101.90 MB (Top 78.97%)
+
 class Solution {
 public:
-    
-    // idea is to use TOPOLOGICAL SORTING
-    
-    // where any foood item with indegree 0 means that item can be created
-    
     vector<string> findAllRecipes(vector<string>& recipes, vector<vector<string>>& ingredients, vector<string>& supplies) {
         
-        // store what all dependencies exist for any item
-        // similar to adjacent list of any node N
-        // here node N is string, and all neighbour nodes are stored as vector<string>
-        map<string, vector<string>> adjList;
+        unordered_map<string,int>indegree;
+        for(auto i:recipes)
+            indegree[i]=0;   //Initially indegree of every recipe is 0
         
-        // to keep track of whether item can be made or still needs something before we can make it
-        map<string, int>indegree;
+        unordered_map<string,vector<string>>graph;
         
-        // check for each row of 2D matrix
-        for(int i=0; i<ingredients.size(); i++)
-        {
-            // this will list out all the items need to make recipes[i]
-            for(auto &item : ingredients[i])
-            {
-                // 'item' is required to make 'recipes[i]'
-                adjList[item].push_back(recipes[i]);
+        for(int i=0;i<recipes.size();i++){
+            
+            for(int j=0;j<ingredients[i].size();j++){
                 
-                // recipes[i] now has a dependency 
-                indegree[recipes[i]]++;
+                if(find(supplies.begin(),supplies.end(),ingredients[i][j])==supplies.end()){ //finds if the ingredient exist in the supply or not
+                    
+                    graph[ingredients[i][j]].push_back(recipes[i]); //If not then ingredients[i][j] is required to prepare the recipes[i] i.e bread--->burger, sandwitch ---> burger
+                    
+                    indegree[recipes[i]]++;     //increase the indegree of the recipe , for example , bread->burger,sandwitch-->burger , now indegree of burger is 2
+                }
             }
         }
+        queue<string>q;            //Now simple topo sort using bfs (Kahn's algorithm)
+        for(auto i:indegree){
+            if(i.second==0)
+                q.push(i.first);
+        }
+        vector<string>ans;
         
-        // will contain all items which can be made
-        queue<string>q;
-        
-        // check from the list of given supplies, if some item is independent and we can make it or use it to make others
-        for(auto &x : supplies)
-            if(indegree[x]==0)
-                q.push(x);
-        
-        
-        
-        while(!q.empty())
-        {
-            string node = q.front();
+        while(!q.empty()){
+            string front=q.front();
             q.pop();
-            
-            
-            for(auto &nei : adjList[node])
-            {
-                // remove link of all neighbours of 'node'
-                indegree[nei]--;
-                
-                // if something becomes independent, add it to our queue
-                if(indegree[nei]==0)
-                    q.push(nei);
+            ans.push_back(front);
+            for(auto i:graph[front]){
+                indegree[i]--;
+                if(!indegree[i])
+                    q.push(i);
             }
         }
-        
-        
-        vector<string> ans;
-        
-        // all things which have 0 indegree means that they can be made. hence, they will be part of our answer
-        for(auto &x : recipes)
-            if(indegree[x]==0)
-                ans.push_back(x);
-            
         return ans;
     }
 };
