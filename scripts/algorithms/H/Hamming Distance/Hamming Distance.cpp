@@ -1,11 +1,14 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.20 MB (Top 76.33%)
+
 class Solution {
 public:
     int hammingDistance(int x, int y) {
-        int val = (x^y);
-        int ans = 0;
-        for(int i = 31; i >= 0; --i){
-            if(val & (1 << i)) ans++;
+        int res = 0;
+        int num = x^y;
+        while (num) {
+            res += num % 2;
+            num >>= 1;
         }
-        return ans;
+        return res;
     }
 };
