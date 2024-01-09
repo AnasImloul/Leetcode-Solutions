@@ -1,20 +1,18 @@
+// Runtime: 7 ms (Top 87.04%) | Memory: 11.00 MB (Top 30.19%)
+
 class Solution {
 public:
     vector<vector<int>> transpose(vector<vector<int>>& matrix) {
+        int row = matrix.size();
+        int col = matrix[0].size();
+        vector<vector<int>> result(col, vector<int>(row, 0));
         
-        vector<vector<int>>result;
-        map<int,vector<int>>m;
-        
-        for(int i=0;i<matrix.size();i++){
-            vector<int>v = matrix[i];
-            for(int j=0;j<v.size();j++){
-                m[j].push_back(v[j]);
+        for (int i = 0; i < col; ++i) {
+            for (int j = 0; j < row; ++j) {
+                result[i][j] = matrix[j][i];
             }
         }
         
-        for(auto i:m){
-            result.push_back(i.second);
-        }
         return result;
     }
 };
