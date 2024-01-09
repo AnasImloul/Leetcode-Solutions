@@ -1,37 +1,28 @@
-/*
-1.mark the starting and ending pt of each building
-    -> let height of starting pt be negative and ending pt be positive   [2,4,10] -> [[2,-10],[4,10]]
-2.mark all consecutive building
-    ->store every pair of x and y in pair sort it acc to x
-3.get max y for all x values
-    ->use heap-->(multiset) to store all buildings, insert new height of building else erase buiding height
-4.remove pts of same height and store ans in results
-*/
+// Runtime: 23 ms (Top 78.66%) | Memory: 14.70 MB (Top 80.04%)
+
 class Solution {
 public:
     vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {
-		//step1
-        vector<pair<int,int>> coordinate;
-        for(auto building: buildings){
-            coordinate.push_back({building[0],-building[2]});
-            coordinate.push_back({building[1],building[2]});
+        priority_queue<pair<int, int>> pq;
+        vector<int> co;
+        for (auto b:buildings) {
+            co.push_back(b[0]);
+            co.push_back(b[1]);
         }
-		//step2
-        sort(coordinate.begin(), coordinate.end());
-        
-		//step3
-        multiset<int,greater<int>> pq = {0};
-        vector<vector<int>> result;
-        int prev = 0;
-        for(auto p: coordinate){
-            if (p.second<0) pq.insert(-p.second);
-            else pq.erase(pq.find(p.second));
-            int cur=*pq.begin();
-            if (prev!=cur) {
-                result.push_back({p.first,cur});
-                prev=cur;
+        sort(co.begin(), co.end());
+        int m = unique(co.begin(), co.end()) - co.begin();
+        int j = 0, preH = 0;
+        vector<vector<int>> ans;
+        for (int i=0; i<m; i++) {
+            while (j<buildings.size() && buildings[j][0]<=co[i]) 
+                pq.push(make_pair(buildings[j][2], buildings[j][1])), j++;
+            while (!pq.empty() && pq.top().second<=co[i]) pq.pop();
+            int nowH = pq.empty() ? 0 : pq.top().first;
+            if (nowH != preH) {
+                ans.push_back({co[i], nowH});
+                preH=nowH;
             }
         }
-        return result;
+        return ans;
     }
 };
