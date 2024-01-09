@@ -1,19 +1,42 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 6 MB (Top 96.62%)
+// Runtime: 48 ms (Top 81.41%) | Memory: 8.50 MB (Top 76.13%)
+
 class Solution {
-    int MOD=1e9+7;
 public:
+    static const int mod = 1e9 + 7;
+    vector<vector<int>> MOVES = {
+    {4, 6},
+    {8, 6},
+    {7, 9},
+    {4, 8},
+    {3, 9, 0},
+    {},
+    {0, 1, 7},
+    {2, 6},
+    {1, 3},
+    {2, 4},
+};
+
+    int cache[5001][10];
+
     int knightDialer(int n) {
-        if(n==1) return 10;
-        int a=2, b=2, c=3, d=2; //a{2,8} b{1,3,7,9} c{4,6} d{0}
-        for(int i=3; i<=n; i++){
-            int w, x, y, z;
-            w = 2ll*b%MOD;
-            x = (1ll*a + 1ll*c)%MOD;
-            y = (2ll*b + 1ll*d)%MOD;
-            z = 2ll*c%MOD;
-            a = w; b = x; c = y; d = z;
+        vector<int> nextNumbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        return knightDialer(n, nextNumbers);
+    }
+
+    int knightDialer(int remaining, vector<int>& nextNumbers) {
+        if (remaining == 1)
+            return nextNumbers.size();
+
+        int count = 0;
+        for (int nextNumber : nextNumbers) {
+            int cur = cache[remaining][nextNumber];
+            if (cur == 0) {
+                cur = knightDialer(remaining - 1, MOVES[nextNumber]);
+                cache[remaining][nextNumber] = cur;
+            }
+            count += cur;
+            count %= mod;
         }
-        int ans = (2ll*a + 4ll*b + 2ll*c + d)%MOD;
-        return ans;
+        return count;
     }
 };
