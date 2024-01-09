@@ -1,34 +1,26 @@
-typedef long long ll;
+// Runtime: 306 ms (Top 55.72%) | Memory: 103.70 MB (Top 71.76%)
 
 class Solution {
 public:
-    vector<vector<long long>> splitPainting(vector<vector<int>>& segments) {
-        vector<vector<ll> > ans;
-        map<int,ll> um;
-        
-        for(auto s : segments){
-            um[s[0]] += s[2];
-            um[s[1]] -= s[2];
+    vector<vector<long long>> splitPainting(vector<vector<int>>& seg) {
+        vector<vector<long long>> v;
+        map<long long,long long> m;
+        long long int i=0;
+        while(i<seg.size())
+        {
+            m[seg[i][0]]+=seg[i][2];
+            m[seg[i][1]]-=seg[i][2];
+            i++;
         }
-        bool flag = false;
-        pair<int,ll> prev;
-        ll curr = 0;
-        
-        for(auto x : um){
-            if(flag == false){
-                prev = x;
-                curr += x.second;
-                flag = true;
-                continue;
-            }
-            
-            vector<ll> v = {prev.first,x.first,curr};
-            prev = x;
-            if(curr)
-                ans.push_back(v);
-            curr += x.second;
-            
+        long long int j=0,k=0;
+        for(auto x:m)
+        {
+            long long int prev=j;
+            j+=x.second;
+            if(prev>0)
+                v.push_back({k,x.first,prev});
+            k=x.first;
         }
-        return ans;
+        return v;
     }
 };
