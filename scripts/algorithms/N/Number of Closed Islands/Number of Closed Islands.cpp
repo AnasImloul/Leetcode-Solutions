@@ -1,58 +1,41 @@
+// Runtime: 4 ms (Top 97.43%) | Memory: 10.00 MB (Top 60.42%)
+
 class Solution {
 public:
-    bool isValid(int i,int j,vector<vector<int>>&grid) {
-        if(i >= 0 && i < grid.size() && j >= 0 && j < grid[0].size() && grid[i][j] == 0) {
-            return true;
-        }
-        return false;
-    }
-    void DFS(int i,int j,vector<vector<int>>&grid) {
+    void dfs(int i, int j, vector<vector<int>>& grid) {
+        int m = grid.size(), n = grid[0].size();
+        if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] != 0)
+            return;
+
         grid[i][j] = 1;
-        if(isValid(i + 1,j,grid)) {
-            DFS(i + 1,j,grid);
-        }
-        if(isValid(i - 1,j,grid)) {
-            DFS(i - 1,j,grid);
-        }
-        if(isValid(i,j + 1,grid)) {
-            DFS(i,j + 1,grid);
-        }
-        if(isValid(i,j - 1,grid)) {
-            DFS(i,j - 1,grid);
+        int dx[4] = {1, -1, 0, 0};
+        int dy[4] = {0, 0, 1, -1};
+
+        for(int k=0;k<4;k++){
+            int nx = i + dx[k];
+            int ny = j + dy[k];
+            dfs(nx, ny, grid);
         }
     }
+    
     int closedIsland(vector<vector<int>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
-        for(int i = 0; i < m; i++) {
-            int j = 0;
-            if(grid[i][j] == 0) {
-                DFS(i,j,grid);
-            }
-            j = n - 1;
-            if(grid[i][j] == 0) {
-                DFS(i,j,grid);
+        int m = grid.size(), n = grid[0].size();
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if((i*j==0 || i==m-1 || j==n-1) && (grid[i][j]==0))
+                    dfs(i, j, grid);
             }
         }
-        for(int j = 0; j < n; j++) {
-            int i = 0;
-            if(grid[i][j] == 0) {
-                DFS(i,j,grid);
-            }
-            i = m - 1;
-            if(grid[i][j] == 0) {
-                DFS(i,j,grid);
-            }
-        }
-        int cnt = 0;
-        for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++) {
-                if(grid[i][j] == 0) {
-                    cnt++;
-                    DFS(i,j,grid);
+        
+        int count = 0;
+        for (int i = 1; i < m-1; i++) {
+            for (int j = 1; j < n-1; j++) {
+                if (grid[i][j] == 0) {
+                    dfs(i, j, grid);
+                    count++;
                 }
             }
         }
-        return cnt;
+        return count;
     }
 };
