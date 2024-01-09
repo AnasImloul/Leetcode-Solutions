@@ -1,18 +1,11 @@
-  //the major obersavation or we can also verify by giving your own test it always returns 1 or 2 
-    //if the whole string is palindrom then return 1 if not then return 2.
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.60 MB (Top 43.9%)
+
 class Solution {
-   static bool isPal(string s){
-        string p = s;
-        reverse(p.begin() , p.end());
-       return s==p;     
-    }
 public:
-    int removePalindromeSub(string s) {
-  
-        if(isPal(s)){
-            return 1;
-        } 
-        
-        return 2;
+    int removePalindromeSub(string S) {
+        if (S == "") return 0;
+        for (int i = 0, j = S.size() - 1; i < j; i++, j--)
+            if (S[i] != S[j]) return 2;
+        return 1;
     }
 };
