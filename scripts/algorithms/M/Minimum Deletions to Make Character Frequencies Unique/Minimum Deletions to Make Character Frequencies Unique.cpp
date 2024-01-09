@@ -1,3 +1,5 @@
+// Runtime: 50 ms (Top 84.01%) | Memory: 17.60 MB (Top 90.02%)
+
 class Solution {
 public:
     int minDeletions(string s) {
