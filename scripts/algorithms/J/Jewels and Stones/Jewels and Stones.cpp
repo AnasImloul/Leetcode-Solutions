@@ -1,20 +1,18 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.60 MB (Top 45.88%)
+
 class Solution {
 public:
-	int numJewelsInStones(string jewels, string stones) {
-
-		unordered_map<char, int> mp;
-
-		for(int i=0 ; i<jewels.size() ; i++){
-			mp[jewels[i]]++;
-		}
-
-		int ans = 0;
-		for(int i=0 ; i<stones.size() ; i++){
-			if(mp.find(stones[i]) != mp.end()){
-				ans++;
-			}
-		}
-
-		return ans;
-	}
+    map<char,int> umap;
+    int numJewelsInStones(string J, string S) {
+        for(char c:S){
+            umap[c]++;
+        }
+        int count=0;
+        for(char c:J){
+            if(umap.count(c)){
+                count+=umap[c];
+            }
+        }
+        return count;
+    }
 };
