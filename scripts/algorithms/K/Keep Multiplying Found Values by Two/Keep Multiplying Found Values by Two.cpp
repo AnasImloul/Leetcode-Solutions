@@ -1,15 +1,25 @@
+// Runtime: 3 ms (Top 93.65%) | Memory: 11.00 MB (Top 32.27%)
+
 class Solution {
 public:
-    int findFinalValue(vector<int>& nums, int original) {
-        int n = 1;
-        for(int i = 0; i<n;++i)
+    int solve(vector<int> &nums, int ans)
+    {
+        sort (nums.begin(), nums.end()) ; 
+
+        for (auto i : nums)
         {
-            if(find(nums.begin(),nums.end(),original) != nums.end())    //find func detailled explanation above
+            if (ans == i)
             {
-                original *= 2;
-                n += 1; //n is incremented by one beacuse questions want us to perform the operation again if element is found again after its double.
+                return solve (nums, ans*2);
             }
         }
-        return original;
+        return ans ; 
+    }
+
+    int findFinalValue(vector<int>& nums, int original) {
+        int ans = original ; 
+        int result = solve (nums, ans) ; 
+
+        return result ; 
     }
 };
