@@ -1,34 +1,30 @@
-// Runtime: 487 ms (Top 9.36%) | Memory: 130 MB (Top 70.74%)
+// Runtime: 149 ms (Top 91.26%) | Memory: 130.50 MB (Top 64.94%)
+
 class Solution {
 public:
     vector<int> getAverages(vector<int>& nums, int k) {
-
         int n = nums.size();
-        vector<int> ans(n , -1);
+        int windowSize = 2 * k + 1;
+        
+        long long windowSum = 0;
+        vector<int> result(n, -1);
 
-        if(2 * k + 1 > n) return ans;
-
-        // Simple Sliding Window
-
-        long long int sum = 0;
-
-        // Take a window of size 2 * k + 1
-        for(int i =0 ; i < 2 * k + 1 ; i++) {
-            sum += nums[i];
+        if (n < windowSize) {
+            return result;
         }
 
-        ans[k] = sum / (2 * k + 1);
+        for (int i = 0; i < n; ++i) {
+            windowSum += nums[i]; // Add nums[i] to the window sum
 
-        // Then slide it untill the end of the window reaches at the end
+            if (i - windowSize >= 0) {
+                windowSum -= nums[i - windowSize]; // Remove nums[i - windowSize] from the window sum
+            }
 
-        for(int i = 2 * k + 1 , j = k + 1, s = 0; i < n ; i++ , j++, s++) {
-
-            sum += nums[i];
-            sum -= nums[s];
-            ans[j] = sum /(2 * k + 1);
-
+            if (i >= windowSize - 1) {
+                result[i - k] = windowSum / windowSize; // Calculate and store the average in the result
+            }
         }
 
-        return ans;
+        return result;
     }
 };
