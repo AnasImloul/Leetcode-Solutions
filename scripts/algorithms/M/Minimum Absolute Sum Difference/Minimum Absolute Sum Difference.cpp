@@ -1,35 +1,32 @@
+// Runtime: 149 ms (Top 82.87%) | Memory: 65.50 MB (Top 60.22%)
+
 class Solution {
 public:
     int minAbsoluteSumDiff(vector<int>& nums1, vector<int>& nums2) {
-      long sum=0, minSum;
-      vector<int> nums=nums1;
-      int n=nums.size();
-	  // Calculate the current sum of differences.
-      for(int i=0;i<n;i++) sum+=abs(nums1[i]-nums2[i]);
-      
-      sort(nums.begin(), nums.end());
-      minSum=sum;
-      
-      for(int i=0;i<n;i++) {
-        int dist=abs(nums1[i]-nums2[i]);
-        int l=0, h=n-1;
-        
-		// Find the number closest to nums2[i]. 
-		// The closer the element, the smaller the difference.
-        while(l<h) {
-          int m=l+(h-l)/2;
-          if(nums[m]>nums2[i]) {
-            h=m;
-          } else {
-            l=m+1;
-          }
-          dist=min(dist, abs(nums2[i]-nums[m]));
+        int n = nums1.size();
+        int M = 1e9 + 7;
+        int sum = 0;
+        vector<int> diff(n);
+        for(int i = 0; i < n; i++) {
+            diff[i] = abs(nums1[i] - nums2[i]);
+            //Avoid Integer Overflow Condition
+            sum = (sum + diff[i]) % M;
         }
-        dist=min(dist, abs(nums2[i]-nums[l]));
-        minSum = min(minSum, sum - abs(nums1[i]-nums2[i]) + dist);
-      }
-      
-      return minSum % 1000000007;
+        sort(nums1.begin(), nums1.end());
+        vector<int> arr(n);
+        for(int i = 0; i < n; i++) {
+            int j = lower_bound(nums1.begin(), nums1.end(), nums2[i]) - nums1.begin();
+            if(j != 0 && j != n) 
+                arr[i] = min(abs(nums2[i] - nums1[j]), abs(nums2[i] - nums1[j - 1]));
+            else if(j == 0) 
+                arr[i] = abs(nums2[i] - nums1[j]);
+            else if(j == n)
+                arr[i] = abs(nums2[i] - nums1[j - 1]);
+        }
+        int bestSave = 0;
+        for(int i = 0; i < n; i++) {
+            bestSave = max(bestSave, diff[i] - arr[i]);
+        }
+        return (M + sum - bestSave) % M;
     }
 };
-
