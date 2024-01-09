@@ -1,32 +1,36 @@
+// Runtime: 327 ms (Top 69.44%) | Memory: 106.00 MB (Top 74.11%)
+
 class Solution {
 public:
-    void dfs(unordered_map<int,vector<int>> &mp, unordered_map<int,bool> &visited, int sv, vector<int> &ans){
-        for(auto x:mp[sv]){
-            if(!visited[x]){
-                visited[x]=true;
-                ans.push_back(x);
-                dfs(mp,visited,x,ans);
-            }
+    std::vector<int> restoreArray(std::vector<std::vector<int>>& vals) {
+        std::unordered_map<int, std::vector<int>> pairs;
+        
+        for (const std::vector<int>& val : vals) {
+            pairs[val[0]].push_back(val[1]);
+            pairs[val[1]].push_back(val[0]);
         }
-    }
-    vector<int> restoreArray(vector<vector<int>>& adjacentPairs) {
-        vector<int> ans;
-        unordered_map<int,bool> visited;
-        unordered_map<int,vector<int>> mp;
-        for(auto x:adjacentPairs){
-            mp[x[0]].push_back(x[1]);
-            mp[x[1]].push_back(x[0]);
-        }
-        int start_node;
-        for(auto x:mp){
-            if(x.second.size()==1){
-                start_node=x.first;
+        
+        std::vector<int> result;
+        int start = -1000000;
+        
+        for (const auto& entry : pairs) {
+            if (entry.second.size() == 1) {
+                start = entry.first;
                 break;
             }
         }
-        visited[start_node]=true;
-        ans.push_back(start_node);
-        dfs(mp,visited,start_node,ans);
-        return ans;
+        
+        int left = -1000000;
+        result.push_back(start);
+        
+        for (int i = 1; i < vals.size() + 1; ++i) {
+            const std::vector<int>& val = pairs[start];
+            int newval = (val[0] == left) ? val[1] : val[0];
+            result.push_back(newval);
+            left = start;
+            start = newval;
+        }
+        
+        return result;
     }
 };
