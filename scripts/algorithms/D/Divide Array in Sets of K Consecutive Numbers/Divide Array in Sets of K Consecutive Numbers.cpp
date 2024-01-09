@@ -1,23 +1,32 @@
+// Runtime: 118 ms (Top 84.8%) | Memory: 50.10 MB (Top 89.92%)
+
 class Solution {
 public:
     bool isPossibleDivide(vector<int>& nums, int k) {
-        if(nums.size() % k) return false;
+        if (nums.size() % k != 0) {
+            return false;
+        }
         
-        map<int, int> m;
-        for(int i : nums) m[i]++;
+        unordered_map<int,int> map;
+        for (int num : nums) {
+            map[num]++;
+        }
         
-        int n = m.size();
-        while(n) {
-            int a = m.begin() -> first;
-            m[a]--;
-            if(!m[a]) m.erase(a), n--;
-            for(int i=1; i<k; i++) {
-                if(m.find(a + i) == m.end()) return false;
-                m[a + i]--;
-                if(!m[a + i]) m.erase(a + i), n--;
+        sort(nums.begin(), nums.end());
+        
+        for (int num : nums) {
+            if (map[num] > 0) {
+                for (int i = num + 1; i < num + k; i++) {
+                    if (map[i] == 0) {
+                        return false;
+                    }
+                    map[i]--;
+                }
+                map[num]--;
             }
         }
         
         return true;
     }
 };
+
