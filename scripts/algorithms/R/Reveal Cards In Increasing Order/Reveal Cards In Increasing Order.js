@@ -1,20 +1,11 @@
-/**
- * @param {number[]} deck
- * @return {number[]}
- */
+// Runtime: 54 ms (Top 86.08%) | Memory: 44.10 MB (Top 46.84%)
+
 var deckRevealedIncreasing = function(deck) {
-    // simulate the stack with the last revealed card at the top of the stack (index = 0)
-    // => sort the deck in descending order
-    let stack = deck.sort((a, b) => b - a)
-    let queue = [stack.shift()]
-        
-    while (stack.length > 0) {
-        // reverse the operation by shifting the last card of the queue to the start of the queue
-        queue.unshift(queue.pop())
-        // put the top card of the stack on the start of the queue
-        queue.unshift(stack.shift())
+    let result = [];
+    deck = deck.sort((a,b) => b - a);
+    for (let i = 0; i < deck.length; i++) {
+      result.unshift(deck[i]);
+      if (i !== deck.length-1) result.unshift(result.pop());
     }
-    
-    return queue
-    
+    return result;
 };
