@@ -1,4 +1,6 @@
-								// 😉😉😉😉Please upvote if it helps 😉😉😉😉
+// Runtime: 7 ms (Top 94.36%) | Memory: 9.20 MB (Top 53.65%)
+
+// 😉😉😉😉Please upvote if it helps 😉😉😉😉
 class Solution {
 public:
     string removeKdigits(string num, int k) {
