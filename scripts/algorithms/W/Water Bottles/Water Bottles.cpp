@@ -1,14 +1,23 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.40 MB (Top 36.84%)
+
 class Solution {
 public:
+    pair<int, int> divmod(int dividend, int divisor) {
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
+        return make_pair(quotient, remainder);
+    }
     int numWaterBottles(int numBottles, int numExchange) {
-        int ex=0,remain=0,res=numBottles;
-        while(numBottles>=numExchange){
-             remain=numBottles%numExchange;
-          numBottles=numBottles/numExchange;
-           res+=numBottles;
-            numBottles+=remain;
-          cout<<numBottles<<" ";
+        int result = numBottles;
+        pair<int, int> div = divmod(numBottles, numExchange);
+        int drunk = div.first;
+        int empty = div.second;
+        while(drunk) {
+            result += drunk;
+            div = divmod(drunk + empty, numExchange);
+            drunk = div.first;
+            empty = div.second;
         }
-        return res;
+        return result;
     }
 };
