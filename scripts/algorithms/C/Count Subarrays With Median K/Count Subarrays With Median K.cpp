@@ -1,33 +1,37 @@
+// Runtime: 84 ms (Top 67.92%) | Memory: 50.20 MB (Top 84.91%)
+
 class Solution {
 public:
     int countSubarrays(vector<int>& nums, int k) {
+        unordered_map<int, int> m;
         int n = nums.size();
-        int center = -1;
-        for ( int i=0; i<n; ++i )
-            if ( nums[i] == k ) center = i;
-        // k not found in nums
-        if ( center == -1 ) return 0;
-
-        // init with 1 because nums[center] is an answer
-        int ans = 1;
-        // store the number of scores at the left, used for scenario 3
-        unordered_map<int,int> cnt_l;
-        for ( int i=center-1, sum=0; i>=0; --i ) {
-            // sum is the accumulate score from center-1 to the left
-            sum += (nums[i] < k) ? -1 : 1;
-            // scenario 1: end with center
-            if ( sum == 0 || sum == 1 ) ans++;
-            // update the counter of this score
-            cnt_l[sum]++;
+        int less = 0, great = 0;
+        int pivot = -1;
+        for(int i=0; i<n; ++i) {
+            if(nums[i] == k) {
+                pivot = i;
+                break;
+            }
         }
-        for ( int i=center+1, sum=0; i<n; ++i ) {
-            // sum is the accumulate score from center+1 to the right
-            sum += (nums[i] < k) ? -1 : 1;
-            // scenario 2: start with center
-            if ( sum == 0 || sum == 1 ) ans++;
-            // scenario 3: across center
-            ans += cnt_l[-sum] + cnt_l[1-sum];
+        
+        for(int i=pivot; i<n; ++i) {
+            if(nums[i] > k) great++;
+            else if(nums[i] < k) less++;
+            int key = great-less;
+            if(m.find(key) != m.end()) m[key]++;
+            else m.insert({key, 1});
         }
-        return ans;
+        
+        int count = 0;
+        less=great=0;
+        for(int i=pivot; i>=0; --i) {
+            if(nums[i] > k) great++;
+            else if(nums[i] < k) less++;
+            int key = less-great;
+            if(m.find(key) != m.end()) count += m[key];
+            if(m.find(key+1) != m.end()) count += m[key+1];
+        }
+        
+        return count;
     }
 };
