@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 85.97%) | Memory: 14.40 MB (Top 23.6%)
+
 class Solution {
 public:
     bool search(vector<int>& nums, int target) {
