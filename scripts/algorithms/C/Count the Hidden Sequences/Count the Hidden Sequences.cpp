@@ -1,24 +1,27 @@
-using ll = long long int;
-class Solution {
-    public:
-    int numberOfArrays(vector<int>& differences, int lower, int upper) {
-        vector<ll> ans; 
-        ans.push_back(lower); 
-        ll mn = lower;
-        ll mx = lower;
-        for (const auto& d: differences) {
-            ans.push_back(d + ans.back());
-            mn = min(mn, ans.back());
-            mx = max(mx, ans.back());
-        }
+// Runtime: 130 ms (Top 78.41%) | Memory: 107.10 MB (Top 22.73%)
 
-        ll add = lower - mn;
+class Solution {
+public:
+    int numberOfArrays(vector<int>& d, int l, int u) {
         
-        for (auto& i: ans) i += add;
-        for (auto& i: ans) if (i < lower or upper < i) return 0;
+        long long int n = d.size();
+        long long int pr =0;
+        long long int mini =0;
+        long long int maxi =0;
+        for(long long int i=0;i<n;i++)
+        {
+            pr+=d[i];
+            maxi=max(maxi,pr);
+            mini=min(mini,pr);
+        }
         
-        ll add2 = upper - mx;
+
+        long long int range = maxi-mini;
+        long long int cnt=0;
+        if(u-l<range)
+            return 0;
+        cnt = u-(l+range);
+        return cnt+1;
         
-        return add2 - add + 1;
     }
-}; 
+};
