@@ -1,43 +1,23 @@
+// Runtime: 133 ms (Top 66.67%) | Memory: 48.20 MB (Top 50.0%)
+
 var movesToStamp = function(stamp, target) {
-    var s = target.replace(/[a-z]/g,"?")
-    var repl = s.substr(0,stamp.length)
-    let op = []
-    let s1 = target
-
-    while(s1 !== s){
-        let idx = getIndex()
-        if(idx === -1) return []
-        op.push(idx)
-    }
-    return op.reverse()
-    
-    function getIndex(){
-        for(let i=0; i<target.length; i++){
-            let match = 0
-            let j=0
-            for(; j<stamp.length; j++){
-                if(target.substr(i+j,1) === stamp.substr(j,1)) match++
-                else 
-                    if(target.substr(i+j,1) === "?") continue
-                else break
-            }
-
-            
-            if(j===stamp.length && match!==0){
-                let k=i
-                for(let j=0; j<stamp.length; j++){
-                    if(k===0){ s1 = "?"+target.substr(1)}
-                    else {     s1 = target.substr(0,k)+"?"+target.substr(k+1)}
-                    k++
-                    target = s1
-                }
-                return i
-            }
-        }
-    
-    return -1
-    }
+    let res = [];
+    let total_stamp = 0, turn_stamp = -1;
+    while (turn_stamp) {
+      turn_stamp = 0;
+      for (let sz = stamp.length; sz > 0; --sz) 
+          for (let i = 0; i <= stamp.length - sz; ++i) {
+              let new_stamp = '*'.repeat(i) + stamp.slice(i, sz + i) + '*'.repeat(stamp.length - sz - i); // preparing 'abc', '*bc', 'ab*', 'a**' etc
+              let pos = target.indexOf(new_stamp); // finding position of prepared new_stamp in target
+              while (pos != -1) { // if position is found
+                  res.push(pos); // then push position into response array
+                  turn_stamp += sz; // sz is size on new_stamp without '*'. so for 'abc' sz equals 3, for 'a**' sz equals 1
+                  target = target.slice(0, pos) + "*".repeat(stamp.length) + target.slice(pos + stamp.length); // insert new_stamp into target
+                  pos = target.indexOf(new_stamp); // try to find another place in target where we can insert new_stamp
+              }
+          }
+          total_stamp += turn_stamp;
+      }
+      res.reverse();
+      return total_stamp == target.length ? res : []; // we check if all characters converted to '*'
 };
-    
-    
-    ```
