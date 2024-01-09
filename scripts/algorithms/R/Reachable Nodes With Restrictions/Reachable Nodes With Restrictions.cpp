@@ -1,35 +1,46 @@
+// Runtime: 397 ms (Top 87.55%) | Memory: 168.60 MB (Top 83.82%)
+
 class Solution {
 public:
-    int count=1;  // node 0 is already reached as it is starting point
-    vector<vector<int>> graph;
-    unordered_set<int> res;  // to store restricted numbers for fast fetch
-    vector<bool> vis;  // visited array for DFS
-    
-    void dfs(int i){
-        for(int y: graph[i]){
-            if(!vis[y] && res.count(y)==0){
-                vis[y]= true;
-                dfs(y);
-                count++;
-            }
-        }
-    }
-    
     int reachableNodes(int n, vector<vector<int>>& edges, vector<int>& restricted) {
-        for(int x:restricted) res.insert(x);
         
-        // creating graph
-        graph.resize(n);
-        vis.resize(n);
-        for(auto &x:edges){
-            graph[x[0]].push_back(x[1]);
-            graph[x[1]].push_back(x[0]);
+        vector<int> adj[n];
+        
+        // A visited array.
+        vector<int> vis(n,0);
+        
+        // Count varable to keep count of traversed nodes.
+        int cnt = 0;
+        
+        // Mark all restricted node as visited.
+        for(int i=0;i<restricted.size();i++)
+            vis[restricted[i]] = 1;
+        
+        // Make adjency list.
+        for(int i=0;i<edges.size();i++)
+        {
+            adj[edges[i][0]].push_back(edges[i][1]);
+            adj[edges[i][1]].push_back(edges[i][0]);
         }
         
-        // mark 0 as visited coz it is starting point and is already reached 
-        vis[0]= true;
-        dfs(0);
+        // Perform normal DFS starting from 0th node.
+        dfs(adj, vis, 0, cnt);
         
-        return count;
+        return cnt;
+        
     }
+    
+    
+    void dfs(vector<int> adj[], vector<int> &vis, int node, int &cnt)
+    {
+        vis[node] = 1;
+        cnt++;
+        
+        for(auto it : adj[node])
+        {
+            if(!vis[it])
+                dfs(adj, vis, it, cnt);
+        }
+    }
+    
 };
