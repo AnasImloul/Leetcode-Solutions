@@ -1,41 +1,27 @@
-/**
- * 
- * k = current number of seats
- * i = current position
- * Time complexity = O(N)
- * 
-**/
+// Runtime: 103 ms (Top 92.66%) | Memory: 31.10 MB (Top 53.61%)
+
 class Solution {
 public:
-    const int MOD = (int)1e9 + 7;
-    long long dp[100001][3];
-    long long getAns(string & a, int i, int k) {
-        if(i >= a.size()) {
-            return k == 2;
-        }
-        
-        if(dp[i][k] != -1)return dp[i][k];
-        
-		//if total number of seats in current segment is 2
-        if(k == 2) {
-            if(a[i] == 'P') {
-				//choice either to add divider before current plant or not.
-                return dp[i][k] = (getAns(a, i + 1, 0) % MOD + getAns(a, i + 1, k) % MOD) % MOD;
-            }
-            else {
-				//necessary to put a divider before current seat, as current count of seat is 2
-                return dp[i][k] = getAns(a, i + 1, 1) % MOD;
-            }
-        }
-        else {
-			//current seat is less than 2 so, move ahead
-            return dp[i][k] = getAns(a, i + 1, k + (a[i] == 'S')) % MOD;
-        }
-        
-        
-    }
     int numberOfWays(string corridor) {
-        memset(dp, -1, sizeof(dp));
-        return getAns(corridor, 0, 0); 
+        // Store 1000000007 in a variable for convenience
+        const int MOD = 1e9 + 7;
+
+        // Initial values of three variables
+        int zero = 0;
+        int one = 0;
+        int two = 1;
+
+        // Compute using derived equations
+        for (char thing : corridor) {
+            if (thing == 'S') {
+                zero = one;
+                swap(one, two);
+            } else {
+                two = (two + zero) % MOD;
+            }
+        }
+
+        // Return the result
+        return zero;
     }
 };
