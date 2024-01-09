@@ -1,12 +1,8 @@
-// Runtime: 23 ms (Top 50.31%) | Memory: 15 MB (Top 35.67%)
+// Runtime: 12 ms (Top 56.49%) | Memory: 15.30 MB (Top 39.4%)
 
 class Solution {
 public:
     bool evaluateTree(TreeNode* root) {
-
-        if (!root->left and !root->right) return root->val;
-        int l = evaluateTree(root->left);
-        int r = evaluateTree(root->right);
-        return (root->val == 2) ? l or r : l and r;
+        return (root->val < 2) ? root->val : (root->val == 2) ? evaluateTree(root->left) || evaluateTree(root->right) : evaluateTree(root->left) && evaluateTree(root->right);
     }
 };
