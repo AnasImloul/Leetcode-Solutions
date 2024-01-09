@@ -1,15 +1,22 @@
+// Runtime: 36 ms (Top 59.51%) | Memory: 18.70 MB (Top 69.73%)
+
 class Solution {
 public:
-    int countGoodRectangles(vector<vector<int>>& rectangles) {
-        unordered_map<int,int> map;
-        for(vector<int> rectangle: rectangles){
-		    //storing number of time a particular square can obtain
-            map[min(rectangle[0],rectangle[1])]++; //[4,6], you can cut it to get a square with a side length of at most  4.
+    int countGoodRectangles(const vector<vector<int>>& rectangles) {
+        
+        int side=0, maxLen=0, count=0;
+        
+        for(const auto& i:rectangles) {
+            
+            side=min(i[0],i[1]);
+            
+            if(maxLen<side) {
+                maxLen=side;
+                count=1;
+            }
+            else if(maxLen==side) ++count;
         }
-        int cnt=INT_MIN,maxlen=INT_MIN;
-        for(auto m: map){
-            if(m.first>maxlen) cnt=m.second,maxlen=m.first; //finding out the maxlength square then storing its count in cnt
-        }
-        return cnt;
+        
+        return count;
     }
 };
