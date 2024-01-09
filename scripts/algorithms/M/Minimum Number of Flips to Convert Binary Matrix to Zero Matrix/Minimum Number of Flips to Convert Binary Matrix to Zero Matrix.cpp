@@ -1,65 +1,48 @@
+// Runtime: 3 ms (Top 73.54%) | Memory: 7.20 MB (Top 86.55%)
+
 class Solution {
 public:
-    bool check(string str) {
-        for(auto &i: str)
-            if(i=='1')
-                return false;
-        return true;
-    }
+    int dir[5] = {-1, 0, 1, 0, -1};
+
     int minFlips(vector<vector<int>>& mat) {
-        int m = mat.size();
-        int n = mat[0].size();
-        string str = "";
-        for(auto &i: mat) {
-            for(auto &j: i)
-                str+=(j+'0');
-        }
-        
-        unordered_set<string> st;
-        queue<pair<string,int>> q;
-        q.push({str,0});
-        int steps = 0;
-        
-        while(q.size()) {
-            string top = q.front().first;
-            int step = q.front().second;
-            if(check(top)) {
-                    return step;
-            }
-            
-            q.pop();
-            steps++;
-            for(int i=0; i<top.size(); ++i) {
-                string temp = top;
-                int x = i/n;
-                int y = i%n;
-                
-                
-                temp[i] = !(temp[i] - '0') + '0';
-                if(x+1<m)
-                    temp[y + (x+1)*n] = !(temp[y + (x+1)*n] - '0') + '0';
-                if(x-1>=0)
-                    temp[y + (x-1)*n] = !(temp[y + (x-1)*n] - '0') + '0';
-                if(y+1<n)
-                    temp[(y+1) + (x)*n] = !(temp[(y+1) + (x)*n] - '0') + '0';
-                if(y-1>=0)
-                    temp[(y-1) + (x)*n] = !(temp[(y-1) + (x)*n] - '0') + '0';
-                
-                // cout<<i<<" : "<<temp<<" "<<step+1<<endl;
-                if(st.count(temp)==0) {
-                    q.push({temp,step+1});
-                    st.insert(temp);
-                }
-                
-                
-                if(check(temp)) {
-                    return step+1;
+        int n = mat.size(), m = mat[0].size(), mask = 0;
+        unordered_set<int>vis;
+        queue<int>q;
+        for(int i = 0; i < n; i++)
+            for(int j = 0; j < m; j++)
+                mask |= (mat[i][j] << (i*m+j));
+
+        q.push(mask);
+        vis.insert(mask);
+        int step = 0;
+        while(!q.empty()) {
+            int sz = q.size();
+            while(sz--) {
+                int cur = q.front();
+                q.pop();
+                if(cur == 0) return step;
+
+                for(int i = 0; i < n; i++){
+                    for(int j = 0; j < m; j++) {
+                        int temp = cur;
+                        temp ^= (1 << (i*m+j));
+                        for(int k = 0; k < 4; k++){
+                            int ni = i + dir[k];
+                            int nj = j + dir[k+1];
+                            if(min(ni, nj) >= 0 && ni < n && nj < m) {
+                                temp ^= (1 << (ni*m + nj));
+                            }
+                        }
+                        if(vis.find(temp) == vis.end()) {
+                            vis.insert(temp);
+                            q.push(temp);
+                        }
+                    }
                 }
                 
             }
-            
+            step++;
         }
         return -1;
-        
     }
 };
