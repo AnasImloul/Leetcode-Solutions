@@ -1,3 +1,5 @@
+// Runtime: 1231 ms (Top 45.83%) | Memory: 61.10 MB (Top 37.5%)
+
 var minimumDifference = function(nums) {
     let mid = Math.floor(nums.length / 2);
     let firstHalf = nums.slice(0, mid), secondHalf = nums.slice(mid);
