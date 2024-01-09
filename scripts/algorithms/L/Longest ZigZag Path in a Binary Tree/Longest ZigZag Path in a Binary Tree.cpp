@@ -1,18 +1,19 @@
+// Runtime: 123 ms (Top 79.62%) | Memory: 94.50 MB (Top 70.02%)
+
 class Solution {
-    typedef long long ll;
-    typedef pair<ll, ll> pi;
-public:
-    ll ans = 0;
-    pi func(TreeNode* nd) {
-        if(!nd){
-            return {-1,-1};
-        }
-        pi p = { func(nd->left).second + 1, func(nd->right).first + 1 };
-        ans = max({ans, p.first, p.second});
-        return p;
+    public:
+    int maxLength=0;
+
+    void solve(TreeNode* root,int dir,int currLength){
+        if(!root) return;
+        maxLength=max(maxLength,currLength);
+        solve(root->left,0,dir?currLength+1:1);
+        solve(root->right,1,dir?1:currLength+1);
     }
+
     int longestZigZag(TreeNode* root) {
-        func(root);
-        return ans;
+        solve(root,0,0);
+        solve(root,1,0);
+        return maxLength;
     }
 };
