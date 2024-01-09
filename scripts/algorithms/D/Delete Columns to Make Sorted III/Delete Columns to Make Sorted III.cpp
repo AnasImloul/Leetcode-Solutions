@@ -1,26 +1,26 @@
+// Runtime: 13 ms (Top 76.86%) | Memory: 10.60 MB (Top 44.63%)
+
 class Solution {
 public:
-    int dp[101][101];
-    int dfs(vector<string>& strs,int n,int in,int last){ // in = current index, last = closest previous non-deleted index
-        if(in>=n) return 0;
-        if(dp[in][last]) return dp[in][last];
-        
-        bool st = 1; 
-        for(int i = 0; i<strs.size();++i){
-            if(strs[i][in]<strs[i][last]) {st=0; break;} // check if strings are exicographically increasing
-			                                             //w.r.t to current and last index
-        }
-        
-        int re = INT_MAX;
-        int l = last;
-        if(in==last) l=in+1;
-        re = 1+dfs(strs,n,in+1,l);  // delete the current index
-        if(st) re = min(re, dfs(strs,n,in+1,in)); // if the strings are not lexicographically increasing,
-                                           		//than only choice we have is to delete the in'th index
-        
-        return dp[in][last]=re;
-    }
     int minDeletionSize(vector<string>& strs) {
-        return dfs(strs,strs[0].size(),0,0);
+        
+        int n = strs.size();
+        int m = strs[0].length();
+
+        vector<int> dp(m, 1);
+        int res = 1;
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < i; j++) {
+                for(int k = 0; k <= n; k++) {
+                    if(k == n) {
+                        dp[i] = max(dp[i], dp[j] + 1);
+                        res = max(res, dp[i]);
+                    } else if (strs[k][j] > strs[k][i]) {
+                        break;
+                    }
+                }
+            }
+        }
+        return m - res;
     }
 };
