@@ -1,40 +1,41 @@
+// Runtime: 27 ms (Top 97.1%) | Memory: 14.20 MB (Top 96.74%)
+
 class Solution {
-private:
-    int dir[4][2] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-    
-    bool valid(int x, int y) {
-        return x >= 0 && x < 1e6 && y >= 0 && y < 1e6;
-    }
-    
-    bool dfs(vector<int> &source, vector<int> &target, vector<int> &curr, set<pair<int, int>> &blocked, set<pair<int, int>> &used) {
-        if(curr[0] == target[0] && curr[1] == target[1])
-            return true;
-        else if(abs(curr[0]-source[0]) + abs(curr[1]-source[1]) >= 200)
-            return true;
-        
-        used.insert({curr[0], curr[1]});
-        for(int i = 0; i < 4; i++) {
-            int x = curr[0] + dir[i][0];
-            int y = curr[1] + dir[i][1];
-            if(valid(x, y) && !blocked.count({x, y}) && !used.count({x, y})) {
-                vector<int> tmp = {x, y};
-                if(dfs(source, target, tmp, blocked, used))
-                    return true;
-            }
-        }
-        
-        return false;
-    }
-    
-    
 public:
+    vector<vector<int>> dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}}; 
+   
     bool isEscapePossible(vector<vector<int>>& blocked, vector<int>& source, vector<int>& target) {
-        set<pair<int, int>> blocked_set;
-        for(auto it: blocked) 
-            blocked_set.insert({it[0], it[1]});
-        
-        set<pair<int, int>> used1, used2;
-        return dfs(source, target, source, blocked_set, used1) && dfs(target, source, target, blocked_set, used2);
+      unordered_set<long long> visited_s;
+      unordered_set<long long> visited_t;
+      for (auto& block : blocked) {
+        if (abs(source[0] - block[0]) + abs(source[1] - block[1]) <= 200)
+          visited_s.insert(((long long)block[0] << 32) + block[1]);
+        if (abs(target[0] - block[0]) + abs(target[1] - block[1]) <= 200)
+          visited_t.insert(((long long)block[0] << 32) + block[1]);
+      }
+      return bfs(source, target, visited_s, visited_s.size()) &&
+             bfs(target, source, visited_t, visited_t.size());
+    }
+    bool bfs(vector<int>& source, vector<int>& target, 
+             unordered_set<long long>& visited, int blocks) {
+      queue<pair<int, int>> q;
+      q.push({source[0], source[1]});
+      while (!q.empty() && q.size() <= blocks) {
+        int x = q.front().first;
+        int y = q.front().second;
+        q.pop();
+        if (x == target[0] && y == target[1])
+          return true;
+        for (auto& dir : dirs) {
+          int next_x = x + dir[0];
+          int next_y = y + dir[1];
+          if (next_x < 0 || next_x > 999999 || next_y < 0 || next_y > 999999
+              || visited.find(((long long)next_x << 32) + next_y) != visited.end())
+            continue;
+          q.push({next_x, next_y});
+          visited.insert(((long long)next_x << 32) + next_y);
+        }
+      }
+      return !q.empty();
     }
 };
-
