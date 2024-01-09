@@ -1,20 +1,20 @@
+// Runtime: 149 ms (Top 82.97%) | Memory: 64.80 MB (Top 63.96%)
+
+// OJ: https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/
+// Author: github.com/lzl124631x
+// Time: O(NlogN)
+// Space: O(1)
 class Solution {
 public:
-    int minOperations(vector<int>& nums) {
-        int k = nums.size() - 1;  // max size of sliding window is the target gap between min and max elements
-        sort(nums.begin(), nums.end()); // sorting in O(nlogn) time so that we can remove duplicates and slide over the array
-        int newLen = unique(nums.begin(), nums.end()) - nums.begin();  // remove adjacent duplicates with STL unique
-        int l = 0, r = 0, fin = 1; //  initialize left and right pointers and the minimum elements in the window
-        while (r < newLen) {  // iterate over the new unique array
-            if (l == r)
-                r++;  //  if the window is closed, open it ;)
-            else if (nums[r] - nums[l] > k)
-                l++;  //  if window becomes bigger than allowed size, shrink it
-            else {
-                fin = max(fin, r - l + 1);  //  if window is in allowed size, maximize the number of elements in the window
-                r++;  // slide the right side 
-            }
-        }  //  at this point, we have maximized the number of elements at any time inside the window
-        return k - fin + 1;   //  return the missing elements in that window
+    int minOperations(vector<int>& A) {
+        int N = A.size(), ans = N, j = 0;
+        sort(begin(A), end(A));
+        A.erase(unique(begin(A), end(A)), end(A)); // only keep unique elements
+        int M = A.size();
+        for (int i = 0; i < M; ++i) {
+            while (j < M && A[j] < A[i] + N) ++j; // let `j` point to the first element that is out of range -- `>= A[i] + N`.
+            ans = min(ans, N - j + i); // The length of this subarray is `j - i`. We need to replace `N - j + i` elements to make it continuous.
+        }
+        return ans;
     }
 };
