@@ -1,51 +1,26 @@
+// Runtime: 30 ms (Top 46.32%) | Memory: 20.30 MB (Top 26.54%)
+
 class KthLargest {
-    
-    int k;
-    priority_queue<int, vector<int>, greater<int>> minheap;
-    int n;
-    
 public:
-    KthLargest(int k, vector<int>& nums) {
-        this->k=k;
-        this->n=nums.size();
-        
-//         push the initial elements in the heap
-        for(auto x : nums){
-            minheap.push(x);
-        }
-        
-//         if the no. of elements are greater than k then remove them
-        while(n>k){
-            minheap.pop();
-            n--;
-        }
-    }    
     
-    int add(int val) {
-        
-//         if heap is empty or no. of elements are less than k then add the input
-        if(minheap.empty() || n<k){
-            minheap.push(val);
-            this->n=n+1;
-        }
-//         else compare it with top
-        else{
-            int minn=minheap.top();
-//             if the input is greater than top
-            if(minn<val){
-                minheap.pop();
-                minheap.push(val);
+    priority_queue<int, vector<int>, greater<int>> pq;
+    int K;
+    
+    KthLargest(int k, vector<int>& nums) {
+        K = k;
+        for(int x : nums) {
+            pq.push(x);
+            if(pq.size() > k) {
+                pq.pop();
             }
         }
-//         at any point of time top of the heap is required ans
-        return minheap.top();
-        
-        
+    }
+    
+    int add(int val) {
+        pq.push(val);
+        if(pq.size() > K) {
+            pq.pop();
+        }
+        return pq.top();
     }
 };
-
-/**
- * Your KthLargest object will be instantiated and called as such:
- * KthLargest* obj = new KthLargest(k, nums);
- * int param_1 = obj->add(val);
- */
