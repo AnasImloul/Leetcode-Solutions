@@ -1,3 +1,5 @@
+// Runtime: 44 ms (Top 98.71%) | Memory: 35.90 MB (Top 48.93%)
+
 class Solution {
 public:
     int hardestWorker(int n, vector<vector<int>>& logs) {
