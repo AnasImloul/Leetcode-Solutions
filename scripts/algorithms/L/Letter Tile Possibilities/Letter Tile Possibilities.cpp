@@ -1,25 +1,38 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 6.30 MB (Top 95.82%)
+
+/*
+                    h( AAB , -1 , 0 )              LEVEL=0 ie 0 length substring
+                    /               \
+            h('A'AB,0,1)           h('B'AA,6,1)    LEVEL=1 ie 1 length substrings ("A","B")
+            /         \              /
+        h('AA'B,1,2) h('AB'A,4,2) h('BA'A,7,2)     LEVEL=2 ie 2 length substrings ("AB","BA","AA")
+        /            /             /
+    h('AAB',2,3)    h('ABA',5,2)  h('BAA',8,3)     LEVEL=3 ie 3 length substrings 
+                                                   ("AAB", "ABA", "BAA")
+*/
 class Solution {
-public:
-    void recur(vector<string> &ans, string tiles, int index, int &res)
+    
+    void backtrack(string tiles, int level, int &count)
     {
-        res++;
-
-        for(int i=index; i<tiles.size(); i++)
-        {
-            if(i != index && tiles[i] == tiles[index])
-                continue;
-            swap(tiles[i], tiles[index]);
-            recur(ans, tiles, index+1, res);
+        count++;
+        for(int i=level; i<tiles.length(); i++){
+            
+            if(i!=level && tiles[i]==tiles[level])
+                continue;   // to skip same characters
+            swap(tiles[i], tiles[level]);
+            backtrack(tiles, level+1, count);
         }
-
     }
     
+public:
     int numTilePossibilities(string tiles) {
         
-        vector<string> ans;
-        sort(tiles.begin(), tiles.end());
-        int res = 0;
-        recur(ans, tiles, 0, res);
-        return res - 1;
+        int count=-1;
+        sort(tiles.begin(), tiles.end()); 
+        
+        backtrack(tiles, 0, count); //level = susbstring length
+        
+        return count;
     }
 };
+
