@@ -1,42 +1,41 @@
-// Runtime: 33 ms (Top 97.97%) | Memory: 12 MB (Top 60.85%)
-#include <bits/stdc++.h>
-
-using namespace std;
-struct node {
-  int h, k;
-  node *next;
-  node(int h, int k) : h(h), k(k), next(nullptr){}
-};
-
-bool cmp(vector<int>& p1, vector<int>& p2) {
-  return (p1[0] != p2[0]) ? (p1[0] > p2[0]) : (p1[1] < p2[1]);
-}
-
-void insert(vector<int>& p, node **target) {
-  node *new_p = new node(p[0], p[1]);
-  new_p->next = (*target)->next;
-  (*target)->next = new_p;
-}
+// Runtime: 24 ms (Top 88.43%) | Memory: 12.10 MB (Top 82.86%)
 
 class Solution {
-  public:
+public:
+    vector<int> BIT;
+    int n;
     vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
-      sort(people.begin(), people.end(), cmp);
-      vector<int>& first = people[0];
-      node *head = new node(0, 0);//pseu
-      node **target;
-      int step;
-      for (int i = 0; i < people.size(); i++) {
-        vector<int>& p = people[i];
-        for (target = &head, step=p[1]; step > 0; target=&((*target)->next), step--);
-        insert(p, target);
-      }
-      vector<vector<int>> ans;
-      ans.resize(people.size());
-      int i = 0;
-      for(node *cur = head->next; cur != nullptr; cur = cur->next)
-        ans[i++] = vector<int>({cur->h, cur->k});
-      //formally, we should free the list later.
-      return ans;
+        n = people.size();
+        BIT = vector<int>(n+1, 0); //BIT[i+1] recorded the res[i] information because BIT[0] is not used.
+        for(int i = 2; i <= n; i++) update(i, 1);  // BIT[1] is the 0th empty position, so we didn't add 1
+        sort(people.begin(), people.end(), cmp);
+        vector<vector<int>> res(n, vector<int>());
+        for(int i = 0; i < n; i++){
+            int l=0, r=n;
+            while(l<r){
+                int mid=l+(r-l)/2;
+                if(getsum(mid+1)<people[i][1]) l=mid+1; // we need get the index mid empty information, but actually it's stored in BIT[mid+1]
+                else r=mid;
+            }
+            res[l]=people[i];
+            update(l+1, -1);
+        }
+        return res;
+    }
+    void update(int x, int v){
+        for(int i = x; i <= n; i+=(i&-i)){
+            BIT[i]+=v;
+        }
+    }
+    int getsum(int x){
+        int sum=0;
+        for(int i = x; i > 0; i-=(i&-i)){
+            sum += BIT[i];
+        }
+        return sum;
+    }
+    static bool cmp(vector<int>& p1, vector<int>& p2){
+        if(p1[0]!=p2[0]) return p1[0]<p2[0];
+        else return p1[1]>p2[1];
     }
 };
