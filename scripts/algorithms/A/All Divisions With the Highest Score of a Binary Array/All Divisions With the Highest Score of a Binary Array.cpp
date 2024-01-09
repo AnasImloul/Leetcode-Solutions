@@ -1,51 +1,28 @@
+// Runtime: 262 ms (Top 85.58%) | Memory: 286.70 MB (Top 87.39%)
+
 class Solution {
 public:
-    vector<int> maxScoreIndices(vector<int>& nums) {
-        int n=nums.size();
-        if(n==1)
-        {
-            if(nums[0]==0)
-                return {1};
-            else
-                return {0};
-        }
-        int one=0,zero=0;
-        for(int i=0;i<n;i++)
-        {
-            if(nums[i]==1)
-                one++;
-        }
-        if(nums[0]==0)
-            zero++;
-        vector<int> v;
-        v.push_back(one);
-        int ans=one;
-        if(nums[0]==1)
-            one--;
+
+    vector<int> maxScoreIndices(vector<int> &a) {
+        int n=a.size();
         
-        for(int i=1;i<n;i++)
-        {
-            if(nums[i]==1)
-            {
-                v.push_back(zero+one);
-                one--;
-            }
-            else
-            {
-                v.push_back(zero+one);
-                zero++;
-            }
-            ans=max(ans,zero+one);   
-        }
+        int one=accumulate(a.begin(),a.end(),0), zero=0;
         
-        v.push_back(zero);
-        vector<int> res;
-        for(int i=0;i<=n;i++)
-        {
-            // cout<<v[i]<<" ";
-            if(v[i]==ans)
-                res.push_back(i);
+        int maxs=0;
+        vector<int> ans;
+        for(int i=0;i<=n;i++){
+            int s=one+zero;
+            if(s>maxs){
+                maxs=s;
+                ans={i};
+            }else if(s==maxs){
+                ans.push_back(i);
+            }
+            if(i<n){
+                one -= (a[i]==1);
+                zero += (a[i]==0);
+            }
         }
-        return res;
+        return ans;
     }
 };
