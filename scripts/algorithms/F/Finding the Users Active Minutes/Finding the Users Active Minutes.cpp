@@ -1,19 +1,16 @@
+// Runtime: 209 ms (Top 72.33%) | Memory: 91.00 MB (Top 60.25%)
+
 class Solution {
 public:
-    vector<int> findingUsersActiveMinutes(vector<vector<int>>& logs, int k) 
-    {
-        vector<int>ans(k,0);
-        unordered_map<int,unordered_set<int>>m;
-
-        for(int i = 0; i<logs.size(); i++)
-        {
-            m[logs[i][0]].insert(logs[i][1]);
+    vector<int> findingUsersActiveMinutes(vector<vector<int>>& logs, int k) {
+        unordered_map<int,set<int>> map;
+        vector<int> res(k,0);
+        for(auto &log : logs){
+            map[log[0]].insert(log[1]);
         }
-        for(auto x : m)
-        {
-            int t = x.second.size();
-            ans[t-1]++;
+        for(auto i : map){
+            res[i.second.size()-1]++;
         }
-        return ans;
+        return res;
     }
 };
