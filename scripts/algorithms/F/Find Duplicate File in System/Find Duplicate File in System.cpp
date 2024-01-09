@@ -1,46 +1,58 @@
-class Solution {
+// Runtime: 69 ms (Top 94.12%) | Memory: 34.30 MB (Top 96.57%)
+
+class Solution
+{
 public:
-    vector<vector<string>> findDuplicate(vector<string>& paths) {
-        vector<vector<string>> vec1;
-        for(int i = 0; i < paths.size(); ++i){
-            vector<string> level;
-            string temp1 = paths[i];
-            string temp2 = "";
-            for(int j = 0; j < temp1.length(); ++j){
-                if(temp1[j] == ' '){
-                    level.push_back(temp2);
-                    temp2 = "";
+    vector<vector<string>> findDuplicate(vector<string> &paths)
+    {
+        vector<vector<string>> ans;
+        unordered_map<string, vector<string>> map;
+        for (auto &s : paths)
+        {
+            string startPath;
+            bool firstSpace = true;
+            for (int i = 0; i < s.size(); i++)
+            {
+
+                if (firstSpace){
+                    startPath += s[i];
                 }
-                else
-                    temp2 += temp1[j];
-                if(j == temp1.length() - 1)
-                    level.push_back(temp2);
-            }
-            vec1.push_back(level);
-        }
-        unordered_map<string, vector<string>> ump;
-        for(int i = 0; i < vec1.size(); ++i){
-            string rootDir = vec1[i][0];
-            for(int j = 1; j < vec1[i].size(); ++j){
-                string str1 = rootDir, str2 = "";
-                int pos = -1;
-                for(int k = 0; k < vec1[i][j].length(); ++k){
-                    if(vec1[i][j][k] == '('){
-                        pos = k;
-                        break;
+
+                if (firstSpace && s[i] == ' ')
+                {
+                    firstSpace = false;
+                    startPath.pop_back();
+                }
+
+                if (s[i] == ' ')
+                {
+                    i++;
+                    string fileName;
+                    
+                    while (s[i] != '(')
+                    {
+                        fileName += s[i++];
                     }
+
+                    i++;
+                    string fileContent;
+
+                    while (s[i] != ')')
+                    {
+                        fileContent += s[i++];
+                    }
+
+                    map[fileContent].push_back(startPath + '/' + fileName);
                 }
-                str1 += '/';
-                for(int k = 0; k < pos; ++k)
-                    str1 += vec1[i][j][k];
-                str2 = vec1[i][j].substr(pos);
-                ump[str2].push_back(str1);
             }
         }
-        vector<vector<string>> res;
-        for(auto it = ump.begin(); it != ump.end(); ++it)
-            if(it->second.size() > 1)
-                res.push_back(it->second);
-        return res;
-    }
+        for (auto &i : map)
+        {
+            if (i.second.size() > 1)
+            {
+                ans.push_back(i.second);
+            }
+        }
+        return ans;
+    };
 };
