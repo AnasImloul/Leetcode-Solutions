@@ -1,48 +1,37 @@
-// Runtime: 192 ms (Top 16.37%) | Memory: 30 MB (Top 73.15%)
+// Runtime: 52 ms (Top 93.64%) | Memory: 30.70 MB (Top 71.83%)
 
 class Solution {
-   bool isValid(vector<vector<int>>& grid,int r,int c,int nr,int nc,int m,int n){
-        if(nr>=0 && nc>=0 && nr<m && nc<n && grid[nr][nc]==-1){
-            if(grid[r][c]==0)
-                grid[nr][nc]=1;
-            else
-                grid[nr][nc]=grid[r][c]+1;
-            return 1;
-        }
-        return 0;
-    }
 public:
     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
-        queue<pair<int,int>> q;
-        int m = mat.size();
-        int n = mat[0].size();
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
+        queue<pair<int,int>>q;
+        for(int i=0;i<mat.size();i++){
+            for(int j=0;j<mat[0].size();j++){
                 if(mat[i][j]==0)
                     q.push({i,j});
                 else
                     mat[i][j]=-1;
             }
         }
+        int length=0;
+        int dirx[]={1,-1,0,0};
+        int diry[]={0,0,1,-1};
         while(!q.empty()){
-            auto per = q.front();
-            int r = per.first;
-            int c = per.second;
-            // if()
-            q.pop();
-            if(isValid(mat,r,c,r-1,c,m,n)){
-                q.push({r-1,c});
-            }
-            if(isValid(mat,r,c,r+1,c,m,n)){
-                q.push({r+1,c});
-            }
-            if(isValid(mat,r,c,r,c-1,m,n)){
-                q.push({r,c-1});
-            }
-            if(isValid(mat,r,c,r,c+1,m,n)){
-                q.push({r,c+1});
-            }
-
+            int size=q.size();
+            length++;
+           while(size--){
+               auto f=q.front();
+               q.pop();
+               int s=f.first;
+               int end=f.second;
+               for(int i=0;i<4;i++){
+                   int r=s+dirx[i];
+                   int c=end+diry[i];
+                   if(r<0 || c<0 || r==mat.size() || c==mat[0].size() || mat[r][c]!=-1)
+                      continue;
+                   mat[r][c]=length;
+                   q.push({r,c});
+               }
+           }
         }
         return mat;
     }
