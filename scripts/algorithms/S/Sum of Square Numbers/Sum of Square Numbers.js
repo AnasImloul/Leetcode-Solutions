@@ -1,11 +1,15 @@
-var judgeSquareSum = function(c) {
-	let a = 0;
-	let b = Math.sqrt(c) | 0;
+// Runtime: 52 ms (Top 89.65%) | Memory: 42.70 MB (Top 31.03%)
 
-	while (a <= b) {
-		const sum = a ** 2 + b ** 2;
-		if (sum === c) return true;
-		sum > c ? b -= 1 : a += 1;
-	}
-	return false;
+var judgeSquareSum = function(c) {
+    if (c === 0) {
+        return true
+    }
+    for (let a = 0; a*a < c; a++) {
+        let b = Math.sqrt(parseFloat(c-a*a));
+        if (b - Math.round(b) === 0) {
+            return true;
+        }
+    }
+        return false
 };
+
