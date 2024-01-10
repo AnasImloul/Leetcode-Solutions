@@ -1,14 +1,12 @@
+// Runtime: 48 ms (Top 83.84%) | Memory: 42.00 MB (Top 45.45%)
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
 var freqAlphabets = function(s) {
-  const ans = []
-  for (let i = 0, len = s.length; i < len; ++i) {
-    const c = s.charAt(i)
-    if (c === '#') {
-      ans.length = ans.length - 2
-      ans.push(String.fromCharCode(parseInt(`${s.charAt(i - 2)}${s.charAt(i - 1)}`, 10) + 96))
-      continue
-    }
-    ans.push(String.fromCharCode(+c + 96))
-  }
-  return ans.join('')
+    return s
+        .match(/\d{2}(?=#)|\d/g)
+        .map(num => String.fromCharCode(96 + +num))
+        .join('')
 };
