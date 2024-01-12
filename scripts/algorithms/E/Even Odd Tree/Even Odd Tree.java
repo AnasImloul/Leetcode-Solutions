@@ -1,3 +1,5 @@
+// Runtime: 9 ms (Top 96.0%) | Memory: 66.10 MB (Top 31.24%)
+
 class Solution {
     public boolean isEvenOddTree(TreeNode root) {
         Queue<TreeNode> qu = new LinkedList<>();
