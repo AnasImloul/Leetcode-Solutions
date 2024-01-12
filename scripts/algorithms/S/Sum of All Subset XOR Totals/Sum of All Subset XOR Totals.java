@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.90 MB (Top 35.14%)
+
 class Solution {
     int sum=0;
     public int subsetXORSum(int[] nums) {
