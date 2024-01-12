@@ -1,47 +1,18 @@
-
-
-
+// Runtime: 20 ms (Top 91.34%) | Memory: 42.30 MB (Top 82.04%)
 
 class Solution {
     public int numSquares(int n) {
+        int dp[]=new int [n+1];
+        dp[0]=0;
+        dp[1]=1;
         
-        ArrayList<Integer> perfect_squares = new ArrayList<>();
-        int i=1;
-        while(i*i <= n){
-            perfect_squares.add(i*i);
-            i++;
+        for(int i=2;i<dp.length;i++){
+            int min=Integer.MAX_VALUE;
+            for(int j=1;j*j<=i;j++){
+                min=Math.min(min,dp[i-j*j]);
+            }
+            dp[i]=min+1;
         }
-        Integer[][] dp = new Integer[n+1][perfect_squares.size()+1];
-        int answer = helper(n , perfect_squares , perfect_squares.size()-1,dp);
-        return answer;
+        return dp[n];
     }
-    
-    public int helper(int n , ArrayList<Integer> coins ,int i,Integer[][] dp){
-        
-        if(n == 0){
-            return 0;
-        }
-        if(i<0){
-            return 999999;      //  I'm not taking INT_MAX here, since int variables will overflow with (1 + INT_MAX)
-			                             // just take any number greater than constraint ( 10^4) 
-        }
-        if(dp[n][i] != null){
-            return dp[n][i];
-        }
-        int nottake = 0 + helper(n , coins, i-1,dp);
-        int take = 9999999;
-        if(coins.get(i) <= n){
-            take = 1 + helper(n-coins.get(i),coins,i,dp );          
-        }
-        dp[n][i] = Math.min(nottake,take);
-        return dp[n][i];
-        
-        
-        
-    }
-    
-    
 }
-
-
-
