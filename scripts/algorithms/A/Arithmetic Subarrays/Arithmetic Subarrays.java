@@ -1,27 +1,31 @@
+// Runtime: 16 ms (Top 83.14%) | Memory: 45.90 MB (Top 9.57%)
+
 class Solution {
-    public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
-        List<Boolean> result = new ArrayList<>();
-        int L = nums.length, ll = l.length,ind=0;
-        for(int i=0;i<ll;i++){
-            int[] arr = new int[r[i]-l[i]+1];
-            ind=0;
-            for(int k=l[i];k<=r[i];k++){
-                arr[ind] =nums[k];
-                ind++;
+    public Boolean check(int[] arr) {
+        Arrays.sort(arr);
+        int diff = arr[1] - arr[0];
+        
+        for (int i = 2; i < arr.length; i++) {
+            if (arr[i] - arr[i - 1] != diff) {
+                return false;
             }
-            Arrays.sort(arr);
-            result.add(isArithmetic(arr));
         }
-        return result;
+        
+        return true;
     }
     
-    public boolean isArithmetic(int[] nums) {
-        int L = nums.length;
-        boolean b = true;
-        if(L<=2) return true;
-        for(int i=1;i<L-1;i++){
-            if(nums[i]-nums[i-1]!=nums[i+1]-nums[i]) return false;
+    public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
+        List<Boolean> ans = new ArrayList();
+        for (int i = 0; i < l.length; i++) {
+            int[] arr = new int[r[i] - l[i] + 1];
+            for (int j = 0; j < arr.length; j++) {
+                arr[j] = nums[l[i] + j];
+            }
+            
+            ans.add(check(arr));
         }
-        return b;
+
+        return ans;
     }
 }
+
