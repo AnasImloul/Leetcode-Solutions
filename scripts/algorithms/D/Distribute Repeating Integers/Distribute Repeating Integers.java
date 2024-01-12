@@ -1,3 +1,5 @@
+// Runtime: 28 ms (Top 89.01%) | Memory: 60.70 MB (Top 18.68%)
+
 class Solution {
     public boolean canDistribute(int[] nums, int[] quantity) {
         
