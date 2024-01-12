@@ -1,33 +1,33 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 42.30 MB (Top 39.5%)
 
 class Solution {
-    int[][] books;
-    int shefWidth;
-
-    Map<String, Integer> memo = new HashMap();
-
-    public int findMinHeight(int curr, int maxHeight, int wRem) {
-        String key = curr  + ":" + wRem ;
-        
-        if(memo.containsKey(key)) return memo.get(key);
-
-
-        if(curr == books.length ) return maxHeight;
-        int[] currBook = books[curr];
-
-        memo.put( key, currBook[0] <= wRem ? Math.min(   maxHeight + findMinHeight(curr + 1, currBook[1], shefWidth - currBook[0]) , // new shelf
-                  findMinHeight(curr + 1, Math.max(maxHeight, currBook[1]),wRem - currBook[0] )) // same shelf
-                : maxHeight + findMinHeight(curr + 1,  currBook[1], shefWidth - currBook[0])
-        ); // new shelf
-
-        return memo.get(key);
-    }
-
-
     public int minHeightShelves(int[][] books, int shelfWidth) {
-        this.books = books;
-        this.shefWidth = shelfWidth;
-        return findMinHeight(0, 0,  shelfWidth);
+        int memo[] = new int[books.length];
+        return recur(books, shelfWidth, 0, memo);
+    }
+    
+    private int recur(int[][] books, int shelfWidth, int index, int[] memo) {
+        
+        if (index == books.length) {
+            return 0;
+        }
+        
+        if (memo[index] > 0) {
+            return memo[index];
+        }
+        int ans = Integer.MAX_VALUE;
+        int height = 0;
+        int width = 0;
+        
+        for (int i = index; i < books.length; i++) {
+            width += books[i][0];
+            
+            if (width > shelfWidth) {
+                break;
+            }
+            height = Math.max(height, books[i][1]);
+            ans = Math.min(ans, height + recur(books, shelfWidth, i + 1, memo));
+        }
+        return memo[index] = ans;
     }
 }
-
-
