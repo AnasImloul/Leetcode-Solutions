@@ -1,82 +1,38 @@
+// Runtime: 33 ms (Top 95.27%) | Memory: 45.90 MB (Top 56.76%)
+
 class Solution {
-    public int eatenApples(int[] apples, int[] days) {
-        PriorityQueue<Apple> minHeap = new PriorityQueue<Apple>((a, b) -> (a.validDay - b.validDay));
-        
-        //start from day 1
-        int currentDay = 1;
-        int eatenAppleCount = 0;
-        
-        for(int i = 0; i < apples.length; i++){
-            
-            //add apple count and their valid day
-            if(apples[i] > 0 && days[i] > 0) {
-                
-                //current day is included
-                int validDay = currentDay + days[i] - 1;
-                
-                minHeap.add(new Apple(apples[i], validDay));
-            }
-
-            
-            //check for eatable apple
-            while(!minHeap.isEmpty()){
-                //get that applen, with minimum valid date (going to expiry soon)
-                Apple apple = minHeap.remove();
-                
-                if(apple.validDay >= currentDay){
-                    //eat 1 apple
-                    apple.count--;
-                    
-                    //increment count
-                    eatenAppleCount++;
-
-                    //add remaiing apple, if not gonna expiry current day
-                    if(apple.count > 0 && apple.validDay > currentDay){
-                        minHeap.add(apple);
-                    }
-                    
-                    break;
-                }
-            }
-           
-            //move to the next day
-            currentDay++;
+    class Basket{
+        int appleCount;
+        int day;
+        Basket(int appleCount, int day){
+            this.appleCount = appleCount;
+            this.day = day;
         }
-        
-        
-        //eat stored apple
-        while(!minHeap.isEmpty()){
-            Apple apple = minHeap.remove();
-
-            if(apple.validDay >= currentDay){
-                //eat 1 apple
-                apple.count--;
-                
-                //increment count
-                eatenAppleCount++;
-                
-                //add remaiing apple, if not gonna expiry current day
-                if(apple.count > 0 && apple.validDay > currentDay){
-                    minHeap.add(apple);
-                }
-                
-                //apple is eaten in current day, now move to next day
-                currentDay++;
-            }
-        }
-        
-        
-        return eatenAppleCount;
     }
-}
-
-
-class Apple {
-    int count;
-    int validDay;
-    
-    public Apple(int count, int validDay){
-        this.count = count;
-        this.validDay = validDay;
+    public int eatenApples(int[] apples, int[] days) {
+        int n = apples.length;
+        PriorityQueue<Basket> q = new PriorityQueue<>(n,(b1,b2) -> b1.day-b2.day);
+        int i; // counter for day 
+		int apple = 0; // count of consumed apple
+        
+        for(i=0; i<n; i++){
+            while(q.peek()!=null && (q.peek().appleCount < 1 || q.peek().day < i+1)){
+                q.poll();
+            }
+            if(apples[i] != 0 && days[i] !=0){
+                q.add(new Basket(apples[i], i+days[i]));
+            }
+            if(q.peek()==null) continue;           
+            q.peek().appleCount--;
+            apple++;
+        }
+                
+        while(q.peek() != null){
+            Basket basket = q.poll();
+            if(basket.day < i) continue;
+            apple += Math.min(basket.appleCount, basket.day-i);
+            i += Math.min(basket.appleCount, basket.day-i);
+        }
+        return apple;
     }
 }
