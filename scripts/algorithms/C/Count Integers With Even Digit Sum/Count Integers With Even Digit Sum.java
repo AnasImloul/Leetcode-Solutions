@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 89.76%) | Memory: 40.70 MB (Top 10.24%)
+
 class Solution
 {
     public int countEven(int num)
