@@ -1,39 +1,45 @@
+// Runtime: 15 ms (Top 99.32%) | Memory: 42.90 MB (Top 99.2%)
+
 class Solution {
-	public int minCostConnectPoints(int[][] points) {
-		int n = points.length;
-		PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
-		for(int i = 0; i < n; i++) {
-			for(int j = i + 1; j < n; j++) {
-				pq.add(new int[]{calDis(points,i,j),i,j});
-			}
-		}
-		int c = 0, ans = 0;
-		UnionFind uf = new UnionFind(n);
-		while(c < n-1){
-			int[] cur = pq.poll();
-			if(uf.find(cur[1]) != uf.find(cur[2])) {
-				ans += cur[0];
-				uf.union(cur[1],cur[2]);
-				c++;
-			}
-		}
-		return ans;
-	}
-	private int calDis(int[][] points, int a, int b) {
-		return Math.abs(points[a][0] - points[b][0]) + Math.abs(points[a][1] - points[b][1]);
-	}
-	class UnionFind{
-		int[] parent;
-		UnionFind(int n){
-			this.parent = new int[n];
-			for(int i=0;i<n;i++)parent[i]=i;
-		}
-		public int find(int u){
-			if(parent[u]!=u)parent[u] = find(parent[u]);
-			return parent[u];
-		}
-		public void union(int u, int v){
-			parent[find(u)] = parent[find(v)];
-		}
-	}
+    public int minCostConnectPoints(int[][] points) {
+        int len = points.length;
+        // array that keep track of the shortest distance from mst to each node
+        int[] disArr = new int[len];
+        for (int i = 1; i < len; ++i) {
+            disArr[i] = Integer.MAX_VALUE;
+        }
+        // visited[node] == true if node in mst
+        boolean[] visited = new boolean[len];
+        visited[0] = true;
+        
+        int numEdge = 0;
+        // current node, used to update the disArr
+        int cur = 0;
+        // result
+        int res = 0;
+        
+        while (numEdge++ < len - 1) {
+            int minEdge = Integer.MAX_VALUE;
+            int next = -1;
+            for (int i = 0; i < len; ++i) {
+                // if the node i is not in mst
+                if (!visited[i]) {
+                    // find the distance between cur and i
+                    int dis = Math.abs(points[cur][0] - points[i][0]) + Math.abs(points[cur][1] - points[i][1]);
+                    // update distance array
+                    disArr[i] = Math.min(dis, disArr[i]);
+                    // find the shortest edge
+                    if (disArr[i] < minEdge) {
+                        minEdge = disArr[i];
+                        next = i;
+                    }
+                }
+            }
+            cur = next;
+            visited[cur] = true;
+            res += minEdge;
+        }
+        
+        return res;
+    }
 }
