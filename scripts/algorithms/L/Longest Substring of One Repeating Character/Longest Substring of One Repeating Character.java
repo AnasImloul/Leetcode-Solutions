@@ -1,81 +1,98 @@
-class Node{
-    int max;
-    int prefSt,prefEnd;
-    int suffSt,suffEnd;
-    Node(int max,int prefSt,int prefEnd,int suffSt,int suffEnd){
-        this.max=max;
-        this.prefSt=prefSt;
-        this.prefEnd=prefEnd;
-        this.suffSt=suffSt;
-        this.suffEnd=suffEnd;
-    }
-}
-
-class SegmentTree{
-    Node [] tree;
-    StringBuilder s;
-    SegmentTree(String s){
-        this.s=new StringBuilder();
-        this.s.append(s);
-        tree=new Node[4*s.length()];
-        build(0,0,s.length()-1);
-    }
-    
-    Node merge(Node left,Node right,int tl,int tm,int tr){
-        int max=Integer.max(left.max,right.max);
-        int prefSt=left.prefSt;
-        int prefEnd=left.prefEnd;
-        int suffSt=right.suffSt;
-        int suffEnd=right.suffEnd;
-        
-        if(s.charAt(tm)==s.charAt(tm+1)){
-            max=Integer.max(max,right.prefEnd-left.suffSt+1);
-            if(left.prefEnd-left.prefSt+1==tm-tl+1)
-                prefEnd=right.prefEnd;
-            if(right.suffEnd-right.suffSt+1==tr-tm)
-                suffSt=left.suffSt;
-        }
-        
-        return new Node(max,prefSt,prefEnd,suffSt,suffEnd);
-    }
-    
-    void build(int pos,int tl,int tr){
-        if(tl==tr){
-            tree[pos]=new Node(1,tl,tl,tr,tr);
-        }else{
-            int tm=tl+(tr-tl)/2;
-            build(2*pos+1,tl,tm);
-            build(2*pos+2,tm+1,tr);
-            
-            tree[pos]=merge(tree[2*pos+1],tree[2*pos+2],tl,tm,tr);
-        }
-    }
-    
-    void update(int pos,int tl,int tr,int idx,char ch){
-        if(tl==tr){
-            tree[pos]=new Node(1,tl,tl,tr,tr);
-            s.setCharAt(idx,ch);
-            // System.out.println(pos);
-        }
-        else{
-            int tm=tl+(tr-tl)/2;
-            if(idx<=tm)
-                update(2*pos+1,tl,tm,idx,ch);
-            else
-                update(2*pos+2,tm+1,tr,idx,ch);
-            tree[pos]=merge(tree[2*pos+1],tree[2*pos+2],tl,tm,tr);
-        }
-    }
-}
+// Runtime: 87 ms (Top 83.33%) | Memory: 76.70 MB (Top 22.22%)
 
 class Solution {
-    public int[] longestRepeating(String s, String queryCharacters, int[] queryIndices) {
-        int k=queryIndices.length;
-        SegmentTree tree=new SegmentTree(s);
-        for(int i=0;i<k;i++){
-            tree.update(0,0,s.length()-1,queryIndices[i],queryCharacters.charAt(i));
-            queryIndices[i]=tree.tree[0].max;
+    class TreeNode {
+        //range
+        int start;
+        int end;
+        
+        //conti left char
+        char leftChar;
+        int leftCharLen;
+        
+        //conti right char
+        char rightChar;
+        int rightCharLen;
+        
+        int max;
+        
+        TreeNode left;
+        TreeNode right;
+        
+        TreeNode(int start, int end) {
+            this.start = start;
+            this.end = end;
+            left = null;
+            right = null;
         }
-        return queryIndices;
+    }
+
+    public int[] longestRepeating(String s, String queryCharacters, int[] queryIndices) {
+        char[] sChar = s.toCharArray();
+        char[] qChar = queryCharacters.toCharArray();
+        
+        TreeNode root = buildTree(sChar, 0, sChar.length - 1);
+        
+        int[] result = new int[qChar.length];
+        
+        for (int i = 0; i < qChar.length; i++) {
+            updateTree(root, queryIndices[i], qChar[i]);
+            result[i] = root.max;
+        }
+        return result;
+    }
+    
+    private TreeNode buildTree(char[] s, int from, int to) {
+        if (from > to) return null;
+        TreeNode root = new TreeNode(from, to);
+        if (from == to) {
+            root.max = 1;
+            root.rightChar = root.leftChar = s[from];
+            root.leftCharLen = root.rightCharLen = 1;
+            return root;
+        }
+        
+        int middle = from + (to - from) / 2;
+        
+        root.left = buildTree(s, from, middle);
+        root.right = buildTree(s, middle + 1, to);
+        
+        updateNode(root);
+        return root;
+        
+    }
+    
+    private void updateTree(TreeNode root, int index, char c) {
+        if (root == null || root.start > index || root.end < index) {
+            return;
+        }
+        if (root.start == index && root.end == index) {
+            root.leftChar = root.rightChar = c;
+            return;
+        }
+        updateTree(root.left, index, c);
+        updateTree(root.right, index, c);
+        
+        updateNode(root);
+        
+    }
+    
+    private void updateNode(TreeNode root) {
+        if (root == null) return;
+        root.leftChar = root.left.leftChar;
+        root.leftCharLen = root.left.leftCharLen;
+        root.rightChar = root.right.rightChar;
+        root.rightCharLen = root.right.rightCharLen;
+        root.max = Math.max(root.left.max, root.right.max);
+        if (root.left.rightChar == root.right.leftChar) {
+            int len = root.left.rightCharLen + root.right.leftCharLen;
+            if (root.left.leftChar == root.left.rightChar && root.left.leftCharLen == root.left.end - root.left.start + 1) {
+                root.leftCharLen = len;
+            }
+            if (root.right.leftChar == root.right.rightChar && root.right.leftCharLen == root.right.end - root.right.start + 1) {
+                root.rightCharLen = len;
+            }
+            root.max = Math.max(root.max, len);
+        }
     }
 }
