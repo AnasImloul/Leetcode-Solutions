@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.50 MB (Top 29.41%)
+
 class Solution {
     public int numTilings(int n) {
         long[] dp = new long[n + 3]; dp[0] = 1; dp[1] = 2; dp[2] = 5;
