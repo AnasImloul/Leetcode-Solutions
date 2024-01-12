@@ -1,39 +1,26 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 41.50 MB (Top 13.89%)
+
 class Solution {
     public String[] findWords(String[] words) {
-        String row1 = "qwertyuiop";
-        String row2 = "asdfghjkl";
-        String row3 = "zxcvbnm";
-        String res = "";
-        for(int i=0; i<words.length; i++) {
-            int sum1 = 0;
-            int sum2 = 0;
-            int sum3 = 0;
-            for(int j=0; j<words[i].length(); j++) {
-                if(row1.contains("" + words[i].toLowerCase().charAt(j))) {
-                    sum1++;
-                }
-                else if(row2.contains("" + words[i].toLowerCase().charAt(j))) {
-                    sum2++;
-                }
-                else if(row3.contains("" + words[i].toLowerCase().charAt(j))) {
-                    sum3++;
-                }
-            }
-            if(words[i].length()==sum1) {
-                res += i;
-            }
-            else if(words[i].length()==sum2) {
-            	res += i;
-            }
-            else if(words[i].length()==sum3) {
-            	res += i;
+        String s1 = "qwertyuiopQWERTYUIOP";
+        String s2 = "asdfghjklASDFGHJKL";
+        String s3 = "zxcvbnmZXCVBNM"; 
+        ArrayList<String> list = new ArrayList<>();
+        for(int i=0;i<words.length;i++){
+            int count1=0,count2=0,count3=0,len=words[i].length();
+            for(int j=0;j<len;j++){
+                if(s1.contains(Character.toString(words[i].charAt(j))))
+                    count1++;
+                else if(s2.contains(Character.toString(words[i].charAt(j))))
+                    count2++;
+                else if(s3.contains(Character.toString(words[i].charAt(j))))
+                    count3++;
+                if(count1==len || count2==len || count3==len)
+                    list.add(words[i]);
             }
         }
-		String[] resArr = new String[res.length()];
-		for(int i=0; i<resArr.length; i++) {
-			resArr[i] = words[Integer.parseInt("" + res.charAt(i))];
-			System.out.println(resArr[i]);
-		}
-        return resArr;
+        String ans[] = new String[list.size()];
+        list.toArray(ans);
+        return ans;
     }
 }
