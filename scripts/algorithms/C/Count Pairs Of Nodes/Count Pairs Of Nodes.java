@@ -1,36 +1,61 @@
+// Runtime: 56 ms (Top 80.0%) | Memory: 92.30 MB (Top 62.86%)
+
 class Solution {
+    // Time  :  O(E + N + Q)
+    // Space :  O(N + E)
     public int[] countPairs(int n, int[][] edges, int[] queries) {
-        Map<Integer, Map<Integer, Integer>> dupMap = new HashMap<>();
-        Map<Integer, Set<Integer>> map = new HashMap<>();
-        int[] ans = new int[queries.length];
-        int[] count = new int[n];
-        for (int[] e : edges){
-            int min = Math.min(e[0]-1, e[1]-1);
-            int max = Math.max(e[0]-1, e[1]-1);
-            dupMap.computeIfAbsent(min, o -> new HashMap<>()).merge(max, 1, Integer::sum);
-            map.computeIfAbsent(min, o -> new HashSet<>()).add(max);
-            count[min]++;
-            count[max]++;
+        // Key: edge ID   Value: count of duplicate edge
+        Map<Integer, Integer> edgeCount = new HashMap<>();
+        // degree[i] : number of edge for node i (0-indexed)
+        int[] degree = new int[n];
+        
+        for (int[] e : edges) {    // recording all edges  ==>  O(E) Time / Space
+            int u = e[0] - 1;
+            int v = e[1] - 1;
+            degree[u]++;
+            degree[v]++;
+            
+            int eId = Math.min(u, v) * n + Math.max(u, v);
+            edgeCount.put(eId, edgeCount.getOrDefault(eId, 0) + 1);
         }
-        Integer[] indexes = IntStream.range(0, n).boxed().toArray(Integer[]::new);
-        Arrays.sort(indexes, Comparator.comparingInt(o -> count[o]));
-        for (int j = 0, hi = n; j < queries.length; j++, hi = n){
-            for (int i = 0; i < n; i++){
-                while(hi>i+1&&count[indexes[i]]+count[indexes[hi-1]]>queries[j]){
-                    hi--;
-                }
-                if (hi==i){
-                    hi++;
-                }
-                ans[j]+=n-hi;
-                for (int adj : map.getOrDefault(indexes[i], Set.of())){
-                    int ttl = count[indexes[i]] + count[adj];
-                    if (ttl > queries[j] && ttl-dupMap.get(indexes[i]).get(adj) <= queries[j]){
-                        ans[j]--;
-                    }
-                }
+        
+        // Key: Degree   Value: Frequency (number of nodes with that degree)
+        Map<Integer, Integer> degreeCount = new HashMap<>();   //   ==> O(U) Time / Space
+        int maxDegree = 0;
+        for (int d : degree) {
+            degreeCount.put(d, degreeCount.getOrDefault(d, 0) + 1);
+            maxDegree = Math.max(maxDegree, d);
+        }
+     
+        
+        int[] count = new int[2 * maxDegree + 1]; 
+        
+        for (int d1 : degreeCount.keySet()) {                // O(E)-time  (seems to be O(U ^ 2))
+            for (int d2 : degreeCount.keySet()) {
+                count[d1 + d2] += (d1 == d2) ? degreeCount.get(d1) * (degreeCount.get(d1)- 1) 
+                                             : degreeCount.get(d1) * degreeCount.get(d2);
             }
         }
-        return ans;
+        for (int i = 0; i < count.length; i++) count[i] /= 2;      // each pair is counted twice
+        
+    
+        for (int e : edgeCount.keySet()) {            // O(E)-time
+            int u = e / n;
+            int v = e % n;     
+            
+            count[degree[u] + degree[v]]--;
+            count[degree[u] + degree[v] - edgeCount.get(e)]++;
+        }
+        
+        for (int i = count.length - 2; i >= 0; i--) {  // O(U)-time 
+            count[i] += count[i+1];
+        }
+     
+        
+        int[] res = new int[queries.length];           // O(Q)-time
+        for (int q = 0; q < queries.length; q++) {
+            res[q] = ((queries[q] + 1) >= count.length) ? 0 : count[queries[q] + 1];
+        }
+        return res;
     }
 }
