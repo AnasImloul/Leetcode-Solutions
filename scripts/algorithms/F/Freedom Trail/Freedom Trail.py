@@ -1,26 +1,19 @@
-# Runtime: 121 ms (Top 97.21%) | Memory: 14.1 MB (Top 67.25%)
+// Runtime: 85 ms (Top 95.51%) | Memory: 18.10 MB (Top 37.18%)
+
 class Solution:
     def findRotateSteps(self, ring: str, key: str) -> int:
-        char_pos = defaultdict(set)
-        for i, c in enumerate(ring):
-            char_pos[c].add(i)
-
-        def minStep(fromm, to):
-            if fromm == to:
-                return 0
-            minSteps = abs(fromm - to)
-            minSteps = min(minSteps, abs(len(ring) - minSteps))
-            return minSteps
-
-        n = len(key)
-        dp = [0] * len(ring)
-        for p in char_pos[key[0]]:
-            dp[p] = minStep(0, p)
-        prev_char = key[0]
-        for c in key[1:]:
-            if prev_char == c:
-                continue
-            for next_pos in char_pos[c]:
-                dp[next_pos] = min(dp[prev_pos] + minStep(prev_pos, next_pos) for prev_pos in char_pos[prev_char])
-            prev_char = c
-        return min(dp[p] for p in char_pos[prev_char]) + len(key)
+        locs = {}
+        for i, ch in enumerate(ring): locs.setdefault(ch, []).append(i)
+            
+        @cache 
+        def fn(i, j): 
+            """Return turns to finish key[j:] startin from ith position on ring."""
+            if j == len(key): return 0 
+            loc = locs[key[j]]
+            k = bisect_left(loc, i) % len(loc)
+            ans = min(abs(i-loc[k]), len(ring) - abs(i-loc[k])) + fn(loc[k], j+1)
+            k = (k-1) % len(loc)
+            ans = min(ans, min(abs(i-loc[k]), len(ring) - abs(i-loc[k])) + fn(loc[k], j+1))
+            return ans 
+        
+        return fn(0, 0) + len(key)
