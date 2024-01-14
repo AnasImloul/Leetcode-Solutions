@@ -1,11 +1,9 @@
+// Runtime: 48 ms (Top 83.72%) | Memory: 41.90 MB (Top 51.16%)
+
 var containsPattern = function(arr, m, k) {
-	const origin = arr.join(',');
-
-	return arr.some((_, index, array) => {
-		const check = arr.slice(index, m + index).join(',') + ',';
-
-		index + k * m > arr.length && array.splice(index);
-		const target = check.repeat(k).slice(0, -1);
-		if (~origin.indexOf(target)) return true
-	});
+    for(let i=m, cnt=0; i<arr.length; i++){
+        if(arr[i]!=arr[i-m]) cnt=0;
+        else if(++cnt==m*(k-1)) return true;
+    }
+    return false;
 };
