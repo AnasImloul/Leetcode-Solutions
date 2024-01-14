@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 98.11%) | Memory: 61.90 MB (Top 20.33%)
+
 class Solution {
     public int[] missingRolls(int[] rolls, int mean, int n) {
         
