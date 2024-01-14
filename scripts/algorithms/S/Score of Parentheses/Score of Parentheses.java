@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 41.30 MB (Top 25.38%)
+
 class Solution {
     public int scoreOfParentheses(String s) {
         Stack<Integer> st = new Stack<>();
