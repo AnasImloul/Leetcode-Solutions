@@ -1,86 +1,56 @@
-class MyCircularDeque {
-public:
-    
-    deque<int> dq;
-    
-    int max_size;
-    
-    MyCircularDeque(int k) {
-        
-        max_size = k;  
-    }
-    
-    bool insertFront(int value) {
-        
-        if(dq.size() < max_size)
-        {
-            dq.push_front(value);
-            
-            return true;
-        }
-        
-        return false;
-    }
-    
-    bool insertLast(int value) {
-        
-        if(dq.size() < max_size)
-        {
-            dq.push_back(value);
-            
-            return true;
-        }
-        
-        return false;
-    }
-    
-    bool deleteFront() {
-        
-        if(dq.size() > 0)
-        {
-            dq.pop_front();
-            
-            return true;
-        }
-        
-        return false;
-    }
-    
-    bool deleteLast() {
-        
-        if(dq.size() > 0)
-        {
-            dq.pop_back();
-            
-            return true;
-        }
-        
-        return false;   
-    }
-    
-    int getFront() {
-        
-        if(dq.size() > 0)
-            return dq.front();
-        
-        return -1;
-    }
-    
-    int getRear() {
-        
-        if(dq.size() > 0)
-            return dq.back();
-        
-        return -1;
-    }
-    
-    bool isEmpty() {
-        
-        return dq.empty();
-    }
-    
-    bool isFull() {
-        
-        return dq.size() == max_size;
-    }
-};
+// Runtime: 57 ms (Top 91.39%) | Memory: 18.00 MB (Top 39.07%)
+
+class MyCircularDeque:
+  def __init__(self, k: int):
+    self.queue = [None] * k
+    self.max_size = k
+    self.head = 0
+    self.tail = 0
+    self.size = 0
+
+  def insertFront(self, value: int) -> bool:
+    if self.isFull():
+        return False
+    self.head = (self.head - 1) % self.max_size
+    self.queue[self.head] = value
+    self.size += 1
+    return True
+
+  def insertLast(self, value: int) -> bool:
+    if self.isFull():
+        return False
+    self.queue[self.tail] = value
+    self.tail = (self.tail + 1) % self.max_size
+    self.size += 1
+    return True
+
+  def deleteFront(self) -> bool:
+    if self.isEmpty():
+        return False
+    self.head = (self.head + 1) % self.max_size
+    self.size -= 1
+    return True
+
+  def deleteLast(self) -> bool:
+    if self.isEmpty():
+        return False
+    self.tail = (self.tail - 1) % self.max_size
+    self.size -= 1
+    return True
+
+  def getFront(self) -> int:
+    if self.isEmpty():
+        return -1
+    return self.queue[self.head]
+
+  def getRear(self) -> int:
+    if self.isEmpty():
+        return -1
+    return self.queue[(self.tail - 1) % self.max_size]
+
+  def isEmpty(self) -> bool:
+    return self.size == 0
+
+  def isFull(self) -> bool:
+    return self.size == self.max_size
+
