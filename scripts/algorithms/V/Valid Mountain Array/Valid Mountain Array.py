@@ -1,15 +1,13 @@
-# Runtime: 391 ms (Top 35.19%) | Memory: 15.5 MB (Top 21.40%)
+// Runtime: 153 ms (Top 95.7%) | Memory: 18.70 MB (Top 43.81%)
+
 class Solution:
     def validMountainArray(self, arr: List[int]) -> bool:
-        if len(arr) < 3:
+        if len(arr)<=2 or max(arr)==arr[0] or max(arr)==arr[len(arr)-1]:
             return False
-        for i in range(1,len(arr)):
-            if arr[i] <= arr[i-1]:
-                if i==1:
-                    return False
-                break
-
-        for j in range(i,len(arr)):
-            if arr[j] >= arr[j-1]:
+        f=True
+        for i in range(len(arr)-1):
+            if f and arr[i]>=arr[i+1]:
+                f=False
+            if not f and arr[i]<=arr[i+1]:
                 return False
         return True
