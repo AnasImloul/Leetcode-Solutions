@@ -1,34 +1,29 @@
-# Runtime: 112 ms (Top 18.89%) | Memory: 16.6 MB (Top 49.70%)
-# Definition for a binary tree node.
-# class TreeNode:
-# def __init__(self, val=0, left=None, right=None):
-# self.val = val
-# self.left = left
-# self.right = right
+// Runtime: 40 ms (Top 94.14%) | Memory: 19.30 MB (Top 21.03%)
+
 class Solution:
-# O(n) || O(h) where h is the height of the tree
-# Runtime: 70ms 63.75% || Memory: 16.5mb 87.89%
-    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
-
-        queue = deque([root])
-        result = []
-
-        while queue:
-            runningSum = 0
-            newLevelSize = 0
-            for i in range(len(queue)):
-                currNode = queue.popleft()
-
-                runningSum += currNode.val
-                newLevelSize += 1
-
-                if currNode.left:
-                    queue.append(currNode.left)
-                if currNode.right:
-                    queue.append(currNode.right)
-
-            secretFormula = (runningSum/newLevelSize)
-
-            result.append(secretFormula)
-
-        return result
+    def averageOfLevels(self, root: TreeNode) -> List[float]:
+        
+        if not root:
+            
+            # Quick response for empty tree
+            return []
+        
+        traversal_q = [root]
+        
+        average = []
+        
+        while traversal_q:
+            
+            # compute current level average
+            cur_avg = sum( (node.val for node in traversal_q if node) ) / len(traversal_q)
+            
+            # add to result
+            average.append( cur_avg )
+            
+            # update next level queue
+            next_level_q = [ child for node in traversal_q for child in (node.left, node.right) if child ]
+            
+            # update traversal queue as next level's
+            traversal_q = next_level_q
+            
+        return average
