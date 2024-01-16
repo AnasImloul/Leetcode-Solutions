@@ -1,53 +1,29 @@
+// Runtime: 1 ms (Top 97.83%) | Memory: 41.60 MB (Top 63.04%)
+
 class Solution {
-    private List<Integer> res;
+    List<Integer> list=new ArrayList<>();
     public List<Integer> splitIntoFibonacci(String num) {
-        dfs(0, num, -1, -1, new ArrayList<>());
-        return res==null?new ArrayList<>():res;
+        
+        if(backtrack(num,0)) return list;
+        else return new ArrayList();
+        
     }
-    private void dfs(int ptr, String s, int prev1, int prev2, List<Integer> list){
-        if(ptr==s.length()) {
-            if(list.size()>2){
-                res = new ArrayList<>(list);
+    boolean backtrack(String num,int index){
+        if(index==num.length()) return list.size()>2;
+        
+        int n=0;
+        for(int i=index;i<num.length();i++){
+            n=n*10+(num.charAt(i)-'0');
+            if(n<0) return false;
+            if(list.size()<2 || list.get(list.size()-1)+list.get(list.size()-2)==n){
+                list.add(n);
+                if(backtrack(num,i+1)) return true;
+            list.remove(list.size()-1);
             }
-            return;
+            
+            if(i==index && num.charAt(i)=='0') return false;
         }
-        else if(prev1==-1 || prev2==-1){
-            if(s.charAt(ptr)=='0'){
-                list.add(0);
-                dfs(ptr+1, s, 0, prev1, list);
-                if(res!=null) return;
-                list.remove(0);
-            }else{
-                for(int i = ptr+1; i<=s.length();i++){
-                    long n = Long.parseLong(s.substring(ptr, i));
-                    if(n>=(long)Math.pow(2, 31)) break;
-                    list.add((int)n);
-                    dfs(i, s, (int)n, prev1, list);
-                    if(res!=null) return;
-                    list.remove(list.size()-1);
-                }
-            }
-        }else{
-            if(s.charAt(ptr)=='0'){
-                if(prev1+prev2==0){
-                    list.add(0);
-                    dfs(ptr+1, s, 0, prev1, list);
-                    if(res!=null) return;
-                    list.remove(0);
-                }
-                return;
-            }
-            for(int i=ptr+1;i<=s.length();i++){
-                long n = Long.parseLong(s.substring(ptr, i));
-                if(n>=(long)Math.pow(2, 31)) break;
-                if(n == prev1+prev2){
-                    list.add((int)n);
-                    dfs(i, s, (int)n, prev1, list);
-                    if(res!=null) return;
-                    list.remove(list.size()-1);
-                }
-            }
-        }
+        return false;
     }
     
 }
