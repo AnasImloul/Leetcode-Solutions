@@ -1,10 +1,26 @@
+// Runtime: 53 ms (Top 86.36%) | Memory: 44.80 MB (Top 38.62%)
+
 var trap = function(height) {
-    let left = 0, right = height.length - 1;
-    let hiLevel = 0, water = 0;
-    while(left <= right) {
-        let loLevel = height[height[left] < height[right] ? left++ : right--];
-        hiLevel = Math.max(hiLevel, loLevel);
-        water += hiLevel - loLevel ;
+    let landArea = 0;
+    let maxFromLeft = 0;
+    let maxAreaFromLeft = 0;
+    
+    for (let h of height) {
+        landArea += h;
+        maxFromLeft = Math.max(maxFromLeft, h);
+        maxAreaFromLeft += maxFromLeft;
     }
-    return water;
+    
+    let maxFromRight = 0;
+    let maxAreaFromRight = 0;
+    
+    for (let i = height.length - 1; i >= 0; i--) {
+        maxFromRight = Math.max(maxFromRight, height[i]);
+        maxAreaFromRight += maxFromRight;
+    }
+    
+    const boundingArea = height.length * maxFromLeft;
+    const leftVoid = boundingArea - maxAreaFromLeft;
+    const rightVoid = boundingArea - maxAreaFromRight;
+    return boundingArea - leftVoid - rightVoid - landArea;
 };
