@@ -1,36 +1,34 @@
+// Runtime: 99 ms (Top 93.75%) | Memory: 76.80 MB (Top 6.6%)
+
 class Cashier {
-    private Map<Integer, Integer> catalogue;
-    
-    private int n;
-    private double discount;
-    private int orderNumber;
-    
+    private final int[] prices;
+    private final int n;
+    private final int discount;
+    private int customerNumber;
+
     public Cashier(int n, int discount, int[] products, int[] prices) {
-        this.catalogue = new HashMap<>();
-        
-        for (int i = 0; i < prices.length; i++) {
-            this.catalogue.put(products[i], prices[i]);
-        }
-        
+        this.prices = new int[200];
+
+        for(int i = 0; i < products.length; ++i)
+            this.prices[products[i] - 1] = prices[i];
+
         this.n = n;
-        this.discount = ((double) 100 - discount)/100;
-        this.orderNumber = 0;
+        this.discount = discount;
+        this.customerNumber = 1;
     }
     
     public double getBill(int[] product, int[] amount) {
-        this.orderNumber++;
-        
-        double bill = 0.0;
-        for (int i = 0; i < amount.length; i++) {
-            int p = product[i];
-            int price = this.catalogue.get(p);
-            bill += price*amount[i];
-        }
-        
-        if (this.orderNumber % n == 0)
-            bill *= this.discount;
-        
-        return bill;
+        double sum = 0;
+
+        for(int i = 0; i < product.length; ++i)
+            sum += this.prices[product[i] - 1] * amount[i];
+
+        if(this.customerNumber != 0 && this.customerNumber % n == 0)
+            sum *= (double) (100 - this.discount) / 100;
+
+        this.customerNumber++;
+
+        return sum;
     }
 }
 
