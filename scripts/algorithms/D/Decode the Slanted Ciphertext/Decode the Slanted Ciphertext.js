@@ -1,3 +1,5 @@
+// Runtime: 144 ms (Top 94.59%) | Memory: 106.20 MB (Top 91.89%)
+
 var decodeCiphertext = function(encodedText, rows) {
     const numColumns = encodedText.length / rows;
     const stringBuilder = [];
