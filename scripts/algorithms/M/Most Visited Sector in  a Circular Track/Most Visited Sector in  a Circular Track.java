@@ -1,27 +1,16 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 43.10 MB (Top 12.5%)
+
 class Solution {
     public List<Integer> mostVisited(int n, int[] rounds) {
-        int[]psum=new int[n+2];
-        psum[rounds[0]]+=1;
-        psum[rounds[1]+1]-=1;
-        if(rounds[0]>rounds[1])
-            psum[1]+=1;
-        for(int i=2;i<rounds.length;i++){
-            psum[rounds[i-1]+1]+=1;
-            psum[rounds[i]+1]-=1;
-            if(rounds[i-1]>rounds[i])
-                psum[1]+=1;
+        var start = rounds[0];
+        var end = rounds[rounds.length - 1];   
+        var res = new ArrayList<Integer>();
+        if (start <= end) {
+            for (int i = start; i <= end; i++) res.add(i);
+        } else {
+            for (int i = 1; i <= end; i++) res.add(i);
+            for (int i = start; i <= n; i++) res.add(i);
         }
-        int max_=0;
-        for(int i=1;i<=n;i++){
-            psum[i]+=psum[i-1];
-            if(psum[i]>max_)
-                max_=psum[i];
-        }
-        List<Integer>ans=new ArrayList<>();
-        for(int i=1;i<=n;i++){
-            if(psum[i]==max_)
-                ans.add(i);
-        }
-        return ans;
+        return res;
     }
 }
