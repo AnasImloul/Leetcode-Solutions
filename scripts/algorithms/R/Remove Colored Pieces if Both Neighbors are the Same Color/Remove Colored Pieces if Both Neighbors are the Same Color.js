@@ -1,21 +1,30 @@
+// Runtime: 66 ms (Top 82.26%) | Memory: 45.70 MB (Top 32.26%)
+
+/**
+ * @param {string} colors
+ * @return {boolean}
+ */
 var winnerOfGame = function(colors) {
-    const n = colors.length;
-    const stack = [];
-    
-    let alice = 0;
-    let bob = 0;
-    
-    for (let i = 0; i < n; ++i) {
-        const char = colors[i];
+        let alice_plays = 0, bob_plays = 0, count = 0;
         
-        if (stack.length > 1 && stack[stack.length - 1] === char && stack[stack.length - 2] === char) {
-            stack.pop();
-            
-            if (char === "A") ++alice;
-            else ++bob;
+        for (let i = 1; i < colors.length; i++) {
+            if (colors[i] == colors[i - 1]) {
+                count++;
+            } else {
+                if (colors[i - 1] == 'A') {
+                    alice_plays += Math.max(0, count - 1);
+                } else {
+                    bob_plays += Math.max(0, count - 1);
+                }
+                count = 0;
+            }
         }
-        stack.push(char);
+
+        if (colors.charAt(colors.length - 1) == 'A') {
+            alice_plays += Math.max(0, count - 1);
+        } else {
+            bob_plays += Math.max(0, count - 1);
+        }
+        
+        return alice_plays > bob_plays;
     }
-    
-    return alice > bob ? true : false; 
-};
