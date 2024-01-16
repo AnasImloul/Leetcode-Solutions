@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 94.12%) | Memory: 64.00 MB (Top 67.65%)
+
 class Solution {
   public int unhappyFriends(int n, int[][] preferences, int[][] pairs) {
     int[][] rankings = new int[n][n]; // smaller the value, higher the preference
