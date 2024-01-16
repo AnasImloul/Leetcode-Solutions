@@ -1,41 +1,25 @@
-//O(N) Time and O(1) Space - SLIDING WINDOW
+// Runtime: 76 ms (Top 77.71%) | Memory: 54.70 MB (Top 57.09%)
 
-class Solution {
-public:
-    double findMaxAverage(vector<int>& nums, int k) {
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findMaxAverage = function(nums, k) {
+    let avr = -Infinity;
+    let windowSum = 0;
+    let windowStart = 0;
+    
+    for(let windowEnd = 0; windowEnd < nums.length; windowEnd++){
+         windowSum += nums[windowEnd];
         
-        double ans = INT_MIN;
-        
-        int i = 0;
-        int j = 0;
-        int sum = 0;
-        
-        while(j<nums.size()){
-            
-            //calcs
-            sum = sum+nums[j];
-            
-            if(j-i+1 < k){
-                j++;
-            }
-            else if(j-i+1 == k){
-                
-                //ans
-                double nos =  k*1.0;
-                ans = max(ans, sum/nos);
-                
-
-                int v = nums[i];
-                sum = sum - v;
-                
-                //SLIDE
-                i++;
-                j++;
-            }
-        }
-        
-        return ans;
-        
-        
+        if((windowEnd - windowStart) + 1 === k){
+             avr = Math.max(avr, windowSum/k);
+            windowSum -= nums[windowStart];
+            windowStart += 1;
+        }       
     }
+    
+    return avr;
 };
+
