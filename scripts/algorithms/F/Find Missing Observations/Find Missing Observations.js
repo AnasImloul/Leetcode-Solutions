@@ -1,12 +1,10 @@
+// Runtime: 262 ms (Top 83.78%) | Memory: 64.50 MB (Top 83.78%)
+
 var missingRolls = function(rolls, mean, n) {
-    let res = [];
-    let sum = ((n + rolls.length) * mean) - rolls.reduce((a,b)=>a+b);
-    if(sum>6*n || sum<1*n) return res;
-    let dec = sum % n;
-    let num = Math.floor(sum / n);
-    for(let i = 0; i < n; i++){
-        if(dec) res.push(num+1), dec--;
-        else res.push(num);
-    }
-    return res;
+  const diff = mean * (rolls.length + n) - rolls.reduce((a, b) => a + b);
+  if (diff < n) return []; // Cannot be covered even by case 1 1 1 ...
+  if (diff > 6 * n) return []; // Cannot be covered even by case 6 6 6 ...
+  return Array(n)
+    .fill(Math.ceil(diff / n), 0, diff % n)
+    .fill(Math.floor(diff / n), diff % n);
 };
