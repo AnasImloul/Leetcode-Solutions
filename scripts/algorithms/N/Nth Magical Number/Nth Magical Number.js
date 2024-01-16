@@ -1,27 +1,40 @@
+// Runtime: 46 ms (Top 97.37%) | Memory: 42.00 MB (Top 86.84%)
+
 /**
- * @param {number} n
- * @param {number} a
- * @param {number} b
+ * @param {number} N
+ * @param {number} A
+ * @param {number} B
  * @return {number}
  */
-var nthMagicalNumber = function(n, a, b) {
-    const gcd = (a1,b1)=>{
-        if(b1===0) return a1;
-        return gcd(b1,a1%b1)
+var nthMagicalNumber = function(N, A, B) {
+    var temp;
+    if(B > A){
+        temp = A;
+        A = B;
+        B = temp;
     }
-    const modulo = 1000000007;
-    let low = 0;
-    let high = 10e17;
-    let lcmAB = Math.floor((a*b)/gcd(a,b));
+    //A is bigger
     
-    while(low<high){
-        let mid = Math.floor((low+high)/2);
-        let ans = Math.floor(mid/a)+Math.floor(mid/b)-Math.floor(mid/lcmAB);
-        if(ans<n){
-            low = mid + 1;
-        }else{
-            high = mid;
-        }
-    }
-    return high%modulo;
+    var shareFreq = ((A+B)/GCD(A,B))-1;
+    var numShares = Math.floor(N/shareFreq);
+    var superN = N + numShares;
+    
+    //X+Y = superN
+    
+    var X = Math.ceil(superN*B/(A+B));
+    var Y = Math.ceil(superN-(superN*B/(A+B)));
+    
+    var mod = (10**9)+7;
+    
+    if(X*A <= Y*B)return (X*A)%mod;
+    else return (Y*B)%mod;
 };
+
+var GCD = function(x,y){
+    while(y!=0){
+        var t = y;
+        y = x % y;
+        x = t;
+    }
+    return x;
+}
