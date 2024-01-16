@@ -1,3 +1,5 @@
+// Runtime: 11 ms (Top 89.89%) | Memory: 46.10 MB (Top 5.62%)
+
 class Solution {
     public List<Integer> fallingSquares(int[][] positions) {
         SegmentNode root = new SegmentNode(0,Integer.MAX_VALUE,0);
