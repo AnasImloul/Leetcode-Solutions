@@ -1,21 +1,30 @@
+// Runtime: 165 ms (Top 91.97%) | Memory: 93.10 MB (Top 71.53%)
+
 /**
  * @param {number[][]} rectangles
  * @return {number}
  */
 var interchangeableRectangles = function(rectangles) {
-    let map = new Map();
+    let m = new Map();
     for (let i = 0; i < rectangles.length; i++) {
-        let [a, b] = rectangles[i];
-        let val = a / b;
-        if (!map.get(val)) map.set(val, [0, 0]);
-        else {
-            const [count, total] = map.get(val);
-            map.set(val, [count + 1, total + count + 1]);
+        let width = rectangles[i][0];
+        let height = rectangles[i][1];
+        let aspectRatio = width / height;
+        
+        if (!m.has(aspectRatio)) {
+            m.set(aspectRatio, 1);
+        } else {
+            m.set(aspectRatio, m.get(aspectRatio) + 1);
         }
     }
     
-    return [...map.entries()].reduce((prev, [key, [count, total]]) => {
-        if (count < 1) return prev;
-        return prev + total;
-    }, 0);
+    let ans = 0;
+    m.forEach((value) => {
+        if (value > 1) {
+            let n = value - 1;
+            ans += (n * (n + 1)) / 2;
+        }
+    });
+    
+    return ans;
 };
