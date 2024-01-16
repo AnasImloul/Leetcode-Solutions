@@ -1,3 +1,5 @@
+// Runtime: 7 ms (Top 96.43%) | Memory: 61.60 MB (Top 10.06%)
+
 class Solution {
     public int[] mostCompetitive(int[] nums, int k) {
         int[] stack = new int[k];
