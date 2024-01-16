@@ -1,3 +1,5 @@
+// Runtime: 962 ms (Top 50.0%) | Memory: 48.20 MB (Top 25.0%)
+
 /**
  * @param {string} text
  * @return {number}
