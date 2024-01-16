@@ -1,68 +1,74 @@
-class UndergroundSystem {
-    HashMap<Integer, Travel> travelMap;
-    HashMap<String, Averages> avgMap;
-    
-    public UndergroundSystem() {
-        travelMap = new HashMap();
-        avgMap = new HashMap();
+// Runtime: 92 ms (Top 65.05%) | Memory: 55.90 MB (Top 20.97%)
+
+class Passenger {
+    int checkinTime;
+    int checkoutTime;
+    String checkinLocation;
+    String checkoutLocation;
+
+    public Passenger(String checkinLocation, int checkinTime) {
+        this.checkinLocation = checkinLocation;
+        this.checkinTime = checkinTime;
     }
-    
-    public void checkIn(int id, String stationName, int t) {
-        Travel journey = new Travel(id, t, stationName);
-        travelMap.put(id, journey);
+
+    void checkout(String checkoutLocation, int checkoutTime) {
+        this.checkoutLocation = checkoutLocation;
+        this.checkoutTime = checkoutTime;
     }
-    
-    public void checkOut(int id, String stationName, int t) {
-        Travel journey = travelMap.get(id);
-        
-        int journeyTime = t - journey.checkIn;
-        String key = journey.startStation + "," + stationName;
-        
-        Averages average = avgMap.containsKey(key) ? avgMap.get(key) : new Averages();
-        average.updateAverage(journeyTime);
-        
-        avgMap.put(key, average);
+
+}
+
+class Route {
+    String startStation;
+    String endStation;
+    int totalNumberOfTrips;
+    long totalTimeSpentInTrips;
+
+    public Route(String startStation, String endStation) {
+        this.startStation = startStation;
+        this.endStation = endStation;
     }
-    
-    public double getAverageTime(String startStation, String endStation) {
-        String key = startStation + "," + endStation;
-        Averages average = avgMap.get(key);
-        
-        int totalTrips = average.totalTrips;
-        double totalJourneytime = average.totalTraveltime;
-        double averageTime = totalJourneytime/totalTrips;
-        
-        return averageTime;
+
+    double getAverageTime() {
+        return (double) totalTimeSpentInTrips / totalNumberOfTrips;
     }
-    
-    class Travel{
-        int id;
-        String startStation;
-        int checkIn;
-        
-        public Travel(int id, int checkIn, String startStation)
-        {
-            this.id = id;
-            this.checkIn = checkIn;
-            this.startStation = startStation;
-        }
-    }
-    
-    class Averages{
-        double totalTraveltime;
-        int totalTrips;
-        
-        public Averages()
-        {
-            totalTraveltime = 0;
-            totalTrips = 0;
-        }
-        
-        private void updateAverage(int journeyTime)
-        {
-            totalTraveltime += journeyTime;
-            totalTrips++;
-        }
+
+    void addTrip(int startTime, int endTime) {
+        totalTimeSpentInTrips += endTime - startTime;
+        totalNumberOfTrips++;
     }
 }
 
+class UndergroundSystem {
+
+    Map<Integer, Passenger> currentPassengerMap;
+    Map<String, Route> routeMap;
+
+    public UndergroundSystem() {
+        currentPassengerMap = new HashMap<>();
+        routeMap = new HashMap<>();
+    }
+
+    public void checkIn(int id, String stationName, int t) {
+        if (!currentPassengerMap.containsKey(id)) {
+            Passenger passenger = new Passenger(stationName, t);
+            currentPassengerMap.put(id, passenger);
+        }
+    }
+
+    public void checkOut(int id, String stationName, int t) {
+        if (currentPassengerMap.containsKey(id)) {
+            Passenger passenger = currentPassengerMap.get(id);
+            passenger.checkout(stationName, t);
+            String routeKey = passenger.checkinLocation + "," + passenger.checkoutLocation;
+            Route route = routeMap.getOrDefault(routeKey, new Route(passenger.checkinLocation, passenger.checkoutLocation));
+            route.addTrip(passenger.checkinTime, passenger.checkoutTime);
+            routeMap.put(routeKey, route);
+            currentPassengerMap.remove(id);
+        }
+    }
+
+    public double getAverageTime(String startStation, String endStation) {
+        return routeMap.get(startStation + "," + endStation).getAverageTime();
+    }
+}
