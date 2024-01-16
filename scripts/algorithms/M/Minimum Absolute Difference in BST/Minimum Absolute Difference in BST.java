@@ -1,33 +1,17 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 44.70 MB (Top 9.23%)
+
 class Solution {
+    int prev = Integer.MAX_VALUE;
+    int ans = Integer.MAX_VALUE;
     public int getMinimumDifference(TreeNode root) {
-      Queue<Integer> queue=new PriorityQueue<>();
-      Queue<TreeNode> nodesQueue=new LinkedList<>();
-      int min=Integer.MAX_VALUE;
-      if(root==null)
-        return 0;
-      nodesQueue.add(root);
-      while(!nodesQueue.isEmpty())
-      {
-        TreeNode node=nodesQueue.poll();
-        queue.add(node.val);
-        if(node.left!=null)
-        { 
-          nodesQueue.add(node.left);
-        }
-        if(node.right!=null)
-        { 
-          nodesQueue.add(node.right);
-        }
-      }
-      int prev=queue.poll();
-      while(!queue.isEmpty())
-      {
-        int current=queue.poll();
-        int absValue=Math.abs(current-prev);
-        prev=current;
-        min=Math.min(min,absValue);
-        
-      } 
-      return min;
+        inOrder(root);
+        return ans;
+    }
+    
+    public void inOrder(TreeNode root){
+        if(root.left!=null) inOrder(root.left);
+        ans = Math.min(ans,Math.abs(root.val-prev));
+        prev = root.val;
+        if(root.right!=null) inOrder(root.right);
     }
 }
