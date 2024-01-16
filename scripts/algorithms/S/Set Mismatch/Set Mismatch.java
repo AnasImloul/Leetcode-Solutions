@@ -1,20 +1,16 @@
+// Runtime: 2 ms (Top 97.57%) | Memory: 45.20 MB (Top 54.78%)
+
 class Solution {
     public int[] findErrorNums(int[] nums) {
-        int n = nums.length;
-        int dup = 0, miss = 0;
-
-        for (int i = 1; i <= n; i++) {
-            int count = 0;
-            for (int j = 0; j < n; j++) {
-                if (nums[j] == i) count++;
-            }
-
-            if (count == 2) dup = i;
-            if (count == 0) miss = i;
+        int N = nums.length, sum = N * (N + 1) / 2;
+        int[] ans = new int[2];
+        boolean[] seen = new boolean[N+1];
+        for (int num : nums) {
+            sum -= num;
+            if (seen[num]) ans[0] = num;
+            seen[num] = true;
         }
-
-        return new int[] {dup, miss};
+        ans[1] = sum + ans[0];
+        return ans;
     }
 }
-
-// TC: O(n ^ 2), SC: O(1)
