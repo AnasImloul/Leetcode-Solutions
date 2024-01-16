@@ -1,40 +1,26 @@
-var champagneTower = function(poured, query_row, query_glass) {
-    
-    let water = [poured];
-    let hasOverflow = true;
-    let row = 0;
+// Runtime: 65 ms (Top 67.95%) | Memory: 48.40 MB (Top 39.74%)
 
-    while(true){
-        
-        if (! hasOverflow) return 0   // We haven't reached query_row yet, and water ran out
-        hasOverflow = false;
-        
-        let rowGlass = Array(water.length).fill(0);    // List of glasses at current row
-        for (let i = 0; i < rowGlass.length; i++){
-            let input = water[i];
-            if (input <= 1){
-                rowGlass[i] = input;
-                water[i] = 0
-            }else{
-                rowGlass[i] = 1;
-                water[i]--
-            }
-            if (row == query_row && i == query_glass){  // Return if we reach goal before water run out
-                return rowGlass[i]
-            }
+/**
+ * @param {number} poured
+ * @param {number} query_row
+ * @param {number} query_glass
+ * @return {number}
+ */
+var champagneTower = function(poured, query_row, query_glass) {
+    let glassLevels = Array(100).fill(0.0);
+    glassLevels[0] = poured;
+
+    for (let curRow = 0; curRow < query_row; curRow++) {
+        let nextLevels = Array(100).fill(0.0);
+
+        for (let curGlass = 0; curGlass <= curRow; curGlass++) {
+            let overflow = Math.max(0, (glassLevels[curGlass] - 1.0) / 2.0);
+            nextLevels[curGlass] += overflow;
+            nextLevels[curGlass + 1] += overflow;
         }
-        // console.log('row,rowGlass',row,rowGlass);  // to debug
-        
-        let nextWater = Array(water.length + 1).fill(0);  // water poured towards next row, 
-        for (let i = 0; i < rowGlass.length; i++){
-            let overflow = water[i];
-            
-            if (overflow > 0) hasOverflow = true;
-            
-            nextWater[i] += overflow / 2;
-            nextWater[i+1] += overflow / 2;
-        }
-        water = nextWater;
-        row ++;
+
+        glassLevels = nextLevels;
     }
+
+    return Math.min(1.0, glassLevels[query_glass]);    
 };
