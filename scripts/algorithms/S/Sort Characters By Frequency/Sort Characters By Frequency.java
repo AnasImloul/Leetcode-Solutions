@@ -1,45 +1,41 @@
+// Runtime: 12 ms (Top 83.68%) | Memory: 45.80 MB (Top 20.05%)
+
 class Solution {
     public String frequencySort(String s) {
-      HashMap<Character,Integer> hm1=new HashMap<>();
-      TreeMap<Integer,ArrayList<Character>> hm2=new TreeMap<>(Collections.reverseOrder());
-        for(int i=0;i<s.length();i++)
-        {
-            char c=s.charAt(i);
-            if(hm1.containsKey(c))
-            { 
-                hm1.put(c,hm1.get(c) + 1);
-            }
-            else
-            {
-                hm1.put(c,1);
-            }
+        int len = s.length();
+        HashMap<Integer,HashSet<Character>> map = new HashMap();       
+        HashMap<Character,Integer> freqMap = new HashMap();
+        
+        for(int idx = 0;idx<len;idx++){
+            char ch = s.charAt(idx);
+            freqMap.put(ch,freqMap.getOrDefault(ch,0)+1);
         }
-        for(char c : hm1.keySet())
-        {
-            if(hm2.containsKey(hm1.get(c)))
-            {
-                ArrayList<Character> temp=hm2.get(hm1.get(c));
-                temp.add(c);
-                hm2.put(hm1.get(c),temp);
-            }
-            else
-            {
-                ArrayList<Character> temp=new ArrayList<>();
-                temp.add(c);
-                hm2.put(hm1.get(c),temp);
-            }
+        
+        int maxFreq = 0 , minFreq = s.length();
+        
+        for(char ch : freqMap.keySet()){
+            HashSet<Character> set = map.getOrDefault(freqMap.get(ch),new HashSet());
+            set.add(ch);
+            map.put(freqMap.get(ch),set);
+            maxFreq = Math.max(maxFreq , freqMap.get(ch));
+            minFreq = Math.min(minFreq,freqMap.get(ch));
         }
-        StringBuilder sb=new StringBuilder("");
-        for(int x :hm2.keySet())
-        {
-            ArrayList<Character> temp=hm2.get(x);
-            for(char c: temp)
-            {
-                for(int i=0;i<x;i++){
-                sb.append(c);
+        
+        StringBuilder ansStr = new StringBuilder();
+        
+        for(int freq = maxFreq;freq>=minFreq;freq--){
+            if(map.containsKey(freq)){
+                HashSet<Character> set = map.get(freq);
+                for(char ch : set){
+                    int temp = freq;
+                    while(temp>0){
+                        ansStr.append(ch);
+                        temp--;
+                    }
                 }
             }
         }
-        return sb.toString();
+        
+        return ansStr.toString();
     }
 }
