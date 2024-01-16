@@ -1,14 +1,17 @@
+// Runtime: 1 ms (Top 100.0%) | Memory: 46.20 MB (Top 23.08%)
+
 class Solution {
     public void moveZeroes(int[] nums) {
-       int a = 0, z = 0, temp;
-        while(a < nums.length){
-            if(nums[a] != 0){
-                temp = nums[z];
-                nums[z] = nums[a];
-                nums[a] = temp; 
-                z += 1;
+        int i = 0; 
+        for (int num:nums){
+            if(num != 0){
+                nums[i] = num;
+                i++;
             }
-            a += 1;
+        }
+        while(i<nums.length){
+            nums[i] = 0;
+            i++;
         }
     }
 }
