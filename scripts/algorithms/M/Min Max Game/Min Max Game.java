@@ -1,21 +1,23 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 43.60 MB (Top 22.49%)
+
 class Solution {
     public int minMaxGame(int[] nums) {
-        var isMin = true;
-        var n=1;
-        
-        while(n<nums.length) {
-            
-            for(int i=0; i<nums.length; i+= n*2) {
-                nums[i] = isMin ?
-                    Math.min(nums[i], nums[i+n]) : 
-                    Math.max(nums[i], nums[i+n]);
-                isMin = !isMin;
+        int len=nums.length;
+        if(len==1)
+            return nums[0];
+        int[] newNums=new int[len/2];
+        int index=0;
+        for(int i=0;i<len;i+=2)
+        {
+            if(index%2==0)
+            {
+                newNums[index++]=Math.min(nums[i],nums[i+1]);
             }
-            
-            n *= 2;
+            else
+            {
+                newNums[index++]=Math.max(nums[i],nums[i+1]);
+            }
         }
-        
-        return nums[0];
-        
+        return minMaxGame(newNums);
     }
 }
