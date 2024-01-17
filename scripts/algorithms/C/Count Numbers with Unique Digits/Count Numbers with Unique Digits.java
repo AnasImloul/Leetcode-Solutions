@@ -1,30 +1,29 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 39.90 MB (Top 52.99%)
+
 class Solution {
-    public int countNumbersWithUniqueDigits(int n) {
-        // Logic --> 
-        /*
-        if n == 0 --> the number is upto 10^0 --> 1 and 1 possibilites could be there
-        if n == 1 --> the range is upto 10^1 --> 10(10 unique combinations from 1 to 10 can be there)
-        so the bases cases are --> n == 0 and n == 1
-        
-        
-        Suppose the case of n = 3
-        The upper limit is 10^3 --> 1000. So, _ _ _ be filled in following ways -->
-        _ (9 choices except 0) _ (9 choices except the one filled in previous blank but 0 can be included) _ (8 choices). So for 3 digit, 9*9*8 + 9*9 choices for 2 digits+9(for 1 digit) + 1(0 digits)...
-        
-        */
-        int ans = 10;
-        if(n == 0){
+    public int countNumbersWithUniqueDigits(int n) 
+    {
+	/*
+	    9 * 9 + 10 for n = 2
+        9 * 9 * 8 + 10 for n = 3
+        9 * 9 * 8 * 7 + 10 for n = 4
+        9 * 9 * 8 * 7 * 6 + 10 for n = 5
+	*/	
+        if(n == 0)
             return 1;
+        
+        if(n == 1)
+            return 10;
+        
+        int product =9;
+        int result = 10;
+        
+        for(int i=2; i<=n; i++)
+        {
+            product = product * (11-i);
+            result += product;
         }
-        if(n == 1){
-            return ans;
-        }
-        int counter = 9;
-        int choiceFiller = 9;
-        while(n --> 1 && choiceFiller>0){
-            counter *= choiceFiller--;
-            ans += counter;
-        }
-        return ans;
+        
+        return result;
     }
 }
