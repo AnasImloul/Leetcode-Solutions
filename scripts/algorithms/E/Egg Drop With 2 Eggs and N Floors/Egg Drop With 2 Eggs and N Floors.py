@@ -1,4 +1,5 @@
+// Runtime: 37 ms (Top 76.06%) | Memory: 17.40 MB (Top 35.12%)
+
 class Solution:
-    @cache
     def twoEggDrop(self, n: int) -> int:
-        return min((1 + max(i - 1, self.twoEggDrop(n - i)) for i in range (1, n)), default = 1)
+        return ceil(((1+n*8)**0.5-1)/2)
