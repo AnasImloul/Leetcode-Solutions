@@ -1,14 +1,16 @@
-# Runtime: 608 ms (Top 6.36%) | Memory: 16.7 MB (Top 25.83%)
+// Runtime: 148 ms (Top 91.55%) | Memory: 19.90 MB (Top 17.18%)
+
 class Solution:
     def sortArrayByParityII(self, nums: List[int]) -> List[int]:
-        arr = [None]*len(nums)
-        even,odd = 0,1
-        for i in(nums):
-            if i % 2 == 0:
-                arr[even] = i
-                even +=2
-        for i in (nums):
-            if i % 2 != 0:
-                arr[odd] = i
-                odd+=2
-        return arr
+        even = []
+        odd = []
+        lst=[]
+        for i in range(len(nums)):
+            if nums[i]%2 == 0:
+                even.append(nums[i])
+            else:
+                odd.append(nums[i])
+        for i in range(len(even)):
+            lst.append(even[i])
+            lst.append(odd[i])
+        return lst
