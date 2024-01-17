@@ -1,23 +1,25 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 42.70 MB (Top 89.77%)
+
 class Solution {
     public int thirdMax(int[] nums) {
-        Integer first = null, second = null, third = null;
-        for(Integer num: nums){
-            if(num.equals(first) || num.equals(second) || num.equals(third)) continue;
-            if(first == null || num > first){
-                third = second;
-                second = first;
-                first = num;
-                continue;
-            } 
-            if(second == null || num > second){
-                third = second;
-                second = num;
-                continue;
-            } 
-            if(third == null || num > third){
-                third = num;
+	
+		// taking long data type since array can contain Integer.MIN_VALUE
+        long max = Long.MIN_VALUE, sMax = Long.MIN_VALUE, tMax = Long.MIN_VALUE;
+        for (int i : nums) {
+            if (i > max) {
+                tMax = sMax;
+                sMax = max;
+                max = i;
+            } else if (i > sMax && i != max) {
+                tMax = sMax;
+                sMax = i;
+            } else if (i > tMax && i != sMax && i != max) {
+                tMax = i;
             }
         }
-        return (third != null) ? third : first;
+		
+		// if thirdMax was not updated, return the first Max
+		
+        return tMax == Long.MIN_VALUE ? (int) max : (int) tMax;
     }
 }
