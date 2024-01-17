@@ -1,49 +1,39 @@
+// Runtime: 28 ms (Top 89.13%) | Memory: 48.60 MB (Top 83.44%)
+
 class Solution {
-    
-    class Pair implements Comparable<Pair> {
-        int val;
-        int li;
-        int di;
-        
-        public Pair(int val, int li, int di) {
-            this.val = val;
-            this.li = li;
-            this.di = di;
-        }
-        
-        public int compareTo(Pair other) {
-            return this.val - other.val;
-        }
-    }
-    
     public int[] smallestRange(List<List<Integer>> nums) {
-        PriorityQueue<Pair> pq = new PriorityQueue<>();
+        int[] res = {-100000 , 100000};
+        PriorityQueue<int[]>pq = new PriorityQueue<>((a , b) -> a[0] - b[0]);
         int max = Integer.MIN_VALUE;
-        for(int i=0; i<nums.size(); i++) {
-            pq.add(new Pair(nums.get(i).get(0), i, 0));
-            max = Math.max(max, nums.get(i).get(0));
+        int k = nums.size();
+
+        for(int i = 0; i < k; i++){
+            int minElem = nums.get(i).get(0);
+            int[] arr = {minElem , 0 , i};
+
+            max = Math.max(max , minElem);
+            pq.add(arr);
+
         }
-        
-        int rbeg = 0;
-        int rend = 0;
-        int rsize = Integer.MAX_VALUE;
-        
-        while(pq.size() == nums.size()) {
-            Pair rem = pq.remove();
-            int crsize = max - rem.val;
-            
-            if(crsize < rsize) {
-                rsize = crsize;
-                rbeg = rem.val;
-                rend = max;
+        while(true){
+            int min[] = pq.poll();
+            if(res[1] - res[0] > max - min[0]){
+                res[1] = max;
+                res[0] = min[0];
             }
-            
-            if(rem.di < nums.get(rem.li).size() - 1) {
-                pq.add(new Pair(nums.get(rem.li).get(rem.di + 1), rem.li, rem.di + 1));
-                max = Math.max(max, nums.get(rem.li).get(rem.di + 1));
+            min[1]++;
+
+            List<Integer>cur = nums.get(min[2]);
+
+            if(min[1] == cur.size()){
+                break;
+            }
+            else{
+                min[0] = cur.get(min[1]);
+                max = Math.max(max , cur.get(min[1]));
+                pq.add(min);
             }
         }
-        
-        return new int[]{rbeg, rend};
+        return res;
     }
 }
