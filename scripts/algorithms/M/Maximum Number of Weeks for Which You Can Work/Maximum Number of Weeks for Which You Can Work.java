@@ -1,21 +1,16 @@
+// Runtime: 3 ms (Top 73.74%) | Memory: 55.50 MB (Top 96.97%)
+
 class Solution {
     public long numberOfWeeks(int[] milestones) {
-     
-    	int i,j,max=-1,n=milestones.length;
-  
-    	long sum=0;
-    	for(i=0;i<n;i++)
-    	{
-    		max=Math.max(max, milestones[i]);
-    		sum+=milestones[i];
-    	}
-		
-    	
-    	long x=sum-max;
-    	
-    	if(max-x>1)
-    		return sum-(max-x-1);
-    	return sum;
-    	
+        long sum = 0;
+        int max = Integer.MIN_VALUE;
+        for(int milestone: milestones) {
+            sum += milestone;
+            max = Math.max(milestone, max);
+        }
+        if((sum - max) < max)
+            return ((sum - max) * 2) + 1;
+        else
+            return sum;
     }
 }
