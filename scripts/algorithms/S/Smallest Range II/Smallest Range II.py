@@ -1,14 +1,12 @@
-# Runtime: 3791 ms (Top 5.08%) | Memory: 15.3 MB (Top 74.05%)
-class Solution:
-    def smallestRangeII(self, lis: List[int], k: int) -> int:
-        lis.sort()
-        ans = lis[-1]-lis[0]
-        for i in range(1,len(lis)):
-            l = lis[:i]
-            r = lis[i:]
-            mini = min(l[0]+k,r[0]-k)
-            maxi = max(l[-1]+k, r[-1]-k)
-            ans = min(ans, maxi-mini)
-        return ans
+// Runtime: 129 ms (Top 83.03%) | Memory: 18.50 MB (Top 25.76%)
 
-    ```
+class Solution:
+    def smallestRangeII(self, nums: List[int], k: int) -> int:
+        nums.sort()
+        ans = nums[-1] - nums[0]
+
+        for i in range(0, len(nums) - 1):
+            ans = min(ans, max(nums[i] + k, nums[-1] -
+                      k) - min(nums[i+1] - k, nums[0] + k))
+
+        return ans
