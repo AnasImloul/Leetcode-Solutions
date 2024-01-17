@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 41.10 MB (Top 28.39%)
+
 class Solution {
     public int maxAscendingSum(int[] nums) {
         int res = nums[0],temp = nums[0];
