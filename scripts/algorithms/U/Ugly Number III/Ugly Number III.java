@@ -1,33 +1,29 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.60 MB (Top 12.2%)
+
 class Solution {
     public int nthUglyNumber(int n, int a, int b, int c) {
-        int low = 1, high =2*(int)1e9;
-        
-        int ab = lcm(a,b), bc = lcm(b,c), ca = lcm(c,a), abc = lcm(a,bc);
-        
-        while(low<=high){
-            int mid = low + (high-low)/2;
-            
-            int count = mid/a + mid/b + mid/c - mid/ab - mid/bc - mid/ca + mid/abc;
-            if(count>=n){
-                high = mid - 1;
+        int left = 1;
+        int right = Integer.MAX_VALUE;
+        int count = 0;
+        while (left < right) {
+            int middle = left + (right - left) / 2;
+            if (isUgly(middle, a, b, c, n)) {
+                right = middle;
             }
-            else low = mid + 1;
+            else
+                left = middle + 1;
         }
-        return low;
+        return left;
     }
-    private int lcm(int x,int y){
-        int a = x, b = y; 
-        while(a!=0){
-            int t = a;
-            a = b%a;
-            b = t;
-        }
-        int ans = 0;
-        try{
-            ans = (x>y) ? Math.multiplyExact(y,(x/b)) : Math.multiplyExact(x,(y/b));  // x*y/gcd(x,y)
-        }catch(Exception e){
-            ans = Integer.MAX_VALUE;
-        }
-        return ans;
+    public boolean isUgly(long middle, long a, long b, long c, long n) {
+        return (int) (middle/a + middle/b + middle/c - middle/lcm(a, b) - middle/lcm(b, c) - middle/lcm(c, a) + middle/lcm(a, lcm(b, c))) >= n;
+    }
+    public long gcd(long a, long b) {
+        if (a == 0)
+            return b;
+        else return gcd(b%a, a);
+    }
+    public long lcm(long a, long b) {
+        return a * b / (gcd(a, b)); 
     }
 }
