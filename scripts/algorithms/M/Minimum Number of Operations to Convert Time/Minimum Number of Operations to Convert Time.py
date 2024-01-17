@@ -1,11 +1,18 @@
+// Runtime: 34 ms (Top 83.44%) | Memory: 17.40 MB (Top 22.74%)
+
 class Solution:
-    def HHMMToMinutes(self, s: str) -> int:
-        return int(s[0:2])*60 + int(s[3:5])
     def convertTime(self, current: str, correct: str) -> int:
-        diff = self.HHMMToMinutes(correct) - self.HHMMToMinutes(current)
-        order = [60,15,5,1]
-        ops = 0
-        for i in range(0,4):
-            ops+=int(diff/order[i])
-            diff%=order[i]
-        return ops
+        def get_time(t):
+            hh, mm = t.split(':')
+            return int(hh) * 60 + int(mm)
+        
+        current, correct = get_time(current), get_time(correct)
+        operations = 0
+        diff = correct - current
+        
+        for mins in [60, 15, 5, 1]:
+            quotient, remainder = divmod(diff, mins)
+            operations += quotient
+            diff = remainder
+                
+        return operations
