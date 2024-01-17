@@ -1,98 +1,68 @@
-// Runtime: 938 ms (Top 33.33%) | Memory: 118 MB (Top 71.11%)
+// Runtime: 161 ms (Top 97.83%) | Memory: 45.80 MB (Top 93.48%)
 
 class Solution {
-
-    HashMap<String , HashSet<Integer>> cache ;
-
     public int scoreOfStudents(String s, int[] answers) {
-
-        cache = new HashMap();
-        HashSet<Integer> total_possible_ans = getPossibleAns(s);
-
-        int correct_ans = getCorrectAns(s);
-
-        int total_score = 0 ;
-        for(int i=0 ; i<answers.length ; i++){
-            if(answers[i] == correct_ans){
-                total_score += 5 ;
-            }else if(total_possible_ans.contains(answers[i])){
-                total_score += 2 ;
+        BitSet[][] ok = new BitSet[32][32];
+        solve(0, s.length()-1, s, ok);
+        int ans = 0, correct = eval(s);
+        for (int n : answers){
+            if (correct == n){
+                ans += 5;
+            }else if (ok[0][s.length()-1].get(n)){
+                ans += 2;
             }
         }
-
-        return total_score ;
+        return ans;
     }
 
-    public HashSet<Integer> getPossibleAns(String s){
-
-        if(cache.containsKey(s)){
-            return cache.get(s) ;
+    private BitSet solve(int lo, int hi, String s, BitSet[][] memo){
+        if (memo[lo][hi] != null){ // memo
+            return memo[lo][hi];
         }
-
-        HashSet<Integer> possible_ans = new HashSet() ;
-
-        for(int i = 0 ; i<s.length() ; i++){
-
-            char cur = s.charAt(i) ;
-            HashSet<Integer> left = new HashSet() ;
-            HashSet<Integer> right = new HashSet() ;
-
-            if(cur == '+' || cur == '*'){
-                left = getPossibleAns(s.substring(0 , i));
-                right = getPossibleAns(s.substring(i+1));
-            }
-
-            for(Integer l : left){
-                for(Integer r : right){
-                    if(cur == '+'){
-                        if(l+r > 1000) continue ; // skiping for ans that are greater than 1000
-                        possible_ans.add(l+r);
-                    }else if(cur == '*'){
-                        if(l*r > 1000) continue ; // skiping for ans that are greater than 1000
-                        possible_ans.add(l*r);
+        BitSet cur = new BitSet();
+        if (lo == hi){ // base case -> number itself [0 - 9]
+            cur.set(s.charAt(lo) - '0');
+            return memo[lo][hi]=cur;
+        }
+        for (int i = lo; i <= hi; i++){
+            if (s.charAt(i) == '+' || s.charAt(i) == '*'){
+                BitSet l = solve(lo, i-1, s, memo); // left
+                BitSet r = solve(i+1, hi, s, memo); // right
+                for (int j = l.nextSetBit(0); j >= 0; j = l.nextSetBit(j+1)){
+                    for (int k = r.nextSetBit(0); k >= 0; k = r.nextSetBit(k+1)){
+                        int val = s.charAt(i) == '+'? j+k:j*k;
+                        if (val > 1000){
+                            break;
+                        }
+                        cur.set(val);
                     }
                 }
             }
         }
-
-        if(possible_ans.isEmpty() && s.length() <= 1){
-            possible_ans.add(Integer.parseInt(s));
-        }
-
-        cache.put(s , possible_ans);
-
-        return possible_ans ;
+        return memo[lo][hi]=cur;
     }
 
-    public int getCorrectAns(String s) {
-
-        Stack<Integer> stack = new Stack() ;
-
-        for(int i = 0 ; i<s.length() ; i++){
-
-            // push only integers into stack
-            if(s.charAt(i) != '+' && s.charAt(i) != '*'){
-                stack.push(Character.getNumericValue(s.charAt(i))) ;
-            }
-
-            // If operator is '*' , then take the last element from stack and multiply with next element
-            // Also push into stack , and then increment i also , to avoid pushing the same next element into stack again
-            if(s.charAt(i) == '*'){
-                int cur = stack.pop();
-                int next = Character.getNumericValue(s.charAt(i+1)) ;
-                stack.push(cur * next);
-                i++ ;
+    private int eval(String s){
+        Deque<Integer> stack = new ArrayDeque<>();
+        Deque<Character> op = new ArrayDeque<>();
+        for(char ch : s.toCharArray()){
+            if (ch == '+' || ch == '*'){
+                while(!op.isEmpty() && (ch == '+' || op.peek() == '*')){
+                    char w = op.pop();
+                    int r = stack.pop(), l = stack.pop();
+                    stack.push(w == '+'? l + r : l * r);
+                }
+                op.push(ch);
+            }else{
+                stack.push(ch-'0');
             }
         }
-
-        // Now sum all the element in the stack to get result for '+' operator
-        int total_sum = stack.pop() ;
-
-        while(!stack.isEmpty()){
-            total_sum += stack.pop() ;
+        while(!op.isEmpty()){
+            char w = op.pop();
+            int r = stack.pop(), l = stack.pop();
+            stack.push(w == '+'? l + r : l * r);
         }
 
-        return total_sum ;
+        return stack.pop();
     }
-
 }
