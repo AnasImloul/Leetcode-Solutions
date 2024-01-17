@@ -1,20 +1,14 @@
+// Runtime: 35 ms (Top 84.03%) | Memory: 17.30 MB (Top 39.5%)
+
 class Solution:
     def minSwapsCouples(self, row: List[int]) -> int:
-        count = 0
-        for i in range(0, len(row)-2, 2):
-            idx = i+1
-            if(row[i]%2 == 0):
-                n = (row[i] + 2)//2
-                newNo = 2*n - 1
-            else:
-                n = (row[i] + 1) //2;
-                newNo = 2*n - 2
-            for j in range(i, len(row)):
-                if row[j] == newNo:
-                    idx = j
-                    break
-            if idx != i+1:
-                count += 1
-            row[idx], row[i+1] = row[i+1], row[idx]
-        return count
-		```
+        loc = {x: i for i, x in enumerate(row)}
+        ans = 0
+        for i in range(0, len(row), 2): 
+            p = row[i] - 1 if row[i]&1 else row[i]+1
+            if row[i+1] != p: 
+                ans += 1
+                ii = loc[p]
+                loc[row[i+1]], loc[row[ii]] = loc[row[ii]], loc[row[i+1]] # swap mappings
+                row[i+1], row[ii] = row[ii], row[i+1] # swap values 
+        return ans 
