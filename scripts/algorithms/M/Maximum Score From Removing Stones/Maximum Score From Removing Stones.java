@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.30 MB (Top 77.67%)
+
 class Solution {
     public int maximumScore(int a, int b, int c) {
         // Make sure a <= b <= c
