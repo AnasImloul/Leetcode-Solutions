@@ -1,45 +1,70 @@
-# Runtime: 170 ms (Top 85.91%) | Memory: 15.7 MB (Top 23.94%)
+// Runtime: 70 ms (Top 98.46%) | Memory: 18.30 MB (Top 33.85%)
+
 class Solution:
     def minDays(self, grid: List[List[int]]) -> int:
-        cnt = 0
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if grid[i][j]:
-                    cnt += 1 # count the number of elements
-                    root = (i, j) # assign the root node for the graph
+        rows, cols = len(grid), len(grid[0])
 
-        if cnt <= 1 : return cnt # no elements in the map
+        disc_time = [[-1 for _ in range(cols)] for _ in range(rows)]
+        low_value = [[-1 for _ in range(cols)] for _ in range(rows)]
+        parents = [[(-1, -1) for _ in range(cols)] for _ in range(rows)]
+        is_ap = [[False for _ in range(cols)] for _ in range(rows)]
+        dirs = [(1, 0), (0, 1), (-1, 0), (0, -1)]
 
-        vis, low, time, res = {root}, {}, {}, []
+        time = 0
+        has_ap = False
+        def dfs(i, j):
+            if grid[i][j] == 0:
+                return
+            nonlocal time
+            nonlocal has_ap
+            disc_time[i][j] = time
+            low_value[i][j] = time
+            time += 1
 
-        # find whether articulation points are present in the matrix
-        def articulation_points(curr, parent):
-            low[curr] = time[curr] = len(vis)
-            children = 0
-            i, j = curr
+            child = 0
+            for di, dj in dirs:
+                ni, nj = i + di, j + dj
+                if not (0 <= ni < rows) or not (0 <= nj < cols):
+                    continue
+                if grid[ni][nj] != 1:
+                    continue
 
-            for x, y in [(i+1, j), (i-1, j), (i, j+1), (i, j-1)]:
-                if (x, y) == parent : continue
+                if disc_time[ni][nj] == -1: # not visited
+                    child += 1
+                    parents[ni][nj] = (i, j)
+                    dfs(ni, nj)
+                    low_value[i][j] = min(low_value[i][j], low_value[ni][nj])
 
-                if 0<=x<len(grid) and 0<=y<len(grid[0]) and grid[x][y]:
-                    if (x, y) not in vis:
-                        vis.add((x,y))
-                        articulation_points((x,y), curr)
-                        low[curr] = min(low[curr], low[(x, y)])
-                        children += 1
-                        if low[(x, y)] >= time[(curr)] and parent!=(-1, -1):
-                            res.append([i, j])
-                    else:
-                        low[curr] = min(low[curr], time[(x, y)])
+                    if parents[i][j] == (-1, -1) and child > 1:
+                        is_ap[i][j] = True
+                        has_ap = True
 
-                if parent == (-1, -1) and children > 1:
-                    res.append([x, y])
+                    if parents[i][j] != (-1, -1) and low_value[ni][nj] >= disc_time[i][j]:
+                        is_ap[i][j] = True
+                        has_ap = True
+                elif (ni, nj) != parents[i][j]:
+                    low_value[i][j] = min(low_value[i][j], disc_time[ni][nj])
 
-        articulation_points(root, (-1, -1))
+        sccs = 0
+        num_ones = 0
+        for i in range(rows):
+            for j in range(cols):
+                if grid[i][j] == 1:
+                    num_ones += 1
+                if disc_time[i][j] == -1 and grid[i][j] == 1:
+                    dfs(i, j)
+                    sccs += 1
 
-        if len(vis) != cnt: # if the matrix is disconnected beforehand
+
+        if sccs > 1:
             return 0
-        elif res: # if there are any articulation points
+        elif has_ap:
             return 1
-        else: # worst case, no articulation points
-            return 2
+        else:
+            if num_ones == 1:
+                return 1
+            elif num_ones == 0:
+                return 0
+        return 2
+
+
