@@ -1,22 +1,19 @@
+// Runtime: 4 ms (Top 86.82%) | Memory: 43.20 MB (Top 75.26%)
+
 class Solution {
     public String simplifyPath(String path) {
-        String[] paths = path.split("/");
-        Stack<String> st=new Stack<>();
-        for(String dir:paths){
-            if(dir.equals(".") || dir.length()==0) continue;
-            else{
-                if(!st.isEmpty() && dir.equals(".."))
-                    st.pop();
-                else if(st.isEmpty() && dir.equals(".."))
-                    continue;
-                else st.push(dir);
+        Deque<String> dirOrFiles = new ArrayDeque<>();
+        for (String dirOrFile : path.split("/")) {
+            if (!dirOrFiles.isEmpty() && dirOrFile.equals("..")) {
+                dirOrFiles.removeLast();
+            } else if (!dirOrFile.equals(".") && !dirOrFile.equals("") && !dirOrFile.equals("..")) {
+                dirOrFiles.addLast(dirOrFile);
             }
         }
-        StringBuilder sb=new StringBuilder();
-        if(st.isEmpty()) return "/";
-        for(String s:st){
-            sb.append("/"); sb.append(s);
+        StringBuilder simplified_path = new StringBuilder();
+        for (String dirOrFile : dirOrFiles) {
+            simplified_path.append("/").append(dirOrFile);
         }
-        return sb.toString();
+        return simplified_path.length() == 0 ? "/" : simplified_path.toString();
     }
 }
