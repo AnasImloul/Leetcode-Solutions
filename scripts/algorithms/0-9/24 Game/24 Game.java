@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 96.55%) | Memory: 40.80 MB (Top 91.57%)
+
 // 0 ms. 100%
 class Solution {
     private static final double EPS = 1e-6;
