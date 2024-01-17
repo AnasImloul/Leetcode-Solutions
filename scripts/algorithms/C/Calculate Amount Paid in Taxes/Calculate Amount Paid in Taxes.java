@@ -1,13 +1,22 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 45.10 MB (Top 7.1%)
+
 class Solution {
     public double calculateTax(int[][] brackets, int income) {
-        double ans=0;
-        int pre=0;
-        for(int[] arr : brackets){
-            int val=arr[0]; arr[0]-=pre;  pre=val;
-            ans+=(double)(Math.min(income,arr[0])*arr[1])/100;
-            income-=arr[0];
-            if(income<=0){ break; }
+        int prevIncome = 0;
+        double res = 0;
+        for(int i =0; i<brackets.length; i++){
+            double diff = brackets[i][0] - prevIncome;
+            if(diff > income){
+                res += (income*brackets[i][1]/100.0);
+                income = 0;
+            }else{
+                res += (diff*brackets[i][1])/100;
+                income -= diff;
+            }
+            prevIncome = brackets[i][0];
+            if(income == 0) return res;
+            //System.out.println(prevIncome+" "+res+ " "+ income +" "+ diff + "  "+(diff*brackets[i][1]/100));
         }
-        return ans;
+        return res;
     }
 }
