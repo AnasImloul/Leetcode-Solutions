@@ -1,3 +1,5 @@
+// Runtime: 71 ms (Top 88.89%) | Memory: 59.70 MB (Top 11.11%)
+
 var getXORSum = function(arr1, arr2) {
     // (x & 2) xor (x & 3) =[ !(x&2) & (x&3) ] OR  [ (x&2) & !(x&3) ]
 	// = [ (!x || !2 ) & (x&3) ] OR [ (x&2) & (!x || !3) ]
