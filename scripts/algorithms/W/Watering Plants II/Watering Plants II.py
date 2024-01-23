@@ -1,25 +1,15 @@
+// Runtime: 591 ms (Top 95.38%) | Memory: 31.60 MB (Top 92.31%)
+
 class Solution:
     def minimumRefill(self, plants: List[int], capacityA: int, capacityB: int) -> int:
-        
-        Alice , Bob  = capacityA, capacityB
-        
-        res, i, j = 0, 0, len(plants)-1
-        
-        while i < j:
-            if Alice >= plants[i]:
-                Alice -= plants[i]
-            else:
-                res += 1
-                Alice = capacityA - plants[i]
-            
-            if Bob >= plants[j]:
-                Bob -= plants[j]
-            else:
-                res += 1
-                Bob = capacityB - plants[j]
-                
-            i += 1    
-            j -= 1
-        
-        return res + 1 if i == j and Alice < plants[i] and Bob < plants[i] else res
-		
+        ans = 0 
+        lo, hi = 0, len(plants)-1
+        canA, canB = capacityA, capacityB
+        while lo < hi: 
+            if canA < plants[lo]: ans += 1; canA = capacityA
+            canA -= plants[lo]
+            if canB < plants[hi]: ans += 1; canB = capacityB
+            canB -= plants[hi]
+            lo, hi = lo+1, hi-1
+        if lo == hi and max(canA, canB) < plants[lo]: ans += 1
+        return ans 
