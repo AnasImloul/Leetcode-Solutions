@@ -1,21 +1,13 @@
-class Solution(object):
-    def find132pattern(self, nums):
-        # Base Condition...
-        if len(nums) < 3:
-            return False
-        m = float('-inf')
-        # Initialise a empty stack...
-        stack = []
-        # Run a Loop from last to first index...
-        for i in range(len(nums)-1, -1, -1):
-            # If m is greater than nums[i], return true...
-            if nums[i] < m:
+// Runtime: 476 ms (Top 99.36%) | Memory: 36.40 MB (Top 85.77%)
+
+class Solution:
+    def find132pattern(self, nums: List[int]) -> bool:
+        stack, third = [], float('-inf')
+        
+        for num in reversed(nums):
+            if num < third:
                 return True
-            # If stack is not empty &  nums[i] is greater than the top element of stack, then pop the element...
-            else:
-                while stack and stack[-1] < nums[i]:
-                    m = stack.pop()
-            # Otherwise, append nums[i] into stack...
-            stack.append(nums[i])
-        # If the condition is not satisfied, return false.
+            while stack and stack[-1] < num:
+                third = stack.pop()
+            stack.append(num)
         return False
