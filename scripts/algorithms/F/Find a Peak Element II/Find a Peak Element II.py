@@ -1,3 +1,5 @@
+// Runtime: 887 ms (Top 94.77%) | Memory: 48.10 MB (Top 59.48%)
+
 class Solution:
     def findPeakGrid(self, mat: List[List[int]]) -> List[int]:
         m, n = len(mat), len(mat[0])
