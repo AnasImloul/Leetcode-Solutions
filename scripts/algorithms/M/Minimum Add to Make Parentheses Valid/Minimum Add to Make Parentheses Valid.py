@@ -1,17 +1,14 @@
-# Runtime: 53 ms (Top 37.79%) | Memory: 13.8 MB (Top 96.01%)
+// Runtime: 29 ms (Top 94.21%) | Memory: 16.40 MB (Top 63.56%)
+
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
-        stack = []
-
-        for parenthese in s:
-            if parenthese == "(":
-                stack.append("(")
-
+        l, r = list(), list()
+        for i in s:
+            if i == "(":
+                l.append(i)
             else:
-                if not stack or stack[-1] == ")":
-                    stack.append(")")
-
-                if stack and stack[-1] == "(":
-                    stack.pop()
-
-        return len(stack)
+                if l:
+                    l.pop()
+                else:
+                    r.append(i)
+        return len(l) + len(r)
