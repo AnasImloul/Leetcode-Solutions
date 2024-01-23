@@ -1,56 +1,45 @@
-from collections import Counter, deque
+// Runtime: 35 ms (Top 78.84%) | Memory: 16.70 MB (Top 50.21%)
 
 class Solution:
     def countOfAtoms(self, formula: str) -> str:
-        """
-        parser:
-            formula: elem {count} formula
-            elem: term | ( formula )
-            term: [A-Z](a-z)+
-            count: [0-9]+
-        """
+        stack, elem, i = [{}], "", 0
         
+        while i < len(formula):
+            # Extract the full element name
+            if formula[i].isupper():
+                j = i + 1
+                while j < len(formula) and formula[j].islower():
+                    j += 1
+                elem = formula[i:j]
+                i = j
+                # If no digits follow the element, assign a count of 1
+                if i == len(formula) or not formula[i].isdigit() and not formula[i].islower():
+                    stack[-1][elem] = stack[-1].get(elem, 0) + 1
+            # Extract the count
+            elif formula[i].isdigit():
+                j = i
+                while j < len(formula) and formula[j].isdigit():
+                    j += 1
+                count = int(formula[i:j])
+                stack[-1][elem] = stack[-1].get(elem, 0) + count
+                i = j
+            # Handle open parentheses by pushing a new dict
+            elif formula[i] == '(':
+                stack.append({})
+                i += 1
+            # Handle close parentheses by merging with the previous dict
+            elif formula[i] == ')':
+                i += 1
+                j = i
+                while j < len(formula) and formula[j].isdigit():
+                    j += 1
+                multiplier = int(formula[i:j] or 1)
+                top = stack.pop()
+                for elem, count in top.items():
+                    stack[-1][elem] = stack[-1].get(elem, 0) + count * multiplier
+                i = j
         
-        def parse_formula(dq, allCount=Counter()):
-            lhs = parse_elem(dq)
-            count = 1
-            while dq and dq[0].isdigit():
-                count = parse_count(dq)
-            for k in lhs.keys():
-                allCount[k] += lhs[k] * count
+        # Convert the result to the desired format
+        atoms = sorted(stack[0].items())
+        return ''.join([atom + (str(count) if count > 1 else '') for atom, count in atoms])
 
-            if dq and dq[0] not in ')':
-                return parse_formula(dq, allCount)
-            else:
-                return allCount
-
-        def parse_elem(dq):
-            if dq and dq[0] == '(':
-                dq.popleft()
-                res = parse_formula(dq, Counter())
-                dq.popleft()
-                return res
-            else:
-                elem = ''
-                if dq and dq[0].isupper():
-                    elem += dq.popleft()
-                    while dq and dq[0].islower():
-                        elem += dq.popleft()
-                return {elem: 1}
-
-        def parse_count(dq):
-            c = 0
-            while dq and dq[0].isdigit():
-                c = c * 10 + int(dq.popleft())
-            return c
-
-        formula = deque(formula)
-        count_result = parse_formula(formula)
-        result = ''
-        for k in sorted(count_result.keys()):
-            v = count_result[k]
-            if v == 1:
-                result += k
-            else:
-                result += f"{k}{count_result[k]}"
-        return result
