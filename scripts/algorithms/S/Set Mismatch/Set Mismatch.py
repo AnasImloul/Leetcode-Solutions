@@ -1,22 +1,20 @@
-class Solution {
-public:
-    vector<int> findErrorNums(vector<int>& nums) 
-    {
-        unordered_map<int,int> m;
-        int p,q;
-        for(auto &x:nums)
-        {
-            m[x]++;
-            if(m[x]==2)
-            {
-                p=x;
-                break;
-            }
-        }
-        int n=nums.size();
-        q=(n*(n+1))/2-accumulate(nums.begin(),nums.end(),0)+p;
-        return {p,q};
-        
-    }
-};
-// if you like the solution plz upvote.
+// Runtime: 150 ms (Top 93.95%) | Memory: 18.00 MB (Top 86.53%)
+
+class Solution:
+    def findErrorNums(self, nums):
+        n = len(nums)
+        v = [0] * (n + 1)
+        missing, duplicate = 0, 0
+
+        for num in nums:
+            v[num] += 1
+
+        for i in range(1, len(v)):
+            if v[i] == 2:
+                duplicate = i
+            if v[i] == 0:
+                missing = i
+
+        return [duplicate, missing]
+
+
