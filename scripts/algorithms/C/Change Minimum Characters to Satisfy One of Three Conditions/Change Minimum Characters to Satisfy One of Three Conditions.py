@@ -1,25 +1,15 @@
+// Runtime: 115 ms (Top 83.64%) | Memory: 17.50 MB (Top 38.79%)
+
 class Solution:
     def minCharacters(self, a: str, b: str) -> int:
-        counter_a = Counter(ord(ch) - ord('a') for ch in a)
-        counter_b = Counter(ord(ch) - ord('a') for ch in b)
-        # keys will go from 0 to 25
+        pa, pb = [0]*26, [0]*26
+        for x in a: pa[ord(x)-97] += 1
+        for x in b: pb[ord(x)-97] += 1
         
-        # condition 3
-        # min cost to turn a consisting of single character only is len(a) - max_freq_of_character
-        unique = len(a) - max(counter_a.values()) + len(b) - max(counter_b.values())
-        
-        a_less_than_b = b_less_than_a = len(a) + len(b)
-        
-        # counter maintains a prefix sum and it adds up the frequency of all previous letters upto the letter being tried as boundary letter.
-        for i in range(1,26):
-            counter_a[i] += counter_a[i-1]
-            counter_b[i] += counter_b[i-1]
-            # cost to turn a less than b
-            a_less_than_b = min(a_less_than_b, len(a) - counter_a[i] + counter_b[i])
-            b_less_than_a = min(b_less_than_a, len(b) - counter_b[i] + counter_a[i])
-        
-        
-
-        return min(a_less_than_b, b_less_than_a, unique)
-            
-        ```
+        ans = len(a) - max(pa) + len(b) - max(pb) # condition 3
+        for i in range(25): 
+            pa[i+1] += pa[i]
+            pb[i+1] += pb[i]
+            ans = min(ans, pa[i] + len(b) - pb[i]) # condition 2
+            ans = min(ans, len(a) - pa[i] + pb[i]) # condition 1
+        return ans 
