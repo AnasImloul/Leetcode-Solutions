@@ -1,21 +1,18 @@
-# Runtime: 577 ms (Top 67.14%) | Memory: 27 MB (Top 83.15%)
+// Runtime: 314 ms (Top 86.56%) | Memory: 29.90 MB (Top 66.7%)
 
 class Solution:
     def maxScore(self, cardPoints: List[int], k: int) -> int:
-        total_cards = len(cardPoints)
+        n = len(cardPoints)
         total = sum(cardPoints)
-        window_size = total_cards - k
-        window_total = 0
-
-        if total_cards == k:
-            return total
-
-        for i in range(total_cards - k):
-            window_total += cardPoints[i]
-        max_diff = total - window_total
-        for i in range((total_cards - k), total_cards):
-            window_total += cardPoints[i]
-            window_total -= cardPoints[i-window_size]
-            if total - window_total > max_diff:
-                max_diff = total - window_total
-        return max_diff
+        
+        remaining_length = n - k
+        subarray_sum = sum(cardPoints[:remaining_length])
+        
+        min_sum = subarray_sum
+        for i in range(remaining_length, n):
+            # Update the sliding window sum to the subarray ending at index i
+            subarray_sum += cardPoints[i]
+            subarray_sum -= cardPoints[i - remaining_length]
+            # Update min_sum to track the overall minimum sum so far
+            min_sum = min(min_sum, subarray_sum)
+        return total - min_sum
