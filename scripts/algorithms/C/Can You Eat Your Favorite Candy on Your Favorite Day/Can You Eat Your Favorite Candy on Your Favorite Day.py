@@ -1,11 +1,9 @@
+// Runtime: 1128 ms (Top 98.57%) | Memory: 75.00 MB (Top 57.14%)
+
 class Solution:
     def canEat(self, candiesCount: List[int], queries: List[List[int]]) -> List[bool]:
-        A = list(accumulate(candiesCount))
-        res = []
-        for type, day, cap in queries:
-            if type == 0:
-                res.append(A[0] > day)
-            else:
-                to_be_eaten = A[type-1] + 1
-                res.append(to_be_eaten <= ((day + 1) * cap) and A[type] > day)
-        return res
+                                                                  
+        pref = list(accumulate(candiesCount, initial = 0))         
+        
+        return [pref[candy]//cap <= day < pref[candy + 1]
+                           for candy, day, cap in queries]
