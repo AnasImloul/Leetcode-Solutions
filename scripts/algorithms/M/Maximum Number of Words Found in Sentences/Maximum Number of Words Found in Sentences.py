@@ -1,4 +1,11 @@
-# Runtime: 75 ms (Top 31.13%) | Memory: 14 MB (Top 42.55%)
+// Runtime: 43 ms (Top 84.42%) | Memory: 16.70 MB (Top 56.32%)
+
 class Solution:
-    def mostWordsFound(self, ss: List[str]) -> int:
-        return max(s.count(" ") for s in ss) + 1
+    def mostWordsFound(self, sentences: List[str]) -> int:
+        mx=0
+        for i in sentences:
+            c=i.split()
+            if len(c)>mx:
+                mx=len(c)
+        return mx
+		
