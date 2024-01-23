@@ -1,19 +1,16 @@
+// Runtime: 708 ms (Top 81.36%) | Memory: 29.90 MB (Top 95.48%)
+
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
-        n = len(arr)
-        medInd = (n-1)//2
-        arr = sorted(arr)
-        med = arr[medInd]
-        
-        start, end = 0, n-1
+        arr.sort()
+        mid = arr[(len(arr)-1)//2]
         ans = []
-        while start <= end and len(ans) < k:
-            if abs(med - arr[end]) < abs(med - arr[start]):
-                ans.append(arr[start])
-                start += 1
-            else:# abs(med - arr[end]) >= abs(med - arr[start]):
-                # <= because end is always bigger in a sorted array
-                ans.append(arr[end])
-                end -= 1
-        
-        return ans
+        l ,r = 0, len(arr)-1
+        while(l <= r):
+            if abs(arr[l] - mid) > abs(arr[r]-mid)  :
+                ans.append(arr[l])
+                l+=1
+            else:
+                ans.append(arr[r])
+                r-=1
+        return ans[:k]
