@@ -1,27 +1,33 @@
+// Runtime: 114 ms (Top 97.78%) | Memory: 16.60 MB (Top 73.33%)
+
 class Solution:
     def maximumBobPoints(self, numArrows: int, aliceArrows: List[int]) -> List[int]:
-        self.bestScore = 0
-        self.bestBobArrows = None
-        
-        def backtracking(k, remainArrows, score, bobArrows):
-            if k == 12:
-                if score > self.bestScore:
-                    self.bestScore = score
-                    self.bestBobArrows = bobArrows[::]
+        max_score = [0, None]
+        def calc(i, remaining, score, arrows):
+		    # Base case. Update max score.
+            if remaining == 0 or i == -1:
+                if score > max_score[0]:
+                    max_score[0] = score
+                    max_score[1] = arrows[:]
                 return
-            
-            backtracking(k+1, remainArrows, score, bobArrows)  # Bob loses
-            
-            # Bob wins
-            arrowsNeeded = aliceArrows[k] + 1
-            if remainArrows >= arrowsNeeded:
-                old = bobArrows[k]
-                bobArrows[k] = arrowsNeeded  # set new
-                backtracking(k+1, remainArrows - arrowsNeeded, score + k, bobArrows)
-                bobArrows[k] = old  # backtrack
-                
-        backtracking(0, numArrows, 0, [0] * 12)
-		# In case of having remain arrows then it means in all sections Bob always win 
-        # then we can distribute the remain to any section, here we simple choose first section.
-        self.bestBobArrows[0] += numArrows - sum(self.bestBobArrows)
-        return self.bestBobArrows
+
+			# Special handling for the last section. Use up all the arrows.
+            if i == 0:
+                arrows[i] = remaining
+                calc(i - 1, 0, score + i, arrows)
+                arrows[i] = 0
+                return
+
+		    # Try to compete with Alice if there are enough arrows.
+            arrowsNeeded = aliceArrows[i] + 1
+            if remaining >= arrowsNeeded:
+                arrows[i] = arrowsNeeded
+                calc(i - 1, remaining - arrowsNeeded, score + i, arrows)
+                arrows[i] = 0
+
+            # Skip this section and go to the next section.
+            calc(i - 1, remaining, score, arrows)
+        
+		# Kick off the recursion
+        calc(len(aliceArrows) - 1, numArrows, 0, [0 for _ in aliceArrows])
+        return max_score[1]
