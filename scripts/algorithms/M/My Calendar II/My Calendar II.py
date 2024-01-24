@@ -1,3 +1,5 @@
+// Runtime: 175 ms (Top 97.99%) | Memory: 17.50 MB (Top 58.54%)
+
 class Node:
     def __init__(self, start, end, val):
         self.start = start
