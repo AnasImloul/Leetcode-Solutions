@@ -1,16 +1,21 @@
+// Runtime: 796 ms (Top 99.64%) | Memory: 29.60 MB (Top 94.86%)
+
 class Solution:
-    def maximumUniqueSubarray(self, nums: List[int]) -> int:
-        max_sum = 0
-        seen = set()
-        for l in range(len(nums)):
-            seen.clear()
-            curr_sum = 0
-            r = l
-            while r < len(nums):
-                if nums[r] in seen:
-                    break
-                curr_sum += nums[r]
-                seen.add(nums[r])
-                r += 1
-            max_sum = max(max_sum, curr_sum)
-        return max_sum
+	def maximumUniqueSubarray(self, nums: List[int]) -> int:
+		low = 0
+		visited = set()
+		result = 0
+		curSum = 0
+		for high in range(len(nums)):
+			while nums[high] in visited:
+				visited.remove(nums[low])
+				curSum -= nums[low]
+				low+=1
+
+			visited.add(nums[high])
+			curSum += nums[high]
+
+			if curSum > result:
+				result = curSum
+
+		return result
