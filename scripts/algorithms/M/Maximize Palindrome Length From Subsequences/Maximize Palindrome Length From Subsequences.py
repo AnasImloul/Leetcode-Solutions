@@ -1,22 +1,19 @@
-# Runtime: 3044 ms (Top 67.44%) | Memory: 67.7 MB (Top 72.09%)
+// Runtime: 932 ms (Top 96.15%) | Memory: 70.20 MB (Top 90.38%)
 
 class Solution:
-    def longestPalindrome(self, word1: str, word2: str) -> int:
-        s1 = word1 + word2
-        n = len(s1)
-        dp = [[0] * n for i in range(n)]
-        ans = 0
-        for i in range(n-1,-1,-1):
-        # mark every character as a 1 length palindrome
-            dp[i][i] = 1
-            for j in range(i+1,n):
-            # new palindrome is found
-                if s1[i] == s1[j]:
-                    dp[i][j] = dp[i+1][j-1] + 2
-                    # if the palindrome includes both string consider it as a valid
-                    if i < len(word1) and j >= len(word1):
-                        ans = max(ans,dp[i][j])
-                else:
-                    dp[i][j] = max(dp[i][j-1],dp[i+1][j])
-
-        return ans
+	def longestPalindrome(self, word1: str, word2: str) -> int:
+		res=0
+		new_word=word1+word2
+		n,mid=len(word1)+len(word2),len(word1)
+		dp=[[0]*n for _ in range(n)]
+		for i in range(n):
+			dp[i][i]=1
+		for l in range(n-2,-1,-1):
+			for r in range(l+1,n,1):
+				if new_word[l]==new_word[r]:
+					dp[l][r]=(dp[l+1][r-1] if r-1>=l+1 else 0)+2
+					if l<mid and r>=mid:
+						res=max(res,dp[l][r])
+				else:
+					dp[l][r]=max(dp[l+1][r],dp[l][r-1])
+		return res
