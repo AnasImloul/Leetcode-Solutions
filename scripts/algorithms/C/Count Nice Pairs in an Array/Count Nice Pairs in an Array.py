@@ -1,34 +1,15 @@
-const MOD = 1e9 + 7;
-const countNicePairs = (a) => {
-    let m = new Map();
-    let res = 0;
-    for (const e of a) {
-        let target = e - rev(e);
-        let cnt = m.get(target) || 0;
-        res += cnt;
-        m.set(target, cnt + 1);
-    }
-    return res % MOD;
-};
+// Runtime: 500 ms (Top 94.22%) | Memory: 26.90 MB (Top 76.37%)
 
-/* Another version
-const countNicePairs = (a) => {
-    let m = new Map();
-    let res = 0;
-    for (const e of a) {
-        let target = e - rev(e);
-        let cnt = m.get(target) + 1 || 1;
-        m.set(target, cnt);
-        res += cnt - 1;
-    }
-    return res % MOD;
-};
-*/
+class Solution:
+    def countNicePairs(self, nums: List[int]) -> int:
+        res = 0
+        count = {}
+        mod = 10**9 + 7
+        
+        for n in nums:
+            rev = int(str(n)[::-1])
+            cur = count.get(n - rev, 0)
+            res += cur
+            count[n - rev] = 1 + cur
 
-const rev = (num) => {
-    let s = num + '';
-    let res = '';
-    let n = s.length;
-    for (let i = n - 1; ~i; i--)  res += s[i];
-    return Number(res);
-};
+        return res % mod
