@@ -1,30 +1,30 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 41.60 MB (Top 38.18%)
+
 class Solution {
-    public String customSortString(String order, String s) {
-      if(s.length() <= 1) return s;
-      
-      StringBuilder finalString = new StringBuilder();
-      HashMap<Character, Integer> hm = new HashMap<>();
-      
-      for(int i = 0; i < s.length(); i++) {
-        char actualChar = s.charAt(i);
-        
-        if(order.indexOf(actualChar) == -1) {
-          finalString.append(actualChar);
-        } else {
-          hm.put(actualChar, hm.getOrDefault(actualChar, 0) + 1);
+    public String customSortString(String X, String Y) {
+        //char count of string Y
+        int[] charCount = new int[26];
+        for(char c : Y.toCharArray()){
+            charCount[c - 'a']++;
         }
-      }
-      
-      for(int i = 0; i < order.length(); i++) {
-        char actualChar = order.charAt(i);
         
-        if (hm.get(actualChar) != null){
-          for(int j = 0; j < hm.get(actualChar); j++) {
-            finalString.append(actualChar);
-          }
+        StringBuilder sb = new StringBuilder();
+        
+        //first store char in same order of String X
+        for(char c : X.toCharArray()){
+            while(charCount[c - 'a'] --> 0){
+                sb.append(c);
+            }
         }
-      }
-      
-      return finalString.toString(); 
+        
+        //now store remaining char of string Y
+        for(int i = 0; i < 26; i++){
+            char c = (char)('a' + i);
+            while(charCount[i] --> 0){
+                sb.append(c);
+            }
+        }
+        
+        return sb.toString();
     }
 }
