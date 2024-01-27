@@ -1,38 +1,27 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+// Runtime: 0 ms (Top 100.0%) | Memory: 44.10 MB (Top 76.35%)
+
 class Solution {
-    int element,count;
-    
+    private int count = 0;
+    private int result = 0;
+
     public int kthSmallest(TreeNode root, int k) {
-        inorderTraversal(root,k);
-        return element;
+        inorderTraversal(root, k);
+        return result;
     }
-    
-    
-    public void inorderTraversal(TreeNode root,int k){
-        if(root.left != null){
-            inorderTraversal(root.left,k);
+
+    private void inorderTraversal(TreeNode node, int k) {
+        if (node == null || count >= k) {
+            return;
         }
+
+        inorderTraversal(node.left, k);
+
         count++;
-        if(count==k){
-            element = root.val;
+        if (count == k) {
+            result = node.val;
+            return;
         }
-        
-        if(root.right != null){
-            inorderTraversal(root.right,k);
-        }
+
+        inorderTraversal(node.right, k);
     }
 }
