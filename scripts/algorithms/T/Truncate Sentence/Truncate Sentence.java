@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 41.30 MB (Top 77.37%)
+
 class Solution {
     public String truncateSentence(String s, int k) {
         int n = s.length();
