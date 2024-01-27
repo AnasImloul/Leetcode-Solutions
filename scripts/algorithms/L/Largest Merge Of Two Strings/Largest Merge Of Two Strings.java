@@ -1,3 +1,5 @@
+// Runtime: 18 ms (Top 92.79%) | Memory: 44.70 MB (Top 66.67%)
+
 class Solution {
     public String largestMerge(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
