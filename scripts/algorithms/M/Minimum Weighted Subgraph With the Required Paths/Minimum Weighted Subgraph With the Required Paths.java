@@ -1,3 +1,5 @@
+// Runtime: 105 ms (Top 87.23%) | Memory: 121.90 MB (Top 31.91%)
+
 class Solution {
     ArrayList<int[]>[] nextGraph, preGraph;
     
