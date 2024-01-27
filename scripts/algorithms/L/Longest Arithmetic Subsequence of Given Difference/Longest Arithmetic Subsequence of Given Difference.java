@@ -1,21 +1,23 @@
-// Runtime: 68 ms (Top 62.80%) | Memory: 77 MB (Top 54.94%)
-class Solution {
-    public int longestSubsequence(int[] arr, int difference) {
-        int max = 1;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            // find the target element using the current element and the given difference
-            int target = arr[i] - difference;
-            // find if an AP for the target element exists in map and its length (else default to 1 - each element is an AP)
-            int currAns = map.getOrDefault(target, 0) + 1;
-            // add the current answer to the map
-            // the amswer will override any previous answers with the same key (with an equal or greater answer)
-            // for eg, in this case: .......X.....X
-            // here X is the same number but the 2nd X will have an equal or larger AP sequence (logically)
-            map.put(arr[i], currAns);
-            // get max answer
-            max = Math.max(max, currAns);
+// Runtime: 41 ms (Top 77.18%) | Memory: 57.40 MB (Top 33.18%)
+
+class Solution
+{
+public
+    int longestSubsequence(int[] arr, int difference)
+    {
+        // Storing the final answer as 1
+        int length = arr.length, max_length = 1;
+        HashMap<Integer, Integer> Terms_till_now = new HashMap<>();
+        for (int i = 0; i < length; i++)
+        {
+            /*
+            Find the number of terms, till curr_element - difference , say terms
+            Mapping 1 + n to the current term of the sequence, i.e. curr_element
+            */
+            int terms = ((Terms_till_now.get(arr[i] - difference) == null) ? 0 : Terms_till_now.get(arr[i] - difference));
+            Terms_till_now.put(arr[i], 1 + terms);
+            max_length = Math.max(max_length, 1 + terms);
         }
-        return max;
+        return max_length;
     }
 }
