@@ -1,28 +1,23 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 42.10 MB (Top 56.52%)
+
 class Solution {
-    private int i = 0;
-    
-    public List<Integer> flipMatchVoyage(TreeNode root, int[] voyage) {
-        List<Integer> list = new ArrayList<>();
-        flipMatchVoyage(root,voyage,list);
-        return list;
+    int vix = 0;
+    List<Integer> ans = new ArrayList<>();
+    private void dfs(TreeNode node, int[] V) {
+        if (node == null || (ans.size() != 0 && ans.get(0) == -1)) return;
+        if (node.val != V[vix++])
+            ans = new ArrayList<Integer>(Arrays.asList(-1));
+        else if (node.left != null && node.left.val != V[vix]) {
+            ans.add(node.val);
+            dfs(node.right, V);
+            dfs(node.left, V);
+        } else {
+            dfs(node.left, V);
+            dfs(node.right, V);
+        }
     }
-    
-    private void flipMatchVoyage(TreeNode root, int[] voyage,List<Integer> list) {
-        if(root == null || list.contains(-1)){
-            return;
-        }
-        if(root.val != voyage[i++]){
-            list.clear();
-            list.add(-1);
-            return;
-        }
-        if(root.left != null && root.right != null && root.left.val != voyage[i]){
-            list.add(root.val);
-            flipMatchVoyage(root.right,voyage,list);
-            flipMatchVoyage(root.left,voyage,list);
-            return;
-        }
-        flipMatchVoyage(root.left,voyage,list);    
-        flipMatchVoyage(root.right,voyage,list);
+    public List<Integer> flipMatchVoyage(TreeNode root, int[] V) {
+        dfs(root, V);
+        return ans;
     }
 }
