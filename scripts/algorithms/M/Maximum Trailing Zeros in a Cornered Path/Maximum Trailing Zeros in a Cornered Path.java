@@ -1,113 +1,107 @@
+// Runtime: 84 ms (Top 75.61%) | Memory: 82.50 MB (Top 26.83%)
+
 class Solution {
     public int maxTrailingZeros(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
-        int[][][] dph = new int[m][n][3];
-        int[][][] dpv = new int[m][n][3];
-        int hmax0 = 0;
-        int vmax0 = 0;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                int curr = grid[i][j];
-                int two = 0;
-                int five = 0;
-                if (j >= 1) {
-                    two = dph[i][j-1][1];
-                    five = dph[i][j-1][2];
-                }
-                while (curr > 0 && curr % 2 == 0) {
-                    two++;
-                    curr /= 2;
-                }
-                while (curr > 0 && curr % 5 == 0) {
-                    five++;
-                    curr /= 5;
-                }
-                dph[i][j][1] = two;
-                dph[i][j][2] = five;
-                dph[i][j][0] = Math.min(dph[i][j][1], dph[i][j][2]);
+        int[][] two = new int[m][n];
+        int[][] five = new int[m][n];
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
+                two[i][j] = getFactorNum(grid[i][j], 2);
+                five[i][j] = getFactorNum(grid[i][j], 5);
             }
-            hmax0 = Math.max(hmax0, dph[i][n-1][0]);
         }
         
-        for (int j = 0; j < n; j++) {
-            for (int i = 0; i < m; i++) {
-                int curr = grid[i][j];
-                int two = 0;
-                int five = 0;
-                if (i >= 1) {
-                    two = dpv[i-1][j][1];
-                    five = dpv[i-1][j][2];
-                }
-                while (curr > 0 && curr % 2 == 0) {
-                    two++;
-                    curr /= 2;
-                }
-                while (curr > 0 && curr % 5 == 0) {
-                    five++;
-                    curr /= 5;
-                }
-                dpv[i][j][1] = two;
-                dpv[i][j][2] = five;
-                dpv[i][j][0] = Math.min(dpv[i][j][1], dpv[i][j][2]);
-            }
-            vmax0 = Math.max(vmax0, dpv[m-1][j][0]);
-        }
-		
-        int res = Math.max(vmax0, hmax0);
-
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                int otwo = dph[i][j][1];
-                int ofive = dph[i][j][2];
-                
-                int res1 = 0;
-                if (i >= 1) {
-                    int ntwo = otwo + dpv[i-1][j][1];
-                    int nfive = ofive + dpv[i-1][j][2];
-                    res1 = Math.min(ntwo, nfive);
-                }
-                
-                int res2 = 0;
-                if (i < m - 1) {
-                    int ntwo = otwo + dpv[m-1][j][1] - dpv[i][j][1];
-                    int nfive = ofive + dpv[m-1][j][2] - dpv[i][j][2];
-                    res2 = Math.min(ntwo, nfive);
-                }
-                res = Math.max(res, res1);
-                res = Math.max(res, res2);
-            }
-			
-			for (int j = n - 1; j >= 0; j--) {
-                int otwo = 0;
-                int ofive = 0;
-                if (j >= 1) {
-                    otwo = dph[i][n-1][1] - dph[i][j-1][1];
-                    ofive = dph[i][n-1][2] - dph[i][j-1][2];
-                } else {
-                    otwo = dph[i][n-1][1];
-                    ofive = dph[i][n-1][2];
-                }
-                
-                int res1 = 0;
-                if (i >= 1) {
-                    int ntwo = otwo + dpv[i-1][j][1];
-                    int nfive = ofive + dpv[i-1][j][2];
-                    res1 = Math.min(ntwo, nfive);
-                }
-                
-                int res2 = 0;
-                if (i < m - 1) {
-                    int ntwo = otwo + dpv[m-1][j][1] - dpv[i][j][1];
-                    int nfive = ofive + dpv[m-1][j][2] - dpv[i][j][2];
-                    res2 = Math.min(ntwo, nfive);
-                }
-                
-                res = Math.max(res, res1);
-                res = Math.max(res, res2);
+        int[][] left2 = new int[m][n];
+        int[][] left5 = new int[m][n];
+        for (int i = 0; i < m; ++i) {
+            int sum2 = 0;
+            int sum5 = 0;
+            for (int j = 0; j < n; ++j) {
+                sum2 += two[i][j];
+                sum5 += five[i][j];
+                left2[i][j] = sum2;
+                left5[i][j] = sum5;
             }
         }
-		
+        
+        int[][] right2 = new int[m][n];
+        int[][] right5 = new int[m][n];
+        for (int i = 0; i < m; ++i) {
+            int sum2 = 0;
+            int sum5 = 0;
+            for (int j = n - 1; j >= 0; --j) {
+                sum2 += two[i][j];
+                sum5 += five[i][j];
+                right2[i][j] = sum2;
+                right5[i][j] = sum5;
+            }
+        }
+        
+        int[][] up2 = new int[m][n];
+        int[][] up5 = new int[m][n];
+        for (int j = 0; j < n; ++j) {
+            int sum2 = 0;
+            int sum5 = 0;
+            for (int i = 0; i < m; ++i) {
+                sum2 += two[i][j];
+                sum5 += five[i][j];
+                up2[i][j] = sum2;
+                up5[i][j] = sum5;
+            }
+        }
+        
+        int[][] down2 = new int[m][n];
+        int[][] down5 = new int[m][n];
+        for (int j = 0; j < n; ++j) {
+            int sum2 = 0;
+            int sum5 = 0;
+            for (int i = m - 1; i >= 0; --i) {
+                sum2 += two[i][j];
+                sum5 += five[i][j];
+                down2[i][j] = sum2;
+                down5[i][j] = sum5;
+            }
+        }
+        
+        int res = 0;
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
+                // left-up
+                if (i != 0 || j != 0) {
+                    int cur = Math.min(left2[i][j] + up2[i][j] - two[i][j], left5[i][j] + up5[i][j] - five[i][j]);
+                    res = Math.max(res, cur);
+                }
+                
+                // up-right
+                if (i != 0 || j != n - 1) {
+                    int cur = Math.min(right2[i][j] + up2[i][j] - two[i][j], right5[i][j] + up5[i][j] - five[i][j]);
+                    res = Math.max(res, cur);
+                }
+                
+                // right-down
+                if (i != m - 1 || j != n - 1) {
+                    int cur = Math.min(right2[i][j] + down2[i][j] - two[i][j], right5[i][j] + down5[i][j] - five[i][j]);
+                    res = Math.max(res, cur);
+                }
+                
+                // down-left
+                if (i != m - 1 || j != 0) {
+                    int cur = Math.min(left2[i][j] + down2[i][j] - two[i][j], left5[i][j] + down5[i][j] - five[i][j]);
+                    res = Math.max(res, cur);
+                }
+            }
+        }
+        return res;
+    }
+    
+    private int getFactorNum(int input, int factor) {
+        int res = 0;
+        while (input != 0 && input % factor == 0) {
+            ++res;
+            input /= factor;
+        }
         return res;
     }
 }
