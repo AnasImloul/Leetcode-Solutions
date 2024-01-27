@@ -1,3 +1,5 @@
+// Runtime: 42 ms (Top 81.13%) | Memory: 99.50 MB (Top 16.9%)
+
 class Solution {
     
     public long interchangeableRectangles(int[][] rectangles) {
