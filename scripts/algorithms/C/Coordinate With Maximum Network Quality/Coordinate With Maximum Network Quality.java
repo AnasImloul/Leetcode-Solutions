@@ -1,3 +1,5 @@
+// Runtime: 16 ms (Top 84.85%) | Memory: 41.90 MB (Top 33.33%)
+
 class Solution {
     public int[] bestCoordinate(int[][] towers, int radius) {
         int minX = 51, maxX = 0, minY = 51, maxY = 0, max = 0;
