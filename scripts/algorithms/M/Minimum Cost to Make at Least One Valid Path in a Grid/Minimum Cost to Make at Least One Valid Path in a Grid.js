@@ -1,29 +1,38 @@
-const minCost = function (grid) {
-	const m = grid.length,
-		n = grid[0].length,
-		checkPos = (i, j) =>
-			i > -1 && j > -1 && i < m && j < n && !visited[i + "," + j],
-		dir = { 1: [0, 1], 2: [0, -1], 3: [1, 0], 4: [-1, 0] },
-		dfs = (i, j) => {
-			if (!checkPos(i, j)) return false;
-			if (i === m - 1 && j === n - 1) return true;
-			visited[i + "," + j] = true;
-			next.push([i, j]);
-			return dfs(i + dir[grid[i][j]][0], j + dir[grid[i][j]][1]);
-		},
-		visited = {};
-	let changes = 0, cur = [[0, 0]], next;
-	while (cur.length) {
-		next = [];
-		for (const [i, j] of cur) if (dfs(i, j)) return changes;
-		changes++;
-		cur = [];
-		next.forEach(pos => {
-			for (let d = 1; d < 5; d++) {
-				const x = pos[0] + dir[d][0],
-					y = pos[1] + dir[d][1];
-				if (checkPos(x, y)) cur.push([x, y]);
+// Runtime: 137 ms (Top 100.0%) | Memory: 61.10 MB (Top 22.22%)
+
+var minCost = function(grid) {
+    const n = grid.length;
+	const m = grid[0].length;
+	const dns = [
+		[0, 0], // unused, just put here to make reading signs easier
+		[1, 0],
+		[-1, 0],
+		[0, 1],
+		[0, -1],
+	];
+	const visited = new Set();
+	const q = new MinPriorityQueue();
+	q.enqueue([0, 0], 0);
+	while (q.size()) {
+		const { element, priority: changes } = q.dequeue();
+		const [x, y] = element;
+		if (x === m - 1 && y === n - 1) {
+			return changes;
+		}
+		const key = x + y * m;
+		if (visited.has(key)) continue;
+		visited.add(key);
+		//calculate the direction of the sign and then use it to determine if a change was made whilst pathfinding
+		const sign = grid[y][x];
+		const sx = dns[sign][0] + x;
+		const sy = dns[sign][1] + y;
+		for (let i = 1; i < 5; ++i) {
+			const nx = dns[i][0] + x;
+			const ny = dns[i][1] + y;
+			if (grid[ny]?.[nx] && !visited.has(ny * m + nx)) {
+				const nextChange = sx === nx && sy === ny ? changes : changes + 1;
+				q.enqueue([nx, ny], nextChange);
 			}
-		});
+		}
 	}
 };
