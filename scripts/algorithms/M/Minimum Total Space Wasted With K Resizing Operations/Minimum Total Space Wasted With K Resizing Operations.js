@@ -1,3 +1,5 @@
+// Runtime: 230 ms (Top 100.0%) | Memory: 56.70 MB (Top 50.0%)
+
 var minSpaceWastedKResizing = function(nums, k) {
     var prefixSum = []; // prefix is index 1 based
     var rangeMax = []; // index 0 based
