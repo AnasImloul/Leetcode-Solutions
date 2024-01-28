@@ -1,10 +1,20 @@
+// Runtime: 517 ms (Top 83.33%) | Memory: 94.80 MB (Top 100.0%)
 
 var StockPrice = function() {
-    this.stocksPrice=[]
-    this.timesStamp=[]
-    this.lastPrice=[0,0];
-    this.maxPrice=Number.NEGATIVE_INFINITY
-    this.minPrice=Number.POSITIVE_INFINITY
+	// Initialize a Map
+	// Should simply store [timestamp -> value]
+    this.data = new Map()
+	
+	// Initialize Max Heap
+	// Should simply store timestamp as value, and price as priority
+    this.max = new MaxPriorityQueue()
+	
+	// Initialize Min Heap
+	// Should simply store timestamp as value, and price as priority
+    this.min = new MinPriorityQueue()
+	
+	// This is find maximum timestamp i.e. current stock price.
+    this.currentTimestamp = -1
 };
 
 /** 
@@ -12,48 +22,66 @@ var StockPrice = function() {
  * @param {number} price
  * @return {void}
  */
-StockPrice.prototype.update = function(timestamp, price) {  
-    let index=this.timesStamp.indexOf(timestamp)
-    if(index === -1) {
-        this.timesStamp.push(timestamp)
-        this.stocksPrice.push(price)
-        this.maxPrice=Math.max(this.maxPrice, price)
-        this.minPrice=Math.min(this.minPrice, price)
-    } else {
-        if(this.maxPrice === this.stocksPrice[index] || 
-           this.minPrice === this.stocksPrice[index]) {
-            this.stocksPrice[index]=price
-            this.maxPrice=Math.max(...this.stocksPrice)
-            this.minPrice=Math.min(...this.stocksPrice)
-        } else {
-            this.stocksPrice[index]=price
-            this.maxPrice=Math.max(this.maxPrice, price)
-            this.minPrice=Math.min(this.minPrice, price)
-        }
-    }
+StockPrice.prototype.update = function(timestamp, price) {
+	// Check if its a new timestamp or an update to older
+    this.currentTimestamp = Math.max(this.currentTimestamp, timestamp)
     
-    if(timestamp >= this.lastPrice[0])  this.lastPrice=[timestamp, price] 
+	// Upsert [Insert or Update value] for price at timestamp
+    this.data.set(timestamp, price)
+    
+	// insert timestamp to the queue with price is priority
+    this.max.enqueue(timestamp, price)
+    this.min.enqueue(timestamp, price)
 };
 
 /**
  * @return {number}
  */
 StockPrice.prototype.current = function() {
-    return this.lastPrice[1];
+	// get the data with max timestamp from map
+    return this.data.get(this.currentTimestamp)
 };
 
 /**
  * @return {number}
  */
 StockPrice.prototype.maximum = function() {
-    return this.maxPrice
+	// check the front of max queue
+	// element -> timestamp
+	// priority -> price
+    let {element, priority} = this.max.front()
+    
+	// if priority [i.e. price] is not same latest value, discard it
+    while (priority != this.data.get(element)) {
+        this.max.dequeue()
+        
+        element = this.max.front().element
+        priority = this.max.front().priority
+    }
+    
+	// return price
+    return priority
 };
 
 /**
  * @return {number}
  */
 StockPrice.prototype.minimum = function() {
-    return this.minPrice
+	// check the front of max queue
+	// element -> timestamp
+	// priority -> price
+    let {element, priority} = this.min.front()
+    
+	// if priority [i.e. price] is not same latest value, discard it
+    while (priority != this.data.get(element)) {
+        this.min.dequeue()
+        
+        element = this.min.front().element
+        priority = this.min.front().priority
+    }
+	
+	// return price
+    return priority
 };
 
 /** 
