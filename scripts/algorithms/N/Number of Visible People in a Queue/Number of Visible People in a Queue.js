@@ -1,43 +1,24 @@
-var visibleToRight = function(heights){
-    const result = new Array(heights.length).fill(0)
-    const stack = []
+// Runtime: 167 ms (Top 85.71%) | Memory: 73.90 MB (Top 15.71%)
 
-    let i = heights.length-1
-    
-    // loop from right to left
-    while(i >= 0){ 
-        let popCount = 0
-        
-        // Keep Popping untill top ele is smaller
-        while(stack.length > 0 && stack[stack.length-1][0] < heights[i]){
-			stack.pop()
-            popCount+=1
-        }
-        
-        /////////////////////
-        /// After Popping ///
-        ////////////////////
-        
-        // Case1: if ALL elements got popped
-        if(stack.length === 0)
-            result[i] = popCount // mark
-        
-        // Case2: if NO elements were popped
-        else if(popCount === 0)
-            result[i] = 1 // mark
-            
-        // Case3: if SOME elements were popped
-        else
-            result[i] = popCount+1 // mark
-        
-        // store
-        stack.push([heights[i],popCount])
-        
-        i-=1
-    }
-    
-    return result
-}
+/**
+ * @param {number[]} heights
+ * @return {number[]}
+ */
 var canSeePersonsCount = function(heights) {
-    return visibleToRight(heights)
+    const stack = []
+    const answer = new Array(heights.length).fill(0)
+
+    for(let i = 0; i < heights.length; i++) {
+        while(stack.length && heights[i] > heights[stack[stack.length - 1]]) {
+            answer[stack.pop()]++
+        }
+
+        if(stack.length) {
+            answer[stack[stack.length - 1]]++
+        }
+
+        stack.push(i)
+    }
+
+    return answer
 };
