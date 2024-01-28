@@ -1,72 +1,32 @@
+// Runtime: 48 ms (Top 79.27%) | Memory: 49.00 MB (Top 5.82%)
+
 var Twitter = function() {
-    this.db = {}
-    this.date = 0;
-    this.ensureUser = function(userId) {
-        if (!this.db[userId]) {
-            this.db[userId] = {
-                tweets: [],
-                following: new Set()
-            };
-        }
-    }
+    this.users = new Map();
+    this.tweets = [];
 };
 
-/** 
- * @param {number} userId 
- * @param {number} tweetId
- * @return {void}
- */
 Twitter.prototype.postTweet = function(userId, tweetId) {
-    this.ensureUser(userId);
-    this.db[userId].tweets.push({
-        id: tweetId,
-        date: this.date++
-    });
+    if(!this.users.has(userId)) this.users.set(userId, new Set());
+    this.tweets.push({userId, tweetId})
 };
 
-/** 
- * @param {number} userId
- * @return {number[]}
- */
 Twitter.prototype.getNewsFeed = function(userId) {
-    this.ensureUser(userId);
-    let tweets = this.db[userId].tweets;
-    this.db[userId].following.forEach(f => {
-        if (this.db[f] && this.db[f].tweets) {
-            tweets = [...tweets, ...this.db[f].tweets];
+    let user = this.users.get(userId);
+    let recentTweets = [];
+    for(let i = this.tweets.length - 1; i >= 0 && recentTweets.length < 10; i--){
+        if(user.has(this.tweets[i].userId) || this.tweets[i].userId === userId){
+            recentTweets.push(this.tweets[i].tweetId);
         }
-    })
-    tweets.sort((a,b) => b.date - a.date);
-    if (tweets.length > 10) {
-        tweets.length = 10;
     }
-    return tweets.map(x => x.id);
+  return recentTweets;
 };
 
-/** 
- * @param {number} followerId 
- * @param {number} followeeId
- * @return {void}
- */
 Twitter.prototype.follow = function(followerId, followeeId) {
-    this.ensureUser(followerId);
-    this.db[followerId].following.add(followeeId);
+    let user = this.users.get(followerId) || new Set();
+    user.add(followeeId);
+    this.users.set(followerId, user);
 };
 
-/** 
- * @param {number} followerId 
- * @param {number} followeeId
- * @return {void}
- */
 Twitter.prototype.unfollow = function(followerId, followeeId) {
-    this.db[followerId].following.delete(followeeId);
+    this.users.get(followerId)?.delete(followeeId);
 };
-
-/** 
- * Your Twitter object will be instantiated and called as such:
- * var obj = new Twitter()
- * obj.postTweet(userId,tweetId)
- * var param_2 = obj.getNewsFeed(userId)
- * obj.follow(followerId,followeeId)
- * obj.unfollow(followerId,followeeId)
- */
