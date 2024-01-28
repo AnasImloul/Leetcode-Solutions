@@ -1,40 +1,41 @@
+// Runtime: 66 ms (Top 91.43%) | Memory: 53.50 MB (Top 5.71%)
+
+// Main function
 var numSimilarGroups = function(strs) {
-    const len = strs.length;
-    
-    // dsu logic
-    const dsu = new Array(len).fill(0).map((_, idx) => idx);
-    const find = (x) => {
-        if(x == dsu[x]) return x;
-        return dsu[x] = find(dsu[x]);
-    }
-    const union = (i, j) => {
-        const pi = find(i);
-        const pj = find(j);
-        if(pi != pj) {
-            dsu[pi] = pj;
+    const n = strs.length, uf = new UnionFind(n);
+
+    // Compare each string with all other string
+    for(let i=0; i<n; ++i) {
+        for(let j=i+1; j<n; ++j) {
+            if(isSimilar(strs[i], strs[j])) uf.union(i, j);
         }
     }
-    
-    
-    const similar = (a, b) => {
-        let c = 0, i = 0, len = a.length;
-        while(i < len) {
-            if(a[i] != b[i]) c++;
-            i++;
-            if(c > 2) return false;
-        }
-        return true;
-    }
-    
-    for(let i = 0; i < len; i++) {
-        for(let j = i + 1; j < len; j++) {
-            if(similar(strs[i], strs[j])) {
-                union(i, j);
-            }
-        }
-    }
-    for(let i = 0; i < len; i++) find(i);
-    const s = new Set();
-    for(let i = 0; i < len; i++) s.add(dsu[i]);
-    return s.size;
+    return uf.count;
+    // uf.count gives number of non connected components in UnionFind data structure
 };
+
+// UnionFind Data Structure with Strongly connected components
+class UnionFind {
+    constructor(n) {
+        this.parent = Array(n).fill().map((_,i) => i);
+        this.count = n; // Keep track of number of groups
+    }
+    find(i) {
+        if(this.parent[i] !== i) this.parent[i] = this.find(this.parent[i])
+        return this.parent[i];
+    }
+    union(i,j) {
+        const x = this.find(i), y = this.find(j);
+        if(x !== y) this.parent[y] = x, this.count--;
+    }
+}
+
+// Function to check if 2 strings are different at less than 2 positions or not
+var isSimilar = function(str1, str2) {
+    if(str1 === str2) return true;
+    let count = 0;
+    for(let i=0; i<str1.length; ++i) {
+        if(str1[i] !== str2[i] && ++count > 2) return false;
+    }
+    return true;
+}
