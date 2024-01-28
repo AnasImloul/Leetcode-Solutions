@@ -1,35 +1,17 @@
-/**
- * @param {number[][]} mat
- * @return {number}
- */
+// Runtime: 43 ms (Top 98.89%) | Memory: 50.90 MB (Top 5.16%)
+
 var numSpecial = function(mat) {
-    let specialPostions = [];
-    for(let i in mat){
-        for(let j in mat[i]){
-            if(mat[i][j] == 1 ){
-                let horizontalOnes = 0;
-                let verticalOnes = 0;
-                    
-                for(let k in mat[i]){
-                    if(k != j &&  mat[i][k] == 1){
-                        horizontalOnes++;
-                    }
-                }
-                    
-                for(let k = 0 ; k < mat.length ; k++ ){
-                    if(k != i && mat[k][j] == 1){
-                        verticalOnes++;
-                    }
-                }
-                    
-                if(horizontalOnes == 0 && verticalOnes == 0){
-                    specialPostions.push([i,j]);
-                }
-                
-            }
+    function getColumnSum(colIdx) {
+        return mat.reduce((sum, row) => sum + row[colIdx], 0);
+    }
+
+    let special = 0;
+    for (let row of mat) {
+        if (row.reduce((acc, val) => acc + val, 0) === 1) {
+            const colIdx = row.indexOf(1);
+            special += getColumnSum(colIdx) === 1;
         }
     }
-    
-    return specialPostions.length;
-    
+
+    return special;    
 };
