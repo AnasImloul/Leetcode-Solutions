@@ -1,22 +1,29 @@
+// Runtime: 45 ms (Top 96.83%) | Memory: 48.50 MB (Top 8.24%)
+
+/**
  * @param {string} s
  * @return {number}
  */
 var maxScore = function(s) {
-    const leftScores = []
-    const rightScores = []
-    let score = 0
-    for (let i = 0; i < s.length-1; i++) {
-        if (s[i] === '0') 
-            score++
-        leftScores.push(score)
-    }
-    score = 0
-    for (let i = s.length-1; i > 0; i--) {
-        if (s[i] === '1')
-            score++
-        rightScores.unshift(score)
-    }
-    
-    const scores = leftScores.map((val, idx) => val + rightScores[idx])
-    return Math.max(...scores)
+    const length = s.length;
+        let ones = 0;
+        let tmpScore = s[0] === '0' ? 1 : 0;
+        let score = tmpScore;
+        
+        for (let i = 1; i < length - 1; i++) {
+            if (s[i] === '0') {
+                tmpScore += 1;
+            } else {
+                ones += 1;
+                tmpScore -= 1;
+            }
+
+            if (tmpScore > score) {
+                score = tmpScore;
+            }
+        }
+        
+        ones += s[length - 1] === '1' ? 1 : 0;
+
+        return ones + score;
 };
