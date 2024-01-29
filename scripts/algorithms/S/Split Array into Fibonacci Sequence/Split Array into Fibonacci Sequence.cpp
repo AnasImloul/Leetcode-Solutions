@@ -1,44 +1,32 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 7.80 MB (Top 37.58%)
+
 class Solution {
 public:
+	vector<int> ans;
 
-    vector<int> res;
-	
-    void backtrack(vector<int>& ans, string s, int curr) {
-        // Basic check for end
-        if(curr == s.size()) {
-            // if more than 3 elements in ans, BOOM, we got it!!
-            if(ans.size() > 2) res = ans;
-            
-            //if not, purpose is not solved :( => return in both scenarios
-            return;
-        }
-        
-        // start with current index to check possible string forming next fibbo seq no
-        long val = 0;    // stores possible generated numbers
-        for(int i = curr; i < s.size(); ++i) {
-            if(i > curr && s[curr] == '0') return;  // Handle 0 cases, 01, 02 cannot be considered
-            
-            val = val*10 + s[i] - '0';
-            if(val > INT_MAX) return;
-            
-            int n = ans.size();            
-            if(ans.size() < 2 || val == (long)ans[n-1]+(long)ans[n-2]) {
-                // val seems to be next fibbo seq no: insert to ans & go for next seq no
-                ans.push_back(val);
-                backtrack(ans, s, i+1);
-                
-                // val seems to be failed to serve purpose: remove it from ans
-                ans.pop_back();
-            }
-        }
-    }
-    
-    vector<int> splitIntoFibonacci(string num) {
-        vector<int> ans;        
-        
-        // Using recursive backtrack strating with 0
-        backtrack(ans, num, 0);
-        
-        return res;
-    }
+	bool getFibo(string &s,int i,long a,long b,int n) {
+		if(i==s.length()) return n>2;
+
+		long num=0;
+		for(int x=i;x<s.length();x++) {
+			num= num*10+s[x]-'0';
+			if(num>INT_MAX) break;
+
+			bool chk=false;    
+			ans.push_back(num);
+			if(n<2) chk=getFibo(s,x+1,b,num,n+1);
+			else if(a+b==num) chk= getFibo(s,x+1,b,num,n+1);
+			if(chk) return true;
+			ans.pop_back();
+
+			if(num==0) break;
+		}
+		return false;
+	}
+
+	vector<int> splitIntoFibonacci(string S) {
+		ans.clear();
+		getFibo(S,0,0,0,0);
+		return ans;
+	}
 };
