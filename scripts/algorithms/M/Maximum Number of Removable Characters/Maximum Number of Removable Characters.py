@@ -1,30 +1,24 @@
+// Runtime: 957 ms (Top 98.8%) | Memory: 28.80 MB (Top 96.39%)
+
 class Solution:
     def maximumRemovals(self, s: str, p: str, removable: List[int]) -> int:
-        
-        def check(m):
-            i = j = 0
-            remove = set(removable[:m+1])
-            while i < len(s) and j < len(p):
-                if i in remove:
-                    i += 1
-                    continue
-                if s[i] == p[j]:
-                    i += 1
-                    j += 1
-                else:
-                    i += 1
+        l, r = 0, len(removable)
+
+        def isEnough(k):
+            s_arr = list(s)
+            for i in removable[:k]:
+                s_arr[i] = ''
+            return isSubsequence(p, s_arr)
             
-            return j == len(p)
-            
-                
-        # search interval is [lo, hi)
-        lo, hi = 0, len(removable)+1
-        
-        while lo < hi:
-            mid = (lo + hi) // 2
-            if check(mid):
-                lo = mid + 1
+        def isSubsequence(s, t):
+            t = iter(t)
+            return all(c in t for c in s)
+
+        while l < r:
+            m = (l+r+1)//2
+            if isEnough(m):
+                l = m
             else:
-                hi = mid
-                
-        return lo if lo < len(removable) else lo-1
+                r = m - 1
+        
+        return l
