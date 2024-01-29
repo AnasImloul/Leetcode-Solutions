@@ -1,26 +1,27 @@
+// Runtime: 8 ms (Top 55.67%) | Memory: 9.70 MB (Top 8.81%)
+
 class Solution {
 public:
-    string licenseKeyFormatting(string s, int k) {
-        stack<char>st;
-        string ans="";
-        for(int i=0;i<s.length();i++){
-            if(isalpha(s[i]) || isdigit(s[i])){
-                st.push(s[i]);
+    string licenseKeyFormatting(string S, int K) {
+        stack<char> sChars;
+        for (auto ch : S) {
+            if (ch != '-')
+                sChars.push(ch);
+        }
+        
+        string sRet;
+        int cur = 0;
+        while (!sChars.empty()) {
+            sRet += toupper(sChars.top());
+            sChars.pop();
+            cur++;
+            
+            if (cur == K && !sChars.empty()) {
+                sRet += '-';
+                cur = 0;
             }
         }
-        int i=0;
-        while(st.size()>0){
-            char ch=st.top();
-            st.pop();
-            if(isalpha(ch)) 
-            {
-                ch=toupper(ch);
-            }
-            ans+=ch;
-            if((i+1)%k==0 && st.size()!=0) ans+='-';
-            i++;
-        }
-        reverse(ans.begin(),ans.end());
-        return ans;
+        reverse(sRet.begin(), sRet.end());
+        return sRet;
     }
 };
