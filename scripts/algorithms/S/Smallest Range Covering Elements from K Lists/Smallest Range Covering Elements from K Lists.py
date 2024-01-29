@@ -1,21 +1,33 @@
-from queue import PriorityQueue
-class Solution:
-	def smallestRange(self, nums: List[List[int]]) -> List[int]:
-		q = PriorityQueue()
-		maxi = -10**7
-		mini = 10**7
-		for i in range(len(nums)):
-			maxi = max(maxi,nums[i][0])            
-			mini = min(mini,nums[i][0])
-			q.put((nums[i][0],i,0))  
+// Runtime: 188 ms (Top 86.16%) | Memory: 23.30 MB (Top 59.07%)
 
-		s, e = mini, maxi
-		while not q.empty() :
-			mini, i, j = q.get()
-			if maxi - mini < e-s:
-				s,e = mini, maxi
-			if j+1 < len(nums[i]):
-				maxi = max(maxi,nums[i][j+1])
-				q.put((nums[i][j+1],i,j+1))
-			else: break
-		return [s,e]
+from typing import List
+import heapq
+
+
+class Solution:
+    def smallestRange(self, nums: List[List[int]]) -> List[int]:
+        heap = [(row[0], i, 0) for i, row in enumerate(nums)]
+        heapq.heapify(heap)
+        ans = [-10**9, 10**9]
+        right = max(row[0] for row in nums)
+        while heap:
+            left, row, col = heapq.heappop(heap)
+            if right - left < ans[1] - ans[0]:
+                ans = [left, right]
+            if col + 1 == len(nums[row]):
+                return ans
+            right = max(right, nums[row][col + 1])
+            heapq.heappush(heap, (nums[row][col + 1], row, col + 1))
+
+# Tests:
+if __name__ == '__main__':
+    s = Solution()
+    # test case 1
+    output1 = s.smallestRange([[4,10,15,24,26],[0,9,12,20],[5,18,22,30]])
+    expected_output1 = [20,24]
+    assert output1 == expected_output1, f"Expected {expected_output1}, but got {output1}"
+    # test case 2
+    output2 = s.smallestRange([[1,2,3],[1,2,3],[1,2,3]])
+    expected_output2 = [1,1]
+    assert output2 == expected_output2, f"Expected {expected_output2}, but got {output2}"
+    print("All tests passed!")
