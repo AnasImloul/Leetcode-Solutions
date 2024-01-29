@@ -1,40 +1,32 @@
+// Runtime: 45 ms (Top 87.77%) | Memory: 32.20 MB (Top 98.08%)
+
 class Solution {
-    vector<TreeNode*> leaves;
-    unordered_map<TreeNode* , TreeNode*> pof;
-    void makeGraph(unordered_map<TreeNode* , TreeNode*> &pof, TreeNode* root){
-        if(!root) return;
-        if(!root->left && !root->right){
-            leaves.push_back(root);
-            return;
-        }
-        if(root->left) pof[root->left]=root;
-        if(root->right) pof[root->right]=root;
-        makeGraph(pof, root->left);
-        makeGraph(pof, root->right);
-    }
-public:
+public:int k,ans=0;
     int countPairs(TreeNode* root, int distance) {
-        leaves={};
-        makeGraph(pof, root);
-        int ans=0;
-        queue<pair<TreeNode*, int>> q;
-        for(auto &l: leaves){
-            q.push({l, 0}); 
-            unordered_set<TreeNode*> isVis;
-            while(q.size()){
-                auto [cur, dist]=q.front();
-                q.pop();
-                if(isVis.count(cur) || dist>distance) continue;
-                isVis.insert(cur);
-                if(!cur->left && !cur->right && cur!=l && dist<=distance){
-                    ans++;
-                    continue;
-                }
-                if(cur->left && !isVis.count(cur->left)) q.push({cur->left, dist+1});
-                if(cur->right && !isVis.count(cur->right)) q.push({cur->right, dist+1});
-                if(pof.count(cur) && !isVis.count(pof[cur])) q.push({pof[cur], dist+1});
-            }
-        }
-        return ans>>1;
+        k=distance;
+        cp(root,0);
+        return ans;
     }
+	
+    vector<int> cp(TreeNode* root,int level)
+    {   vector<int>v1;
+        if(root==NULL){return v1;}
+        if(root->left==NULL&&root->right==NULL){v1.push_back(level);return v1;}
+     
+        v1 =cp(root->left,level+1);
+        vector<int>v2 =cp(root->right,level+1);
+        int a=v1.size();
+        int b=v2.size();
+        
+        for(int i=0;i<a;i++)
+        {for(int j=0;j<b;j++)
+        { if(abs(v1[i]+v2[j]-(2*level))<=k){ans++;} }}
+        
+        
+        int l=v2.size();
+        while(l--){v1.push_back(v2.back());
+		v2.pop_back();}
+        return v1;
+    }
+    
 };
