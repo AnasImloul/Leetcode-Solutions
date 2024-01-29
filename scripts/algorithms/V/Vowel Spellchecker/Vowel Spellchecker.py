@@ -1,51 +1,18 @@
+// Runtime: 166 ms (Top 89.12%) | Memory: 19.20 MB (Top 76.17%)
+
 class Solution:
     def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
-        n = len(wordlist)
-        d = {}
-        sd = {}
-        vd = {}
-        cd = {}
-        for i in range(n):
-            d[wordlist[i]] = i
-            s = wordlist[i].lower()
-            if s not in sd:sd[s] = i 
-            m = len(wordlist[i])
-            tmp = []
-            emp = ""
-            for j in range(m):
-                if wordlist[i][j] in 'aeiouAEIOU': tmp.append(j)
-                else:emp+=wordlist[i][j].lower()
-            cd[i] = emp
-            vd[i] = tmp
-            
-        ans = []
-        for word in queries:
-            word_lower = word.lower()
-            if word in d: 
-                ans.append(word)
-                continue            
-            elif word_lower in sd:
-                ans.append(wordlist[sd[word_lower]])
-                continue
+        capital={i.lower():i for i in wordlist[::-1]}
+        vovel={''.join([j if j not in "aeiou" else '.' for j in i.lower()]):i for i in wordlist[::-1]}
+        wordlist=set(wordlist)
+        res=[]
+        for i in queries:
+            if i in wordlist:
+                res.append(i)
+            elif i.lower() in capital:
+                res.append(capital[i.lower()])
+            elif ''.join([j if j not in "aeiou" else '.' for j in i.lower()]) in vovel:
+                res.append(vovel[''.join([j if j not in "aeiou" else '.' for j in i.lower()])])
             else:
-                vow_word = []
-                con_word = "" 
-                m = len(word)
-                for i in range(m):
-                    if word[i] in 'aeiouAEIOU' : vow_word.append(i)
-                    else: con_word += word[i].lower()
-                if vow_word == []:
-                    ans.append("")
-                    continue
-                    
-                flag = False
-                for i in range(n):
-                    vow_tmp = vd[i]
-                    con_tmp = cd[i]
-                    if vow_tmp == vow_word and con_tmp == con_word:
-                        ans.append(wordlist[i])
-                        flag = True
-                        break
-                if flag == True:continue
-                ans.append("")
-        return ans
+                res.append("")
+        return res
