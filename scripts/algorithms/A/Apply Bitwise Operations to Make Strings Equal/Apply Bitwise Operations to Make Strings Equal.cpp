@@ -1,14 +1,25 @@
+// Runtime: 23 ms (Top 90.24%) | Memory: 14.30 MB (Top 12.2%)
+
 class Solution {
 public:
-    bool makeStringsEqual(string s, string target) {
-        if(s == target) return true;
-        int count1=0,count2=0;
-        for(int i=0;i<s.length();i++)
-        if(s[i]=='0') count1++; 
-        if(count1==s.length()) return false;
-         for(int i=0;i<target.length();i++)
-        if(target[i]=='0') count2++; 
-        if(count2==target.length()) return false;
+    bool makeStringsEqual(string s, string t) {
+        int a=0, b=0;
+        for(char c:s)
+        {
+            if(c=='1')
+            a++;
+        }
+        for(char c:t)
+        {
+            if(c=='1')
+            b++;
+        }
+        if(a==0 && b==0)
+        return true;
+        if(a==0 && b!=0)
+        return false;
+        if(b==0)
+        return false;
         return true;
     }
 };
