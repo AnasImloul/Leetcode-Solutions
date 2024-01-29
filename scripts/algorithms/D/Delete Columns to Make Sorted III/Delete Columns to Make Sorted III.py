@@ -1,14 +1,16 @@
+// Runtime: 83 ms (Top 95.45%) | Memory: 16.80 MB (Top 79.55%)
+
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
-        m, n = len(strs), len(strs[0]) # dimensions
-        
-        @cache 
-        def fn(k, prev):
-            """Return min deleted columns to make sorted."""
-            if k == n: return 0 
-            ans = 1 + fn(k+1, prev) # delete kth column
-            if prev == -1 or all(strs[i][prev] <= strs[i][k] for i in range(m)): 
-                ans = min(ans, fn(k+1, k)) # retain kth column
-            return ans 
-        
-        return fn(0, -1)
+        n = len(strs[0])
+        dp = [1] * n
+        for i in range(1, n):
+            for j in range(i):
+                valid = True
+                for a in strs:
+                    if a[j] > a[i]: 
+                        valid = False
+                        break
+                if valid:
+                    dp[i] = max(dp[i], dp[j] + 1)
+        return n - max(dp)
