@@ -1,32 +1,11 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 7.30 MB (Top 29.79%)
+
 class Solution {
 public:
-   
-    //same code as that of coin change
-    int coinChange(vector<int>& coins, int amount) {
-        int Max = amount + 1;
-        vector<int> dp(amount + 1, INT_MAX);
-        dp[0] = 0;
-        for (int i = 0; i <= amount; i++) {
-            for (int j = 0; j < coins.size(); j++) {
-                if (coins[j] <= i && dp[i-coins[j]] !=INT_MAX) {
-                    dp[i] = min(dp[i], dp[i - coins[j]] + 1);
-                }
-            }
-        }
-        return dp[amount] == INT_MAX ? -1 : dp[amount];
+    int minimumNumbers(int sum, int k) {
+        if (sum == 0) return 0;
+        for (int i = 1; i <= 10; ++i)
+            if ((i * k) % 10 == sum % 10 && i * k <= sum) return i;
+        return -1;
     }
- 
-    
-    
-    int minimumNumbers(int num, int k) {
-    vector<int>res;
-    for (int i = 0; i <= num; i++){
-        if (i % 10 == k)
-           res.push_back(i);
-        }
-       return coinChange(res, num);
-
-       
-    }
-    
 };
