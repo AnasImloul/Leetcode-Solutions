@@ -1,20 +1,16 @@
+// Runtime: 4 ms (Top 82.49%) | Memory: 13.10 MB (Top 6.08%)
+
 class Solution {
 public:
     bool checkStraightLine(vector<vector<int>>& coordinates) {
-        
-        int n=coordinates.size();  
-        int xdiff = coordinates[1][0] - coordinates[0][0]; 
-        int ydiff = coordinates[1][1] - coordinates[0][1];
-        
-        int cur_xdiff, cur_ydiff;
-        
-        for(int i=2; i<n; i++){
-            
-            cur_xdiff = coordinates[i][0] - coordinates[i-1][0];
-            cur_ydiff = coordinates[i][1] - coordinates[i-1][1];
-            
-            if(ydiff*cur_xdiff!=xdiff*cur_ydiff) return false;
+        int dx = (coordinates[1][1] - coordinates[0][1]);
+        int dy = (coordinates[1][0] - coordinates[0][0]);
+        for(int i=2; i<coordinates.size(); i++)
+        {
+            if(dx*(coordinates[i][0] - coordinates[1][0]) != dy*(coordinates[i][1] - coordinates[1][1]))
+                return false;
         }
         return true;
     }
 };
+
