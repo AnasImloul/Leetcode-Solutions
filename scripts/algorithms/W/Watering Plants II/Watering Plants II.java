@@ -1,32 +1,48 @@
+// Runtime: 4 ms (Top 96.18%) | Memory: 57.70 MB (Top 65.65%)
+
 class Solution {
-    public int minimumRefill(int[] plants, int capacityA, int capacityB) {
-        int count=0;
-        int c1=capacityA,c2=capacityB;
-        for(int start=0,end=plants.length-1;start<=plants.length/2&&end>=plants.length/2;start++,end--){
-            if(start==end||start>end)break;
-            if(c1>=plants[start]){
-                c1-=plants[start];
+    public int minimumRefill(int[] p, int ca, int cb) {                
+	
+        int refill= 0,oca =  ca, ocb =  cb;// let save our  orginal capacity    , needed to refill can again
+        int i=0, j = p.length-1; // starting both end 
+        
+        while(i<=j){
+		
+             if(i==j){// mean both at same position
+                if(ca>=cb){
+                   if(p[i]>ca){
+                        refill++;
+                    }                         
+                }
+                 else{                                      
+                      if(p[j]>cb){
+                        refill++;                        
+                    }                     
+                 }
+				 // no more plant left for watering so break loop 
+                 break; 
             }
-            else{
-                count++;
-                c1=capacityA;
-                c1-=plants[start];
+                       
+            // first check if they have sufficient amount of water 
+            // if not then refill it with orginal capacity                 
+			
+            if(p[i]>ca){
+                refill++;
+                ca =  oca;
+            }            
+            if(p[j]>cb){
+                refill++;
+                cb=  ocb;
             }
-            if(c2>=plants[end]){
-                c2-=plants[end];
-            }
-            else{
-                count++;
-                c2=capacityB;
-                c2-=plants[end];
-            }
+            
+			// decrease consumed water 
+            ca-=p[i] ;                                  
+            cb-=p[j]; 
+			
+			// move both 
+			i++;           
+            j--;			                                                
         }
-        if((c1>c2||c1==c2)&&plants.length%2!=0){
-            if(plants[plants.length/2]>c1)count++;
-        }
-        else if(c1<c2&&plants.length%2!=0){
-            if(plants[plants.length/2]>c2)count++;
-        }
-        return count;
+        return refill;                
     }
 }
