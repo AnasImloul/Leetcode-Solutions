@@ -1,5 +1,5 @@
 <h1 align="center">Leetcode-solutions</h1>
-<p align="center">A Github repo with over 7k+ solutions :rocket: to more than 1800 Leetcode problem<br>Written in C++, Python, Java, and Javascript.</p>
+<p align="center">A Github repo with over 7k+ solutions :rocket: to more than 1800 Leetcode problem<br>Written in C++, Python, Java, Javascript, Rust and Goland.</p>
 <br>
 
 ## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/algo.svg" width="32px" align="left"/>Algorithms</div>
