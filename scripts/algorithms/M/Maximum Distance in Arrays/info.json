@@ -1,0 +1,11 @@
+{
+    "id": "624",
+    "name": "Maximum Distance in Arrays",
+    "url": "https://leetcode.com/problems/maximum-distance-in-arrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
