@@ -1,0 +1,11 @@
+{
+    "id": "2374",
+    "name": "Node With Highest Edge Score",
+    "url": "https://leetcode.com/problems/node-with-highest-edge-score",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
