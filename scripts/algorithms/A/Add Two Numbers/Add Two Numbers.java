@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 20.45%) | Memory: 45.20 MB (Top 99.90%)
+
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if(l1 == null) return l2;
