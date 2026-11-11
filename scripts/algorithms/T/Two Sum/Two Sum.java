@@ -1,3 +1,5 @@
+// Runtime: 45 ms (Top 27.89%) | Memory: 46.30 MB (Top 95.93%)
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] answer = new int[2];
