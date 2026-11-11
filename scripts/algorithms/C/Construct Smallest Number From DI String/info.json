@@ -1,0 +1,11 @@
+{
+    "id": "2375",
+    "name": "Construct Smallest Number From DI String",
+    "url": "https://leetcode.com/problems/construct-smallest-number-from-di-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

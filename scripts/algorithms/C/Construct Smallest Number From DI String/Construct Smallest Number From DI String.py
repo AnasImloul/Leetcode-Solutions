@@ -1,16 +1,15 @@
+# Runtime: 0 ms (Top 100.00%) | Memory: 19.40 MB (Top 30.58%)
+
 class Solution:
     def smallestNumber(self, pattern: str) -> str:
-        arr, i = [1], 0
-        while i < len(pattern):
-            if pattern[i] == 'I':
-                arr.append(len(arr) + 1)
-                i += 1
-                continue
-            j = i + 1
-            while j < len(pattern) and pattern[j] == 'D':
-                j += 1
-            end, start = arr[-1] + (j - i), arr[-1]
-            del arr[-1]
-            arr.extend(n for n in range(end, start - 1, -1))
-            i = j
-        return ''.join(map(str, arr))
+        ans = [1]
+        for ch in pattern: 
+            if ch == 'I': 
+                m = ans[-1]+1
+                while m in ans: m += 1
+                ans.append(m)
+            else: 
+                ans.append(ans[-1])
+                for i in range(len(ans)-1, 0, -1): 
+                    if ans[i-1] == ans[i]: ans[i-1] += 1
+        return ''.join(map(str, ans))
