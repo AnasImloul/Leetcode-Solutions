@@ -1,7 +1,7 @@
 {
     "id": "1460",
-    "name": "Make Two Arrays Equal by Reversing Sub-arrays",
-    "url": "https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays",
+    "name": "Make Two Arrays Equal by Reversing Subarrays",
+    "url": "https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays",
     "difficulty": "easy",
     "premium": false,
     "topic": "algorithms",
