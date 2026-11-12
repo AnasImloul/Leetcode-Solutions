@@ -1,0 +1,11 @@
+{
+    "id": "2458",
+    "name": "Height of Binary Tree After Subtree Removal Queries",
+    "url": "https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
