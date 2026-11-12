@@ -2,6 +2,6 @@
 
 1 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages | LeetCode |
+| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="200" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 1195 | [Fizz Buzz Multithreaded](./Fizz%20Buzz%20Multithreaded) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Fizz%20Buzz%20Multithreaded/Fizz%20Buzz%20Multithreaded.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/fizz-buzz-multithreaded) |

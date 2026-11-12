@@ -2,7 +2,7 @@
 
 357 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages | LeetCode |
+| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="200" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 840 | [Magic Squares In Grid](./Magic%20Squares%20In%20Grid) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Magic%20Squares%20In%20Grid/Magic%20Squares%20In%20Grid.cpp"><img src="../../../icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Magic%20Squares%20In%20Grid/Magic%20Squares%20In%20Grid.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Magic%20Squares%20In%20Grid/Magic%20Squares%20In%20Grid.java"><img src="../../../icons/java.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Magic%20Squares%20In%20Grid/Magic%20Squares%20In%20Grid.js"><img src="../../../icons/javascript.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/magic-squares-in-grid) |
 | 481 | [Magical String](./Magical%20String) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Magical%20String/Magical%20String.cpp"><img src="../../../icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Magical%20String/Magical%20String.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Magical%20String/Magical%20String.java"><img src="../../../icons/java.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Magical%20String/Magical%20String.js"><img src="../../../icons/javascript.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/magical-string) |

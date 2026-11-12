@@ -2,6 +2,6 @@
 
 1 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages | LeetCode |
+| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="200" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 192 | [Word Frequency](./Word%20Frequency) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Word%20Frequency/Word%20Frequency.sh"><img src="../../../icons/bash.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/word-frequency) |
