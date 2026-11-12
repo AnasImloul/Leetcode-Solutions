@@ -1,0 +1,11 @@
+{
+    "id": "2429",
+    "name": "Minimize XOR",
+    "url": "https://leetcode.com/problems/minimize-xor",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
