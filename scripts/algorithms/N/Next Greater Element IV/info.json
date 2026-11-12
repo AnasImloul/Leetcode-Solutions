@@ -1,0 +1,11 @@
+{
+    "id": "2454",
+    "name": "Next Greater Element IV",
+    "url": "https://leetcode.com/problems/next-greater-element-iv",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
