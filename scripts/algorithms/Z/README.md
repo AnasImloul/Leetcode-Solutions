@@ -2,7 +2,7 @@
 
 2 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="103" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 6 | [Zigzag Conversion](./Zigzag%20Conversion) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Zigzag%20Conversion/Zigzag%20Conversion.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/zigzag-conversion) |
 | 488 | [Zuma Game](./Zuma%20Game) | <img src="../../../icons/hard.svg" height="12px" align="center"/> | <a href="./Zuma%20Game/Zuma%20Game.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Zuma%20Game/Zuma%20Game.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Zuma%20Game/Zuma%20Game.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Zuma%20Game/Zuma%20Game.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/zuma-game) |

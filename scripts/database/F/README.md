@@ -2,7 +2,7 @@
 
 4 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 584 | [Find Customer Referee](./Find%20Customer%20Referee) | <img src="../../../icons/easy.svg" height="16px" align="center"/> | <a href="./Find%20Customer%20Referee/Find%20Customer%20Referee.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/find-customer-referee) |
 | 1729 | [Find Followers Count](./Find%20Followers%20Count) | <img src="../../../icons/easy.svg" height="16px" align="center"/> | <a href="./Find%20Followers%20Count/Find%20Followers%20Count.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/find-followers-count) |

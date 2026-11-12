@@ -2,7 +2,7 @@
 
 29 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="128" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 289 | [Game of Life](./Game%20of%20Life) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Game%20of%20Life/Game%20of%20Life.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Game%20of%20Life/Game%20of%20Life.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Game%20of%20Life/Game%20of%20Life.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Game%20of%20Life/Game%20of%20Life.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/game-of-life) |
 | 134 | [Gas Station](./Gas%20Station) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Gas%20Station/Gas%20Station.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Gas%20Station/Gas%20Station.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Gas%20Station/Gas%20Station.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Gas%20Station/Gas%20Station.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/gas-station) |

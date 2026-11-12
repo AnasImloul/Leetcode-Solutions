@@ -2,6 +2,6 @@
 
 1 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 1527 | [Patients With a Condition](./Patients%20With%20a%20Condition) | <img src="../../../icons/easy.svg" height="16px" align="center"/> | <a href="./Patients%20With%20a%20Condition/Patients%20With%20a%20Condition.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/patients-with-a-condition) |

@@ -2,7 +2,7 @@
 
 8 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="128" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 771 | [Jewels and Stones](./Jewels%20and%20Stones) | <img src="../../../icons/easy.svg" height="16px" align="center"/> | <a href="./Jewels%20and%20Stones/Jewels%20and%20Stones.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Jewels%20and%20Stones/Jewels%20and%20Stones.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Jewels%20and%20Stones/Jewels%20and%20Stones.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Jewels%20and%20Stones/Jewels%20and%20Stones.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/jewels-and-stones) |
 | 55 | [Jump Game](./Jump%20Game) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Jump%20Game/Jump%20Game.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Jump%20Game/Jump%20Game.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Jump%20Game/Jump%20Game.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Jump%20Game/Jump%20Game.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/jump-game) |

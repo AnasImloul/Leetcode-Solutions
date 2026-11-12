@@ -2,6 +2,6 @@
 
 1 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 1158 | [Market Analysis I](./Market%20Analysis%20I) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Market%20Analysis%20I/Market%20Analysis%20I.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/market-analysis-i) |
