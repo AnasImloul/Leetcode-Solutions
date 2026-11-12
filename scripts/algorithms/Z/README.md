@@ -1,8 +1,8 @@
-# Algorithms: Z
+## <div align="left"><img src="../../../icons/algo.svg" width="32px" align="left"/>Algorithms: Z</div>
 
-2 problems. [Back to the overview](../../../README.md)
+2 problems · [Overview](../../../README.md)
 
 | # | Problem | Difficulty | Languages | LeetCode |
-|--:|:--------|:-----------|:----------|:---------|
-| 6 | [Zigzag Conversion](./Zigzag%20Conversion) | Medium | [cpp](./Zigzag%20Conversion/Zigzag%20Conversion.cpp) · [py](./Zigzag%20Conversion/Zigzag%20Conversion.py) · [java](./Zigzag%20Conversion/Zigzag%20Conversion.java) · [js](./Zigzag%20Conversion/Zigzag%20Conversion.js) | [link](https://leetcode.com/problems/zigzag-conversion) |
-| 488 | [Zuma Game](./Zuma%20Game) | Hard | [cpp](./Zuma%20Game/Zuma%20Game.cpp) · [py](./Zuma%20Game/Zuma%20Game.py) · [java](./Zuma%20Game/Zuma%20Game.java) · [js](./Zuma%20Game/Zuma%20Game.js) | [link](https://leetcode.com/problems/zuma-game) |
+|--:|:--------|:----------:|:----------|:--------:|
+| 6 | [Zigzag Conversion](./Zigzag%20Conversion) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Zigzag%20Conversion/Zigzag%20Conversion.cpp"><img src="../../../icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.java"><img src="../../../icons/java.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.js"><img src="../../../icons/javascript.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/zigzag-conversion) |
+| 488 | [Zuma Game](./Zuma%20Game) | <img src="../../../icons/hard.svg" height="12px" align="center"/> | <a href="./Zuma%20Game/Zuma%20Game.cpp"><img src="../../../icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Zuma%20Game/Zuma%20Game.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Zuma%20Game/Zuma%20Game.java"><img src="../../../icons/java.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Zuma%20Game/Zuma%20Game.js"><img src="../../../icons/javascript.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/zuma-game) |
