@@ -1,0 +1,11 @@
+{
+    "id": "2413",
+    "name": "Smallest Even Multiple",
+    "url": "https://leetcode.com/problems/smallest-even-multiple",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
