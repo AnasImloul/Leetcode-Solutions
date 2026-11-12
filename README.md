@@ -16,28 +16,24 @@ Written in C++, Python, Java, JavaScript, Rust and Go.
 
 ## <div align="left"><img src="icons/algo.svg" width="32px" align="left"/>Algorithms (1,823)</div>
 
-| [0-9](scripts/algorithms/0-9) | [A](scripts/algorithms/A) | [B](scripts/algorithms/B) | [C](scripts/algorithms/C) | [D](scripts/algorithms/D) | [E](scripts/algorithms/E) | [F](scripts/algorithms/F) | [G](scripts/algorithms/G) | [H](scripts/algorithms/H) |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| [I](scripts/algorithms/I) | [J](scripts/algorithms/J) | [K](scripts/algorithms/K) | [L](scripts/algorithms/L) | [M](scripts/algorithms/M) | [N](scripts/algorithms/N) | [O](scripts/algorithms/O) | [P](scripts/algorithms/P) | [Q](scripts/algorithms/Q) |
-| [R](scripts/algorithms/R) | [S](scripts/algorithms/S) | [T](scripts/algorithms/T) | [U](scripts/algorithms/U) | [V](scripts/algorithms/V) | [W](scripts/algorithms/W) | [X](scripts/algorithms/X) | Y | [Z](scripts/algorithms/Z) |
+| [0-9](scripts/algorithms/0-9) | [A](scripts/algorithms/A) | [B](scripts/algorithms/B) | [C](scripts/algorithms/C) | [D](scripts/algorithms/D) | [E](scripts/algorithms/E) | [F](scripts/algorithms/F) | [G](scripts/algorithms/G) | [H](scripts/algorithms/H) | [I](scripts/algorithms/I) | [J](scripts/algorithms/J) | [K](scripts/algorithms/K) | [L](scripts/algorithms/L) | [M](scripts/algorithms/M) |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| [N](scripts/algorithms/N) | [O](scripts/algorithms/O) | [P](scripts/algorithms/P) | [Q](scripts/algorithms/Q) | [R](scripts/algorithms/R) | [S](scripts/algorithms/S) | [T](scripts/algorithms/T) | [U](scripts/algorithms/U) | [V](scripts/algorithms/V) | [W](scripts/algorithms/W) | [X](scripts/algorithms/X) | Y | [Z](scripts/algorithms/Z) |  |
 
 ## <div align="left"><img src="icons/concurrency.svg" width="32px" align="left"/>Concurrency (6)</div>
 
-| 0-9 | A | [B](scripts/concurrency/B) | C | D | E | [F](scripts/concurrency/F) | G | H |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| I | J | K | L | M | N | O | [P](scripts/concurrency/P) | Q |
-| R | S | [T](scripts/concurrency/T) | U | V | W | X | Y | Z |
+| 0-9 | A | [B](scripts/concurrency/B) | C | D | E | [F](scripts/concurrency/F) | G | H | I | J | K | L | M |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| N | O | [P](scripts/concurrency/P) | Q | R | S | [T](scripts/concurrency/T) | U | V | W | X | Y | Z |  |
 
 ## <div align="left"><img src="icons/data.svg" width="32px" align="left"/>Database (45)</div>
 
-| 0-9 | [A](scripts/database/A) | [B](scripts/database/B) | [C](scripts/database/C) | [D](scripts/database/D) | [E](scripts/database/E) | [F](scripts/database/F) | [G](scripts/database/G) | [H](scripts/database/H) |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| I | J | K | L | [M](scripts/database/M) | [N](scripts/database/N) | O | [P](scripts/database/P) | Q |
-| [R](scripts/database/R) | [S](scripts/database/S) | [T](scripts/database/T) | [U](scripts/database/U) | V | W | X | Y | Z |
+| 0-9 | [A](scripts/database/A) | [B](scripts/database/B) | [C](scripts/database/C) | [D](scripts/database/D) | [E](scripts/database/E) | [F](scripts/database/F) | [G](scripts/database/G) | [H](scripts/database/H) | I | J | K | L | [M](scripts/database/M) |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| [N](scripts/database/N) | O | [P](scripts/database/P) | Q | [R](scripts/database/R) | [S](scripts/database/S) | [T](scripts/database/T) | [U](scripts/database/U) | V | W | X | Y | Z |  |
 
 ## <div align="left"><img src="icons/shell.svg" width="32px" align="left"/>Shell (4)</div>
 
-| 0-9 | A | B | C | D | E | F | G | H |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| I | J | K | L | M | N | O | P | Q |
-| R | S | [T](scripts/shell/T) | U | [V](scripts/shell/V) | [W](scripts/shell/W) | X | Y | Z |
+| 0-9 | A | B | C | D | E | F | G | H | I | J | K | L | M |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| N | O | P | Q | R | S | [T](scripts/shell/T) | U | [V](scripts/shell/V) | [W](scripts/shell/W) | X | Y | Z |  |
