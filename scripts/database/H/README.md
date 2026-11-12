@@ -2,6 +2,6 @@
 
 1 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 601 | [Human Traffic of Stadium](./Human%20Traffic%20of%20Stadium) | <img src="../../../icons/hard.svg" height="12px" align="center"/> | <a href="./Human%20Traffic%20of%20Stadium/Human%20Traffic%20of%20Stadium.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/human-traffic-of-stadium) |

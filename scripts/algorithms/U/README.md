@@ -2,7 +2,7 @@
 
 17 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="128" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="128" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 263 | [Ugly Number](./Ugly%20Number) | <img src="../../../icons/easy.svg" height="16px" align="center"/> | <a href="./Ugly%20Number/Ugly%20Number.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Ugly%20Number/Ugly%20Number.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Ugly%20Number/Ugly%20Number.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Ugly%20Number/Ugly%20Number.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/ugly-number) |
 | 264 | [Ugly Number II](./Ugly%20Number%20II) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Ugly%20Number%20II/Ugly%20Number%20II.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Ugly%20Number%20II/Ugly%20Number%20II.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Ugly%20Number%20II/Ugly%20Number%20II.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Ugly%20Number%20II/Ugly%20Number%20II.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/ugly-number-ii) |

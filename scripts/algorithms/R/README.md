@@ -2,7 +2,7 @@
 
 129 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="128" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="128" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 781 | [Rabbits in Forest](./Rabbits%20in%20Forest) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Rabbits%20in%20Forest/Rabbits%20in%20Forest.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Rabbits%20in%20Forest/Rabbits%20in%20Forest.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Rabbits%20in%20Forest/Rabbits%20in%20Forest.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Rabbits%20in%20Forest/Rabbits%20in%20Forest.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/rabbits-in-forest) |
 | 818 | [Race Car](./Race%20Car) | <img src="../../../icons/hard.svg" height="12px" align="center"/> | <a href="./Race%20Car/Race%20Car.cpp"><img src="../../../icons/c%2B%2B.svg" width="20px" align="center"/></a>&nbsp;<a href="./Race%20Car/Race%20Car.py"><img src="../../../icons/python.svg" width="20px" align="center"/></a>&nbsp;<a href="./Race%20Car/Race%20Car.java"><img src="../../../icons/java.svg" width="20px" align="center"/></a>&nbsp;<a href="./Race%20Car/Race%20Car.js"><img src="../../../icons/javascript.svg" width="20px" align="center"/></a>&nbsp;<a href="./Race%20Car/Race%20Car.rs"><img src="../../../icons/rust.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/race-car) |

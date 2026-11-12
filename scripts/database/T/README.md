@@ -2,7 +2,7 @@
 
 4 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 1890 | [The Latest Login in 2020](./The%20Latest%20Login%20in%202020) | <img src="../../../icons/easy.svg" height="16px" align="center"/> | <a href="./The%20Latest%20Login%20in%202020/The%20Latest%20Login%20in%202020.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/the-latest-login-in-2020) |
 | 1407 | [Top Travellers](./Top%20Travellers) | <img src="../../../icons/easy.svg" height="16px" align="center"/> | <a href="./Top%20Travellers/Top%20Travellers.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/top-travellers) |

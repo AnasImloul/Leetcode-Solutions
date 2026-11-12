@@ -2,7 +2,7 @@
 
 8 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages<br><img src="../../../icons/spacer.svg" width="28" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 1873 | [Calculate Special Bonus](./Calculate%20Special%20Bonus) | <img src="../../../icons/easy.svg" height="16px" align="center"/> | <a href="./Calculate%20Special%20Bonus/Calculate%20Special%20Bonus.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/calculate-special-bonus) |
 | 1393 | [Capital Gain/Loss](./Capital%20GainLoss) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Capital%20GainLoss/Capital%20GainLoss.sql"><img src="../../../icons/mysql.svg" width="20px" align="center"/></a> | [link](https://leetcode.com/problems/capital-gainloss) |
