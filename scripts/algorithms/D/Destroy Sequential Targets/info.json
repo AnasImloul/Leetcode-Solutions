@@ -1,0 +1,11 @@
+{
+    "id": "2453",
+    "name": "Destroy Sequential Targets",
+    "url": "https://leetcode.com/problems/destroy-sequential-targets",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
