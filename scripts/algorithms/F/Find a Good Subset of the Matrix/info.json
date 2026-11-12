@@ -1,0 +1,11 @@
+{
+    "id": "2732",
+    "name": "Find a Good Subset of the Matrix",
+    "url": "https://leetcode.com/problems/find-a-good-subset-of-the-matrix",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "2560",
+    "name": "House Robber IV",
+    "url": "https://leetcode.com/problems/house-robber-iv",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true,
+        "python": true
+    }
+}

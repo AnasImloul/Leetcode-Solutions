@@ -1,0 +1,11 @@
+{
+    "id": "2760",
+    "name": "Longest Even Odd Subarray With Threshold",
+    "url": "https://leetcode.com/problems/longest-even-odd-subarray-with-threshold",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

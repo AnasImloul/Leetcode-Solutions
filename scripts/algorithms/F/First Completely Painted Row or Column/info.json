@@ -1,0 +1,11 @@
+{
+    "id": "2661",
+    "name": "First Completely Painted Row or Column",
+    "url": "https://leetcode.com/problems/first-completely-painted-row-or-column",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

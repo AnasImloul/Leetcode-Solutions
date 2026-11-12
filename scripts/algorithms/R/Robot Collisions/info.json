@@ -1,0 +1,11 @@
+{
+    "id": "2751",
+    "name": "Robot Collisions",
+    "url": "https://leetcode.com/problems/robot-collisions",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

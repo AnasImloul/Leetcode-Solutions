@@ -1,0 +1,12 @@
+{
+    "id": "2789",
+    "name": "Largest Element in an Array after Merge Operations",
+    "url": "https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "python": true
+    }
+}

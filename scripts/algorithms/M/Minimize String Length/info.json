@@ -1,0 +1,13 @@
+{
+    "id": "2716",
+    "name": "Minimize String Length",
+    "url": "https://leetcode.com/problems/minimize-string-length",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "c++": true
+    }
+}

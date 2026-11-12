@@ -1,0 +1,12 @@
+{
+    "id": "2542",
+    "name": "Maximum Subsequence Score",
+    "url": "https://leetcode.com/problems/maximum-subsequence-score",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

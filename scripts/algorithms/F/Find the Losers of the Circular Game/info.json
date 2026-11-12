@@ -1,0 +1,11 @@
+{
+    "id": "2682",
+    "name": "Find the Losers of the Circular Game",
+    "url": "https://leetcode.com/problems/find-the-losers-of-the-circular-game",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

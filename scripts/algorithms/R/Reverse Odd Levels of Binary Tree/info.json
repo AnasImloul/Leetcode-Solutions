@@ -1,0 +1,13 @@
+{
+    "id": "2415",
+    "name": "Reverse Odd Levels of Binary Tree",
+    "url": "https://leetcode.com/problems/reverse-odd-levels-of-binary-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "c++": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2530",
+    "name": "Maximal Score After Applying K Operations",
+    "url": "https://leetcode.com/problems/maximal-score-after-applying-k-operations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "python": true
+    }
+}

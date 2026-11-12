@@ -1,0 +1,12 @@
+{
+    "id": "2594",
+    "name": "Minimum Time to Repair Cars",
+    "url": "https://leetcode.com/problems/minimum-time-to-repair-cars",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "javascript": true
+    }
+}

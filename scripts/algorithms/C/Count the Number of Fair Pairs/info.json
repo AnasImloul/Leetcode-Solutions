@@ -1,0 +1,12 @@
+{
+    "id": "2563",
+    "name": "Count the Number of Fair Pairs",
+    "url": "https://leetcode.com/problems/count-the-number-of-fair-pairs",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "2600",
+    "name": "K Items With the Maximum Sum",
+    "url": "https://leetcode.com/problems/k-items-with-the-maximum-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "python": true
+    }
+}

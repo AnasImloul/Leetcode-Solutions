@@ -1,0 +1,11 @@
+{
+    "id": "2603",
+    "name": "Collect Coins in a Tree",
+    "url": "https://leetcode.com/problems/collect-coins-in-a-tree",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

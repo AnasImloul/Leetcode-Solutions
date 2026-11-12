@@ -1,0 +1,11 @@
+{
+    "id": "2549",
+    "name": "Count Distinct Numbers on Board",
+    "url": "https://leetcode.com/problems/count-distinct-numbers-on-board",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

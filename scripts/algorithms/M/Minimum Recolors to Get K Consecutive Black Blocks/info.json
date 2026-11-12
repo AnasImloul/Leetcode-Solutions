@@ -1,0 +1,11 @@
+{
+    "id": "2379",
+    "name": "Minimum Recolors to Get K Consecutive Black Blocks",
+    "url": "https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

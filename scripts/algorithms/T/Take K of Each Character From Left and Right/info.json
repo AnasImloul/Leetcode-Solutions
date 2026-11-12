@@ -1,0 +1,12 @@
+{
+    "id": "2516",
+    "name": "Take K of Each Character From Left and Right",
+    "url": "https://leetcode.com/problems/take-k-of-each-character-from-left-and-right",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

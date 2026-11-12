@@ -1,0 +1,11 @@
+{
+    "id": "2808",
+    "name": "Minimum Seconds to Equalize a Circular Array",
+    "url": "https://leetcode.com/problems/minimum-seconds-to-equalize-a-circular-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

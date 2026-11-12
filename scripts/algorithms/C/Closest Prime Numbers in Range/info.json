@@ -1,0 +1,12 @@
+{
+    "id": "2523",
+    "name": "Closest Prime Numbers in Range",
+    "url": "https://leetcode.com/problems/closest-prime-numbers-in-range",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

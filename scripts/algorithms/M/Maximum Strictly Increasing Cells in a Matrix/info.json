@@ -1,0 +1,11 @@
+{
+    "id": "2713",
+    "name": "Maximum Strictly Increasing Cells in a Matrix",
+    "url": "https://leetcode.com/problems/maximum-strictly-increasing-cells-in-a-matrix",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

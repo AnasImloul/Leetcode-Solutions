@@ -1,0 +1,11 @@
+{
+    "id": "2467",
+    "name": "Most Profitable Path in a Tree",
+    "url": "https://leetcode.com/problems/most-profitable-path-in-a-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

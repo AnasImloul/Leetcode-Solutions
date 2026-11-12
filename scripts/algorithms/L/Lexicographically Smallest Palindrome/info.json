@@ -1,0 +1,11 @@
+{
+    "id": "2697",
+    "name": "Lexicographically Smallest Palindrome",
+    "url": "https://leetcode.com/problems/lexicographically-smallest-palindrome",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

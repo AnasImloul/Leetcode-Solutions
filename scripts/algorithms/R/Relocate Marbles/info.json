@@ -1,0 +1,12 @@
+{
+    "id": "2766",
+    "name": "Relocate Marbles",
+    "url": "https://leetcode.com/problems/relocate-marbles",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "python": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2706",
+    "name": "Buy Two Chocolates",
+    "url": "https://leetcode.com/problems/buy-two-chocolates",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2592",
+    "name": "Maximize Greatness of an Array",
+    "url": "https://leetcode.com/problems/maximize-greatness-of-an-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

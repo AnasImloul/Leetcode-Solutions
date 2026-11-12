@@ -1,0 +1,11 @@
+{
+    "id": "2463",
+    "name": "Minimum Total Distance Traveled",
+    "url": "https://leetcode.com/problems/minimum-total-distance-traveled",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

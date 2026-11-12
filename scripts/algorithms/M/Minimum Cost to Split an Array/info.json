@@ -1,0 +1,13 @@
+{
+    "id": "2547",
+    "name": "Minimum Cost to Split an Array",
+    "url": "https://leetcode.com/problems/minimum-cost-to-split-an-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "javascript": true,
+        "c++": true
+    }
+}

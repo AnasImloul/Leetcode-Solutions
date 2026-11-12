@@ -1,0 +1,11 @@
+{
+    "id": "2798",
+    "name": "Number of Employees Who Met the Target",
+    "url": "https://leetcode.com/problems/number-of-employees-who-met-the-target",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

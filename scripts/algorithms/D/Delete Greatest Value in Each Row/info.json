@@ -1,0 +1,12 @@
+{
+    "id": "2500",
+    "name": "Delete Greatest Value in Each Row",
+    "url": "https://leetcode.com/problems/delete-greatest-value-in-each-row",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true
+    }
+}

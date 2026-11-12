@@ -1,0 +1,11 @@
+{
+    "id": "2719",
+    "name": "Count of Integers",
+    "url": "https://leetcode.com/problems/count-of-integers",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

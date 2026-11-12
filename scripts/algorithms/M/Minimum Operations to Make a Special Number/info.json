@@ -1,0 +1,12 @@
+{
+    "id": "2844",
+    "name": "Minimum Operations to Make a Special Number",
+    "url": "https://leetcode.com/problems/minimum-operations-to-make-a-special-number",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

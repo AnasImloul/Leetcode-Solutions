@@ -1,0 +1,12 @@
+{
+    "id": "2561",
+    "name": "Rearranging Fruits",
+    "url": "https://leetcode.com/problems/rearranging-fruits",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true
+    }
+}

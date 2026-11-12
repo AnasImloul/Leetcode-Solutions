@@ -1,0 +1,12 @@
+{
+    "id": "2567",
+    "name": "Minimum Score by Changing Two Elements",
+    "url": "https://leetcode.com/problems/minimum-score-by-changing-two-elements",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

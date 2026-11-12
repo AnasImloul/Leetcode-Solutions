@@ -9,6 +9,6 @@
         "c++": true,
         "python": true,
         "java": false,
-        "javascript": false
+        "javascript": true
     }
 }

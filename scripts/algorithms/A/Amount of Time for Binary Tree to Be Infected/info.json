@@ -1,0 +1,12 @@
+{
+    "id": "2385",
+    "name": "Amount of Time for Binary Tree to Be Infected",
+    "url": "https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true
+    }
+}

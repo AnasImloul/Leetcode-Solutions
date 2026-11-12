@@ -1,0 +1,11 @@
+{
+    "id": "2420",
+    "name": "Find All Good Indices",
+    "url": "https://leetcode.com/problems/find-all-good-indices",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "2536",
+    "name": "Increment Submatrices by One",
+    "url": "https://leetcode.com/problems/increment-submatrices-by-one",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true,
+        "python": true
+    }
+}

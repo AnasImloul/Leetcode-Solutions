@@ -1,0 +1,11 @@
+{
+    "id": "2784",
+    "name": "Check if Array is Good",
+    "url": "https://leetcode.com/problems/check-if-array-is-good",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

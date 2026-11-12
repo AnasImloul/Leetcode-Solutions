@@ -1,0 +1,13 @@
+{
+    "id": "2601",
+    "name": "Prime Subtraction Operation",
+    "url": "https://leetcode.com/problems/prime-subtraction-operation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true,
+        "c++": true
+    }
+}

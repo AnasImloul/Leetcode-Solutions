@@ -1,0 +1,11 @@
+{
+    "id": "2427",
+    "name": "Number of Common Factors",
+    "url": "https://leetcode.com/problems/number-of-common-factors",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2651",
+    "name": "Calculate Delayed Arrival Time",
+    "url": "https://leetcode.com/problems/calculate-delayed-arrival-time",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true
+    }
+}

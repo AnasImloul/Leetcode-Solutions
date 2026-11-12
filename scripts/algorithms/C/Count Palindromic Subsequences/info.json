@@ -1,0 +1,12 @@
+{
+    "id": "2484",
+    "name": "Count Palindromic Subsequences",
+    "url": "https://leetcode.com/problems/count-palindromic-subsequences",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "python": true
+    }
+}

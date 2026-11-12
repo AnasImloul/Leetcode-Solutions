@@ -1,0 +1,13 @@
+{
+    "id": "2615",
+    "name": "Sum of Distances",
+    "url": "https://leetcode.com/problems/sum-of-distances",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "c++": true
+    }
+}

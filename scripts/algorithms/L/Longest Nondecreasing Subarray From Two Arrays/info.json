@@ -1,0 +1,11 @@
+{
+    "id": "2771",
+    "name": "Longest Non-decreasing Subarray From Two Arrays",
+    "url": "https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

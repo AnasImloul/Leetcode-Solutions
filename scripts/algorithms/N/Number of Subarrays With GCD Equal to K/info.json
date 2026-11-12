@@ -1,0 +1,11 @@
+{
+    "id": "2447",
+    "name": "Number of Subarrays With GCD Equal to K",
+    "url": "https://leetcode.com/problems/number-of-subarrays-with-gcd-equal-to-k",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

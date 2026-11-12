@@ -1,0 +1,12 @@
+{
+    "id": "2614",
+    "name": "Prime In Diagonal",
+    "url": "https://leetcode.com/problems/prime-in-diagonal",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

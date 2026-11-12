@@ -1,0 +1,11 @@
+{
+    "id": "2607",
+    "name": "Make K-Subarray Sums Equal",
+    "url": "https://leetcode.com/problems/make-k-subarray-sums-equal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

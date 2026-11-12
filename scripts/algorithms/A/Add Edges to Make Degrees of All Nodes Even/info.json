@@ -1,0 +1,11 @@
+{
+    "id": "2508",
+    "name": "Add Edges to Make Degrees of All Nodes Even",
+    "url": "https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

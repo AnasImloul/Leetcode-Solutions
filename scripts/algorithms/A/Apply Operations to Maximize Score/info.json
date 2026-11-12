@@ -1,0 +1,11 @@
+{
+    "id": "2818",
+    "name": "Apply Operations to Maximize Score",
+    "url": "https://leetcode.com/problems/apply-operations-to-maximize-score",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

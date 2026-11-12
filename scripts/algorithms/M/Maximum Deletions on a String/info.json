@@ -1,0 +1,11 @@
+{
+    "id": "2430",
+    "name": "Maximum Deletions on a String",
+    "url": "https://leetcode.com/problems/maximum-deletions-on-a-string",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true
+    }
+}

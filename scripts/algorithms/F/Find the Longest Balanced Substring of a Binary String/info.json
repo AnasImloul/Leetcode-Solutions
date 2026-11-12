@@ -1,0 +1,11 @@
+{
+    "id": "2609",
+    "name": "Find the Longest Balanced Substring of a Binary String",
+    "url": "https://leetcode.com/problems/find-the-longest-balanced-substring-of-a-binary-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

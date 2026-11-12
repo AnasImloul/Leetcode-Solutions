@@ -1,0 +1,12 @@
+{
+    "id": "2421",
+    "name": "Number of Good Paths",
+    "url": "https://leetcode.com/problems/number-of-good-paths",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "c++": true
+    }
+}

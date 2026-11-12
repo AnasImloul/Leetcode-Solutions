@@ -1,0 +1,11 @@
+{
+    "id": "2525",
+    "name": "Categorize Box According to Criteria",
+    "url": "https://leetcode.com/problems/categorize-box-according-to-criteria",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

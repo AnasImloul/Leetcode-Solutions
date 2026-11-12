@@ -1,0 +1,12 @@
+{
+    "id": "2558",
+    "name": "Take Gifts From the Richest Pile",
+    "url": "https://leetcode.com/problems/take-gifts-from-the-richest-pile",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

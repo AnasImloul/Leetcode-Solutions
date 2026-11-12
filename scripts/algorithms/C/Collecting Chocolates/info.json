@@ -1,0 +1,11 @@
+{
+    "id": "2735",
+    "name": "Collecting Chocolates",
+    "url": "https://leetcode.com/problems/collecting-chocolates",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

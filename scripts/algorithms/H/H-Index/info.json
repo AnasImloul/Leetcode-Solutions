@@ -5,5 +5,11 @@
     "premium": false,
     "acceptance": 38.0,
     "difficulty": "medium",
-    "topic": "algorithms"
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "java": true,
+        "javascript": true,
+        "python": true
+    }
 }

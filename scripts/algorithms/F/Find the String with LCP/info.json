@@ -1,0 +1,11 @@
+{
+    "id": "2573",
+    "name": "Find the String with LCP",
+    "url": "https://leetcode.com/problems/find-the-string-with-lcp",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

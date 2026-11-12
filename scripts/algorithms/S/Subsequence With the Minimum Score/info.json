@@ -1,0 +1,13 @@
+{
+    "id": "2565",
+    "name": "Subsequence With the Minimum Score",
+    "url": "https://leetcode.com/problems/subsequence-with-the-minimum-score",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "python": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2685",
+    "name": "Count the Number of Complete Components",
+    "url": "https://leetcode.com/problems/count-the-number-of-complete-components",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

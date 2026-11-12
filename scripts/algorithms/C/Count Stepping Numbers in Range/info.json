@@ -1,0 +1,12 @@
+{
+    "id": "2801",
+    "name": "Count Stepping Numbers in Range",
+    "url": "https://leetcode.com/problems/count-stepping-numbers-in-range",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

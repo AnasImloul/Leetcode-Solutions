@@ -1,0 +1,12 @@
+{
+    "id": "2813",
+    "name": "Maximum Elegance of a K-Length Subsequence",
+    "url": "https://leetcode.com/problems/maximum-elegance-of-a-k-length-subsequence",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

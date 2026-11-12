@@ -1,0 +1,12 @@
+{
+    "id": "2487",
+    "name": "Remove Nodes From Linked List",
+    "url": "https://leetcode.com/problems/remove-nodes-from-linked-list",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

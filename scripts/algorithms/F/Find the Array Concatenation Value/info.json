@@ -1,0 +1,11 @@
+{
+    "id": "2562",
+    "name": "Find the Array Concatenation Value",
+    "url": "https://leetcode.com/problems/find-the-array-concatenation-value",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2645",
+    "name": "Minimum Additions to Make Valid String",
+    "url": "https://leetcode.com/problems/minimum-additions-to-make-valid-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

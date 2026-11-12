@@ -1,0 +1,12 @@
+{
+    "id": "2438",
+    "name": "Range Product Queries of Powers",
+    "url": "https://leetcode.com/problems/range-product-queries-of-powers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

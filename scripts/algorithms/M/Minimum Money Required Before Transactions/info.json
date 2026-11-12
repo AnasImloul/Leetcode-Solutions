@@ -1,0 +1,12 @@
+{
+    "id": "2412",
+    "name": "Minimum Money Required Before Transactions",
+    "url": "https://leetcode.com/problems/minimum-money-required-before-transactions",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

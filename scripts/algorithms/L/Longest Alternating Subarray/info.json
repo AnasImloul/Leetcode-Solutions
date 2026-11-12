@@ -1,0 +1,12 @@
+{
+    "id": "2765",
+    "name": "Longest Alternating Subarray",
+    "url": "https://leetcode.com/problems/longest-alternating-subarray",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

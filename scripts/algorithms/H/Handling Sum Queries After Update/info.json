@@ -1,0 +1,12 @@
+{
+    "id": "2569",
+    "name": "Handling Sum Queries After Update",
+    "url": "https://leetcode.com/problems/handling-sum-queries-after-update",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

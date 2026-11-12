@@ -1,0 +1,12 @@
+{
+    "id": "2598",
+    "name": "Smallest Missing Non-negative Integer After Operations",
+    "url": "https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2717",
+    "name": "Semi-Ordered Permutation",
+    "url": "https://leetcode.com/problems/semi-ordered-permutation",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

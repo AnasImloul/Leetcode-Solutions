@@ -1,0 +1,12 @@
+{
+    "id": "2646",
+    "name": "Minimize the Total Price of the Trips",
+    "url": "https://leetcode.com/problems/minimize-the-total-price-of-the-trips",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

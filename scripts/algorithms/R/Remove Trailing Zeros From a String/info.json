@@ -1,0 +1,12 @@
+{
+    "id": "2710",
+    "name": "Remove Trailing Zeros From a String",
+    "url": "https://leetcode.com/problems/remove-trailing-zeros-from-a-string",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "python": true
+    }
+}

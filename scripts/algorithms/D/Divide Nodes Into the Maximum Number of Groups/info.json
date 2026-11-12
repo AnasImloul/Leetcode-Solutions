@@ -1,0 +1,11 @@
+{
+    "id": "2493",
+    "name": "Divide Nodes Into the Maximum Number of Groups",
+    "url": "https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

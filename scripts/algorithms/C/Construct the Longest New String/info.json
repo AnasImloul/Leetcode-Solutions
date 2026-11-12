@@ -1,0 +1,12 @@
+{
+    "id": "2745",
+    "name": "Construct the Longest New String",
+    "url": "https://leetcode.com/problems/construct-the-longest-new-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

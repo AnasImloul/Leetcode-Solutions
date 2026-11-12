@@ -1,0 +1,13 @@
+{
+    "id": "2466",
+    "name": "Count Ways To Build Good Strings",
+    "url": "https://leetcode.com/problems/count-ways-to-build-good-strings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "c++": true,
+        "python": true
+    }
+}

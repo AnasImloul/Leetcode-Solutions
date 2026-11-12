@@ -1,0 +1,11 @@
+{
+    "id": "2425",
+    "name": "Bitwise XOR of All Pairings",
+    "url": "https://leetcode.com/problems/bitwise-xor-of-all-pairings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2574",
+    "name": "Left and Right Sum Differences",
+    "url": "https://leetcode.com/problems/left-and-right-sum-differences",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

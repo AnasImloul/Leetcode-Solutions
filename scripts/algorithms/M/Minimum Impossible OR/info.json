@@ -1,0 +1,11 @@
+{
+    "id": "2568",
+    "name": "Minimum Impossible OR",
+    "url": "https://leetcode.com/problems/minimum-impossible-or",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

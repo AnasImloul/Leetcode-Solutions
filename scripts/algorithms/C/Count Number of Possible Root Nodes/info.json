@@ -1,0 +1,12 @@
+{
+    "id": "2581",
+    "name": "Count Number of Possible Root Nodes",
+    "url": "https://leetcode.com/problems/count-number-of-possible-root-nodes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

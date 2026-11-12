@@ -1,0 +1,11 @@
+{
+    "id": "2442",
+    "name": "Count Number of Distinct Integers After Reverse Operations",
+    "url": "https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2733",
+    "name": "Neither Minimum nor Maximum",
+    "url": "https://leetcode.com/problems/neither-minimum-nor-maximum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

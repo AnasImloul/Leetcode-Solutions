@@ -1,0 +1,11 @@
+{
+    "id": "2470",
+    "name": "Number of Subarrays With LCM Equal to K",
+    "url": "https://leetcode.com/problems/number-of-subarrays-with-lcm-equal-to-k",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

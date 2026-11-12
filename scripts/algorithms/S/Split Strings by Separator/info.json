@@ -1,0 +1,11 @@
+{
+    "id": "2788",
+    "name": "Split Strings by Separator",
+    "url": "https://leetcode.com/problems/split-strings-by-separator",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

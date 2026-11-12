@@ -1,0 +1,12 @@
+{
+    "id": "2709",
+    "name": "Greatest Common Divisor Traversal",
+    "url": "https://leetcode.com/problems/greatest-common-divisor-traversal",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "2404",
+    "name": "Most Frequent Even Element",
+    "url": "https://leetcode.com/problems/most-frequent-even-element",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "rust": true,
+        "java": true
+    }
+}

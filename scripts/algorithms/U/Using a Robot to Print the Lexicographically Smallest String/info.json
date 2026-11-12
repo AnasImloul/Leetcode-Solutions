@@ -1,0 +1,11 @@
+{
+    "id": "2434",
+    "name": "Using a Robot to Print the Lexicographically Smallest String",
+    "url": "https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

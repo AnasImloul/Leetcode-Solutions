@@ -1,0 +1,12 @@
+{
+    "id": "2595",
+    "name": "Number of Even and Odd Bits",
+    "url": "https://leetcode.com/problems/number-of-even-and-odd-bits",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

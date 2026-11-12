@@ -1,0 +1,12 @@
+{
+    "id": "2520",
+    "name": "Count the Digits That Divide a Number",
+    "url": "https://leetcode.com/problems/count-the-digits-that-divide-a-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

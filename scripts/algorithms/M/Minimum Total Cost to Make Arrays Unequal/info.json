@@ -1,0 +1,13 @@
+{
+    "id": "2499",
+    "name": "Minimum Total Cost to Make Arrays Unequal",
+    "url": "https://leetcode.com/problems/minimum-total-cost-to-make-arrays-unequal",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true,
+        "python": true
+    }
+}

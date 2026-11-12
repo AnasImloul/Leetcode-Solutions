@@ -1,0 +1,11 @@
+{
+    "id": "2761",
+    "name": "Prime Pairs With Target Sum",
+    "url": "https://leetcode.com/problems/prime-pairs-with-target-sum",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

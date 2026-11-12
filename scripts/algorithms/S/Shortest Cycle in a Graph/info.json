@@ -1,0 +1,11 @@
+{
+    "id": "2608",
+    "name": "Shortest Cycle in a Graph",
+    "url": "https://leetcode.com/problems/shortest-cycle-in-a-graph",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

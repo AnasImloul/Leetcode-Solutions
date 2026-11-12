@@ -1,0 +1,11 @@
+{
+    "id": "2731",
+    "name": "Movement of Robots",
+    "url": "https://leetcode.com/problems/movement-of-robots",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

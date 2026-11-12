@@ -1,0 +1,12 @@
+{
+    "id": "2811",
+    "name": "Check if it is Possible to Split Array",
+    "url": "https://leetcode.com/problems/check-if-it-is-possible-to-split-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

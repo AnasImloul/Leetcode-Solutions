@@ -1,0 +1,12 @@
+{
+    "id": "2684",
+    "name": "Maximum Number of Moves in a Grid",
+    "url": "https://leetcode.com/problems/maximum-number-of-moves-in-a-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true
+    }
+}

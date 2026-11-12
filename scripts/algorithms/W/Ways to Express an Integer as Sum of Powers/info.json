@@ -1,0 +1,11 @@
+{
+    "id": "2787",
+    "name": "Ways to Express an Integer as Sum of Powers",
+    "url": "https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

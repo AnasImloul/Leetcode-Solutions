@@ -1,0 +1,12 @@
+{
+    "id": "2460",
+    "name": "Apply Operations to an Array",
+    "url": "https://leetcode.com/problems/apply-operations-to-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

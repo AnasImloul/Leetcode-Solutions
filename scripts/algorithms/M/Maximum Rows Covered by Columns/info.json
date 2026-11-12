@@ -1,0 +1,12 @@
+{
+    "id": "2397",
+    "name": "Maximum Rows Covered by Columns",
+    "url": "https://leetcode.com/problems/maximum-rows-covered-by-columns",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "2640",
+    "name": "Find the Score of All Prefixes of an Array",
+    "url": "https://leetcode.com/problems/find-the-score-of-all-prefixes-of-an-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true,
+        "python": true
+    }
+}

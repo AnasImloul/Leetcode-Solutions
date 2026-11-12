@@ -1,0 +1,13 @@
+{
+    "id": "2410",
+    "name": "Maximum Matching of Players With Trainers",
+    "url": "https://leetcode.com/problems/maximum-matching-of-players-with-trainers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true,
+        "c++": true
+    }
+}

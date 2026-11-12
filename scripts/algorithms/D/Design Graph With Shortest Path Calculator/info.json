@@ -1,0 +1,11 @@
+{
+    "id": "2642",
+    "name": "Design Graph With Shortest Path Calculator",
+    "url": "https://leetcode.com/problems/design-graph-with-shortest-path-calculator",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

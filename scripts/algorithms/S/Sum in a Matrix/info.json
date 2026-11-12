@@ -1,0 +1,11 @@
+{
+    "id": "2679",
+    "name": "Sum in a Matrix",
+    "url": "https://leetcode.com/problems/sum-in-a-matrix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

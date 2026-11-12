@@ -1,0 +1,11 @@
+{
+    "id": "2780",
+    "name": "Minimum Index of a Valid Split",
+    "url": "https://leetcode.com/problems/minimum-index-of-a-valid-split",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

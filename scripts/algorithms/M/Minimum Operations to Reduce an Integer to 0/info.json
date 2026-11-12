@@ -1,0 +1,11 @@
+{
+    "id": "2571",
+    "name": "Minimum Operations to Reduce an Integer to 0",
+    "url": "https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true
+    }
+}

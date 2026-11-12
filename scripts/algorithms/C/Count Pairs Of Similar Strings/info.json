@@ -1,0 +1,12 @@
+{
+    "id": "2506",
+    "name": "Count Pairs Of Similar Strings",
+    "url": "https://leetcode.com/problems/count-pairs-of-similar-strings",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2602",
+    "name": "Minimum Operations to Make All Array Elements Equal",
+    "url": "https://leetcode.com/problems/minimum-operations-to-make-all-array-elements-equal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

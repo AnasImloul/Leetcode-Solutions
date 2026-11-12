@@ -1,0 +1,12 @@
+{
+    "id": "2817",
+    "name": "Minimum Absolute Difference Between Elements With Constraint",
+    "url": "https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

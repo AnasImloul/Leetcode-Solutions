@@ -1,0 +1,11 @@
+{
+    "id": "2554",
+    "name": "Maximum Number of Integers to Choose From a Range I",
+    "url": "https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

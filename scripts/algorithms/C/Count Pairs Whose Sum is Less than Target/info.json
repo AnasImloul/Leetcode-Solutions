@@ -1,0 +1,12 @@
+{
+    "id": "2824",
+    "name": "Count Pairs Whose Sum is Less than Target",
+    "url": "https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

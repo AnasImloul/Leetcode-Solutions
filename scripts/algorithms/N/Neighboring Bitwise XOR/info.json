@@ -1,0 +1,11 @@
+{
+    "id": "2683",
+    "name": "Neighboring Bitwise XOR",
+    "url": "https://leetcode.com/problems/neighboring-bitwise-xor",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

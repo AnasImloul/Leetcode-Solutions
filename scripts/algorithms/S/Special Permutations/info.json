@@ -1,0 +1,11 @@
+{
+    "id": "2741",
+    "name": "Special Permutations",
+    "url": "https://leetcode.com/problems/special-permutations",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

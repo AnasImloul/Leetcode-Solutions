@@ -1,0 +1,11 @@
+{
+    "id": "2401",
+    "name": "Longest Nice Subarray",
+    "url": "https://leetcode.com/problems/longest-nice-subarray",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

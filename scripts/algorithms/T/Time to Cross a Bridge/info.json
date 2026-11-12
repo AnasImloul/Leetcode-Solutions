@@ -1,0 +1,11 @@
+{
+    "id": "2532",
+    "name": "Time to Cross a Bridge",
+    "url": "https://leetcode.com/problems/time-to-cross-a-bridge",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

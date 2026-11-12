@@ -1,0 +1,11 @@
+{
+    "id": "2551",
+    "name": "Put Marbles in Bags",
+    "url": "https://leetcode.com/problems/put-marbles-in-bags",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

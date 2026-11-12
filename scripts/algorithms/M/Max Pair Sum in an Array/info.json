@@ -1,0 +1,11 @@
+{
+    "id": "2815",
+    "name": "Max Pair Sum in an Array",
+    "url": "https://leetcode.com/problems/max-pair-sum-in-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true
+    }
+}

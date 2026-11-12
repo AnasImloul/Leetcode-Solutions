@@ -1,0 +1,13 @@
+{
+    "id": "2428",
+    "name": "Maximum Sum of an Hourglass",
+    "url": "https://leetcode.com/problems/maximum-sum-of-an-hourglass",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true,
+        "python": true
+    }
+}

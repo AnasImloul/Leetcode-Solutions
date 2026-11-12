@@ -1,0 +1,13 @@
+{
+    "id": "2597",
+    "name": "The Number of Beautiful Subsets",
+    "url": "https://leetcode.com/problems/the-number-of-beautiful-subsets",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "python": true
+    }
+}

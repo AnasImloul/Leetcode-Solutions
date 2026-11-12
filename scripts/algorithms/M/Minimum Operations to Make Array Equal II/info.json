@@ -1,0 +1,12 @@
+{
+    "id": "2541",
+    "name": "Minimum Operations to Make Array Equal II",
+    "url": "https://leetcode.com/problems/minimum-operations-to-make-array-equal-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2502",
+    "name": "Design Memory Allocator",
+    "url": "https://leetcode.com/problems/design-memory-allocator",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

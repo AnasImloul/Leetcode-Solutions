@@ -1,0 +1,11 @@
+{
+    "id": "2790",
+    "name": "Maximum Number of Groups With Increasing Length",
+    "url": "https://leetcode.com/problems/maximum-number-of-groups-with-increasing-length",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

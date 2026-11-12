@@ -1,0 +1,12 @@
+{
+    "id": "2829",
+    "name": "Determine the Minimum Sum of a k-avoiding Array",
+    "url": "https://leetcode.com/problems/determine-the-minimum-sum-of-a-k-avoiding-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

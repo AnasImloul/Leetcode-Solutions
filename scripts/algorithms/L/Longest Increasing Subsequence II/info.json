@@ -1,0 +1,12 @@
+{
+    "id": "2407",
+    "name": "Longest Increasing Subsequence II",
+    "url": "https://leetcode.com/problems/longest-increasing-subsequence-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "python": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2386",
+    "name": "Find the K-Sum of an Array",
+    "url": "https://leetcode.com/problems/find-the-k-sum-of-an-array",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "c++": true
+    }
+}

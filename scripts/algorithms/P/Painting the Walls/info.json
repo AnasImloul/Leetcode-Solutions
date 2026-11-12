@@ -1,0 +1,11 @@
+{
+    "id": "2742",
+    "name": "Painting the Walls",
+    "url": "https://leetcode.com/problems/painting-the-walls",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

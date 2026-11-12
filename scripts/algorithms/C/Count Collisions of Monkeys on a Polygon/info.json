@@ -1,0 +1,12 @@
+{
+    "id": "2550",
+    "name": "Count Collisions of Monkeys on a Polygon",
+    "url": "https://leetcode.com/problems/count-collisions-of-monkeys-on-a-polygon",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

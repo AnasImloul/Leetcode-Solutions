@@ -1,0 +1,13 @@
+{
+    "id": "2522",
+    "name": "Partition String Into Substrings With Values at Most K",
+    "url": "https://leetcode.com/problems/partition-string-into-substrings-with-values-at-most-k",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true,
+        "python": true
+    }
+}

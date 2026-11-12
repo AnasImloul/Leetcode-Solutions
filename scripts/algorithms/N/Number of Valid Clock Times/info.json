@@ -1,0 +1,12 @@
+{
+    "id": "2437",
+    "name": "Number of Valid Clock Times",
+    "url": "https://leetcode.com/problems/number-of-valid-clock-times",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

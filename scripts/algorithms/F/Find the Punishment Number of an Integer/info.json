@@ -1,0 +1,11 @@
+{
+    "id": "2698",
+    "name": "Find the Punishment Number of an Integer",
+    "url": "https://leetcode.com/problems/find-the-punishment-number-of-an-integer",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2577",
+    "name": "Minimum Time to Visit a Cell In a Grid",
+    "url": "https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "c++": true
+    }
+}

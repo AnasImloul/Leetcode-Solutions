@@ -1,0 +1,13 @@
+{
+    "id": "2529",
+    "name": "Maximum Count of Positive Integer and Negative Integer",
+    "url": "https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true,
+        "python": true
+    }
+}

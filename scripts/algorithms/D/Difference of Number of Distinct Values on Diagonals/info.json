@@ -1,0 +1,13 @@
+{
+    "id": "2711",
+    "name": "Difference of Number of Distinct Values on Diagonals",
+    "url": "https://leetcode.com/problems/difference-of-number-of-distinct-values-on-diagonals",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true,
+        "python": true
+    }
+}

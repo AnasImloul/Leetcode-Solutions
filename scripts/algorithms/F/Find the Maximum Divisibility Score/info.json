@@ -1,0 +1,11 @@
+{
+    "id": "2644",
+    "name": "Find the Maximum Divisibility Score",
+    "url": "https://leetcode.com/problems/find-the-maximum-divisibility-score",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

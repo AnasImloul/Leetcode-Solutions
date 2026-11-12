@@ -1,0 +1,11 @@
+{
+    "id": "2810",
+    "name": "Faulty Keyboard",
+    "url": "https://leetcode.com/problems/faulty-keyboard",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

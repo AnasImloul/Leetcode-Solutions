@@ -1,0 +1,11 @@
+{
+    "id": "2584",
+    "name": "Split the Array to Make Coprime Products",
+    "url": "https://leetcode.com/problems/split-the-array-to-make-coprime-products",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2696",
+    "name": "Minimum String Length After Removing Substrings",
+    "url": "https://leetcode.com/problems/minimum-string-length-after-removing-substrings",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "python": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "2826",
+    "name": "Sorting Three Groups",
+    "url": "https://leetcode.com/problems/sorting-three-groups",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "c++": true
+    }
+}

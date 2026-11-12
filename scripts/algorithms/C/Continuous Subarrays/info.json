@@ -1,0 +1,12 @@
+{
+    "id": "2762",
+    "name": "Continuous Subarrays",
+    "url": "https://leetcode.com/problems/continuous-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2730",
+    "name": "Find the Longest Semi-Repetitive Substring",
+    "url": "https://leetcode.com/problems/find-the-longest-semi-repetitive-substring",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

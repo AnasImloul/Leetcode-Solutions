@@ -1,0 +1,11 @@
+{
+    "id": "2836",
+    "name": "Maximize Value of Function in a Ball Passing Game",
+    "url": "https://leetcode.com/problems/maximize-value-of-function-in-a-ball-passing-game",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

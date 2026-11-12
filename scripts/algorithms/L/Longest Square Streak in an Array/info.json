@@ -1,0 +1,11 @@
+{
+    "id": "2501",
+    "name": "Longest Square Streak in an Array",
+    "url": "https://leetcode.com/problems/longest-square-streak-in-an-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2606",
+    "name": "Find the Substring With Maximum Cost",
+    "url": "https://leetcode.com/problems/find-the-substring-with-maximum-cost",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "python": true
+    }
+}

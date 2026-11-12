@@ -1,0 +1,11 @@
+{
+    "id": "2468",
+    "name": "Split Message Based on Limit",
+    "url": "https://leetcode.com/problems/split-message-based-on-limit",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

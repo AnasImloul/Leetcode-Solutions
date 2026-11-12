@@ -1,0 +1,13 @@
+{
+    "id": "2671",
+    "name": "Frequency Tracker",
+    "url": "https://leetcode.com/problems/frequency-tracker",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "python": true
+    }
+}

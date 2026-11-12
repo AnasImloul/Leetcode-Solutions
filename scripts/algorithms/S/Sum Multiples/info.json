@@ -1,0 +1,11 @@
+{
+    "id": "2652",
+    "name": "Sum Multiples",
+    "url": "https://leetcode.com/problems/sum-multiples",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

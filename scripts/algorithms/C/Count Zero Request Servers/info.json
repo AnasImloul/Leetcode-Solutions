@@ -1,0 +1,12 @@
+{
+    "id": "2747",
+    "name": "Count Zero Request Servers",
+    "url": "https://leetcode.com/problems/count-zero-request-servers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

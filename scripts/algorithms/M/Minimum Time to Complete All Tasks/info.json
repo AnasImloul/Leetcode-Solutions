@@ -1,0 +1,12 @@
+{
+    "id": "2589",
+    "name": "Minimum Time to Complete All Tasks",
+    "url": "https://leetcode.com/problems/minimum-time-to-complete-all-tasks",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

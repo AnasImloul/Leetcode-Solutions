@@ -1,0 +1,11 @@
+{
+    "id": "2478",
+    "name": "Number of Beautiful Partitions",
+    "url": "https://leetcode.com/problems/number-of-beautiful-partitions",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

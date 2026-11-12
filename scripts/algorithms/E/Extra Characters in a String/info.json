@@ -1,0 +1,11 @@
+{
+    "id": "2707",
+    "name": "Extra Characters in a String",
+    "url": "https://leetcode.com/problems/extra-characters-in-a-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

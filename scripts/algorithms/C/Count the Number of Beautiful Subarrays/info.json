@@ -1,0 +1,11 @@
+{
+    "id": "2588",
+    "name": "Count the Number of Beautiful Subarrays",
+    "url": "https://leetcode.com/problems/count-the-number-of-beautiful-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

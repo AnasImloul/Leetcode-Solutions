@@ -1,0 +1,11 @@
+{
+    "id": "2678",
+    "name": "Number of Senior Citizens",
+    "url": "https://leetcode.com/problems/number-of-senior-citizens",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true
+    }
+}

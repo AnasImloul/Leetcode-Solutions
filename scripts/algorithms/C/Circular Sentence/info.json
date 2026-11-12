@@ -1,0 +1,12 @@
+{
+    "id": "2490",
+    "name": "Circular Sentence",
+    "url": "https://leetcode.com/problems/circular-sentence",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

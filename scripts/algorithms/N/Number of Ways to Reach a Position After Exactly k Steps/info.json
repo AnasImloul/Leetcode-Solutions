@@ -1,0 +1,11 @@
+{
+    "id": "2400",
+    "name": "Number of Ways to Reach a Position After Exactly k Steps",
+    "url": "https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

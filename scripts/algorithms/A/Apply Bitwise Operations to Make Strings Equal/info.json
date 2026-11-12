@@ -1,0 +1,12 @@
+{
+    "id": "2546",
+    "name": "Apply Bitwise Operations to Make Strings Equal",
+    "url": "https://leetcode.com/problems/apply-bitwise-operations-to-make-strings-equal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

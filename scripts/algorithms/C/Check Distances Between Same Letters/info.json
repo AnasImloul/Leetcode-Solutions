@@ -1,0 +1,11 @@
+{
+    "id": "2399",
+    "name": "Check Distances Between Same Letters",
+    "url": "https://leetcode.com/problems/check-distances-between-same-letters",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

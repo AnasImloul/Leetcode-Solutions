@@ -1,0 +1,13 @@
+{
+    "id": "2740",
+    "name": "Find the Value of the Partition",
+    "url": "https://leetcode.com/problems/find-the-value-of-the-partition",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "python": true
+    }
+}

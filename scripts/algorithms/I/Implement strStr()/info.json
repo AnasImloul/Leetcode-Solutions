@@ -1,7 +1,7 @@
 {
     "id": "28",
-    "name": "Implement strStr()",
-    "url": "https://leetcode.com/problems/implement-strstr",
+    "name": "Find the Index of the First Occurrence in a String",
+    "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string",
     "difficulty": "easy",
     "premium": false,
     "topic": "algorithms",
@@ -9,6 +9,7 @@
         "c++": true,
         "python": true,
         "java": true,
-        "javascript": true
+        "javascript": true,
+        "rust": true
     }
 }

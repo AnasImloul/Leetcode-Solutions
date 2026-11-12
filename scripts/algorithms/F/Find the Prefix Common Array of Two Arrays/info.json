@@ -1,0 +1,11 @@
+{
+    "id": "2657",
+    "name": "Find the Prefix Common Array of Two Arrays",
+    "url": "https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

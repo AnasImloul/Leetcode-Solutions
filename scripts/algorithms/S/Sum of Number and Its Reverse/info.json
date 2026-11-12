@@ -1,0 +1,11 @@
+{
+    "id": "2443",
+    "name": "Sum of Number and Its Reverse",
+    "url": "https://leetcode.com/problems/sum-of-number-and-its-reverse",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

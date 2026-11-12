@@ -1,0 +1,11 @@
+{
+    "id": "1061",
+    "name": "Lexicographically Smallest Equivalent String",
+    "url": "https://leetcode.com/problems/lexicographically-smallest-equivalent-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

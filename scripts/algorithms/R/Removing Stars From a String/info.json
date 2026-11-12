@@ -1,0 +1,11 @@
+{
+    "id": "2390",
+    "name": "Removing Stars From a String",
+    "url": "https://leetcode.com/problems/removing-stars-from-a-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

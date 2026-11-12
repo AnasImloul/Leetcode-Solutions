@@ -1,0 +1,12 @@
+{
+    "id": "2572",
+    "name": "Count the Number of Square-Free Subsets",
+    "url": "https://leetcode.com/problems/count-the-number-of-square-free-subsets",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

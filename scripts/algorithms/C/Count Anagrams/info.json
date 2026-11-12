@@ -1,0 +1,12 @@
+{
+    "id": "2514",
+    "name": "Count Anagrams",
+    "url": "https://leetcode.com/problems/count-anagrams",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "python": true
+    }
+}

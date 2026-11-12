@@ -1,0 +1,11 @@
+{
+    "id": "2423",
+    "name": "Remove Letter To Equalize Frequency",
+    "url": "https://leetcode.com/problems/remove-letter-to-equalize-frequency",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

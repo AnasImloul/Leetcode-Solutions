@@ -1,0 +1,11 @@
+{
+    "id": "2537",
+    "name": "Count the Number of Good Subarrays",
+    "url": "https://leetcode.com/problems/count-the-number-of-good-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2605",
+    "name": "Form Smallest Number From Two Digit Arrays",
+    "url": "https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

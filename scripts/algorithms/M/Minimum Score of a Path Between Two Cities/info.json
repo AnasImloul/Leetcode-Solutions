@@ -1,0 +1,12 @@
+{
+    "id": "2492",
+    "name": "Minimum Score of a Path Between Two Cities",
+    "url": "https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

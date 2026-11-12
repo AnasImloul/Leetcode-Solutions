@@ -1,0 +1,11 @@
+{
+    "id": "2833",
+    "name": "Furthest Point From Origin",
+    "url": "https://leetcode.com/problems/furthest-point-from-origin",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

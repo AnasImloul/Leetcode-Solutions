@@ -1,0 +1,12 @@
+{
+    "id": "2485",
+    "name": "Find the Pivot Integer",
+    "url": "https://leetcode.com/problems/find-the-pivot-integer",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

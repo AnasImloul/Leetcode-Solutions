@@ -1,0 +1,12 @@
+{
+    "id": "2616",
+    "name": "Minimize the Maximum Difference of Pairs",
+    "url": "https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

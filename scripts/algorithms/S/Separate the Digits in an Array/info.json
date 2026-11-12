@@ -1,0 +1,11 @@
+{
+    "id": "2553",
+    "name": "Separate the Digits in an Array",
+    "url": "https://leetcode.com/problems/separate-the-digits-in-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

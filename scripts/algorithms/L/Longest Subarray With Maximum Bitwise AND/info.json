@@ -1,0 +1,13 @@
+{
+    "id": "2419",
+    "name": "Longest Subarray With Maximum Bitwise AND",
+    "url": "https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true,
+        "c++": true
+    }
+}

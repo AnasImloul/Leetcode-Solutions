@@ -1,0 +1,11 @@
+{
+    "id": "2518",
+    "name": "Number of Great Partitions",
+    "url": "https://leetcode.com/problems/number-of-great-partitions",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

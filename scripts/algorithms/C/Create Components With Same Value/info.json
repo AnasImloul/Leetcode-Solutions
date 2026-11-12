@@ -1,0 +1,11 @@
+{
+    "id": "2440",
+    "name": "Create Components With Same Value",
+    "url": "https://leetcode.com/problems/create-components-with-same-value",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

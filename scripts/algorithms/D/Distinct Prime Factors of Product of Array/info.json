@@ -1,0 +1,11 @@
+{
+    "id": "2521",
+    "name": "Distinct Prime Factors of Product of Array",
+    "url": "https://leetcode.com/problems/distinct-prime-factors-of-product-of-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

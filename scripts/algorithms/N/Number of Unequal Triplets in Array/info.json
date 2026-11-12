@@ -1,0 +1,11 @@
+{
+    "id": "2475",
+    "name": "Number of Unequal Triplets in Array",
+    "url": "https://leetcode.com/problems/number-of-unequal-triplets-in-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

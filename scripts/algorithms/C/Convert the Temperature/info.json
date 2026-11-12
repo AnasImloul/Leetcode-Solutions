@@ -1,0 +1,11 @@
+{
+    "id": "2469",
+    "name": "Convert the Temperature",
+    "url": "https://leetcode.com/problems/convert-the-temperature",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

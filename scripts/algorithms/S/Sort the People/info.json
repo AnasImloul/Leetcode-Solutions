@@ -1,0 +1,11 @@
+{
+    "id": "2418",
+    "name": "Sort the People",
+    "url": "https://leetcode.com/problems/sort-the-people",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

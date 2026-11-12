@@ -1,0 +1,11 @@
+{
+    "id": "2497",
+    "name": "Maximum Star Sum of a Graph",
+    "url": "https://leetcode.com/problems/maximum-star-sum-of-a-graph",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

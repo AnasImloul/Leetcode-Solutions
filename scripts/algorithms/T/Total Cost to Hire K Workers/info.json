@@ -1,0 +1,13 @@
+{
+    "id": "2462",
+    "name": "Total Cost to Hire K Workers",
+    "url": "https://leetcode.com/problems/total-cost-to-hire-k-workers",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true,
+        "python": true
+    }
+}

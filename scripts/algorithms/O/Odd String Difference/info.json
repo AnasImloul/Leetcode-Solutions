@@ -1,0 +1,11 @@
+{
+    "id": "2451",
+    "name": "Odd String Difference",
+    "url": "https://leetcode.com/problems/odd-string-difference",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

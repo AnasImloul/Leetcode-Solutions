@@ -1,0 +1,11 @@
+{
+    "id": "2517",
+    "name": "Maximum Tastiness of Candy Basket",
+    "url": "https://leetcode.com/problems/maximum-tastiness-of-candy-basket",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

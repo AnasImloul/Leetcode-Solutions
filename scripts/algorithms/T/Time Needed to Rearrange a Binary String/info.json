@@ -1,0 +1,13 @@
+{
+    "id": "2380",
+    "name": "Time Needed to Rearrange a Binary String",
+    "url": "https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "java": true,
+        "c++": true
+    }
+}

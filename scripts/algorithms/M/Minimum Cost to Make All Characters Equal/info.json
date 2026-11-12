@@ -1,0 +1,11 @@
+{
+    "id": "2712",
+    "name": "Minimum Cost to Make All Characters Equal",
+    "url": "https://leetcode.com/problems/minimum-cost-to-make-all-characters-equal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

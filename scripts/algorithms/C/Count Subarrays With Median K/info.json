@@ -1,0 +1,12 @@
+{
+    "id": "2488",
+    "name": "Count Subarrays With Median K",
+    "url": "https://leetcode.com/problems/count-subarrays-with-median-k",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "c++": true
+    }
+}

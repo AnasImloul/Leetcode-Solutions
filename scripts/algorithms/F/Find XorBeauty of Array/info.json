@@ -1,0 +1,13 @@
+{
+    "id": "2527",
+    "name": "Find Xor-Beauty of Array",
+    "url": "https://leetcode.com/problems/find-xor-beauty-of-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "python": true
+    }
+}

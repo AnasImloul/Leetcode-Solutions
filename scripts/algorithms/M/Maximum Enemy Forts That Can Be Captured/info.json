@@ -1,0 +1,12 @@
+{
+    "id": "2511",
+    "name": "Maximum Enemy Forts That Can Be Captured",
+    "url": "https://leetcode.com/problems/maximum-enemy-forts-that-can-be-captured",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

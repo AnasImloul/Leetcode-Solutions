@@ -1,0 +1,11 @@
+{
+    "id": "2612",
+    "name": "Minimum Reverse Operations",
+    "url": "https://leetcode.com/problems/minimum-reverse-operations",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

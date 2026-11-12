@@ -1,0 +1,11 @@
+{
+    "id": "2843",
+    "name": "  Count Symmetric Integers",
+    "url": "https://leetcode.com/problems/count-symmetric-integers",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

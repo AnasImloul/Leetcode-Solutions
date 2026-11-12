@@ -1,0 +1,11 @@
+{
+    "id": "2383",
+    "name": "Minimum Hours of Training to Win a Competition",
+    "url": "https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

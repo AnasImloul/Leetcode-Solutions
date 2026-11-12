@@ -1,0 +1,12 @@
+{
+    "id": "2639",
+    "name": "Find the Width of Columns of a Grid",
+    "url": "https://leetcode.com/problems/find-the-width-of-columns-of-a-grid",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "javascript": true
+    }
+}

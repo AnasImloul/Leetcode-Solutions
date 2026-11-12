@@ -1,0 +1,11 @@
+{
+    "id": "2564",
+    "name": "Substring XOR Queries",
+    "url": "https://leetcode.com/problems/substring-xor-queries",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

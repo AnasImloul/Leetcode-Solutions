@@ -1,0 +1,12 @@
+{
+    "id": "2426",
+    "name": "Number of Pairs Satisfying Inequality",
+    "url": "https://leetcode.com/problems/number-of-pairs-satisfying-inequality",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "python": true
+    }
+}

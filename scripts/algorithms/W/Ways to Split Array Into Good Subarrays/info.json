@@ -1,0 +1,11 @@
+{
+    "id": "2750",
+    "name": "Ways to Split Array Into Good Subarrays",
+    "url": "https://leetcode.com/problems/ways-to-split-array-into-good-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

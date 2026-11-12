@@ -1,0 +1,12 @@
+{
+    "id": "2540",
+    "name": "Minimum Common Value",
+    "url": "https://leetcode.com/problems/minimum-common-value",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true,
+        "python": true
+    }
+}

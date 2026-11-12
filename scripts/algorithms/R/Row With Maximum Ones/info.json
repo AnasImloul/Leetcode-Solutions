@@ -1,0 +1,11 @@
+{
+    "id": "2643",
+    "name": "Row With Maximum Ones",
+    "url": "https://leetcode.com/problems/row-with-maximum-ones",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

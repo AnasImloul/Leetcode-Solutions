@@ -1,0 +1,11 @@
+{
+    "id": "2582",
+    "name": "Pass the Pillow",
+    "url": "https://leetcode.com/problems/pass-the-pillow",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

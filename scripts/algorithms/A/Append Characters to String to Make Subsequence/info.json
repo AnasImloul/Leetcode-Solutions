@@ -1,0 +1,11 @@
+{
+    "id": "2486",
+    "name": "Append Characters to String to Make Subsequence",
+    "url": "https://leetcode.com/problems/append-characters-to-string-to-make-subsequence",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2555",
+    "name": "Maximize Win From Two Segments",
+    "url": "https://leetcode.com/problems/maximize-win-from-two-segments",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

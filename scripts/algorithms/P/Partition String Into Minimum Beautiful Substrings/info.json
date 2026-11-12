@@ -1,0 +1,12 @@
+{
+    "id": "2767",
+    "name": "Partition String Into Minimum Beautiful Substrings",
+    "url": "https://leetcode.com/problems/partition-string-into-minimum-beautiful-substrings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

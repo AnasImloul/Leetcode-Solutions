@@ -1,0 +1,12 @@
+{
+    "id": "2398",
+    "name": "Maximum Number of Robots Within Budget",
+    "url": "https://leetcode.com/problems/maximum-number-of-robots-within-budget",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id": "2729",
+    "name": "Check if The Number is Fascinating",
+    "url": "https://leetcode.com/problems/check-if-the-number-is-fascinating",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

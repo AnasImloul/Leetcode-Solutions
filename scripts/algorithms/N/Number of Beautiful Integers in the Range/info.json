@@ -1,0 +1,11 @@
+{
+    "id": "2827",
+    "name": "Number of Beautiful Integers in the Range",
+    "url": "https://leetcode.com/problems/number-of-beautiful-integers-in-the-range",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

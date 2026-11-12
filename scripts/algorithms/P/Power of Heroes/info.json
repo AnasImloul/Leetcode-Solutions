@@ -1,0 +1,11 @@
+{
+    "id": "2681",
+    "name": "Power of Heroes",
+    "url": "https://leetcode.com/problems/power-of-heroes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2617",
+    "name": "Minimum Number of Visited Cells in a Grid",
+    "url": "https://leetcode.com/problems/minimum-number-of-visited-cells-in-a-grid",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

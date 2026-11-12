@@ -1,0 +1,11 @@
+{
+    "id": "2552",
+    "name": "Count Increasing Quadruplets",
+    "url": "https://leetcode.com/problems/count-increasing-quadruplets",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

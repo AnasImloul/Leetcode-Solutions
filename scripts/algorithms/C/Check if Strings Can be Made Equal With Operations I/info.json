@@ -1,0 +1,11 @@
+{
+    "id": "2839",
+    "name": "Check if Strings Can be Made Equal With Operations I",
+    "url": "https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

@@ -1,7 +1,7 @@
 {
     "id": "491",
-    "name": "Increasing Subsequences",
-    "url": "https://leetcode.com/problems/increasing-subsequences",
+    "name": "Non-decreasing Subsequences",
+    "url": "https://leetcode.com/problems/non-decreasing-subsequences",
     "difficulty": "medium",
     "premium": false,
     "topic": "algorithms",

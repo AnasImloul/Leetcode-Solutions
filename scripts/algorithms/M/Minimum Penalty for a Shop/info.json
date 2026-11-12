@@ -1,0 +1,12 @@
+{
+    "id": "2483",
+    "name": "Minimum Penalty for a Shop",
+    "url": "https://leetcode.com/problems/minimum-penalty-for-a-shop",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

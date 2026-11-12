@@ -1,0 +1,11 @@
+{
+    "id": "2580",
+    "name": "Count Ways to Group Overlapping Ranges",
+    "url": "https://leetcode.com/problems/count-ways-to-group-overlapping-ranges",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2509",
+    "name": "Cycle Length Queries in a Tree",
+    "url": "https://leetcode.com/problems/cycle-length-queries-in-a-tree",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

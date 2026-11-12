@@ -9,6 +9,7 @@
         "c++": true,
         "python": true,
         "java": true,
-        "javascript": true
+        "javascript": true,
+        "rust": true
     }
 }

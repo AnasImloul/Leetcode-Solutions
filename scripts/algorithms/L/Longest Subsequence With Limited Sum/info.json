@@ -1,0 +1,12 @@
+{
+    "id": "2389",
+    "name": "Longest Subsequence With Limited Sum",
+    "url": "https://leetcode.com/problems/longest-subsequence-with-limited-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "c++": true
+    }
+}

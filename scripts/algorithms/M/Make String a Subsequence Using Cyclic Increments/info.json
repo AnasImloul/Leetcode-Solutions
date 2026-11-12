@@ -1,0 +1,11 @@
+{
+    "id": "2825",
+    "name": "Make String a Subsequence Using Cyclic Increments",
+    "url": "https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true
+    }
+}

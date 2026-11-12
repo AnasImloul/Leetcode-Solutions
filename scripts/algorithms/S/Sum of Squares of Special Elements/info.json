@@ -1,0 +1,11 @@
+{
+    "id": "2778",
+    "name": "Sum of Squares of Special Elements ",
+    "url": "https://leetcode.com/problems/sum-of-squares-of-special-elements",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

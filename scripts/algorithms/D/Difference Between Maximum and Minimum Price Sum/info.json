@@ -1,0 +1,11 @@
+{
+    "id": "2538",
+    "name": "Difference Between Maximum and Minimum Price Sum",
+    "url": "https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

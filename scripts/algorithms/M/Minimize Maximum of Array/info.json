@@ -1,0 +1,12 @@
+{
+    "id": "2439",
+    "name": "Minimize Maximum of Array",
+    "url": "https://leetcode.com/problems/minimize-maximum-of-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "2444",
+    "name": "Count Subarrays With Fixed Bounds",
+    "url": "https://leetcode.com/problems/count-subarrays-with-fixed-bounds",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true
+    }
+}

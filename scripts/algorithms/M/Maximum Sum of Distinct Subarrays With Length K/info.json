@@ -1,0 +1,12 @@
+{
+    "id": "2461",
+    "name": "Maximum Sum of Distinct Subarrays With Length K",
+    "url": "https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "python": true
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "2583",
+    "name": "Kth Largest Sum in a Binary Tree",
+    "url": "https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true,
+        "c++": true
+    }
+}

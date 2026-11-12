@@ -1,0 +1,11 @@
+{
+    "id": "2424",
+    "name": "Longest Uploaded Prefix",
+    "url": "https://leetcode.com/problems/longest-uploaded-prefix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true
+    }
+}

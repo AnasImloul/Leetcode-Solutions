@@ -1,0 +1,11 @@
+{
+    "id": "2433",
+    "name": "Find The Original Array of Prefix Xor",
+    "url": "https://leetcode.com/problems/find-the-original-array-of-prefix-xor",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

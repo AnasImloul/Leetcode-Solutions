@@ -1,0 +1,12 @@
+{
+    "id": "2405",
+    "name": "Optimal Partition of String",
+    "url": "https://leetcode.com/problems/optimal-partition-of-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "java": true,
+        "python": true
+    }
+}

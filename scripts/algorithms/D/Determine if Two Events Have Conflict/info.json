@@ -1,0 +1,11 @@
+{
+    "id": "2446",
+    "name": "Determine if Two Events Have Conflict",
+    "url": "https://leetcode.com/problems/determine-if-two-events-have-conflict",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

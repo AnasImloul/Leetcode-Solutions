@@ -1,0 +1,11 @@
+{
+    "id": "2585",
+    "name": "Number of Ways to Earn Points",
+    "url": "https://leetcode.com/problems/number-of-ways-to-earn-points",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

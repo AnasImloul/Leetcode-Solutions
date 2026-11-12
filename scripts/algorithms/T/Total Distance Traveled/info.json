@@ -1,0 +1,12 @@
+{
+    "id": "2739",
+    "name": "Total Distance Traveled",
+    "url": "https://leetcode.com/problems/total-distance-traveled",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "javascript": true,
+        "java": true
+    }
+}

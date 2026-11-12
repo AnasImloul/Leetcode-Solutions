@@ -1,0 +1,11 @@
+{
+    "id": "2576",
+    "name": "Find the Maximum Number of Marked Indices",
+    "url": "https://leetcode.com/problems/find-the-maximum-number-of-marked-indices",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}

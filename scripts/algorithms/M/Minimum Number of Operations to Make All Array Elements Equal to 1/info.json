@@ -1,0 +1,13 @@
+{
+    "id": "2654",
+    "name": "Minimum Number of Operations to Make All Array Elements Equal to 1",
+    "url": "https://leetcode.com/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true,
+        "javascript": true,
+        "c++": true
+    }
+}

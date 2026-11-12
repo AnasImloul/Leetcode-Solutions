@@ -1,0 +1,11 @@
+{
+    "id": "2834",
+    "name": "Find the Minimum Possible Sum of a Beautiful Array",
+    "url": "https://leetcode.com/problems/find-the-minimum-possible-sum-of-a-beautiful-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "c++": true
+    }
+}

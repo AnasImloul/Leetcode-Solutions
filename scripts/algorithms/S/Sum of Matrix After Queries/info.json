@@ -1,0 +1,11 @@
+{
+    "id": "2718",
+    "name": "Sum of Matrix After Queries",
+    "url": "https://leetcode.com/problems/sum-of-matrix-after-queries",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "rust": true
+    }
+}
