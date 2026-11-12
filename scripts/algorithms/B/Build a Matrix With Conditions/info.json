@@ -1,0 +1,11 @@
+{
+    "id": "2392",
+    "name": "Build a Matrix With Conditions",
+    "url": "https://leetcode.com/problems/build-a-matrix-with-conditions",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
