@@ -1,0 +1,11 @@
+{
+    "id": "2402",
+    "name": "Meeting Rooms III",
+    "url": "https://leetcode.com/problems/meeting-rooms-iii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
