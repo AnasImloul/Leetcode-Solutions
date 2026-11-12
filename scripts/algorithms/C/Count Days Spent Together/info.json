@@ -1,0 +1,11 @@
+{
+    "id": "2409",
+    "name": "Count Days Spent Together",
+    "url": "https://leetcode.com/problems/count-days-spent-together",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
