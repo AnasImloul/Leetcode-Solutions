@@ -1,0 +1,11 @@
+{
+    "id": "2382",
+    "name": "Maximum Segment Sum After Removals",
+    "url": "https://leetcode.com/problems/maximum-segment-sum-after-removals",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
