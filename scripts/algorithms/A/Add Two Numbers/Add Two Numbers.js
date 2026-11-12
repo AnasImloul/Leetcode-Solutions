@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 91.36%) | Memory: 66.90 MB (Top 5.31%)
 
 /**
  * Definition for singly-linked list.
@@ -42,4 +43,3 @@ var addTwoNumbers = function(l1, l2) {
 
     return List.next;
 };
-
