@@ -1,0 +1,11 @@
+{
+    "id": "2395",
+    "name": "Find Subarrays With Equal Sum",
+    "url": "https://leetcode.com/problems/find-subarrays-with-equal-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
