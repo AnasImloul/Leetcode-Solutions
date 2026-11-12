@@ -1,0 +1,11 @@
+{
+    "id": "2376",
+    "name": "Count Special Integers",
+    "url": "https://leetcode.com/problems/count-special-integers",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
