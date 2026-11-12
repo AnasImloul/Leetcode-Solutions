@@ -1,35 +1,30 @@
-<h1 align="center">Leetcode-solutions</h1>
-<p align="center">A Github repo with over 7k+ solutions :rocket: to more than 1800 Leetcode problem<br>Written in C++, Python, Java, Javascript, Rust and Goland.</p>
-<br>
+# Leetcode-Solutions
 
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/algo.svg" width="32px" align="left"/>Algorithms</div>
+7265 solutions to 1878 LeetCode problems.
 
+| Language | Solutions |
+|:---------|----------:|
+| C++ | 1804 |
+| Python | 1818 |
+| Java | 1712 |
+| JavaScript | 1675 |
+| Rust | 203 |
+| Go | 4 |
+| SQL | 45 |
+| Bash | 4 |
 
-| [0-9](scripts/algorithms/0-9#algorithms-solutions) | [A](scripts/algorithms/A#algorithms-solutions) | [B](scripts/algorithms/B#algorithms-solutions) | [C](scripts/algorithms/C#algorithms-solutions) | [D](scripts/algorithms/D#algorithms-solutions) | [E](scripts/algorithms/E#algorithms-solutions) | [F](scripts/algorithms/F#algorithms-solutions) | [G](scripts/algorithms/G#algorithms-solutions) | [H](scripts/algorithms/H#algorithms-solutions) | [I](scripts/algorithms/I#algorithms-solutions) | [J](scripts/algorithms/J#algorithms-solutions) | [K](scripts/algorithms/K#algorithms-solutions) | [L](scripts/algorithms/L#algorithms-solutions) | [M](scripts/algorithms/M#algorithms-solutions) |
-|:----------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
-|**[N](scripts/algorithms/N#algorithms-solutions)**|**[O](scripts/algorithms/O#algorithms-solutions)**|**[P](scripts/algorithms/P#algorithms-solutions)**|**[Q](scripts/algorithms/Q#algorithms-solutions)**|**[R](scripts/algorithms/R#algorithms-solutions)**|**[S](scripts/algorithms/S#algorithms-solutions)**|**[T](scripts/algorithms/T#algorithms-solutions)**|**[U](scripts/algorithms/U#algorithms-solutions)**|**[V](scripts/algorithms/V#algorithms-solutions)**|**[W](scripts/algorithms/W#algorithms-solutions)**|**[X](scripts/algorithms/X#algorithms-solutions)**|**<span style='color:grey'>  Y  </span>**|**[Z](scripts/algorithms/Z#algorithms-solutions)**|
-<br>
+## Algorithms (1823)
 
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/data.svg" width="32px" align="left"/>Database</div>
+[0-9](scripts/algorithms/0-9) · [A](scripts/algorithms/A) · [B](scripts/algorithms/B) · [C](scripts/algorithms/C) · [D](scripts/algorithms/D) · [E](scripts/algorithms/E) · [F](scripts/algorithms/F) · [G](scripts/algorithms/G) · [H](scripts/algorithms/H) · [I](scripts/algorithms/I) · [J](scripts/algorithms/J) · [K](scripts/algorithms/K) · [L](scripts/algorithms/L) · [M](scripts/algorithms/M) · [N](scripts/algorithms/N) · [O](scripts/algorithms/O) · [P](scripts/algorithms/P) · [Q](scripts/algorithms/Q) · [R](scripts/algorithms/R) · [S](scripts/algorithms/S) · [T](scripts/algorithms/T) · [U](scripts/algorithms/U) · [V](scripts/algorithms/V) · [W](scripts/algorithms/W) · [X](scripts/algorithms/X) · [Z](scripts/algorithms/Z)
 
+## Concurrency (6)
 
-| <span style='color:grey'>  0-9  </span> | [A](scripts/database/A#database-solutions) | [B](scripts/database/B#database-solutions) | [C](scripts/database/C#database-solutions) | [D](scripts/database/D#database-solutions) | [E](scripts/database/E#database-solutions) | [F](scripts/database/F#database-solutions) | [G](scripts/database/G#database-solutions) | [H](scripts/database/H#database-solutions) | <span style='color:grey'>  I  </span> | <span style='color:grey'>  J  </span> | <span style='color:grey'>  K  </span> | <span style='color:grey'>  L  </span> | [M](scripts/database/M#database-solutions) |
-|:---------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:--------------------------------------------:|
-|**[N](scripts/database/N#database-solutions)**|**<span style='color:grey'>  O  </span>**|**[P](scripts/database/P#database-solutions)**|**<span style='color:grey'>  Q  </span>**|**[R](scripts/database/R#database-solutions)**|**[S](scripts/database/S#database-solutions)**|**[T](scripts/database/T#database-solutions)**|**[U](scripts/database/U#database-solutions)**|**<span style='color:grey'>  V  </span>**|**<span style='color:grey'>  W  </span>**|**<span style='color:grey'>  X  </span>**|**<span style='color:grey'>  Y  </span>**|**<span style='color:grey'>  Z  </span>**|
-<br>
+[B](scripts/concurrency/B) · [F](scripts/concurrency/F) · [P](scripts/concurrency/P) · [T](scripts/concurrency/T)
 
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/shell.svg" width="32px" align="left"/>Shell</div>
+## Database (45)
 
+[A](scripts/database/A) · [B](scripts/database/B) · [C](scripts/database/C) · [D](scripts/database/D) · [E](scripts/database/E) · [F](scripts/database/F) · [G](scripts/database/G) · [H](scripts/database/H) · [M](scripts/database/M) · [N](scripts/database/N) · [P](scripts/database/P) · [R](scripts/database/R) · [S](scripts/database/S) · [T](scripts/database/T) · [U](scripts/database/U)
 
-| <span style='color:grey'>  0-9  </span> | <span style='color:grey'>  A  </span> | <span style='color:grey'>  B  </span> | <span style='color:grey'>  C  </span> | <span style='color:grey'>  D  </span> | <span style='color:grey'>  E  </span> | <span style='color:grey'>  F  </span> | <span style='color:grey'>  G  </span> | <span style='color:grey'>  H  </span> | <span style='color:grey'>  I  </span> | <span style='color:grey'>  J  </span> | <span style='color:grey'>  K  </span> | <span style='color:grey'>  L  </span> | <span style='color:grey'>  M  </span> |
-|:---------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|
-|**<span style='color:grey'>  N  </span>**|**<span style='color:grey'>  O  </span>**|**<span style='color:grey'>  P  </span>**|**<span style='color:grey'>  Q  </span>**|**<span style='color:grey'>  R  </span>**|**<span style='color:grey'>  S  </span>**|**[T](scripts/shell/T#shell-solutions)**|**<span style='color:grey'>  U  </span>**|**[V](scripts/shell/V#shell-solutions)**|**[W](scripts/shell/W#shell-solutions)**|**<span style='color:grey'>  X  </span>**|**<span style='color:grey'>  Y  </span>**|**<span style='color:grey'>  Z  </span>**|
-<br>
+## Shell (4)
 
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/concurrency.svg" width="32px" align="left"/>Concurrency</div>
-
-
-| <span style='color:grey'>  0-9  </span> | <span style='color:grey'>  A  </span> | [B](scripts/concurrency/B#concurrency-solutions) | <span style='color:grey'>  C  </span> | <span style='color:grey'>  D  </span> | <span style='color:grey'>  E  </span> | [F](scripts/concurrency/F#concurrency-solutions) | <span style='color:grey'>  G  </span> | <span style='color:grey'>  H  </span> | <span style='color:grey'>  I  </span> | <span style='color:grey'>  J  </span> | <span style='color:grey'>  K  </span> | <span style='color:grey'>  L  </span> | <span style='color:grey'>  M  </span> |
-|:---------------------------------------:|:-------------------------------------:|:--------------------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:--------------------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|
-|**<span style='color:grey'>  N  </span>**|**<span style='color:grey'>  O  </span>**|**[P](scripts/concurrency/P#concurrency-solutions)**|**<span style='color:grey'>  Q  </span>**|**<span style='color:grey'>  R  </span>**|**<span style='color:grey'>  S  </span>**|**[T](scripts/concurrency/T#concurrency-solutions)**|**<span style='color:grey'>  U  </span>**|**<span style='color:grey'>  V  </span>**|**<span style='color:grey'>  W  </span>**|**<span style='color:grey'>  X  </span>**|**<span style='color:grey'>  Y  </span>**|**<span style='color:grey'>  Z  </span>**|
-<br>
+[T](scripts/shell/T) · [V](scripts/shell/V) · [W](scripts/shell/W)

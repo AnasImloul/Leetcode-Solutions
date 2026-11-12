@@ -1,6 +1,7 @@
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/data.svg" width="32px" align="left"/>Database-solutions</div>
-<br>
+# Database: M
 
-| Problem name | Difficulty | Languages | LeetCode |
-|:-------------|:----------:|:----------|:--------:|
-|[Market Analysis I](./Market%20Analysis%20I)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Market%20Analysis%20I/Market%20Analysis%20I.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/market-analysis-i)|
+1 problems. [Back to the overview](../../../README.md)
+
+| # | Problem | Difficulty | Languages | LeetCode |
+|--:|:--------|:-----------|:----------|:---------|
+| 1158 | [Market Analysis I](./Market%20Analysis%20I) | Medium | [sql](./Market%20Analysis%20I/Market%20Analysis%20I.sql) | [link](https://leetcode.com/problems/market-analysis-i) |

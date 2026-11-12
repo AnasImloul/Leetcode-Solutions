@@ -1,6 +1,7 @@
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/concurrency.svg" width="32px" align="left"/>Concurrency-solutions</div>
-<br>
+# Concurrency: T
 
-| Problem name | Difficulty | Languages | LeetCode |
-|:-------------|:----------:|:----------|:--------:|
-|[The Dining Philosophers](./The%20Dining%20Philosophers)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./The%20Dining%20Philosophers/The%20Dining%20Philosophers.cpp"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./The%20Dining%20Philosophers/The%20Dining%20Philosophers.py"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/python.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/the-dining-philosophers)|
+1 problems. [Back to the overview](../../../README.md)
+
+| # | Problem | Difficulty | Languages | LeetCode |
+|--:|:--------|:-----------|:----------|:---------|
+| 1226 | [The Dining Philosophers](./The%20Dining%20Philosophers) | Medium | [cpp](./The%20Dining%20Philosophers/The%20Dining%20Philosophers.cpp) · [py](./The%20Dining%20Philosophers/The%20Dining%20Philosophers.py) | [link](https://leetcode.com/problems/the-dining-philosophers) |

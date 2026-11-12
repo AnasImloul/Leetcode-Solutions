@@ -1,7 +1,8 @@
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/algo.svg" width="32px" align="left"/>Algorithms-solutions</div>
-<br>
+# Algorithms: Z
 
-| Problem name | Difficulty | Languages | LeetCode |
-|:-------------|:----------:|:----------|:--------:|
-|[Zigzag Conversion](./Zigzag%20Conversion)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Zigzag%20Conversion/Zigzag%20Conversion.cpp"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.java"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/java.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.js"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/javascript.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Zigzag%20Conversion/Zigzag%20Conversion.py"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/python.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/zigzag-conversion)|
-|[Zuma Game](./Zuma%20Game)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/hard.svg" height="12px" align="center"/>|<a href="./Zuma%20Game/Zuma%20Game.cpp"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Zuma%20Game/Zuma%20Game.java"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/java.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Zuma%20Game/Zuma%20Game.js"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/javascript.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Zuma%20Game/Zuma%20Game.py"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/python.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/zuma-game)|
+2 problems. [Back to the overview](../../../README.md)
+
+| # | Problem | Difficulty | Languages | LeetCode |
+|--:|:--------|:-----------|:----------|:---------|
+| 6 | [Zigzag Conversion](./Zigzag%20Conversion) | Medium | [cpp](./Zigzag%20Conversion/Zigzag%20Conversion.cpp) · [py](./Zigzag%20Conversion/Zigzag%20Conversion.py) · [java](./Zigzag%20Conversion/Zigzag%20Conversion.java) · [js](./Zigzag%20Conversion/Zigzag%20Conversion.js) | [link](https://leetcode.com/problems/zigzag-conversion) |
+| 488 | [Zuma Game](./Zuma%20Game) | Hard | [cpp](./Zuma%20Game/Zuma%20Game.cpp) · [py](./Zuma%20Game/Zuma%20Game.py) · [java](./Zuma%20Game/Zuma%20Game.java) · [js](./Zuma%20Game/Zuma%20Game.js) | [link](https://leetcode.com/problems/zuma-game) |

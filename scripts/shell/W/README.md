@@ -1,6 +1,7 @@
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/shell.svg" width="32px" align="left"/>Shell-solutions</div>
-<br>
+# Shell: W
 
-| Problem name | Difficulty | Languages | LeetCode |
-|:-------------|:----------:|:----------|:--------:|
-|[Word Frequency](./Word%20Frequency)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Word%20Frequency/Word%20Frequency.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/bash.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/word-frequency)|
+1 problems. [Back to the overview](../../../README.md)
+
+| # | Problem | Difficulty | Languages | LeetCode |
+|--:|:--------|:-----------|:----------|:---------|
+| 192 | [Word Frequency](./Word%20Frequency) | Medium | [sh](./Word%20Frequency/Word%20Frequency.sh) | [link](https://leetcode.com/problems/word-frequency) |

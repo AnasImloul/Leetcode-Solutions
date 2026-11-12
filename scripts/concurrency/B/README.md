@@ -1,6 +1,7 @@
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/concurrency.svg" width="32px" align="left"/>Concurrency-solutions</div>
-<br>
+# Concurrency: B
 
-| Problem name | Difficulty | Languages | LeetCode |
-|:-------------|:----------:|:----------|:--------:|
-|[Building H2O](./Building%20H2O)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Building%20H2O/Building%20H2O.cpp"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./Building%20H2O/Building%20H2O.py"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/python.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/building-h2o)|
+1 problems. [Back to the overview](../../../README.md)
+
+| # | Problem | Difficulty | Languages | LeetCode |
+|--:|:--------|:-----------|:----------|:---------|
+| 1117 | [Building H2O](./Building%20H2O) | Medium | [cpp](./Building%20H2O/Building%20H2O.cpp) · [py](./Building%20H2O/Building%20H2O.py) | [link](https://leetcode.com/problems/building-h2o) |

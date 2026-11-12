@@ -1,7 +1,8 @@
-## <div align="left"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/data.svg" width="32px" align="left"/>Database-solutions</div>
-<br>
+# Database: N
 
-| Problem name | Difficulty | Languages | LeetCode |
-|:-------------|:----------:|:----------|:--------:|
-|[Nth Highest Salary](./Nth%20Highest%20Salary)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/medium.svg" height="12px" align="center"/>|<a href="./Nth%20Highest%20Salary/Nth%20Highest%20Salary.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/nth-highest-salary)|
-|[Not Boring Movies](./Not%20Boring%20Movies)|<img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/easy.svg" height="12px" align="center"/>|<a href="./Not%20Boring%20Movies/Not%20Boring%20Movies.txt"><img src="https://github.com/AnasImloul/Leetcode-Solutions/blob/main/icons/mysql.svg" width="24px" align="center"/></a>|[link](https://www.leetcode.com/problems/not-boring-movies)|
+2 problems. [Back to the overview](../../../README.md)
+
+| # | Problem | Difficulty | Languages | LeetCode |
+|--:|:--------|:-----------|:----------|:---------|
+| 620 | [Not Boring Movies](./Not%20Boring%20Movies) | Easy | [sql](./Not%20Boring%20Movies/Not%20Boring%20Movies.sql) | [link](https://leetcode.com/problems/not-boring-movies) |
+| 177 | [Nth Highest Salary](./Nth%20Highest%20Salary) | Medium | [sql](./Nth%20Highest%20Salary/Nth%20Highest%20Salary.sql) | [link](https://leetcode.com/problems/nth-highest-salary) |
