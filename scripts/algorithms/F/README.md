@@ -2,7 +2,7 @@
 
 134 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="200" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="164" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 172 | [Factorial Trailing Zeroes](./Factorial%20Trailing%20Zeroes) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Factorial%20Trailing%20Zeroes/Factorial%20Trailing%20Zeroes.cpp"><img src="../../../icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Factorial%20Trailing%20Zeroes/Factorial%20Trailing%20Zeroes.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Factorial%20Trailing%20Zeroes/Factorial%20Trailing%20Zeroes.java"><img src="../../../icons/java.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Factorial%20Trailing%20Zeroes/Factorial%20Trailing%20Zeroes.js"><img src="../../../icons/javascript.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/factorial-trailing-zeroes) |
 | 888 | [Fair Candy Swap](./Fair%20Candy%20Swap) | <img src="../../../icons/easy.svg" height="12px" align="center"/> | <a href="./Fair%20Candy%20Swap/Fair%20Candy%20Swap.cpp"><img src="../../../icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Fair%20Candy%20Swap/Fair%20Candy%20Swap.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Fair%20Candy%20Swap/Fair%20Candy%20Swap.js"><img src="../../../icons/javascript.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/fair-candy-swap) |

@@ -2,7 +2,7 @@
 
 38 problems · [Overview](../../../README.md)
 
-| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="200" height="1"/> | LeetCode |
+| # | Problem | Difficulty | Languages <img src="../../../icons/spacer.svg" width="164" height="1"/> | LeetCode |
 |--:|:--------|:----------:|:----------|:--------:|
 | 835 | [Image Overlap](./Image%20Overlap) | <img src="../../../icons/medium.svg" height="12px" align="center"/> | <a href="./Image%20Overlap/Image%20Overlap.cpp"><img src="../../../icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Image%20Overlap/Image%20Overlap.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/image-overlap) |
 | 661 | [Image Smoother](./Image%20Smoother) | <img src="../../../icons/easy.svg" height="12px" align="center"/> | <a href="./Image%20Smoother/Image%20Smoother.cpp"><img src="../../../icons/c%2B%2B.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Image%20Smoother/Image%20Smoother.py"><img src="../../../icons/python.svg" width="24px" align="center"/></a>&nbsp;&nbsp;<a href="./Image%20Smoother/Image%20Smoother.java"><img src="../../../icons/java.svg" width="24px" align="center"/></a> | [link](https://leetcode.com/problems/image-smoother) |
