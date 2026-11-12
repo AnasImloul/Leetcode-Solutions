@@ -1,0 +1,11 @@
+{
+    "id": "2457",
+    "name": "Minimum Addition to Make Integer Beautiful",
+    "url": "https://leetcode.com/problems/minimum-addition-to-make-integer-beautiful",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
