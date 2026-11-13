@@ -1,0 +1,11 @@
+{
+    "id": "2512",
+    "name": "Reward Top K Students",
+    "url": "https://leetcode.com/problems/reward-top-k-students",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
