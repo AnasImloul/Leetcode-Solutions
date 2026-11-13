@@ -1,0 +1,11 @@
+{
+    "id": "2544",
+    "name": "Alternating Digit Sum",
+    "url": "https://leetcode.com/problems/alternating-digit-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
