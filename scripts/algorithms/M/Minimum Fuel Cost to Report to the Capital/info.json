@@ -1,0 +1,11 @@
+{
+    "id": "2477",
+    "name": "Minimum Fuel Cost to Report to the Capital",
+    "url": "https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
