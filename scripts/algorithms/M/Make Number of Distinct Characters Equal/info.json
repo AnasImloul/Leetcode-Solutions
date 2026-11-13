@@ -1,0 +1,11 @@
+{
+    "id": "2531",
+    "name": "Make Number of Distinct Characters Equal",
+    "url": "https://leetcode.com/problems/make-number-of-distinct-characters-equal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
