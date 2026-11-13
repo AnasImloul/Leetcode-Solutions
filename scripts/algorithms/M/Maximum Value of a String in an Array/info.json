@@ -1,0 +1,11 @@
+{
+    "id": "2496",
+    "name": "Maximum Value of a String in an Array",
+    "url": "https://leetcode.com/problems/maximum-value-of-a-string-in-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
