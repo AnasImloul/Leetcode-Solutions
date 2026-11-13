@@ -1,0 +1,11 @@
+{
+    "id": "2543",
+    "name": "Check if Point Is Reachable",
+    "url": "https://leetcode.com/problems/check-if-point-is-reachable",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
