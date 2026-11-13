@@ -1,0 +1,11 @@
+{
+    "id": "2476",
+    "name": "Closest Nodes Queries in a Binary Search Tree",
+    "url": "https://leetcode.com/problems/closest-nodes-queries-in-a-binary-search-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
