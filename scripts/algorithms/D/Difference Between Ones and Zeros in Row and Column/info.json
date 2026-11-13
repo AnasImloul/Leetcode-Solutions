@@ -1,0 +1,11 @@
+{
+    "id": "2482",
+    "name": "Difference Between Ones and Zeros in Row and Column",
+    "url": "https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
