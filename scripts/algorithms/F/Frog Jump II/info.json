@@ -1,0 +1,11 @@
+{
+    "id": "2498",
+    "name": "Frog Jump II",
+    "url": "https://leetcode.com/problems/frog-jump-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
