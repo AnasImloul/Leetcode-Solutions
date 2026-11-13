@@ -1,0 +1,11 @@
+{
+    "id": "2503",
+    "name": "Maximum Number of Points From Grid Queries",
+    "url": "https://leetcode.com/problems/maximum-number-of-points-from-grid-queries",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
