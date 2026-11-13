@@ -1,3 +1,5 @@
+// Runtime: 19 ms (Top 41.41%) | Memory: 46.20 MB (Top 36.72%)
+
 class Solution {
     String max = "";
     
