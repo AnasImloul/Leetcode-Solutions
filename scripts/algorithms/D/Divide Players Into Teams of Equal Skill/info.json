@@ -1,0 +1,11 @@
+{
+    "id": "2491",
+    "name": "Divide Players Into Teams of Equal Skill",
+    "url": "https://leetcode.com/problems/divide-players-into-teams-of-equal-skill",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
