@@ -1,0 +1,11 @@
+{
+    "id": "2507",
+    "name": "Smallest Value After Replacing With Sum of Prime Factors",
+    "url": "https://leetcode.com/problems/smallest-value-after-replacing-with-sum-of-prime-factors",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
