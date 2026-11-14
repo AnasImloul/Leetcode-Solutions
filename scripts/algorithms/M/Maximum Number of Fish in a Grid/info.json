@@ -1,0 +1,11 @@
+{
+    "id": "2658",
+    "name": "Maximum Number of Fish in a Grid",
+    "url": "https://leetcode.com/problems/maximum-number-of-fish-in-a-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
