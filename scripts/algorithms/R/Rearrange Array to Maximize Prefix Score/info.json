@@ -1,0 +1,11 @@
+{
+    "id": "2587",
+    "name": "Rearrange Array to Maximize Prefix Score",
+    "url": "https://leetcode.com/problems/rearrange-array-to-maximize-prefix-score",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
