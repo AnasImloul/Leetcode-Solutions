@@ -1,11 +1,11 @@
 <h1 align="center">Leetcode-Solutions</h1>
 <p align="center">
-7,727 solutions to 2,167 LeetCode problems<br>
+7,728 solutions to 2,168 LeetCode problems<br>
 Written in C++, Python, Java, JavaScript, Rust and Go.
 </p>
 <p align="center">
 <img alt="C++" src="https://img.shields.io/badge/C%2B%2B-1902-00599C?style=flat-square&logo=cplusplus&logoColor=white"/>
-<img alt="Python" src="https://img.shields.io/badge/Python-1939-3776AB?style=flat-square&logo=python&logoColor=white"/>
+<img alt="Python" src="https://img.shields.io/badge/Python-1940-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img alt="Java" src="https://img.shields.io/badge/Java-1824-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
 <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-1756-F7DF1E?style=flat-square&logo=javascript&logoColor=white"/>
 <img alt="Rust" src="https://img.shields.io/badge/Rust-253-CE412B?style=flat-square&logo=rust&logoColor=white"/>
@@ -14,7 +14,7 @@ Written in C++, Python, Java, JavaScript, Rust and Go.
 <img alt="Bash" src="https://img.shields.io/badge/Bash-4-4EAA25?style=flat-square&logo=gnubash&logoColor=white"/>
 </p>
 
-## <div align="left"><img src="icons/algo.svg" width="32px" align="left"/>Algorithms (2,112)</div>
+## <div align="left"><img src="icons/algo.svg" width="32px" align="left"/>Algorithms (2,113)</div>
 
 | [0-9](scripts/algorithms/0-9) | [A](scripts/algorithms/A) | [B](scripts/algorithms/B) | [C](scripts/algorithms/C) | [D](scripts/algorithms/D) | [E](scripts/algorithms/E) | [F](scripts/algorithms/F) | [G](scripts/algorithms/G) | [H](scripts/algorithms/H) | [I](scripts/algorithms/I) | [J](scripts/algorithms/J) | [K](scripts/algorithms/K) | [L](scripts/algorithms/L) | [M](scripts/algorithms/M) |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|

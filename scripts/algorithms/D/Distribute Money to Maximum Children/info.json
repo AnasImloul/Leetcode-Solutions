@@ -1,0 +1,11 @@
+{
+    "id": "2591",
+    "name": "Distribute Money to Maximum Children",
+    "url": "https://leetcode.com/problems/distribute-money-to-maximum-children",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
