@@ -1,0 +1,11 @@
+{
+    "id": "2610",
+    "name": "Convert an Array Into a 2D Array With Conditions",
+    "url": "https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
