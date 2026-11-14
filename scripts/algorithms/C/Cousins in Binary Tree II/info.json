@@ -1,0 +1,11 @@
+{
+    "id": "2641",
+    "name": "Cousins in Binary Tree II",
+    "url": "https://leetcode.com/problems/cousins-in-binary-tree-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
