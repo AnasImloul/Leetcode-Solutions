@@ -1,0 +1,11 @@
+{
+    "id": "2579",
+    "name": "Count Total Number of Colored Cells",
+    "url": "https://leetcode.com/problems/count-total-number-of-colored-cells",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
