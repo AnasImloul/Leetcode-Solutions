@@ -1,0 +1,11 @@
+{
+    "id": "2593",
+    "name": "Find Score of an Array After Marking All Elements",
+    "url": "https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
