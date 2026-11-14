@@ -1,0 +1,11 @@
+{
+    "id": "2578",
+    "name": "Split With Minimum Sum",
+    "url": "https://leetcode.com/problems/split-with-minimum-sum",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
