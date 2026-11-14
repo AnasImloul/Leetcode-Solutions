@@ -1,0 +1,11 @@
+{
+    "id": "2596",
+    "name": "Check Knight Tour Configuration",
+    "url": "https://leetcode.com/problems/check-knight-tour-configuration",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
