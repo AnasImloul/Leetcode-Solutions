@@ -1,0 +1,11 @@
+{
+    "id": "2559",
+    "name": "Count Vowel Strings in Ranges",
+    "url": "https://leetcode.com/problems/count-vowel-strings-in-ranges",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
