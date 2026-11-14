@@ -1,0 +1,11 @@
+{
+    "id": "2611",
+    "name": "Mice and Cheese",
+    "url": "https://leetcode.com/problems/mice-and-cheese",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
