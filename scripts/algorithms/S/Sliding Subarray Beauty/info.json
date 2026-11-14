@@ -1,0 +1,11 @@
+{
+    "id": "2653",
+    "name": "Sliding Subarray Beauty",
+    "url": "https://leetcode.com/problems/sliding-subarray-beauty",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
