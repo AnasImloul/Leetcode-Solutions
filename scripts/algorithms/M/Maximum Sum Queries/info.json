@@ -1,0 +1,11 @@
+{
+    "id": "2736",
+    "name": "Maximum Sum Queries",
+    "url": "https://leetcode.com/problems/maximum-sum-queries",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
