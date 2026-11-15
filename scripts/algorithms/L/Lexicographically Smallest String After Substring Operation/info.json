@@ -1,0 +1,11 @@
+{
+    "id": "2734",
+    "name": "Lexicographically Smallest String After Substring Operation",
+    "url": "https://leetcode.com/problems/lexicographically-smallest-string-after-substring-operation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
