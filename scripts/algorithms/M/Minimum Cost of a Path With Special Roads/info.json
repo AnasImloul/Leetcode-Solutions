@@ -1,0 +1,11 @@
+{
+    "id": "2662",
+    "name": "Minimum Cost of a Path With Special Roads",
+    "url": "https://leetcode.com/problems/minimum-cost-of-a-path-with-special-roads",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
