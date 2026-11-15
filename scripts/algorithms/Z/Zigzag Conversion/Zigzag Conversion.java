@@ -1,3 +1,5 @@
+// Runtime: 4 ms (Top 92.91%) | Memory: 46.20 MB (Top 74.38%)
+
 class Solution {
     public String convert(String s, int numRows) {
         if (numRows==1)return s;
