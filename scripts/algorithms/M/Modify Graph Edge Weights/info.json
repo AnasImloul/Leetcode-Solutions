@@ -1,0 +1,11 @@
+{
+    "id": "2699",
+    "name": "Modify Graph Edge Weights",
+    "url": "https://leetcode.com/problems/modify-graph-edge-weights",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
