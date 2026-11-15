@@ -1,3 +1,5 @@
+// Runtime: 60 ms (Top 23.13%) | Memory: 60.00 MB (Top 7.01%)
+
 var reverse = function(x) {
     let val = Math.abs(x)
     let res = 0
