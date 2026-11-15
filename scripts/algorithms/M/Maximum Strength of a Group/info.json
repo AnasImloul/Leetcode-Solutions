@@ -1,0 +1,11 @@
+{
+    "id": "2708",
+    "name": "Maximum Strength of a Group",
+    "url": "https://leetcode.com/problems/maximum-strength-of-a-group",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
