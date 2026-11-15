@@ -1,0 +1,11 @@
+{
+    "id": "2670",
+    "name": "Find the Distinct Difference Array",
+    "url": "https://leetcode.com/problems/find-the-distinct-difference-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
