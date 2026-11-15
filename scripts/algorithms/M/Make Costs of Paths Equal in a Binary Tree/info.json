@@ -1,0 +1,11 @@
+{
+    "id": "2673",
+    "name": "Make Costs of Paths Equal in a Binary Tree",
+    "url": "https://leetcode.com/problems/make-costs-of-paths-equal-in-a-binary-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
