@@ -1,3 +1,5 @@
+// Runtime: 22 ms (Top 11.20%) | Memory: 17.50 MB (Top 10.57%)
+
 class Solution {
 public:
     string convert(string s, int numRows) {
