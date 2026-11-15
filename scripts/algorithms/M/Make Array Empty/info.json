@@ -1,0 +1,11 @@
+{
+    "id": "2659",
+    "name": "Make Array Empty",
+    "url": "https://leetcode.com/problems/make-array-empty",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
