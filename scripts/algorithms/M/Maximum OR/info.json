@@ -1,0 +1,11 @@
+{
+    "id": "2680",
+    "name": "Maximum OR",
+    "url": "https://leetcode.com/problems/maximum-or",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
