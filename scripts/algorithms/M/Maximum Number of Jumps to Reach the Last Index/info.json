@@ -1,0 +1,11 @@
+{
+    "id": "2770",
+    "name": "Maximum Number of Jumps to Reach the Last Index",
+    "url": "https://leetcode.com/problems/maximum-number-of-jumps-to-reach-the-last-index",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
