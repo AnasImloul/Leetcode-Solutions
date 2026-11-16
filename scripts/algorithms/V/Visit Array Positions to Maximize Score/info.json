@@ -1,0 +1,11 @@
+{
+    "id": "2786",
+    "name": "Visit Array Positions to Maximize Score",
+    "url": "https://leetcode.com/problems/visit-array-positions-to-maximize-score",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
