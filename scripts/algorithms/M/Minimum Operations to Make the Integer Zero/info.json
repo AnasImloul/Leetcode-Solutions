@@ -1,0 +1,11 @@
+{
+    "id": "2749",
+    "name": "Minimum Operations to Make the Integer Zero",
+    "url": "https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
