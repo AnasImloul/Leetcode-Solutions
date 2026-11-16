@@ -1,0 +1,11 @@
+{
+    "id": "2791",
+    "name": "Count Paths That Can Form a Palindrome in a Tree",
+    "url": "https://leetcode.com/problems/count-paths-that-can-form-a-palindrome-in-a-tree",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
