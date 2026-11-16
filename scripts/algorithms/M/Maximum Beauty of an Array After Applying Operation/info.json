@@ -1,0 +1,11 @@
+{
+    "id": "2779",
+    "name": "Maximum Beauty of an Array After Applying Operation",
+    "url": "https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
