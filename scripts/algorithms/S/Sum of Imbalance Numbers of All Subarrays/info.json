@@ -1,0 +1,11 @@
+{
+    "id": "2763",
+    "name": "Sum of Imbalance Numbers of All Subarrays",
+    "url": "https://leetcode.com/problems/sum-of-imbalance-numbers-of-all-subarrays",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
