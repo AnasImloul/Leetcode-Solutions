@@ -1,0 +1,11 @@
+{
+    "id": "2768",
+    "name": "Number of Black Blocks",
+    "url": "https://leetcode.com/problems/number-of-black-blocks",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
