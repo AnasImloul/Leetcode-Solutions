@@ -1,0 +1,11 @@
+{
+    "id": "2772",
+    "name": "Apply Operations to Make All Array Elements Equal to Zero",
+    "url": "https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
