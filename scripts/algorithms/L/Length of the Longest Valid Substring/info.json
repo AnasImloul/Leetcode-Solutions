@@ -1,0 +1,11 @@
+{
+    "id": "2781",
+    "name": "Length of the Longest Valid Substring",
+    "url": "https://leetcode.com/problems/length-of-the-longest-valid-substring",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
