@@ -1,0 +1,11 @@
+{
+    "id": "2746",
+    "name": "Decremental String Concatenation",
+    "url": "https://leetcode.com/problems/decremental-string-concatenation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
