@@ -1,0 +1,11 @@
+{
+    "id": "2800",
+    "name": "Shortest String That Contains Three Strings",
+    "url": "https://leetcode.com/problems/shortest-string-that-contains-three-strings",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
