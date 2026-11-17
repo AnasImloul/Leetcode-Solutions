@@ -1,0 +1,11 @@
+{
+    "id": "2831",
+    "name": "Find the Longest Equal Subarray",
+    "url": "https://leetcode.com/problems/find-the-longest-equal-subarray",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
