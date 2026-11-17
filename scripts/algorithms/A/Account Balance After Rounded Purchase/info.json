@@ -1,0 +1,11 @@
+{
+    "id": "2806",
+    "name": "Account Balance After Rounded Purchase",
+    "url": "https://leetcode.com/problems/account-balance-after-rounded-purchase",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
