@@ -1,0 +1,11 @@
+{
+    "id": "2799",
+    "name": "Count Complete Subarrays in an Array",
+    "url": "https://leetcode.com/problems/count-complete-subarrays-in-an-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
