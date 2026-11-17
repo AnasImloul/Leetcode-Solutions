@@ -1,0 +1,11 @@
+{
+    "id": "2807",
+    "name": "Insert Greatest Common Divisors in Linked List",
+    "url": "https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
