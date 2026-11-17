@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 9.30 MB (Top 14.58%)
+
 class Solution
 {
     public:
