@@ -1,0 +1,11 @@
+{
+    "id": "2835",
+    "name": "Minimum Operations to Form Subsequence With Target Sum",
+    "url": "https://leetcode.com/problems/minimum-operations-to-form-subsequence-with-target-sum",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
