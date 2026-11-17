@@ -1,0 +1,11 @@
+{
+    "id": "2830",
+    "name": "Maximize the Profit as the Salesman",
+    "url": "https://leetcode.com/problems/maximize-the-profit-as-the-salesman",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
