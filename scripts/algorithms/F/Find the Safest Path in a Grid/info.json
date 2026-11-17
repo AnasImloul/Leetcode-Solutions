@@ -1,0 +1,11 @@
+{
+    "id": "2812",
+    "name": "Find the Safest Path in a Grid",
+    "url": "https://leetcode.com/problems/find-the-safest-path-in-a-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
