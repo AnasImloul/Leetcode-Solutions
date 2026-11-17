@@ -1,0 +1,11 @@
+{
+    "id": "2828",
+    "name": "Check if a String Is an Acronym of Words",
+    "url": "https://leetcode.com/problems/check-if-a-string-is-an-acronym-of-words",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
