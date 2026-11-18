@@ -1,0 +1,11 @@
+{
+    "id": "2850",
+    "name": "Minimum Moves to Spread Stones Over Grid",
+    "url": "https://leetcode.com/problems/minimum-moves-to-spread-stones-over-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
