@@ -1,0 +1,11 @@
+{
+    "id": "2841",
+    "name": "Maximum Sum of Almost Unique Subarray",
+    "url": "https://leetcode.com/problems/maximum-sum-of-almost-unique-subarray",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
