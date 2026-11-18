@@ -1,0 +1,11 @@
+{
+    "id": "2842",
+    "name": "Count K-Subsequences of a String With Maximum Beauty",
+    "url": "https://leetcode.com/problems/count-k-subsequences-of-a-string-with-maximum-beauty",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
