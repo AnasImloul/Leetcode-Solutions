@@ -1,0 +1,11 @@
+{
+    "id": "2851",
+    "name": "String Transformation",
+    "url": "https://leetcode.com/problems/string-transformation",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
