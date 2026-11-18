@@ -1,0 +1,11 @@
+{
+    "id": "2846",
+    "name": "Minimum Edge Weight Equilibrium Queries in a Tree",
+    "url": "https://leetcode.com/problems/minimum-edge-weight-equilibrium-queries-in-a-tree",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
