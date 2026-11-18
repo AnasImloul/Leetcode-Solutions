@@ -1,22 +1,24 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 7.90 MB (Top 95.97%)
+
 class Solution {
 public:
     bool isMatch(string s, string p) {
-        return helper(s,p,0,0);
-    }
-    
-    bool helper(string s, string p, int i, int j)
-    {
-        if(j==p.length())
-            return i==s.length();
-        bool first_match=(i<s.length() && (s[i]==p[j] || p[j]=='.' ));
-        
-        if(j+1<p.length() && p[j+1]=='*')
-        {
-            return (helper(s,p,i,j+2)|| (first_match && helper(s,p,i+1,j) ));
+        int n = s.length(), m = p.length();
+        bool dp[n+1][m+1];
+        memset(dp, false, sizeof(dp));
+        dp[0][0] = true;
+
+        for(int i=0; i<=n; i++){
+            for(int j=1; j<=m; j++){
+                if(p[j-1] == '*'){
+                    dp[i][j] = dp[i][j-2] || (i > 0 && (s[i-1] == p[j-2] || p[j-2] == '.') && dp[i-1][j]);
+                }
+                else{
+                    dp[i][j] = i > 0 && dp[i-1][j-1] && (s[i-1] == p[j-1] || p[j-1] == '.');
+                }
+            }
         }
-        else
-        {
-            return (first_match && helper(s,p,i+1,j+1));
-        }
+
+        return dp[n][m];
     }
 };
