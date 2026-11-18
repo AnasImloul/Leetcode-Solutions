@@ -1,0 +1,11 @@
+{
+    "id": "2849",
+    "name": "Determine if a Cell Is Reachable at a Given Time",
+    "url": "https://leetcode.com/problems/determine-if-a-cell-is-reachable-at-a-given-time",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
