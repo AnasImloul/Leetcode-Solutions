@@ -1,0 +1,11 @@
+{
+    "id": "2845",
+    "name": "Count of Interesting Subarrays",
+    "url": "https://leetcode.com/problems/count-of-interesting-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
