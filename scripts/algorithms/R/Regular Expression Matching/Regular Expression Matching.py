@@ -1,3 +1,5 @@
+# Runtime: 6 ms (Top 67.13%) | Memory: 19.20 MB (Top 77.52%)
+
 class Solution:
    def isMatch(self, s, p):
        n = len(s)
