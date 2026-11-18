@@ -1,0 +1,11 @@
+{
+    "id": "2848",
+    "name": "Points That Intersect With Cars",
+    "url": "https://leetcode.com/problems/points-that-intersect-with-cars",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
