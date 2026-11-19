@@ -1,0 +1,11 @@
+{
+    "id": "2858",
+    "name": "Minimum Edge Reversals So Every Node Is Reachable",
+    "url": "https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
