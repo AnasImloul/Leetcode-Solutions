@@ -1,0 +1,11 @@
+{
+    "id": "2861",
+    "name": "Maximum Number of Alloys",
+    "url": "https://leetcode.com/problems/maximum-number-of-alloys",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
