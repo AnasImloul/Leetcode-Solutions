@@ -1,0 +1,11 @@
+{
+    "id": "2859",
+    "name": "Sum of Values at Indices With K Set Bits",
+    "url": "https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
