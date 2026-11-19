@@ -1,0 +1,11 @@
+{
+    "id": "2857",
+    "name": "Count Pairs of Points With Distance k",
+    "url": "https://leetcode.com/problems/count-pairs-of-points-with-distance-k",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
