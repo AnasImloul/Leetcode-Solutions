@@ -1,0 +1,11 @@
+{
+    "id": "2855",
+    "name": "Minimum Right Shifts to Sort the Array",
+    "url": "https://leetcode.com/problems/minimum-right-shifts-to-sort-the-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
