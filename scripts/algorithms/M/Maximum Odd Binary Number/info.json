@@ -1,0 +1,11 @@
+{
+    "id": "2864",
+    "name": "Maximum Odd Binary Number",
+    "url": "https://leetcode.com/problems/maximum-odd-binary-number",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
