@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 58.53%) | Memory: 62.90 MB (Top 30.35%)
+
 class Solution {
 public:
     int maxArea(vector<int>& height) {
