@@ -1,0 +1,11 @@
+{
+    "id": "2862",
+    "name": "Maximum Element-Sum of a Complete Subset of Indices",
+    "url": "https://leetcode.com/problems/maximum-element-sum-of-a-complete-subset-of-indices",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
