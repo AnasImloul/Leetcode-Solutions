@@ -1,0 +1,11 @@
+{
+    "id": "2856",
+    "name": "Minimum Array Length After Pair Removals",
+    "url": "https://leetcode.com/problems/minimum-array-length-after-pair-removals",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
