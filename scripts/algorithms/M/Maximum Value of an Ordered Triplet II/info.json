@@ -1,0 +1,11 @@
+{
+    "id": "2874",
+    "name": "Maximum Value of an Ordered Triplet II",
+    "url": "https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
