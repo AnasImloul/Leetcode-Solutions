@@ -1,3 +1,4 @@
+# Runtime: 36 ms (Top 97.59%) | Memory: 29.60 MB (Top 67.60%)
 
 class Solution:
     def maxArea(self, H: List[int]) -> int:
@@ -11,4 +12,3 @@ class Solution:
                 j -= 1
             if res > ans: ans = res
         return ans
-
