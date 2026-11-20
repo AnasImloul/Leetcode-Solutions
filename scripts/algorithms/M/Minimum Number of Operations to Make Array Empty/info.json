@@ -1,0 +1,11 @@
+{
+    "id": "2870",
+    "name": "Minimum Number of Operations to Make Array Empty",
+    "url": "https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
