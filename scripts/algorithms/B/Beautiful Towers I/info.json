@@ -1,0 +1,11 @@
+{
+    "id": "2865",
+    "name": "Beautiful Towers I",
+    "url": "https://leetcode.com/problems/beautiful-towers-i",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
