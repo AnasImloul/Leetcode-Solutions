@@ -1,0 +1,11 @@
+{
+    "id": "2872",
+    "name": "Maximum Number of K-Divisible Components",
+    "url": "https://leetcode.com/problems/maximum-number-of-k-divisible-components",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
