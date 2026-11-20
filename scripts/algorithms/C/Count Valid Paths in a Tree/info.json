@@ -1,0 +1,11 @@
+{
+    "id": "2867",
+    "name": "Count Valid Paths in a Tree",
+    "url": "https://leetcode.com/problems/count-valid-paths-in-a-tree",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
