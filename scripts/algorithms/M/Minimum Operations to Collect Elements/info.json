@@ -1,0 +1,11 @@
+{
+    "id": "2869",
+    "name": "Minimum Operations to Collect Elements",
+    "url": "https://leetcode.com/problems/minimum-operations-to-collect-elements",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
