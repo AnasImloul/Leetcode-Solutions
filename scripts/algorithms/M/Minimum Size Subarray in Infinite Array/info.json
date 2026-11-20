@@ -1,0 +1,11 @@
+{
+    "id": "2875",
+    "name": "Minimum Size Subarray in Infinite Array",
+    "url": "https://leetcode.com/problems/minimum-size-subarray-in-infinite-array",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
