@@ -1,0 +1,11 @@
+{
+    "id": "2876",
+    "name": "Count Visited Nodes in a Directed Graph",
+    "url": "https://leetcode.com/problems/count-visited-nodes-in-a-directed-graph",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
