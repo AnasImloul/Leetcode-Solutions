@@ -1,25 +1,19 @@
-/**
- * @param {number[]} height
- * @return {number}
- */
+// Runtime: 1 ms (Top 96.54%) | Memory: 67.70 MB (Top 5.93%)
+
 var maxArea = function(height) {
-    let max = -1;
-    
-    /*===========BRUTE FORCE========== */
-    for(let i=0;i<height.length - 1;i++){
-         let currMax = -1;
-         for(let j=i+1;j<height.length;j++){
-             let min = Math.min(height[i], height[j]);
-             let length = j-i;
-             let filled = min * length;
-             if(filled>currMax){
-                 currMax = filled;
-             }
-         }
-         if(currMax > max){
-             max = currMax;
-         }
-     }
-    
-    return max;
+    let maxArea = 0;
+    let left = 0;
+    let right = height.length - 1;
+
+    while (left < right) {
+        maxArea = Math.max(maxArea, (right - left) * Math.min(height[left], height[right]));
+
+        if (height[left] < height[right]) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+
+    return maxArea;    
 };
