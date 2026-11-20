@@ -1,0 +1,11 @@
+{
+    "id": "2871",
+    "name": "Split Array Into Maximum Number of Subarrays",
+    "url": "https://leetcode.com/problems/split-array-into-maximum-number-of-subarrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
