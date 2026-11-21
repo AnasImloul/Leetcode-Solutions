@@ -1,0 +1,11 @@
+{
+    "id": "2895",
+    "name": "Minimum Processing Time",
+    "url": "https://leetcode.com/problems/minimum-processing-time",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
