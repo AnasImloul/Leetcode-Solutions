@@ -1,0 +1,11 @@
+{
+    "id": "2894",
+    "name": "Divisible and Non-divisible Sums Difference",
+    "url": "https://leetcode.com/problems/divisible-and-non-divisible-sums-difference",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
