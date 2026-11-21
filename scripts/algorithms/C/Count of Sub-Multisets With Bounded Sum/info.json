@@ -1,0 +1,11 @@
+{
+    "id": "2902",
+    "name": "Count of Sub-Multisets With Bounded Sum",
+    "url": "https://leetcode.com/problems/count-of-sub-multisets-with-bounded-sum",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
