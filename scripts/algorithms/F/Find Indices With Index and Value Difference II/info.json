@@ -1,0 +1,11 @@
+{
+    "id": "2905",
+    "name": "Find Indices With Index and Value Difference II",
+    "url": "https://leetcode.com/problems/find-indices-with-index-and-value-difference-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
