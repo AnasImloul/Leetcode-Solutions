@@ -1,0 +1,11 @@
+{
+    "id": "2906",
+    "name": "Construct Product Matrix",
+    "url": "https://leetcode.com/problems/construct-product-matrix",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
