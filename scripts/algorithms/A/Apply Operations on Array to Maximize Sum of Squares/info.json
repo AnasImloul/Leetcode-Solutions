@@ -1,0 +1,11 @@
+{
+    "id": "2897",
+    "name": "Apply Operations on Array to Maximize Sum of Squares",
+    "url": "https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
