@@ -1,0 +1,11 @@
+{
+    "id": "2896",
+    "name": "Apply Operations to Make Two Strings Equal",
+    "url": "https://leetcode.com/problems/apply-operations-to-make-two-strings-equal",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
