@@ -1,0 +1,11 @@
+{
+    "id": "2904",
+    "name": "Shortest and Lexicographically Smallest Beautiful String",
+    "url": "https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
