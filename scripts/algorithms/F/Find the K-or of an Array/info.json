@@ -1,0 +1,11 @@
+{
+    "id": "2917",
+    "name": "Find the K-or of an Array",
+    "url": "https://leetcode.com/problems/find-the-k-or-of-an-array",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
