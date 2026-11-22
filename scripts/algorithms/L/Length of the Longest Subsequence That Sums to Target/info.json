@@ -1,0 +1,11 @@
+{
+    "id": "2915",
+    "name": "Length of the Longest Subsequence That Sums to Target",
+    "url": "https://leetcode.com/problems/length-of-the-longest-subsequence-that-sums-to-target",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
