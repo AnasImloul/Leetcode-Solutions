@@ -1,0 +1,11 @@
+{
+    "id": "2910",
+    "name": "Minimum Number of Groups to Create a Valid Assignment",
+    "url": "https://leetcode.com/problems/minimum-number-of-groups-to-create-a-valid-assignment",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
