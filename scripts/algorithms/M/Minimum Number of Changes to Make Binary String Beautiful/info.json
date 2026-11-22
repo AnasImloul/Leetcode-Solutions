@@ -1,0 +1,11 @@
+{
+    "id": "2914",
+    "name": "Minimum Number of Changes to Make Binary String Beautiful",
+    "url": "https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
