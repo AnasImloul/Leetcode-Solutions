@@ -1,0 +1,11 @@
+{
+    "id": "2918",
+    "name": "Minimum Equal Sum of Two Arrays After Replacing Zeros",
+    "url": "https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
