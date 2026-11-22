@@ -1,0 +1,11 @@
+{
+    "id": "2919",
+    "name": "Minimum Increment Operations to Make Array Beautiful",
+    "url": "https://leetcode.com/problems/minimum-increment-operations-to-make-array-beautiful",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
