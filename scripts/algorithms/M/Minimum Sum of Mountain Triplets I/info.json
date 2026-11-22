@@ -1,0 +1,11 @@
+{
+    "id": "2908",
+    "name": "Minimum Sum of Mountain Triplets I",
+    "url": "https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
