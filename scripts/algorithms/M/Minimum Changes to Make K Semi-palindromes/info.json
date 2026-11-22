@@ -1,0 +1,11 @@
+{
+    "id": "2911",
+    "name": "Minimum Changes to Make K Semi-palindromes",
+    "url": "https://leetcode.com/problems/minimum-changes-to-make-k-semi-palindromes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
