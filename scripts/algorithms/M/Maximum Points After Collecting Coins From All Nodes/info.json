@@ -1,0 +1,11 @@
+{
+    "id": "2920",
+    "name": "Maximum Points After Collecting Coins From All Nodes",
+    "url": "https://leetcode.com/problems/maximum-points-after-collecting-coins-from-all-nodes",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
