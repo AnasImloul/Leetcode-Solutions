@@ -1,0 +1,11 @@
+{
+    "id": "2923",
+    "name": "Find Champion I",
+    "url": "https://leetcode.com/problems/find-champion-i",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
