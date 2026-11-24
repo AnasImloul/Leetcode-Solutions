@@ -1,0 +1,11 @@
+{
+    "id": "2925",
+    "name": "Maximum Score After Applying Operations on a Tree",
+    "url": "https://leetcode.com/problems/maximum-score-after-applying-operations-on-a-tree",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
