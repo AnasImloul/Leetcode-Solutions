@@ -1,3 +1,5 @@
+# Runtime: 523 ms (Top 80.70%) | Memory: 22.30 MB (Top 32.10%)
+
 class Solution(object):
     def threeSum(self, nums):
         ans = []
