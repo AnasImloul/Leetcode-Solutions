@@ -1,0 +1,11 @@
+{
+    "id": "2937",
+    "name": "Make Three Strings Equal",
+    "url": "https://leetcode.com/problems/make-three-strings-equal",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
