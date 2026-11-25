@@ -1,0 +1,11 @@
+{
+    "id": "2926",
+    "name": "Maximum Balanced Subsequence Sum",
+    "url": "https://leetcode.com/problems/maximum-balanced-subsequence-sum",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
