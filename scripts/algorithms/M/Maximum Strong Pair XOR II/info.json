@@ -1,0 +1,11 @@
+{
+    "id": "2935",
+    "name": "Maximum Strong Pair XOR II",
+    "url": "https://leetcode.com/problems/maximum-strong-pair-xor-ii",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
