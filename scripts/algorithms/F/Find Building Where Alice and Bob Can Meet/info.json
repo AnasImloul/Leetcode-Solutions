@@ -1,0 +1,11 @@
+{
+    "id": "2940",
+    "name": "Find Building Where Alice and Bob Can Meet",
+    "url": "https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
