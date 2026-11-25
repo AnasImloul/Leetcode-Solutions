@@ -1,0 +1,11 @@
+{
+    "id": "2934",
+    "name": "Minimum Operations to Maximize Last Elements in Arrays",
+    "url": "https://leetcode.com/problems/minimum-operations-to-maximize-last-elements-in-arrays",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
