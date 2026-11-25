@@ -1,0 +1,11 @@
+{
+    "id": "2933",
+    "name": "High-Access Employees",
+    "url": "https://leetcode.com/problems/high-access-employees",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
