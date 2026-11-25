@@ -1,0 +1,11 @@
+{
+    "id": "2930",
+    "name": "Number of Strings Which Can Be Rearranged to Contain Substring",
+    "url": "https://leetcode.com/problems/number-of-strings-which-can-be-rearranged-to-contain-substring",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
