@@ -1,0 +1,11 @@
+{
+    "id": "2939",
+    "name": "Maximum Xor Product",
+    "url": "https://leetcode.com/problems/maximum-xor-product",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
