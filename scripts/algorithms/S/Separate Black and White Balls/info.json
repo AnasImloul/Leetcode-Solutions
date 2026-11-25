@@ -1,0 +1,11 @@
+{
+    "id": "2938",
+    "name": "Separate Black and White Balls",
+    "url": "https://leetcode.com/problems/separate-black-and-white-balls",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
