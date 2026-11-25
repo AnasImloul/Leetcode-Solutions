@@ -1,0 +1,11 @@
+{
+    "id": "2931",
+    "name": "Maximum Spending After Buying Items",
+    "url": "https://leetcode.com/problems/maximum-spending-after-buying-items",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
