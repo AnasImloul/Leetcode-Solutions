@@ -1,0 +1,11 @@
+{
+    "id": "2929",
+    "name": "Distribute Candies Among Children II",
+    "url": "https://leetcode.com/problems/distribute-candies-among-children-ii",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
