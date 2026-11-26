@@ -1,0 +1,11 @@
+{
+    "id": "2944",
+    "name": "Minimum Number of Coins for Fruits",
+    "url": "https://leetcode.com/problems/minimum-number-of-coins-for-fruits",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
