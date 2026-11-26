@@ -1,0 +1,11 @@
+{
+    "id": "2953",
+    "name": "Count Complete Substrings",
+    "url": "https://leetcode.com/problems/count-complete-substrings",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
