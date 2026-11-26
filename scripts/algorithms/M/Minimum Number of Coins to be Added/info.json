@@ -1,0 +1,11 @@
+{
+    "id": "2952",
+    "name": "Minimum Number of Coins to be Added",
+    "url": "https://leetcode.com/problems/minimum-number-of-coins-to-be-added",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
