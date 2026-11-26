@@ -1,0 +1,11 @@
+{
+    "id": "2943",
+    "name": "Maximize Area of Square Hole in Grid",
+    "url": "https://leetcode.com/problems/maximize-area-of-square-hole-in-grid",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
