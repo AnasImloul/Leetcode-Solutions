@@ -1,3 +1,5 @@
+// Runtime: 14 ms (Top 58.02%) | Memory: 61.90 MB (Top 5.01%)
+
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -34,4 +36,3 @@ var threeSumClosest = function(nums, target) {
     }
     return result;
 };
-
