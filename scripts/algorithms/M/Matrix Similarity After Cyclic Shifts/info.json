@@ -1,0 +1,11 @@
+{
+    "id": "2946",
+    "name": "Matrix Similarity After Cyclic Shifts",
+    "url": "https://leetcode.com/problems/matrix-similarity-after-cyclic-shifts",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
