@@ -1,0 +1,11 @@
+{
+    "id": "2951",
+    "name": "Find the Peaks",
+    "url": "https://leetcode.com/problems/find-the-peaks",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
