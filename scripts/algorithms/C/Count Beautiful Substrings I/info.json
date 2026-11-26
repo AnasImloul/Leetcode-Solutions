@@ -1,0 +1,11 @@
+{
+    "id": "2947",
+    "name": "Count Beautiful Substrings I",
+    "url": "https://leetcode.com/problems/count-beautiful-substrings-i",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
