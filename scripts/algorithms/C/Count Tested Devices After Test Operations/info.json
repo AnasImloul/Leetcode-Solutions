@@ -1,0 +1,11 @@
+{
+    "id": "2960",
+    "name": "Count Tested Devices After Test Operations",
+    "url": "https://leetcode.com/problems/count-tested-devices-after-test-operations",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
