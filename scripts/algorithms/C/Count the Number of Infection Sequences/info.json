@@ -1,0 +1,11 @@
+{
+    "id": "2954",
+    "name": "Count the Number of Infection Sequences",
+    "url": "https://leetcode.com/problems/count-the-number-of-infection-sequences",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
