@@ -1,0 +1,11 @@
+{
+    "id": "2961",
+    "name": "Double Modular Exponentiation",
+    "url": "https://leetcode.com/problems/double-modular-exponentiation",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
