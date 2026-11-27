@@ -1,0 +1,11 @@
+{
+    "id": "2959",
+    "name": "Number of Possible Sets of Closing Branches",
+    "url": "https://leetcode.com/problems/number-of-possible-sets-of-closing-branches",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
