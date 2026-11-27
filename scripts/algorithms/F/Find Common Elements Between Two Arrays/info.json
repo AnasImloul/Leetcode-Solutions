@@ -1,0 +1,11 @@
+{
+    "id": "2956",
+    "name": "Find Common Elements Between Two Arrays",
+    "url": "https://leetcode.com/problems/find-common-elements-between-two-arrays",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
