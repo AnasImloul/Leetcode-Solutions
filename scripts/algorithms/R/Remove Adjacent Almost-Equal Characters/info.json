@@ -1,0 +1,11 @@
+{
+    "id": "2957",
+    "name": "Remove Adjacent Almost-Equal Characters",
+    "url": "https://leetcode.com/problems/remove-adjacent-almost-equal-characters",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
