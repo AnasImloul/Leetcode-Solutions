@@ -1,0 +1,11 @@
+{
+    "id": "2965",
+    "name": "Find Missing and Repeated Values",
+    "url": "https://leetcode.com/problems/find-missing-and-repeated-values",
+    "difficulty": "easy",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
