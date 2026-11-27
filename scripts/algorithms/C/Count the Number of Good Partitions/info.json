@@ -1,0 +1,11 @@
+{
+    "id": "2963",
+    "name": "Count the Number of Good Partitions",
+    "url": "https://leetcode.com/problems/count-the-number-of-good-partitions",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
