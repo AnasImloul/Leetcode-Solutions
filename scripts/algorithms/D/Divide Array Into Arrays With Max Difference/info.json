@@ -1,0 +1,11 @@
+{
+    "id": "2966",
+    "name": "Divide Array Into Arrays With Max Difference",
+    "url": "https://leetcode.com/problems/divide-array-into-arrays-with-max-difference",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
