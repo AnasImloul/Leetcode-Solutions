@@ -1,0 +1,11 @@
+{
+    "id": "2967",
+    "name": "Minimum Cost to Make Array Equalindromic",
+    "url": "https://leetcode.com/problems/minimum-cost-to-make-array-equalindromic",
+    "difficulty": "medium",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
