@@ -1,0 +1,11 @@
+{
+    "id": "2968",
+    "name": "Apply Operations to Maximize Frequency Score",
+    "url": "https://leetcode.com/problems/apply-operations-to-maximize-frequency-score",
+    "difficulty": "hard",
+    "premium": false,
+    "topic": "algorithms",
+    "solution": {
+        "python": true
+    }
+}
